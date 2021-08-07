@@ -1,17 +1,13 @@
 scoreboard objectives add SF_StardustID dummy
-scoreboard players add NextID SF_StardustID 0
 scoreboard objectives add SF_Data dummy
 scoreboard objectives add SF_X dummy
 scoreboard objectives add SF_Y dummy
-scoreboard objectives add SF_Z dummy
-scoreboard objectives add SF_Dx dummy
-scoreboard objectives add SF_Dy dummy
-scoreboard objectives add SF_Dz dummy
 scoreboard objectives add SF_SCraft dummy
 scoreboard objectives add SF_Wolfs dummy
 scoreboard objectives add SF_Pillar dummy
+scoreboard objectives add SF_TravelStaff dummy
 scoreboard objectives add SF_Wormhole trigger
-#scoreboard objectives add SF_RightClick minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add SF_RightClick minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add SF_Cooldown dummy
 
 scoreboard objectives add SF_Q dummy
@@ -25,10 +21,10 @@ scoreboard objectives add SF_Qy2 trigger
 scoreboard objectives add SF_Qz1 trigger
 scoreboard objectives add SF_Qz2 trigger
 scoreboard objectives add SF_StatQ dummy
-scoreboard objectives add SF_ResetQ trigger
 scoreboard objectives add SF_SizeQ dummy
 scoreboard objectives add SF_SpeedQ dummy
 scoreboard objectives add SF_EditQ dummy
+team add SF_Stardust
 team add SF_Red
 team add SF_Blue
 team modify SF_Red color red
@@ -40,6 +36,7 @@ execute in minecraft:the_end run forceload add 0 0 0 0
 execute in minecraft:the_end run setblock 0 255 0 end_portal
 
 scoreboard players set StardustFragment EF_Versions 3000
+scoreboard players add Mode SF_Data 0
 
 #Matériaux
 	#Stardust Fragment
@@ -81,6 +78,10 @@ scoreboard players set StardustFragment EF_Versions 3000
 		data modify storage stardust:items 2013020 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013020,BlockEntityTag:{Lock:"SF_Placed"},SF_SextupleCompressedCobblestone:1b,HideFlags:127,display:{Lore:['[{"text":"Equals to 531,441 cobblestones","color":"gray","italic":false}]'],Name:'[{"text":"Sextuple Compressed Cobblestone","italic":false,"color":"dark_gray"}]'}}}
 		data modify storage stardust:items 2013021 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013021,BlockEntityTag:{Lock:"SF_Placed"},SF_SeptupleCompressedCobblestone:1b,HideFlags:127,display:{Lore:['[{"text":"Equals to 4,782,969 cobblestones","color":"gray","italic":false}]'],Name:'[{"text":"Septuple Compressed Cobblestone","italic":false,"color":"dark_gray"}]'}}}
 		data modify storage stardust:items 2013022 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013022,BlockEntityTag:{Lock:"SF_Placed"},SF_OctupleCompressedCobblestone:1b,HideFlags:127,display:{Lore:['[{"text":"Equals to 43,046,721 cobblestones","color":"gray","italic":false}]'],Name:'[{"text":"Octuple Compressed Cobblestone","italic":false,"color":"dark_gray"}]'}}}
+	#Stardust Ore
+		data modify storage stardust:items 2013023 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustOre:1b,HideFlags:127,display:{Name:'[{"text":"Stardust Ore","italic":false,"color":"aqua"}]'}}}
+	#Awakened Stardust Ore
+		data modify storage stardust:items 2013024 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013024,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedStardustOre:1b,HideFlags:127,display:{Name:'[{"text":"Awakened Stardust Ore","italic":false,"color":"red"}]'}}}
 #Equipment
 	#Damaged Armor/Tools
 		data modify storage stardust:items 2013100 set value {Slot:16b,id:"minecraft:leather_helmet",Count:1b,tag:{CustomModelData:2013100,SF_DamagedHelmet:1b,AttributeModifiers:[{AttributeName:"generic.max_health",Name:"generic.max_health",Slot:"head",Amount:5,Operation:0,UUID:[I;1,1,1,1]},{AttributeName:"generic.armor",Name:"generic.armor",Slot:"head",Amount:1,Operation:0,UUID:[I;1,1,1,2]}],HideFlags:126,display:{Lore:['{"text":" "}','[{"text":"[+5 Health Points]","italic":false,"color":"white"}]'],Name:'[{"text":"Damaged Stardust Helmet","italic":false,"color":"blue"}]'},Enchantments:[{lvl:4,id:"minecraft:protection"},{lvl:3,id:"minecraft:unbreaking"}]}}
@@ -208,7 +209,7 @@ scoreboard players set StardustFragment EF_Versions 3000
 		#Stardust Portal
 			data modify storage stardust:items 2013221 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013221,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustPortal:1b,HideFlags:127,display:{Lore:['[{"text":"This portal allows access to the","italic":false,"color":"white"}]','[{"text":"Stardust dimension with lots of powerful mobs!","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Portal","italic":false,"color":"blue"}]'}}}
 		#Stardust Dungeon Portal
-			data modify storage stardust:items 2013222 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013222,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustDungeonPortal:1b,HideFlags:127,display:{Lore:['[{"text":"This portal allows access to the","italic":false,"color":"white"}]','[{"text":"dimension of the Stardust Dungeon!","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Dungeon Portal","italic":false,"color":"red"}]'}}}
+			data modify storage stardust:items 2013222 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013222,BlockEntityTag:{Lock:"SF_Placed"},SF_DungeonPortal:1b,HideFlags:127,display:{Lore:['[{"text":"This portal allows access to the","italic":false,"color":"white"}]','[{"text":"dimension of the Stardust Dungeon!","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Dungeon Portal","italic":false,"color":"red"}]'}}}
 		#Ultimate Portal
 			data modify storage stardust:items 2013223 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013223,BlockEntityTag:{Lock:"SF_Placed"},SF_UltimatePortal:1b,HideFlags:127,display:{Lore:['[{"text":"This portal allows access to the","italic":false,"color":"white"}]','[{"text":"dimension of the Ultimate Boss!","italic":false,"color":"white"}]'],Name:'[{"text":"U","italic":false,"color":"dark_purple","bold":"true"},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" P","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"r","italic":false,"color":"dark_aqua"},{"text":"t","italic":false,"color":"aqua"},{"text":"a","italic":false,"color":"green"},{"text":"l","italic":false,"color":"yellow"}]'}}}
 	#Wither Killer

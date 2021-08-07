@@ -566,11 +566,11 @@ kill @e[type=item,nbt={Item:{tag:{SF_Give:1b}}}]
 
 #Liste des Tags aux entités :
 #SFegg		Spawneggs (Graines, quarry, etc...)
-#StardustSF_Pillar
-#ShieldOn	Bouclier du StardustSF_Pillar
+#SF_StardustPillar
+#ShieldOn	Bouclier du SF_StardustPillar
 #StardustFragmentFirst		Première connection
 #stoupy
-#IsInDungeon
+#SF_IsInDungeon
 #StardustGuardian
 #random		Utilisé pour faire les chances (1/10, 1/2, 1/5, 1/100, etc...)
 #pick		Utilisé pour identifier lequel des SF_X random a été pris pour évaluer si la chance a réussi
@@ -588,7 +588,7 @@ kill @e[type=item,nbt={Item:{tag:{SF_Give:1b}}}]
 #minerQ		Shulkers de la Quarry
 #Qm			Shulkers de la Quarry
 #Qs			Shulkers de la Quarry
-#quarryTemp	Déterminer où placer le Shulker
+#SF_QuarryTemp	Déterminer où placer le Shulker
 #Quarry1	Shulker de position 1
 #Quarry2	Shulker de position 2
 
@@ -597,7 +597,7 @@ kill @e[type=item,nbt={Item:{tag:{SF_Give:1b}}}]
 #tpStardust,PdS		Portail de Stardust
 #tpDungeon,PdDdS	Portail du Donjon de Stardust
 #tpUltimate,UltPort	Ultimate Portal
-#StarTP				Portails
+#SF_Portal				Portails
 
 #GT			SF_Data des Graines
 #GF			Graine finie de pousser
@@ -624,7 +624,7 @@ kill @e[type=item,nbt={Item:{tag:{SF_Give:1b}}}]
 #ultimeDead
 #Thrown		Entité étant lancée vers un point (flèches autoguidées, etc...)
 #toThrow	Entité à lancer
-#fullaim	Entités lancée vers un point en continue
+#SF_AlwaysAiming	Entités lancée vers un point en continue
 
 #CMX			Cobblestone Miners
 #CM[1,2,3,4,5]	Cobblestone Miners

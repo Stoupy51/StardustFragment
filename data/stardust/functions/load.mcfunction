@@ -1,7 +1,6 @@
 scoreboard objectives add SF_StardustID dummy
 scoreboard objectives add SF_Data dummy
 scoreboard objectives add SF_X dummy
-scoreboard objectives add SF_Y dummy
 scoreboard objectives add SF_SCraft dummy
 scoreboard objectives add SF_Wolfs dummy
 scoreboard objectives add SF_Pillar dummy
@@ -10,7 +9,6 @@ scoreboard objectives add SF_Wormhole trigger
 scoreboard objectives add SF_RightClick minecraft.used:minecraft.warped_fungus_on_a_stick
 scoreboard objectives add SF_Cooldown dummy
 
-scoreboard objectives add SF_Q dummy
 scoreboard objectives add SF_Qx dummy
 scoreboard objectives add SF_Qy dummy
 scoreboard objectives add SF_Qz dummy
@@ -144,9 +142,9 @@ scoreboard players add Mode SF_Data 0
 		data modify storage stardust:items 2013150 set value {Slot:16b,id:"minecraft:bow",Count:1b,tag:{CustomModelData:2013150,SF_AwakenedStardustBow:1b,HideFlags:126,display:{Lore:['[{"text":"Power L","italic":false,"color":"gray"}]','[{"text":"Looting X","italic":false,"color":"gray"}]','[{"text":"Unbreaking X","italic":false,"color":"gray"}]','[{"text":"Infinity","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Stardust Bow","italic":false,"color":"red"}]'},Enchantments:[{lvl:50,id:"minecraft:power"},{lvl:10,id:"minecraft:looting"},{lvl:10,id:"minecraft:unbreaking"},{lvl:1,id:"minecraft:infinity"}]}}
 		data modify storage stardust:items 2013151 set value {Slot:16b,id:"minecraft:bow",Count:1b,tag:{CustomModelData:2013151,SF_UltimateBow:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"Power CXXIII","italic":false,"color":"gray"}]','[{"text":"Flame CXXIII","italic":false,"color":"gray"}]','[{"text":"Looting X","italic":false,"color":"gray"}]','[{"text":"Fortune X","italic":false,"color":"gray"}]','[{"text":"Infinity","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Bow","italic":false,"color":"dark_red"}]'},Enchantments:[{lvl:123,id:"minecraft:power"},{lvl:123,id:"minecraft:flame"},{lvl:10,id:"minecraft:looting"},{lvl:10,id:"minecraft:fortune"},{lvl:1,id:"minecraft:infinity"}]}}
 	#Stardust/Awakened/Ultimate Snipers
-		data modify storage stardust:items 2013152 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013152,SF_StardustSniper:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"[5 Base Damage]","italic":false,"color":"gray"}]'],Name:'[{"text":"Stardust Sniper","italic":false,"color":"aqua"}]'}}}
-		data modify storage stardust:items 2013153 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013153,SF_AwakenedStardustSniper:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"[50 Base Damage]","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Stardust Sniper","italic":false,"color":"red"}]'}}}
-		data modify storage stardust:items 2013154 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013154,SF_UltimateSniper:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"[130 Base Damage]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Sniper","italic":false,"color":"dark_red"}]'}}}
+		data modify storage stardust:items 2013152 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013152,SF_Sniper:1b,SF_StardustSniper:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"[5 Base Damage]","italic":false,"color":"gray"}]'],Name:'[{"text":"Stardust Sniper","italic":false,"color":"aqua"}]'}}}
+		data modify storage stardust:items 2013153 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013153,SF_Sniper:1b,SF_AwakenedStardustSniper:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"[50 Base Damage]","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Stardust Sniper","italic":false,"color":"red"}]'}}}
+		data modify storage stardust:items 2013154 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013154,SF_Sniper:1b,SF_UltimateSniper:1b,Unbreakable:1b,HideFlags:126,display:{Lore:['[{"text":"[130 Base Damage]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Sniper","italic":false,"color":"dark_red"}]'}}}
 	#Ultimate Bullet
 		data modify storage stardust:items 2013155 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013155,SF_UltimateBullet:1b,HideFlags:126,display:{Lore:['[{"text":"[+2048 damage]","italic":false,"color":"white"}]'],Name:'[{"text":"Ultimate Bullet","italic":false,"color":"dark_red"}]'}}}
 	#Artifacts Lv.1

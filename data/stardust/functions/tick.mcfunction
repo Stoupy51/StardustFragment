@@ -31,5 +31,5 @@
     execute in stardust:stardust run tp @e[type=minecraft:vex,distance=0..] 0 -10000 0
 
 #Boss
-    ##execute if score UltimateBoss SF_Data matches 1 run function stardust:boss/ultimate_boss/tick
+    execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
     execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] at @s run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 50 force

@@ -15,7 +15,7 @@
 	execute as @a at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
 
 #Boss
-    execute if score UltimateBoss SF_Data matches 1 run function stardust:boss/ultimate_boss/tick_second
+    execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:wither,tag=SF_StardustPillar] at @s run function stardust:boss/stardust_pillar/tick_second
     execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] at @s unless entity @e[type=minecraft:wither,tag=SF_StardustPillar,distance=..2.75] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=minecraft:wolf,tag=SF_StoupArmy] at @s run function stardust:boss/stouparmy

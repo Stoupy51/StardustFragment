@@ -1,25 +1,27 @@
-#Generators
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_CauldronGenerator] at @s unless block ~ ~ ~ #minecraft:cauldrons run function simplenergy:destroy/cauldron_generator
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_FurnaceGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/furnace_generator
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_SolarPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function simplenergy:destroy/solar_panel
-
-#Wires
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpleWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/simple_wire
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_AdvancedWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/advanced_wire
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteWire] at @s unless block ~ ~ ~ minecraft:player_head run function simplenergy:destroy/elite_wire
-
-#Batteries
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpleBattery] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_battery
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_AdvancedBattery] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/advanced_battery
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_EliteBattery] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/elite_battery
-
-#Power Consumers
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricFurnace] at @s unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/electric_furnace
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricSmelter] at @s unless block ~ ~ ~ minecraft:furnace run function simplenergy:destroy/electric_smelter
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricBrewing] at @s unless block ~ ~ ~ minecraft:brewing_stand run function simplenergy:destroy/electric_brewing_stand
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_ElectricLamp] at @s unless block ~ ~ ~ minecraft:redstone_lamp unless block ~ ~ ~ minecraft:glowstone run function simplenergy:destroy/electric_lamp
+#Materials
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedStardustBlock] at @s unless block ~ ~ ~ minecraft:redstone_block run function stardust:destroy/awakened_stardust_block
+    #All Compressed Cobblestones
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_CompressedCobblestone] at @s unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/cobblestone/compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_DoubleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/cobblestone/double_compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_TripleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/cobblestone/triple_compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_QuadrupleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/cobblestone/quadruple_compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_QuintupleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:deepslate_cobbled run function stardust:destroy/cobblestone/quintuple_compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_SextupleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:deepslate_cobbled run function stardust:destroy/cobblestone/sextuple_compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_SeptupleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:deepslate_cobbled run function stardust:destroy/cobblestone/septuple_compressed
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_OctupleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:deepslate_cobbled run function stardust:destroy/cobblestone/octuple_compressed
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustOre] at @s unless block ~ ~ ~ minecraft:deepslate_diamond_ore run function stardust:destroy/stardust_ore
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedStardustOre] at @s unless block ~ ~ ~ minecraft:deepslate_redstone_ore run function stardust:destroy/awakened_stardust_ore
 
 #Others
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_CraftingTable] at @s unless block ~ ~ ~ minecraft:barrel run function simplenergy:destroy/simple_crafting_table
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpluniumOre] at @s unless block ~ ~ ~ minecraft:deepslate_coal_ore run function simplenergy:destroy/simplunium_ore
-    execute as @e[type=minecraft:glow_item_frame,tag=SE_SimpluniumBlock] at @s unless block ~ ~ ~ minecraft:iron_block run function simplenergy:destroy/simplunium_block
+    #Seeds
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_CobblestoneMiner] at @s unless block ~ ~ ~ minecraft:deepslate_cobbled run function stardust:destroy/cobblestone_miner
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/quarry
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal] at @s unless block ~ ~ ~ minecraft:deepslate_cobbled run function stardust:destroy/cavern_portal
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_CelestialPortal] at @s unless block ~ ~ ~ minecraft:iron_block run function stardust:destroy/celestial_portal
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustPortal] at @s unless block ~ ~ ~ minecraft:lapis_block run function stardust:destroy/stardust_portal
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_DungeonPortal] at @s unless block ~ ~ ~ minecraft:redstone_block run function stardust:destroy/stardust_dungeon_portal
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_UltimatePortal] at @s unless block ~ ~ ~ minecraft:crying_obsidian run function stardust:destroy/ultimate_portal
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_EmeraldSpawner] at @s unless block ~ ~ ~ minecraft:spawner run function stardust:destroy/emerald_spawner
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_UltimateSpawner] at @s unless block ~ ~ ~ minecraft:spawner run function stardust:destroy/ultimate_spawner
+
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/stardust_crafting_table

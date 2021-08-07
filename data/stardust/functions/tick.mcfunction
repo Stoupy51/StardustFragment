@@ -1,5 +1,5 @@
 #Destroy
-    ###execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
+    execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
 
 #Timer
     scoreboard players add Second SF_Data 1

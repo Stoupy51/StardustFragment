@@ -38,7 +38,7 @@ execute in minecraft:the_end run setblock 0 255 0 end_portal
 scoreboard players set StardustFragment EF_Versions 3000
 scoreboard players add Mode SF_Data 0
 
-#Matériaux
+#Materials
 	#Stardust Fragment
 		data modify storage stardust:items 2013000 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013000,SF_StardustFragment:1b,HideFlags:127,display:{Name:'[{"text":"Stardust Fragment","italic":false,"color":"aqua"}]'}}}
 	#Stardust Ingot

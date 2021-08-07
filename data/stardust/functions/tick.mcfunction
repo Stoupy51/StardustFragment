@@ -8,7 +8,7 @@
 #Players
     execute as @a[scores={SF_RightClick=1..}] at @s run function stardust:rightclick/all
     scoreboard players remove @a[scores={SF_Cooldown=1..}] SF_Cooldown 1
-    effect give @a[nbt={SelectedItem:{tag:{SF_LegendarySword:1b}}}] jump_boost 1 3 true
+    effect give @a[nbt={SelectedItem:{tag:{SF_LegendarySword:1b}}}] minecraft:jump_boost 1 3 true
     execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1b}}]}] run tp @e[type=minecraft:item,distance=..4] ~ ~ ~
     execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
 
@@ -18,11 +18,11 @@
 	execute as @a[scores={SF_Data=..-15}] at @s run function stardust:dimensions/transition_down
 
 #Portals Particules
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal] run particle soul ~ ~1 ~ 0.25 1 0.25 0.05 1
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_CelestialPortal] run particle firework ~ ~1 ~ 0.25 1 0.25 0.05 1
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_StardustPortal] run particle dust 0 0 255 1 ~ ~1 ~ 0.25 1 0.25 0.05 5
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_DungeonPortal] run particle dust 255 0 0 1 ~ ~1 ~ 0.25 1 0.25 0.05 5
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_UltimatePortal] run particle dust 255 255 255 2 ~ ~1 ~ 0.25 1 0.25 0.05 1
+    execute at @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal] run particle minecraft:soul ~ ~1 ~ 0.25 1 0.25 0.05 1
+    execute at @e[type=minecraft:glow_item_frame,tag=SF_CelestialPortal] run particle minecraft:firework ~ ~1 ~ 0.25 1 0.25 0.05 1
+    execute at @e[type=minecraft:glow_item_frame,tag=SF_StardustPortal] run particle minecraft:dust 0 0 255 1 ~ ~1 ~ 0.25 1 0.25 0.05 5
+    execute at @e[type=minecraft:glow_item_frame,tag=SF_DungeonPortal] run particle minecraft:dust 255 0 0 1 ~ ~1 ~ 0.25 1 0.25 0.05 5
+    execute at @e[type=minecraft:glow_item_frame,tag=SF_UltimatePortal] run particle minecraft:dust 255 255 255 2 ~ ~1 ~ 0.25 1 0.25 0.05 1
 
 #Others
     ###execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s if entity @p[distance=..7] run function stardust:craft/all
@@ -32,4 +32,4 @@
 
 #Boss
     execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
-    execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] at @s run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 50 force
+    execute if score StardustPillar SF_Data matches 1.. at @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 50 force

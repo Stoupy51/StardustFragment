@@ -34,7 +34,7 @@
 	execute in stardust:stardust as @e[type=minecraft:bat,distance=0..] at @s run function stardust:mobs/stardust_bat
 
 #Dimensions
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_Portal] at @s positioned ~ ~1 ~ run scoreboard players add @a[distance=..1,dx=0] SF_Data 10
+	execute as @e[type=minecraft:glow_item_frame,tag=SF_Portal] run function stardust:work/portals
 	scoreboard players add @a[scores={SF_Data=1..},nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}}] SF_Data 10
 	execute as @a[scores={SF_Data=1..}] at @s run function stardust:dimensions/teleport
 	tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon

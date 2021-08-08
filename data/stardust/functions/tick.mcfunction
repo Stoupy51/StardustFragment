@@ -12,17 +12,11 @@
     execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1b}}]}] run tp @e[type=minecraft:item,distance=..4] ~ ~ ~
     execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
 
-#Dimensions Transitions
+#Dimensions Transitions + Portals
     execute as @a store result score @s SF_Data run data get entity @s Pos[1] 1
 	execute as @a[scores={SF_Data=500..}] at @s run function stardust:dimensions/transition_up
 	execute as @a[scores={SF_Data=..-15}] at @s run function stardust:dimensions/transition_down
-
-#Portals Particules
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal] run particle minecraft:soul ~ ~1 ~ 0.25 1 0.25 0.05 1
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_CelestialPortal] run particle minecraft:firework ~ ~1 ~ 0.25 1 0.25 0.05 1
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_StardustPortal] run particle minecraft:dust 0 0 255 1 ~ ~1 ~ 0.25 1 0.25 0.05 5
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_DungeonPortal] run particle minecraft:dust 255 0 0 1 ~ ~1 ~ 0.25 1 0.25 0.05 5
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_UltimatePortal] run particle minecraft:dust 255 255 255 2 ~ ~1 ~ 0.25 1 0.25 0.05 1
+    execute at @e[type=minecraft:glow_item_frame,tag=SF_WorkingPortal] run function stardust:visual/portal_particules
 
 #Others
     ###execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s if entity @p[distance=..7] run function stardust:craft/all

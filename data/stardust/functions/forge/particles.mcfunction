@@ -1,6 +1,6 @@
 execute as @s[nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1b}}}] run particle minecraft:dust 255 0 0 1 ~ ~ ~ 5 5 5 0.1 500
 execute as @s[nbt={Item:{Count:4b,tag:{SF_AwakenedStardust:1b}}}] run particle minecraft:portal ~ ~ ~ 5 5 5 0.1 500
-execute as @s[nbt={Item:{Count:1b,tag:{SF_DragonPearl:1b}}}] run particle minecraft:reverse_portal ~ ~ ~ 5 5 5 0.1 500
+execute as @s[nbt={Item:{Count:1b,tag:{SF_DragonPearl:1b}}}] run particle minecraft:reverSF_portal ~ ~ ~ 5 5 5 0.1 500
 execute as @s[nbt={Item:{Count:64b,tag:{SF_CompactedStardust:1b}}}] run particle minecraft:dust 0 0 255 2 ~ ~ ~ 5 5 5 0.1 500
 execute as @s[nbt={Item:{Count:4b,tag:{SF_DragonPearl:1b}}}] run particle minecraft:dust 0 0 255 1 ~ ~ ~ 5 5 5 0.1 500
 execute as @s[nbt={Item:{Count:1b,tag:{SF_StardustBow:1b}}}] run particle minecraft:dust 255 0 0 1 ~ ~ ~ 5 5 5 0.1 500

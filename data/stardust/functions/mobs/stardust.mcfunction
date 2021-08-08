@@ -7,3 +7,4 @@ execute if score Rand SF_Data matches 1 run function stardust:mobs/evoker
 execute if score Mob SF_Data matches 1 run tp @s 0 -10000 0
 scoreboard players set Mob SF_Data 0
 scoreboard players set Rand SF_Data 0
+tp @s 0 -10000 0

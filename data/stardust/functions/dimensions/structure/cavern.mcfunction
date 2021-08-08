@@ -4,4 +4,4 @@ fill ~-2 ~-2 ~-2 ~2 ~3 ~2 minecraft:air
 fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 minecraft:cobblestone
 fill ~-2 ~-2 ~-2 ~2 ~-2 ~2 minecraft:torch replace minecraft:air
 fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 minecraft:torch replace minecraft:air
-setblock ~ ~-1 ~ minecraft:deepslate_cobbled
+setblock ~ ~-1 ~ minecraft:cobbled_deepslate

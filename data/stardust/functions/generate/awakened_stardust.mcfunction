@@ -12,6 +12,7 @@
     scoreboard players operation Y SF_Data %= 500 SF_Data
     scoreboard players operation Z SF_Data %= 400 SF_Data
     execute store result score PosX SF_Data run data get entity @s Pos[0] 10
+    execute store result score PosY SF_Data run data get entity @s Pos[1] 10
     execute store result score PosZ SF_Data run data get entity @s Pos[2] 10
 
 #I add the offset to the coordinates
@@ -23,6 +24,6 @@
     execute store result entity @s Pos[2] double 0.1 run scoreboard players get PosZ SF_Data
 
 #Placing Ore
-    execute at @s if block ~ ~ ~ minecraft:netherrack run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_AwakenedStardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2013024}}}
+    execute at @s if block ~ ~ ~ minecraft:netherrack run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_AwakenedStardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013024}}}
     execute at @s if block ~ ~ ~ minecraft:netherrack run setblock ~ ~ ~ minecraft:deepslate_redstone_ore
 kill @s

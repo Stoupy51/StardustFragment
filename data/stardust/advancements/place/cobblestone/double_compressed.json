@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "SE_PlacingBlock": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:barrel",
+                "item": {
+                    "nbt": "{SF_DoubleCompressedCobblestone:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "stardust:place/cobblestone/double_compressed/1"
+    }
+}

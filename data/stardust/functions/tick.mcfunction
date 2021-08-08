@@ -14,7 +14,7 @@
     execute as @a run function stardust:dimensions/transitions
 
 #Others
-    execute at @e[type=minecraft:glow_item_frame,tag=SF_WorkingPortal] run function stardust:visual/portal_particules
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_WorkingPortal] run function stardust:visual/portal_particules
     ###execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s if entity @p[distance=..7] run function stardust:craft/all
     ###execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s if entity @p[distance=..7] run function stardust:quarry/gui/all
     execute if score SuperCraft SF_Data matches 1 as @e[type=minecraft:item,scores={SF_SCraft=0..}] at @s run function stardust:forge/particles

@@ -10,7 +10,7 @@ scoreboard players reset @s[scores={SF_Data=..0}] SF_Data
 
 #Forceload to generate chunks
     execute as @s[scores={SF_Data=5}] at @s positioned ~ ~-1 ~ if entity @e[type=minecraft:glow_item_frame,tag=SF_CelestialPortal,distance=..1,dx=0] in stardust:celestial run forceload add ~-50 ~-50 ~50 ~50
-    execute as @s[scores={SF_Data=5}] at @s positioned ~ ~-1 ~ if entity @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal,distance=..1,dx=0] in stardust:cave run forceload add ~-50 ~-50 ~50 ~50
+    execute as @s[scores={SF_Data=5}] at @s positioned ~ ~-1 ~ if entity @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal,distance=..1,dx=0] in stardust:cavern run forceload add ~-50 ~-50 ~50 ~50
     execute as @s[scores={SF_Data=5}] at @s positioned ~ ~-1 ~ if entity @e[type=minecraft:glow_item_frame,tag=SF_StardustPortal,distance=..1,dx=0] in stardust:stardust run forceload add ~-50 ~-50 ~50 ~50
     execute as @s[nbt={Dimension:"stardust:cavern"},scores={SF_Data=5}] at @s positioned ~ ~-1 ~ if entity @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal,distance=..1,dx=0] in minecraft:overworld run forceload add ~-50 ~-50 ~50 ~50
     execute as @s[nbt={Dimension:"stardust:celestial"},scores={SF_Data=5}] at @s positioned ~ ~-1 ~ if entity @e[type=minecraft:glow_item_frame,tag=SF_CelestialPortal,distance=..1,dx=0] in minecraft:overworld run forceload add ~-50 ~-50 ~50 ~50

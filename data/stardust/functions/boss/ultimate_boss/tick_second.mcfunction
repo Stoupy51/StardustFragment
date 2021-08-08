@@ -9,6 +9,6 @@ scoreboard players remove @e[type=minecraft:ender_dragon,tag=SF_Dragon,scores={S
 execute as @e[type=minecraft:arrow,tag=SF_AlwaysAiming] at @s run function stardust:boss/aim
 execute as @e[type=minecraft:fireball,tag=SF_AlwaysAiming] at @s run function stardust:boss/aim
 execute as @e[type=minecraft:ender_dragon,tag=SF_Dragon,tag=!SF_UltimateBoss,tag=!SF_DragonDead] at @s run function stardust:boss/ultimate_boss/check_health
-execute unless entity @e[type=minecraft:ender_dragon,tag=SF_UltimateBoss,limit=1] run scoreboard players add UltimateBossKilled SF_Data 1
-execute if score UltimateBossKilled SF_Data matches 220.. run function stardust:boss/ultimate_boss/defeated
+execute if entity @a[nbt={Dimension:"stardust:ultimate"},limit=1] unless entity @e[type=minecraft:ender_dragon,tag=SF_UltimateBoss,limit=1] run scoreboard players add UltimateBossKilled SF_Data 1
+execute if score UltimateBossKilled SF_Data matches 11.. run function stardust:boss/ultimate_boss/defeated
 execute in stardust:ultimate run tp @e[x=0,z=0,distance=150..] 0 100 0

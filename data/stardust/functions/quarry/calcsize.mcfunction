@@ -6,9 +6,9 @@ scoreboard players set @s SF_SizeQ 0
     scoreboard players operation rY SF_Data -= @s SF_Qy2
     scoreboard players operation rZ SF_Data = @s SF_Qz1
     scoreboard players operation rZ SF_Data -= @s SF_Qz2
-    execute if score rX matches 0 run scoreboard players set rX SF_Data 1
-    execute if score rY matches 0 run scoreboard players set rY SF_Data 1
-    execute if score rZ matches 0 run scoreboard players set rZ SF_Data 1
+    execute if score rX SF_Data matches 0 run scoreboard players set rX SF_Data 1
+    execute if score rY SF_Data matches 0 run scoreboard players set rY SF_Data 1
+    execute if score rZ SF_Data matches 0 run scoreboard players set rZ SF_Data 1
 
 #Calculating Size
     scoreboard players operation @s SF_SizeQ = rX SF_Data

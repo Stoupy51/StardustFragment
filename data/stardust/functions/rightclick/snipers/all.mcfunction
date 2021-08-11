@@ -26,7 +26,7 @@ tag @s add SF_Shooter
     execute if score Bullet SF_Data matches 5 run scoreboard players add @e[type=minecraft:area_effect_cloud,tag=SF_Bullet,limit=1] SF_Data 2048
     execute if score Bullet SF_Data matches 5 run clear @s minecraft:command_block{SF_UltimateBullet:1b} 1
 
-
+execute if entity @s[gamemode=creative] unless score Bullet SF_Data matches 1.. run scoreboard players set Bullet SF_Data 1
 tp @e[type=minecraft:area_effect_cloud,tag=SF_ToThrow,limit=1] @s
 execute as @e[type=minecraft:area_effect_cloud,tag=SF_ToThrow,limit=1] run tp @s ^ ^1.55 ^
 execute unless score Bullet SF_Data matches 1.. run playsound minecraft:block.note_block.snare ambient @s ~ ~ ~ 1 0.5
@@ -35,3 +35,4 @@ execute if score Bullet SF_Data matches 1.. as @e[type=minecraft:area_effect_clo
 tag @s remove SF_Shooter
 tag @e[tag=SF_Shooted] remove SF_Shooted
 scoreboard players set @s SF_Cooldown 30
+scoreboard players set Bullet SF_Data 0

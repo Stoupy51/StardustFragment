@@ -1,0 +1,2 @@
+#Stardust Ingot
+    execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustFragment:1b}},{Slot:3b,tag:{SF_StardustFragment:1b}},{Slot:4b,tag:{SF_StardustFragment:1b}},{Slot:11b,tag:{SF_StardustFragment:1b}},{Slot:12b,id:"minecraft:iron_ingot"},{Slot:13b,tag:{SF_StardustFragment:1b}},{Slot:20b,tag:{SF_StardustFragment:1b}},{Slot:21b,tag:{SF_StardustFragment:1b}},{Slot:22b,tag:{SF_StardustFragment:1b}}]} run function stardust:craft/items/stardust_ingot

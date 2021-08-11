@@ -53,4 +53,4 @@ execute as @s[nbt={Item:{id:"minecraft:wither_skeleton_skull",Count:1b}}] run pa
 execute as @s[nbt={Item:{id:"minecraft:blue_orchid",Count:2b}}] run particle minecraft:falling_water ~ ~ ~ 5 5 5 0.1 500
 execute as @s[nbt={Item:{id:"minecraft:sunflower",Count:2b}}] run particle minecraft:falling_lava ~ ~ ~ 5 5 5 0.1 500
 execute as @s[nbt={Item:{Count:16b,tag:{SF_CompactedStardust:1b}}}] run particle minecraft:happy_villager ~ ~ ~ 5 5 5 0.1 500
-playsound stardust:craft ambient @a[distance=..50] ~ ~ ~ 0.2
+execute if score @s SF_SCraft matches 1 run playsound stardust:craft ambient @a[distance=..50] ~ ~ ~ 0.2

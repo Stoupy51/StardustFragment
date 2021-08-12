@@ -6,6 +6,7 @@ scoreboard players set Crafted SF_Data 0
 scoreboard players set Count SF_Data 0
 execute store result score Crafted SF_Data run data get block ~ ~ ~ Items[{Slot:16b}].tag.CustomModelData
 execute store result score Count SF_Data run data get block ~ ~ ~ Items[{Slot:16b}].Count
+execute unless score @s SF_X = Count SF_Data run function stardust:craft/drop
 execute unless score @s[tag=SF_WaitingCraft] SF_Data = Crafted SF_Data unless score @s SF_X = Count SF_Data run function stardust:craft/crafted
 
 tag @s remove SF_WaitingCraft

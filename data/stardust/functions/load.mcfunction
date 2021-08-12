@@ -21,7 +21,6 @@ scoreboard objectives add SF_Qz2 trigger
 scoreboard objectives add SF_StatQ dummy
 scoreboard objectives add SF_SizeQ dummy
 scoreboard objectives add SF_SpeedQ dummy
-scoreboard objectives add SF_EditQ dummy
 team add SF_Stardust
 team add SF_Red
 team add SF_Blue

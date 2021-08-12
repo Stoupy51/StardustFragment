@@ -4,7 +4,6 @@
     execute if score Minute SF_Data matches 60.. run function stardust:tick_minute
 	execute as @e[type=minecraft:item,nbt={Item:{tag:{SF_StardustFragment:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function stardust:place/stardust_crafting_table
 	execute if score DragonKilled SF_Data matches ..10 run function stardust:opti/dragon_egg/all
-	###execute as @e[type=minecraft:item] at @s run function stardust:forge/detect_craft
 
 #Players
 	execute at @a run function stardust:generate/player

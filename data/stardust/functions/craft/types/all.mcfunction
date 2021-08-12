@@ -10,9 +10,9 @@
     execute if entity @s[tag=!SF_WaitingCraft] if data block ~ ~ ~ Items[{tag:{SF_AwakenedStardust:1b}}] run function stardust:craft/types/awakened_stardust
 #Awakened Stardust Block Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data block ~ ~ ~ Items[{tag:{SF_AwakenedStardustBlock:1b}}] run function stardust:craft/types/awakened_stardust_block
-######All Compressed Cobblestones Crafts
+#All Compressed Cobblestones Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data block ~ ~ ~ Items[{tag:{SF_Cobblestones:1b}}] run function stardust:craft/types/cobblestones/all
-#Dragon Pearl Crafts
+###Dragon Pearl Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data block ~ ~ ~ Items[{tag:{SF_DragonPearl:1b}}] run function stardust:craft/types/dragon_pearl
 #Ender Dragon Pearl Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data block ~ ~ ~ Items[{tag:{SF_EnderDragonPearl:1b}}] run function stardust:craft/types/ender_dragon_pearl

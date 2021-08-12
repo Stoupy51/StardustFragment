@@ -23,6 +23,8 @@ scoreboard players set @s SF_X 1
     execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:diamond"},{Slot:3b,id:"minecraft:diamond"},{Slot:4b,id:"minecraft:diamond"},{Slot:11b,id:"minecraft:diamond"},{Slot:12b,tag:{SF_DiamondSeed:1b}},{Slot:13b,id:"minecraft:diamond"},{Slot:20b,id:"minecraft:diamond"},{Slot:21b,id:"minecraft:diamond"},{Slot:22b,id:"minecraft:diamond"}]} run function stardust:craft/items/seeds/advanced_diamond
 #Celestial Portal
     execute if entity @s[tag=!SF_WaitingCraft] unless data block ~ ~ ~ Items[{Slot:12b}] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:iron_block"},{Slot:3b,id:"minecraft:iron_block"},{Slot:4b,id:"minecraft:iron_block"},{Slot:11b,id:"minecraft:iron_block"},{Slot:13b,id:"minecraft:iron_block"},{Slot:20b,id:"minecraft:iron_block"},{Slot:21b,id:"minecraft:iron_block"},{Slot:22b,id:"minecraft:iron_block"}]} run function stardust:craft/items/portals/celetial
+#Stoupy's Egg
+    execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_DogExcrement:1b}},{Slot:3b,tag:{SF_DogExcrement:1b}},{Slot:4b,tag:{SF_DogExcrement:1b}},{Slot:11b,tag:{SF_DogExcrement:1b}},{Slot:12b,id:"minecraft:cake"},{Slot:13b,tag:{SF_DogExcrement:1b}},{Slot:20b,tag:{SF_DogExcrement:1b}},{Slot:21b,tag:{SF_DogExcrement:1b}},{Slot:22b,tag:{SF_DogExcrement:1b}}]} run function stardust:craft/items/stoup_egg
 
 #Types Crafts
     execute if entity @s[tag=!SF_WaitingCraft] run function stardust:craft/types/all

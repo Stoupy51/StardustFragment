@@ -1,5 +1,3 @@
-#Compressed Cobblestone
-    execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:cobblestone"},{Slot:3b,id:"minecraft:cobblestone"},{Slot:4b,id:"minecraft:cobblestone"},{Slot:11b,id:"minecraft:cobblestone"},{Slot:12b,id:"minecraft:cobblestone"},{Slot:13b,id:"minecraft:cobblestone"},{Slot:20b,id:"minecraft:cobblestone"},{Slot:21b,id:"minecraft:cobblestone"},{Slot:22b,id:"minecraft:cobblestone"}]} run function stardust:craft/items/cobblestones/compressed
 #Compressed Cobblestone Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data block ~ ~ ~ Items[{tag:{SF_CompressedCobblestone:1b}}] run function stardust:craft/types/cobblestones/compressed
 #Double Compressed Cobblestone Crafts

@@ -13,7 +13,7 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedStardustOre] at @s unless block ~ ~ ~ minecraft:deepslate_redstone_ore run function stardust:destroy/awakened_stardust_ore
 
 #Others
-    #Seeds
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_Seed] at @s unless block ~ ~ ~ minecraft:wheat run function stardust:destroy/seeds/all
     execute as @e[type=minecraft:glow_item_frame,tag=SF_CobblestoneMiner] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function stardust:destroy/cobblestone_miner
     execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/quarry
     execute as @e[type=minecraft:glow_item_frame,tag=SF_CavernPortal] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function stardust:destroy/cavern_portal

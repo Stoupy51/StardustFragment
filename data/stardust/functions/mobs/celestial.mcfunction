@@ -1,4 +1,4 @@
-data modify entity @s ArmorDropChances set value [2F,0.5F,0.25F,2F]
+data modify entity @s ArmorDropChances set value [0.1F,0.05F,0.01F,2F]
 data modify entity @s ArmorItems set value [{},{},{},{}]
 data modify entity @s ArmorItems[0] set from storage stardust:items 2013000
 data modify entity @s ArmorItems[1] set from storage stardust:items 2013000

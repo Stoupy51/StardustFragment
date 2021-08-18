@@ -11,9 +11,6 @@
 	data modify entity @s[tag=SF_LegendarySeed,scores={SF_Data=720..729}] Item.tag.CustomModelData set value 2013213
 	data modify entity @s[tag=SF_SolarSeed,scores={SF_Data=720..729}] Item.tag.CustomModelData set value 2013214
 	data modify entity @s[tag=SF_DarkSeed,scores={SF_Data=720..729}] Item.tag.CustomModelData set value 2013215
-	execute if entity @s[tag=SF_DiamondSeeds,scores={SF_Data=60..69}] run setblock ~ ~ ~ wheat[age=4]
-	execute if entity @s[tag=SF_StardustSeeds,scores={SF_Data=20..29}] run setblock ~ ~ ~ wheat[age=4]
-	execute if entity @s[tag=SF_ElementarySeeds,scores={SF_Data=720..729}] run setblock ~ ~ ~ wheat[age=4]
 #FinalStep
 	data modify entity @s[tag=SF_DiamondSeed,scores={SF_Data=120..}] Item.tag.CustomModelData set value 2013216
 	data modify entity @s[tag=SF_AdvancedDiamondSeed,scores={SF_Data=120..}] Item.tag.CustomModelData set value 2013217
@@ -26,6 +23,3 @@
 	execute if entity @s[tag=SF_DiamondSeeds,scores={SF_Data=120..}] run tag @s add SF_SeedDone
 	execute if entity @s[tag=SF_StardustSeeds,scores={SF_Data=40..}] run tag @s add SF_SeedDone
 	execute if entity @s[tag=SF_ElementarySeeds,scores={SF_Data=1440..}] run tag @s add SF_SeedDone
-	execute if entity @s[tag=SF_DiamondSeeds,scores={SF_Data=120..}] run setblock ~ ~ ~ wheat[age=7]
-	execute if entity @s[tag=SF_StardustSeeds,scores={SF_Data=40..}] run setblock ~ ~ ~ wheat[age=7]
-	execute if entity @s[tag=SF_ElementarySeeds,scores={SF_Data=1440..}] run setblock ~ ~ ~ wheat[age=7]

@@ -2,7 +2,7 @@
 	scoreboard players set Minute SF_Data 0
 	scoreboard players set StardustPillar SF_Data 0
 	execute as @e[type=minecraft:wither,tag=SF_StardustPillar] run scoreboard players add StardustPillar SF_Data 1
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_CobblestoneMiner] at @s if block ~ ~-1 ~ minecraft:cobblestone run function stardust:work/cobblestone_miner
+	execute as @e[type=minecraft:glow_item_frame,tag=SF_CobblestoneMiner] at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:cobblestone run function stardust:work/cobblestone_miner
 
 #Dog Excrements
 	execute as @e[type=minecraft:wolf] run scoreboard players add @e[type=minecraft:wolf,limit=1,sort=random] SF_Wolfs 1

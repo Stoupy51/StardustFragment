@@ -36,4 +36,14 @@
     execute at @s positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
     execute at @s positioned ~ ~0.5 ~ if block ~ ~ ~ #stardust:for_stardust_ore run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
     execute at @s positioned ~ ~0.5 ~ if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
+    execute at @s positioned ~1.2 ~1.2 ~1.2 if block ~ ~ ~ #stardust:for_stardust_ore run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
+    execute at @s positioned ~1.2 ~1.2 ~1.2 if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
+    execute at @s positioned ~ ~1.2 ~1.2 if block ~ ~ ~ #stardust:for_stardust_ore run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
+    execute at @s positioned ~ ~1.2 ~1.2 if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
+    execute at @s positioned ~1.2 ~1.2 ~ if block ~ ~ ~ #stardust:for_stardust_ore run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
+    execute at @s positioned ~1.2 ~1.2 ~ if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
+    execute at @s positioned ~1.2 ~ ~1.2 if block ~ ~ ~ #stardust:for_stardust_ore run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
+    execute at @s positioned ~1.2 ~ ~1.2 if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
+    execute at @s positioned ~ ~1.2 ~ if block ~ ~ ~ #stardust:for_stardust_ore run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
+    execute at @s positioned ~ ~1.2 ~ if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore
 kill @s

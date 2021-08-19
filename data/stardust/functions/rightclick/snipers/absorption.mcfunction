@@ -1,4 +1,4 @@
-scoreboard players operation Absorption SF_Data -= @e[type=minecraft:area_effect_cloud,tag=Bullet,limit=1] SF_Data
+scoreboard players operation Absorption SF_Data -= BulletDamage SF_Data
 execute store result entity @s AbsorptionAmount float 1 run scoreboard players get Absorption SF_Data
 
 execute store result score Health SF_Data run data get entity @s Health 1

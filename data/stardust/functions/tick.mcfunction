@@ -16,7 +16,7 @@
 #Others
     execute as @e[type=minecraft:glow_item_frame,tag=SF_WorkingPortal] run function stardust:visual/portal_particules
     execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s if entity @p[distance=..7] run function stardust:craft/all
-    ###execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s if entity @p[distance=..7] run function stardust:quarry/gui/all
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s if entity @p[distance=..7] run function stardust:quarry/gui/all
     execute if score SuperCraft SF_Data matches 1 as @e[type=minecraft:item,scores={SF_SCraft=0..}] at @s run function stardust:forge/particles
     execute in stardust:stardust run tp @e[type=minecraft:vex,distance=0..] 0 -10000 0
 	execute if score Second SF_Data matches 10 as @e[type=minecraft:item] at @s run function stardust:forge/detect_craft

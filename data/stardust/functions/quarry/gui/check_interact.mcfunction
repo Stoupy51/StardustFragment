@@ -4,3 +4,4 @@ execute unless data block ~ ~ ~ Items[{Slot:20b,tag:{SF_QuarryPause:1b}}] if sco
 execute unless data block ~ ~ ~ Items[{Slot:20b,tag:{SF_QuarryPause:1b}}] if score @s SF_StatQ matches -2 run scoreboard players set @s SF_StatQ 2
 execute unless data block ~ ~ ~ Items[{Slot:21b,tag:{SF_QuarryStop:1b}}] run scoreboard players set @s SF_StatQ 0
 scoreboard players set @s[scores={SF_StatQ=-10}] SF_StatQ -2
+tag @s remove SF_QuarryGui

@@ -12,6 +12,7 @@
 	execute as @a[scores={SF_Wormhole=1..}] run function stardust:opti/wormhole_potion/use
 	execute as @a[tag=SF_NoCooldown] run attribute @s minecraft:generic.attack_speed base set 2000
 	execute as @a at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
+	execute at @a run forceload add -29999999 2013 -29999999 2013
 
 #Boss
     execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second

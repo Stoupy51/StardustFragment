@@ -24,7 +24,16 @@
     summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
     summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
     summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
+    summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
     execute in stardust:stardust as @e[type=minecraft:marker,tag=SF_OrePos,distance=0..,limit=8] at @s run function stardust:generate/quadruple_compressed_cobblestone
+    execute in stardust:stardust as @e[type=minecraft:marker,tag=SF_OrePos,distance=0..,limit=8] at @s run function stardust:generate/stardust
     kill @e[type=minecraft:marker,tag=SF_OrePos]
 
 tag @s remove SF_ChunkInit

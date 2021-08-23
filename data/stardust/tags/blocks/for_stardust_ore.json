@@ -10,6 +10,8 @@
     "minecraft:andesite",
     "minecraft:granite",
     "minecraft:deepslate",
+    "minecraft:netherrack",
+    "minecraft:soul_sand",
     "minecraft:dripstone_block"
     ]
 }

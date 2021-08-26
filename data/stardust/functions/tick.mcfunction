@@ -1,5 +1,6 @@
-#Destroy
+#Others 1
     execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
+    execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b
 
 #Timer
     scoreboard players add Second SF_Data 1
@@ -13,7 +14,7 @@
     execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
     execute as @a run function stardust:dimensions/transitions
 
-#Others
+#Others 2
     execute as @e[type=minecraft:glow_item_frame,tag=SF_WorkingPortal] run function stardust:visual/portal_particules
     execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s if entity @p[distance=..7] run function stardust:craft/all
     execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s run function stardust:quarry/gui/all
@@ -23,4 +24,4 @@
 
 #Boss
     execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
-    execute if score StardustPillar SF_Data matches 1.. at @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 50 force
+    execute if score StardustPillar SF_Data matches 1.. at @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 25

@@ -21,6 +21,6 @@ data modify block ~ ~ ~ SpawnPotentials[16].Entity.Item set from storage stardus
 data modify block ~ ~ ~ SpawnPotentials[17].Entity.Item set from storage stardust:items 2013010
 data modify block ~ ~ ~ SpawnPotentials[18].Entity.Item set value {id:"minecraft:netherite_block",Count:16b}
 
-summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_UltimateSpawner"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b}
+summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_UltimateSpawner"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013226}}}
 particle flame ~ ~ ~ 0.5 0.5 0.5 0.01 1000
 kill @s

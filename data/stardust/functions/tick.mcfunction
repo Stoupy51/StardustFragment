@@ -24,4 +24,4 @@
 
 #Boss
     execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
-    execute if score StardustPillar SF_Data matches 1.. at @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 25
+    execute if score StardustPillar SF_Data matches 1.. at @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 20

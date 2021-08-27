@@ -1,6 +1,6 @@
-execute if block ~ ~ ~ minecraft:redstone_wire run setblock ~ ~ ~ air
-execute unless entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:redstone"}},limit=1,sort=nearest,distance=..1] run summon minecraft:item ~ ~ ~ {Motion:[0.00,0.20,0.00],Item:{id:"minecraft:redstone",Count:1b}}
-tag @e[type=minecraft:item,nbt={Item:{id:"minecraft:redstone"}},limit=1,sort=nearest,distance=..1] add SF_Drop
+execute if block ~ ~ ~ minecraft:moss_carpet run setblock ~ ~ ~ air
+execute unless entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:moss_carpet"}},limit=1,sort=nearest,distance=..1] run summon minecraft:item ~ ~ ~ {Motion:[0.00,0.20,0.00],Item:{id:"minecraft:moss_carpet",Count:1b}}
+tag @e[type=minecraft:item,nbt={Item:{id:"minecraft:moss_carpet"}},limit=1,sort=nearest,distance=..1] add SF_Drop
 execute if entity @s[tag=SF_DiamondSeed] run function stardust:destroy/seeds/diamond
 execute if entity @s[tag=SF_AdvancedDiamondSeed] run function stardust:destroy/seeds/advanced_diamond
 execute if entity @s[tag=SF_StardustSeed] run function stardust:destroy/seeds/stardust

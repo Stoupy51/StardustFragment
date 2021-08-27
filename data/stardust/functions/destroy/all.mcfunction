@@ -14,7 +14,7 @@
 
 #Others
     #Seeds
-        execute as @e[type=minecraft:glow_item_frame,tag=SF_Seed] at @s unless block ~ ~ ~ minecraft:redstone_wire run function stardust:destroy/seeds/all
+        execute as @e[type=minecraft:glow_item_frame,tag=SF_Seed] at @s unless block ~ ~ ~ minecraft:moss_carpet run function stardust:destroy/seeds/all
         execute as @e[type=minecraft:glow_item_frame,tag=SF_DiamondSeeds] at @s unless block ~ ~-1 ~ minecraft:stone run function stardust:destroy/seeds/all
         execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustSeeds] at @s unless block ~ ~-1 ~ minecraft:diamond_block run function stardust:destroy/seeds/all
         execute as @e[type=minecraft:glow_item_frame,tag=SF_LegendarySeed] at @s unless block ~ ~-1 ~ minecraft:emerald_block run function stardust:destroy/seeds/all

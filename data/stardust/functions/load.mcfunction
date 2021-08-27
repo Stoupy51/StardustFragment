@@ -257,15 +257,17 @@ scoreboard players add Mode SF_Data 0
 		data modify storage stardust:items 2013252 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013252,BlockEntityTag:{Lock:"SF_Placed"},SF_DarkPhotovoltaicPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 32 Watt]","italic":false,"color":"gray"}]','[{"text":"[Energy Buffer : 3200 Joules]","italic":false,"color":"gray"}]'],Name:'[{"text":"Dark Photovoltaic Panel","italic":false,"color":"dark_gray"}]'}}}
 	#Stardust Battery
 		data modify storage stardust:items 2013253 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013253,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 50 kJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Stardust Battery","italic":false,"color":"aqua"}]'}}}
-	#Awakened Battery
-		data modify storage stardust:items 2013254 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013254,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 100 kJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Battery","italic":false,"color":"red"}]'}}}
+	#Awakened Stardust Battery
+		data modify storage stardust:items 2013254 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013254,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedStardustBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 100 kJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Stardust Battery","italic":false,"color":"red"}]'}}}
 	#Ultimate Battery
 		data modify storage stardust:items 2013255 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013255,BlockEntityTag:{Lock:"SF_Placed"},SF_UltimateBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 200 kJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Battery","italic":false,"color":"dark_red"}]'}}}
-
 #Wires
-	#Simple Wire
-		data modify storage stardust:items 2013400 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013400,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]},SE_SimpleWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 20 Watt]","italic":false,"color":"gray"}]'],Name:'[{"text":"Simple Wire","italic":false,"color":"white"}]'}}}
+	#Stardust Wire
 		data modify storage stardust:items 2013400 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013400,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220137]},SF_StardustWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 600 Watt]","italic":false,"color":"gray"}]'],Name:'[{"text":"Stardust Wire","italic":false,"color":"aqua"}]'}}}
+	#Awakened Stardust Wire
+		data modify storage stardust:items 2013500 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013500,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220137]},SF_AwakenedStardustWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 1800 Watt]","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Stardust Wire","italic":false,"color":"red"}]'}}}
+	#Ultimate Wire
+		data modify storage stardust:items 2013600 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013600,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220137]},SF_UltimateWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 5400 Watt]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Wire","italic":false,"color":"dark_red"}]'}}}
 
 
 schedule function stardust:post_load 2s replace

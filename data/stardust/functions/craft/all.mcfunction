@@ -11,7 +11,7 @@ execute unless score @s[tag=SF_WaitingCraft] SF_Data = Crafted SF_Data run funct
 execute unless score @s SF_X = Count SF_Data run function simplenergy:craft/drop
 
 tag @s remove SF_WaitingCraft
-item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":"","italic":false}]'}}
+item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 scoreboard players set @s SF_Data 0
 scoreboard players set @s SF_X 1
 

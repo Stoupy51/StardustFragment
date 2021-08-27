@@ -8,7 +8,7 @@ execute as @a[nbt={Dimension:"stardust:ultimate"}] at @s run summon minecraft:it
 execute as @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}}] run data modify entity @s Item set from storage stardust:items 2013005
 execute as @e[type=minecraft:item,tag=SF_GiveAwak] run data modify entity @s Item.Count set value 32
 
-tellraw @a ["",{"text":"\n[Stardust","color":"dark_aqua"},{"text":"Fragment] ","color":"aqua"},{"text":"The "},{"text":"U","color":"dark_purple"},{"text":"l","color":"blue"},{"text":"t","color":"dark_aqua"},{"text":"i","color":"aqua"},{"text":"m","color":"green"},{"text":"a","color":"yellow"},{"text":"t","color":"gold"},{"text":"e","color":"dark_red"},{"text":" B","color":"dark_purple"},{"text":"o","color":"blue"},{"text":"s","color":"dark_aqua"},{"text":"s","color":"aqua"},{"text":" has been defeated! Congratulations!\n"}]
+tellraw @a ["",{"text":"\n[Stardust","italic":false,"color":"dark_aqua"},{"text":"Fragment] ","italic":false,"color":"aqua"},{"text":"The "},{"text":"U","italic":false,"color":"dark_purple"},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" B","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"s","italic":false,"color":"dark_aqua"},{"text":"s","italic":false,"color":"aqua"},{"text":" has been defeated! Congratulations!\n"}]
 execute as @a at @s run playsound minecraft:entity.wither.spawn master @s
 kill @e[type=minecraft:ender_dragon,tag=SF_Dragon]
 scoreboard players reset UltimateBossKilled SF_Data

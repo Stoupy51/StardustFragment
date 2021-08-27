@@ -264,4 +264,5 @@ scoreboard players add Mode SF_Data 0
 
 #Wires
 
+
 schedule function stardust:post_load 2s replace

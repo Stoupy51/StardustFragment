@@ -28,8 +28,6 @@
 #Mobs spawn
 	execute in stardust:celestial as @e[type=#stardust:global,tag=!SF_CelestialDim,distance=0..] at @s run function stardust:mobs/celestial
 	execute in stardust:stardust as @e[type=#stardust:global,tag=!SF_StardustDim,distance=0..] at @s run function stardust:mobs/stardust
-	execute if entity @a[nbt={Dimension:"stardust:dungeon"},limit=1] in stardust:dungeon run tp @e[type=minecraft:ghast,distance=0..] 0 -10000 0
-	execute in stardust:dungeon as @e[type=#stardust:global,tag=!SF_DungeonDim,distance=0..] run function stardust:mobs/dungeon
 	execute in stardust:ultimate as @e[type=minecraft:ender_dragon,tag=!SF_Dragon,distance=0..,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
 	execute in stardust:stardust as @e[type=minecraft:bat,distance=0..] at @s run function stardust:mobs/stardust_bat
 
@@ -37,7 +35,5 @@
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_Portal] run function stardust:work/portals
 	scoreboard players add @a[scores={SF_Data=1..},nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}}] SF_Data 10
 	execute as @a[scores={SF_Data=1..}] at @s run function stardust:dimensions/teleport
-	tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon
-	gamemode adventure @a[nbt={Dimension:"stardust:dungeon"},gamemode=survival,tag=SF_IsInDungeon]
-	execute as @a[tag=SF_IsInDungeon] unless entity @s[nbt={Dimension:"stardust:dungeon"}] run function stardust:dimensions/left_dungeon
-	execute in stardust:dungeon as @a[x=-2.5,y=68,z=-2.5,dx=0,dz=0,distance=..0.5,nbt={SelectedItem:{tag:{SF_StardustDungeonKey:1b}}}] run function stardust:dimensions/enter_dungeon
+    tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon
+	execute if entity @a[tag=SF_IsInDungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon

@@ -1,2 +1,2 @@
 tag @s remove SF_IsInDungeon
-gamemode survival
+gamemode survival @s[gamemode=adventure]

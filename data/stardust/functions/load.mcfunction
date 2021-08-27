@@ -61,7 +61,7 @@ scoreboard players add Mode SF_Data 0
 	#Dog excrement
 		data modify storage stardust:items 2013011 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013011,SF_DogExcrement:1b,HideFlags:127,display:{Name:'[{"text":"Dog excrement","italic":false,"color":"#582900"}]'}}}
 	#Ultimate Core
-		data modify storage stardust:items 2013012 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013012,SF_UltimateCore:1b,HideFlags:127,display:{Name:'[{"text":"Ultimate Core","italic":false,"color":"white"}]'}}}
+		data modify storage stardust:items 2013012 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013012,SF_UltimateCore:1b,HideFlags:127,display:{Name:'[{"text":"Ultimate Core","italic":false,"color":"dark_red"}]'}}}
 	#Compacted Stardust
 		data modify storage stardust:items 2013013 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013013,SF_CompactedStardust:1b,HideFlags:127,display:{Name:'[{"text":"Compacted Stardust","italic":false,"color":"blue"}]'}}}
 	#Very Compacted Stardust
@@ -170,6 +170,8 @@ scoreboard players add Mode SF_Data 0
 		data modify storage stardust:items 2013170 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013170,SF_TravelStaff:1b,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"text":"Allows you to return","italic":false,"color":"gray"}]','[{"text":"to your spawn point","italic":false,"color":"gray"}]','{"text":" "}','[{"text":"[Activation: 5 seconds]","italic":false,"color":"white"}]'],Name:'[{"text":"Travel Staff","italic":false,"color":"dark_purple"}]'}}}
 	#Wormhole Potion
 		data modify storage stardust:items 2013171 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013171,SF_WormholePotion:1b,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"text":"Allows you to teleport to a player","italic":false,"color":"gray"}]'],Name:'[{"text":"Wormhole Potion","italic":false,"color":"aqua"}]'}}}
+	#Stardust Apple
+		data modify storage stardust:items 2013172 set value {Slot:16b,id:"minecraft:golden_apple",Count:1b,tag:{CustomModelData:2013172,SF_StardustApple:1b,HideFlags:127,display:{Name:'[{"text":"Stardust Apple","italic":false,"color":"aqua"}]'}}}
 #Others
 	#Seeds
 		#Diamond Seeds
@@ -210,7 +212,7 @@ scoreboard players add Mode SF_Data 0
 		#Ultimate Portal
 			data modify storage stardust:items 2013223 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013223,BlockEntityTag:{Lock:"SF_Placed"},SF_UltimatePortal:1b,HideFlags:127,display:{Lore:['[{"text":"This portal allows access to the","italic":false,"color":"white"}]','[{"text":"dimension of the Ultimate Boss!","italic":false,"color":"white"}]','[{"text":"[Power Usage : 2000 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 24 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"U","italic":false,"color":"dark_purple","bold":"true"},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" P","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"r","italic":false,"color":"dark_aqua"},{"text":"t","italic":false,"color":"aqua"},{"text":"a","italic":false,"color":"green"},{"text":"l","italic":false,"color":"yellow"}]'}}}
 	#Wither Killer
-		data modify storage stardust:items 2013224 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013224,SF_WitherKiller:1b,HideFlags:127,display:{Lore:['[{"text":"Allows you to exterminate all","italic":false,"color":"white"}]','[{"text":"the Withers in a radius of 100 blocks","italic":false,"color":"white"}]'],Name:'[{"text":"Wither Killer","italic":false,"color":"dark_gray"}]'}}}
+		data modify storage stardust:items 2013224 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013224,SF_WitherKiller:1b,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"text":"Allows you to exterminate all","italic":false,"color":"white"}]','[{"text":"the Withers in a radius of 100 blocks","italic":false,"color":"white"}]'],Name:'[{"text":"Wither Killer","italic":false,"color":"dark_gray"}]'}}}
 	#Emerald Spawner
 		data modify storage stardust:items 2013225 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013225,BlockEntityTag:{Lock:"SF_Placed"},SF_EmeraldSpawner:1b,HideFlags:127,display:{Name:'[{"text":"Emerald Spawner","italic":false,"color":"green"}]'}}}
 	#Ultimate Spawner
@@ -218,8 +220,48 @@ scoreboard players add Mode SF_Data 0
 	#Stoupy's Egg
 		data modify storage stardust:items 2013227 set value {Slot:16b,id:"minecraft:wolf_spawn_egg",Count:1b,tag:{CustomModelData:2013227,SF_StoupEgg:1b,EntityTag:{CustomName:"\"Stoupy\"",CustomNameVisible:1b,Tags:["SF_Stoupy","SF_StoupArmy"]},HideFlags:127,display:{Lore:['[{"text":"This egg summons the StoupArmy","italic":false,"color":"white"}]','[{"text":"It\'s a miniboss fighting with","italic":false,"color":"white"}]','[{"text":"an army of improved wolves","italic":false,"color":"white"}]'],Name:'[{"text":"Stoupy\'s Egg","italic":false,"color":"aqua"}]'}}}
 	#Stardust Pillar
-		data modify storage stardust:items 2013228 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013228,SF_StardustPillar:1b,HideFlags:127,display:{Lore:['[{"text":"This allow you to summon the Stardust Pillar","italic":false,"color":"white"}]','[{"text":"It\'s a boss with a shield that makes him invincible,","italic":false,"color":"white"}]','[{"text":"it decreases with each mobs sent","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Pillar","italic":false,"color":"blue"}]'}}}
+		data modify storage stardust:items 2013228 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013228,SF_StardustPillar:1b,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"text":"This allow you to summon the Stardust Pillar","italic":false,"color":"white"}]','[{"text":"It\'s a boss with a shield that makes him invincible,","italic":false,"color":"white"}]','[{"text":"it decreases with each mobs sent","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Pillar","italic":false,"color":"blue"}]'}}}
 	#Stardust Dungeon Key
 		data modify storage stardust:items 2013229 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013229,SF_StardustDungeonKey:1b,HideFlags:127,display:{Lore:['[{"text":"Allows you to enter the Stardust Dungeon","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Dungeon Key","italic":false,"color":"red"}]'}}}
+	#Quarry Configurator
+		data modify storage stardust:items 2013230 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013230,SF_QuarryConfigurator:1b,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"text":"Right click on two blocks to get the coordinates","italic":false,"color":"gray"}]'],Name:'[{"text":"Quarry Configurator","italic":false,"color":"white"}]'}}}
+	#Mob Grinder
+		data modify storage stardust:items 2013231 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013231,BlockEntityTag:{Lock:"SF_Placed"},SF_MobGrinder:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 500 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 15 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Mob Grinder","italic":false,"color":"white"}]'}}}
+	#Elevator
+		data modify storage stardust:items 2013233 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013233,BlockEntityTag:{Lock:"SF_Placed"},SF_Elevator:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 40 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Elevator","italic":false,"color":"white"}]'}}}
+	#Nether Star Generator
+		data modify storage stardust:items 2013235 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013235,BlockEntityTag:{Lock:"SF_Placed"},SF_NetherStarGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 1500 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 20 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Nether Star Generator","italic":false,"color":"dark_purple"}]'}}}
+	#Redstone Generator
+		data modify storage stardust:items 2013237 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013237,BlockEntityTag:{Lock:"SF_Placed"},SF_RedstoneGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 50 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Redstone Generator","italic":false,"color":"white"}]'}}}
+	#Heat Generator
+		data modify storage stardust:items 2013239 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013239,BlockEntityTag:{Lock:"SF_Placed"},SF_HeatGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Heat Generator","italic":false,"color":"gold"}]'}}}
+	#Basic Wind Turbine
+		data modify storage stardust:items 2013241 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013241,BlockEntityTag:{Lock:"SF_Placed"},SF_BasicWindTurbine:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 0-20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Basic Wind Turbine","italic":false,"color":"white"}]'}}}
+	#Stardust Wind Turbine
+		data modify storage stardust:items 2013242 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013242,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustWindTurbine:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 0-40 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Stardust Wind Turbine","italic":false,"color":"aqua"}]'}}}
+	#Awakened Wind Turbine
+		data modify storage stardust:items 2013243 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013243,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedWindTurbine:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 0-80 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 3200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Awakened Wind Turbine","italic":false,"color":"red"}]'}}}
+	#Stardust Furnace Generator
+		data modify storage stardust:items 2013244 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013244,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustFurnaceGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Stardust Furnace Generator","italic":false,"color":"aqua"}]'}}}
+	#Awakened Furnace Generator
+		data modify storage stardust:items 2013246 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013246,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedFurnaceGenerator:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 20 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Awakened Furnace Generator","italic":false,"color":"red"}]'}}}
+	#Stardust Photovoltaic Panel
+		data modify storage stardust:items 2013248 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013248,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustPhotovoltaicPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 8 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 800 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Stardust Panel","italic":false,"color":"aqua"}]'}}}
+	#Awakened Photovoltaic Panel
+		data modify storage stardust:items 2013249 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013249,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedPhotovoltaicPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 16 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 1600 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Awakened Photovoltaic Panel","italic":false,"color":"red"}]'}}}
+	#Legendary Photovoltaic Panel
+		data modify storage stardust:items 2013250 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013250,BlockEntityTag:{Lock:"SF_Placed"},SF_LegendaryPhotovoltaicPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 32 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 3200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Legendary Photovoltaic Panel","italic":false,"color":"green"}]'}}}
+	#Solar Photovoltaic Panel
+		data modify storage stardust:items 2013251 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013251,BlockEntityTag:{Lock:"SF_Placed"},SF_SolarPhotovoltaicPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 32 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 3200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Solar Photovoltaic Panel","italic":false,"color":"gold"}]'}}}
+	#Dark Photovoltaic Panel
+		data modify storage stardust:items 2013252 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013252,BlockEntityTag:{Lock:"SF_Placed"},SF_DarkPhotovoltaicPanel:1b,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 32 Watt]","color":"gray","italic":false}]','[{"text":"[Energy Buffer : 3200 Joules]","color":"gray","italic":false}]'],Name:'[{"text":"Dark Photovoltaic Panel","italic":false,"color":"dark_gray"}]'}}}
+	#Stardust Battery
+		data modify storage stardust:items 2013253 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013253,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 50 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Stardust Battery","italic":false,"color":"aqua"}]'}}}
+	#Awakened Battery
+		data modify storage stardust:items 2013254 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013254,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 100 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Awakened Battery","italic":false,"color":"red"}]'}}}
+	#Ultimate Battery
+		data modify storage stardust:items 2013255 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013255,BlockEntityTag:{Lock:"SF_Placed"},SF_UltimateBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 200 kJ]","color":"gray","italic":false}]'],Name:'[{"text":"Ultimate Battery","italic":false,"color":"dark_red"}]'}}}
+
+#Wires
 
 schedule function stardust:post_load 2s replace

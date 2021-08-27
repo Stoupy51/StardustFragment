@@ -499,6 +499,9 @@ data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1]
 data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1] Item set from storage stardust:items 2013297
 data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1] Item set from storage stardust:items 2013298
 data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1] Item set from storage stardust:items 2013299
+data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1] Item set from storage stardust:items 2013400
+data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1] Item set from storage stardust:items 2013500
+data modify entity @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}},limit=1] Item set from storage stardust:items 2013600
 kill @e[type=minecraft:item,nbt={Item:{tag:{SF_Give:1b}}}]
 
 #Liste des Tags aux Items et leur signification :

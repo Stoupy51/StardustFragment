@@ -39,7 +39,7 @@
 	execute if entity @a[tag=SF_IsInDungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
 
 #Machines
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s unless score @s EF_Joule matches 1600.. run function stardust:work/furnace_generator/advanced
+	execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s unless score @s EF_kJ matches 1600.. run function stardust:work/furnace_generator/advanced
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/advanced
 
 

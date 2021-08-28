@@ -3,7 +3,7 @@ execute if score @s SF_StatQ matches 1 run function stardust:quarry/working/star
     execute if score @s SF_SizeQ matches 200001.. run tellraw @a[distance=..3] [{"text":"ERROR: More than 200k blocks","italic":false,"color":"red"}]
     scoreboard players set @s[scores={SF_SizeQ=200001..}] SF_StatQ 0
     scoreboard players add @s SF_SpeedQ 0
-    execute if score @s SF_StatQ matches 2 run scoreboard players operation @s EF_Joule -= @s EF_Watt
+    execute if score @s SF_StatQ matches 2 run scoreboard players operation @s EF_kJ -= @s EF_kW
     execute if entity @s[scores={SF_StatQ=2},tag=SF_QuarryLv1] at @s run function stardust:quarry/working/pos
     execute if entity @s[scores={SF_StatQ=2},tag=SF_QuarryLv2] at @e[limit=2] at @s run function stardust:quarry/working/pos
     execute if entity @s[scores={SF_StatQ=2},tag=SF_QuarryLv3] at @e[limit=3] at @s run function stardust:quarry/working/pos

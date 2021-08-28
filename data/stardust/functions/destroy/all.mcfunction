@@ -29,5 +29,6 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SF_UltimatePortal] at @s unless block ~ ~ ~ minecraft:crying_obsidian run function stardust:destroy/ultimate_portal
     execute as @e[type=minecraft:glow_item_frame,tag=SF_EmeraldSpawner] at @s unless block ~ ~ ~ minecraft:spawner run function stardust:destroy/emerald_spawner
     execute as @e[type=minecraft:glow_item_frame,tag=SF_UltimateSpawner] at @s unless block ~ ~ ~ minecraft:spawner run function stardust:destroy/ultimate_spawner
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/furnace_generator/advanced
 
     execute as @e[type=minecraft:glow_item_frame,tag=SF_CraftingTable] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/stardust_crafting_table

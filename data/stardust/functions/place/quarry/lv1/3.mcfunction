@@ -1,4 +1,4 @@
-scoreboard players set @s EF_EnergyStorage 20000
+scoreboard players set @s EF_kJmax 20000
 scoreboard players set @s EF_kW 250
 scoreboard players operation @s EF_kJ = EF_Next EF_kJ
 scoreboard players reset EF_Next EF_kJ

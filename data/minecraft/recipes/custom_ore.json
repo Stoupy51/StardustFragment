@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "minecraft:barrel"
+    },
+    "result": "minecraft:barrel",
+    "experience": 0,
+    "cookingtime": 200
+}

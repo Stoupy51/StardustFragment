@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "SE_PlacingBlock": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:barrel",
+                "item": {
+                    "nbt": "{SF_AwakenedStardustBattery:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "stardust:place/awakened_stardust_battery/1"
+    }
+}

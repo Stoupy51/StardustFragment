@@ -35,7 +35,7 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SF_NetherStarGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/nether_star_generator
     execute as @e[type=minecraft:glow_item_frame,tag=SF_RedstoneGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/redstone_generator
     execute as @e[type=minecraft:glow_item_frame,tag=SF_HeatGenerator] at @s unless block ~ ~ ~ minecraft:iron_block run function stardust:destroy/heat_generator
-    execute as @e[type=minecraft:glow_item_frame,tag=SF_WindTurbine] at @s unless block ~ ~ ~ minecraft:iron_block run function stardust:destroy/wind_turbine
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_WindTurbine] at @s unless block ~ ~ ~ minecraft:iron_trapdoor run function stardust:destroy/wind_turbine
     execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/furnace_generator/advanced
     execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustFurnaceGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/furnace_generator/stardust
     execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedFurnaceGenerator] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/furnace_generator/awakened

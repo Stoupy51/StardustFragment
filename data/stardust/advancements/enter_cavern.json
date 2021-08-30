@@ -1,0 +1,36 @@
+{
+    "display": {
+        "title": {
+            "text": "To get some resources",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Cross the Cavern Portal"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2013219}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enter_cavern": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "to": "stardust:cavern"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "enter_cavern"
+        ]
+    ],
+    "rewards": {
+        "experience": 800
+    },
+    "parent": "stardust:root"
+}

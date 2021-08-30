@@ -1,0 +1,36 @@
+{
+    "display": {
+        "title": {
+            "text": "What if I summon a dragon here ?",
+            "color": "dark_red"
+        },
+        "description": {
+            "text": "Cross the Ultimate Portal"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2013223}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enter_ultimate": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "to": "stardust:ultimate"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "enter_ultimate"
+        ]
+    ],
+    "rewards": {
+        "experience": 24000
+    },
+    "parent": "stardust:root"
+}

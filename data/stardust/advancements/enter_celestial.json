@@ -1,0 +1,36 @@
+{
+    "display": {
+        "title": {
+            "text": "Let's start a Skyblock ?",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Enter the Celestial dimension by crossing its portal"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2013220}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enter_celestial": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "to": "stardust:celestial"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "enter_celestial"
+        ]
+    ],
+    "rewards": {
+        "experience": 800
+    },
+    "parent": "stardust:root"
+}

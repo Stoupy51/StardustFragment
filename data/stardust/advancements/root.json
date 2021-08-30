@@ -1,0 +1,41 @@
+{
+    "display": {
+        "title": {
+            "text": "Stardust Fragment",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Get your first Stardust Fragment"
+        },
+        "icon": {
+            "item": "minecraft:command_block",
+            "nbt": "{CustomModelData:2013000}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "stardust:textures/materials/stardust_ore.png"
+    },
+    "criteria": {
+        "Stardust Fragment": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:command_block",
+                        "nbt": "{SF_StardustFragment:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "Stardust Fragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 10
+    }
+}

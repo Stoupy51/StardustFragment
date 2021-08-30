@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "text": "Ready to fight ?!!",
+            "color": "red"
+        },
+        "description": {
+            "text": "Enter the Stardust Dungeon"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2013222}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "experience": 12000
+    },
+    "parent": "stardust:root"
+}

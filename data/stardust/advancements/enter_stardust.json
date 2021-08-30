@@ -1,0 +1,36 @@
+{
+    "display": {
+        "title": {
+            "text": "Is it the main dimension ?",
+            "color": "dark_blue"
+        },
+        "description": {
+            "text": "Enter the Stardust dimension"
+        },
+        "icon": {
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2013221}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enter_stardust": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "to": "stardust:stardust"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "enter_stardust"
+        ]
+    ],
+    "rewards": {
+        "experience": 6000
+    },
+    "parent": "stardust:root"
+}

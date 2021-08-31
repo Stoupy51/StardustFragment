@@ -16,5 +16,5 @@
     execute if score @s SF_Data matches 2012900 run kill @e[type=minecraft:item,nbt={Item:{tag:{SF_Joulemeter:1b}}},limit=1,sort=nearest,distance=..1]
 
 #Replace the item
-    data merge entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:barrel"}},limit=1,sort=nearest,distance=..1] {Item:{id:"minecraft:crafting_table",Count:1b}}
+    data modify entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:barrel"}},limit=1,sort=nearest,distance=..1] Item from storage stardust:items 2013399
 kill @s

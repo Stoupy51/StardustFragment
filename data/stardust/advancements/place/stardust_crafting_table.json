@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "SE_PlacingBlock": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:barrel",
+                "item": {
+                    "nbt": "{SF_CraftingTable:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "stardust:place/stadust_crafting_table/1"
+    }
+}

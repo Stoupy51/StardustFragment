@@ -263,6 +263,8 @@ scoreboard players add Mode SF_Data 0
 		#Ultimate Battery
 			data modify storage stardust:items 2013255 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013255,BlockEntityTag:{Lock:"SF_Placed"},SF_UltimateBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 200 mJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Battery","italic":false,"color":"dark_red"}]'}}}
 
+	#Ultimate Battery
+		data modify storage stardust:items 2013399 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013399,BlockEntityTag:{Lock:"SF_Placed"},SF_CraftingTable:1b,HideFlags:127,display:{Name:'[{"text":"Stardust Crafting Table","italic":false,"color":"blue"}]'}}}
 #Wires
 	#Stardust Wire
 		data modify storage stardust:items 2013400 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013400,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220137],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y4NDVlMzBlNmVjOGI0N2RmZWUxMzI5NmQzYjQ3NzY5YzVjMGE5Nzc3YzNkNTk2ZWJiNDA3ZmY3OTcwNDE1ZCJ9fX0="}]}},SF_StardustWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 600 kW]","italic":false,"color":"gray"}]'],Name:'[{"text":"Stardust Wire","italic":false,"color":"aqua"}]'}}}
@@ -270,6 +272,5 @@ scoreboard players add Mode SF_Data 0
 		data modify storage stardust:items 2013500 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013500,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220137],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5ZmE4MTE1Y2MyY2FhNDE2MzA4N2Y1MzU5YTIzZjNmYzAxZjIxZTliMWRjOTE0ZDJkMzBkYTk4ZTZjMDUxYiJ9fX0="}]}},SF_AwakenedStardustWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 1800 kW]","italic":false,"color":"gray"}]'],Name:'[{"text":"Awakened Stardust Wire","italic":false,"color":"red"}]'}}}
 	#Ultimate Wire
 		data modify storage stardust:items 2013600 set value {Slot:16b,id:"minecraft:player_head",Count:1b,tag:{CustomModelData:2013600,SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220137],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ4NGE3OGU4YTY5YjZhYWUwNmQ3ZTI2OWM3NWJjZjkxM2U4ZWY3ZDU1Y2Q3ZjY2MjZiZTZjOWIwZjQ2OGQ5MyJ9fX0="}]}},SF_UltimateWire:1b,HideFlags:127,display:{Lore:['[{"text":"[Transfert : 5400 kW]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Wire","italic":false,"color":"dark_red"}]'}}}
-
 
 schedule function stardust:post_load 2s replace

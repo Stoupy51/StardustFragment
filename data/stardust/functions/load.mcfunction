@@ -263,7 +263,7 @@ scoreboard players add Mode SF_Data 0
 		#Ultimate Battery
 			data modify storage stardust:items 2013255 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013255,BlockEntityTag:{Lock:"SF_Placed"},SF_UltimateBattery:1b,HideFlags:127,display:{Lore:['[{"text":"[Energy Storage : 200 mJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Ultimate Battery","italic":false,"color":"dark_red"}]'}}}
 
-	#Ultimate Battery
+	#Stardust Crafting Table
 		data modify storage stardust:items 2013399 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013399,BlockEntityTag:{Lock:"SF_Placed"},SF_CraftingTable:1b,HideFlags:127,display:{Name:'[{"text":"Stardust Crafting Table","italic":false,"color":"blue"}]'}}}
 #Wires
 	#Stardust Wire

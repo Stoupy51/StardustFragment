@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_apple"
+          ],
+          "nbt": "{SF_StardustApple:1b}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "stardust:opti/stardust_apple"
+  }
+}

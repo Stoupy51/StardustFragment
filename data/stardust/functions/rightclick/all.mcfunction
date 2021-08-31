@@ -1,3 +1,4 @@
+execute if data entity @s {SelectedItem:{tag:{SF_QuarryConfigurator:1b}}} run function stardust:rightclick/quarry_configurator/all
 execute if data entity @s {SelectedItem:{tag:{SF_StardustPillar:1b}}} run function stardust:rightclick/stardust_pillar
 execute if data entity @s {SelectedItem:{tag:{SF_WormholePotion:1b}}} run function stardust:rightclick/wormhole_potion
 execute if data entity @s {SelectedItem:{tag:{SF_WitherKiller:1b}}} run function stardust:rightclick/wither_killer

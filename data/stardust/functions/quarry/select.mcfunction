@@ -1,6 +1,6 @@
 scoreboard players enable @a SF_ResetQ
-execute if score @s SF_Qx1 matches 0 run function stardust:quarry/select/reset1
-execute if score @s SF_Qx2 matches 0 run function stardust:quarry/select/reset2
+execute if entity @s[tag=!SF_QuarryReset] run function stardust:quarry/reset
+tag @s add SF_QuarryReset
 
 execute at @a[distance=..3] unless score @p SF_Qx1 matches 0 run scoreboard players operation @s SF_Qx1 = @p SF_Qx1
 execute at @a[distance=..3] unless score @p SF_Qy1 matches 0 run scoreboard players operation @s SF_Qy1 = @p SF_Qy1

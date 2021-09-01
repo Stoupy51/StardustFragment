@@ -13,8 +13,4 @@ execute as @e[type=minecraft:glow_item_frame,tag=!SF_Balance,tag=!SF_Balanced,ta
 
 #Continue
     tag @e[type=minecraft:glow_item_frame,tag=SF_Balance] remove SF_Balance
-    execute if entity @s[tag=SF_StardustPhotovoltaicPanel] as @e[type=minecraft:glow_item_frame,tag=SF_StardustPhotovoltaicPanel,tag=!SF_Balanced,limit=1] at @s run function stardust:balance/all
-    execute if entity @s[tag=SF_AwakenedPhotovoltaicPanel] as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedPhotovoltaicPanel,tag=!SF_Balanced,limit=1] at @s run function stardust:balance/all
-    execute if entity @s[tag=SF_LegendaryPhotovoltaicPanel] as @e[type=minecraft:glow_item_frame,tag=SF_LegendaryPhotovoltaicPanel,tag=!SF_Balanced,limit=1] at @s run function stardust:balance/all
-    execute if entity @s[tag=SF_SolarPhotovoltaicPanel] as @e[type=minecraft:glow_item_frame,tag=SF_SolarPhotovoltaicPanel,tag=!SF_Balanced,limit=1] at @s run function stardust:balance/all
-    execute if entity @s[tag=SF_DarkPhotovoltaicPanel] as @e[type=minecraft:glow_item_frame,tag=SF_DarkPhotovoltaicPanel,tag=!SF_Balanced,limit=1] at @s run function stardust:balance/all
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_PhotovoltaicPanel,tag=!SF_Balanced,limit=1] at @s run function stardust:balance/all

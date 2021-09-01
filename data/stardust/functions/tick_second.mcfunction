@@ -38,13 +38,10 @@
     tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon
 	execute if entity @a[tag=SF_IsInDungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
 
-#Machines
+#Machines Visuals & Work
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_MobGrinder] at @s run function stardust:work/mob_grinder
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s unless score @s EF_kJ matches 1600.. run function stardust:work/furnace_generator/advanced
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/advanced
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustFurnaceGenerator] at @s unless score @s EF_kJ matches 1600.. run function stardust:work/furnace_generator/stardust
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustFurnaceGenerator] at @s run function stardust:visual/furnace_generator/stardust
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedFurnaceGenerator] at @s unless score @s EF_kJ matches 1600.. run function stardust:work/furnace_generator/awakened
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/awakened
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustPhotovoltaicPanel] at @s unless score @s EF_kJ matches 800.. run function stardust:work/photovoltaic_panel/stardust
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedPhotovoltaicPanel] at @s unless score @s EF_kJ matches 1600.. run function stardust:work/photovoltaic_panel/awakened
@@ -53,10 +50,6 @@
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_DarkPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/dark
 
 #Balance
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustPhotovoltaicPanel] at @s run function stardust:balance/all
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedPhotovoltaicPanel] at @s run function stardust:balance/all
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_LegendaryPhotovoltaicPanel] at @s run function stardust:balance/all
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_SolarPhotovoltaicPanel] at @s run function stardust:balance/all
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_DarkPhotovoltaicPanel] at @s run function stardust:balance/all
+	execute as @e[type=minecraft:glow_item_frame,tag=SF_PhotovoltaicPanel,limit=1] at @s run function stardust:balance/all
 	tag @e[type=minecraft:glow_item_frame,tag=SF_Balanced] remove SF_Balanced
 

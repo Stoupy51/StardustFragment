@@ -7,6 +7,7 @@ scoreboard objectives add SF_Pillar dummy
 scoreboard objectives add SF_TravelStaff dummy
 scoreboard objectives add SF_Wormhole trigger
 scoreboard objectives add SF_RightClick minecraft.used:minecraft.warped_fungus_on_a_stick
+scoreboard objectives add SF_Jump minecraft.custom:minecraft.jump
 scoreboard objectives add SF_Cooldown dummy
 
 scoreboard objectives add SF_Qx dummy

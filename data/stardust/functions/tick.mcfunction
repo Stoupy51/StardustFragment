@@ -1,4 +1,4 @@
-#execute at @e at @e[limit=4] if entity @s[distance=..5]
+#execute at @e at @e[limit=4] run tag @a[tag=SF_Elevatored] remove SF_Elevatored
 #Others 1
     execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
     execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b
@@ -14,6 +14,7 @@
     execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1b}}]}] run tp @e[type=minecraft:item,distance=..4] ~ ~ ~
     execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
     execute as @a run function stardust:dimensions/transitions
+    execute if score Second SF_Data matches 10 run tag @a[tag=SF_Elevatored] remove SF_Elevatored
 
 #Others 2
     execute as @e[type=minecraft:glow_item_frame,tag=SF_WorkingPortal] run function stardust:visual/portal_particules
@@ -26,3 +27,7 @@
 #Boss
     execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
     execute if score StardustPillar SF_Data matches 1.. at @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 20
+
+#Machines Visuals & Work
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_Elevator] at @s run function stardust:visual/elevator
+    scoreboard players reset @a SF_Jump

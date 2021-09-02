@@ -52,4 +52,3 @@
 #Balance
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_PhotovoltaicPanel,limit=1] at @s run function stardust:balance/all
 	tag @e[type=minecraft:glow_item_frame,tag=SF_Balanced] remove SF_Balanced
-

@@ -1,3 +1,4 @@
+#execute at @e at @e[limit=4] if entity @s[distance=..5]
 #Others 1
     execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
     execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b

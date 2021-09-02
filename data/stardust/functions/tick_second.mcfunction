@@ -40,6 +40,8 @@
 
 #Machines Visuals & Work
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_MobGrinder] at @s run function stardust:work/mob_grinder
+	execute as @e[type=minecraft:glow_item_frame,tag=SF_NetherStarGenerator] at @s run function stardust:visual/nether_star_generator
+	execute as @e[type=minecraft:glow_item_frame,tag=SF_RedstoneGenerator] at @s run function stardust:visual/redstone_generator
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/advanced
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustFurnaceGenerator] at @s run function stardust:visual/furnace_generator/stardust
 	execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/awakened

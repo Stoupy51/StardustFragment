@@ -20,11 +20,6 @@
     execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:armor_stand,tag=SF_StardustPillarTick] at @s unless entity @e[type=minecraft:wither,tag=SF_StardustPillar,distance=..2.75] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=minecraft:wolf,tag=SF_StoupArmy] at @s run function stardust:boss/stouparmy
 
-#Quarry
-	scoreboard players set Quarry SF_Data 0
-	execute as @e[type=minecraft:shulker,tag=SF_QuarryDisplayX] run function stardust:quarry/display/kill
-	execute as @e[type=minecraft:glow_item_frame,tag=SF_Quarry] at @s run function stardust:quarry/opti
-
 #Mobs spawn
 	execute in stardust:celestial as @e[type=#stardust:global,tag=!SF_CelestialDim,distance=0..] at @s run function stardust:mobs/celestial
 	execute in stardust:stardust as @e[type=#stardust:global,tag=!SF_StardustDim,distance=0..] at @s run function stardust:mobs/stardust

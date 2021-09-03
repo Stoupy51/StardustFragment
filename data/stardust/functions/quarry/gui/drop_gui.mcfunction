@@ -28,8 +28,6 @@ execute unless data block ~ ~ ~ Items[{Slot:22b,tag:{SE_CustomTextureItem:1b}}] 
 execute if data storage stardust:items Drop run function stardust:quarry/gui/dropped
 execute unless data block ~ ~ ~ Items[{Slot:23b,tag:{SE_CustomTextureItem:1b}}] run data modify storage stardust:items Drop set from block ~ ~ ~ Items[{Slot:23b}]
 execute if data storage stardust:items Drop run function stardust:quarry/gui/dropped
-execute unless data block ~ ~ ~ Items[{Slot:24b,tag:{SE_CustomTextureItem:1b}}] run data modify storage stardust:items Drop set from block ~ ~ ~ Items[{Slot:24b}]
-execute if data storage stardust:items Drop run function stardust:quarry/gui/dropped
 execute unless data block ~ ~ ~ Items[{Slot:25b,tag:{SF_QuarryManual:1b}}] run data modify storage stardust:items Drop set from block ~ ~ ~ Items[{Slot:25b}]
 execute if data storage stardust:items Drop run function stardust:quarry/gui/dropped
 execute unless data block ~ ~ ~ Items[{Slot:26b,tag:{SE_CustomTextureItem:1b}}] run data modify storage stardust:items Drop set from block ~ ~ ~ Items[{Slot:26b}]

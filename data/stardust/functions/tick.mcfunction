@@ -1,4 +1,5 @@
-#execute at @e at @e[limit=4] run scoreboard players remove @s[scores={EF_kJ=40..}] EF_kJ 1
+#execute at @e at @e[limit=8] run tag @e[tag=SF_Truc] remove SF_Truc
+#execute at @e at @e[limit=8] run tag @e remove SF_Truc
 #Others 1
     execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
     execute if score StardustPillar SF_Data matches 1.. as @e[type=minecraft:wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b

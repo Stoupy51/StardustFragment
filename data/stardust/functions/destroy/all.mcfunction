@@ -44,9 +44,9 @@
     execute as @e[type=minecraft:glow_item_frame,tag=SF_LegendaryPhotovoltaicPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function stardust:destroy/solar_panel/legendary
     execute as @e[type=minecraft:glow_item_frame,tag=SF_SolarPhotovoltaicPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function stardust:destroy/solar_panel/solar
     execute as @e[type=minecraft:glow_item_frame,tag=SF_DarkPhotovoltaicPanel] at @s unless block ~ ~ ~ minecraft:daylight_detector run function stardust:destroy/solar_panel/dark
-    execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustBattery] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/stardust_battery
-    execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedStardustBattery] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/awakened_stardust_battery
-    execute as @e[type=minecraft:glow_item_frame,tag=SF_UltimateBattery] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/ultimate_battery
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustBattery] at @s unless block ~ ~ ~ minecraft:diamond_block run function stardust:destroy/stardust_battery
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedStardustBattery] at @s unless block ~ ~ ~ minecraft:redstone_block run function stardust:destroy/awakened_stardust_battery
+    execute as @e[type=minecraft:glow_item_frame,tag=SF_UltimateBattery] at @s unless block ~ ~ ~ minecraft:crying_obsidian run function stardust:destroy/ultimate_battery
 
     execute as @e[type=minecraft:glow_item_frame,tag=SF_StardustWire] at @s unless block ~ ~ ~ minecraft:player_head run function stardust:destroy/stardust_wire
     execute as @e[type=minecraft:glow_item_frame,tag=SF_AwakenedStardustWire] at @s unless block ~ ~ ~ minecraft:player_head run function stardust:destroy/awakened_stardust_wire

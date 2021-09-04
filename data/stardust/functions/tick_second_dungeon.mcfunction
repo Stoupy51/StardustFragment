@@ -1,5 +1,5 @@
 #Mobs
-    tp @e[type=minecraft:ghast,distance=0..] 0 -10000 0
+    tp @e[type=ghast,distance=0..] 0 -10000 0
     execute as @e[type=#stardust:global,tag=!SF_DungeonDim,distance=0..] run function stardust:mobs/dungeon
 #Dimensions
     gamemode adventure @a[gamemode=survival,tag=SF_IsInDungeon]

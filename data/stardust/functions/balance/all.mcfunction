@@ -2,5 +2,5 @@
     scoreboard players operation Energy SF_Data = @s EF_kJmax
     tag @s add SF_Balance
     tag @s add SF_Balanced
-    execute if entity @e[type=minecraft:glow_item_frame,tag=!SF_Balance,tag=!SF_Balanced,tag=SF_Destroyer,distance=..1.1] run function stardust:balance/balance
+    execute if entity @e[type=glow_item_frame,tag=!SF_Balance,tag=!SF_Balanced,tag=SF_Destroyer,distance=..1.1] run function stardust:balance/balance
     tag @s remove SF_Balance

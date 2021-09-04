@@ -1,5 +1,5 @@
-tag @e[type=minecraft:stray,tag=SF_ToThrow] remove SF_ToThrow
-tag @e[type=minecraft:evoker,tag=SF_ToThrow] remove SF_ToThrow
+tag @e[type=stray,tag=SF_ToThrow] remove SF_ToThrow
+tag @e[type=evoker,tag=SF_ToThrow] remove SF_ToThrow
 execute positioned ~ ~2 ~ run function stardust:mobs/stray
 execute positioned ~2 ~ ~ run function stardust:mobs/stray
 execute positioned ~-2 ~ ~ run function stardust:mobs/evoker

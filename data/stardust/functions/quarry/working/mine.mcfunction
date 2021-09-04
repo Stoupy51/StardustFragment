@@ -1,6 +1,6 @@
-execute if entity @s[tag=SF_QuarryFortune] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:fortune",lvl:3}]}
-execute if entity @s[tag=SF_QuarrySilkTouch] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
-execute if entity @s[tag=!SF_QuarryFortune,tag=!SF_QuarrySilkTouch] run setblock ~ ~ ~ minecraft:air destroy
+execute if entity @s[tag=SF_FortuneModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:fortune",lvl:3}]}
+execute if entity @s[tag=SF_SilkTouchModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
+execute if entity @s[tag=!SF_FortuneModule,tag=!SF_SilkTouchModule] run setblock ~ ~ ~ minecraft:air destroy
 setblock ~ ~ ~ minecraft:air
 execute if entity @e[type=minecraft:glow_item_frame,tag=SF_Destroyer,distance=..1,limit=1] run function stardust:destroy/all
 execute if entity @e[type=minecraft:glow_item_frame,tag=SE_Destroyer,distance=..1,limit=1] run function simplenergy:destroy/all

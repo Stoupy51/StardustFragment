@@ -1,6 +1,5 @@
-execute at @e at @e[limit=1] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1}}}]
-execute at @e at @e[limit=1] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1s}}}]
-execute at @e at @e[limit=1] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1s}}}]
+#execute at @e at @e[limit=8] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1}}}]
+#execute at @e at @e[limit=8] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1s}}}]
 #Others 1
     execute if entity @e[type=glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
     execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b

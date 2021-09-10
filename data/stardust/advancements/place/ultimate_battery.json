@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SF_UltimateBattery:1b}"
+                    "nbt": "{SF_UltimateBattery:1s}"
                 }
             }
         }

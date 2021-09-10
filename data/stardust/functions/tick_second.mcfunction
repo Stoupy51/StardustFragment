@@ -2,12 +2,12 @@
 	scoreboard players set Second SF_Data 0
 	scoreboard players add Minute SF_Data 1
     execute if score Minute SF_Data matches 60.. run function stardust:tick_minute
-	execute as @e[type=item,nbt={Item:{tag:{SF_StardustFragment:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function stardust:place/stardust_crafting_table
+	execute as @e[type=item,nbt={Item:{tag:{SF_StardustFragment:1s}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function stardust:place/stardust_crafting_table
 	execute if score DragonKilled SF_Data matches ..10 run function stardust:opti/dragon_egg/all
 
 #Players
 	execute at @a run function stardust:generate/player
-	effect give @a[nbt={Inventory:[{Slot:102b,tag:{SF_UltimateElytra:1b}}]}] minecraft:resistance 2 1 true
+	effect give @a[nbt={Inventory:[{Slot:102b,tag:{SF_UltimateElytra:1s}}]}] minecraft:resistance 2 1 true
 	execute as @a[tag=!SF_FirstJoin] at @s run function stardust:first_join
 	execute as @a[scores={SF_Wormhole=1..}] run function stardust:opti/wormhole_potion/use
 	execute as @a[tag=SF_NoCooldown] run attribute @s minecraft:generic.attack_speed base set 2000
@@ -28,7 +28,7 @@
 
 #Dimensions
 	execute as @e[type=glow_item_frame,tag=SF_Portal] run function stardust:work/portals
-	scoreboard players add @a[scores={SF_Data=1..},nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}}] SF_Data 10
+	scoreboard players add @a[scores={SF_Data=1..},nbt={SelectedItem:{tag:{SF_TravelStaff:1s}}}] SF_Data 10
 	execute as @a[scores={SF_Data=1..}] at @s run function stardust:dimensions/teleport
     tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon
 	execute if entity @a[tag=SF_IsInDungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon

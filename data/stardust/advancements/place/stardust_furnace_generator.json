@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SF_StardustFurnaceGenerator:1b}"
+                    "nbt": "{SF_StardustFurnaceGenerator:1s}"
                 }
             }
         }

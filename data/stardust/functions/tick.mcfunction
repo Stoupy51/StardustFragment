@@ -1,5 +1,6 @@
-#execute at @e at @e[limit=8] as @e[type=item] run scoreboard players add A SF_X 0
-#execute at @e at @e[limit=8] as @e[type=item] run scoreboard players add A SF_X 0
+execute at @e at @e[limit=1] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1}}}]
+execute at @e at @e[limit=1] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1s}}}]
+execute at @e at @e[limit=1] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1s}}}]
 #Others 1
     execute if entity @e[type=glow_item_frame,tag=SF_Destroyer,limit=1] run function stardust:destroy/all
     execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b
@@ -11,9 +12,9 @@
 #Players
     execute as @a[scores={SF_RightClick=1..}] at @s run function stardust:rightclick/all
     scoreboard players remove @a[scores={SF_Cooldown=1..}] SF_Cooldown 1
-    effect give @a[nbt={SelectedItem:{tag:{SF_LegendarySword:1b}}}] minecraft:jump_boost 1 3 true
-    execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1b}}]}] run tp @e[type=item,distance=..4] ~ ~ ~
-    execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1b}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
+    effect give @a[nbt={SelectedItem:{tag:{SF_LegendarySword:1s}}}] minecraft:jump_boost 1 3 true
+    execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1s}}]}] run tp @e[type=item,distance=..4] ~ ~ ~
+    execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1s}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
     execute as @a run function stardust:dimensions/transitions
     scoreboard players add @a[scores={SF_X=..-1}] SF_X 1
 

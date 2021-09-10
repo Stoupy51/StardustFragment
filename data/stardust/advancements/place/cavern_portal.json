@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SF_CavernPortal:1b}"
+                    "nbt": "{SF_CavernPortal:1s}"
                 }
             }
         }

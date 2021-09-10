@@ -7,7 +7,7 @@
           "items": [
             "minecraft:golden_apple"
           ],
-          "nbt": "{SF_StardustApple:1b}"
+          "nbt": "{SF_StardustApple:1s}"
         }
       }
     }

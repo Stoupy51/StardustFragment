@@ -1,10 +1,10 @@
 #Matériaux
-	execute as @s[nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1b}}}] run function stardust:supercraft/mat/stardustblock
-	execute as @s[nbt={Item:{Count:4b,tag:{SF_AwakenedStardust:1b}}}] run function stardust:supercraft/mat/dragonpearl
-	execute as @s[nbt={Item:{Count:1b,tag:{SF_DragonPearl:1b}}}] run function stardust:supercraft/mat/enderdragonpearl
+	execute as @s[nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1s}}}] run function stardust:supercraft/mat/stardustblock
+	execute as @s[nbt={Item:{Count:4b,tag:{SF_AwakenedStardust:1s}}}] run function stardust:supercraft/mat/dragonpearl
+	execute as @s[nbt={Item:{Count:1b,tag:{SF_DragonPearl:1s}}}] run function stardust:supercraft/mat/enderdragonpearl
 	execute as @s[nbt={Item:{Count:64b,tag:{CStar:1b}}}] run function stardust:supercraft/mat/supercompactedstardust
 #Équipements
-	execute as @s[nbt={Item:{Count:4b,tag:{SF_DragonPearl:1b}}}] run function stardust:supercraft/stardustbow
+	execute as @s[nbt={Item:{Count:4b,tag:{SF_DragonPearl:1s}}}] run function stardust:supercraft/stardustbow
 	execute as @s[nbt={Item:{Count:1b,tag:{SBow:1b}}}] run function stardust:supercraft/awakenedstardustbow
 	#Armure/Outils Légendaires
 		execute as @s[nbt={Item:{Count:5b,tag:{FL:1b}}}] at @e[type=item,nbt={Item:{Count:1b,tag:{CO:1b}}},limit=1,sort=nearest,distance=..1] run function stardust:supercraft/legend/casque

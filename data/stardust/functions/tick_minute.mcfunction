@@ -6,8 +6,8 @@
 
 #Dog Excrements
 	execute as @e[type=wolf] run scoreboard players add @e[type=wolf,limit=1,sort=random] SF_Wolfs 1
-	execute at @e[type=wolf,scores={SF_Wolfs=10..}] run summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:64b,tag:{SF_Give:1b}}}
-	execute as @e[type=item,nbt={Item:{tag:{SF_Give:1b}}}] run data modify entity @s Item set from storage stardust:items 2013011
+	execute at @e[type=wolf,scores={SF_Wolfs=10..}] run summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:64b,tag:{SF_Give:1s}}}
+	execute as @e[type=item,nbt={Item:{tag:{SF_Give:1s}}}] run data modify entity @s Item set from storage stardust:items 2013011
 	scoreboard players remove @e[type=wolf,scores={SF_Wolfs=10..}] SF_Wolfs 10
 
 #Seeds

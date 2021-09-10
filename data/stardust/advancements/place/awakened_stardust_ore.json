@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SF_AwakenedStardustOre:1b}"
+                    "nbt": "{SF_AwakenedStardustOre:1s}"
                 }
             }
         }

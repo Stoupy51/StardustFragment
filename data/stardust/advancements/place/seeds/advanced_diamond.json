@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "item": "minecraft:player_head",
-                    "nbt": "{SF_AdvancedDiamondSeed:1b}"
+                    "nbt": "{SF_AdvancedDiamondSeed:1s}"
                 }
             }
         }

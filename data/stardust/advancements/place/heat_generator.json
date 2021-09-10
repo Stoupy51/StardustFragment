@@ -5,7 +5,7 @@
             "conditions": {
                 "block": "minecraft:barrel",
                 "item": {
-                    "nbt": "{SF_HeatGenerator:1b}"
+                    "nbt": "{SF_HeatGenerator:1s}"
                 }
             }
         }

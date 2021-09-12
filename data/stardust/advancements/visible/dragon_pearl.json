@@ -1,30 +1,28 @@
 {
     "display": {
         "title": {
-            "text": "Stardust Fragment",
-            "color": "aqua"
+            "text": "Why do I can't throw it?"
         },
         "description": {
-            "text": "Get your first Stardust Fragment"
+            "text": "Get your first Dragon Pearl"
         },
         "icon": {
             "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013000}"
+            "nbt": "{CustomModelData:2013006}"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": false,
-        "background": "stardust:textures/materials/stardust_ore.png"
+        "hidden": false
     },
     "criteria": {
-        "Stardust Fragment": {
+        "StardustFragment": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:command_block",
-                        "nbt": "{SF_StardustFragment:1s}"
+                        "items": ["minecraft:command_block"],
+                        "nbt": "{SF_DragonPearl:1s}"
                     }
                 ]
             }
@@ -32,10 +30,11 @@
     },
     "requirements": [
         [
-            "Stardust Fragment"
+            "StardustFragment"
         ]
     ],
     "rewards": {
-        "experience": 10
-    }
+        "experience": 20
+    },
+    "parent": "stardust:stardust_fragment"
 }

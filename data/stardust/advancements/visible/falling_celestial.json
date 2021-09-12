@@ -1,8 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Oops, falling to Overworld",
-            "color": "dark_purple"
+            "text": "Oops, falling to Overworld"
         },
         "description": {
             "text": "Falling into the void of the Celestial dimension"
@@ -23,5 +22,5 @@
     "rewards": {
         "experience": 500
     },
-    "parent": "stardust:enter_celestial"
+    "parent": "stardust:visible/enter_celestial"
 }

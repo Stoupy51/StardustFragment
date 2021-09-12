@@ -1,15 +1,14 @@
 {
     "display": {
         "title": {
-            "text": "To get some resources",
-            "color": "gray"
+            "text": "Is it the main dimension?"
         },
         "description": {
-            "text": "Cross the Cavern Portal"
+            "text": "Enter the Stardust dimension"
         },
         "icon": {
             "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013219}"
+            "nbt": "{CustomModelData:2013221}"
         },
         "frame": "task",
         "show_toast": true,
@@ -17,20 +16,20 @@
         "hidden": false
     },
     "criteria": {
-        "enter_cavern": {
+        "StardustFragment": {
             "trigger": "minecraft:changed_dimension",
             "conditions": {
-                "to": "stardust:cavern"
+                "to": "stardust:stardust"
             }
         }
     },
     "requirements": [
         [
-            "enter_cavern"
+            "StardustFragment"
         ]
     ],
     "rewards": {
-        "experience": 800
+        "experience": 6000
     },
-    "parent": "stardust:root"
+    "parent": "stardust:visible/very_compacted_stardust"
 }

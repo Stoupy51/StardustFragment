@@ -1,29 +1,29 @@
 {
     "display": {
         "title": {
-            "text": "Stardust Ingot",
-            "color": "aqua"
+            "text": "What's this little blue thing?"
         },
         "description": {
-            "text": "Get your first Stardust Ingot"
+            "text": "Get your first Stardust Fragment"
         },
         "icon": {
             "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013001}"
+            "nbt": "{CustomModelData:2013000}"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": false
+        "hidden": false,
+        "background": "stardust:textures/materials/stardust_ore.png"
     },
     "criteria": {
-        "stardust_ingot": {
+        "StardustFragment": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "minecraft:command_block",
-                        "nbt": "{SF_StardustIngot:1s}"
+                        "items": ["minecraft:command_block"],
+                        "nbt": "{SF_StardustFragment:1s}"
                     }
                 ]
             }
@@ -31,11 +31,10 @@
     },
     "requirements": [
         [
-            "stardust_ingot"
+            "StardustFragment"
         ]
     ],
     "rewards": {
-        "experience": 20
-    },
-    "parent": "stardust:root"
+        "experience": 10
+    }
 }

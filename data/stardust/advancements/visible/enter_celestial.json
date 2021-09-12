@@ -1,15 +1,14 @@
 {
     "display": {
         "title": {
-            "text": "Is it the main dimension ?",
-            "color": "dark_blue"
+            "text": "Let's start a Skyblock?"
         },
         "description": {
-            "text": "Enter the Stardust dimension"
+            "text": "Enter the Celestial dimension by crossing its portal"
         },
         "icon": {
             "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013221}"
+            "nbt": "{CustomModelData:2013220}"
         },
         "frame": "task",
         "show_toast": true,
@@ -17,20 +16,20 @@
         "hidden": false
     },
     "criteria": {
-        "enter_stardust": {
+        "StardustFragment": {
             "trigger": "minecraft:changed_dimension",
             "conditions": {
-                "to": "stardust:stardust"
+                "to": "stardust:celestial"
             }
         }
     },
     "requirements": [
         [
-            "enter_stardust"
+            "StardustFragment"
         ]
     ],
     "rewards": {
-        "experience": 6000
+        "experience": 800
     },
-    "parent": "stardust:root"
+    "parent": "stardust:stardust_fragment"
 }

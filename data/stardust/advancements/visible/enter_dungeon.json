@@ -1,8 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Ready to fight ?!!",
-            "color": "red"
+            "text": "Ready to fight?!!"
         },
         "description": {
             "text": "Enter the Stardust Dungeon"
@@ -24,5 +23,5 @@
     "rewards": {
         "experience": 12000
     },
-    "parent": "stardust:root"
+    "parent": "stardust:visible/awakened_stardust_block"
 }

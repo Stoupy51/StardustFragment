@@ -1,15 +1,14 @@
 {
     "display": {
         "title": {
-            "text": "What if I summon a dragon here ?",
-            "color": "dark_red"
+            "text": "Getting some resources"
         },
         "description": {
-            "text": "Cross the Ultimate Portal"
+            "text": "Cross the Cavern Portal"
         },
         "icon": {
             "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013223}"
+            "nbt": "{CustomModelData:2013219}"
         },
         "frame": "task",
         "show_toast": true,
@@ -17,20 +16,20 @@
         "hidden": false
     },
     "criteria": {
-        "enter_ultimate": {
+        "StardustFragment": {
             "trigger": "minecraft:changed_dimension",
             "conditions": {
-                "to": "stardust:ultimate"
+                "to": "stardust:cavern"
             }
         }
     },
     "requirements": [
         [
-            "enter_ultimate"
+            "StardustFragment"
         ]
     ],
     "rewards": {
-        "experience": 24000
+        "experience": 800
     },
-    "parent": "stardust:root"
+    "parent": "stardust:visible/compressed_cobblestone"
 }

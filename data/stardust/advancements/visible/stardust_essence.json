@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Looks like a blue redstone"
+        },
+        "description": {
+            "text": "Get your first Stardust Essence"
+        },
+        "icon": {
+            "item": "minecraft:command_block",
+            "nbt": "{CustomModelData:2013002}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "StardustFragment": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["minecraft:command_block"],
+                        "nbt": "{SF_StardustEssence:1s}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "StardustFragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 30
+    },
+    "parent": "stardust:visible/stardust_ingot"
+}

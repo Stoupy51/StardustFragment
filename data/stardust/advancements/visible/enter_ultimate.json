@@ -1,15 +1,14 @@
 {
     "display": {
         "title": {
-            "text": "Let's start a Skyblock ?",
-            "color": "gold"
+            "text": "What if I summon a dragon here?"
         },
         "description": {
-            "text": "Enter the Celestial dimension by crossing its portal"
+            "text": "Cross the Ultimate Portal"
         },
         "icon": {
             "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013220}"
+            "nbt": "{CustomModelData:2013223}"
         },
         "frame": "task",
         "show_toast": true,
@@ -17,20 +16,20 @@
         "hidden": false
     },
     "criteria": {
-        "enter_celestial": {
+        "StardustFragment": {
             "trigger": "minecraft:changed_dimension",
             "conditions": {
-                "to": "stardust:celestial"
+                "to": "stardust:ultimate"
             }
         }
     },
     "requirements": [
         [
-            "enter_celestial"
+            "StardustFragment"
         ]
     ],
     "rewards": {
-        "experience": 800
+        "experience": 24000
     },
-    "parent": "stardust:root"
+    "parent": "stardust:stardust_fragment"
 }

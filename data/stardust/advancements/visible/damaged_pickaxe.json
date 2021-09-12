@@ -1,20 +1,19 @@
 {
     "display": {
         "title": {
-            "text": "Stardust Fragment"
+            "text": "Already enchanted pickaxe?"
         },
         "description": {
-            "text": "What's this little blue thing?"
+            "text": "Get a Damaged Stardust Pickaxe"
         },
         "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013000}"
+            "item": "minecraft:stone_pickaxe",
+            "nbt": "{CustomModelData:2013105}"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": false,
-        "background": "stardust:textures/materials/stardust_ore.png"
+        "hidden": false
     },
     "criteria": {
         "StardustFragment": {
@@ -22,8 +21,8 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_StardustFragment:1s}"
+                        "items": ["minecraft:stone_pickaxe"],
+                        "nbt": "{SF_DamagedPickaxe:1s}"
                     }
                 ]
             }
@@ -35,6 +34,7 @@
         ]
     ],
     "rewards": {
-        "experience": 10
-    }
+        "experience": 30
+    },
+    "parent": "stardust:visible/stardust_ingot"
 }

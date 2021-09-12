@@ -1,20 +1,19 @@
 {
     "display": {
         "title": {
-            "text": "Stardust Fragment"
+            "text": "5 blocks per second ?!"
         },
         "description": {
-            "text": "What's this little blue thing?"
+            "text": "Upgrade your Quarry to Level 5"
         },
         "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013000}"
+            "item": "minecraft:barrel",
+            "nbt": "{CustomModelData:2013217}"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": false,
-        "background": "stardust:textures/materials/stardust_ore.png"
+        "hidden": false
     },
     "criteria": {
         "StardustFragment": {
@@ -22,8 +21,8 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_StardustFragment:1s}"
+                        "items": ["minecraft:barrel"],
+                        "nbt": "{SF_QuarryLv5:1s}"
                     }
                 ]
             }
@@ -35,6 +34,7 @@
         ]
     ],
     "rewards": {
-        "experience": 10
-    }
+        "experience": 120
+    },
+    "parent": "stardust:visible/quarry"
 }

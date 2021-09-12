@@ -1,20 +1,19 @@
 {
     "display": {
         "title": {
-            "text": "Stardust Fragment"
+            "text": "Solar as the sun"
         },
         "description": {
-            "text": "What's this little blue thing?"
+            "text": "Get a Solar Fragment"
         },
         "icon": {
             "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013000}"
+            "nbt": "{CustomModelData:2013009}"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": false,
-        "background": "stardust:textures/materials/stardust_ore.png"
+        "hidden": false
     },
     "criteria": {
         "StardustFragment": {
@@ -23,7 +22,7 @@
                 "items": [
                     {
                         "items": ["minecraft:command_block"],
-                        "nbt": "{SF_StardustFragment:1s}"
+                        "nbt": "{SF_SolarFragment:1s}"
                     }
                 ]
             }
@@ -35,6 +34,7 @@
         ]
     ],
     "rewards": {
-        "experience": 10
-    }
+        "experience": 640
+    },
+    "parent": "stardust:visible/solar_seed"
 }

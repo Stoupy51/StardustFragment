@@ -1,20 +1,18 @@
 {
     "display": {
         "title": {
-            "text": "Stardust Fragment"
+            "text": "What can I do with this?"
         },
         "description": {
-            "text": "What's this little blue thing?"
+            "text": "Maybe craft some stardust seeds?"
         },
         "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013000}"
+            "item": "minecraft:wheat_seeds"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": false,
-        "background": "stardust:textures/materials/stardust_ore.png"
+        "hidden": false
     },
     "criteria": {
         "StardustFragment": {
@@ -22,8 +20,8 @@
             "conditions": {
                 "items": [
                     {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_StardustFragment:1s}"
+                        "items": ["minecraft:wheat_seeds"],
+                        "count": 8
                     }
                 ]
             }
@@ -35,6 +33,7 @@
         ]
     ],
     "rewards": {
-        "experience": 10
-    }
+        "experience": 20
+    },
+    "parent": "stardust:stardust_fragment"
 }

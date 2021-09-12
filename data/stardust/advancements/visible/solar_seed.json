@@ -1,0 +1,38 @@
+{
+    "display": {
+        "title": {
+            "text": "Let's take the solar route"
+        },
+        "description": {
+            "text": "Place a Solar Seed"
+        },
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{CustomModelData:2013206}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "StardustFragment": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "item": {
+                    "items": ["minecraft:player_head"],
+                    "nbt": "{SF_SolarSeed:1s}"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "StardustFragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 320
+    },
+    "parent": "stardust:visible/elite_stardust_seed"
+}

@@ -1,0 +1,40 @@
+{
+    "display": {
+        "title": {
+            "text": "Already enchanted armor?"
+        },
+        "description": {
+            "text": "Get a full Damaged Stardust Armor"
+        },
+        "icon": {
+            "item": "minecraft:leather_helmet",
+            "nbt": "{CustomModelData:2013100}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "StardustFragment": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    { "items": ["minecraft:leather_helmet"], "nbt": "{SF_DamagedHelmet:1s}" },
+                    { "items": ["minecraft:leather_chestplate"], "nbt": "{SF_DamagedChestplate:1s}" },
+                    { "items": ["minecraft:leather_leggings"], "nbt": "{SF_DamagedLeggings:1s}" },
+                    { "items": ["minecraft:leather_boots"], "nbt": "{SF_DamagedBoots:1s}" }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "StardustFragment"
+        ]
+    ],
+    "rewards": {
+        "experience": 30
+    },
+    "parent": "stardust:visible/stardust_ingot"
+}

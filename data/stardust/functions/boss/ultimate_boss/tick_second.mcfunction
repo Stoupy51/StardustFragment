@@ -1,6 +1,6 @@
 #Projectiles
-    scoreboard players add @e[tag=SF_Thrown,scores={SF_Data=1..}] SF_Data 1
-    kill @e[tag=SF_Thrown,scores={SF_Data=7..}]
+    scoreboard players add @e[type=#stardust:projectiles,tag=SF_Thrown,scores={SF_Data=1..}] SF_Data 1
+    kill @e[type=#stardust:projectiles,tag=SF_Thrown,scores={SF_Data=7..}]
     execute at @e[type=ender_dragon,tag=SF_Dragon] run scoreboard players add @e[type=ender_dragon,tag=SF_Dragon,limit=1,sort=random] SF_Data 1
     scoreboard players add @e[type=ender_dragon,tag=SF_DragonDead,limit=1,sort=random] SF_Data 2
     execute as @a[gamemode=!creative,gamemode=!spectator,nbt={Dimension:"stardust:ultimate"}] at @e[type=ender_dragon,tag=SF_Dragon] run function stardust:boss/ultimate_boss/arrow

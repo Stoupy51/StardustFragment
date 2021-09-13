@@ -35,6 +35,7 @@
     execute in stardust:stardust as @e[type=marker,tag=SF_OrePos,distance=0..,limit=8] at @s run function stardust:generate/quadruple_compressed_cobblestone
     execute in stardust:cavern as @e[type=marker,tag=SF_OrePos,distance=0..,limit=8] at @s run function stardust:generate/stardust
     execute in stardust:stardust as @e[type=marker,tag=SF_OrePos,distance=0..,limit=8] at @s run function stardust:generate/stardust
+    execute in minecraft:the_end as @e[type=marker,tag=SF_OrePos,distance=0..,limit=8] at @s run function stardust:generate/stardust
     kill @e[type=marker,tag=SF_OrePos]
 
 tag @s remove SF_ChunkInit

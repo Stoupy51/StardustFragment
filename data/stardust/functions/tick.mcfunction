@@ -15,6 +15,7 @@
     execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1s}}]}] run tp @e[type=item,distance=..4] ~ ~ ~
     execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1s}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
     execute as @a run function stardust:dimensions/transitions
+    execute if score Second SF_Data matches 10 at @a run function stardust:generate/player
     scoreboard players add @a[scores={SF_X=..-1}] SF_X 1
 
 #Others 2

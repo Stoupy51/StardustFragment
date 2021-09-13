@@ -26,6 +26,7 @@
     scoreboard players operation PosX SF_Data += NewX SF_Data
     scoreboard players operation PosY SF_Data += NewY SF_Data
     scoreboard players operation PosZ SF_Data += NewZ SF_Data
+    scoreboard players operation PosY SF_Data += 500 SF_Data
     execute store result entity @s Pos[0] double 0.1 run scoreboard players get PosX SF_Data
     execute store result entity @s Pos[1] double 0.1 run scoreboard players get PosY SF_Data
     execute store result entity @s Pos[2] double 0.1 run scoreboard players get PosZ SF_Data

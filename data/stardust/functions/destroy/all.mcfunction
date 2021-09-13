@@ -14,7 +14,7 @@
     execute as @e[type=glow_item_frame,tag=SF_NetherStardustOre] at @s unless block ~ ~ ~ minecraft:nether_quartz_ore run function stardust:destroy/nether_stardust_ore
     execute as @e[type=glow_item_frame,tag=SF_EnderStardustOre] at @s unless block ~ ~ ~ minecraft:deepslate_diamond_ore run function stardust:destroy/ender_stardust_ore
     execute as @e[type=glow_item_frame,tag=SF_AwakenedStardustOre] at @s unless block ~ ~ ~ minecraft:deepslate_redstone_ore run function stardust:destroy/awakened_stardust_ore
-    execute as @e[type=glow_item_frame,tag=SF_StardustBlock] at @s unless block ~ ~ ~ minecraft:diamond_block run function stardust:destroy/stardust_block
+    execute as @e[type=glow_item_frame,tag=SF_StardustBlock] at @s unless block ~ ~ ~ minecraft:lapis_block run function stardust:destroy/stardust_block
 
 #Others
     #Seeds

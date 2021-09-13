@@ -35,6 +35,7 @@ execute in minecraft:the_end run setblock 0 255 0 end_portal
 
 scoreboard players set StardustFragment EF_Versions 3000
 scoreboard players add Mode SF_Data 0
+scoreboard players set Second SF_Data 10
 
 #Materials
 	#Stardust Fragment

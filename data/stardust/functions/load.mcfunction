@@ -80,6 +80,38 @@ scoreboard players add Mode SF_Data 0
 		data modify storage stardust:items 2013023 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Ore","italic":false,"color":"aqua"}]'}}}
 	#Awakened Stardust Ore
 		data modify storage stardust:items 2013024 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013024,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Awakened Stardust Ore","italic":false,"color":"red"}]'}}}
+	#Deepslate Stardust Ore
+		data modify storage stardust:items 2013025 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013025,BlockEntityTag:{Lock:"SF_Placed"},SF_DeepslateStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Deepslate Stardust Ore","italic":false,"color":"aqua"}]'}}}
+	#Nether Stardust Ore
+		data modify storage stardust:items 2013026 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013026,BlockEntityTag:{Lock:"SF_Placed"},SF_NetherStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Nether Stardust Ore","italic":false,"color":"aqua"}]'}}}
+	#Ender Stardust Ore
+		data modify storage stardust:items 2013027 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013027,BlockEntityTag:{Lock:"SF_Placed"},SF_EnderStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Ender Stardust Ore","italic":false,"color":"aqua"}]'}}}
+	#Stardust Block
+		data modify storage stardust:items 2013028 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013028,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustBlock:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Block","italic":false,"color":"aqua"}]'}}}
+	#Machine Frame
+		data modify storage stardust:items 2013029 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013029,SF_MachineFrame:1s,HideFlags:127,display:{Name:'[{"text":"Machine Frame","italic":false,"color":"white"}]'}}}
+	#Stardust Frame
+		data modify storage stardust:items 2013030 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013030,SF_StardustFrame:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Frame","italic":false,"color":"aqua"}]'}}}
+	#Awakened Stardust Frame
+		data modify storage stardust:items 2013031 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013031,SF_AwakenedStardustFrame:1s,HideFlags:127,display:{Name:'[{"text":"Awakened Stardust Frame","italic":false,"color":"red"}]'}}}
+	#Ultimate Frame
+		data modify storage stardust:items 2013032 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013032,SF_UltimateFrame:1s,HideFlags:127,display:{Name:'[{"text":"Ultimate Frame","italic":false,"color":"dark_red"}]'}}}
+	#Mirror
+		data modify storage stardust:items 2013033 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013033,SF_Mirror:1s,HideFlags:127,display:{Name:'[{"text":"Mirror","italic":false,"color":"white"}]'}}}
+	#Stardust Photovoltaic Cell
+		data modify storage stardust:items 2013034 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013034,SF_StardustPhotovoltaicCell:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Photovoltaic Cell","italic":false,"color":"aqua"}]'}}}
+	#Awakened Photovoltaic Cell
+		data modify storage stardust:items 2013035 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013035,SF_AwakenedPhotovoltaicCell:1s,HideFlags:127,display:{Name:'[{"text":"Awakened Photovoltaic Cell","italic":false,"color":"red"}]'}}}
+	#Legendary Photovoltaic Cell
+		data modify storage stardust:items 2013036 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013036,SF_LegendaryPhotovoltaicCell:1s,HideFlags:127,display:{Name:'[{"text":"Legendary Photovoltaic Cell","italic":false,"color":"green"}]'}}}
+	#Solar Photovoltaic Cell
+		data modify storage stardust:items 2013037 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013037,SF_SolarPhotovoltaicCell:1s,HideFlags:127,display:{Name:'[{"text":"Solar Photovoltaic Cell","italic":false,"color":"gold"}]'}}}
+	#Dark Photovoltaic Cell
+		data modify storage stardust:items 2013038 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013038,SF_DarkPhotovoltaicCell:1s,HideFlags:127,display:{Name:'[{"text":"Dark Photovoltaic Cell","italic":false,"color":"dark_gray"}]'}}}
+	#Empty Module
+		data modify storage stardust:items 2013039 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013039,SF_EmptyModule:1s,HideFlags:127,display:{Name:'[{"text":"Empty Module","italic":false,"color":"white"}]'}}}
+	#Ultimate Fragment
+		data modify storage stardust:items 2013040 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013040,SF_UltimateFragment:1s,HideFlags:127,display:{Name:'[{"text":"Ultimate Fragment","italic":false,"color":"dark_red"}]'}}}
 
 #Equipment
 	#Damaged Armor/Tools

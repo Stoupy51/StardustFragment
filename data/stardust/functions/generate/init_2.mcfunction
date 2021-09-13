@@ -15,7 +15,7 @@
     execute in minecraft:the_nether as @e[type=marker,tag=SF_OrePos,distance=0..,limit=5] at @s run function stardust:generate/awakened_stardust
     execute as @e[type=marker,tag=SF_OrePos] at @s run function stardust:generate/stardust
 
-#Generate Quadruple Compressed Cobblestone
+#Generate Quadruple Compressed Cobblestone Or More Stardust Ores
     summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
     summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}
     summon minecraft:marker ~ 25 ~ {Tags:["SF_OrePos"]}

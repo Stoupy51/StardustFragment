@@ -1,0 +1,6 @@
+execute if block ~ ~ ~ netherrack run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_NetherStardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013026}}}
+execute if block ~ ~ ~ netherrack run setblock ~ ~ ~ minecraft:nether_quartz_ore
+execute if block ~ ~ ~ deepslate run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DeepslateStardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013025}}}
+execute if block ~ ~ ~ end_stone run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_EnderStardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013027}}}
+execute unless block ~ ~ ~ nether_quartz_ore unless block ~ ~ ~ deepslate unless block ~ ~ ~ end_stone run summon minecraft:glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_StardustOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023}}}
+execute unless block ~ ~ ~ nether_quartz_ore run setblock ~ ~ ~ minecraft:deepslate_diamond_ore

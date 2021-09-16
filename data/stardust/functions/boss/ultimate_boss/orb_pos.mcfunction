@@ -1,11 +1,12 @@
 #Define a -/+ value offset randomly with UUID.
-    scoreboard players set 120 SF_Data 120
+    scoreboard players set 40 SF_Data 40
+    scoreboard players set 20 SF_Data 20
     execute store result score X SF_Data run data get entity @s UUID[1] 1
     execute store result score Y SF_Data run data get entity @s UUID[2] 1
     execute store result score Z SF_Data run data get entity @s UUID[3] 1
-    scoreboard players operation X SF_Data %= 120 SF_Data
-    scoreboard players operation Y SF_Data %= 120 SF_Data
-    scoreboard players operation Z SF_Data %= 120 SF_Data
+    scoreboard players operation X SF_Data %= 40 SF_Data
+    scoreboard players operation Y SF_Data %= 20 SF_Data
+    scoreboard players operation Z SF_Data %= 40 SF_Data
     execute store result score PosX SF_Data run data get entity @s Pos[0] 1
     execute store result score PosY SF_Data run data get entity @s Pos[1] 1
     execute store result score PosZ SF_Data run data get entity @s Pos[2] 1

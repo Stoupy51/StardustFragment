@@ -4,7 +4,6 @@
     execute at @e[type=ender_dragon,tag=SF_Dragon] run scoreboard players add @e[type=ender_dragon,tag=SF_Dragon,limit=1,sort=random] SF_Data 1
     scoreboard players add @e[type=ender_dragon,tag=SF_DragonDead,limit=1,sort=random] SF_Data 2
     execute as @a[gamemode=!creative,gamemode=!spectator,nbt={Dimension:"stardust:ultimate"}] at @e[type=ender_dragon,tag=SF_Dragon] run function stardust:boss/ultimate_boss/arrow
-    execute as @a[gamemode=!creative,gamemode=!spectator,nbt={Dimension:"stardust:ultimate"}] at @e[type=ender_dragon,tag=SF_Dragon,scores={SF_Data=30..}] run function stardust:boss/ultimate_boss/fireball
 #Orbs
     execute if entity @e[type=ender_dragon,tag=SF_Dragon,scores={SF_Data=14..16},limit=1] unless entity @e[type=armor_stand,tag=SF_UltimateOrb,limit=1] run function stardust:boss/ultimate_boss/orb
     execute as @e[type=armor_stand,tag=SF_UltimateOrb] at @s unless entity @e[type=wither,distance=..2.75] run function stardust:boss/ultimate_boss/orb_destroyed

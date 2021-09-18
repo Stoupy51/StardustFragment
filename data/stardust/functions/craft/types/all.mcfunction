@@ -6,6 +6,8 @@
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_StardustEssence:1s}}] run function stardust:craft/types/stardust_essence
 #Stardust Config Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_StardustConfig:1s}}] run function stardust:craft/types/stardust_config
+#Stardust Block
+    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_StardustBlock:1s}}] run function stardust:craft/types/stardust_block
 #Awakened Stardust Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_AwakenedStardust:1s}}] run function stardust:craft/types/awakened_stardust
 #Awakened Stardust Block Crafts
@@ -16,7 +18,13 @@
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_VeryCompactedStardust:1s}}] run function stardust:craft/types/very_compacted_stardust
 #Dragon Pearl Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_DragonPearl:1s}}] run function stardust:craft/types/dragon_pearl
-#Dragon Pearl Crafts
+#Legendary Fragment Crafts
+    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_LegendaryFragment:1s}}] run function stardust:craft/types/legendary_fragment
+#Solar Fragment Crafts
+    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_SolarFragment:1s}}] run function stardust:craft/types/solar_fragment
+#Dark Fragment Crafts
+    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_DarkFragment:1s}}] run function stardust:craft/types/dark_fragment
+#Quarry Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_Quarry:1s}}] run function stardust:craft/types/quarry
 #All Compressed Cobblestones Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_Cobblestones:1s}}] run function stardust:craft/types/cobblestones/all

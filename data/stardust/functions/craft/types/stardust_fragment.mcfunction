@@ -1,3 +1,5 @@
+#Stardust Block
+    execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustFragment:1s}},{Slot:3b,tag:{SF_StardustFragment:1s}},{Slot:4b,tag:{SF_StardustFragment:1s}},{Slot:11b,tag:{SF_StardustFragment:1s}},{Slot:12b,tag:{SF_StardustFragment:1s}},{Slot:13b,tag:{SF_StardustFragment:1s}},{Slot:20b,tag:{SF_StardustFragment:1s}},{Slot:21b,tag:{SF_StardustFragment:1s}},{Slot:22b,tag:{SF_StardustFragment:1s}}]} run function stardust:craft/items/stardust_block
 #Stardust Ingot
     execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustFragment:1s}},{Slot:3b,tag:{SF_StardustFragment:1s}},{Slot:4b,tag:{SF_StardustFragment:1s}},{Slot:11b,tag:{SF_StardustFragment:1s}},{Slot:12b,id:"minecraft:iron_ingot"},{Slot:13b,tag:{SF_StardustFragment:1s}},{Slot:20b,tag:{SF_StardustFragment:1s}},{Slot:21b,tag:{SF_StardustFragment:1s}},{Slot:22b,tag:{SF_StardustFragment:1s}}]} run function stardust:craft/items/stardust_ingot
 #Compacted Stardust

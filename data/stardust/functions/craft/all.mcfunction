@@ -30,6 +30,9 @@ scoreboard players set @s SF_X 1
     execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_DogExcrement:1s}},{Slot:3b,tag:{SF_DogExcrement:1s}},{Slot:4b,tag:{SF_DogExcrement:1s}},{Slot:11b,tag:{SF_DogExcrement:1s}},{Slot:12b,id:"minecraft:cake"},{Slot:13b,tag:{SF_DogExcrement:1s}},{Slot:20b,tag:{SF_DogExcrement:1s}},{Slot:21b,tag:{SF_DogExcrement:1s}},{Slot:22b,tag:{SF_DogExcrement:1s}}]} run function stardust:craft/items/stoup_egg
 #Compressed Cobblestone
     execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:cobblestone"},{Slot:3b,id:"minecraft:cobblestone"},{Slot:4b,id:"minecraft:cobblestone"},{Slot:11b,id:"minecraft:cobblestone"},{Slot:12b,id:"minecraft:cobblestone"},{Slot:13b,id:"minecraft:cobblestone"},{Slot:20b,id:"minecraft:cobblestone"},{Slot:21b,id:"minecraft:cobblestone"},{Slot:22b,id:"minecraft:cobblestone"}]} run function stardust:craft/items/cobblestones/compressed
+#Mirror
+    execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:glass"},{Slot:3b,id:"minecraft:glass"},{Slot:4b,id:"minecraft:glass"},{Slot:12b,id:"minecraft:quartz"}]} run function stardust:craft/items/mirror
+    execute if entity @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:11b,id:"minecraft:glass"},{Slot:12b,id:"minecraft:glass"},{Slot:13b,id:"minecraft:glass"},{Slot:21b,id:"minecraft:quartz"}]} run function stardust:craft/items/mirror
 
 #Types Crafts
     execute if entity @s[tag=!SF_WaitingCraft] run function stardust:craft/types/all

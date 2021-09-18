@@ -14,7 +14,7 @@
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false,
-        "background": "stardust:textures/materials/stardust_ore.png"
+        "background": "stardust:textures/materials/stardust_block.png"
     },
     "criteria": {
         "StardustFragment": {

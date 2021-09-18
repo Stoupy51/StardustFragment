@@ -20,6 +20,7 @@
     execute in stardust:stardust run tp @e[type=vex,distance=0..] 0 -10000 0
     execute if score Second SF_Data matches 10 run function stardust:opti/quarry_system
 	###execute if score Second SF_Data matches 10 as @e[type=item] at @s run function stardust:forge/detect_craft
+    execute as @e[type=armor_stand,tag=SE_Furnaces] at @s run function stardust:work/all_furnace
 
 #Boss
     execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick

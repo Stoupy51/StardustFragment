@@ -78,15 +78,15 @@ scoreboard players set Second SF_Data 10
 		data modify storage stardust:items 2013021 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013021,BlockEntityTag:{Lock:"SF_Placed"},SF_Cobblestones:1s,SF_SeptupleCompressedCobblestone:1s,HideFlags:127,display:{Lore:['[{"text":"Equals to 4,782,969 cobblestones","italic":false,"color":"gray"}]'],Name:'[{"text":"Septuple Compressed Cobblestone","italic":false,"color":"dark_gray"}]'}}}
 		data modify storage stardust:items 2013022 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013022,BlockEntityTag:{Lock:"SF_Placed"},SF_Cobblestones:1s,SF_OctupleCompressedCobblestone:1s,HideFlags:127,display:{Lore:['[{"text":"Equals to 43,046,721 cobblestones","italic":false,"color":"gray"}]'],Name:'[{"text":"Octuple Compressed Cobblestone","italic":false,"color":"dark_gray"}]'}}}
 	#Stardust Ore
-		data modify storage stardust:items 2013023 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013023,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Ore","italic":false,"color":"aqua"}]'}}}
+		data modify storage stardust:items 2013023 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{SE_Cookable:1b,CustomModelData:2013023,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Ore","italic":false,"color":"aqua"}]'}}}
 	#Awakened Stardust Ore
-		data modify storage stardust:items 2013024 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013024,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Awakened Stardust Ore","italic":false,"color":"red"}]'}}}
+		data modify storage stardust:items 2013024 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{SE_Cookable:1b,CustomModelData:2013024,BlockEntityTag:{Lock:"SF_Placed"},SF_AwakenedStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Awakened Stardust Ore","italic":false,"color":"red"}]'}}}
 	#Deepslate Stardust Ore
-		data modify storage stardust:items 2013025 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013025,BlockEntityTag:{Lock:"SF_Placed"},SF_DeepslateStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Deepslate Stardust Ore","italic":false,"color":"aqua"}]'}}}
+		data modify storage stardust:items 2013025 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{SE_Cookable:1b,CustomModelData:2013025,BlockEntityTag:{Lock:"SF_Placed"},SF_DeepslateStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Deepslate Stardust Ore","italic":false,"color":"aqua"}]'}}}
 	#Nether Stardust Ore
-		data modify storage stardust:items 2013026 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013026,BlockEntityTag:{Lock:"SF_Placed"},SF_NetherStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Nether Stardust Ore","italic":false,"color":"aqua"}]'}}}
+		data modify storage stardust:items 2013026 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{SE_Cookable:1b,CustomModelData:2013026,BlockEntityTag:{Lock:"SF_Placed"},SF_NetherStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Nether Stardust Ore","italic":false,"color":"aqua"}]'}}}
 	#Ender Stardust Ore
-		data modify storage stardust:items 2013027 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013027,BlockEntityTag:{Lock:"SF_Placed"},SF_EnderStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Ender Stardust Ore","italic":false,"color":"aqua"}]'}}}
+		data modify storage stardust:items 2013027 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{SE_Cookable:1b,CustomModelData:2013027,BlockEntityTag:{Lock:"SF_Placed"},SF_EnderStardustOre:1s,HideFlags:127,display:{Name:'[{"text":"Ender Stardust Ore","italic":false,"color":"aqua"}]'}}}
 	#Stardust Block
 		data modify storage stardust:items 2013028 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013028,BlockEntityTag:{Lock:"SF_Placed"},SF_StardustBlock:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Block","italic":false,"color":"aqua"}]'}}}
 	#Machine Frame

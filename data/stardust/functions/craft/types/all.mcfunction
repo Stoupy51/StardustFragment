@@ -19,11 +19,13 @@
 #Dragon Pearl Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_DragonPearl:1s}}] run function stardust:craft/types/dragon_pearl
 #Legendary Fragment Crafts
-    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_LegendaryFragment:1s}}] run function stardust:craft/types/legendary_fragment
+    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_LegendFragment:1s}}] run function stardust:craft/types/legendary_fragment
 #Solar Fragment Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_SolarFragment:1s}}] run function stardust:craft/types/solar_fragment
 #Dark Fragment Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_DarkFragment:1s}}] run function stardust:craft/types/dark_fragment
+#Ultimate Fragment Crafts
+    execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_UltimateFragment:1s}}] run function stardust:craft/types/ultimate_fragment
 #Quarry Crafts
     execute if entity @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_Quarry:1s}}] run function stardust:craft/types/quarry
 #All Compressed Cobblestones Crafts

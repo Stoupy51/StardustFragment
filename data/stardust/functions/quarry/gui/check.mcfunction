@@ -1,6 +1,6 @@
 tag @s remove SF_FortuneModule
 tag @s remove SF_SilkTouchModule
-data modify storage stardust:items Temp set from storage stardust:items Temp
+data modify storage stardust:items Temp set from block ~ ~ ~ Items
 execute if data storage stardust:items Temp[{Slot:24b,tag:{SF_FortuneModule:1s}}] run tag @s add SF_FortuneModule
 execute if data storage stardust:items Temp[{Slot:24b,tag:{SF_SilkTouchModule:1s}}] run tag @s add SF_SilkTouchModule
 execute unless data storage stardust:items Temp[{Slot:19b,tag:{SF_QuarryStart:1s}}] if score @s EF_kJ >= @s EF_kW run scoreboard players set @s SF_StatQ 1

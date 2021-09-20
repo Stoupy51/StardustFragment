@@ -5,6 +5,7 @@
 
 #Choose a Structure
     execute if score Random SF_Data matches 0..20 run function stardust:generate/structure/water_well/all
+    execute if score Random SF_Data matches 20..270 run function stardust:generate/structure/scruffy_house/all
 
 
 kill @s

@@ -13,6 +13,4 @@
     execute if score Random2 SF_Data matches 2 at @s run setblock ~ ~1 ~ minecraft:structure_block{posX:-2,mode:"LOAD",posY:-5,posZ:-2,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:water_well_3"}
     execute if score Random2 SF_Data matches 3 at @s run setblock ~ ~1 ~ minecraft:structure_block{posX:-2,mode:"LOAD",posY:-5,posZ:-2,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:water_well_4"}
     execute if score Random2 SF_Data matches 4 at @s run setblock ~ ~1 ~ minecraft:structure_block{posX:-2,mode:"LOAD",posY:-5,posZ:-2,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:water_well_5"}
-    execute if score Random2 SF_Data matches 0..4 at @s run say a
     execute if score Random2 SF_Data matches 0..4 at @s run setblock ~ ~2 ~ redstone_block
-say b

@@ -34,7 +34,7 @@
     scoreboard players operation PosY SE_Data += NewY SE_Data
 
 #Update Position
-    execute in minecraft:the_end if entity @s[distance=0..] run scoreboard players operation PosY SE_Data += 400 SE_Data
+    execute in minecraft:the_end as @s[distance=0..] run scoreboard players operation PosY SE_Data += 400 SE_Data
     execute store result entity @s Pos[0] double 0.1 run scoreboard players get PosX SE_Data
     execute store result entity @s Pos[1] double 0.1 run scoreboard players get PosY SE_Data
     execute store result entity @s Pos[2] double 0.1 run scoreboard players get PosZ SE_Data

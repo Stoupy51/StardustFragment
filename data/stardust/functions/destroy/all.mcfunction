@@ -1,5 +1,4 @@
 #Materials
-    execute as @e[type=glow_item_frame,tag=SF_AwakenedStardustBlock] at @s unless block ~ ~ ~ minecraft:redstone_block run function stardust:destroy/awakened_stardust_block
     #All Compressed Cobblestones
         execute as @e[type=glow_item_frame,tag=SF_CompressedCobblestone] at @s unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/cobblestone/compressed
         execute as @e[type=glow_item_frame,tag=SF_DoubleCompressedCobblestone] at @s unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/cobblestone/double_compressed

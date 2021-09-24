@@ -1,5 +1,5 @@
-#execute at @e at @e[limit=8] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1}}}]
-#execute at @e at @e[limit=8] if entity @e[nbt={Item:{tag:{SF_AdvancedDiamondSeed:1s}}}]
+#execute at @e as @e[limit=24] as @s[tag=SF_Truc] run scoreboard players set Temp SF_Data 0
+#execute at @e as @e[limit=24] as @s[tag=SF_Truc] run scoreboard players set Temp SF_Data 0
 #Others 1
     execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b
 

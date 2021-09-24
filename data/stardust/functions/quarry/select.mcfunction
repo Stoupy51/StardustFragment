@@ -1,5 +1,5 @@
 scoreboard players enable @a SF_ResetQ
-execute if entity @s[tag=!SF_QuarryReset] run function stardust:quarry/reset
+execute as @s[tag=!SF_QuarryReset] run function stardust:quarry/reset
 tag @s add SF_QuarryReset
 
 execute at @a[distance=..3] unless score @p SF_Qx1 matches 0 run scoreboard players operation @s SF_Qx1 = @p SF_Qx1

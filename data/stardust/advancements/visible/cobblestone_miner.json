@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Automining is cool"
-        },
-        "description": {
-            "text": "Craft your first Cobblestone Miner"
-        },
-        "icon": {
-            "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013208}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:barrel"],
-                        "nbt": "{SF_CobblestoneMiner:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 40
-    },
-    "parent": "stardust:visible/compressed_cobblestone"
+	"display": {
+		"title": {
+			"text": "Automining is cool"
+		},
+		"description": {
+			"text": "Craft your first Cobblestone Miner"
+		},
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013208}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:barrel"],
+						"nbt": "{SF_CobblestoneMiner:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 40
+	},
+	"parent": "stardust:visible/compressed_cobblestone"
 }

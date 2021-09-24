@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "More than a blue redstone"
-        },
-        "description": {
-            "text": "Get your first Stardust Config"
-        },
-        "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013003}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_StardustConfig:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 40
-    },
-    "parent": "stardust:visible/stardust_essence"
+	"display": {
+		"title": {
+			"text": "More than a blue redstone"
+		},
+		"description": {
+			"text": "Get your first Stardust Config"
+		},
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013003}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:command_block"],
+						"nbt": "{SF_StardustConfig:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 40
+	},
+	"parent": "stardust:visible/stardust_essence"
 }

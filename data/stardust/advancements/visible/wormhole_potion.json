@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "My home is everyone's home"
-        },
-        "description": {
-            "text": "Obtain a Wormhole Potion"
-        },
-        "icon": {
-            "item": "minecraft:warped_fungus_on_a_stick",
-            "nbt": "{CustomModelData:2013171}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": true
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:warped_fungus_on_a_stick"],
-                        "nbt": "{SF_WormholePotion:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 20
-    },
-    "parent": "stardust:visible/travel_staff"
+	"display": {
+		"title": {
+			"text": "My home is everyone's home"
+		},
+		"description": {
+			"text": "Obtain a Wormhole Potion"
+		},
+		"icon": {
+			"item": "minecraft:warped_fungus_on_a_stick",
+			"nbt": "{CustomModelData:2013171}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:warped_fungus_on_a_stick"],
+						"nbt": "{SF_WormholePotion:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 20
+	},
+	"parent": "stardust:visible/travel_staff"
 }

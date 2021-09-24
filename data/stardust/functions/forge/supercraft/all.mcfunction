@@ -51,4 +51,4 @@
 	execute as @s[nbt={Item:{id:"minecraft:blue_orchid",Count:2b}}] run function stardust:supercraft/rainstart
 	execute as @s[nbt={Item:{id:"minecraft:sunflower",Count:2b}}] run function stardust:supercraft/rainstop
 	execute as @s[nbt={Item:{Count:16b,tag:{CStar:1b}}}] run function stardust:supercraft/emeraldspawner
-    execute as @s[nbt={Item:{Count:1b,tag:{PTeuse:1b}}}] run function stardust:supercraft/superpelleteuse
+	execute as @s[nbt={Item:{Count:1b,tag:{PTeuse:1b}}}] run function stardust:supercraft/superpelleteuse

@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Looks like a better material"
-        },
-        "description": {
-            "text": "Get your first Compressed Cobblestone"
-        },
-        "icon": {
-            "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013015}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:barrel"],
-                        "nbt": "{SF_CompressedCobblestone:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 20
-    },
-    "parent": "stardust:stardust_fragment"
+	"display": {
+		"title": {
+			"text": "Looks like a better material"
+		},
+		"description": {
+			"text": "Get your first Compressed Cobblestone"
+		},
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013015}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:barrel"],
+						"nbt": "{SF_CompressedCobblestone:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 20
+	},
+	"parent": "stardust:stardust_fragment"
 }

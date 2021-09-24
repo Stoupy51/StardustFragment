@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Better with a Reinforced Armor"
-        },
-        "description": {
-            "text": "Get a full Reinforced Stardust Armor"
-        },
-        "icon": {
-            "item": "minecraft:iron_helmet",
-            "nbt": "{CustomModelData:2013107}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    { "items": ["minecraft:iron_helmet"], "nbt": "{SF_ReinforcedHelmet:1s}" },
-                    { "items": ["minecraft:iron_chestplate"], "nbt": "{SF_ReinforcedChestplate:1s}" },
-                    { "items": ["minecraft:iron_leggings"], "nbt": "{SF_ReinforcedLeggings:1s}" },
-                    { "items": ["minecraft:iron_boots"], "nbt": "{SF_ReinforcedBoots:1s}" }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 60
-    },
-    "parent": "stardust:visible/stardust_essence"
+	"display": {
+		"title": {
+			"text": "Better with a Reinforced Armor"
+		},
+		"description": {
+			"text": "Get a full Reinforced Stardust Armor"
+		},
+		"icon": {
+			"item": "minecraft:iron_helmet",
+			"nbt": "{CustomModelData:2013107}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{ "items": ["minecraft:iron_helmet"], "nbt": "{SF_ReinforcedHelmet:1s}" },
+					{ "items": ["minecraft:iron_chestplate"], "nbt": "{SF_ReinforcedChestplate:1s}" },
+					{ "items": ["minecraft:iron_leggings"], "nbt": "{SF_ReinforcedLeggings:1s}" },
+					{ "items": ["minecraft:iron_boots"], "nbt": "{SF_ReinforcedBoots:1s}" }
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 60
+	},
+	"parent": "stardust:visible/stardust_essence"
 }

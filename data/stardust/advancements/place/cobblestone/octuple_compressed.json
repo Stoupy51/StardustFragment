@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SF_OctupleCompressedCobblestone:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "stardust:place/cobblestone/octuple_compressed/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SF_OctupleCompressedCobblestone:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:place/cobblestone/octuple_compressed/1"
+	}
 }

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:the_end",
   "generator": {
-    "type": "minecraft:noise",
-    "seed": 0,
-    "biome_source": {
-      "type": "minecraft:the_end",
-      "seed": 0
-    },
-    "settings": "minecraft:end"
+	"type": "minecraft:noise",
+	"seed": 0,
+	"biome_source": {
+	  "type": "minecraft:the_end",
+	  "seed": 0
+	},
+	"settings": "minecraft:end"
   }
 }

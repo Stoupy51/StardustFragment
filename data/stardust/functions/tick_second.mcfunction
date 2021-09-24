@@ -1,7 +1,7 @@
 #Others
 	scoreboard players set Second SF_Data 0
 	scoreboard players add Minute SF_Data 1
-    execute if score Minute SF_Data matches 60.. run function stardust:tick_minute
+	execute if score Minute SF_Data matches 60.. run function stardust:tick_minute
 	execute as @e[type=item,nbt={Item:{tag:{SF_StardustFragment:1s}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function stardust:place/stardust_crafting_table
 	execute if score DragonKilled SF_Data matches ..10 run function stardust:opti/dragon_egg/all
 
@@ -15,9 +15,9 @@
 	execute at @a run forceload add -29999999 2013 -29999999 2013
 
 #Boss
-    execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second
+	execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar] at @s run function stardust:boss/stardust_pillar/tick_second
-    execute if score StardustPillar SF_Data matches 1.. as @e[type=armor_stand,tag=SF_StardustPillarTick] at @s unless entity @e[type=wither,tag=SF_StardustPillar,distance=..2.75] run function stardust:boss/stardust_pillar/defeated
+	execute if score StardustPillar SF_Data matches 1.. as @e[type=armor_stand,tag=SF_StardustPillarTick] at @s unless entity @e[type=wither,tag=SF_StardustPillar,distance=..2.75] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=wolf,tag=SF_StoupArmy] at @s run function stardust:boss/stouparmy
 
 #Mobs spawn
@@ -30,7 +30,7 @@
 	execute as @e[type=glow_item_frame,tag=SF_Portal] run function stardust:work/portals
 	scoreboard players add @a[scores={SF_Data=1..},nbt={SelectedItem:{tag:{SF_TravelStaff:1s}}}] SF_Data 10
 	execute as @a[scores={SF_Data=1..}] at @s run function stardust:dimensions/teleport
-    tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon
+	tag @a[nbt={Dimension:"stardust:dungeon"}] add SF_IsInDungeon
 	execute if entity @a[tag=SF_IsInDungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
 
 #Machines Visuals & Work

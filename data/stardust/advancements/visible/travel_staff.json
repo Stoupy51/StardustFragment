@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "My home is now everywhere"
-        },
-        "description": {
-            "text": "Get a Travel Staff"
-        },
-        "icon": {
-            "item": "minecraft:warped_fungus_on_a_stick",
-            "nbt": "{CustomModelData:2013170}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:warped_fungus_on_a_stick"],
-                        "nbt": "{SF_TravelStaff:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 20
-    },
-    "parent": "stardust:visible/dragon_pearl"
+	"display": {
+		"title": {
+			"text": "My home is now everywhere"
+		},
+		"description": {
+			"text": "Get a Travel Staff"
+		},
+		"icon": {
+			"item": "minecraft:warped_fungus_on_a_stick",
+			"nbt": "{CustomModelData:2013170}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:warped_fungus_on_a_stick"],
+						"nbt": "{SF_TravelStaff:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 20
+	},
+	"parent": "stardust:visible/dragon_pearl"
 }

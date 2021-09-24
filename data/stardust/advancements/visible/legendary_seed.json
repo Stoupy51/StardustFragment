@@ -1,38 +1,38 @@
 {
-    "display": {
-        "title": {
-            "text": "Let's take the legendary route"
-        },
-        "description": {
-            "text": "Place an Legendary Seed"
-        },
-        "icon": {
-            "item": "minecraft:player_head",
-            "nbt": "{CustomModelData:2013205}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "item": {
-                    "items": ["minecraft:player_head"],
-                    "nbt": "{SF_LegendarySeed:1s}"
-                }
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 320
-    },
-    "parent": "stardust:visible/elite_stardust_seed"
+	"display": {
+		"title": {
+			"text": "Let's take the legendary route"
+		},
+		"description": {
+			"text": "Place an Legendary Seed"
+		},
+		"icon": {
+			"item": "minecraft:player_head",
+			"nbt": "{CustomModelData:2013205}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {
+					"items": ["minecraft:player_head"],
+					"nbt": "{SF_LegendarySeed:1s}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 320
+	},
+	"parent": "stardust:visible/elite_stardust_seed"
 }

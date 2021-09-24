@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Nothing better than the original!"
-        },
-        "description": {
-            "text": "Get a full Original Stardust Armor"
-        },
-        "icon": {
-            "item": "minecraft:diamond_helmet",
-            "nbt": "{CustomModelData:2013114}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    { "items": ["minecraft:diamond_helmet"], "nbt": "{SF_OriginalHelmet:1s}" },
-                    { "items": ["minecraft:diamond_chestplate"], "nbt": "{SF_OriginalChestplate:1s}" },
-                    { "items": ["minecraft:diamond_leggings"], "nbt": "{SF_OriginalLeggings:1s}" },
-                    { "items": ["minecraft:diamond_boots"], "nbt": "{SF_OriginalBoots:1s}" }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 80
-    },
-    "parent": "stardust:visible/stardust_config"
+	"display": {
+		"title": {
+			"text": "Nothing better than the original!"
+		},
+		"description": {
+			"text": "Get a full Original Stardust Armor"
+		},
+		"icon": {
+			"item": "minecraft:diamond_helmet",
+			"nbt": "{CustomModelData:2013114}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{ "items": ["minecraft:diamond_helmet"], "nbt": "{SF_OriginalHelmet:1s}" },
+					{ "items": ["minecraft:diamond_chestplate"], "nbt": "{SF_OriginalChestplate:1s}" },
+					{ "items": ["minecraft:diamond_leggings"], "nbt": "{SF_OriginalLeggings:1s}" },
+					{ "items": ["minecraft:diamond_boots"], "nbt": "{SF_OriginalBoots:1s}" }
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 80
+	},
+	"parent": "stardust:visible/stardust_config"
 }

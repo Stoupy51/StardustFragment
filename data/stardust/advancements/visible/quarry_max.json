@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "5 blocks per second ?!"
-        },
-        "description": {
-            "text": "Upgrade your Quarry to Level 5"
-        },
-        "icon": {
-            "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013217}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:barrel"],
-                        "nbt": "{SF_QuarryLv5:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 120
-    },
-    "parent": "stardust:visible/quarry"
+	"display": {
+		"title": {
+			"text": "5 blocks per second ?!"
+		},
+		"description": {
+			"text": "Upgrade your Quarry to Level 5"
+		},
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013217}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:barrel"],
+						"nbt": "{SF_QuarryLv5:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 120
+	},
+	"parent": "stardust:visible/quarry"
 }

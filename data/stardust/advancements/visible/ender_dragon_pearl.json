@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "What is it for?"
-        },
-        "description": {
-            "text": "Get your first Ender Dragon Pearl"
-        },
-        "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013007}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_EnderDragonPearl:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 20
-    },
-    "parent": "stardust:visible/dragon_pearl"
+	"display": {
+		"title": {
+			"text": "What is it for?"
+		},
+		"description": {
+			"text": "Get your first Ender Dragon Pearl"
+		},
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013007}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:command_block"],
+						"nbt": "{SF_EnderDragonPearl:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 20
+	},
+	"parent": "stardust:visible/dragon_pearl"
 }

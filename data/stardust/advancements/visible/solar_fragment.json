@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Solar as the sun"
-        },
-        "description": {
-            "text": "Get a Solar Fragment"
-        },
-        "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013009}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_SolarFragment:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 640
-    },
-    "parent": "stardust:visible/solar_seed"
+	"display": {
+		"title": {
+			"text": "Solar as the sun"
+		},
+		"description": {
+			"text": "Get a Solar Fragment"
+		},
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013009}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:command_block"],
+						"nbt": "{SF_SolarFragment:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 640
+	},
+	"parent": "stardust:visible/solar_seed"
 }

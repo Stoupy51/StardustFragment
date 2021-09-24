@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Can we compact it again?"
-        },
-        "description": {
-            "text": "Get your first Compacted Stardust"
-        },
-        "icon": {
-            "item": "minecraft:command_block",
-            "nbt": "{CustomModelData:2013013}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:command_block"],
-                        "nbt": "{SF_CompactedStardust:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 20
-    },
-    "parent": "stardust:stardust_fragment"
+	"display": {
+		"title": {
+			"text": "Can we compact it again?"
+		},
+		"description": {
+			"text": "Get your first Compacted Stardust"
+		},
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013013}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:command_block"],
+						"nbt": "{SF_CompactedStardust:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 20
+	},
+	"parent": "stardust:stardust_fragment"
 }

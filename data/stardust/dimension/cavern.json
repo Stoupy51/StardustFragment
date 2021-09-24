@@ -1,13 +1,13 @@
 {
   "type": "minecraft:overworld_caves",
   "generator": {
-    "type": "minecraft:noise",
-    "seed": 1,
-    "settings": "minecraft:caves",
-    "biome_source": {
-      "type": "minecraft:vanilla_layered",
-      "seed": 1,
-      "large_biomes": false
-    }
+	"type": "minecraft:noise",
+	"seed": 1,
+	"settings": "minecraft:caves",
+	"biome_source": {
+	  "type": "minecraft:vanilla_layered",
+	  "seed": 1,
+	  "large_biomes": false
+	}
   }
 }

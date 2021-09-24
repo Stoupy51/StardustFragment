@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SF_CelestialPortal:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "stardust:place/celestial_portal/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SF_CelestialPortal:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:place/celestial_portal/1"
+	}
 }

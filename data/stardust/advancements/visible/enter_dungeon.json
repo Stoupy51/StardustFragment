@@ -1,27 +1,27 @@
 {
-    "display": {
-        "title": {
-            "text": "Ready to fight?!!"
-        },
-        "description": {
-            "text": "Enter the Stardust Dungeon"
-        },
-        "icon": {
-            "item": "minecraft:barrel",
-            "nbt": "{CustomModelData:2013222}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
-    },
-    "rewards": {
-        "experience": 12000
-    },
-    "parent": "stardust:visible/awakened_stardust_block"
+	"display": {
+		"title": {
+			"text": "Ready to fight?!!"
+		},
+		"description": {
+			"text": "Enter the Stardust Dungeon"
+		},
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013222}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"impossible": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"rewards": {
+		"experience": 12000
+	},
+	"parent": "stardust:visible/awakened_stardust_block"
 }

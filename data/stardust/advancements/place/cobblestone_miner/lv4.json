@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "block": "minecraft:barrel",
-                "item": {
-                    "nbt": "{SF_CobblestoneMinerLv4:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "stardust:place/cobblestone_miner/lv4/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:barrel",
+				"item": {
+					"nbt": "{SF_CobblestoneMinerLv4:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:place/cobblestone_miner/lv4/1"
+	}
 }

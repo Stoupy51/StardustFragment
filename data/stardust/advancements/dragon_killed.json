@@ -1,22 +1,22 @@
 {
   "rewards": {
-    "function": "stardust:opti/dragon_egg/0"
+	"function": "stardust:opti/dragon_egg/0"
   },
   "criteria": {
-    "killed_dragon": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "player": [ { "condition": "minecraft:location_check", "predicate": { "dimension": "minecraft:the_end" }} ],
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:ender_dragon"
-            }
-          }
-        ]
-      }
-    }
+	"killed_dragon": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"player": [ { "condition": "minecraft:location_check", "predicate": { "dimension": "minecraft:the_end" }} ],
+		"entity": [
+		  {
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+			  "type": "minecraft:ender_dragon"
+			}
+		  }
+		]
+	  }
+	}
   }
 }

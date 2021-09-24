@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:placed_block",
-            "conditions": {
-                "item": {
-                    "items": ["minecraft:player_head"],
-                    "nbt": "{SF_UltimateWire:1s}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "stardust:place/ultimate_wire/1"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {
+					"items": ["minecraft:player_head"],
+					"nbt": "{SF_UltimateWire:1s}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:place/ultimate_wire/1"
+	}
 }

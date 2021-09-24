@@ -1,40 +1,40 @@
 {
-    "display": {
-        "title": {
-            "text": "Already enchanted pickaxe?"
-        },
-        "description": {
-            "text": "Get a Damaged Stardust Pickaxe"
-        },
-        "icon": {
-            "item": "minecraft:stone_pickaxe",
-            "nbt": "{CustomModelData:2013105}"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
-    },
-    "criteria": {
-        "StardustFragment": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": ["minecraft:stone_pickaxe"],
-                        "nbt": "{SF_DamagedPickaxe:1s}"
-                    }
-                ]
-            }
-        }
-    },
-    "requirements": [
-        [
-            "StardustFragment"
-        ]
-    ],
-    "rewards": {
-        "experience": 30
-    },
-    "parent": "stardust:visible/stardust_ingot"
+	"display": {
+		"title": {
+			"text": "Already enchanted pickaxe?"
+		},
+		"description": {
+			"text": "Get a Damaged Stardust Pickaxe"
+		},
+		"icon": {
+			"item": "minecraft:stone_pickaxe",
+			"nbt": "{CustomModelData:2013105}"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"StardustFragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": ["minecraft:stone_pickaxe"],
+						"nbt": "{SF_DamagedPickaxe:1s}"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"StardustFragment"
+		]
+	],
+	"rewards": {
+		"experience": 30
+	},
+	"parent": "stardust:visible/stardust_ingot"
 }

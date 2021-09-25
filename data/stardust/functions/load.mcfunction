@@ -55,7 +55,7 @@ scoreboard players set Second SF_Data 10
 	#Ender Dragon Pearl
 		data modify storage stardust:items 2013007 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013007,SF_EnderDragonPearl:1s,HideFlags:127,display:{Name:'[{"text":"Ender ","italic":false,"color":"dark_aqua"},{"text":"Dragon Pearl","italic":false,"color":"dark_purple"}]'}}}
 	#Legendary Fragment
-		data modify storage stardust:items 2013008 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013008,SF_LegendFragment:1s,HideFlags:127,display:{Name:'[{"text":"Legendary Fragment","italic":false,"color":"green"}]'}}}
+		data modify storage stardust:items 2013008 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013008,SF_LegendaryFragment:1s,HideFlags:127,display:{Name:'[{"text":"Legendary Fragment","italic":false,"color":"green"}]'}}}
 	#Solar Fragment
 		data modify storage stardust:items 2013009 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013009,SF_SolarFragment:1s,HideFlags:127,display:{Name:'[{"text":"Solar Fragment","italic":false,"color":"gold"}]'}}}
 	#Dark Fragment

@@ -15,3 +15,6 @@
 	execute as @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_AwakenedPhotovoltaicCell:1s}},{Slot:3b,tag:{SF_AwakenedPhotovoltaicCell:1s}},{Slot:4b,tag:{SF_AwakenedPhotovoltaicCell:1s}},{Slot:11b,tag:{SF_AwakenedStardust:1s}},{Slot:12b,tag:{SF_StardustPhotovoltaicPanel:1s}},{Slot:13b,tag:{SF_AwakenedStardust:1s}},{Slot:22b,tag:{SF_AwakenedStardustBlock:1s}},{Slot:21b,tag:{SF_AwakenedStardustBlock:1s}},{Slot:22b,tag:{SF_AwakenedStardustBlock:1s}}]} run function stardust:craft/items/awakened_photovoltaic_panel
 #Awakened Stardust Wire
 	execute as @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_AwakenedStardustBlock:1s}},{Slot:3b,tag:{SF_AwakenedStardust:1s}},{Slot:4b,tag:{SF_AwakenedStardustBlock:1s}},{Slot:11b,tag:{SF_AwakenedStardust:1s}},{Slot:12b,tag:{SF_StardustWire:1s}},{Slot:13b,tag:{SF_AwakenedStardust:1s}},{Slot:22b,tag:{SF_AwakenedStardustBlock:1s}},{Slot:21b,tag:{SF_AwakenedStardust:1s}},{Slot:22b,tag:{SF_AwakenedStardustBlock:1s}}]} run function stardust:craft/items/awakened_stardust_wire
+
+#No Craft Found
+	execute as @s[tag=!SF_WaitingCraft] unless data storage stardust:items Crafting[{Slot:16b,tag:{SF_AwakenedStardust:1s}}] run function stardust:craft/no_craft_found

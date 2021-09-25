@@ -14,3 +14,6 @@
 	execute as @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_SeptupleCompressedCobblestone:1s}}] run function stardust:craft/types/cobblestones/septuple_compressed
 #Octuple Compressed Cobblestone Crafts
 	execute as @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_OctupleCompressedCobblestone:1s}}] run function stardust:craft/types/cobblestones/octuple_compressed
+
+#No Craft Found
+	execute as @s[tag=!SF_WaitingCraft] unless data storage stardust:items Crafting[{Slot:16b,tag:{SF_Cobblestones:1s}}] run function stardust:craft/no_craft_found

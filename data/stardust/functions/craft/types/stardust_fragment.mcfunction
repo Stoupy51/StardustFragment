@@ -10,3 +10,6 @@
 	execute as @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustFragment:1s}},{Slot:3b,tag:{SF_StardustFragment:1s}},{Slot:4b,tag:{SF_StardustFragment:1s}},{Slot:11b,tag:{SF_StardustFragment:1s}},{Slot:12b,tag:{SF_StardustSeed:1s}},{Slot:13b,tag:{SF_StardustFragment:1s}},{Slot:20b,tag:{SF_StardustFragment:1s}},{Slot:21b,tag:{SF_StardustFragment:1s}},{Slot:22b,tag:{SF_StardustFragment:1s}}]} run function stardust:craft/items/seeds/advanced_stardust
 #Cobblestone Miner Lv.2
 	execute as @s[tag=!SF_WaitingCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustFragment:1s}},{Slot:3b,tag:{SF_StardustFragment:1s}},{Slot:4b,tag:{SF_StardustFragment:1s}},{Slot:11b,tag:{SF_StardustFragment:1s}},{Slot:12b,tag:{SF_CobblestoneMinerLv1:1s}},{Slot:13b,tag:{SF_StardustFragment:1s}},{Slot:20b,tag:{SF_StardustFragment:1s}},{Slot:21b,tag:{SF_StardustFragment:1s}},{Slot:22b,tag:{SF_StardustFragment:1s}}]} run function stardust:craft/items/cobblestone_miner/lv2
+
+#No Craft Found
+	execute as @s[tag=!SF_WaitingCraft] unless data storage stardust:items Crafting[{Slot:16b,tag:{SF_StardustFragment:1s}}] run function stardust:craft/no_craft_found

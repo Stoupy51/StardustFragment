@@ -16,7 +16,6 @@
 	scoreboard players add @a[scores={SF_X=..-1}] SF_X 1
 
 #Others 2
-	execute if score SuperCraft SF_Data matches 1 as @e[type=item,scores={SF_SCraft=0..}] at @s run function stardust:forge/particles
 	execute in stardust:stardust run tp @e[type=vex,distance=0..] 0 -10000 0
 	execute if score Second SF_Data matches 10 run function stardust:opti/quarry_system
 	###execute if score Second SF_Data matches 10 as @e[type=item] at @s run function stardust:forge/detect_craft

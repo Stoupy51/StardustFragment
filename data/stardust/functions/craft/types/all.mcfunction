@@ -19,7 +19,7 @@
 #Dragon Pearl Crafts
 	execute as @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_DragonPearl:1s}}] run function stardust:craft/types/dragon_pearl
 #Legendary Fragment Crafts
-	execute as @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_LegendFragment:1s}}] run function stardust:craft/types/legendary_fragment
+	execute as @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_LegendaryFragment:1s}}] run function stardust:craft/types/legendary_fragment
 #Solar Fragment Crafts
 	execute as @s[tag=!SF_WaitingCraft] if data storage stardust:items Crafting[{tag:{SF_SolarFragment:1s}}] run function stardust:craft/types/solar_fragment
 #Dark Fragment Crafts

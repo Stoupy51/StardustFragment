@@ -3,3 +3,4 @@ data modify block ~ ~ ~ Items[{Slot:16b}].Count set value 8
 scoreboard players set @s SF_Data 2013000
 scoreboard players set @s SF_X 8
 tag @s add SF_WaitingCraft
+tag @s add SF_FoundCraft

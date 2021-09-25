@@ -299,9 +299,9 @@ scoreboard players set Second SF_Data 10
 	#Lucky Artifact Bag
 		data modify storage stardust:items 2013256 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013256,SF_LuckyArtifactBag:1s,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"text":"Right click to get a random artifact","italic":false,"color":"gray"}]'],Name:'[{"text":"Lucky Artifact Bag","italic":false,"color":"light_purple"}]'}}}
 	#Fortune Module
-		data modify storage stardust:items 2013257 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013257,SF_FortuneModule:1s,Unbreakable:1b,HideFlags:127,display:{Name:'[{"text":"Fortune Module","italic":false,"color":"white"}]'}}}
+		data modify storage stardust:items 2013257 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013257,SF_FortuneModule:1s,HideFlags:127,display:{Name:'[{"text":"Fortune Module","italic":false,"color":"white"}]'}}}
 	#Silk Touch Module
-		data modify storage stardust:items 2013258 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013258,SF_SilkTouchModule:1s,Unbreakable:1b,HideFlags:127,display:{Name:'[{"text":"Silk Touch Module","italic":false,"color":"white"}]'}}}
+		data modify storage stardust:items 2013258 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013258,SF_SilkTouchModule:1s,HideFlags:127,display:{Name:'[{"text":"Silk Touch Module","italic":false,"color":"white"}]'}}}
 
 	#Stardust Crafting Table
 		data modify storage stardust:items 2013399 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013399,BlockEntityTag:{Lock:"SF_Placed"},SF_CraftingTable:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Crafting Table","italic":false,"color":"blue"}]'}}}

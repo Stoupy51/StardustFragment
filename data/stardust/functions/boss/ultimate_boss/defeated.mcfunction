@@ -13,3 +13,4 @@ execute as @a at @s run playsound minecraft:entity.wither.spawn master @s
 kill @e[type=ender_dragon,tag=SF_Dragon]
 scoreboard players reset UltimateBossKilled SF_Data
 scoreboard players reset UltimateBoss SF_Data
+execute in stardust:ultimate run function stardust:dimensions/structure/ultimate

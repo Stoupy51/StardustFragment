@@ -10,6 +10,5 @@ execute in stardust:dungeon run setblock 63 143 -77 air
 execute in stardust:dungeon run setblock 72 68 -150 air
 execute in stardust:dungeon run setblock 108 111 -35 air
 execute in stardust:dungeon run setblock 131 93 -85 air
-tellraw @a {"text":"[Stardust Fragment] The Stardust Dungeon has been correctly generated","italic":false,"color":"green"}
 scoreboard players set DungeonBuilt SF_Data 1
 execute in stardust:dungeon run forceload remove -27 40 182 -168

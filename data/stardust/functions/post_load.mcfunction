@@ -19,4 +19,5 @@ scoreboard players reset SE_Loaded SF_Data
 scoreboard players reset EF_Missing SF_Data
 scoreboard players reset SE_Missing SF_Data
 
+execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run function stardust:dimensions/structure/dungeon
 execute unless entity @a run schedule function stardust:post_load 5s replace

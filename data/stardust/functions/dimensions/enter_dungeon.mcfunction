@@ -4,4 +4,4 @@ effect give @s slow_falling 5
 playsound minecraft:entity.player.levelup ambient @s 6 98 -11
 playsound minecraft:entity.player.levelup ambient @s 6 98 -11
 playsound minecraft:entity.player.levelup ambient @s 6 98 -11
-advancement grant @s only stardust:enter_dungeon
+advancement grant @s only stardust:visible/enter_dungeon

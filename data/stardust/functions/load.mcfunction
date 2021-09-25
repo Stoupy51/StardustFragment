@@ -31,6 +31,7 @@ team modify SF_Blue color blue
 gamerule commandBlockOutput false
 execute in minecraft:overworld run forceload add 0 0 0 0
 execute in minecraft:the_end run forceload add 0 0 0 0
+execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
 execute in minecraft:the_end run setblock 0 255 0 end_portal
 
 scoreboard players set StardustFragment EF_Versions 3000

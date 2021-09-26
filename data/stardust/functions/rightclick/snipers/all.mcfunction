@@ -29,8 +29,11 @@ tag @s add SF_Shooter
 execute as @s[gamemode=creative] unless score Bullet SF_Data matches 1.. run scoreboard players set Bullet SF_Data 1
 tp @e[type=area_effect_cloud,tag=SF_ToThrow,limit=1] @s
 execute as @e[type=area_effect_cloud,tag=SF_ToThrow,limit=1] run tp @s ^ ^1.55 ^
+execute if predicate stardust:sneaking as @e[type=area_effect_cloud,tag=SF_ToThrow,limit=1] at @s run tp @s ~ ~-0.3 ~
 execute unless score Bullet SF_Data matches 1.. run playsound minecraft:block.note_block.snare ambient @s ~ ~ ~ 1 0.5
-execute if score Bullet SF_Data matches 1.. run playsound stardust:sniper_shot ambient @a[distance=..20] ~ ~ ~ 0.5
+execute if score Bullet SF_Data matches 1.. as @s[nbt={SelectedItem:{tag:{SF_StardustSniper:1s}}}] run playsound stardust:sniper_shot_1 ambient @a[distance=..20] ~ ~ ~ 0.5
+execute if score Bullet SF_Data matches 1.. as @s[nbt={SelectedItem:{tag:{SF_AwakenedStardustSniper:1s}}}] run playsound stardust:sniper_shot_2 ambient @a[distance=..20] ~ ~ ~ 0.5
+execute if score Bullet SF_Data matches 1.. as @s[nbt={SelectedItem:{tag:{SF_UltimateSniper:1s}}}] run playsound stardust:sniper_shot_3 ambient @a[distance=..20] ~ ~ ~ 0.5
 execute if score Bullet SF_Data matches 1.. as @e[type=area_effect_cloud,tag=SF_ToThrow,limit=1] at @s run function stardust:rightclick/snipers/projectile_move
 tag @s remove SF_Shooter
 tag @e[tag=SF_Shooted] remove SF_Shooted

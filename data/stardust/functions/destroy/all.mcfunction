@@ -4,7 +4,6 @@
 	execute as @e[type=glow_item_frame,tag=SF_DestroyCobbledDeepslate] at @s unless block ~ ~ ~ minecraft:cobbled_deepslate run function stardust:destroy/groups/cobbled_deepslate
 	execute as @e[type=glow_item_frame,tag=SF_DestroyDeepslateDiamondOre] at @s unless block ~ ~ ~ minecraft:deepslate_diamond_ore run function stardust:destroy/groups/deepslate_diamond_ore
 	execute as @e[type=glow_item_frame,tag=SF_DestroyLapisBlock] at @s unless block ~ ~ ~ minecraft:lapis_block run function stardust:destroy/groups/lapis_block
-	execute as @e[type=glow_item_frame,tag=SF_DestroyBarrel] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/groups/barrel
 	execute as @e[type=glow_item_frame,tag=SF_DestroyIronBlock] at @s unless block ~ ~ ~ minecraft:iron_block run function stardust:destroy/groups/iron_block
 	execute as @e[type=glow_item_frame,tag=SF_DestroyCryingObsidian] at @s unless block ~ ~ ~ minecraft:crying_obsidian run function stardust:destroy/groups/crying_obsidian
 	execute as @e[type=glow_item_frame,tag=SF_DestroySpawner] at @s unless block ~ ~ ~ minecraft:spawner run function stardust:destroy/groups/spawner

@@ -1,3 +1,4 @@
+scoreboard objectives add EF_Versions dummy
 scoreboard objectives add SF_StardustID dummy
 scoreboard objectives add SF_Data dummy
 scoreboard objectives add SF_X dummy
@@ -30,9 +31,8 @@ team modify SF_Blue color blue
 
 gamerule commandBlockOutput false
 execute in minecraft:overworld run forceload add 0 0 0 0
-execute in minecraft:the_end run forceload add 0 0 0 0
 execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
-execute in minecraft:the_end run setblock 0 255 0 end_portal
+execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
 scoreboard players set StardustFragment EF_Versions 3000
 scoreboard players add Mode SF_Data 0

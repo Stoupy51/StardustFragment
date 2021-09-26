@@ -1,12 +1,19 @@
 {
-  "type": "minecraft:the_end",
-  "generator": {
-	"type": "minecraft:noise",
-	"seed": 0,
-	"biome_source": {
-	  "type": "minecraft:the_end",
-	  "seed": 0
-	},
-	"settings": "minecraft:end"
+	"type": "stardust:stardust",
+	"generator": {
+	  "type": "minecraft:flat",
+	  "seed": 0,
+	  "settings": {
+		"biome": "minecraft:the_end",
+		"layers": [
+		  {
+			"block": "minecraft:air",
+			"height": 1
+		  }
+		],
+		"structures": {
+		  "structures": {}
+		}
+	  }
+	}
   }
-}

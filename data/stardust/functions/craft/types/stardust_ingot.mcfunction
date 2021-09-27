@@ -21,6 +21,8 @@
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:11b,tag:{SF_Mirror:1s}},{Slot:12b,tag:{SF_Mirror:1s}},{Slot:13b,tag:{SF_Mirror:1s}},{Slot:21b,tag:{SF_StardustIngot:1s}}]} run function stardust:craft/items/stardust/stardust_photovoltaic_cell
 #Stardust Battery
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustIngot:1s}},{Slot:3b,tag:{SF_StardustIngot:1s}},{Slot:4b,tag:{SF_StardustIngot:1s}},{Slot:11b,tag:{SF_StardustIngot:1s}},{Slot:12b,tag:{SE_EliteBattery:1s}},{Slot:13b,tag:{SF_StardustIngot:1s}},{Slot:20b,tag:{SF_StardustBlock:1s}},{Slot:21b,tag:{SF_StardustBlock:1s}},{Slot:22b,tag:{SF_StardustBlock:1s}}]} run function stardust:craft/items/stardust/stardust_battery
+#Quarry Lv.2
+	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustIngot:1s}},{Slot:3b,tag:{SF_StardustIngot:1s}},{Slot:4b,tag:{SF_StardustIngot:1s}},{Slot:11b,tag:{SF_StardustIngot:1s}},{Slot:12b,tag:{SF_QuarryLv1:1s}},{Slot:13b,tag:{SF_StardustIngot:1s}},{Slot:20b,tag:{SF_StardustIngot:1s}},{Slot:21b,tag:{SF_StardustIngot:1s}},{Slot:22b,tag:{SF_StardustIngot:1s}}]} run function stardust:craft/items/quarry/lv2
 
 
 #Stardust Fragment

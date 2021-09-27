@@ -18,6 +18,8 @@
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_VeryCompactedStardust:1s}}] run function stardust:craft/types/very_compacted_stardust
 #Dragon Pearl Crafts
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_DragonPearl:1s}}] run function stardust:craft/types/dragon_pearl
+#Ender Dragon Pearl Crafts
+	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_EnderDragonPearl:1s}}] run function stardust:craft/types/ender_dragon_pearl
 #Legendary Fragment Crafts
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_LegendaryFragment:1s}}] run function stardust:craft/types/legendary_fragment
 #Solar Fragment Crafts
@@ -26,8 +28,6 @@
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_DarkFragment:1s}}] run function stardust:craft/types/dark_fragment
 #Ultimate Fragment Crafts
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_UltimateFragment:1s}}] run function stardust:craft/types/ultimate_fragment
-#Quarry Crafts
-	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_Quarry:1s}}] run function stardust:craft/types/quarry
 #All Compressed Cobblestones Crafts
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_Cobblestones:1s}}] run function stardust:craft/types/cobblestones/all
 #Ultimate Core Crafts

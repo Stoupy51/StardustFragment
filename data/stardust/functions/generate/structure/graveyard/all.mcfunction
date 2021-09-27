@@ -2,6 +2,7 @@
 	scoreboard players set 4 SF_Data 4
 	execute store result score Random2 SF_Data run data get entity @s UUID[2] 1
 	scoreboard players operation Random2 SF_Data %= 4 SF_Data
+	tp @s ~ 90 ~
 
 #Find the perfect pos
 	execute as @s[distance=..100] positioned ~ ~-1 ~ unless block ~ ~ ~ grass_block run function stardust:generate/structure/graveyard/go_down

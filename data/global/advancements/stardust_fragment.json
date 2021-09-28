@@ -3,13 +3,14 @@
 		"title": "Stardust Fragment",
 		"description": "v3.0.0",
 		"icon": {
-			"item": "minecraft:redstone"
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013000}"
 		},
 		"show_toast": false,
 		"announce_to_chat": false,
 		"frame": "goal"
     },
-    "parent": "global:stoupy51",
+    "parent": "global:simplenergy",
 	"criteria": {
         "always": {
 			"trigger": "minecraft:tick"

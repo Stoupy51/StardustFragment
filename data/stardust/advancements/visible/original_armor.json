@@ -7,7 +7,7 @@
 			"text": "Get a full Original Stardust Armor"
 		},
 		"icon": {
-			"item": "minecraft:diamond_helmet",
+			"item": "minecraft:leather_helmet",
 			"nbt": "{CustomModelData:2013114}"
 		},
 		"frame": "task",
@@ -20,10 +20,10 @@
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
-					{ "items": ["minecraft:diamond_helmet"], "nbt": "{SF_OriginalHelmet:1s}" },
-					{ "items": ["minecraft:diamond_chestplate"], "nbt": "{SF_OriginalChestplate:1s}" },
-					{ "items": ["minecraft:diamond_leggings"], "nbt": "{SF_OriginalLeggings:1s}" },
-					{ "items": ["minecraft:diamond_boots"], "nbt": "{SF_OriginalBoots:1s}" }
+					{ "items": ["minecraft:leather_helmet"], "nbt": "{SF_OriginalHelmet:1s}" },
+					{ "items": ["minecraft:leather_chestplate"], "nbt": "{SF_OriginalChestplate:1s}" },
+					{ "items": ["minecraft:leather_leggings"], "nbt": "{SF_OriginalLeggings:1s}" },
+					{ "items": ["minecraft:leather_boots"], "nbt": "{SF_OriginalBoots:1s}" }
 				]
 			}
 		}

@@ -7,7 +7,7 @@
 			"text": "Get a full Reinforced Stardust Armor"
 		},
 		"icon": {
-			"item": "minecraft:iron_helmet",
+			"item": "minecraft:leather_helmet",
 			"nbt": "{CustomModelData:2013107}"
 		},
 		"frame": "task",
@@ -20,10 +20,10 @@
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
-					{ "items": ["minecraft:iron_helmet"], "nbt": "{SF_ReinforcedHelmet:1s}" },
-					{ "items": ["minecraft:iron_chestplate"], "nbt": "{SF_ReinforcedChestplate:1s}" },
-					{ "items": ["minecraft:iron_leggings"], "nbt": "{SF_ReinforcedLeggings:1s}" },
-					{ "items": ["minecraft:iron_boots"], "nbt": "{SF_ReinforcedBoots:1s}" }
+					{ "items": ["minecraft:leather_helmet"], "nbt": "{SF_ReinforcedHelmet:1s}" },
+					{ "items": ["minecraft:leather_chestplate"], "nbt": "{SF_ReinforcedChestplate:1s}" },
+					{ "items": ["minecraft:leather_leggings"], "nbt": "{SF_ReinforcedLeggings:1s}" },
+					{ "items": ["minecraft:leather_boots"], "nbt": "{SF_ReinforcedBoots:1s}" }
 				]
 			}
 		}

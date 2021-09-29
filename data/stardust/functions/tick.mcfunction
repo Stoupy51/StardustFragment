@@ -1,5 +1,5 @@
-#execute at @e as @e[limit=24] as @s[tag=SF_Truc] run scoreboard players set Temp SF_Data 0
-#execute at @e as @e[limit=24] as @s[tag=SF_Truc] run scoreboard players set Temp SF_Data 0
+#execute at @e as @e[limit=24] as @s[scores={SF_SCraft=5..}] run scoreboard players set Temp SF_Data 0
+#execute at @e as @e[limit=24] if score @s SF_SCraft matches 5.. run scoreboard players set Temp SF_Data 0
 #Others 1
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b
 
@@ -18,6 +18,7 @@
 #Others 2
 	execute in stardust:stardust run tp @e[type=vex,distance=0..] 0 -10000 0
 	execute if score Second SF_Data matches 10 run function stardust:opti/quarry_system
+	execute if score Second SF_Data matches 10 run scoreboard players reset SuperCraft SF_Data
 	execute if score Second SF_Data matches 10 as @e[type=item,nbt={Item:{tag:{}}}] at @s run function stardust:forge/detect_craft
 	execute as @e[type=armor_stand,tag=SE_Furnaces] at @s run function stardust:work/all_furnace
 	execute as @e[type=glow_item_frame,tag=SF_DestroyBarrel] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/groups/barrel

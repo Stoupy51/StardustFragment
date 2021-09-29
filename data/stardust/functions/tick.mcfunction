@@ -18,7 +18,7 @@
 #Others 2
 	execute in stardust:stardust run tp @e[type=vex,distance=0..] 0 -10000 0
 	execute if score Second SF_Data matches 10 run function stardust:opti/quarry_system
-	###execute if score Second SF_Data matches 10 as @e[type=item] at @s run function stardust:forge/detect_craft
+	execute if score Second SF_Data matches 10 as @e[type=item,nbt={Item:{tag:{}}}] at @s run function stardust:forge/detect_craft
 	execute as @e[type=armor_stand,tag=SE_Furnaces] at @s run function stardust:work/all_furnace
 	execute as @e[type=glow_item_frame,tag=SF_DestroyBarrel] at @s unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/groups/barrel
 

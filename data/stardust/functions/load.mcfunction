@@ -35,7 +35,6 @@ execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forc
 execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
 scoreboard players set StardustFragment EF_Versions 3000
-scoreboard players add Mode SF_Data 0
 scoreboard players set Second SF_Data 10
 
 #Materials

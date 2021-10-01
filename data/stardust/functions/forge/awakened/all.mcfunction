@@ -3,6 +3,7 @@
 	execute as @s[nbt={Item:{Count:8b,tag:{SF_SolarFragment:1s}}}] as @e[type=item,nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1s}}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:4b,tag:{SF_EnderDragonPearl:1s}}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:1b,tag:{SF_SextupleCompressedCobblestone:1s}}},distance=..1,limit=1] run function stardust:forge/awakened/solar/all
 	execute as @s[nbt={Item:{Count:8b,tag:{SF_DarkFragment:1s}}}] as @e[type=item,nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1s}}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:4b,tag:{SF_EnderDragonPearl:1s}}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:1b,tag:{SF_SextupleCompressedCobblestone:1s}}},distance=..1,limit=1] run function stardust:forge/awakened/dark/all
 #Stardust/Awakened Bows
+	execute as @s[nbt={Item:{Count:1b,tag:{SF_StardustConfig:1s}}}] as @e[type=item,nbt={Item:{Count:1b,id:"minecraft:bow"}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:8b,tag:{SF_DragonPearl:1s}}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:16b,id:"minecraft:diamond_block"}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:16b,id:"minecraft:emerald_block"}},distance=..1,limit=1] as @e[type=item,nbt={Item:{Count:1b,tag:{SF_QuintupleCompressedCobblestone:1s}}},distance=..1,limit=1] run function stardust:forge/awakened/stardust_bow
 #Stardust/Awakened Snipers
 #Item Magnet
 #Emerald Spawner

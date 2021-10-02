@@ -46,6 +46,7 @@
 	execute as @e[type=glow_item_frame,tag=SF_LegendaryPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/legendary
 	execute as @e[type=glow_item_frame,tag=SF_SolarPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/solar
 	execute as @e[type=glow_item_frame,tag=SF_DarkPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/dark
+	execute as @e[type=glow_item_frame,tag=SF_WindTurbine] at @s unless score @s EF_kJ matches 800.. run function stardust:work/wind_turbine
 
 #Balance
 	execute as @e[type=glow_item_frame,tag=SF_PhotovoltaicPanel,limit=1] at @s run function stardust:balance/all

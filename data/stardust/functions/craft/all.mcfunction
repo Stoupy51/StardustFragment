@@ -48,7 +48,7 @@ scoreboard players set @s SF_X 1
 #Heat Generator
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:iron_block"},{Slot:3b,id:"minecraft:glass"},{Slot:4b,id:"minecraft:iron_block"},{Slot:11b,id:"minecraft:glass"},{Slot:12b,tag:{SF_MachineFrame:1s}},{Slot:13b,id:"minecraft:glass"},{Slot:20b,id:"minecraft:iron_block"},{Slot:21b,id:"minecraft:glass"},{Slot:22b,id:"minecraft:iron_block"}]} run function stardust:craft/items/heat_generator
 #Empty Module
-	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:paper"},{Slot:3b,id:"minecraft:paper"},{Slot:4b,id:"minecraft:paper"},{Slot:11b,id:"minecraft:paper"},{Slot:12b,tag:{SE_Simplunium:1s}},{Slot:13b,id:"minecraft:paper"},{Slot:20b,id:"minecraft:paper"},{Slot:21b,id:"minecraft:paper"},{Slot:22b,id:"minecraft:paper"}]} run function stardust:craft/items/empty_module
+	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:paper"},{Slot:3b,id:"minecraft:paper"},{Slot:4b,id:"minecraft:paper"},{Slot:11b,id:"minecraft:paper"},{Slot:12b,tag:{SE_SimpluniumIngot:1s}},{Slot:13b,id:"minecraft:paper"},{Slot:20b,id:"minecraft:paper"},{Slot:21b,id:"minecraft:paper"},{Slot:22b,id:"minecraft:paper"}]} run function stardust:craft/items/empty_module
 #Silk Touch Module
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:iron_ore"},{Slot:3b,id:"minecraft:iron_ore"},{Slot:4b,id:"minecraft:iron_ore"},{Slot:11b,id:"minecraft:iron_ore"},{Slot:12b,tag:{SF_EmptyModule:1s}},{Slot:13b,id:"minecraft:iron_ore"},{Slot:20b,id:"minecraft:iron_ore"},{Slot:21b,id:"minecraft:iron_ore"},{Slot:22b,id:"minecraft:iron_ore"}]} run function stardust:craft/items/silk_touch_module
 #Fortune Module

@@ -1,5 +1,5 @@
-#execute at @e as @e[limit=24] as @s[scores={SF_SCraft=5..}] run scoreboard players set Temp SF_Data 0
-#execute at @e as @e[limit=24] if score @s SF_SCraft matches 5.. run scoreboard players set Temp SF_Data 0
+#execute at @e as @e[limit=24] if score Truc SF_Data matches 5..
+#execute at @e as @e[limit=24] unless entity @e[type=item,distance=..50,limit=1]
 #Others 1
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b
 

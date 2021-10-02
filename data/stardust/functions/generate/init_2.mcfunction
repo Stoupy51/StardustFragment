@@ -1,7 +1,3 @@
-#Remove digits
-	execute store result entity @s Pos[0] int 1 run data get entity @s Pos[0]
-	execute store result entity @s Pos[2] int 1 run data get entity @s Pos[2]
-
 #Generate structures
 	summon minecraft:marker ~ 150 ~ {Tags:["SF_StructurePos"]}
 	execute as @e[type=marker,tag=SF_StructurePos] at @s run function stardust:generate/structure/all

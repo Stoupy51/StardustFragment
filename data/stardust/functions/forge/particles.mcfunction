@@ -7,3 +7,4 @@ execute as @s[nbt={Item:{tag:{SF_VeryCompactedStardust:1s}}}] run particle minec
 execute as @s[nbt={Item:{tag:{SF_StardustSniper:1s}}}] run particle minecraft:dust 1 0 0 2 ~ ~ ~ 5 5 5 0.1 50
 execute as @s[nbt={Item:{id:"minecraft:dragon_egg"}}] run particle minecraft:dust 1 1 1 2 ~ ~ ~ 5 5 5 0.1 50
 execute as @s[nbt={Item:{id:"minecraft:spawner"}}] run particle minecraft:dust 0 1 0 2 ~ ~ ~ 5 5 5 0.1 50
+execute as @s[nbt={Item:{tag:{SF_UltimateFragment:1s}}}] run particle minecraft:dust 255 255 255 2 ~ ~ ~ 5 5 5 0.1 50

@@ -1,5 +1,5 @@
 #Define a positive value randomly with UUID.
-	scoreboard players set 1000 SF_Data 1000
+	scoreboard players set 1000 SF_Data 500
 	execute store result score Random SF_Data run seed
 	execute store result score PosX SF_Data run data get entity @s Pos[0] 0.07
 	execute store result score PosZ SF_Data run data get entity @s Pos[2] 0.07

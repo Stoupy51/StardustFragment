@@ -1,7 +1,7 @@
 #Kill materials + Sound + Visual
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{SF_StardustConfig:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:16b,tag:{SE_SimpluniumIngot:1s}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:32b,id:"minecraft:gold_block"}},limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:32b,id:"minecraft:gold_block"}},predicate=!stardust:has_tag,limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:8b,tag:{SF_DragonPearl:1s}}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted
 

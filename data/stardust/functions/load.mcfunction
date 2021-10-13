@@ -14,12 +14,12 @@ scoreboard objectives add SF_Cooldown dummy
 scoreboard objectives add SF_Qx dummy
 scoreboard objectives add SF_Qy dummy
 scoreboard objectives add SF_Qz dummy
-scoreboard objectives add SF_Qx1 trigger
-scoreboard objectives add SF_Qx2 trigger
-scoreboard objectives add SF_Qy1 trigger
-scoreboard objectives add SF_Qy2 trigger
-scoreboard objectives add SF_Qz1 trigger
-scoreboard objectives add SF_Qz2 trigger
+scoreboard objectives add SF_Qx1 dummy
+scoreboard objectives add SF_Qx2 dummy
+scoreboard objectives add SF_Qy1 dummy
+scoreboard objectives add SF_Qy2 dummy
+scoreboard objectives add SF_Qz1 dummy
+scoreboard objectives add SF_Qz2 dummy
 scoreboard objectives add SF_StatQ dummy
 scoreboard objectives add SF_SizeQ dummy
 scoreboard objectives add SF_SpeedQ dummy
@@ -260,7 +260,7 @@ scoreboard players set Second SF_Data 10
 	#Stardust Dungeon Key
 		data modify storage stardust:items 2013229 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013229,SF_StardustDungeonKey:1s,HideFlags:127,display:{Lore:['[{"text":"Allows you to enter the Stardust Dungeon","italic":false,"color":"white"}]'],Name:'[{"text":"Stardust Dungeon Key","italic":false,"color":"red"}]'}}}
 	#Quarry Configurator
-		data modify storage stardust:items 2013230 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013230,SF_QuarryConfigurator:1s,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"keybind":"key.use","italic":false,"color":"dark_gray"},{"text":" set 1st coordinates","italic":false,"color":"gray"}]','[{"keybind":"key.sneak","italic":false,"color":"dark_gray"},{"text":" + ","italic":false,"color":"gray"},{"keybind":"key.use","italic":false,"color":"dark_gray"},{"text":" to set 2nd coordinates","italic":false,"color":"gray"}]'],Name:'[{"text":"Quarry Configurator","italic":false,"color":"white"}]'}}}
+		data modify storage stardust:items 2013230 set value {Slot:16b,id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{CustomModelData:2013230,SF_QuarryConfigurator:1s,Unbreakable:1b,HideFlags:127,display:{Lore:['[{"keybind":"key.use","italic":false,"color":"dark_gray"},{"text":" to set 1st coordinates","italic":false,"color":"gray"}]','[{"keybind":"key.sneak","italic":false,"color":"dark_gray"},{"text":" + ","italic":false,"color":"gray"},{"keybind":"key.use","italic":false,"color":"dark_gray"},{"text":" to set 2nd coordinates","italic":false,"color":"gray"}]'],Name:'[{"text":"Quarry Configurator","italic":false,"color":"white"}]'}}}
 	#Machines
 		#Mob Grinder
 			data modify storage stardust:items 2013231 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013231,BlockEntityTag:{Lock:"SF_Placed"},SF_MobGrinder:1s,HideFlags:127,display:{Lore:['[{"text":"[Power Usage : 500 kW]","italic":false,"color":"gray"}]','[{"text":"[Energy Buffer : 15 MJ]","italic":false,"color":"gray"}]'],Name:'[{"text":"Mob Grinder","italic":false,"color":"white"}]'}}}

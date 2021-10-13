@@ -1,76 +1,77 @@
 {
-  "type": "minecraft:overworld",
-  "generator": {
-	"type": "minecraft:noise",
-	"seed": 1,
-	"settings": {
-	  "name": "minecraft:floating_islands",
-	  "bedrock_roof_position": -100,
-	  "bedrock_floor_position": -100,
-	  "sea_level": 0,
-	  "min_surface_level": 0,
-	  "disable_mob_generation": false,
-	  "noise_caves_enabled": false,
-	  "noodle_caves_enabled": false,
-	  "aquifers_enabled": false,
-	  "deepslate_enabled": false,
-	  "ore_veins_enabled": false,
-	  "default_block": {
-		"Name": "minecraft:stone"
-	  },
-	  "default_fluid": {
-		"Name": "minecraft:water",
-		"Properties": {
-		  "level": "0"
-		}
-	  },
-	  "noise": {
-		"min_y": 0,
-		"height": 256,
-		"density_factor": 0,
-		"density_offset": 0,
-		"size_horizontal": 2,
-		"size_vertical": 1,
-		"simplex_surface_noise": true,
-		"random_density_offset": false,
-		"island_noise_override": true,
-		"amplified": false,
-		"sampling": {
-		  "xz_scale": 4,
-		  "y_scale": 1,
-		  "xz_factor": 80,
-		  "y_factor": 160
+	"type": "minecraft:overworld",
+	"generator": {
+	  "type": "minecraft:noise",
+	  "seed": -1340931922,
+	  "settings": {
+		"name": "minecraft:floating_islands",
+		"bedrock_roof_position": -100,
+		"bedrock_floor_position": -100,
+		"sea_level": 0,
+		"min_surface_level": 0,
+		"disable_mob_generation": false,
+		"noise_caves_enabled": false,
+		"noodle_caves_enabled": false,
+		"aquifers_enabled": false,
+		"deepslate_enabled": false,
+		"ore_veins_enabled": false,
+		"default_block": {
+		  "Name": "minecraft:stone"
 		},
-		"bottom_slide": {
-		  "target": -30,
-		  "size": 7,
-		  "offset": 1
+		"default_fluid": {
+		  "Name": "minecraft:water",
+		  "Properties": {
+			"level": "0"
+		  }
 		},
-		"top_slide": {
-		  "target": -3000,
-		  "size": 64,
-		  "offset": -46
-		}
-	  },
-	  "structures": {
-		"structures": {
-		  "minecraft:ruined_portal": {
-			"spacing": 10,
-			"separation": 5,
-			"salt": 0
+		"noise": {
+		  "min_y": 0,
+		  "height": 256,
+		  "density_factor": 0,
+		  "density_offset": 0,
+		  "size_horizontal": 2,
+		  "size_vertical": 1,
+		  "simplex_surface_noise": true,
+		  "random_density_offset": false,
+		  "island_noise_override": true,
+		  "amplified": false,
+		  "sampling": {
+			"xz_scale": 4,
+			"y_scale": 1,
+			"xz_factor": 80,
+			"y_factor": 90
 		  },
-		  "minecraft:mansion": {
-			"spacing": 10,
-			"separation": 5,
-			"salt": 0
+		  "bottom_slide": {
+			"target": -30,
+			"size": 7,
+			"offset": 1
+		  },
+		  "top_slide": {
+			"target": -3000,
+			"size": 64,
+			"offset": -46
+		  }
+		},
+		"structures": {
+		  "structures": {
+			"minecraft:ruined_portal": {
+			  "spacing": 10,
+			  "separation": 5,
+			  "salt": 0
+			},
+			"minecraft:mansion": {
+			  "spacing": 10,
+			  "separation": 5,
+			  "salt": 0
+			}
 		  }
 		}
+	  },
+	  "biome_source": {
+		"type": "minecraft:vanilla_layered",
+		"seed": -1340931922,
+		"large_biomes": false
 	  }
-	},
-	"biome_source": {
-	  "type": "minecraft:vanilla_layered",
-	  "seed": 2,
-	  "large_biomes": false
 	}
   }
-}
+  

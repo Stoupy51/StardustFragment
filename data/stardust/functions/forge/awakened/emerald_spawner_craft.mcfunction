@@ -1,7 +1,7 @@
 #Kill materials + Sound + Visual
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{SF_StardustEssence:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1s}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:64b,id:"minecraft:emerald_block"}},limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:64b,id:"minecraft:emerald_block"}},predicate=!stardust:has_tag,limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{SF_SeptupleCompressedCobblestone:1s}}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted
 

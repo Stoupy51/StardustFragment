@@ -1,8 +1,8 @@
 #Kill materials + Sound + Visual
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{SF_StardustConfig:1s}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:bow"}},predicate=!stardust:has_tag,limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:16b,id:"minecraft:diamond_block"}},predicate=!stardust:has_tag,limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:16b,id:"minecraft:emerald_block"}},predicate=!stardust:has_tag,limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:bow"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:16b,id:"minecraft:diamond_block"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:16b,id:"minecraft:emerald_block"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:8b,tag:{SF_DragonPearl:1s}}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted
 

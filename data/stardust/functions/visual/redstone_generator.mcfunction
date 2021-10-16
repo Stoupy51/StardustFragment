@@ -1,6 +1,6 @@
 execute unless score @s EF_kJ matches 800.. run function stardust:work/redstone_generator/all
 #Update gui depends on BurnTime
-	data modify block ~ ~ ~ Items insert -1 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2013104,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}}
+	data modify block ~ ~ ~ Items insert -1 value {Slot:1b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2013104,CustomItem:1s,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}}
 	execute unless block ~ ~ ~ minecraft:furnace{BurnTime:0s} run data modify block ~ ~ ~ Items[1].tag.CustomModelData set value 2013105
 
 	execute if block ~ ~ ~ minecraft:furnace{BurnTime:0s} run data modify entity @s Item.tag.CustomModelData set value 2013237

@@ -14,7 +14,7 @@ execute unless score @s SF_X = Count SF_Data run function stardust:craft/drop
 
 tag @s remove SF_WaitingCraft
 tag @s remove SF_FoundCraft
-item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}
+item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,CustomItem:1s,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}
 scoreboard players set @s SF_Data 0
 scoreboard players set @s SF_X 1
 

@@ -23,6 +23,7 @@ scoreboard objectives add SF_Qz2 dummy
 scoreboard objectives add SF_StatQ dummy
 scoreboard objectives add SF_SizeQ dummy
 scoreboard objectives add SF_SpeedQ dummy
+scoreboard objectives add SE_Data dummy
 team add SF_Stardust
 team add SF_Red
 team add SF_Blue
@@ -36,6 +37,7 @@ execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run fo
 
 scoreboard players set StardustFragment EF_Versions 3000
 scoreboard players set Second SF_Data 10
+scoreboard players set 1500 SE_Data 1500
 
 #Materials
 	#Stardust Fragment

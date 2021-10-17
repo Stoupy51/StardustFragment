@@ -1,3 +1,4 @@
+scoreboard objectives add SE_Data dummy
 scoreboard objectives add EF_Versions dummy
 scoreboard objectives add SF_StardustID dummy
 scoreboard objectives add SF_Data dummy
@@ -23,7 +24,6 @@ scoreboard objectives add SF_Qz2 dummy
 scoreboard objectives add SF_StatQ dummy
 scoreboard objectives add SF_SizeQ dummy
 scoreboard objectives add SF_SpeedQ dummy
-scoreboard objectives add SE_Data dummy
 team add SF_Stardust
 team add SF_Red
 team add SF_Blue

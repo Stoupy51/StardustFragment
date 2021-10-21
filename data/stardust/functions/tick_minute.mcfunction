@@ -11,4 +11,4 @@
 	scoreboard players remove @e[type=wolf,scores={SF_Wolfs=10..}] SF_Wolfs 10
 
 #Seeds
-	execute as @e[type=glow_item_frame,tag=SF_Seed] at @s run function stardust:opti/seeds
+	execute as @e[type=glow_item_frame,tag=SF_Seed,tag=!SF_SeedDone] at @s run function stardust:opti/seeds

@@ -1,7 +1,7 @@
 #Timer
-	scoreboard players add @s[tag=SF_Seed,tag=!SF_SeedDone] SF_Data 1
-	execute as @s[tag=SF_Seed,tag=!SF_SeedDone] if block ~ ~-2 ~ minecraft:dragon_egg run scoreboard players add @s SF_Data 4
-	execute as @s[tag=SF_Seed,tag=!SF_SeedDone] if block ~ ~-2 ~ minecraft:dragon_egg if block ~ ~-3 ~ minecraft:netherite_block run scoreboard players add @s SF_Data 5
+	scoreboard players add @s[tag=SF_Seed] SF_Data 1
+	execute as @s[tag=SF_Seed] if block ~ ~-2 ~ minecraft:dragon_egg run scoreboard players add @s SF_Data 4
+	execute as @s[tag=SF_Seed] if block ~ ~-2 ~ minecraft:dragon_egg if block ~ ~-3 ~ minecraft:netherite_block run scoreboard players add @s SF_Data 5
 #FirstStep
 	data modify entity @s[tag=SF_DiamondSeed,scores={SF_Data=60..69}] Item.tag.CustomModelData set value 2013208
 	data modify entity @s[tag=SF_AdvancedDiamondSeed,scores={SF_Data=60..69}] Item.tag.CustomModelData set value 2013209

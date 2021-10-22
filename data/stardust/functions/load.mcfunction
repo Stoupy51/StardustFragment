@@ -38,6 +38,11 @@ execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run fo
 scoreboard players set StardustFragment EF_Versions 3000
 scoreboard players set Second SF_Data 10
 scoreboard players set 1500 SE_Data 1500
+scoreboard players set 400 SE_Data 400
+scoreboard players set 260 SE_Data 260
+scoreboard players set -10 SE_Data -10
+scoreboard players set 10 SE_Data 10
+scoreboard players set -1 SE_Data -1
 
 #Materials
 	#Stardust Fragment

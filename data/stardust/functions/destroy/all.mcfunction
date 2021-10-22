@@ -9,7 +9,7 @@
 	execute as @e[type=glow_item_frame,tag=SF_DestroySpawner] at @s unless block ~ ~ ~ minecraft:spawner run function stardust:destroy/groups/spawner
 	execute as @e[type=glow_item_frame,tag=SF_DestroyFurnace] at @s unless block ~ ~ ~ minecraft:furnace run function stardust:destroy/groups/furnace
 	execute as @e[type=glow_item_frame,tag=SF_DestroyDaylightDetector] at @s unless block ~ ~ ~ minecraft:daylight_detector run function stardust:destroy/groups/daylight_detector
-	execute as @e[type=glow_item_frame,tag=SF_DestroyPlayerHead] at @s unless block ~ ~ ~ minecraft:player_head run function stardust:destroy/groups/player_head
+	execute as @e[type=item_frame,tag=SF_DestroyPlayerHead] at @s unless block ~ ~ ~ minecraft:player_head run function stardust:destroy/groups/player_head
 
 #Out of a Group
 	execute as @e[type=glow_item_frame,tag=SF_NetherStardustOre] at @s unless block ~ ~ ~ minecraft:nether_quartz_ore run function stardust:destroy/nether_stardust_ore

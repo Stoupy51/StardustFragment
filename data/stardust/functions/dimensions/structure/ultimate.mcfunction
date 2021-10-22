@@ -51,4 +51,4 @@ execute unless score UltimateBuild SF_Data matches 22 run tellraw @a {"text":"St
 scoreboard players set UltimateBuilt SF_Data 1
 scoreboard players reset UltimateBuild SF_Data
 
-execute as @e[distance=0..,type=!#energy_flux:entities] at @s unless block ~ ~1 ~ air run function stardust:boss/ultimate_boss/tp_up
+execute as @e[distance=0..,type=!#energy_flux:devices] at @s unless block ~ ~1 ~ air run function stardust:boss/ultimate_boss/tp_up

@@ -1,4 +1,4 @@
-#execute as @e[type=glow_item_frame,tag=SF_DestroyBarrel] at @s unless block ~ ~ ~ minecraft:barrel run scoreboard players add Temp SF_Data 0
+#execute as @e[type=glow_item_frame,tag=SF_DestroyBarrel,predicate=stardust:check_barrel] run scoreboard players add Temp SF_Data 0
 #execute as @e[type=glow_item_frame,tag=SF_DestroyBarrel,predicate=stardust:check_barrel] run scoreboard players add Temp SF_Data 0
 #Others 1
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar,tag=SF_ShieldOn] run data modify entity @s NoAI set value 1b

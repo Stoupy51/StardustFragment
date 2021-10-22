@@ -9,6 +9,8 @@ scoreboard players set tick_2 SF_Data 0
 
 #Players
 	execute as @a run function stardust:dimensions/transitions
+	execute in stardust:celestial as @e[distance=0..,predicate=stardust:transition_down] at @s run function stardust:dimensions/transition_down
+	execute in stardust:stardust as @e[distance=0..,predicate=stardust:transition_down] at @s run function stardust:dimensions/transition_down
 	effect give @a[nbt={SelectedItem:{tag:{SF_LegendarySword:1s}}}] minecraft:jump_boost 1 3 true
 	execute at @a[nbt={Inventory:[{Slot:-106b,tag:{SF_ItemMagnet:1s}}]}] run tp @e[type=item,distance=..4] ~ ~ ~
 	execute at @a[nbt={SelectedItem:{tag:{SF_TravelStaff:1s}}},scores={SF_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100

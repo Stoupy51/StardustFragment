@@ -31,17 +31,20 @@ team modify SF_Red color red
 team modify SF_Blue color blue
 
 gamerule commandBlockOutput false
-execute in minecraft:overworld run forceload add 0 0 0 0
+execute in minecraft:overworld run forceload add 0 0
 execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
 scoreboard players set StardustFragment EF_Versions 3000
 scoreboard players set Second SF_Data 10
+
 scoreboard players set 1500 SE_Data 1500
 scoreboard players set 400 SE_Data 400
 scoreboard players set 260 SE_Data 260
-scoreboard players set -10 SE_Data -10
+scoreboard players set 80 SE_Data 80
 scoreboard players set 10 SE_Data 10
+scoreboard players set 4 SE_Data 4
+scoreboard players set -10 SE_Data -10
 scoreboard players set -1 SE_Data -1
 
 #Materials

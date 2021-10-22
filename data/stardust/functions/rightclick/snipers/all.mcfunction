@@ -38,4 +38,5 @@ execute if score Bullet SF_Data matches 1.. as @e[type=area_effect_cloud,tag=SF_
 tag @s remove SF_Shooter
 tag @e[tag=SF_Shooted] remove SF_Shooted
 scoreboard players set @s SF_Cooldown 30
-scoreboard players set Bullet SF_Data 0
+scoreboard players reset Bullet SF_Data
+scoreboard players reset BulletDamage SF_Data

@@ -19,6 +19,7 @@
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=wither,tag=SF_StardustPillar] at @s run function stardust:boss/stardust_pillar/tick_second
 	execute if score StardustPillar SF_Data matches 1.. as @e[type=armor_stand,tag=SF_StardustPillarTick] at @s unless entity @e[type=wither,tag=SF_StardustPillar,distance=..2.75] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=wolf,tag=SF_StoupArmy] at @s run function stardust:boss/stouparmy
+	scoreboard players reset MaxCount SF_Data
 
 #Mobs spawn
 	execute in stardust:celestial as @e[type=#stardust:global,tag=!SF_CelestialDim,distance=0..] at @s run function stardust:mobs/celestial

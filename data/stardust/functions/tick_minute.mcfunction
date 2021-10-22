@@ -1,7 +1,7 @@
 #Others
 	scoreboard players set Minute SF_Data 0
-	scoreboard players set StardustPillar SF_Data 0
-	execute as @e[type=wither,tag=SF_StardustPillar] run scoreboard players add StardustPillar SF_Data 1
+	
+	execute store result score StardustPillar SF_Data if entity @e[type=wither,tag=SF_StardustPillar]
 	execute as @e[type=glow_item_frame,tag=SF_CobblestoneMiner] at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:cobblestone run function stardust:work/cobblestone_miner
 
 #Dog Excrements

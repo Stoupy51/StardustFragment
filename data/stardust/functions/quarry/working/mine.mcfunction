@@ -2,6 +2,7 @@ execute as @s[tag=SF_FortuneModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:ne
 execute as @s[tag=SF_SilkTouchModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
 execute as @s[tag=!SF_FortuneModule,tag=!SF_SilkTouchModule] run setblock ~ ~ ~ minecraft:air destroy
 setblock ~ ~ ~ minecraft:air
+execute if entity @e[type=glow_item_frame,tag=lthc.destroyable,distance=..1,limit=1] run function lthc.svext:custom_blocks/run
 execute if entity @e[type=glow_item_frame,tag=SF_Destroyer,distance=..1,limit=1] run function stardust:destroy/all
 execute if entity @e[type=glow_item_frame,tag=SE_Destroyer,distance=..1,limit=1] run function simplenergy:destroy/all
 tag @s add SF_QuarryStock

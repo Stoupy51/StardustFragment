@@ -5,7 +5,7 @@
 
 #Find the perfect pos
 	execute if entity @e[type=marker,distance=..150,tag=SF_ScruffyHouse] run scoreboard players set Random2 SF_Data -1
-	execute as @s[distance=..100] positioned ~ ~-1 ~ unless block ~ ~ ~ podzol run function stardust:generate/structure/scruffy_house/go_down
+	execute as @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/scruffy_house/go_down
 	execute at @s unless block ~ ~ ~ podzol run scoreboard players set Random2 SF_Data -1
 
 #Choose a Structure

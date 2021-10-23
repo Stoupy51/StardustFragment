@@ -5,7 +5,7 @@
 	tp @s ~ 90 ~
 
 #Find the perfect pos
-	execute as @s[distance=..100] positioned ~ ~-1 ~ unless block ~ ~ ~ grass_block run function stardust:generate/structure/graveyard/go_down
+	execute as @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/graveyard/go_down
 	execute at @s unless block ~ ~ ~ grass_block run scoreboard players set Random2 SF_Data -1
 
 #Choose a Structure

@@ -313,6 +313,11 @@ scoreboard players set -1 SE_Data -1
 	#Silk Touch Module
 		data modify storage stardust:items 2013258 set value {Slot:16b,id:"minecraft:command_block",Count:1b,tag:{CustomModelData:2013258,CustomItem:1s,SF_SilkTouchModule:1s,HideFlags:127,display:{Name:'[{"text":"Silk Touch Module","italic":false,"color":"white"}]'}}}
 
+	#Stardust Manual
+		loot spawn ~ ~ ~ loot stardust:stardust_manual
+		data modify storage stardust:items 2013398 set from entity @e[type=item,distance=..1,sort=nearest,limit=1,predicate=simplenergy:has_tag]
+		data modify storage stardust:items 2013398.Slot set value 18b
+		kill @e[type=item,distance=..1,sort=nearest,limit=1,predicate=simplenergy:has_tag]
 	#Stardust Crafting Table
 		data modify storage stardust:items 2013399 set value {Slot:16b,id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013399,BlockEntityTag:{Lock:"SF_Placed"},CustomItem:1s,SF_CraftingTable:1s,HideFlags:127,display:{Name:'[{"text":"Stardust Crafting Table","italic":false,"color":"blue"}]'}}}
 #Wires

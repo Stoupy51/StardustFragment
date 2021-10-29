@@ -6,7 +6,7 @@
 	scoreboard players operation Random SF_Data *= PosX SF_Data
 	scoreboard players operation Random SF_Data *= PosZ SF_Data
 	scoreboard players operation Random SF_Data %= 1000 SF_Data
-
+	execute if entity @e[type=bat,tag=SF_Structure,distance=..150] run scoreboard players set Random SF_Data 1000
 #Choose a Structure
 	execute if score Random SF_Data matches 0..19 run function stardust:generate/structure/water_well/all
 	execute if score Random SF_Data matches 20..269 run function stardust:generate/structure/scruffy_house/all

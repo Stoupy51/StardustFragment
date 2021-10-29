@@ -315,7 +315,7 @@ scoreboard players set -1 SE_Data -1
 
 	#Stardust Manual
 		loot spawn ~ ~ ~ loot stardust:stardust_manual
-		data modify storage stardust:items 2013398 set from entity @e[type=item,distance=..1,sort=nearest,limit=1,predicate=simplenergy:has_tag]
+		data modify storage stardust:items 2013398 set from entity @e[type=item,distance=..1,sort=nearest,limit=1,predicate=simplenergy:has_tag] Item
 		data modify storage stardust:items 2013398.Slot set value 18b
 		kill @e[type=item,distance=..1,sort=nearest,limit=1,predicate=simplenergy:has_tag]
 	#Stardust Crafting Table

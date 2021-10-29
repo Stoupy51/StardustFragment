@@ -15,3 +15,4 @@
 	execute if score Random2 SF_Data matches 3 at @s run setblock ~ ~1 ~ minecraft:structure_block{posX:-2,mode:"LOAD",posY:-2,posZ:-2,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:graveyard_4"}
 	execute if score Random2 SF_Data matches 4 at @s run setblock ~ ~1 ~ minecraft:structure_block{posX:-2,mode:"LOAD",posY:-2,posZ:-2,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:graveyard_5"}
 	execute if score Random2 SF_Data matches 0..4 at @s run setblock ~ ~2 ~ redstone_block
+	execute if score Random2 SF_Data matches 0..4 run summon minecraft:bat ~ 150 ~ {NoAI:1b,PersistenceRequired:1b,Silent:1,Invulnerable:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Tags:["SF_Structure"]}

@@ -4,7 +4,7 @@ data modify block ~ ~ ~ SpawnPotentials[0].Entity.Item set from storage stardust
 data modify block ~ ~ ~ SpawnPotentials[0].Entity.Item.Count set value 4b
 data modify block ~ ~ ~ SpawnPotentials[1].Entity.Item set value {id:"minecraft:iron_ingot",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[2].Entity.Item set value {id:"minecraft:gold_ingot",Count:1b}
-data modify block ~ ~ ~ SpawnPotentials[3].Entity.Item set value {id:"minecraft:iron_ingot",Count:1b}
+data modify block ~ ~ ~ SpawnPotentials[3].Entity.Item set value {id:"minecraft:copper_ingot",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[4].Entity.Item set value {id:"minecraft:diamond",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[5].Entity.Item set value {id:"minecraft:netherite_scrap",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[6].Entity.Item set from storage stardust:items 2013229

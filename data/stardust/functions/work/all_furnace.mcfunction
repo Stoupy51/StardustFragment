@@ -4,7 +4,8 @@
 	execute store result score Temp SE_Data run data get storage simplenergy:items Furnace.Items[{Slot:2b}].tag.CustomModelData
 	execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:barrel" if score CookTime SE_Data matches ..8 run function stardust:work/all_furnace_2
 	execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:barrel_blast" if score CookTime SE_Data matches ..8 run function stardust:work/all_furnace_2
+	execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:command_block" if score CookTime SE_Data matches ..8 run function stardust:work/all_furnace_2
+	execute if data storage simplenergy:items Furnace.RecipesUsed."simplenergy:command_block_blast" if score CookTime SE_Data matches ..8 run function stardust:work/all_furnace_2
 
-execute store result score @s SE_Data2 run data get storage simplenergy:items Furnace.Items[{Slot:0b}].tag.CustomModelData
 execute if score CookTime SE_Data matches 0 store result block ~ ~ ~ CookTime short 1 run scoreboard players get CookTime SE_Data
 data modify block ~ ~ ~ Items set from storage simplenergy:items Furnace.Items

@@ -5,8 +5,8 @@
 	execute as @e[type=glow_item_frame,tag=SF_CobblestoneMiner] at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:cobblestone run function stardust:work/cobblestone_miner
 
 #Dog Excrements
-	execute as @e[type=wolf] run scoreboard players add @e[type=wolf,limit=1,sort=random] SF_Wolfs 1
-	execute at @e[type=wolf,scores={SF_Wolfs=10..}] run summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:64b,tag:{SF_Give:1s}}}
+	execute as @e[type=wolf,tag=!SF_DontShit] run scoreboard players add @e[type=wolf,limit=1,sort=random,tag=!SF_DontShit] SF_Wolfs 1
+	execute at @e[type=wolf,tag=!SF_DontShit,scores={SF_Wolfs=10..}] run summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:64b,tag:{SF_Give:1s}}}
 	execute as @e[type=item,nbt={Item:{tag:{SF_Give:1s}}}] run data modify entity @s Item set from storage stardust:items 2013011
 	scoreboard players remove @e[type=wolf,scores={SF_Wolfs=10..}] SF_Wolfs 10
 

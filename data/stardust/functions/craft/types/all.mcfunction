@@ -1,3 +1,6 @@
+#Artifacts Crafts
+	#execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_Artifact:1s}}] run function stardust:craft/types/artifact
+	execute as @s[tag=!SF_FoundCraft] run function stardust:craft/types/artifact
 #Stardust Fragment Crafts
 	execute as @s[tag=!SF_FoundCraft] if data storage stardust:items Crafting[{tag:{SF_StardustFragment:1s}}] run function stardust:craft/types/stardust_fragment
 #Stardust Ingot Crafts

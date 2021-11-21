@@ -4,6 +4,6 @@
 #Update the gui & produce Energy while working
 	execute store result score Temp SF_Data run data get block ~ ~ ~ BurnTime
 	execute if score Temp SF_Data matches 1.. run data modify block ~ ~ ~ Items[0].tag.CustomModelData set value 2011975
-	execute if score Temp SF_Data matches 1.. run scoreboard players add @s EF_kJ 15
+	execute if score Temp SF_Data matches 1.. run scoreboard players add @s EF_kJ 20
 	execute if score Temp SF_Data matches 1.. run playsound simplenergy:furnace_generator block @a[distance=..10] ~ ~ ~ 0.25
 	execute if score @s EF_kJ matches 1600.. run scoreboard players set @s EF_kJ 1600

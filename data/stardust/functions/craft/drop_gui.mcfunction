@@ -1,4 +1,3 @@
-data modify storage stardust:items Drops set from block ~ ~ ~ Items
 execute unless data storage stardust:items Drops[{Slot:0b,tag:{SE_CustomTextureItem:1s}}] run data modify storage stardust:items Drop set from storage stardust:items Drops[{Slot:0b}]
 execute if data storage stardust:items Drop run function stardust:craft/dropped
 

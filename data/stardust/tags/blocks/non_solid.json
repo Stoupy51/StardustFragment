@@ -35,6 +35,7 @@
  "minecraft:ladder",
  "minecraft:tall_seagrass",
  "minecraft:snow",
- "#minecraft:leaves"
+ "#minecraft:leaves",
+ "#minecraft:trapdoors"
  ]
 }

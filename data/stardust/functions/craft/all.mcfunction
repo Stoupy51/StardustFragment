@@ -1,16 +1,10 @@
-function stardust:craft/drop_gui
-function stardust:craft/gui
+data modify storage stardust:items Drops set from block ~ ~ ~ Items
+execute store result score Count SF_Data if data storage stardust:items Drops[{tag:{SE_CustomTextureItem:1s}}]
+execute if score Count SF_Data matches ..16 run function stardust:craft/gui
 
-#Verifying if craft has been done
-scoreboard players set Crafted SF_Data 0
-scoreboard players set Count SF_Data 0
 data modify storage stardust:items Crafting set from block ~ ~ ~ Items
-execute store result score Crafted SF_Data run data get storage stardust:items Crafting[{Slot:16b}].tag.CustomModelData
-execute store result score Count SF_Data run data get storage stardust:items Crafting[{Slot:16b}].Count
-execute if score Crafted SF_Data matches 2011929 run scoreboard players set Count SF_Data 0
-execute if score @s[tag=SF_WaitingCraft] SF_Data = Crafted SF_Data unless score Count SF_Data = @s SF_X run function stardust:craft/crafted
-execute unless score @s[tag=SF_WaitingCraft] SF_Data = Crafted SF_Data run function stardust:craft/crafted
-execute unless score @s SF_X = Count SF_Data run function stardust:craft/drop
+#Verifying if craft has been done
+	execute as @s[tag=SF_WaitingCraft] run function stardust:craft/check_craft
 
 tag @s remove SF_WaitingCraft
 tag @s remove SF_FoundCraft
@@ -19,7 +13,7 @@ scoreboard players set @s SF_Data 0
 scoreboard players set @s SF_X 1
 
 #Skip useless checks
-	execute as @s[tag=!SF_FoundCraft] unless data storage stardust:items Crafting[{Slot:2b}] unless data storage stardust:items Crafting[{Slot:3b}] unless data storage stardust:items Crafting[{Slot:4b}] unless data storage stardust:items Crafting[{Slot:12b}] unless data storage stardust:items Crafting[{Slot:12b}] unless data storage stardust:items Crafting[{Slot:13b}] unless data storage stardust:items Crafting[{Slot:20b}] unless data storage stardust:items Crafting[{Slot:21b}] unless data storage stardust:items Crafting[{Slot:22b}] run function stardust:craft/no_craft_found
+	execute as @s[tag=!SF_FoundCraft] unless data storage stardust:items Crafting[{Slot:2b}] unless data storage stardust:items Crafting[{Slot:3b}] unless data storage stardust:items Crafting[{Slot:4b}] unless data storage stardust:items Crafting[{Slot:11b}] unless data storage stardust:items Crafting[{Slot:12b}] unless data storage stardust:items Crafting[{Slot:13b}] unless data storage stardust:items Crafting[{Slot:20b}] unless data storage stardust:items Crafting[{Slot:21b}] unless data storage stardust:items Crafting[{Slot:22b}] run function stardust:craft/no_craft_found
 #Dragon Pearl
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:dragon_breath"},{Slot:3b,id:"minecraft:dragon_breath"},{Slot:4b,id:"minecraft:dragon_breath"},{Slot:11b,id:"minecraft:dragon_breath"},{Slot:12b,id:"minecraft:ender_pearl"},{Slot:13b,id:"minecraft:dragon_breath"},{Slot:20b,id:"minecraft:dragon_breath"},{Slot:21b,id:"minecraft:dragon_breath"},{Slot:22b,id:"minecraft:dragon_breath"}]} run function stardust:craft/items/dragon_pearl
 #Wormhole Potion
@@ -54,8 +48,8 @@ scoreboard players set @s SF_X 1
 #Fortune Module
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:emerald"},{Slot:3b,id:"minecraft:diamond"},{Slot:4b,id:"minecraft:emerald"},{Slot:11b,id:"minecraft:diamond"},{Slot:12b,tag:{SF_EmptyModule:1s}},{Slot:13b,id:"minecraft:diamond"},{Slot:20b,id:"minecraft:emerald"},{Slot:21b,id:"minecraft:diamond"},{Slot:22b,id:"minecraft:emerald"}]} run function stardust:craft/items/fortune_module
 #Quarry Configurator
-	execute as @s[tag=!SE_WaitingCraft] unless data storage simplenergy:items Crafting[{Slot:2b}] unless data storage simplenergy:items Crafting[{Slot:11b}] unless data storage simplenergy:items Crafting[{Slot:20b}] if block ~ ~ ~ barrel{Items:[{Slot:3b,id:"minecraft:diamond"},{Slot:4b,id:"minecraft:diamond"},{Slot:12b,id:"minecraft:quartz"},{Slot:13b,id:"minecraft:quartz"},{Slot:21b,id:"minecraft:quartz"},{Slot:22b,id:"minecraft:quartz"}]} run function stardust:craft/items/quarry/configurator
-	execute as @s[tag=!SE_WaitingCraft] unless data storage simplenergy:items Crafting[{Slot:4b}] unless data storage simplenergy:items Crafting[{Slot:13b}] unless data storage simplenergy:items Crafting[{Slot:22b}] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:diamond"},{Slot:3b,id:"minecraft:diamond"},{Slot:11b,id:"minecraft:quartz"},{Slot:12b,id:"minecraft:quartz"},{Slot:20b,id:"minecraft:quartz"},{Slot:21b,id:"minecraft:quartz"}]} run function stardust:craft/items/quarry/configurator
+	execute as @s[tag=!SF_FoundCraft] unless data storage simplenergy:items Crafting[{Slot:2b}] unless data storage simplenergy:items Crafting[{Slot:11b}] unless data storage simplenergy:items Crafting[{Slot:20b}] if block ~ ~ ~ barrel{Items:[{Slot:3b,id:"minecraft:diamond"},{Slot:4b,id:"minecraft:diamond"},{Slot:12b,id:"minecraft:quartz"},{Slot:13b,id:"minecraft:quartz"},{Slot:21b,id:"minecraft:quartz"},{Slot:22b,id:"minecraft:quartz"}]} run function stardust:craft/items/quarry/configurator
+	execute as @s[tag=!SF_FoundCraft] unless data storage simplenergy:items Crafting[{Slot:4b}] unless data storage simplenergy:items Crafting[{Slot:13b}] unless data storage simplenergy:items Crafting[{Slot:22b}] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:diamond"},{Slot:3b,id:"minecraft:diamond"},{Slot:11b,id:"minecraft:quartz"},{Slot:12b,id:"minecraft:quartz"},{Slot:20b,id:"minecraft:quartz"},{Slot:21b,id:"minecraft:quartz"}]} run function stardust:craft/items/quarry/configurator
 #Elevator
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,id:"minecraft:iron_block"},{Slot:3b,id:"minecraft:iron_block"},{Slot:4b,id:"minecraft:iron_block"},{Slot:11b,id:"minecraft:iron_block"},{Slot:12b,id:"minecraft:copper_block"},{Slot:13b,id:"minecraft:iron_block"},{Slot:20b,id:"minecraft:iron_block"},{Slot:21b,id:"minecraft:iron_block"},{Slot:22b,id:"minecraft:iron_block"}]} run function stardust:craft/items/elevator
 #Wind Turbine
@@ -63,3 +57,7 @@ scoreboard players set @s SF_X 1
 
 #Types Crafts
 	execute as @s[tag=!SF_FoundCraft] run function stardust:craft/types/all
+
+
+#Check Multiple Crafts
+	execute as @s[tag=SF_WaitingCraft] run function stardust:craft/multiple_craft

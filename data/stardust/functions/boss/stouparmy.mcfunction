@@ -11,7 +11,7 @@ attribute @s generic.attack_damage modifier add 1-1-1-1-1 "1" 12.5 multiply_base
 attribute @s generic.max_health modifier add 1-1-1-1-2 "2" 12.5 multiply_base
 data modify entity @s Health set value 2048
 tag @s remove SF_StoupArmy
-execute as @e[limit=50] run summon wolf ~ ~ ~ {Tags:["SF_StoupArmyDrop"],Health:40,Attributes:[{Name:"generic.max_health",Base:40}],ArmorDropChances:[1F,0.5F,0.25F,0.1F],ArmorItems:[{},{},{},{}]}
+execute as @e[limit=50] run summon wolf ~ ~ ~ {Tags:["SF_StoupArmyDrop","SF_DontShit"],Health:40,Attributes:[{Name:"generic.max_health",Base:40}],ArmorDropChances:[1F,0.5F,0.25F,0.1F],ArmorItems:[{},{},{},{}]}
 execute as @e[type=wolf,tag=SF_StoupArmyDrop] run data modify entity @s ArmorItems[0] set from storage stardust:items 2013000
 execute as @e[type=wolf,tag=SF_StoupArmyDrop] run data modify entity @s ArmorItems[1] set from storage stardust:items 2013000
 execute as @e[type=wolf,tag=SF_StoupArmyDrop] run data modify entity @s ArmorItems[2] set from storage stardust:items 2013000

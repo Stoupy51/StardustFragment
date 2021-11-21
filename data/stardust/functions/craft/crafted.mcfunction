@@ -38,5 +38,8 @@ execute store result storage stardust:items Count[{Slot:22b}].Count byte 1 run s
 
 data modify block ~ ~ ~ Items set from storage stardust:items Count
 
+scoreboard players remove @s SE_CraftCount 1
+execute if score @s SE_CraftCount matches 1.. run function stardust:craft/crafted
+
 function stardust:craft/drop
 tag @s remove SF_WaitingCraft

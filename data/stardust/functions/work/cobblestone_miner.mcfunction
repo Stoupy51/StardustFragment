@@ -1,4 +1,4 @@
-setblock ~ ~-1 ~ minecraft:air destroy
+setblock ~ ~ ~ minecraft:air destroy
 execute as @s[tag=SF_CobblestoneMinerLv1] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:items 2013016
 execute as @s[tag=SF_CobblestoneMinerLv2] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:items 2013016
 execute as @s[tag=SF_CobblestoneMinerLv2] run data modify entity @e[type=item,nbt={Item:{tag:{SF_DoubleCompressedCobblestone:1s}}},sort=nearest,limit=1] Item.Count set value 3b

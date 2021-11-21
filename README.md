@@ -4,11 +4,10 @@
 Requires at least Energy Flux [v1.2.0] : https://github.com/Stoupy51/EnergyFlux
 Requires at least SimplEnergy [v1.4.0] : https://github.com/Stoupy51/SimplEnergy
 
-Example video of SimplEnergy :
-https://www.youtube.com/watch?v=3rKrggNTog4
+Stardust Fragment trailer : soon
 
 Don't forget to download the resource pack !
-![SimplEnergy Image](https://cdn.discordapp.com/attachments/547163400900444163/889450877893611520/SimplEnergy_2.jpg)
+![Stardust Fragment Image](https://cdn.discordapp.com/attachments/547163400900444163/911990045366419466/StardustFragment.jpg)
 
 # What is Stardust Fragment
 Stardust Fragment is a very advanced Adventure & Technology Datapack created to add a very special experience to the game.

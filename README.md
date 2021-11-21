@@ -2,6 +2,7 @@
 [​Don't forget to join the Discord if you are a User or a Creator of Energy Datapacks : https://discord.gg/a2yX6GD4J7]
 
 Requires at least Energy Flux [v1.2.0] : https://github.com/Stoupy51/EnergyFlux
+
 Requires at least SimplEnergy [v1.4.0] : https://github.com/Stoupy51/SimplEnergy
 
 Stardust Fragment trailer : soon

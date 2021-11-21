@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"1": "block/emerald_block",
+		"1": "block/lime_concrete",
 		"2": "stardust:others/seeds/legendary_stage_2",
-		"particle": "block/emerald_block"
+		"particle": "block/lime_concrete"
 	},
 	"elements": [
 		{
@@ -42,7 +42,7 @@
 			}
 		},
 		{
-			"name": "emerald_block",
+			"name": "lime_concrete",
 			"from": [0, 0, 0],
 			"to": [16, 1.01, 16],
 			"faces": {

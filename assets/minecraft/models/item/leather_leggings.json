@@ -1,0 +1,15 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/leather_leggings",
+    	"layer1": "item/leather_leggings_overlay"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013102 }, "model": "stardust:equipments/damaged_stardust_leggings" },
+		{ "predicate": { "custom_model_data": 2013109 }, "model": "stardust:equipments/reinforced_stardust_leggings" },
+		{ "predicate": { "custom_model_data": 2013116 }, "model": "stardust:equipments/original_stardust_leggings" },
+		{ "predicate": { "custom_model_data": 2013123 }, "model": "stardust:equipments/legendary_leggings" },
+		{ "predicate": { "custom_model_data": 2013130 }, "model": "stardust:equipments/solar_leggings" },
+		{ "predicate": { "custom_model_data": 2013137 }, "model": "stardust:equipments/dark_leggings" }
+	]
+}

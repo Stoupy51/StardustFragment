@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "stardust:equipments/speed_artifact_lv3"
+    }
+}

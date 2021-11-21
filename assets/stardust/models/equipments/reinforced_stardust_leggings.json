@@ -1,0 +1,7 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "stardust:equipments/reinforced_stardust_leggings",
+        "layer1": "stardust:equipments/reinforced_stardust_leggings"
+    }
+}

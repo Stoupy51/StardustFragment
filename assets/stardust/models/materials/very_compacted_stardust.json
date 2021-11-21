@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "stardust:materials/very_compacted_stardust"
+    }
+}

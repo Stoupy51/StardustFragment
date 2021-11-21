@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/stone_axe"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013106 }, "model": "stardust:equipments/damaged_stardust_axe" }
+	]
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "stardust:equipments/health_artifact_lv2"
+    }
+}

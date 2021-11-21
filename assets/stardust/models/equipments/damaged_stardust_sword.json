@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "stardust:equipments/damaged_stardust_sword"
+    }
+}

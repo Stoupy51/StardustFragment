@@ -2,7 +2,7 @@
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{SF_AwakenedStardust:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:16b,tag:{SF_EnderDragonPearl:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:16b,tag:{SF_AwakenedStardustBlock:1s}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,tag:{SF_SextupleCompressedCobblestone:1s}}},limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:16b,tag:{SF_SextupleCompressedCobblestone:1s}}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted
 
 #SpawnItem

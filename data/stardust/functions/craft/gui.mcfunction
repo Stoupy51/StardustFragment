@@ -1,3 +1,3 @@
 function stardust:craft/drop_gui
 
-data modify block ~ ~ ~ Items prepend from storage stardust:items CraftingTableGui[]
+data modify storage stardust:items Crafting append from storage stardust:items CraftingTableGui[]

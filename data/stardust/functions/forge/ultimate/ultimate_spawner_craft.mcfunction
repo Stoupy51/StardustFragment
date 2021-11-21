@@ -14,7 +14,6 @@
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{SF_LegendaryFragment:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{SF_SolarFragment:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{SF_DarkFragment:1s}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,tag:{SF_UltimateCore:1s}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:enchanted_golden_apple"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:dragon_egg"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,id:"minecraft:iron_block"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]

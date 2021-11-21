@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "item/elytra"
+    },
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013143 }, "model": "stardust:equipments/ultimate_elytra" }
+	]
+}

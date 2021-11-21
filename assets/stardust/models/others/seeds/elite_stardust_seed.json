@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "stardust:others/elite_stardust_seed"
+	}
+}

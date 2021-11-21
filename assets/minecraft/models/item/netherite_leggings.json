@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/netherite_leggings"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013144 }, "model": "stardust:equipments/ultimate_leggings" }
+	]
+}

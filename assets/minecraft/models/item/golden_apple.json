@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/golden_apple"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013172 }, "model": "stardust:equipments/stardust_apple" }
+	]
+}

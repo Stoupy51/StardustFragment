@@ -1,0 +1,15 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/leather_chestplate",
+    	"layer1": "item/leather_chestplate_overlay"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013101 }, "model": "stardust:equipments/damaged_stardust_chestplate" },
+		{ "predicate": { "custom_model_data": 2013108 }, "model": "stardust:equipments/reinforced_stardust_chestplate" },
+		{ "predicate": { "custom_model_data": 2013115 }, "model": "stardust:equipments/original_stardust_chestplate" },
+		{ "predicate": { "custom_model_data": 2013122 }, "model": "stardust:equipments/legendary_chestplate" },
+		{ "predicate": { "custom_model_data": 2013129 }, "model": "stardust:equipments/solar_chestplate" },
+		{ "predicate": { "custom_model_data": 2013136 }, "model": "stardust:equipments/dark_chestplate" }
+	]
+}

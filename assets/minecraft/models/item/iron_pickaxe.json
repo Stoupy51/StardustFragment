@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "item/iron_pickaxe"
+    },
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013112 }, "model": "stardust:equipments/reinforced_stardust_pickaxe" }
+	]
+}

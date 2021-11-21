@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+  	"textures": {
+    	"layer0": "item/netherite_helmet"
+  	},
+    "overrides": [
+		{ "predicate": { "custom_model_data": 2013142 }, "model": "stardust:equipments/ultimate_helmet" }
+	]
+}

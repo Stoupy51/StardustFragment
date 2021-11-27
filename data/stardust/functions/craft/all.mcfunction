@@ -1,6 +1,6 @@
 data modify storage stardust:items Crafting set from block ~ ~ ~ Items
-execute store result score Count SF_Data if data storage stardust:items Crafting[{tag:{SE_CustomTextureItem:1s,CustomModelData:2011929}}]
-execute unless data storage stardust:items Crafting[{Slot:16b,tag:{SE_CustomTextureItem:1s}}] run scoreboard players add Count SF_Data 1
+execute store result score Count SF_Data if data storage stardust:items Crafting[{tag:{SE_CustomTextureItem:1b,CustomModelData:2011929}}]
+execute unless data storage stardust:items Crafting[{Slot:16b,tag:{SE_CustomTextureItem:1b}}] run scoreboard players add Count SF_Data 1
 execute if score Count SF_Data matches ..17 run function stardust:craft/gui
 
 data modify block ~ ~ ~ Items set from storage stardust:items Crafting
@@ -10,7 +10,7 @@ data modify block ~ ~ ~ Items set from storage stardust:items Crafting
 
 tag @s remove SF_WaitingCraft
 tag @s remove SF_FoundCraft
-item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,CustomItem:1s,SE_CustomTextureItem:1s,display:{Name:'[{"text":""}]'}}
+item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 scoreboard players set @s SF_Data 0
 scoreboard players set @s SF_X 1
 
@@ -19,7 +19,7 @@ scoreboard players set @s SF_X 1
 
 #Check Crafts with only Vanilla Items
 	scoreboard players set Success SF_Data 0
-	execute as @s[tag=!SF_FoundCraft] store success score Success SF_Data unless data storage stardust:items Crafting[{Slot:2b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:3b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:4b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:11b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:12b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:13b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:20b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:21b,tag:{CustomItem:1s}}] unless data storage stardust:items Crafting[{Slot:22b,tag:{CustomItem:1s}}] run function stardust:craft/types/all_vanilla
+	execute as @s[tag=!SF_FoundCraft] store success score Success SF_Data unless data storage stardust:items Crafting[{Slot:2b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:3b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:4b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:11b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:12b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:13b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:20b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:21b,tag:{CustomItem:1b}}] unless data storage stardust:items Crafting[{Slot:22b,tag:{CustomItem:1b}}] run function stardust:craft/types/all_vanilla
 
 #Check Crafts without only Vanilla Items
 	execute as @s[tag=!SF_FoundCraft] if score Success SF_Data matches 0 run function stardust:craft/types/all_non_vanilla

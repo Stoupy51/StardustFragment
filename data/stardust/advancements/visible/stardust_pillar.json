@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:warped_fungus_on_a_stick"],
-						"nbt": "{SF_StardustPillar:1s}"
+						"nbt": "{SF_StardustPillar:1b}"
 					}
 				]
 			}

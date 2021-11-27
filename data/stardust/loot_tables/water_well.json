@@ -1,0 +1,259 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 8,
+				"max": 24
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 70,
+					"name": "minecraft:stick"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:copper_ingot"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 70,
+					"name": "minecraft:string"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 20,
+					"name": "minecraft:iron_ingot"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013256.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013000.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:player_head",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013200.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013201.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013202.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013203.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013204.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013205.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013206.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013207.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "2013172.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

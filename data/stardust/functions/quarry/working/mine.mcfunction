@@ -11,3 +11,5 @@ tag @s add SF_QuarryStock
 execute as @e[type=item,distance=..1.2] run function stardust:quarry/working/store_item
 tag @s remove SF_QuarryStock
 kill @e[type=experience_orb,distance=..1]
+scoreboard players remove Count SF_Data 49
+scoreboard players add Temp SF_Data 1

@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:stone_pickaxe"],
-						"nbt": "{SF_DamagedPickaxe:1s}"
+						"nbt": "{SF_DamagedPickaxe:1b}"
 					}
 				]
 			}

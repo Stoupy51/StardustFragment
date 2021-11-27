@@ -5,7 +5,7 @@
 			"conditions": {
 				"item": {
 					"items": ["minecraft:player_head"],
-					"nbt": "{SF_UltimateWire:1s}"
+					"nbt": "{SF_UltimateWire:1b}"
 				}
 			}
 		}

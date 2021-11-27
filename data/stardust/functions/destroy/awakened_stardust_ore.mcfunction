@@ -7,5 +7,5 @@
 	scoreboard players add Temp SF_Data 1
 	scoreboard players operation Count SF_Data *= Temp SF_Data
 	data modify entity @e[type=item,nbt={Item:{id:"minecraft:redstone"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:items 2013004
-	execute store result entity @e[type=item,nbt={Item:{tag:{SF_AwakenedStardust:1s}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get Count SF_Data
+	execute store result entity @e[type=item,nbt={Item:{tag:{SF_AwakenedStardust:1b}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get Count SF_Data
 kill @s

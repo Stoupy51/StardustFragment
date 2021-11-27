@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SF_CobblestoneMinerLv4:1s}"
+					"nbt": "{SF_CobblestoneMinerLv4:1b}"
 				}
 			}
 		}

@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:barrel"],
-						"nbt": "{SF_CobblestoneMinerLv5:1s}"
+						"nbt": "{SF_CobblestoneMinerLv5:1b}"
 					}
 				]
 			}

@@ -1,7 +1,7 @@
 function simplenergy:load
 
 scoreboard objectives add SE_Data dummy
-scoreboard objectives add EF_Versions dummy
+scoreboard objectives add load.status dummy
 scoreboard objectives add SF_StardustID dummy
 scoreboard objectives add SF_Data dummy
 scoreboard objectives add SF_X dummy
@@ -37,7 +37,7 @@ execute in minecraft:overworld run forceload add 0 0
 execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
-scoreboard players set StardustFragment EF_Versions 3000
+scoreboard players set StardustFragment load.status 3010
 scoreboard players set Second SF_Data 10
 
 scoreboard players set 1500 SE_Data 1500
@@ -334,5 +334,3 @@ scoreboard players set -1 SE_Data -1
 	data modify storage stardust:items CraftingTableGui set from storage simplenergy:items CraftLock
 	data modify storage stardust:items CraftingTableGui append from storage stardust:items 2013398
 	data modify storage stardust:items CraftingTableGui append value {Slot:26b,id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:2013399,CustomItem:1b,SE_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}}
-
-schedule function stardust:post_load 2s replace

@@ -1,5 +1,5 @@
 {
-	"values": [
-		"stardust:load"
-	]
+    "values": [
+        "#load:_private/load"
+    ]
 }

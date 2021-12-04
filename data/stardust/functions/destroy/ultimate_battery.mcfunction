@@ -5,4 +5,4 @@
 
 kill @e[type=item,nbt={Item:{tag:{SE_CustomTextureItem:1b}}},distance=..1]
 kill @s
-execute as @e[type=#energy_flux:wires,tag=EF_Wire,distance=..2] at @s run function energy_flux:wire_update
+function energy_flux:wire_update

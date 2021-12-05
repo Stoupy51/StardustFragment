@@ -1,9 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "item/iron_sword"
-    },
-    "overrides": [
-		{ "predicate": { "custom_model_data": 2013111 }, "model": "stardust:equipments/reinforced_stardust_sword" }
-	]
-}

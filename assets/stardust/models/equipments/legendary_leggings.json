@@ -1,7 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "stardust:equipments/legendary_leggings",
-        "layer1": "stardust:equipments/legendary_leggings"
-    }
-}

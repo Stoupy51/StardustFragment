@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "stardust:materials/photovoltaic_cell/awakened"
-    }
-}

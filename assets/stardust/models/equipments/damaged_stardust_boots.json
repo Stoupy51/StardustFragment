@@ -1,7 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "stardust:equipments/damaged_stardust_boots",
-        "layer1": "stardust:equipments/damaged_stardust_boots"
-    }
-}

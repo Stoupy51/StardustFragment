@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "stardust:equipments/awakened_stardust_bow_pulling_1"
-    }
-}

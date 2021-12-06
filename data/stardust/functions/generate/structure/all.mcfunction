@@ -1,3 +1,6 @@
+#Randomize a bit the position of the structure
+	function stardust:generate/structure/position_variation
+
 #Define a positive value randomly with UUID.
 	scoreboard players set 1000 SF_Data 1000
 	execute store result score Random SF_Data run seed

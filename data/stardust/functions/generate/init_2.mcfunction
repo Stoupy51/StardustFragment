@@ -1,3 +1,6 @@
+#Correct Position
+	function simplenergy:generate/correct_position
+
 #Generate structures
 	summon marker ~ 150 ~ {Tags:["SF_StructurePos"]}
 	execute as @e[type=marker,tag=SF_StructurePos] at @s run function stardust:generate/structure/all

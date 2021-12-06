@@ -1,9 +1,4 @@
-data modify entity @s ArmorDropChances set value [1F,1F,2F,2F]
-data modify entity @s ArmorItems set value [{},{},{},{}]
-data modify entity @s ArmorItems[0] set from storage stardust:items 2013005
-data modify entity @s ArmorItems[0].Count set value 36b
-data modify entity @s ArmorItems[1] set from storage stardust:items 2013002
-data modify entity @s ArmorItems[1].Count set value 32b
+data modify entity @s DeathLootTable set value "stardust:entities/stardust_guardian"
 
 attribute @s minecraft:generic.knockback_resistance base set 1
 attribute @s minecraft:generic.movement_speed base set 0.4

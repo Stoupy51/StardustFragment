@@ -53,37 +53,3 @@
 #Balance
 	execute as @e[type=glow_item_frame,tag=SF_PhotovoltaicPanel,limit=1] at @s run function stardust:balance/all
 	tag @e[type=glow_item_frame,tag=SF_Balanced] remove SF_Balanced
-
-
-
-
-
-execute as @e[type=glow_item_frame,tag=SE_SimpluniumOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
-kill @e[type=glow_item_frame,tag=SE_SimpluniumOre]
-execute as @e[type=glow_item_frame,tag=SF_StardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DestroyDeepslateDiamondOre","SF_StardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013023}}}
-kill @e[type=glow_item_frame,tag=SF_StardustOre]
-execute as @e[type=glow_item_frame,tag=SF_DeepslateStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DestroyDeepslateDiamondOre","SF_DeepslateStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013025}}}
-kill @e[type=glow_item_frame,tag=SF_DeepslateStardustOre]
-execute as @e[type=glow_item_frame,tag=SF_NetherStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_NetherStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013026}}}
-kill @e[type=glow_item_frame,tag=SF_NetherStardustOre]
-execute as @e[type=glow_item_frame,tag=SF_EnderStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DestroyDeepslateDiamondOre","SF_EnderStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013027}}}
-kill @e[type=glow_item_frame,tag=SF_EnderStardustOre]
-execute as @e[type=glow_item_frame,tag=SF_AwakenedStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_AwakenedStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013024}}}
-kill @e[type=glow_item_frame,tag=SF_AwakenedStardustOre]
-execute as @e[type=armor_stand,tag=SE_SimpluniumOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SE_Destroyer","SE_SimpluniumOre"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2012899}}}
-kill @e[type=armor_stand,tag=SE_SimpluniumOre]
-execute as @e[type=armor_stand,tag=SF_StardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DestroyDeepslateDiamondOre","SF_StardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013023}}}
-kill @e[type=armor_stand,tag=SF_StardustOre]
-execute as @e[type=armor_stand,tag=SF_DeepslateStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DestroyDeepslateDiamondOre","SF_DeepslateStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013025}}}
-kill @e[type=armor_stand,tag=SF_DeepslateStardustOre]
-execute as @e[type=armor_stand,tag=SF_NetherStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_NetherStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013026}}}
-kill @e[type=armor_stand,tag=SF_NetherStardustOre]
-execute as @e[type=armor_stand,tag=SF_EnderStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_DestroyDeepslateDiamondOre","SF_EnderStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013027}}}
-kill @e[type=armor_stand,tag=SF_EnderStardustOre]
-execute as @e[type=armor_stand,tag=SF_AwakenedStardustOre] at @s run summon item_frame ~ ~ ~ {ItemRotation:0b,Tags:["SF_Destroyer","SF_AwakenedStardustOre","SF_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013024}}}
-kill @e[type=armor_stand,tag=SF_AwakenedStardustOre]
-
-execute as @e[type=armor_stand,tag=SE_Furnaces] at @s align xyz run summon marker ~0.5 ~ ~0.5 {Tags:["SE_Furnaces"]}
-kill @e[type=armor_stand,tag=SE_Furnaces]
-
-

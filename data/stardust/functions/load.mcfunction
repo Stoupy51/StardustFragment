@@ -37,7 +37,7 @@ execute in minecraft:overworld run forceload add 0 0
 execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
-scoreboard players set StardustFragment load.status 3010
+scoreboard players set StardustFragment load.status 3011
 scoreboard players set Second SF_Data 10
 
 scoreboard players set 1500 SE_Data 1500

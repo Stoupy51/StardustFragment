@@ -18,7 +18,7 @@ Here is a small list of features:
 - 1 Mini-boss, 1 Boss, 1 Ultimate Boss
 - A Custom Crafting Table, a custom crafting system with a structure
 - A Great Manual with more than 80 pages
-- 3 New random structures
+- 6 New random structures
 - 5 New Ores
 
 

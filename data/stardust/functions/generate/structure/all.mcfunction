@@ -16,9 +16,9 @@
 	execute if score Random SF_Data matches 0..19 run function stardust:generate/structure/water_well/all
 	execute if score Random SF_Data matches 20..269 run function stardust:generate/structure/scruffy_house/all
 	execute if score Random SF_Data matches 270..299 run function stardust:generate/structure/graveyard/all
-	execute if score Random SF_Data matches 300..329 run function stardust:generate/structure/flying_saucer/all
-	execute if score Random SF_Data matches 330..359 run function stardust:generate/structure/floating_island_awakened/all
-	execute if score Random SF_Data matches 360..389 run function stardust:generate/structure/floating_island_enchant/all
+	execute if score Random SF_Data matches 300..309 run function stardust:generate/structure/flying_saucer/all
+	execute if score Random SF_Data matches 310..319 run function stardust:generate/structure/floating_island_awakened/all
+	execute if score Random SF_Data matches 320..329 run function stardust:generate/structure/floating_island_enchant/all
 
 #tellraw @a {"score":{"name":"Random","objective":"SF_Data"}}
 kill @s

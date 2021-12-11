@@ -1,10 +1,10 @@
-scoreboard players set Temp SF_Data 1
+scoreboard players set Temp SF_Data -1
 execute store result score Rotation SF_Data run data get entity @s UUID[1]
 scoreboard players operation Rotation SF_Data %= 4 SE_Data
 
 #Find the perfect pos
-	execute as @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/scruffy_house/go_down
-	execute at @s unless block ~ ~ ~ podzol run scoreboard players set Temp SF_Data -1
+	execute at @s if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/scruffy_house/go_down
+	execute at @s if block ~ ~ ~ podzol run scoreboard players set Temp SF_Data 1
 
 #Choose a Structure
 	execute if score Temp SF_Data matches -1 run scoreboard players set Rotation SF_Data -1

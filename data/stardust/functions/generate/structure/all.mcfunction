@@ -11,14 +11,14 @@
 	scoreboard players operation Random SF_Data += PosX SF_Data
 	scoreboard players operation Random SF_Data += PosZ SF_Data
 	scoreboard players operation Random SF_Data %= 1000 SF_Data
-	execute if entity @e[type=bat,tag=SF_Structure,distance=..250] run scoreboard players set Random SF_Data 1000
+	execute at @s if entity @e[type=bat,tag=SF_Structure,distance=..250] run scoreboard players set Random SF_Data 1000
 #Choose a Structure
-	execute if score Random SF_Data matches 0..19 run function stardust:generate/structure/water_well/all
-	execute if score Random SF_Data matches 20..269 run function stardust:generate/structure/scruffy_house/all
-	execute if score Random SF_Data matches 270..299 run function stardust:generate/structure/graveyard/all
-	execute if score Random SF_Data matches 300..309 run function stardust:generate/structure/flying_saucer/all
-	execute if score Random SF_Data matches 310..319 run function stardust:generate/structure/floating_island_awakened/all
-	execute if score Random SF_Data matches 320..329 run function stardust:generate/structure/floating_island_enchant/all
+	execute if score Random SF_Data matches 0..19 at @s run function stardust:generate/structure/water_well/all
+	execute if score Random SF_Data matches 20..269 at @s run function stardust:generate/structure/scruffy_house/all
+	execute if score Random SF_Data matches 270..299 at @s run function stardust:generate/structure/graveyard/all
+	execute if score Random SF_Data matches 300..309 at @s run function stardust:generate/structure/flying_saucer/all
+	execute if score Random SF_Data matches 310..319 at @s run function stardust:generate/structure/floating_island_awakened/all
+	execute if score Random SF_Data matches 320..329 at @s run function stardust:generate/structure/floating_island_enchant/all
 
 #tellraw @a {"score":{"name":"Random","objective":"SF_Data"}}
 kill @s

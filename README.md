@@ -3,7 +3,7 @@
 
 Requires at least Energy Flux [v1.3.1] : https://github.com/Stoupy51/EnergyFlux
 
-Requires at least SimplEnergy [v1.5.1] : https://github.com/Stoupy51/SimplEnergy
+Requires at least SimplEnergy [v1.6.0] : https://github.com/Stoupy51/SimplEnergy
 
 Stardust Fragment trailer : soon
 

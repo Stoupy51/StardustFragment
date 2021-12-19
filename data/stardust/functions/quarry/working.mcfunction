@@ -6,7 +6,11 @@ execute if score @s SF_StatQ matches 1 run function stardust:quarry/working/star
 	scoreboard players set Count SF_Data 0
 	scoreboard players set Temp SF_Data 0
 
-	execute if score @s SF_StatQ matches 2 run scoreboard players operation @s EF_kJ -= @s EF_kW
+	execute if score @s SF_StatQ matches 2 run scoreboard players remove @s[tag=SF_QuarryLv1] energy.storage 125
+	execute if score @s SF_StatQ matches 2 run scoreboard players remove @s[tag=SF_QuarryLv2] energy.storage 250
+	execute if score @s SF_StatQ matches 2 run scoreboard players remove @s[tag=SF_QuarryLv3] energy.storage 375
+	execute if score @s SF_StatQ matches 2 run scoreboard players remove @s[tag=SF_QuarryLv4] energy.storage 500
+	execute if score @s SF_StatQ matches 2 run scoreboard players remove @s[tag=SF_QuarryLv5] energy.storage 625
 	execute as @s[scores={SF_StatQ=2},tag=SF_QuarryLv1] run scoreboard players set Count SF_Data 50
 	execute as @s[scores={SF_StatQ=2},tag=SF_QuarryLv2] run scoreboard players set Count SF_Data 100
 	execute as @s[scores={SF_StatQ=2},tag=SF_QuarryLv3] run scoreboard players set Count SF_Data 150

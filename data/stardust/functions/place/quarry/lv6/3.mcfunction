@@ -1,5 +1,4 @@
-scoreboard players set @s EF_kJmax 1
-scoreboard players set @s EF_kW 0
-scoreboard players operation @s EF_kJ = EF_Next EF_kJ
-scoreboard players reset EF_Next EF_kJ
+scoreboard players set @s energy.max_storage 1
+scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
+execute store result score @s energy.storage run data get entity @a[tag=SF_Placer,limit=1] SelectedItem.tag.energy.storage
 tag @s remove SF_SetNew

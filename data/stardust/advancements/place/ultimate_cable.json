@@ -1,0 +1,16 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {
+					"items": ["minecraft:player_head"],
+					"nbt": "{SF_UltimateCable:1b}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:place/ultimate_cable/1"
+	}
+}

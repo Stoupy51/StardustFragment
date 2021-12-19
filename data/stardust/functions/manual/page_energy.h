@@ -66,14 +66,14 @@
 	{"text":"\\n\\uec01","color":"reset"},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":80},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Stardust Battery","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":81},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Battery","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":82},"hoverEvent":{"action":"show_text","contents":[{"text":"Stardust Wire","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":83},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Stardust Wire","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":84},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Wire","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":82},"hoverEvent":{"action":"show_text","contents":[{"text":"Stardust Cable","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":83},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Stardust Cable","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":84},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Cable","italic":false,"color":"white"}]}},
 	
 	{"text":"\\n\\uec01","color":"reset"},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":80},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Stardust Battery","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":81},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Battery","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":82},"hoverEvent":{"action":"show_text","contents":[{"text":"Stardust Wire","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":83},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Stardust Wire","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":84},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Wire","italic":false,"color":"white"}]}}
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":82},"hoverEvent":{"action":"show_text","contents":[{"text":"Stardust Cable","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":83},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Stardust Cable","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":84},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Cable","italic":false,"color":"white"}]}}
 ]'

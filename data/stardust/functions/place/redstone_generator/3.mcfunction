@@ -1,4 +1,4 @@
-scoreboard players set @s EF_kW 100
-scoreboard players set @s EF_kJmax 800
-scoreboard players add @s EF_kJ 0
+scoreboard players set @s energy.max_storage 800
+scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
+scoreboard players add @s energy.storage 0
 tag @s remove SF_SetNew

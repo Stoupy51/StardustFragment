@@ -43,13 +43,16 @@
 	execute as @e[type=glow_item_frame,tag=SF_AdvancedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/advanced
 	execute as @e[type=glow_item_frame,tag=SF_StardustFurnaceGenerator] at @s run function stardust:visual/furnace_generator/stardust
 	execute as @e[type=glow_item_frame,tag=SF_AwakenedFurnaceGenerator] at @s run function stardust:visual/furnace_generator/awakened
-	execute as @e[type=glow_item_frame,tag=SF_StardustPhotovoltaicPanel] at @s unless score @s EF_kJ matches 800.. run function stardust:work/photovoltaic_panel/stardust
-	execute as @e[type=glow_item_frame,tag=SF_AwakenedPhotovoltaicPanel] at @s unless score @s EF_kJ matches 1600.. run function stardust:work/photovoltaic_panel/awakened
-	execute as @e[type=glow_item_frame,tag=SF_LegendaryPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/legendary
-	execute as @e[type=glow_item_frame,tag=SF_SolarPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/solar
-	execute as @e[type=glow_item_frame,tag=SF_DarkPhotovoltaicPanel] at @s unless score @s EF_kJ matches 3200.. run function stardust:work/photovoltaic_panel/dark
-	execute as @e[type=glow_item_frame,tag=SF_WindTurbine] at @s unless score @s EF_kJ matches 800.. run function stardust:work/wind_turbine
+	execute as @e[type=glow_item_frame,tag=SF_StardustPhotovoltaicPanel] at @s unless score @s energy.storage matches 800.. run function stardust:work/photovoltaic_panel/stardust
+	execute as @e[type=glow_item_frame,tag=SF_AwakenedPhotovoltaicPanel] at @s unless score @s energy.storage matches 1600.. run function stardust:work/photovoltaic_panel/awakened
+	execute as @e[type=glow_item_frame,tag=SF_LegendaryPhotovoltaicPanel] at @s unless score @s energy.storage matches 3200.. run function stardust:work/photovoltaic_panel/legendary
+	execute as @e[type=glow_item_frame,tag=SF_SolarPhotovoltaicPanel] at @s unless score @s energy.storage matches 3200.. run function stardust:work/photovoltaic_panel/solar
+	execute as @e[type=glow_item_frame,tag=SF_DarkPhotovoltaicPanel] at @s unless score @s energy.storage matches 3200.. run function stardust:work/photovoltaic_panel/dark
+	execute as @e[type=glow_item_frame,tag=SF_WindTurbine] at @s unless score @s energy.storage matches 800.. run function stardust:work/wind_turbine
 
 #Balance
 	execute as @e[type=glow_item_frame,tag=SF_PhotovoltaicPanel,limit=1] at @s run function stardust:balance/all
+	execute as @e[type=glow_item_frame,tag=SF_StardustBattery,limit=1] at @s run function stardust:balance/all
+	execute as @e[type=glow_item_frame,tag=SF_AwakenedStardustBattery,limit=1] at @s run function stardust:balance/all
+	execute as @e[type=glow_item_frame,tag=SF_UltimateBattery,limit=1] at @s run function stardust:balance/all
 	tag @e[type=glow_item_frame,tag=SF_Balanced] remove SF_Balanced

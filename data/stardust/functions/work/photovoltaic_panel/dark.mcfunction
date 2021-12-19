@@ -4,7 +4,7 @@
 	execute positioned ~ ~1 ~ run function stardust:work/photovoltaic_panel/check
 
 #Produce Energy depends on DayTime
-execute if score Temp SF_Data matches 1 if score DayTime SF_Data matches 13500..22500 run scoreboard players add @s EF_kJ 32
-execute if score Temp SF_Data matches 1 unless score DayTime SF_Data matches 13500..22500 run scoreboard players add @s EF_kJ 8
+execute if score Temp SF_Data matches 1 if score DayTime SF_Data matches 13500..22500 run scoreboard players add @s energy.storage 32
+execute if score Temp SF_Data matches 1 unless score DayTime SF_Data matches 13500..22500 run scoreboard players add @s energy.storage 8
 
-execute if score @s EF_kJ matches 3200.. run scoreboard players set @s EF_kJ 3200
+execute if score @s energy.storage >= @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage

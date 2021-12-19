@@ -31,5 +31,6 @@
 #Stardust Essence
 	execute if score @s SE_Data2 matches 2013002 if score Temp SE_Data matches 0 run data modify storage simplenergy:items Furnace.Items[{Slot:2b}].tag set from storage stardust:items 2013004.tag
 	execute if score @s SE_Data2 matches 2013002 if score Temp SE_Data matches 2013004 run data modify storage simplenergy:items Furnace.Items[{Slot:2b}].tag set from storage stardust:items 2013004.tag
-	execute if score @s SE_Data2 matches 2013002 if score @s SE_CraftCount matches 0 store success score @s SE_CraftCount store result storage simplenergy:items Furnace.Items[{Slot:2b}].Count byte -1 run data get storage simplenergy:items Furnace.Items[{Slot:2b}].Count -1.000001
+	#Make 2 Essences
+		execute if score @s SE_Data2 matches 2013002 if score @s SE_CraftCount matches 0 store success score @s SE_CraftCount store result storage simplenergy:items Furnace.Items[{Slot:2b}].Count byte -1 run data get storage simplenergy:items Furnace.Items[{Slot:2b}].Count -1.000001
 	execute if score @s SE_Data2 matches 2013002 unless score Temp SE_Data matches 0 unless score Temp SE_Data matches 2013004 run scoreboard players set CookTime SE_Data 0

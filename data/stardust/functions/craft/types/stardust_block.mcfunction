@@ -11,8 +11,8 @@
 
 #Stardust Photovoltaic Panel
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustPhotovoltaicCell:1b}},{Slot:3b,tag:{SF_StardustPhotovoltaicCell:1b}},{Slot:4b,tag:{SF_StardustPhotovoltaicCell:1b}},{Slot:11b,tag:{SF_StardustBlock:1b}},{Slot:12b,tag:{SE_SolarPanel:1b}},{Slot:13b,tag:{SF_StardustBlock:1b}},{Slot:22b,tag:{SF_StardustBlock:1b}},{Slot:21b,tag:{SF_StardustBlock:1b}},{Slot:22b,tag:{SF_StardustBlock:1b}}]} run function stardust:craft/items/stardust/stardust_photovoltaic_panel
-#Stardust Wire
-	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustBlock:1b}},{Slot:3b,id:"minecraft:gold_block"},{Slot:4b,tag:{SF_StardustBlock:1b}},{Slot:11b,id:"minecraft:gold_block"},{Slot:12b,tag:{SE_EliteWire:1b}},{Slot:13b,id:"minecraft:gold_block"},{Slot:22b,tag:{SF_StardustBlock:1b}},{Slot:21b,id:"minecraft:gold_block"},{Slot:22b,tag:{SF_StardustBlock:1b}}]} run function stardust:craft/items/stardust/stardust_wire
+#Stardust Cable
+	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_StardustBlock:1b}},{Slot:3b,id:"minecraft:gold_block"},{Slot:4b,tag:{SF_StardustBlock:1b}},{Slot:11b,id:"minecraft:gold_block"},{Slot:12b,tag:{SE_EliteCable:1b}},{Slot:13b,id:"minecraft:gold_block"},{Slot:22b,tag:{SF_StardustBlock:1b}},{Slot:21b,id:"minecraft:gold_block"},{Slot:22b,tag:{SF_StardustBlock:1b}}]} run function stardust:craft/items/stardust/stardust_cable
 #Stardust Frame
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_VeryCompactedStardust:1b}},{Slot:3b,tag:{SF_VeryCompactedStardust:1b}},{Slot:4b,tag:{SF_VeryCompactedStardust:1b}},{Slot:11b,tag:{SF_VeryCompactedStardust:1b}},{Slot:12b,tag:{SF_MachineFrame:1b}},{Slot:13b,tag:{SF_VeryCompactedStardust:1b}},{Slot:20b,tag:{SF_StardustBlock:1b}},{Slot:21b,tag:{SF_StardustBlock:1b}},{Slot:22b,tag:{SF_StardustBlock:1b}}]} run function stardust:craft/items/stardust/stardust_frame
 

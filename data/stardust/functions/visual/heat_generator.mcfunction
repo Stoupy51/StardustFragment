@@ -1,2 +1,2 @@
 data modify entity @s Item.tag.CustomModelData set value 2013239
-execute unless score @s EF_kJ matches 800.. run function stardust:work/heat_generator
+execute if score @s energy.storage < @s energy.max_storage run function stardust:work/heat_generator

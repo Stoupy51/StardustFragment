@@ -56,3 +56,6 @@
 	execute as @e[type=glow_item_frame,tag=SF_AwakenedStardustBattery,limit=1] at @s run function stardust:balance/all
 	execute as @e[type=glow_item_frame,tag=SF_UltimateBattery,limit=1] at @s run function stardust:balance/all
 	tag @e[type=glow_item_frame,tag=SF_Balanced] remove SF_Balanced
+
+#Update Old Ores to New
+	execute as @e[type=item_frame,tag=SF_Ore] at @s run function stardust:update_from_item_frame

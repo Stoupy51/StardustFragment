@@ -8,7 +8,7 @@ tellraw @s ["",{"text":"Custom blocks loaded: ","color":"gray"},{"score":{"name"
 execute store result score Temp SF_Data if entity @e[type=glow_item_frame,tag=SF_Seed]
 tellraw @s ["",{"text":"Custom seeds: ","color":"gray"},{"score":{"name":"Temp","objective":"SF_Data"},"color":"gold"}]
 
-execute store result score Temp SF_Data if entity @e[type=item_frame,tag=SF_Ore]
+execute store result score Temp SF_Data if entity @e[type=glow_item_frame,tag=SF_Ore]
 tellraw @s ["",{"text":"Custom ores: ","color":"gray"},{"score":{"name":"Temp","objective":"SF_Data"},"color":"gold"}]
 
 execute store result score Temp SF_Data if entity @e[type=marker,tag=SF_ChunkScan]

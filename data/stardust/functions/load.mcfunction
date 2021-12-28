@@ -37,6 +37,7 @@ execute unless score DungeonBuilt SF_Data matches 1 in stardust:dungeon run forc
 execute unless score UltimateBuilt SF_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
 scoreboard players set StardustFragment load.status 3020
+scoreboard players set #queue_process energy.data 1
 scoreboard players set Second SF_Data 10
 
 scoreboard players set 1500 SE_Data 1500

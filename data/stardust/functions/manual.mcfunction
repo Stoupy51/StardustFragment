@@ -1,1 +1,1 @@
-loot give @s loot stardust:stardust_manual
+loot give @s loot stardust:i/stardust_manual

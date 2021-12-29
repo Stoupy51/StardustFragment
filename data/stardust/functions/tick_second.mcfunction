@@ -51,6 +51,7 @@
 	execute as @e[type=glow_item_frame,tag=SF_WindTurbine] at @s unless score @s energy.storage matches 800.. run function stardust:work/wind_turbine
 
 #Balance
+	execute as @e[type=glow_item_frame,tag=SF_HeatGenerator,limit=1] at @s run function stardust:balance/all
 	execute as @e[type=glow_item_frame,tag=SF_PhotovoltaicPanel,limit=1] at @s run function stardust:balance/all
 	execute as @e[type=glow_item_frame,tag=SF_StardustBattery,limit=1] at @s run function stardust:balance/all
 	execute as @e[type=glow_item_frame,tag=SF_AwakenedStardustBattery,limit=1] at @s run function stardust:balance/all

@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SF_MobGrinder:1b}"
+					"nbt": "{StardustFragment_MobGrinder:1b}"
 				}
 			}
 		}

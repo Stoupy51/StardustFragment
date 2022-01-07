@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SF_AdvancedFurnaceGenerator:1b}"
+					"nbt": "{StardustFragment_AdvancedFurnaceGenerator:1b}"
 				}
 			}
 		}

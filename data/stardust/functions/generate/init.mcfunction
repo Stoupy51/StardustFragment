@@ -1,2 +1,2 @@
-summon marker ~ 0 ~ {Tags:["SF_ChunkInit","SF_ChunkScan","SF_ChunkGen"]}
-execute as @e[type=marker,tag=SF_ChunkInit] at @s run function stardust:generate/init_2
+summon marker ~ 0 ~ {Tags:["StardustFragment_ChunkInit","StardustFragment_ChunkScan","StardustFragment_ChunkGen"]}
+execute as @e[type=marker,tag=StardustFragment_ChunkInit] at @s run function stardust:generate/init_2

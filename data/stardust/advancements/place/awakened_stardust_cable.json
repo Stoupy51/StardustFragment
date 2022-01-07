@@ -5,7 +5,7 @@
 			"conditions": {
 				"item": {
 					"items": ["minecraft:player_head"],
-					"nbt": "{SF_AwakenedStardustCable:1b}"
+					"nbt": "{StardustFragment_AwakenedStardustCable:1b}"
 				}
 			}
 		}

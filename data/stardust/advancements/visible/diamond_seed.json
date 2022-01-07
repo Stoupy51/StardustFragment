@@ -21,7 +21,7 @@
 			"conditions": {
 				"item": {
 					"items": ["minecraft:player_head"],
-					"nbt": "{SF_DiamondSeed:1b}"
+					"nbt": "{StardustFragment_DiamondSeed:1b}"
 				}
 			}
 		}

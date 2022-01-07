@@ -2,4 +2,4 @@ data modify entity @s DeathLootTable set value "stardust:entities/celestial_dime
 attribute @s minecraft:generic.attack_damage modifier add 1-1-1-1-1 "1" 2 multiply_base
 attribute @s minecraft:generic.max_health modifier add 1-1-1-1-2 "2" 2 multiply_base
 data modify entity @s Health set value 2048
-tag @s add SF_CelestialDim
+tag @s add StardustFragment_CelestialDim

@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:barrel"],
-						"nbt": "{SF_Quarry:1b}"
+						"nbt": "{StardustFragment_Quarry:1b}"
 					}
 				]
 			}

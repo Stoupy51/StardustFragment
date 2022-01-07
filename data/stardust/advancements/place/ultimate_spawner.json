@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SF_UltimateSpawner:1b}"
+					"nbt": "{StardustFragment_UltimateSpawner:1b}"
 				}
 			}
 		}

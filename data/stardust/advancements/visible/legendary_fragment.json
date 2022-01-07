@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:command_block"],
-						"nbt": "{SF_LegendaryFragment:1b}"
+						"nbt": "{StardustFragment_LegendaryFragment:1b}"
 					}
 				]
 			}

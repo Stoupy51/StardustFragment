@@ -2,5 +2,5 @@ data modify entity @s DeathLootTable set value "stardust:entities/dungeon_dimens
 attribute @s generic.attack_damage modifier add 1-1-1-1-1 "1" 2 multiply_base
 attribute @s generic.max_health modifier add 1-1-1-1-2 "2" 4 multiply_base
 data modify entity @s Health set value 2048
-team join SF_Stardust @s
-tag @s add SF_DungeonDim
+team join StardustFragment_Stardust @s
+tag @s add StardustFragment_DungeonDim

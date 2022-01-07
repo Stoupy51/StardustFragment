@@ -1,3 +1,3 @@
-execute if score @s SF_Qz1 < @s SF_Qz2 run scoreboard players add @s SF_Qz 1
-execute if score @s SF_Qz1 > @s SF_Qz2 run scoreboard players remove @s SF_Qz 1
-scoreboard players operation @s SF_Qy = @s SF_Qy1
+execute if score @s StardustFragment_Qz1 < @s StardustFragment_Qz2 run scoreboard players add @s StardustFragment_Qz 1
+execute if score @s StardustFragment_Qz1 > @s StardustFragment_Qz2 run scoreboard players remove @s StardustFragment_Qz 1
+scoreboard players operation @s StardustFragment_Qy = @s StardustFragment_Qy1

@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:iron_pickaxe"],
-						"nbt": "{SF_ReinforcedPickaxe:1b}"
+						"nbt": "{StardustFragment_ReinforcedPickaxe:1b}"
 					}
 				]
 			}

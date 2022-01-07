@@ -25,7 +25,3 @@ Here is a small list of features:
 Credits :
 - Resource Pack : Me, Resnox, fabien5525
 - Base Quarry System : AirDox
-
-# Datapack rules applied for compabilities :
-Always name your scores and tags with a unique prefix to avoid Datapacks problems,
-for Energy Flux I use "EF_", "SE_" for SimplEnergy, and "SF_" for Stardust Fragment.

@@ -1,2 +1,2 @@
-scoreboard players operation Temp SF_Data += @s energy.storage
-scoreboard players add Count SF_Data 1
+scoreboard players operation Temp StardustFragment_Data += @s energy.storage
+scoreboard players add Count StardustFragment_Data 1

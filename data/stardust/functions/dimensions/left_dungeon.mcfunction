@@ -1,2 +1,2 @@
-tag @s remove SF_IsInDungeon
+tag @s remove StardustFragment_IsInDungeon
 gamemode survival @s[gamemode=adventure]

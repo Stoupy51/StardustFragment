@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SF_TripleCompressedCobblestone:1b}"
+					"nbt": "{StardustFragment_TripleCompressedCobblestone:1b}"
 				}
 			}
 		}

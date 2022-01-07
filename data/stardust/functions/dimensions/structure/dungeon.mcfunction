@@ -1,29 +1,29 @@
-scoreboard players set DungeonBuild SF_Data 0
-execute store success score Temp SF_Data run setblock -3 63 -106 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-3_63_-106",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock -5 44 -43 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-5_44_-43",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock -8 56 -83 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-8_56_-83",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock -19 54 -15 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-19_54_-15",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 31 65 -118 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_31_65_-118",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 36 141 -76 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_36_141_-76",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 51 67 -147 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_51_67_-147",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 57 123 4 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_57_123_4",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 63 143 -77 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_63_143_-77",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 72 68 -150 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_72_68_-150",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 108 111 -35 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_108_111_-35",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
-execute store success score Temp SF_Data run setblock 131 94 -85 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_131_94_-85",ignoreEntities:0b}
-execute if score Temp SF_Data matches 1 run scoreboard players add DungeonBuild SF_Data 1
+scoreboard players set DungeonBuild StardustFragment_Data 0
+execute store success score Temp StardustFragment_Data run setblock -3 63 -106 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-3_63_-106",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock -5 44 -43 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-5_44_-43",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock -8 56 -83 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-8_56_-83",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock -19 54 -15 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-19_54_-15",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 31 65 -118 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_31_65_-118",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 36 141 -76 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_36_141_-76",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 51 67 -147 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_51_67_-147",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 57 123 4 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_57_123_4",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 63 143 -77 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_63_143_-77",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 72 68 -150 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_72_68_-150",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 108 111 -35 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_108_111_-35",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
+execute store success score Temp StardustFragment_Data run setblock 131 94 -85 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_131_94_-85",ignoreEntities:0b}
+execute if score Temp StardustFragment_Data matches 1 run scoreboard players add DungeonBuild StardustFragment_Data 1
 
-execute if score DungeonBuild SF_Data matches 12 run function stardust:dimensions/structure/dungeon_build
-execute unless score DungeonBuild SF_Data matches 12 run tellraw @a {"text":"Stardust Fragment Error: The Stardust Dungeon couldn't be load. Something blocked the '/forceload' command in stardust:dungeon","italic":false,"color":"red"}
-scoreboard players reset DungeonBuild SF_Data
+execute if score DungeonBuild StardustFragment_Data matches 12 run function stardust:dimensions/structure/dungeon_build
+execute unless score DungeonBuild StardustFragment_Data matches 12 run tellraw @a {"text":"Stardust Fragment Error: The Stardust Dungeon couldn't be load. Something blocked the '/forceload' command in stardust:dungeon","italic":false,"color":"red"}
+scoreboard players reset DungeonBuild StardustFragment_Data

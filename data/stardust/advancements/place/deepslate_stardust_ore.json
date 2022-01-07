@@ -5,7 +5,7 @@
 			"conditions": {
 				"block": "minecraft:barrel",
 				"item": {
-					"nbt": "{SF_DeepslateStardustOre:1b}"
+					"nbt": "{StardustFragment_DeepslateStardustOre:1b}"
 				}
 			}
 		}

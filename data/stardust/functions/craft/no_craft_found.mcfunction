@@ -1,3 +1,3 @@
-scoreboard players set @s SF_Data 2011929
-scoreboard players set @s SF_X 0
-tag @s add SF_FoundCraft
+scoreboard players set @s StardustFragment_Data 2011929
+scoreboard players set @s StardustFragment_X 0
+tag @s add StardustFragment_FoundCraft

@@ -22,7 +22,7 @@
 				"items": [
 					{
 						"items": ["minecraft:warped_fungus_on_a_stick"],
-						"nbt": "{SF_TravelStaff:1b}"
+						"nbt": "{StardustFragment_TravelStaff:1b}"
 					}
 				]
 			}

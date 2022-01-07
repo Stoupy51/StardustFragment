@@ -6,7 +6,7 @@
 		"settings": {
 			"sea_level": -64,
 			"disable_mob_generation": false,
-			"noiSimplEnergy_caves_enabled": false,
+			"noise_caves_enabled": false,
 			"noodle_caves_enabled": false,
 			"aquifers_enabled": false,
 			"ore_veins_enabled": false,
@@ -59,7 +59,7 @@
 								"true_at_and_below": {
 									"below_top": 5
 								},
-								"falSimplEnergy_at_and_above": {
+								"false_at_and_above": {
 									"below_top": 0
 								}
 							}
@@ -79,7 +79,7 @@
 							"true_at_and_below": {
 								"above_bottom": 0
 							},
-							"falSimplEnergy_at_and_above": {
+							"false_at_and_above": {
 								"above_bottom": 5
 							}
 						},
@@ -126,7 +126,7 @@
 													"sequence": [{
 															"type": "minecraft:condition",
 															"if_true": {
-																"type": "minecraft:noiSimplEnergy_threshold",
+																"type": "minecraft:noise_threshold",
 																"noise": "minecraft:surface",
 																"min_threshold": -0.909,
 																"max_threshold": -0.5454
@@ -134,14 +134,14 @@
 															"then_run": {
 																"type": "minecraft:block",
 																"result_state": {
-																	"Name": "minecraft:coarSimplEnergy_dirt"
+																	"Name": "minecraft:coarse_dirt"
 																}
 															}
 														},
 														{
 															"type": "minecraft:condition",
 															"if_true": {
-																"type": "minecraft:noiSimplEnergy_threshold",
+																"type": "minecraft:noise_threshold",
 																"noise": "minecraft:surface",
 																"min_threshold": -0.1818,
 																"max_threshold": 0.1818
@@ -149,14 +149,14 @@
 															"then_run": {
 																"type": "minecraft:block",
 																"result_state": {
-																	"Name": "minecraft:coarSimplEnergy_dirt"
+																	"Name": "minecraft:coarse_dirt"
 																}
 															}
 														},
 														{
 															"type": "minecraft:condition",
 															"if_true": {
-																"type": "minecraft:noiSimplEnergy_threshold",
+																"type": "minecraft:noise_threshold",
 																"noise": "minecraft:surface",
 																"min_threshold": 0.5454,
 																"max_threshold": 0.909
@@ -164,7 +164,7 @@
 															"then_run": {
 																"type": "minecraft:block",
 																"result_state": {
-																	"Name": "minecraft:coarSimplEnergy_dirt"
+																	"Name": "minecraft:coarse_dirt"
 																}
 															}
 														},
@@ -234,7 +234,7 @@
 													"then_run": {
 														"type": "minecraft:condition",
 														"if_true": {
-															"type": "minecraft:noiSimplEnergy_threshold",
+															"type": "minecraft:noise_threshold",
 															"noise": "minecraft:surface_swamp",
 															"min_threshold": 0,
 															"max_threshold": 1.7976931348623157e+308
@@ -310,7 +310,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": -0.909,
 																		"max_threshold": -0.5454
@@ -325,7 +325,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": -0.1818,
 																		"max_threshold": 0.1818
@@ -340,7 +340,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.5454,
 																		"max_threshold": 0.909
@@ -631,7 +631,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:packed_ice",
 																		"min_threshold": 0,
 																		"max_threshold": 0.2
@@ -646,7 +646,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:ice",
 																		"min_threshold": 0,
 																		"max_threshold": 0.025
@@ -692,7 +692,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:powder_snow",
 																		"min_threshold": 0.35,
 																		"max_threshold": 0.6
@@ -757,7 +757,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:powder_snow",
 																		"min_threshold": 0.35,
 																		"max_threshold": 0.6
@@ -793,7 +793,7 @@
 																	"sequence": [{
 																			"type": "minecraft:condition",
 																			"if_true": {
-																				"type": "minecraft:noiSimplEnergy_threshold",
+																				"type": "minecraft:noise_threshold",
 																				"noise": "minecraft:calcite",
 																				"min_threshold": -0.0125,
 																				"max_threshold": 0.0125
@@ -827,7 +827,7 @@
 																	"sequence": [{
 																			"type": "minecraft:condition",
 																			"if_true": {
-																				"type": "minecraft:noiSimplEnergy_threshold",
+																				"type": "minecraft:noise_threshold",
 																				"noise": "minecraft:gravel",
 																				"min_threshold": -0.05,
 																				"max_threshold": 0.05
@@ -879,7 +879,7 @@
 																"then_run": {
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.12121212121212122,
 																		"max_threshold": 1.7976931348623157e+308
@@ -960,7 +960,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.21212121212121213,
 																		"max_threshold": 1.7976931348623157e+308
@@ -975,7 +975,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": -0.06060606060606061,
 																		"max_threshold": 1.7976931348623157e+308
@@ -983,7 +983,7 @@
 																	"then_run": {
 																		"type": "minecraft:block",
 																		"result_state": {
-																			"Name": "minecraft:coarSimplEnergy_dirt"
+																			"Name": "minecraft:coarse_dirt"
 																		}
 																	}
 																}
@@ -1003,7 +1003,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.24242424242424243,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1038,7 +1038,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.12121212121212122,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1053,7 +1053,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": -0.12121212121212122,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1130,7 +1130,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.21212121212121213,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1138,14 +1138,14 @@
 																	"then_run": {
 																		"type": "minecraft:block",
 																		"result_state": {
-																			"Name": "minecraft:coarSimplEnergy_dirt"
+																			"Name": "minecraft:coarse_dirt"
 																		}
 																	}
 																},
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": -0.11515151515151514,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1311,7 +1311,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:packed_ice",
 																		"min_threshold": -0.5,
 																		"max_threshold": 0.2
@@ -1326,7 +1326,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:ice",
 																		"min_threshold": -0.0625,
 																		"max_threshold": 0.025
@@ -1372,7 +1372,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:powder_snow",
 																		"min_threshold": 0.45,
 																		"max_threshold": 0.58
@@ -1421,7 +1421,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:powder_snow",
 																		"min_threshold": 0.45,
 																		"max_threshold": 0.58
@@ -1457,7 +1457,7 @@
 																	"sequence": [{
 																			"type": "minecraft:condition",
 																			"if_true": {
-																				"type": "minecraft:noiSimplEnergy_threshold",
+																				"type": "minecraft:noise_threshold",
 																				"noise": "minecraft:calcite",
 																				"min_threshold": -0.0125,
 																				"max_threshold": 0.0125
@@ -1491,7 +1491,7 @@
 																	"sequence": [{
 																			"type": "minecraft:condition",
 																			"if_true": {
-																				"type": "minecraft:noiSimplEnergy_threshold",
+																				"type": "minecraft:noise_threshold",
 																				"noise": "minecraft:gravel",
 																				"min_threshold": -0.05,
 																				"max_threshold": 0.05
@@ -1543,7 +1543,7 @@
 																"then_run": {
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.12121212121212122,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1622,7 +1622,7 @@
 														"then_run": {
 															"type": "minecraft:condition",
 															"if_true": {
-																"type": "minecraft:noiSimplEnergy_threshold",
+																"type": "minecraft:noise_threshold",
 																"noise": "minecraft:surface",
 																"min_threshold": 0.21212121212121213,
 																"max_threshold": 1.7976931348623157e+308
@@ -1648,7 +1648,7 @@
 															"sequence": [{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.24242424242424243,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1683,7 +1683,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": 0.12121212121212122,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1698,7 +1698,7 @@
 																{
 																	"type": "minecraft:condition",
 																	"if_true": {
-																		"type": "minecraft:noiSimplEnergy_threshold",
+																		"type": "minecraft:noise_threshold",
 																		"noise": "minecraft:surface",
 																		"min_threshold": -0.12121212121212122,
 																		"max_threshold": 1.7976931348623157e+308
@@ -1882,7 +1882,7 @@
 							"true_at_and_below": {
 								"absolute": 0
 							},
-							"falSimplEnergy_at_and_above": {
+							"false_at_and_above": {
 								"absolute": 8
 							}
 						},

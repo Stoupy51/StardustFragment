@@ -1,5 +1,5 @@
 #Replace the item
-	data modify entity @e[type=item,nbt={Item:{id:"minecraft:barrel"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:items 2013399
+	data modify entity @e[type=item,nbt={Item:{id:"minecraft:barrel"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:items all.2013399
 
 #Kill undesired items
 	scoreboard players operation CustomModelData SF_Data = @s SF_Data

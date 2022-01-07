@@ -21,4 +21,4 @@
 	execute as @s[tag=!SF_FoundCraft] if block ~ ~ ~ barrel{Items:[{Slot:2b,tag:{SF_AwakenedStardust:1b}},{Slot:3b,tag:{SF_AwakenedStardust:1b}},{Slot:4b,tag:{SF_AwakenedStardust:1b}},{Slot:11b,tag:{SF_AwakenedStardust:1b}},{Slot:12b,tag:{SF_StardustFrame:1b}},{Slot:13b,tag:{SF_AwakenedStardust:1b}},{Slot:20b,tag:{SF_AwakenedStardustBlock:1b}},{Slot:21b,tag:{SF_AwakenedStardustBlock:1b}},{Slot:22b,tag:{SF_AwakenedStardustBlock:1b}}]} run function stardust:craft/items/awakened/awakened_stardust_frame
 
 #No Craft Found
-	execute as @s[tag=!SF_FoundCraft] unless data storage stardust:items Crafting[{Slot:16b,tag:{SF_AwakenedStardust:1b}}] run function stardust:craft/no_craft_found
+	execute as @s[tag=!SF_FoundCraft] unless data storage stardust:items all.Crafting[{Slot:16b,tag:{SF_AwakenedStardust:1b}}] run function stardust:craft/no_craft_found

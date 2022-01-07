@@ -1,4 +1,4 @@
-data modify block ~ ~ ~ Items append from storage stardust:items 2013017
+data modify block ~ ~ ~ Items append from storage stardust:items all.2013017
 scoreboard players set @s SF_Data 2013017
 tag @s add SF_WaitingCraft
 tag @s add SF_FoundCraft

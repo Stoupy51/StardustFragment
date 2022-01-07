@@ -12,8 +12,10 @@
 	execute as @a[tag=!SF_FirstJoin] at @s run function stardust:first_join
 	execute as @a[scores={SF_Wormhole=1..}] run function stardust:opti/wormhole_potion/use
 	execute as @a[tag=SF_NoCooldown] run attribute @s minecraft:generic.attack_speed base set 2000
-	execute as @a at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
+	execute as @a[tag=!global.ignore.gui] at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
 	execute at @a run forceload add -29999999 2013
+	execute at @a positioned -29999999 -64 2013 unless entity @e[tag=SE_Forceload,dx=15,dy=319,dz=15] run summon marker ~ ~ ~ {Tags:["SE_Forceload","global.forceload"]}
+
 
 #Boss
 	execute if score UltimateBoss SF_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second

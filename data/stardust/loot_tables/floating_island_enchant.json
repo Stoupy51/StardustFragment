@@ -74,7 +74,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013256.tag",
+									"source": "all.2013256.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -108,7 +108,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013200.tag",
+									"source": "all.2013200.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -122,27 +122,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013201.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							],
-							"conditions": [
-								{
-									"condition": "minecraft:random_chance",
-									"chance": 0.15
-								}
-							]
-						},
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:items"
-							},
-							"ops": [
-								{
-									"source": "2013202.tag",
+									"source": "all.2013201.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -162,7 +142,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013203.tag",
+									"source": "all.2013202.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -182,7 +162,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013204.tag",
+									"source": "all.2013203.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -202,7 +182,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013205.tag",
+									"source": "all.2013204.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -222,7 +202,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013206.tag",
+									"source": "all.2013205.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -242,7 +222,27 @@
 							},
 							"ops": [
 								{
-									"source": "2013207.tag",
+									"source": "all.2013206.tag",
+									"target": "{}",
+									"op": "merge"
+								}
+							],
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance",
+									"chance": 0.15
+								}
+							]
+						},
+						{
+							"function": "minecraft:copy_nbt",
+							"source": {
+								"type": "minecraft:storage",
+								"source": "stardust:items"
+							},
+							"ops": [
+								{
+									"source": "all.2013207.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -269,7 +269,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013172.tag",
+									"source": "all.2013172.tag",
 									"target": "{}",
 									"op": "merge"
 								}

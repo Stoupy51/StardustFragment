@@ -29,7 +29,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013004.tag",
+									"source": "all.2013004.tag",
 									"target": "{}",
 									"op": "merge"
 								}
@@ -56,7 +56,7 @@
 							},
 							"ops": [
 								{
-									"source": "2013002.tag",
+									"source": "all.2013002.tag",
 									"target": "{}",
 									"op": "merge"
 								}

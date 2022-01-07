@@ -3,6 +3,7 @@ execute as @s[tag=SF_SilkTouchModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:
 execute as @s[tag=!SF_FortuneModule,tag=!SF_SilkTouchModule] run setblock ~ ~ ~ minecraft:air destroy
 setblock ~ ~ ~ minecraft:air
 execute if entity @e[type=glow_item_frame,tag=lthc.destroyable,distance=..1,limit=1] run function lthc.svext:custom_blocks/run
+execute if entity @e[type=glow_item_frame,tag=lthc.mage.destroyable,distance=..1,limit=1] run function lthc.mage:block_object_life/check
 execute if entity @e[type=#energy:valid_block_entities,tag=SF_Destroyer,distance=..1,limit=1] run function stardust:destroy/all
 execute if entity @e[type=#energy:valid_block_entities,tag=SE_Destroyer,distance=..1,limit=1] run function simplenergy:destroy/all
 tag @s add SF_QuarryStock

@@ -10,7 +10,7 @@ data modify block ~ ~ ~ Items set from storage stardust:items all.Crafting
 
 tag @s remove StardustFragment_WaitingCraft
 tag @s remove StardustFragment_FoundCraft
-item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,Stoupy_CustomItem:1b,StardustFragment_CustomItem:1b,SimplEnergy_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
+item replace block ~ ~ ~ container.16 with minecraft:cobblestone{CustomModelData:2011929,CustomItem:1b,StardustFragment_CustomItem:1b,SimplEnergy_CustomTextureItem:1b,display:{Name:'[{"text":""}]'}}
 scoreboard players set @s StardustFragment_Data 0
 scoreboard players set @s StardustFragment_X 1
 

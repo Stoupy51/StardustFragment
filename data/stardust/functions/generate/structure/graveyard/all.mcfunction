@@ -4,7 +4,7 @@ scoreboard players operation Rotation StardustFragment_Data %= 4 SimplEnergy_Dat
 tp @s ~ 90 ~
 
 #Find the perfect pos
-	execute as @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/graveyard/go_down
+	execute if entity @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/graveyard/go_down
 	execute at @s unless block ~ ~ ~ grass_block run scoreboard players set Temp StardustFragment_Data -1
 
 #Choose a Structure

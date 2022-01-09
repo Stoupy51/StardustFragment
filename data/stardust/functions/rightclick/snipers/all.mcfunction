@@ -1,20 +1,20 @@
 tag @s add StardustFragment_Shooter
 
 #Check what Sniper is it and set Base Damage
-	execute as @s[nbt={SelectedItem:{tag:{StardustFragment_StardustSniper:1b}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[StardustFragment_ToThrow,StardustFragment_Bullet,StardustFragment_StardustSniper],Age:0,Duration:0,Radius:0f}
-	execute as @s[nbt={SelectedItem:{tag:{StardustFragment_AwakenedStardustSniper:1b}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[StardustFragment_ToThrow,StardustFragment_Bullet,StardustFragment_AwakenedStardustSniper],Age:0,Duration:0,Radius:0f}
-	execute as @s[nbt={SelectedItem:{tag:{StardustFragment_UltimateSniper:1b}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[StardustFragment_ToThrow,StardustFragment_Bullet,StardustFragment_UltimateSniper],Age:0,Duration:0,Radius:0f}
+	execute if entity @s[nbt={SelectedItem:{tag:{StardustFragment_StardustSniper:1b}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[StardustFragment_ToThrow,StardustFragment_Bullet,StardustFragment_StardustSniper],Age:0,Duration:0,Radius:0f}
+	execute if entity @s[nbt={SelectedItem:{tag:{StardustFragment_AwakenedStardustSniper:1b}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[StardustFragment_ToThrow,StardustFragment_Bullet,StardustFragment_AwakenedStardustSniper],Age:0,Duration:0,Radius:0f}
+	execute if entity @s[nbt={SelectedItem:{tag:{StardustFragment_UltimateSniper:1b}}}] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[StardustFragment_ToThrow,StardustFragment_Bullet,StardustFragment_UltimateSniper],Age:0,Duration:0,Radius:0f}
 
 	execute if entity @e[type=area_effect_cloud,tag=StardustFragment_StardustSniper,limit=1] run scoreboard players set BulletDamage StardustFragment_Data 5
 	execute if entity @e[type=area_effect_cloud,tag=StardustFragment_AwakenedStardustSniper,limit=1] run scoreboard players set BulletDamage StardustFragment_Data 50
 	execute if entity @e[type=area_effect_cloud,tag=StardustFragment_UltimateSniper,limit=1] run scoreboard players set BulletDamage StardustFragment_Data 130
 
 #Check bullet and add damage
-	execute as @s[nbt={Inventory:[{id:"minecraft:iron_nugget"}]}] run scoreboard players set Bullet StardustFragment_Data 1
-	execute as @s[nbt={Inventory:[{id:"minecraft:gold_nugget"}]}] run scoreboard players set Bullet StardustFragment_Data 2
-	execute as @s[nbt={Inventory:[{tag:{StardustFragment_StardustFragment:1b}}]}] run scoreboard players set Bullet StardustFragment_Data 3
-	execute as @s[nbt={Inventory:[{tag:{StardustFragment_AwakenedStardust:1b}}]}] run scoreboard players set Bullet StardustFragment_Data 4
-	execute as @s[nbt={Inventory:[{tag:{StardustFragment_UltimateBullet:1b}}]}] run scoreboard players set Bullet StardustFragment_Data 5
+	execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_nugget"}]}] run scoreboard players set Bullet StardustFragment_Data 1
+	execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_nugget"}]}] run scoreboard players set Bullet StardustFragment_Data 2
+	execute if entity @s[nbt={Inventory:[{tag:{StardustFragment_StardustFragment:1b}}]}] run scoreboard players set Bullet StardustFragment_Data 3
+	execute if entity @s[nbt={Inventory:[{tag:{StardustFragment_AwakenedStardust:1b}}]}] run scoreboard players set Bullet StardustFragment_Data 4
+	execute if entity @s[nbt={Inventory:[{tag:{StardustFragment_UltimateBullet:1b}}]}] run scoreboard players set Bullet StardustFragment_Data 5
 	execute if score Bullet StardustFragment_Data matches 1 run scoreboard players add BulletDamage StardustFragment_Data 5
 	execute if score Bullet StardustFragment_Data matches 1 run clear @s minecraft:iron_nugget 1
 	execute if score Bullet StardustFragment_Data matches 2 run scoreboard players add BulletDamage StardustFragment_Data 10
@@ -26,7 +26,7 @@ tag @s add StardustFragment_Shooter
 	execute if score Bullet StardustFragment_Data matches 5 run scoreboard players add BulletDamage StardustFragment_Data 2048
 	execute if score Bullet StardustFragment_Data matches 5 run clear @s minecraft:command_block{StardustFragment_UltimateBullet:1b} 1
 
-execute as @s[gamemode=creative] unless score Bullet StardustFragment_Data matches 1.. run scoreboard players set Bullet StardustFragment_Data 1
+execute if entity @s[gamemode=creative] unless score Bullet StardustFragment_Data matches 1.. run scoreboard players set Bullet StardustFragment_Data 1
 tp @e[type=area_effect_cloud,tag=StardustFragment_ToThrow,limit=1] @s
 execute as @e[type=area_effect_cloud,tag=StardustFragment_ToThrow,limit=1] run tp @s ^ ^1.55 ^
 execute if predicate stardust:sneaking as @e[type=area_effect_cloud,tag=StardustFragment_ToThrow,limit=1] at @s run tp @s ~ ~-0.3 ~

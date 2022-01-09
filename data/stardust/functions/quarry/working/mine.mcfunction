@@ -1,6 +1,6 @@
-execute as @s[tag=StardustFragment_FortuneModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:fortune",lvl:3}]}
-execute as @s[tag=StardustFragment_SilkTouchModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
-execute as @s[tag=!StardustFragment_FortuneModule,tag=!StardustFragment_SilkTouchModule] run setblock ~ ~ ~ minecraft:air destroy
+execute if entity @s[tag=StardustFragment_FortuneModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:fortune",lvl:3}]}
+execute if entity @s[tag=StardustFragment_SilkTouchModule] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
+execute if entity @s[tag=!StardustFragment_FortuneModule,tag=!StardustFragment_SilkTouchModule] run setblock ~ ~ ~ minecraft:air destroy
 setblock ~ ~ ~ minecraft:air
 execute if entity @e[type=glow_item_frame,tag=lthc.destroyable,distance=..1,limit=1] run function lthc.svext:custom_blocks/run
 execute if entity @e[type=glow_item_frame,tag=lthc.mage.destroyable,distance=..1,limit=1] run function lthc.mage:block_object_life/check

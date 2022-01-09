@@ -50,6 +50,7 @@ scoreboard players set 80 SimplEnergy_Data 80
 scoreboard players set 20 SimplEnergy_Data 20
 scoreboard players set 10 SimplEnergy_Data 10
 scoreboard players set 4 SimplEnergy_Data 4
+scoreboard players set 3 SimplEnergy_Data 3
 scoreboard players set -10 SimplEnergy_Data -10
 scoreboard players set -1 SimplEnergy_Data -1
 

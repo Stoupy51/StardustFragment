@@ -1,7 +1,5 @@
-#execute as @e as @e[predicate=simplenergy:check_chunk_loaded] run scoreboard players add Temp StardustFragment_Data 0
-#execute as @e as @e if blocks ~ ~ ~ ~ ~ ~ ~ ~ ~ all run scoreboard players add Temp StardustFragment_Data 0
-#execute as @e[predicate=simplenergy:check_chunk_loaded] run scoreboard players add Temp StardustFragment_Data 0
-#execute as @e if blocks ~ ~ ~ ~ ~ ~ ~ ~ ~ all run scoreboard players add Temp StardustFragment_Data 0
+#execute as @e as @s run scoreboard players add Temp StardustFragment_Data 0
+#execute as @e if entity @s run scoreboard players add Temp StardustFragment_Data 0
 #Others 1
 	execute if score StardustPillar StardustFragment_Data matches 1.. as @e[type=wither,tag=StardustFragment_StardustPillar,tag=StardustFragment_ShieldOn] run data modify entity @s NoAI set value 1b
 

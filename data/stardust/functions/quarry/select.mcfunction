@@ -1,4 +1,4 @@
-execute as @s[tag=!StardustFragment_QuarryReset] run function stardust:quarry/reset
+execute if entity @s[tag=!StardustFragment_QuarryReset] run function stardust:quarry/reset
 tag @s add StardustFragment_QuarryReset
 
 function stardust:quarry/calcsize

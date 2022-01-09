@@ -3,7 +3,7 @@ execute store result score Rotation StardustFragment_Data run data get entity @s
 scoreboard players operation Rotation StardustFragment_Data %= 4 SimplEnergy_Data
 
 #Find the perfect pos
-	execute as @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/water_well/go_down
+	execute if entity @s[distance=..100] if block ~ ~ ~ #stardust:non_solid positioned ~ ~-1 ~ run function stardust:generate/structure/water_well/go_down
 	execute at @s unless block ~ ~ ~ grass_block run scoreboard players set Temp StardustFragment_Data -1
 
 #Choose a Structure

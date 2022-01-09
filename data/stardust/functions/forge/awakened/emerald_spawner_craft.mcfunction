@@ -2,7 +2,7 @@
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{StardustFragment_StardustEssence:1b}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{StardustFragment_AwakenedStardust:1b}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,id:"minecraft:emerald_block"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,tag:{StardustFragment_SeptupleCompressedCobblestone:1b}}},limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:1b,tag:{ctc:{id:"septuple_compressed_cobblestone"}}}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted
 
 #SpawnItem

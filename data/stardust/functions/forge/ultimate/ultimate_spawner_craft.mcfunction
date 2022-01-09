@@ -5,7 +5,7 @@
 #Kill materials + Sound + Visual
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{StardustFragment_EmeraldSpawner:1b}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{StardustFragment_UltimateCore:1b}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,tag:{StardustFragment_OctupleCompressedCobblestone:1b}}},limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:1b,tag:{ctc:{id:"octuple_compressed_cobblestone"}}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{StardustFragment_StardustDungeonKey:1b}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{StardustFragment_StardustPillar:1b}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{StardustFragment_StardustFragment:1b}}},limit=1,sort=nearest,distance=..1]

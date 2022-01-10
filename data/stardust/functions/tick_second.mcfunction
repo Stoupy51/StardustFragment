@@ -14,7 +14,6 @@
 	execute as @a[tag=StardustFragment_NoCooldown] run attribute @s minecraft:generic.attack_speed base set 2000
 	execute as @a[tag=!global.ignore.gui] at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
 	execute at @a run forceload add -29999999 2013
-	execute at @a positioned -29999999 -64 2013 unless entity @e[tag=SimplEnergy_Forceload,dx=15,dy=319,dz=15] run summon marker ~ ~ ~ {Tags:["SimplEnergy_Forceload","global.forceload"]}
 
 
 #Boss

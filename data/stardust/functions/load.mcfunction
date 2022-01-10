@@ -34,7 +34,8 @@ team modify StardustFragment_Blue color blue
 gamerule commandBlockOutput false
 execute in minecraft:overworld run forceload add 0 0
 # Check region
-execute positioned 0 -64 0 unless entity @e[tag=SimplEnergy_Forceload,dx=15,dy=319,dz=15] run summon marker ~ ~ ~ {Tags:["SimplEnergy_Forceload","global.forceload"]}
+execute unless score ForceLoaded StardustFragment_Data matches 1 run summon marker 0 -64 0 {Tags:["StardustFragment_Forceload","global.forceload"]}
+scoreboard players set ForceLoaded StardustFragment_Data 1
 
 execute unless score DungeonBuilt StardustFragment_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score UltimateBuilt StardustFragment_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75

@@ -13,7 +13,7 @@ execute unless score SimplEnergy_Missing StardustFragment_Data matches 1 unless 
 scoreboard players reset SimplEnergy_Loaded StardustFragment_Data
 scoreboard players reset SimplEnergy_Missing StardustFragment_Data
 
-execute unless score EndBuilt StardustFragment_Data matches 1 as @r at @s run function stardust:dimensions/end/all
+execute unless score EndBuilt StardustFragment_Data matches 2 as @r at @s run function stardust:dimensions/end/all
 execute unless score DungeonBuilt StardustFragment_Data matches 1 in stardust:dungeon run function stardust:dimensions/structure/dungeon
 execute unless score UltimateBuilt StardustFragment_Data matches 1 in stardust:ultimate run function stardust:dimensions/structure/ultimate
 execute unless entity @a run schedule function stardust:post_load 1t replace

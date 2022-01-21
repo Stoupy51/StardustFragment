@@ -1,2 +1,2 @@
-execute in minecraft:the_end run tp 0 255 0
+execute in minecraft:the_end run tp 600 255 600
 scoreboard players reset @s StardustFragment_Data

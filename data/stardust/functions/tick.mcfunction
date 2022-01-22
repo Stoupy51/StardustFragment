@@ -1,5 +1,5 @@
-#execute as @e as @s run scoreboard players add Temp StardustFragment_Data 0
-#execute as @e if entity @s run scoreboard players add Temp StardustFragment_Data 0
+#execute as @e as @a if data entity @s SelectedItem.tag.StardustFragment_QuarryConfigurator
+#execute as @e as @a if data entity @s {SelectedItem:{tag:{StardustFragment_QuarryConfigurator:1b}}}
 #Others 1
 	execute if score StardustPillar StardustFragment_Data matches 1.. as @e[type=wither,tag=StardustFragment_StardustPillar,tag=StardustFragment_ShieldOn] run data modify entity @s NoAI set value 1b
 

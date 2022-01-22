@@ -1,6 +1,7 @@
 
 scoreboard objectives add SimplEnergy_Data dummy
 scoreboard objectives add load.status dummy
+scoreboard objectives add StardustFragment_AdvancedStats dummy
 scoreboard objectives add StardustFragment_StardustID dummy
 scoreboard objectives add StardustFragment_Data dummy
 scoreboard objectives add StardustFragment_X dummy

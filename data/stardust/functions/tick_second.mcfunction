@@ -19,7 +19,7 @@
 #Boss
 	execute if score UltimateBoss StardustFragment_Data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second
 	execute if score StardustPillar StardustFragment_Data matches 1.. as @e[type=wither,tag=StardustFragment_StardustPillar] at @s run function stardust:boss/stardust_pillar/tick_second
-	execute if score StardustPillar StardustFragment_Data matches 1.. as @e[type=armor_stand,tag=StardustFragment_StardustPillarTick] at @s unless entity @e[type=wither,tag=StardustFragment_StardustPillar,distance=..2.75] run function stardust:boss/stardust_pillar/defeated
+	execute if score StardustPillar StardustFragment_Data matches 1.. as @e[type=marker,tag=StardustFragment_StardustPillarTick] at @s unless entity @e[type=wither,tag=StardustFragment_StardustPillar,distance=..3] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=wolf,tag=StardustFragment_StoupArmy] at @s run function stardust:boss/stouparmy
 	scoreboard players reset MaxCount StardustFragment_Data
 

@@ -5,7 +5,7 @@ scoreboard players set tick_2 StardustFragment_Data 0
 #Others
 	execute as @e[type=glow_item_frame,tag=StardustFragment_WorkingPortal] run function stardust:visual/portal_particules
 	execute as @e[type=glow_item_frame,tag=StardustFragment_Quarry] at @s run function stardust:quarry/gui/all
-	execute if score StardustPillar StardustFragment_Data matches 1.. at @e[type=armor_stand,tag=StardustFragment_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 20
+	execute if score StardustPillar StardustFragment_Data matches 1.. at @e[type=marker,tag=StardustFragment_StardustPillarTick] run particle dust 0 0 255 1 ~ ~1 ~ 2 2 2 0 20
 	execute if score SuperCraft StardustFragment_Data matches 1.. as @e[type=item,scores={StardustFragment_SCraft=0..}] at @s run function stardust:forge/particles
 
 #Players

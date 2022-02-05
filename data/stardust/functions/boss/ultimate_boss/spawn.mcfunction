@@ -8,9 +8,10 @@ data modify entity @s ActiveEffects set value [{Id:11,Amplifier:3,Duration:21474
 tag @s add StardustFragment_UltimateBoss
 tag @s add StardustFragment_Dragon
 team join StardustFragment_Stardust @s
-summon minecraft:ender_dragon ~ ~-20 ~ {Health:1024,Attributes:[{Name:"generic.max_health",Base:1024}],Silent:1,Tags:["StardustFragment_Dragon"],Team:"StardustFragment_Stardust"}
-summon minecraft:ender_dragon ~ ~-40 ~ {Health:1024,Attributes:[{Name:"generic.max_health",Base:1024}],Silent:1,Tags:["StardustFragment_Dragon"],Team:"StardustFragment_Stardust"}
-summon minecraft:ender_dragon ~ ~-60 ~ {Health:1024,Attributes:[{Name:"generic.max_health",Base:1024}],Silent:1,Tags:["StardustFragment_Dragon"],Team:"StardustFragment_Stardust"}
+
+scoreboard players operation Temp StardustFragment_Data = UltimateSlaveCount StardustFragment_Config
+execute if score Temp StardustFragment_Data matches 1.. positioned ~ ~-20 ~ run function stardust:boss/ultimate_boss/summon_slave
+
 tag @e[distance=0..,type=ender_dragon,nbt={Brain:{memories:{}}}] add StardustFragment_Dragon
 execute as @a at @s run playsound minecraft:entity.wither.spawn master @s
 tellraw @a ["",{"text":"[Stardust","italic":false,"color":"dark_aqua"},{"text":"Fragment] ","italic":false,"color":"aqua"},{"text":"The "},{"text":"U","italic":false,"color":"dark_purple"},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" B","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"s","italic":false,"color":"dark_aqua"},{"text":"s","italic":false,"color":"aqua"},{"text":" has been awakened !"}]

@@ -2,6 +2,7 @@
 scoreboard objectives add SimplEnergy_Data dummy
 scoreboard objectives add load.status dummy
 scoreboard objectives add StardustFragment_AdvancedStats dummy
+scoreboard objectives add StardustFragment_Config dummy
 scoreboard objectives add StardustFragment_StardustID dummy
 scoreboard objectives add StardustFragment_Data dummy
 scoreboard objectives add StardustFragment_X dummy
@@ -31,6 +32,9 @@ team add StardustFragment_Red
 team add StardustFragment_Blue
 team modify StardustFragment_Red color red
 team modify StardustFragment_Blue color blue
+
+# Default Config
+execute unless score default_config StardustFragment_Config matches 1 run function stardust:config/default
 
 gamerule commandBlockOutput false
 execute in minecraft:overworld run forceload add 0 0

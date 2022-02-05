@@ -1,4 +1,6 @@
 scoreboard objectives remove StardustFragment_StardustID
+scoreboard objectives remove StardustFragment_AdvancedStats
+scoreboard objectives remove StardustFragment_Config
 scoreboard objectives remove StardustFragment_Data
 scoreboard objectives remove StardustFragment_X
 scoreboard objectives remove StardustFragment_SCraft

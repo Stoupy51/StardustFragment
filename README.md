@@ -1,5 +1,5 @@
 # Stardust Fragment
-[​Join our Energy Datapacks Discord Server here : : https://discord.gg/a2yX6GD4J7]
+[Join our Energy Datapacks Discord Server here : : https://discord.gg/a2yX6GD4J7]
 
 Requires at least SimplEnergy [v1.6.0] : https://github.com/Stoupy51/SimplEnergy
 

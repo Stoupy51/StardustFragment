@@ -31,6 +31,7 @@
 	execute store result entity @s Pos[2] double 0.1 run scoreboard players get PosZ SimplEnergy_Data
 
 #Placing Ore
+	execute at @s if block ~ ~ ~ air positioned ~ ~1 ~ run function simplenergy:generate/air_go_up
 	execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:generate/iron_type
 	execute at @s positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:generate/iron_type
 	execute at @s positioned ~ ~0.5 ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:generate/iron_type

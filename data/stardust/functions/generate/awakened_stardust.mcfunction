@@ -31,7 +31,7 @@
 	execute store result entity @s Pos[2] double 0.1 run scoreboard players get PosZ SimplEnergy_Data
 
 #Placing Ore
-	execute at @s if block ~ ~ ~ air positioned ~ ~1 ~ run function stardust:generate/air_go_up
+	execute at @s if block ~ ~ ~ air positioned ~ ~1 ~ run function simplenergy:generate/air_go_up
 	execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["StardustFragment_Destroyer","StardustFragment_AwakenedStardustOre","StardustFragment_Ore"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"barrel",Count:1b,tag:{CustomModelData:2013024}}}
 	execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run scoreboard players add AwakenedStardustOreCount StardustFragment_AdvancedStats 1
 	execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run setblock ~ ~ ~ minecraft:deepslate_redstone_ore

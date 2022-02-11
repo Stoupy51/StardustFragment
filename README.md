@@ -1,7 +1,7 @@
 # Stardust Fragment
 [Join our Energy Datapacks Discord Server here : : https://discord.gg/a2yX6GD4J7]
 
-Requires at least SimplEnergy [v1.6.0] : https://github.com/Stoupy51/SimplEnergy
+Requires at least SimplEnergy [v1.7.0] : https://github.com/Stoupy51/SimplEnergy
 
 Stardust Fragment trailer : https://www.youtube.com/watch?v=5e_uT9OSwT0
 

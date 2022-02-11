@@ -1,6 +1,6 @@
 #Mobs
-	tp @e[type=ghast,distance=0..] 0 -10000 0
-	execute as @e[type=#stardust:global,tag=!StardustFragment_DungeonDim,distance=0..] run function stardust:mobs/dungeon
+	tp @e[type=ghast,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] 0 -10000 0
+	execute as @e[type=#stardust:global,tag=!StardustFragment_DungeonDim,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] run function stardust:mobs/dungeon
 #Dimensions
 	gamemode adventure @a[gamemode=survival,tag=StardustFragment_IsInDungeon]
 	execute as @a[tag=StardustFragment_IsInDungeon] unless entity @s[nbt={Dimension:"stardust:dungeon"}] run function stardust:dimensions/left_dungeon

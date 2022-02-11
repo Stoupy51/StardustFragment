@@ -24,10 +24,10 @@
 	scoreboard players reset MaxCount StardustFragment_Data
 
 #Mobs spawn
-	execute in stardust:celestial as @e[type=#stardust:global,tag=!StardustFragment_CelestialDim,distance=0..] at @s run function stardust:mobs/celestial
-	execute in stardust:stardust as @e[type=#stardust:global,tag=!StardustFragment_StardustDim,distance=0..] at @s run function stardust:mobs/stardust
-	execute in stardust:ultimate as @e[type=ender_dragon,tag=!StardustFragment_Dragon,distance=0..,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
-	execute in stardust:stardust as @e[type=bat,distance=0..] at @s run function stardust:mobs/stardust_bat
+	execute in stardust:celestial as @e[type=#stardust:global,tag=!StardustFragment_CelestialDim,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/celestial
+	execute in stardust:stardust as @e[type=#stardust:global,tag=!StardustFragment_StardustDim,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/stardust
+	execute in stardust:ultimate as @e[type=ender_dragon,tag=!StardustFragment_Dragon,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
+	execute in stardust:stardust as @e[type=bat,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/stardust_bat
 
 #Dimensions
 	execute as @e[type=glow_item_frame,tag=StardustFragment_Portal] run function stardust:work/portals

@@ -10,10 +10,10 @@ scoreboard players set tick_2 StardustFragment_Data 0
 
 #Players
 	execute as @a run function stardust:dimensions/transitions
-	execute in stardust:celestial as @e[distance=0..,predicate=stardust:transition_down] at @s run function stardust:dimensions/transition_down
-	execute in stardust:stardust as @e[distance=0..,predicate=stardust:transition_down] at @s run function stardust:dimensions/transition_down
+	execute in stardust:celestial as @e[distance=0..,predicate=stardust:transition_down,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:dimensions/transition_down
+	execute in stardust:stardust as @e[distance=0..,predicate=stardust:transition_down,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:dimensions/transition_down
 	effect give @a[nbt={SelectedItem:{tag:{StardustFragment_LegendarySword:1b}}}] minecraft:jump_boost 1 3 true
-	execute at @a[nbt={Inventory:[{Slot:-106b,tag:{StardustFragment_ItemMagnet:1b}}]}] run tp @e[type=item,distance=..4] ~ ~ ~
+	execute at @a[nbt={Inventory:[{Slot:-106b,tag:{StardustFragment_ItemMagnet:1b}}]}] run tp @e[type=item,distance=..4,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] ~ ~ ~
 	execute at @a[nbt={SelectedItem:{tag:{StardustFragment_TravelStaff:1b}}},scores={StardustFragment_Data=1..}] run particle minecraft:portal ~ ~ ~ 1 1 1 0 100
 
 #Machines Visuals & Work

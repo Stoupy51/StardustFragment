@@ -1,68 +1,56 @@
 [
 	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"min": 500
+		"condition": "minecraft:inverted",
+		"term": {
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"y": {
+						"min": -35,
+						"max": 500
+					}
 				}
-			},
-			"dimension": "minecraft:overworld"
+			}
 		}
 	},
 	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"min": 500
+		"condition": "minecraft:alternative",
+		"terms": [
+			{
+				"condition": "minecraft:location_check",
+				"predicate": {
+					"position": {
+						"y": {
+							"min": 500
+						}
+					},
+					"dimension": "minecraft:overworld"
 				}
 			},
-			"dimension": "stardust:celestial"
-		}
-	},
-	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"max": -35
+			{
+				"condition": "minecraft:location_check",
+				"predicate": {
+					"dimension": "stardust:celestial"
 				}
 			},
-			"dimension": "stardust:celestial"
-		}
-	},
-	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"max": -35
+			{
+				"condition": "minecraft:location_check",
+				"predicate": {
+					"dimension": "stardust:stardust"
 				}
 			},
-			"dimension": "stardust:stardust"
-		}
-	},
-	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"max": -35
+			{
+				"condition": "minecraft:location_check",
+				"predicate": {
+					"dimension": "stardust:dungeon"
 				}
 			},
-			"dimension": "stardust:dungeon"
-		}
-	},
-	{
-		"condition": "minecraft:location_check",
-		"predicate": {
-			"position": {
-				"y": {
-					"max": -35
+			{
+				"condition": "minecraft:location_check",
+				"predicate": {
+					"dimension": "stardust:ultimate"
 				}
-			},
-			"dimension": "stardust:ultimate"
-		}
+			}
+		]
 	}
 ]

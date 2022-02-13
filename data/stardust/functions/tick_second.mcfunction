@@ -17,7 +17,7 @@
 	scoreboard players reset MaxCount StardustFragment_Data
 
 #Mobs spawn
-	execute as @e[type=#stardust:global,tag=!StardustFragment_CelestialDim,tag=!StardustFragment_StardustDim,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/dimensions_check
+	execute as @e[type=#stardust:global,predicate=stardust:in_celestial_or_stardust,tag=!StardustFragment_CelestialDim,tag=!StardustFragment_StardustDim,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/dimensions_check
 	execute in stardust:ultimate as @e[type=ender_dragon,tag=!StardustFragment_Dragon,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
 	execute in stardust:stardust as @e[type=bat,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/stardust_bat
 

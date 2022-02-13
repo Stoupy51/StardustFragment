@@ -1,0 +1,68 @@
+[
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"min": 500
+				}
+			},
+			"dimension": "minecraft:overworld"
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"min": 500
+				}
+			},
+			"dimension": "stardust:celestial"
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"max": -35
+				}
+			},
+			"dimension": "stardust:celestial"
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"max": -35
+				}
+			},
+			"dimension": "stardust:stardust"
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"max": -35
+				}
+			},
+			"dimension": "stardust:dungeon"
+		}
+	},
+	{
+		"condition": "minecraft:location_check",
+		"predicate": {
+			"position": {
+				"y": {
+					"max": -35
+				}
+			},
+			"dimension": "stardust:ultimate"
+		}
+	}
+]

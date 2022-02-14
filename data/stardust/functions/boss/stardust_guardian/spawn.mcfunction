@@ -1,4 +1,3 @@
-data modify entity @s DeathLootTable set value "stardust:entities/stardust_guardian"
 
 attribute @s minecraft:generic.knockback_resistance base set 1
 attribute @s minecraft:generic.movement_speed base set 0.4

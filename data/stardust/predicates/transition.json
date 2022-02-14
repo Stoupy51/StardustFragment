@@ -46,9 +46,13 @@
 				}
 			},
 			{
-				"condition": "minecraft:location_check",
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
 				"predicate": {
-					"dimension": "stardust:ultimate"
+					"type": "minecraft:player",
+					"location": {
+						"dimension": "stardust:ultimate"
+					}
 				}
 			}
 		]

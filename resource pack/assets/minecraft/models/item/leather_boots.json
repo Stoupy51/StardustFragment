@@ -5,6 +5,8 @@
         "layer1": "item/leather_boots_overlay"
     },
     "overrides": [
+		{ "predicate": { "custom_model_data": 2012603 }, "model": "simplenergy:equipments/simplunium_boots" },
+
 		{ "predicate": { "custom_model_data": 2013103 }, "model": "stardust:equipments/damaged_stardust_boots" },
 		{ "predicate": { "custom_model_data": 2013110 }, "model": "stardust:equipments/reinforced_stardust_boots" },
 		{ "predicate": { "custom_model_data": 2013117 }, "model": "stardust:equipments/original_stardust_boots" },

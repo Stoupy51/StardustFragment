@@ -45,7 +45,7 @@ scoreboard players set ForceLoaded StardustFragment_Data 1
 execute unless score DungeonBuilt StardustFragment_Data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score UltimateBuilt StardustFragment_Data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
 
-scoreboard players set StardustFragment load.status 3030
+scoreboard players set StardustFragment load.status 3031
 scoreboard players set Second StardustFragment_Data 10
 
 scoreboard players set 1500 SimplEnergy_Data 1500

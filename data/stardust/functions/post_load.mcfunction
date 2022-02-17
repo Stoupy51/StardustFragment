@@ -4,11 +4,11 @@ execute store success score SimplEnergy_Loaded StardustFragment_Data run scorebo
 execute if score SimplEnergy_Loaded StardustFragment_Data matches 0 run scoreboard players set SimplEnergy_Missing StardustFragment_Data 1
 execute unless score SimplEnergy load.status matches 1.. run scoreboard players set SimplEnergy_Missing StardustFragment_Data 1
 
-execute if score SimplEnergy_Missing StardustFragment_Data matches 1 run tellraw @a {"text":"Stardust Fragment Error: SimplEnergy v1.7.0+ is missing, click [here] to download","italic":false,"color":"red","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/simplenergy/"}}
+execute if score SimplEnergy_Missing StardustFragment_Data matches 1 run tellraw @a {"text":"Stardust Fragment Error: SimplEnergy v1.7.1+ is missing, click [here] to download","italic":false,"color":"red","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/simplenergy/"}}
 
 execute unless score GameVersion load.status matches 2860.. run tellraw @a {"text":"Stardust Fragment Error: This version only available with Minecraft 1.18+.","italic":false,"color":"red"}
-execute unless score SimplEnergy_Missing StardustFragment_Data matches 1 unless score SimplEnergy load.status matches 1070.. run tellraw @a {"text":"Stardust Fragment Error: SimplEnergy v1.7.0+ is required, click [here] to download","italic":false,"color":"red","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/simplenergy/"}}
-execute if score GameVersion load.status matches 2860.. if score SimplEnergy load.status matches 1070.. run tellraw @a[tag=convention.debug] {"text":"[Loaded Stardust Fragment v3.3.0]","italic":false,"color":"green"}
+execute unless score SimplEnergy_Missing StardustFragment_Data matches 1 unless score SimplEnergy load.status matches 1071.. run tellraw @a {"text":"Stardust Fragment Error: SimplEnergy v1.7.1+ is required, click [here] to download","italic":false,"color":"red","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/simplenergy/"}}
+execute if score GameVersion load.status matches 2860.. if score SimplEnergy load.status matches 1071.. run tellraw @a[tag=convention.debug] {"text":"[Loaded Stardust Fragment v3.3.1]","italic":false,"color":"green"}
 
 scoreboard players reset SimplEnergy_Loaded StardustFragment_Data
 scoreboard players reset SimplEnergy_Missing StardustFragment_Data

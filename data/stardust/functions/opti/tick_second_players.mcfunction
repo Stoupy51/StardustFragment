@@ -1,5 +1,5 @@
 
-function stardust:generate/player
+execute unless predicate stardust:in_ultimate run function stardust:generate/player
 effect give @s[nbt={Inventory:[{Slot:102b,tag:{StardustFragment_UltimateElytra:1b}}]}] minecraft:resistance 2 1 true
 execute if entity @s[tag=!StardustFragment_FirstJoin] run function stardust:first_join
 execute if score @s StardustFragment_Wormhole matches 1.. run function stardust:opti/wormhole_potion/use

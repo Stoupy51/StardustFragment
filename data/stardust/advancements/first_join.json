@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"rewards": {
+		"function": "stardust:first_join",
+		"loot": [
+			"stardust:first_join"
+		]
+	}
+}

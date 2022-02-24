@@ -5,7 +5,7 @@
 	execute if score DragonKilled StardustFragment_Data matches ..10 run function stardust:opti/dragon_egg/all
 	execute as @e[type=item,nbt={Item:{tag:{StardustFragment_StardustFragment:1b}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function stardust:place/stardust_crafting_table
 	execute as @e[type=glow_item_frame,tag=StardustFragment_Balancing,limit=1] at @s run function stardust:balance/all
-	execute as @e[type=glow_item_frame,tag=StardustFragment_Destroyer] run function stardust:opti/tick_second_glows
+	execute as @e[type=glow_item_frame,tag=StardustFragment_Destroyer] at @s run function stardust:opti/tick_second_glows
 	execute as @a at @s run function stardust:opti/tick_second_players
 	execute if entity @a[tag=StardustFragment_IsInDungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
 

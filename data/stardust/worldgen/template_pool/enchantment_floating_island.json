@@ -1,5 +1,5 @@
 {
-	"name": "stardust:all_structures",
+	"name": "stardust:enchantment_floating_island",
 	"fallback": "minecraft:empty",
 	"elements": [
 		{
@@ -7,7 +7,7 @@
 			"element": {
 				"element_type": "minecraft:single_pool_element",
 				"projection": "rigid",
-				"location": "stardust:start_awakened_floating_island",
+				"location": "stardust:enchantment_floating_island_entity",
 				"processors": "minecraft:empty"
 			}
 		}

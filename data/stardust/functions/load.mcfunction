@@ -36,7 +36,7 @@ team modify StardustFragment_Blue color blue
 # Default Config
 execute unless score default_config StardustFragment_Config matches 1 run function stardust:config/default
 
-gamerule commandBlockOutput false
+gamerule maxCommandChainLength 2147483647
 execute in minecraft:overworld run forceload add 0 0
 # Check region
 execute unless score ForceLoaded StardustFragment_Data matches 1 run summon marker 0 -64 0 {Tags:["StardustFragment_Forceload","global.forceload"]}
@@ -52,6 +52,7 @@ scoreboard players set 1500 SimplEnergy_Data 1500
 scoreboard players set 400 SimplEnergy_Data 400
 scoreboard players set 260 SimplEnergy_Data 260
 scoreboard players set 80 SimplEnergy_Data 80
+scoreboard players set 40 SimplEnergy_Data 40
 scoreboard players set 20 SimplEnergy_Data 20
 scoreboard players set 10 SimplEnergy_Data 10
 scoreboard players set 4 SimplEnergy_Data 4

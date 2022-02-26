@@ -1,5 +1,5 @@
 {
-	"name": "stardust:awakened_floating_island",
+	"name": "stardust:water_well",
 	"fallback": "minecraft:empty",
 	"elements": [
 		{
@@ -7,7 +7,7 @@
 			"element": {
 				"element_type": "minecraft:single_pool_element",
 				"projection": "rigid",
-				"location": "stardust:awakened_floating_island_entity",
+				"location": "stardust:water_well_entity",
 				"processors": "minecraft:empty"
 			}
 		}

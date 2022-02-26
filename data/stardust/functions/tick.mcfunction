@@ -10,6 +10,7 @@
 	execute if score Second StardustFragment_Data matches 20.. run function stardust:tick_second
 
 #Others 2
+	execute as @e[type=area_effect_cloud,tag=StardustFragment_Structure] at @s run function stardust:generate/structure/all
 	execute as @a at @s run function stardust:opti/tick_players
 	execute in stardust:stardust run tp @e[type=vex,distance=0..] 0 -10000 0
 	execute if score Second StardustFragment_Data matches 10 run function stardust:opti/quarry_system

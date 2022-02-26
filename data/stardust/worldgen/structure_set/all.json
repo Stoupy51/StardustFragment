@@ -1,0 +1,34 @@
+{
+	"structures": [
+		{
+			"structure": "stardust:awakened_floating_island",
+			"weight": 1
+		},
+		{
+			"structure": "stardust:enchantment_floating_island",
+			"weight": 1
+		},
+		{
+			"structure": "stardust:flying_saucer",
+			"weight": 1
+		},
+		{
+			"structure": "stardust:water_well",
+			"weight": 5
+		},
+		{
+			"structure": "stardust:graveyard",
+			"weight": 2
+		},
+		{
+			"structure": "stardust:scruffy_house",
+			"weight": 5
+		}
+	],
+	"placement": {
+		"type": "minecraft:random_spread",
+		"spacing": 20,
+		"separation": 10,
+		"salt": 201300051
+	}
+}

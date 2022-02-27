@@ -1,6 +1,6 @@
 
 function stardust:generate/structure/height_variation
-tp @s ~ ~160 ~
+tp @s ~ ~96 ~
 
 #Choose a Structure
 	execute if score Rotation StardustFragment_Data matches 0 at @s run setblock ~ ~1 ~ minecraft:structure_block{rotation:"NONE",posX:0,mode:"LOAD",posY:0,posZ:0,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:flying_saucer"}

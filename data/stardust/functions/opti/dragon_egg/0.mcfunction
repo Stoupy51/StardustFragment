@@ -1,2 +1,2 @@
 advancement revoke @s only stardust:dragon_killed
-scoreboard players set DragonKilled StardustFragment_Data 10
+scoreboard players set #dragon_killed stardust.data 10

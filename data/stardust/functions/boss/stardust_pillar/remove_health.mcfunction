@@ -1,4 +1,4 @@
-scoreboard players remove @s StardustFragment_Pillar 4
-scoreboard players add @s[tag=StardustFragment_Angry] StardustFragment_Pillar 3
-execute store result entity @s[tag=StardustFragment_ShieldOn] Health float 1 run scoreboard players get @s StardustFragment_Pillar
+scoreboard players remove @s stardust.pillar 4
+scoreboard players add @s[tag=stardust.angry] stardust.pillar 3
+execute store result entity @s[tag=stardust.has_shield] Health float 1 run scoreboard players get @s stardust.pillar
 data modify entity @s NoAI set value 0b

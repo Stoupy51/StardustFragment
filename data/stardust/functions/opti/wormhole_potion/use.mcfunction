@@ -1,3 +1,4 @@
-execute if entity @s[nbt={Inventory:[{tag:{StardustFragment_WormholePotion:1b}}]}] at @a if score @s StardustFragment_Wormhole = @p StardustFragment_StardustID run function stardust:opti/wormhole_potion/teleport
-scoreboard players reset @s StardustFragment_Wormhole
-scoreboard players enable @s StardustFragment_Wormhole
+
+execute if entity @s[nbt={Inventory:[{tag:{stardust:{wormhole_potion:1b}}}]}] at @a if score @s stardust.wormhole = @p smd.id run function stardust:opti/wormhole_potion/teleport
+scoreboard players reset @s stardust.wormhole
+scoreboard players enable @s stardust.wormhole

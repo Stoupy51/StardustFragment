@@ -1,0 +1,18 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:golden_apple"
+					],
+					"nbt": "{stardust:{life_crystal:1b}}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:opti/life_crystal"
+	}
+}

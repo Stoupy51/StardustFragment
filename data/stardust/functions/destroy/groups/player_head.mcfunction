@@ -1,3 +1,3 @@
-execute if entity @s[tag=StardustFragment_StardustCable] run function stardust:destroy/stardust_cable
-execute if entity @s[tag=StardustFragment_AwakenedStardustCable] run function stardust:destroy/awakened_stardust_cable
-execute if entity @s[tag=StardustFragment_UltimateCable] run function stardust:destroy/ultimate_cable
+execute if entity @s[tag=stardust.stardust_cable] run function stardust:destroy/stardust_cable
+execute if entity @s[tag=stardust.awakened_stardust_cable] run function stardust:destroy/awakened_stardust_cable
+execute if entity @s[tag=stardust.ultimate_cable] run function stardust:destroy/ultimate_cable

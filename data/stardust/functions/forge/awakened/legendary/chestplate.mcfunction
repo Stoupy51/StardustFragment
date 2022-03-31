@@ -1,3 +1,3 @@
-scoreboard players set SuperCraft StardustFragment_Data 2
+scoreboard players set #forge_craft stardust.data 2
 function stardust:forge/global
-execute if entity @s[scores={StardustFragment_SCraft=4..}] run function stardust:forge/awakened/legendary/chestplate_craft
+execute if entity @s[scores={stardust.forge_craft=4..}] run function stardust:forge/awakened/legendary/chestplate_craft

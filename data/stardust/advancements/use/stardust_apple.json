@@ -1,18 +1,18 @@
 {
-  "criteria": {
-	"requirement": {
-	  "trigger": "minecraft:consume_item",
-	  "conditions": {
-		"item": {
-		  "items": [
-			"minecraft:golden_apple"
-		  ],
-		  "nbt": "{StardustFragment_StardustApple:1b}"
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:golden_apple"
+					],
+					"nbt": "{stardust:{stardust_apple:1b}}"
+				}
+			}
 		}
-	  }
+	},
+	"rewards": {
+		"function": "stardust:opti/stardust_apple"
 	}
-  },
-  "rewards": {
-	"function": "stardust:opti/stardust_apple"
-  }
 }

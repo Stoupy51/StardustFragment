@@ -1,3 +1,3 @@
-scoreboard players set SuperCraft StardustFragment_Data 4
+scoreboard players set #forge_craft stardust.data 4
 function stardust:forge/global
-execute if entity @s[scores={StardustFragment_SCraft=4..}] run function stardust:forge/awakened/dark/pickaxe_craft
+execute if entity @s[scores={stardust.forge_craft=4..}] run function stardust:forge/awakened/dark/pickaxe_craft

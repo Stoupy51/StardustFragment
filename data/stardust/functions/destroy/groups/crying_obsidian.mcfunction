@@ -1,2 +1,2 @@
-execute if entity @s[tag=StardustFragment_UltimatePortal] run function stardust:destroy/ultimate_portal
-execute if entity @s[tag=StardustFragment_UltimateBattery] run function stardust:destroy/ultimate_battery
+execute if entity @s[tag=stardust.ultimate_portal] run function stardust:destroy/ultimate_portal
+execute if entity @s[tag=stardust.ultimate_battery] run function stardust:destroy/ultimate_battery

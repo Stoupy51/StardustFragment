@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:golden_apple",
 					"functions": [
 						{
 							"function": "minecraft:copy_nbt",

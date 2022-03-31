@@ -4,13 +4,15 @@
 			"trigger": "minecraft:placed_block",
 			"conditions": {
 				"item": {
-					"items": ["minecraft:player_head"],
-					"nbt": "{StardustFragment_AdvancedStardustSeed:1b}"
+					"items": [
+						"minecraft:player_head"
+					],
+					"nbt": "{stardust:{advanced_stardust_seed:1b}}"
 				}
 			}
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/advanced_stardust/1"
+		"function": "stardust:place/seeds/advanced_stardust/main"
 	}
 }

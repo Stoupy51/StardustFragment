@@ -1,10 +1,10 @@
-scoreboard players operation Qx StardustFragment_Data = @s StardustFragment_Qx
-scoreboard players operation Qy StardustFragment_Data = @s StardustFragment_Qy
-scoreboard players operation Qz StardustFragment_Data = @s StardustFragment_Qz
-summon area_effect_cloud ~ ~ ~ {Tags:["StardustFragment_QuarryTemp"]}
-execute as @e[type=area_effect_cloud,limit=1,tag=StardustFragment_QuarryTemp,distance=..1] at @s run function stardust:quarry/working/shulkers
+scoreboard players operation Qx stardust.data = @s stardust.quarry_x
+scoreboard players operation Qy stardust.data = @s stardust.quarry_y
+scoreboard players operation Qz stardust.data = @s stardust.quarry_z
+summon area_effect_cloud ~ ~ ~ {Tags:["stardust.quarrytemp"]}
+execute as @e[type=area_effect_cloud,limit=1,tag=stardust.quarrytemp,distance=..1] at @s run function stardust:quarry/working/shulkers
 
-scoreboard players remove Count StardustFragment_Data 1
-execute at @e[type=shulker,tag=StardustFragment_QuarryMiner,tag=!StardustFragment_QuarryMinerDone] run function stardust:quarry/working/mine
-tag @e[type=shulker,tag=!StardustFragment_QuarryMinerDone] add StardustFragment_QuarryMinerDone
+scoreboard players remove Count stardust.data 1
+execute at @e[type=shulker,tag=stardust.quarryMiner,tag=!stardust.quarryMinerDone] run function stardust:quarry/working/mine
+tag @e[type=shulker,tag=!stardust.quarryMinerDone] add stardust.quarryMinerDone
 function stardust:quarry/working/move

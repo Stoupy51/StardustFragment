@@ -7,7 +7,7 @@
 	{ "type": "bitmap", "file": "stardust:font/page_2.png",							"ascent": 12, "height": 139, "chars": ["\uec21"] },
 	{ "type": "bitmap", "file": "stardust:font/page_3.png",							"ascent": 12, "height": 139, "chars": ["\uec22"] },
 	{ "type": "bitmap", "file": "stardust:font/page_4.png",							"ascent": 12, "height": 139, "chars": ["\uec23"] },
-	{ "type": "bitmap", "file": "stardust:font/i/stardust_fragment.png",			"ascent": 12, "height": 139, "chars": ["\uec24"] },
+	{ "type": "bitmap", "file": "stardust:font/i/stardust.png",			"ascent": 12, "height": 139, "chars": ["\uec24"] },
 	{ "type": "bitmap", "file": "stardust:font/i/stardust_ingot.png",				"ascent": 12, "height": 139, "chars": ["\uec25"] },
 	{ "type": "bitmap", "file": "stardust:font/i/stardust_essence.png",				"ascent": 12, "height": 139, "chars": ["\uec26"] },
 	{ "type": "bitmap", "file": "stardust:font/i/stardust_config.png",				"ascent": 12, "height": 139, "chars": ["\uec27"] },

@@ -1,18 +1,18 @@
-scoreboard players set @s StardustFragment_SizeQ 0
+scoreboard players set @s stardust.quarry_size 0
 #Length, Width, Depth
-	scoreboard players operation rX StardustFragment_Data = @s StardustFragment_Qx1
-	scoreboard players operation rX StardustFragment_Data -= @s StardustFragment_Qx2
-	scoreboard players operation rY StardustFragment_Data = @s StardustFragment_Qy1
-	scoreboard players operation rY StardustFragment_Data -= @s StardustFragment_Qy2
-	scoreboard players operation rZ StardustFragment_Data = @s StardustFragment_Qz1
-	scoreboard players operation rZ StardustFragment_Data -= @s StardustFragment_Qz2
-	execute if score rX StardustFragment_Data matches 0 run scoreboard players set rX StardustFragment_Data 1
-	execute if score rY StardustFragment_Data matches 0 run scoreboard players set rY StardustFragment_Data 1
-	execute if score rZ StardustFragment_Data matches 0 run scoreboard players set rZ StardustFragment_Data 1
+	scoreboard players operation rX stardust.data = @s stardust.quarry_x1
+	scoreboard players operation rX stardust.data -= @s stardust.quarry_x2
+	scoreboard players operation rY stardust.data = @s stardust.quarry_y1
+	scoreboard players operation rY stardust.data -= @s stardust.quarry_y2
+	scoreboard players operation rZ stardust.data = @s stardust.quarry_z1
+	scoreboard players operation rZ stardust.data -= @s stardust.quarry_z2
+	execute if score rX stardust.data matches 0 run scoreboard players set rX stardust.data 1
+	execute if score rY stardust.data matches 0 run scoreboard players set rY stardust.data 1
+	execute if score rZ stardust.data matches 0 run scoreboard players set rZ stardust.data 1
 
 #Calculating Size
-	scoreboard players operation @s StardustFragment_SizeQ = rX StardustFragment_Data
-	scoreboard players operation @s StardustFragment_SizeQ *= rY StardustFragment_Data
-	scoreboard players operation @s StardustFragment_SizeQ *= rZ StardustFragment_Data
-	scoreboard players set -1 StardustFragment_Data -1
-	execute if score @s StardustFragment_SizeQ matches ..0 run scoreboard players operation @s StardustFragment_SizeQ *= -1 StardustFragment_Data
+	scoreboard players operation @s stardust.quarry_size = rX stardust.data
+	scoreboard players operation @s stardust.quarry_size *= rY stardust.data
+	scoreboard players operation @s stardust.quarry_size *= rZ stardust.data
+	scoreboard players set -1 stardust.data -1
+	execute if score @s stardust.quarry_size matches ..0 run scoreboard players operation @s stardust.quarry_size *= -1 stardust.data

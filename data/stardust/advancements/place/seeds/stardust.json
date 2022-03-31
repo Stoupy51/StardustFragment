@@ -4,13 +4,15 @@
 			"trigger": "minecraft:placed_block",
 			"conditions": {
 				"item": {
-					"items": ["minecraft:player_head"],
-					"nbt": "{StardustFragment_StardustSeed:1b}"
+					"items": [
+						"minecraft:player_head"
+					],
+					"nbt": "{stardust:{stardust_seed:1b}}"
 				}
 			}
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/stardust/1"
+		"function": "stardust:place/seeds/stardust/main"
 	}
 }

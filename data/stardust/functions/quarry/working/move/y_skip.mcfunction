@@ -1,2 +1,2 @@
-execute if score @s StardustFragment_Qy1 = @s StardustFragment_Qy2 if score @s StardustFragment_Qz1 < @s StardustFragment_Qz2 run scoreboard players add @s StardustFragment_Qz 1
-execute if score @s StardustFragment_Qy1 = @s StardustFragment_Qy2 if score @s StardustFragment_Qz1 > @s StardustFragment_Qz2 run scoreboard players remove @s StardustFragment_Qz 1
+execute if score @s stardust.quarry_y1 = @s stardust.quarry_y2 if score @s stardust.quarry_z1 < @s stardust.quarry_z2 run scoreboard players add @s stardust.quarry_z 1
+execute if score @s stardust.quarry_y1 = @s stardust.quarry_y2 if score @s stardust.quarry_z1 > @s stardust.quarry_z2 run scoreboard players remove @s stardust.quarry_z 1

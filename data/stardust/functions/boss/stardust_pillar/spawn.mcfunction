@@ -1,6 +1,7 @@
-summon minecraft:wither ~ ~20 ~ {Passengers:[{id:"minecraft:marker",Tags:["StardustFragment_StardustPillarTick"]}],CustomName:'{"text":"Stardust Pillar (Shield On)","italic":false,"color":"aqua"}',NoAI:1b,Health:151,Attributes:[{Name:"generic.max_health",Base:151}],Invulnerable:1,Tags:["StardustFragment_StardustPillar","StardustFragment_StardustDim","StardustFragment_ShieldOn","StardustFragment_NewMob"],Team:"StardustFragment_Stardust"}
-scoreboard players set @e[type=wither,tag=StardustFragment_NewMob,limit=1] StardustFragment_Pillar 150
-tag @e[type=wither,tag=StardustFragment_NewMob] add StardustFragment_Angry
-execute in stardust:stardust run tag @e[type=wither,tag=StardustFragment_NewMob,distance=0..] remove StardustFragment_Angry
-tag @e[type=wither,tag=StardustFragment_NewMob] remove StardustFragment_NewMob
-scoreboard players add StardustPillar StardustFragment_Data 1
+
+summon wither ~ ~20 ~ {Passengers:[{id:"minecraft:marker",Tags:["stardust.pillar_tick"]}],CustomName:'{"text":"Stardust Pillar (Shield On)","italic":false,"color":"aqua"}',NoAI:1b,Health:151,Attributes:[{Name:"generic.max_health",Base:151}],Invulnerable:1,Tags:["stardust.stardust_pillar","stardust.stardust_dim","stardust.has_shield","stardust.new_mob"],Team:"stardust.team"}
+scoreboard players set @e[type=wither,tag=stardust.new_mob,limit=1] stardust.pillar 150
+tag @e[type=wither,tag=stardust.new_mob] add stardust.angry
+execute in stardust:stardust run tag @e[type=wither,tag=stardust.new_mob,distance=0..] remove stardust.angry
+tag @e[type=wither,tag=stardust.new_mob] remove stardust.new_mob
+scoreboard players add #stardust_pillar stardust.data 1

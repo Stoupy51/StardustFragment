@@ -71,6 +71,7 @@
 				"continents": "minecraft:overworld/continents",
 				"erosion": "minecraft:overworld/erosion",
 				"depth": "minecraft:overworld/depth",
+				"ridges": 0,
 				"initial_density_without_jaggedness": {
 					"type": "minecraft:mul",
 					"argument1": 4,
@@ -105,8 +106,7 @@
 				},
 				"vein_toggle": 0,
 				"vein_ridged": 0,
-				"vein_gap": 0,
-				"ridges": 0
+				"vein_gap": 0
 			},
 			"surface_rule": {
 				"type": "minecraft:sequence",
@@ -2200,8 +2200,8 @@
 			}
 		},
 		"biome_source": {
-			"type": "minecraft:multi_noise",
-			"preset": "minecraft:overworld"
+			"type": "minecraft:fixed",
+			"biome": "minecraft:lush_caves"
 		}
 	}
 }

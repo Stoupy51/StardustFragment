@@ -1,38 +1,37 @@
-scoreboard objectives remove StardustFragment_StardustID
-scoreboard objectives remove StardustFragment_AdvancedStats
-scoreboard objectives remove StardustFragment_Config
-scoreboard objectives remove StardustFragment_Data
-scoreboard objectives remove StardustFragment_X
-scoreboard objectives remove StardustFragment_SCraft
-scoreboard objectives remove StardustFragment_Wolfs
-scoreboard objectives remove StardustFragment_Pillar
-scoreboard objectives remove StardustFragment_TravelStaff
-scoreboard objectives remove StardustFragment_Wormhole
-scoreboard objectives remove StardustFragment_RightClick
-scoreboard objectives remove StardustFragment_Jump
-scoreboard objectives remove StardustFragment_Cooldown
+scoreboard objectives remove stardust.advanced_stats
+scoreboard objectives remove stardust.config
+scoreboard objectives remove stardust.data
+scoreboard objectives remove stardust.data_2
+scoreboard objectives remove stardust.forge_craft
+scoreboard objectives remove stardust.wolfs
+scoreboard objectives remove stardust.pillar
+scoreboard objectives remove stardust.wormhole
+scoreboard objectives remove stardust.right_click
+scoreboard objectives remove stardust.jump
+scoreboard objectives remove stardust.cooldown
 
-scoreboard objectives remove StardustFragment_Qx
-scoreboard objectives remove StardustFragment_Qy
-scoreboard objectives remove StardustFragment_Qz
-scoreboard objectives remove StardustFragment_Qx1
-scoreboard objectives remove StardustFragment_Qx2
-scoreboard objectives remove StardustFragment_Qy1
-scoreboard objectives remove StardustFragment_Qy2
-scoreboard objectives remove StardustFragment_Qz1
-scoreboard objectives remove StardustFragment_Qz2
-scoreboard objectives remove StardustFragment_StatQ
-scoreboard objectives remove StardustFragment_SizeQ
-scoreboard objectives remove StardustFragment_SpeedQ
-team remove StardustFragment_Stardust
-team remove StardustFragment_Red
-team remove StardustFragment_Blue
+scoreboard objectives remove stardust.quarry_x
+scoreboard objectives remove stardust.quarry_y
+scoreboard objectives remove stardust.quarry_z
+scoreboard objectives remove stardust.quarry_x1
+scoreboard objectives remove stardust.quarry_x2
+scoreboard objectives remove stardust.quarry_y1
+scoreboard objectives remove stardust.quarry_y2
+scoreboard objectives remove stardust.quarry_z1
+scoreboard objectives remove stardust.quarry_z2
+scoreboard objectives remove stardust.quarry_status
+scoreboard objectives remove stardust.quarry_size
+scoreboard objectives remove stardust.quarry_speed
+team remove stardust.team
+team remove stardust.red
+team remove stardust.blue
 
 data remove storage stardust:items all
+data remove storage stardust:items temp
 
-tp @e[tag=StardustFragment_Destroyer] 0 -1000 0
-kill @e[tag=StardustFragment_Destroyer]
+tp @e[tag=stardust.destroyer] 0 -1000 0
+kill @e[tag=stardust.destroyer]
 
-clear @a #stardust:items{StardustFragment_CustomItem:1b}
+clear @a #stardust:items{stardust:{}}
 
 datapack disable "file/Stardust Fragment [v3.2.0]"

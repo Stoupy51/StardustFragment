@@ -4,13 +4,15 @@
 			"trigger": "minecraft:placed_block",
 			"conditions": {
 				"item": {
-					"items": ["minecraft:player_head"],
-					"nbt": "{StardustFragment_StardustCable:1b}"
+					"items": [
+						"minecraft:player_head"
+					],
+					"nbt": "{stardust:{stardust_cable:1b}}"
 				}
 			}
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/stardust_cable/1"
+		"function": "stardust:place/stardust_cable/main"
 	}
 }

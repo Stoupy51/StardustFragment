@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:warped_fungus_on_a_stick",
 					"functions": [
 						{
 							"function": "minecraft:copy_nbt",

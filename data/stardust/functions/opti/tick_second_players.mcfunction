@@ -1,5 +1,4 @@
 
-execute unless predicate stardust:in_ultimate unless predicate stardust:in_dungeon run function stardust:generate/player
 effect give @s[nbt={Inventory:[{Slot:102b,tag:{stardust:{ultimate_elytra:1b}}}]}] minecraft:resistance 2 1 true
 execute if score @s stardust.wormhole matches 1.. run function stardust:opti/wormhole_potion/use
 attribute @s[tag=stardust.no_cooldown] minecraft:generic.attack_speed base set 2000

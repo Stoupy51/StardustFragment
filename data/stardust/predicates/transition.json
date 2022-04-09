@@ -30,6 +30,17 @@
 			{
 				"condition": "minecraft:location_check",
 				"predicate": {
+					"position": {
+						"y": {
+							"min": 500
+						}
+					},
+					"dimension": "bracken:pax"
+				}
+			},
+			{
+				"condition": "minecraft:location_check",
+				"predicate": {
 					"dimension": "stardust:celestial"
 				}
 			},

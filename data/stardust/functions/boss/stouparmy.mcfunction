@@ -6,5 +6,5 @@ attribute @s generic.max_health modifier add 1-1-1-1-2 "2" 12.5 multiply_base
 data modify entity @s Health set value 2048
 tag @s remove stardust.stoup_army
 
-scoreboard players operation temp stardust.data = StoupArmyWolfCount stardust.config
-execute if score temp stardust.data matches 1.. run function stardust:boss/summon_wolf
+scoreboard players operation #temp stardust.data = StoupArmyWolfCount stardust.config
+execute if score #temp stardust.data matches 1.. run function stardust:boss/summon_wolf

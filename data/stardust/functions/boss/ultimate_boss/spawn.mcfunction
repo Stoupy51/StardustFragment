@@ -9,8 +9,8 @@ tag @s add stardust.ultimate_boss
 tag @s add stardust.dragon
 team join stardust.team @s
 
-scoreboard players operation temp stardust.data = UltimateSlaveCount stardust.config
-execute if score temp stardust.data matches 1.. positioned ~ ~-20 ~ run function stardust:boss/ultimate_boss/summon_slave
+scoreboard players operation #temp stardust.data = UltimateSlaveCount stardust.config
+execute if score #temp stardust.data matches 1.. positioned ~ ~-20 ~ run function stardust:boss/ultimate_boss/summon_slave
 
 tag @e[distance=0..,type=ender_dragon,nbt={Brain:{memories:{}}}] add stardust.dragon
 execute as @a at @s run playsound minecraft:entity.wither.spawn master @s

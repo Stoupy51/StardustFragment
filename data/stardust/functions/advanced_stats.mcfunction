@@ -9,7 +9,7 @@ tellraw @s [{"text":"Work In Progress","color":"gray"}]
 
 #execute store result score temp stardust.advanced_stats run scoreboard players get ChunkMarkerCount stardust.advanced_stats
 #scoreboard players operation temp stardust.advanced_stats *= #5 simplenergy.data
-#tellraw @s [{"text":"Explored Chunks: ","color":"gray"},{"score":{"name":"temp","objective":"stardust.advanced_stats"},"color":"gold"}]
+#tellraw @s [{"text":"Explored Chunks: ","color":"gray"},{"score":{"name":"#temp","objective":"stardust.advanced_stats"},"color":"gold"}]
 
 #tellraw @s [{"text":"Total Custom Mobs Count: ","color":"gray"},{"score":{"name":"StardustMobsCount","objective":"stardust.advanced_stats"},"color":"gold"}]
 #tellraw @s [{"text":"Total Stardust Craft Count: ","color":"gray"},{"score":{"name":"StardustCraftCount","objective":"stardust.advanced_stats"},"color":"gold"}]

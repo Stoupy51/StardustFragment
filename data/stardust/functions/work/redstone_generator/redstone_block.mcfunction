@@ -1,4 +1,4 @@
 data modify block ~ ~ ~ BurnTime set value 10240s
-execute store result score Count stardust.data run data get block ~ ~ ~ Items[{Slot:0b}].Count
-execute run scoreboard players remove Count stardust.data 1
-execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard players get Count stardust.data
+execute store result score #count stardust.data run data get block ~ ~ ~ Items[{Slot:0b}].Count
+execute run scoreboard players remove #count stardust.data 1
+execute store result block ~ ~ ~ Items[{Slot:0b}].Count byte 1 run scoreboard players get #count stardust.data

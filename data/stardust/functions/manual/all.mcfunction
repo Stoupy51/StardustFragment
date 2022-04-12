@@ -1,3 +1,4 @@
+
 function stardust:manual/page_main
 function stardust:manual/page_materials
 function stardust:manual/page_others

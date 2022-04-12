@@ -75,5 +75,4 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_battery"} run function stardust:place/ultimate_battery/main
 
 
-
 tag @s remove stardust.placer

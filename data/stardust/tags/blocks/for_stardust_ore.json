@@ -1,18 +1,18 @@
 {
-	"replace":false,
+	"replace": false,
 	"values": [
-	"minecraft:stone",
-	"minecraft:cobblestone",
-	"minecraft:blue_concrete",
-	"minecraft:dirt",
-	"minecraft:gravel",
-	"minecraft:diorite",
-	"minecraft:andesite",
-	"minecraft:granite",
-	"minecraft:deepslate",
-	"minecraft:netherrack",
-	"minecraft:soul_sand",
-	"minecraft:dripstone_block",
-	"minecraft:end_stone"
+		"minecraft:stone",
+		"minecraft:cobblestone",
+		"minecraft:blue_concrete",
+		"minecraft:dirt",
+		"minecraft:gravel",
+		"minecraft:diorite",
+		"minecraft:andesite",
+		"minecraft:granite",
+		"minecraft:deepslate",
+		"minecraft:netherrack",
+		"minecraft:soul_sand",
+		"minecraft:dripstone_block",
+		"minecraft:end_stone"
 	]
 }

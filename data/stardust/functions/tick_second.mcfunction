@@ -3,7 +3,7 @@
 	scoreboard players add #minute stardust.data 1
 	execute if score #minute stardust.data matches 60.. run function stardust:tick_minute
 	execute if score #dragon_killed stardust.data matches ..10 run function stardust:opti/dragon_egg/all
-	execute as @e[type=item,nbt={Item:{tag:{stardust:{stardust_fragment:1b}}}}] at @s if block ~ ~-1 ~ minecraft:crafting_table run function stardust:place/stardust_crafting_table
+	execute as @e[type=#energy:valid_block_entities,tag=stardust.destroyer] at @s run function stardust:destroy/all
 	execute as @e[type=glow_item_frame,tag=stardust.balancing,limit=1] at @s run function stardust:balance/all
 	execute as @e[type=glow_item_frame,tag=stardust.destroyer] at @s run function stardust:opti/tick_second_glows
 	tag @e[type=glow_item_frame,tag=stardust.balanced] remove stardust.balanced

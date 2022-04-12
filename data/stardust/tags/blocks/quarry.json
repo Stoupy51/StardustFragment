@@ -1,7 +1,7 @@
 {
-	"replace":false,
+	"replace": false,
 	"values": [
-	"#minecraft:wither_immune",
-	"#stardust:air"
+		"#minecraft:wither_immune",
+		"#stardust:air"
 	]
 }

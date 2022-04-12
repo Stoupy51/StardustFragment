@@ -16,7 +16,6 @@
 	execute if score #second stardust.data matches 10 run scoreboard players reset #forge_craft stardust.data
 	execute as @e[type=glow_item_frame,tag=stardust.destroy_barrel] at @s run function stardust:opti/tick_glows
 	execute if score #second stardust.data matches 10 as @e[type=item,predicate=simplenergy:has_tag] at @s run function stardust:forge/detect_craft
-	execute as @e[type=marker,tag=simplenergy.furnace] at @s run function stardust:work/all_furnace
 
 #Boss
 	execute if score #ultimate_boss stardust.data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick

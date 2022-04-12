@@ -1,0 +1,27 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:redstone_block",
+		"minecraft:cobblestone",
+		"minecraft:cobbled_deepslate",
+		"minecraft:lapis_block",
+		"minecraft:iron_block",
+		"minecraft:crying_obsidian",
+		"minecraft:spawner",
+		"minecraft:furnace",
+		"minecraft:daylight_detector",
+		"minecraft:deepslate_diamond_ore",
+		"minecraft:player_head",
+		"minecraft:nether_quartz_ore",
+		"minecraft:deepslate_redstone_ore",
+		"minecraft:moss_carpet",
+		"minecraft:stone",
+		"minecraft:diamond_block",
+		"minecraft:lime_concrete",
+		"minecraft:magma_block",
+		"minecraft:obsidian",
+		"minecraft:glass",
+		"minecraft:iron_trapdoor",
+		"minecraft:diamond_block"
+	]
+}

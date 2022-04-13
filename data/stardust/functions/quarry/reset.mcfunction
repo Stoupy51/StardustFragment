@@ -1,3 +1,4 @@
+
 execute store result score @s stardust.quarry_x1 run data get entity @s Pos[0]
 execute store result score @s stardust.quarry_y1 run data get entity @s Pos[1]
 execute store result score @s stardust.quarry_z1 run data get entity @s Pos[2]

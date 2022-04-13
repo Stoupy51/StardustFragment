@@ -1,3 +1,4 @@
+
 execute if entity @s[tag=!stardust.quarry_reset] run function stardust:quarry/reset
 tag @s add stardust.quarry_reset
 

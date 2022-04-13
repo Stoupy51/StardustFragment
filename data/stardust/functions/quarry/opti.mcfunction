@@ -1,3 +1,4 @@
+
 scoreboard players add Quarry stardust.data 1
 #Select Zone
 	execute if entity @p[distance=..3] run function stardust:quarry/select

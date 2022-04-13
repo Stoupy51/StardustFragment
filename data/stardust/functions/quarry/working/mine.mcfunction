@@ -29,4 +29,4 @@
 	execute if score #valid stardust.data matches 1 run setblock ~ ~ ~ minecraft:air destroy
 	execute if score #valid stardust.data matches 1 run kill @e[type=item,distance=..1.2,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore,tag=!stardust.mined_by_quarry]
 
-
+tag @s add stardust.quarryMinerDone

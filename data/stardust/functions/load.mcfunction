@@ -25,11 +25,13 @@ scoreboard objectives add stardust.quarry_z2 dummy
 scoreboard objectives add stardust.quarry_status dummy
 scoreboard objectives add stardust.quarry_size dummy
 scoreboard objectives add stardust.quarry_speed dummy
+team add stardust.shulker
 team add stardust.team
 team add stardust.red
 team add stardust.blue
 team modify stardust.red color red
 team modify stardust.blue color blue
+team modify stardust.shulker collisionRule never
 
 # Default Config
 execute unless score #default_config stardust.config matches 1 run function stardust:config/default

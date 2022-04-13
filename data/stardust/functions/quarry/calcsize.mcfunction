@@ -1,3 +1,4 @@
+
 scoreboard players set @s stardust.quarry_size 0
 #Length, Width, Depth
 	scoreboard players operation rX stardust.data = @s stardust.quarry_x1

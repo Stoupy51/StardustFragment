@@ -1,3 +1,4 @@
+
 #Moving X
 	execute if score @s stardust.quarry_x1 < @s stardust.quarry_x2 run function stardust:quarry/working/move/x1_1
 	execute if score @s stardust.quarry_x1 > @s stardust.quarry_x2 run function stardust:quarry/working/move/x2_1

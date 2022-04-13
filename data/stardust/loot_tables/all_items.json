@@ -9,7 +9,7 @@
 					"functions": [
 						{
 							"function": "minecraft:set_nbt",
-							"tag": "{BlockEntityTag:{mode:\"LOAD\",name:\"stardust:items\",id:\"minecraft:structure_block\",showboundingbox:1b}, display:{Lore:['\"All Items In Chests\"']}}"
+							"tag": "{BlockEntityTag:{mode:\"LOAD\",name:\"stardust:main\",id:\"minecraft:structure_block\",showboundingbox:1b}, display:{Lore:['\"All Items In Chests\"']}}"
 						}
 					]
 				}

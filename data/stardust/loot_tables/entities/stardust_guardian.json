@@ -20,7 +20,7 @@
 							"function": "minecraft:copy_nbt",
 							"source": {
 								"type": "minecraft:storage",
-								"source": "stardust:items"
+								"source": "stardust:main"
 							},
 							"ops": [
 								{
@@ -54,7 +54,7 @@
 							"function": "minecraft:copy_nbt",
 							"source": {
 								"type": "minecraft:storage",
-								"source": "stardust:items"
+								"source": "stardust:main"
 							},
 							"ops": [
 								{

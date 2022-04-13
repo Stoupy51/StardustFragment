@@ -1,6 +1,6 @@
 #SpawnItem
 	summon item ~ ~ ~ {Motion:[0.0,1.0,0.0],Item:{id:"minecraft:cobblestone",Count:1b,tag:{stardust.give:1b}}}
-	data modify entity @e[type=item,nbt={Item:{tag:{stardust.give:1b}}},limit=1,distance=..1] Item set from storage stardust:items all.2013144
+	data modify entity @e[type=item,nbt={Item:{tag:{stardust.give:1b}}},limit=1,distance=..1] Item set from storage stardust:main all.2013144
 
 #Kill materials + Sound + Visual
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{stardust:{legendary_leggings:1b}}}},limit=1,sort=nearest,distance=..1]

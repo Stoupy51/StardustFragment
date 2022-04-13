@@ -26,12 +26,12 @@ team remove stardust.team
 team remove stardust.red
 team remove stardust.blue
 
-data remove storage stardust:items all
-data remove storage stardust:items temp
+data remove storage stardust:main all
+data remove storage stardust:main temp
 
 tp @e[tag=stardust.destroyer] 0 -1000 0
 kill @e[tag=stardust.destroyer]
 
-clear @a #stardust:items{stardust:{}}
+clear @a #stardust:main{stardust:{}}
 
 datapack disable "file/Stardust Fragment [v3.2.0]"

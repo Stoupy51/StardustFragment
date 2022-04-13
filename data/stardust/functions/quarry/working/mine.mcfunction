@@ -16,7 +16,7 @@
 
 #Items pickup
 	tag @s add stardust.quarry_stock
-	execute as @e[type=item,distance=..1.2,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore] run function stardust:quarry/working/store_item
+	execute as @e[type=item,distance=..1,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore] at @e[type=glow_item_frame,tag=stardust.quarry_stock,limit=1] run function stardust:quarry/working/store_item
 	tag @s remove stardust.quarry_stock
 
 #Others

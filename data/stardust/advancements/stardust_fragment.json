@@ -9,11 +9,11 @@
 		"show_toast": false,
 		"announce_to_chat": false,
 		"frame": "goal"
-    },
-    "parent": "global:simplenergy",
+	},
+	"parent": "simplenergy:simplenergy",
 	"criteria": {
-        "always": {
+		"always": {
 			"trigger": "minecraft:tick"
 		}
-    }
+	}
 }

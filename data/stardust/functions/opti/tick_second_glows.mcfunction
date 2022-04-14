@@ -3,7 +3,7 @@ execute if entity @s[tag=stardust.portal] run function stardust:work/portals
 
 #Machines Visuals & Work
 	execute if entity @s[tag=stardust.mob_grinder] run function stardust:work/mob_grinder
-	execute if entity @s[tag=stardust.nether_star_generator] run function stardust:visual/nether_star_generator
+	execute if entity @s[tag=stardust.nether_star_generator] if data block ~ ~ ~ Items[{Slot:0b}] run function stardust:visual/nether_star_generator
 	execute if entity @s[tag=stardust.redstone_generator] run function stardust:visual/redstone_generator
 	execute if entity @s[tag=stardust.heat_generator] run function stardust:visual/heat_generator
 	execute if entity @s[tag=stardust.advanced_furnace_generator] run function stardust:visual/furnace_generator/advanced

@@ -1,3 +1,4 @@
+
 #Check if there is no block above
 	scoreboard players set #temp stardust.data 1
 	execute positioned ~ ~1 ~ run function stardust:work/photovoltaic_panel/check

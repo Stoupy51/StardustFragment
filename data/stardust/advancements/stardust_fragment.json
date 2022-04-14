@@ -1,40 +1,19 @@
 {
 	"display": {
-		"title": {
-			"text": "Stardust Fragment"
-		},
-		"description": {
-			"text": "What's this little blue thing?"
-		},
+		"title": "Stardust Fragment",
+		"description": "v3.4.0",
 		"icon": {
 			"item": "minecraft:command_block",
 			"nbt": "{CustomModelData:2013000}"
 		},
-		"frame": "task",
-		"show_toast": true,
-		"announce_to_chat": true,
-		"hidden": false,
-		"background": "stardust:textures/materials/stardust_block.png"
-	},
+		"show_toast": false,
+		"announce_to_chat": false,
+		"frame": "goal"
+    },
+    "parent": "global:simplenergy",
 	"criteria": {
-		"StardustFragment": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:command_block"],
-						"nbt": "{stardust:{stardust_fragment:1b}}"
-					}
-				]
-			}
+        "always": {
+			"trigger": "minecraft:tick"
 		}
-	},
-	"requirements": [
-		[
-			"StardustFragment"
-		]
-	],
-	"rewards": {
-		"experience": 10
-	}
+    }
 }

@@ -1,3 +1,4 @@
+
 #Groups By Block
 	execute if entity @s[tag=stardust.destroy_redstone_block] unless block ~ ~ ~ minecraft:redstone_block run function stardust:destroy/groups/redstone_block
 	execute if entity @s[tag=stardust.destroy_cobblestone] unless block ~ ~ ~ minecraft:cobblestone run function stardust:destroy/groups/cobblestone

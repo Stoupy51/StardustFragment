@@ -1,6 +1,6 @@
 scoreboard players set #tick_2 stardust.data 0
 #Destroy
-	execute as @e[type=#energy:valid_block_entities,tag=stardust.destroyer] at @s unless block ~ ~ ~ #stardust:all_stardust run function stardust:destroy/all
+	execute as @e[type=#energy:valid_block_entities,tag=stardust.destroyer,predicate=!stardust:check_destroyer] at @s run function stardust:destroy/all
 
 #Others
 	execute as @e[type=glow_item_frame,tag=stardust.tick_2_glows] at @s run function stardust:opti/tick_2_glows

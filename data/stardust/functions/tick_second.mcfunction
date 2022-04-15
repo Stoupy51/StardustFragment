@@ -4,9 +4,7 @@
 	execute if score #minute stardust.data matches 60.. run function stardust:tick_minute
 	execute if score #dragon_killed stardust.data matches ..10 run function stardust:opti/dragon_egg/all
 	execute as @e[type=#energy:valid_block_entities,tag=stardust.destroyer] at @s run function stardust:destroy/all
-	execute as @e[type=glow_item_frame,tag=stardust.balancing,limit=1] at @s run function stardust:balance/all
 	execute as @e[type=glow_item_frame,tag=stardust.destroyer] at @s run function stardust:opti/tick_second_glows
-	tag @e[type=glow_item_frame,tag=stardust.balanced] remove stardust.balanced
 	execute as @a at @s run function stardust:opti/tick_second_players
 	execute if entity @a[tag=stardust.is_in_dungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
 

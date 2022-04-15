@@ -15,6 +15,3 @@ execute if entity @s[tag=stardust.portal] run function stardust:work/portals
 	execute if entity @s[tag=stardust.solar_photovoltaic_panel] unless score @s energy.storage matches 3200.. run function stardust:work/photovoltaic_panel/solar
 	execute if entity @s[tag=stardust.dark_photovoltaic_panel] unless score @s energy.storage matches 3200.. run function stardust:work/photovoltaic_panel/dark
 	execute if entity @s[tag=stardust.wind_turbine] unless score @s energy.storage matches 800.. run function stardust:work/wind_turbine
-
-#Balancing
-	execute if entity @s[tag=stardust.balancing,tag=!stardust.balance,tag=!stardust.balanced] run function stardust:balance/all

@@ -1,19 +1,25 @@
 {
-	"type": "the_end",
+	"type": "stardust:ultimate",
 	"generator": {
-	  "type": "minecraft:flat",
-	  "seed": 0,
-	  "settings": {
-		"biome": "minecraft:the_end",
-		"layers": [
-		  {
-			"block": "minecraft:air",
-			"height": 1
-		  }
-		],
-		"structures": {
-		  "structures": {}
+		"type": "minecraft:noise",
+		"seed": -760899142,
+		"settings": "stardust:ultimate",
+		"biome_source": {
+			"type": "minecraft:multi_noise",
+			"biomes": [
+				{
+					"biome": "stardust:bloodbath",
+					"parameters": {
+						"temperature": 0.974,
+						"humidity": 0,
+						"continentalness": 0,
+						"erosion": 0,
+						"weirdness": 0,
+						"depth": 0,
+						"offset": 0
+					}
+				}
+			]
 		}
-	  }
 	}
-  }
+}

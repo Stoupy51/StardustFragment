@@ -4,6 +4,7 @@
     	"layer0": "item/golden_apple"
   	},
     "overrides": [
-		{ "predicate": { "custom_model_data": 2013172 }, "model": "stardust:equipments/stardust_apple" }
+		{ "predicate": { "custom_model_data": 2013172 }, "model": "stardust:equipments/stardust_apple" },
+		{ "predicate": { "custom_model_data": 2013173 }, "model": "stardust:equipments/life_crystal" }
 	]
 }

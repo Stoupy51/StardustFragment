@@ -4,8 +4,6 @@
       { "predicate": { "custom_model_data": 2012000 }, "model": "simplenergy:blocks/cauldron_generator" },
       { "predicate": { "custom_model_data": 2012001 }, "model": "simplenergy:blocks/furnace_generator" },
       { "predicate": { "custom_model_data": 2012002 }, "model": "simplenergy:blocks/furnace_generator_on" },
-      { "predicate": { "custom_model_data": 2012003 }, "model": "simplenergy:blocks/solar_panel" },
-      { "predicate": { "custom_model_data": 2012004 }, "model": "simplenergy:blocks/simple_crafting_table" },
       { "predicate": { "custom_model_data": 2012100 }, "model": "simplenergy:blocks/simple_battery" },
       { "predicate": { "custom_model_data": 2012101 }, "model": "simplenergy:blocks/advanced_battery" },
       { "predicate": { "custom_model_data": 2012102 }, "model": "simplenergy:blocks/elite_battery" },
@@ -37,6 +35,8 @@
       { "predicate": { "custom_model_data": 2013026 }, "model": "stardust:materials/nether_stardust_ore" },
       { "predicate": { "custom_model_data": 2013027 }, "model": "stardust:materials/ender_stardust_ore" },
       { "predicate": { "custom_model_data": 2013028 }, "model": "stardust:materials/stardust_block" },
+
+      { "predicate": { "custom_model_data": 2013174 }, "model": "stardust:equipments/life_crystal_block" },
 
       { "predicate": { "custom_model_data": 2013208 }, "model": "stardust:others/cobblestone_miner/1" },
       { "predicate": { "custom_model_data": 2013209 }, "model": "stardust:others/cobblestone_miner/2" },
@@ -73,15 +73,8 @@
       { "predicate": { "custom_model_data": 2013245 }, "model": "stardust:others/machines/stardust_furnace_generator_on" },
       { "predicate": { "custom_model_data": 2013246 }, "model": "stardust:others/machines/awakened_furnace_generator_off" },
       { "predicate": { "custom_model_data": 2013247 }, "model": "stardust:others/machines/awakened_furnace_generator_on" },
-      { "predicate": { "custom_model_data": 2013248 }, "model": "stardust:others/machines/stardust_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013249 }, "model": "stardust:others/machines/awakened_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013250 }, "model": "stardust:others/machines/legendary_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013251 }, "model": "stardust:others/machines/solar_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013252 }, "model": "stardust:others/machines/dark_photovoltaic_panel" },
       { "predicate": { "custom_model_data": 2013253 }, "model": "stardust:others/machines/stardust_battery" },
       { "predicate": { "custom_model_data": 2013254 }, "model": "stardust:others/machines/awakened_stardust_battery" },
-      { "predicate": { "custom_model_data": 2013255 }, "model": "stardust:others/machines/ultimate_battery" },
-      
-      { "predicate": { "custom_model_data": 2013399 }, "model": "stardust:stardust_crafting_table" }
+      { "predicate": { "custom_model_data": 2013255 }, "model": "stardust:others/machines/ultimate_battery" }
     ]
 }

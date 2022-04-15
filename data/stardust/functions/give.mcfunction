@@ -182,5 +182,5 @@ loot spawn ~ ~ ~ loot stardust:i/stardust_cable
 loot spawn ~ ~ ~ loot stardust:i/awakened_stardust_cable
 loot spawn ~ ~ ~ loot stardust:i/ultimate_cable
 
-execute as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 1s
+execute as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 2s
 

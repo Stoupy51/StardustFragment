@@ -1,5 +1,5 @@
 
-#Custom hurt durability for Damaged Stardust Armor & Tools
+#Custom durability for Damaged Stardust Armor & Tools
 	scoreboard players set #durability_multiplier simplenergy.data 7000
 	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
 	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate
@@ -9,7 +9,7 @@
 	execute unless score @s simplenergy.offhand = #offhand simplenergy.data if data storage simplenergy:main durability[{Slot:-106b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/offhand
 	execute unless score @s simplenergy.mainhand = #mainhand simplenergy.data if data storage simplenergy:main durability[{Slot:-42b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/mainhand
 
-#Custom hurt durability for Reinforced Stardust Armor & Tools
+#Custom durability for Reinforced Stardust Armor & Tools
 	scoreboard players set #durability_multiplier simplenergy.data 10000
 	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
 	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate
@@ -19,7 +19,7 @@
 	execute unless score @s simplenergy.offhand = #offhand simplenergy.data if data storage simplenergy:main durability[{Slot:-106b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/offhand
 	execute unless score @s simplenergy.mainhand = #mainhand simplenergy.data if data storage simplenergy:main durability[{Slot:-42b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/mainhand
 
-#Custom hurt durability for Original Stardust & Elementary Armor & Tools
+#Custom durability for Original Stardust & Elementary Armor & Tools
 	scoreboard players set #durability_multiplier simplenergy.data 15000
 	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
 	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate

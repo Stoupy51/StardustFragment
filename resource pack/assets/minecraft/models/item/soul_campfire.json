@@ -1,7 +1,7 @@
 {
     "parent": "block/barrel",
     "overrides": [
-      { "predicate": { "custom_model_data": 2012003 }, "model": "simplenergy:blocks/solar_panel" },
+      { "predicate": { "custom_model_data": 2012303 }, "model": "simplenergy:blocks/solar_panel" },
 
 	  { "predicate": { "custom_model_data": 2013248 }, "model": "stardust:others/machines/stardust_photovoltaic_panel" },
       { "predicate": { "custom_model_data": 2013249 }, "model": "stardust:others/machines/awakened_photovoltaic_panel" },

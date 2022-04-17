@@ -1,5 +1,6 @@
 
 scoreboard objectives add simplenergy.data dummy
+scoreboard objectives add stardust.id dummy
 scoreboard objectives add stardust.advanced_stats dummy
 scoreboard objectives add stardust.config dummy
 scoreboard objectives add stardust.data dummy

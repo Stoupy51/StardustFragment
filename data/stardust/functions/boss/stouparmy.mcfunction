@@ -1,3 +1,4 @@
+
 data modify entity @s DeathLootTable set value "stardust:entities/stoupy"
 
 effect give @s jump_boost 99999 4 true

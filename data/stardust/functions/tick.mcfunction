@@ -10,12 +10,13 @@
 
 #Others 2
 	execute as @e[type=area_effect_cloud,tag=stardust.structure] at @s run function stardust:generate/structure/all
-	execute as @a at @s run function stardust:opti/tick_players
-	execute in stardust:stardust run tp @e[type=vex,distance=0..] 0 -10000 0
+	execute as @a[sort=random] at @s run function stardust:opti/tick_players
+	tp @e[type=vex,predicate=stardust:in_stardust] 0 -10000 0
 	execute if score #second stardust.data matches 10 run function stardust:opti/quarry_system
 	execute if score #second stardust.data matches 10 run scoreboard players reset #forge_craft stardust.data
-	execute as @e[type=glow_item_frame,tag=stardust.destroy_barrel] at @s run function stardust:opti/tick_glows
+	execute as @e[type=glow_item_frame,tag=stardust.destroy_barrel,sort=random] at @s run function stardust:opti/tick_glows
 	execute if score #second stardust.data matches 10 as @e[type=item,predicate=simplenergy:has_tag] at @s run function stardust:forge/detect_craft
 
 #Boss
 	execute if score #ultimate_boss stardust.data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
+

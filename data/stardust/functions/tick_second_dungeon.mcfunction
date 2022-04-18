@@ -1,3 +1,4 @@
+
 #Mobs
 	tp @e[type=ghast,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] 0 -10000 0
 	execute as @e[type=#stardust:global,tag=!stardust.dungeon_dim,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] run function stardust:mobs/dungeon

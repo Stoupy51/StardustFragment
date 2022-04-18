@@ -2,7 +2,7 @@
 	"condition": "minecraft:location_check",
 	"predicate": {
 		"block": {
-			"tag": "stardust:all_stardust"
+			"tag": "stardust:check_destroyer"
 		}
 	}
 }

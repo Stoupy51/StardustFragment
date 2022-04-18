@@ -21,12 +21,10 @@
 
 #Others
 	kill @e[type=experience_orb,distance=..1]
-	scoreboard players remove #count stardust.data 49
-	scoreboard players add #temp stardust.data 1
+	scoreboard players remove #quarry_count stardust.data 49
+	scoreboard players add #quarry_temp stardust.data 1
 
 #Destroy the block in a special way if the quarry use a module
 	execute if score #valid stardust.data matches 1 run clone -29999999 1 2013 -29999999 1 2013 ~ ~ ~
 	execute if score #valid stardust.data matches 1 run setblock ~ ~ ~ minecraft:air destroy
 	execute if score #valid stardust.data matches 1 run kill @e[type=item,distance=..1.2,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore,tag=!stardust.mined_by_quarry]
-
-tag @s add stardust.quarryMinerDone

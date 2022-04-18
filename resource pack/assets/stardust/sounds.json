@@ -30,5 +30,21 @@
 	"sniper_shot_3": {
 		"subtitle": "Stardust Sniper Shot",
 		"sounds": ["stardust:sniper_shot_3"]
+	},
+	"stardust_pillar_death_1": {
+		"subtitle": "Stardust Pillar Death",
+		"sounds": ["stardust:stardust_pillar_death_1"]
+	},
+	"stardust_pillar_death_2": {
+		"subtitle": "Stardust Pillar Death",
+		"sounds": ["stardust:stardust_pillar_death_2"]
+	},
+	"stardust_pillar_death_3": {
+		"subtitle": "Stardust Pillar Death",
+		"sounds": ["stardust:stardust_pillar_death_3"]
+	},
+	"stardust_pillar_death_4": {
+		"subtitle": "Stardust Pillar Death",
+		"sounds": ["stardust:stardust_pillar_death_4"]
 	}
 }

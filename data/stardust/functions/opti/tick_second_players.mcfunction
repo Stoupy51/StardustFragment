@@ -15,3 +15,7 @@ forceload add -29999999 2013
 	execute store success score #success stardust.data run attribute @s minecraft:generic.max_health modifier value get 2013-0-0-0-0
 	execute if score #success stardust.data matches 0 run function stardust:opti/update_health
 
+#playsound remove tags
+	tag @s remove stardust.ps.nether_star_generator
+	tag @s remove stardust.ps.redstone_generator
+

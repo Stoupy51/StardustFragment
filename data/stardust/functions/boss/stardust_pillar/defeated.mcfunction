@@ -12,5 +12,5 @@ execute if score #temp stardust.data matches 1 as @a[distance=..200] at @s run p
 execute if score #temp stardust.data matches 2 as @a[distance=..200] at @s run playsound stardust:stardust_pillar_death_3 master @s
 execute if score #temp stardust.data matches 3 as @a[distance=..200] at @s run playsound stardust:stardust_pillar_death_4 master @s
 
-scoreboard players remove #stardust_pillar stardust.data 1
 kill @s
+execute if score #stardust_pillar stardust.data matches 1 unless entity @e[type=armor_stand,tag=stardust.pillar_tick] run scoreboard players remove #stardust_pillar stardust.data 1

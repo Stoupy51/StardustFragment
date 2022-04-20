@@ -1,3 +1,4 @@
+
 tag @e[type=stray,tag=stardust.to_throw] remove stardust.to_throw
 tag @e[type=evoker,tag=stardust.to_throw] remove stardust.to_throw
 execute positioned ~ ~2 ~ run function stardust:mobs/stray

@@ -1,4 +1,5 @@
 
+#execute as @e at @e[limit=10] run function stardust:opti/z_personal_profiling
 #Others 1
 	execute if score #stardust_pillar stardust.data matches 1.. as @e[type=wither,tag=stardust.stardust_pillar,tag=stardust.has_shield] run data modify entity @s NoAI set value 1b
 

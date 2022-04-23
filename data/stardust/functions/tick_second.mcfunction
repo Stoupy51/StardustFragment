@@ -13,10 +13,9 @@
 	execute if score #stardust_pillar stardust.data matches 1.. as @e[type=wither,tag=stardust.stardust_pillar,sort=random] at @s run function stardust:boss/stardust_pillar/tick_second
 	execute if score #stardust_pillar stardust.data matches 1.. as @e[type=armor_stand,tag=stardust.pillar_tick] at @s unless entity @e[type=wither,tag=stardust.stardust_pillar,distance=..3] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=wolf,tag=stardust.stoup_army] at @s run function stardust:boss/stouparmy
-	scoreboard players reset #max_count stardust.data
 
-#Mobs spawn
+#Mobs
 	execute as @e[type=#stardust:global,predicate=stardust:in_celestial_or_stardust,tag=!stardust.celestial_dim,tag=!stardust.stardust_dim,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/dimensions_check
-	execute in stardust:ultimate as @e[type=ender_dragon,tag=!stardust.dragon,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
-	execute in stardust:stardust as @e[type=bat,distance=0..,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/stardust_bat
+	execute as @e[type=ender_dragon,predicate=stardust:in_ultimate,tag=!stardust.dragon,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
+	execute at @e[type=bat,tag=stardust.stardust_bat] at @a[distance=5..12,tag=!stardust.no_bolt,gamemode=!spectator,gamemode=!creative] run summon lightning_bolt
 

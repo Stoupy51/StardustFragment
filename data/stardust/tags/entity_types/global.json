@@ -33,6 +33,7 @@
 	"minecraft:zombified_piglin",
 	"minecraft:piglin",
 	"minecraft:magma_cube",
-	"minecraft:enderman"
+	"minecraft:enderman",
+	"minecraft:bat"
 	]
 }

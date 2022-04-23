@@ -31,6 +31,10 @@
 		"subtitle": "Stardust Sniper Shot",
 		"sounds": ["stardust:sniper_shot_3"]
 	},
+	"stardust_pillar_spawn": {
+		"subtitle": "Stardust Pillar Spawn",
+		"sounds": ["stardust:stardust_pillar_spawn"]
+	},
 	"stardust_pillar_death_1": {
 		"subtitle": "Stardust Pillar Death",
 		"sounds": ["stardust:stardust_pillar_death_1"]

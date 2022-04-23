@@ -11,7 +11,6 @@
 #Boss
 	execute if score #ultimate_boss stardust.data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick_second
 	execute if score #stardust_pillar stardust.data matches 1.. as @e[type=wither,tag=stardust.stardust_pillar,sort=random] at @s run function stardust:boss/stardust_pillar/tick_second
-	execute if score #stardust_pillar stardust.data matches 1.. as @e[type=armor_stand,tag=stardust.pillar_tick] at @s unless entity @e[type=wither,tag=stardust.stardust_pillar,distance=..3] run function stardust:boss/stardust_pillar/defeated
 	execute as @e[type=wolf,tag=stardust.stoup_army] at @s run function stardust:boss/stouparmy
 
 #Mobs

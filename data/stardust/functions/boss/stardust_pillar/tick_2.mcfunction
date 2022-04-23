@@ -21,5 +21,5 @@ execute if score #success stardust.data matches 1 run data modify entity @s Rota
 
 
 #Death case
-execute if score #success stardust.data matches 0 run kill @s
+execute if score #success stardust.data matches 0 run function stardust:boss/stardust_pillar/defeated
 

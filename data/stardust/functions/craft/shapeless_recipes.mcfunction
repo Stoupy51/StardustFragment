@@ -1,4 +1,6 @@
 
+data modify storage smithed.crafter:main flags append value "consume_tools"
+
 #Stardust Manual
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,id:"minecraft:book"},{Count:1b,tag:{ctc:{id:"stardust_fragment"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_manual
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_manual"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_manual
@@ -47,7 +49,6 @@
 #Ultimate Fragment
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 9 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_fragment"}}},{Count:1b,tag:{ctc:{id:"compacted_stardust"}}},{Count:1b,tag:{ctc:{id:"very_compacted_stardust"}}},{Count:1b,tag:{ctc:{id:"legendary_fragment"}}},{Count:1b,tag:{ctc:{id:"solar_fragment"}}},{Count:1b,tag:{ctc:{id:"dark_fragment"}}},{Count:1b,tag:{ctc:{id:"awakened_stardust"}}},{Count:1b,tag:{ctc:{id:"dragon_pearl"}}},{Count:1b,tag:{ctc:{id:"ender_dragon_pearl"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/ultimate_fragment
 
-data modify storage smd:crafter flags append value "consume_tools"
 #Damaged Stardust Equipments
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,tag:{ctc:{id:"stardust_ingot"}}},{Count:1b,id:"minecraft:diamond_helmet"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/damaged_stardust_helmet
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,tag:{ctc:{id:"stardust_ingot"}}},{Count:1b,id:"minecraft:diamond_chestplate"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/damaged_stardust_chestplate

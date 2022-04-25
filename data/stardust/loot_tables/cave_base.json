@@ -11,8 +11,8 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"weight": 70,
-					"name": "minecraft:stick",
+					"weight": 20,
+					"name": "minecraft:redstone",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
@@ -28,7 +28,7 @@
 				{
 					"type": "minecraft:item",
 					"weight": 70,
-					"name": "minecraft:dark_oak_planks",
+					"name": "minecraft:coal",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
@@ -44,7 +44,55 @@
 				{
 					"type": "minecraft:item",
 					"weight": 70,
-					"name": "minecraft:dirt",
+					"name": "minecraft:iron_ingot",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 1,
+								"max": 4
+							},
+							"add": false
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:lapis_lazuli",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 1,
+								"max": 4
+							},
+							"add": false
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:gold_ingot",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 1,
+								"max": 4
+							},
+							"add": false
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:emerald",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
@@ -59,19 +107,19 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 100,
+					"weight": 50,
 					"name": "stardust:i/lucky_artifact_bag"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 100,
+					"weight": 20,
 					"name": "stardust:i/stardust_fragment",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": {
 								"min": 1,
-								"max": 8
+								"max": 2
 							},
 							"add": false
 						}
@@ -80,27 +128,22 @@
 				{
 					"type": "minecraft:loot_table",
 					"weight": 10,
-					"name": "stardust:random_seed",
+					"name": "simplenergy:i/simplunium_ingot",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": {
-								"type": "minecraft:uniform",
 								"min": 1,
-								"max": 4
-							}
+								"max": 2
+							},
+							"add": false
 						}
 					]
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 10,
-					"name": "stardust:i/stardust_apple"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"weight": 10,
-					"name": "stardust:i/life_crystal"
+					"weight": 5,
+					"name": "crazy_adventure:i/uranium_ingot"
 				}
 			]
 		}

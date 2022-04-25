@@ -31,5 +31,18 @@
 	execute as @e[limit=8] run summon area_effect_cloud ~ 0 ~ {Tags:["stardust.ore_pos"],Duration:0}
 	execute as @e[type=area_effect_cloud,tag=stardust.ore_pos,limit=8] at @s run function stardust:generate/life_crystal
 
+#Generate Post Structures (Cave bases)
+	scoreboard players set #xz_variation simplenergy.data 500
+	scoreboard players set #max_height simplenergy.data 550
+	summon area_effect_cloud ~ 0 ~ {Tags:["stardust.struct_pos"],Duration:0}
+	execute as @e[type=area_effect_cloud,tag=stardust.struct_pos,limit=1] at @s run function stardust:generate/structure/cave_base
+
+#Generate Post Structures (Abandonned cave houses)
+	scoreboard players set #xz_variation simplenergy.data 500
+	scoreboard players set #max_height simplenergy.data 10
+	summon area_effect_cloud ~ 0 ~ {Tags:["stardust.struct_pos"],Duration:0}
+	execute as @e[type=area_effect_cloud,tag=stardust.struct_pos,limit=1] at @s run function stardust:generate/structure/abandonned_cave_house
+
+
 kill @e[type=area_effect_cloud,tag=stardust.ore_pos]
 

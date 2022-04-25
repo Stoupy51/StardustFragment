@@ -5,64 +5,31 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
-					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013156.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						}
-					]
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "stardust:i/health_artifact_lv1"
 				},
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
-					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013157.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						}
-					]
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "stardust:i/damage_artifact_lv1"
 				},
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
-					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013158.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						}
-					]
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "stardust:i/speed_artifact_lv1"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/health_artifact_lv2"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/damage_artifact_lv2"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/speed_artifact_lv2"
 				}
 			]
 		}

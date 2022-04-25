@@ -1,0 +1,48 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"weight": 3,
+					"name": "stardust:i/diamond_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 2,
+					"name": "stardust:i/advanced_diamond_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 4,
+					"name": "stardust:i/stardust_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 3,
+					"name": "stardust:i/advanced_stardust_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 2,
+					"name": "stardust:i/elite_stardust_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/legendary_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/solar_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/dark_seed"
+				}
+			]
+		}
+	]
+}

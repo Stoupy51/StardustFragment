@@ -107,19 +107,19 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 100,
-					"name": "stardust:i/lucky_artifact_bag"
+					"weight": 10,
+					"name": "simplenergy:i/simplunium_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 100,
+					"weight": 20,
 					"name": "stardust:i/stardust_fragment",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": {
 								"min": 1,
-								"max": 8
+								"max": 2
 							},
 							"add": false
 						}
@@ -127,15 +127,54 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 10,
-					"name": "stardust:random_seed",
+					"weight": 5,
+					"name": "simplenergy:i/stardust_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "crazy_adventure:i/uranium_ingot"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:iron_helmet"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:iron_chestplate"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:iron_leggings"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:iron_boots"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:iron_sword"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:iron_pickaxe"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:torch",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": {
-								"type": "minecraft:uniform",
 								"min": 1,
-								"max": 4
+								"max": 32
 							}
 						}
 					]

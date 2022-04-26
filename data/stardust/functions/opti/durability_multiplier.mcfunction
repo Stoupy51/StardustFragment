@@ -1,30 +1,33 @@
 
+##Called by function tag #durability_multiplier:v1/durability_changed
+##Set the durability multiplier compared to vanilla durability
+##Keep in mind that your multiplier should be >= 1000, or else there is no effect.
+##E.g. if you want to multiply durability by a x4.5 factor
+##You'll need to put #multiplier score to 4500 (4500 divided by 1000 = 4.5)
+
 #Custom durability for Damaged Stardust Armor & Tools
-	scoreboard players set #durability_multiplier simplenergy.data 7000
-	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
-	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate
-	execute unless score @s simplenergy.legs = #leggings simplenergy.data if data storage simplenergy:main durability[{Slot:101b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/leggings
-	execute unless score @s simplenergy.boots = #boots simplenergy.data if data storage simplenergy:main durability[{Slot:100b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/boots
-	scoreboard players set #durability_multiplier simplenergy.data 1200
-	execute unless score @s simplenergy.offhand = #offhand simplenergy.data if data storage simplenergy:main durability[{Slot:-106b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/offhand
-	execute unless score @s simplenergy.mainhand = #mainhand simplenergy.data if data storage simplenergy:main durability[{Slot:-42b,tag:{simplenergy:{damaged:1b}}}] run function simplenergy:opti/durability_multiplier/mainhand
+	scoreboard players set #multiplier durability_multiplier.data 7000
+	execute if score #head_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main head.tag.stardust.damaged run function durability_multiplier:v1.0/technical/head
+	execute if score #chest_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main chest.tag.stardust.damaged run function durability_multiplier:v1.0/technical/chest
+	execute if score #legs_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main legs.tag.stardust.damaged run function durability_multiplier:v1.0/technical/legs
+	execute if score #feet_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main feet.tag.stardust.damaged run function durability_multiplier:v1.0/technical/feet
+	scoreboard players set #multiplier durability_multiplier.data 1200
+	execute if score #mainhand_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main mainhand.tag.stardust.damaged run function durability_multiplier:v1.0/technical/mainhand
 
 #Custom durability for Reinforced Stardust Armor & Tools
-	scoreboard players set #durability_multiplier simplenergy.data 10000
-	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
-	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate
-	execute unless score @s simplenergy.legs = #leggings simplenergy.data if data storage simplenergy:main durability[{Slot:101b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/leggings
-	execute unless score @s simplenergy.boots = #boots simplenergy.data if data storage simplenergy:main durability[{Slot:100b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/boots
-	scoreboard players set #durability_multiplier simplenergy.data 1500
-	execute unless score @s simplenergy.offhand = #offhand simplenergy.data if data storage simplenergy:main durability[{Slot:-106b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/offhand
-	execute unless score @s simplenergy.mainhand = #mainhand simplenergy.data if data storage simplenergy:main durability[{Slot:-42b,tag:{simplenergy:{reinforced:1b}}}] run function simplenergy:opti/durability_multiplier/mainhand
+	scoreboard players set #multiplier durability_multiplier.data 10000
+	execute if score #head_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main head.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/head
+	execute if score #chest_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main chest.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/chest
+	execute if score #legs_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main legs.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/legs
+	execute if score #feet_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main feet.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/feet
+	scoreboard players set #multiplier durability_multiplier.data 1500
+	execute if score #mainhand_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main mainhand.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/mainhand
 
 #Custom durability for Original Stardust & Elementary Armor & Tools
-	scoreboard players set #durability_multiplier simplenergy.data 15000
-	execute unless score @s simplenergy.head = #helmet simplenergy.data if data storage simplenergy:main durability[{Slot:103b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/helmet
-	execute unless score @s simplenergy.chest = #chestplate simplenergy.data if data storage simplenergy:main durability[{Slot:102b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/chestplate
-	execute unless score @s simplenergy.legs = #leggings simplenergy.data if data storage simplenergy:main durability[{Slot:101b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/leggings
-	execute unless score @s simplenergy.boots = #boots simplenergy.data if data storage simplenergy:main durability[{Slot:100b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/boots
-	scoreboard players set #durability_multiplier simplenergy.data 2000
-	execute unless score @s simplenergy.offhand = #offhand simplenergy.data if data storage simplenergy:main durability[{Slot:-106b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/offhand
-	execute unless score @s simplenergy.mainhand = #mainhand simplenergy.data if data storage simplenergy:main durability[{Slot:-42b,tag:{simplenergy:{original:1b}}}] run function simplenergy:opti/durability_multiplier/mainhand
+	scoreboard players set #multiplier durability_multiplier.data 15000
+	execute if score #head_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main head.tag.stardust.original run function durability_multiplier:v1.0/technical/head
+	execute if score #chest_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main chest.tag.stardust.original run function durability_multiplier:v1.0/technical/chest
+	execute if score #legs_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main legs.tag.stardust.original run function durability_multiplier:v1.0/technical/legs
+	execute if score #feet_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main feet.tag.stardust.original run function durability_multiplier:v1.0/technical/feet
+	scoreboard players set #multiplier durability_multiplier.data 2000
+	execute if score #mainhand_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main mainhand.tag.stardust.original run function durability_multiplier:v1.0/technical/mainhand

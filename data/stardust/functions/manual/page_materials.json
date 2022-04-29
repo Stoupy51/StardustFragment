@@ -65,14 +65,14 @@
 	
 	{"text":"\\n\\uec01","color":"reset"},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":25},"hoverEvent":{"action":"show_text","contents":[{"text":"Legendary Photovoltaic Cell","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":26},"hoverEvent":{"action":"show_text","contents":[{"text":"Solar Photovoltaic Cell","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":26},"hoverEvent":{"action":"show_text","contents":[{"text":"Solarium Photovoltaic Cell","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":27},"hoverEvent":{"action":"show_text","contents":[{"text":"Dark Photovoltaic Cell","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":28},"hoverEvent":{"action":"show_text","contents":[{"text":"Empty Module","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":29},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Fragment","italic":false,"color":"white"}]}},
 	
 	{"text":"\\n\\uec01","color":"reset"},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":25},"hoverEvent":{"action":"show_text","contents":[{"text":"Legendary Photovoltaic Cell","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":26},"hoverEvent":{"action":"show_text","contents":[{"text":"Solar Photovoltaic Cell","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":26},"hoverEvent":{"action":"show_text","contents":[{"text":"Solarium Photovoltaic Cell","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":27},"hoverEvent":{"action":"show_text","contents":[{"text":"Dark Photovoltaic Cell","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":28},"hoverEvent":{"action":"show_text","contents":[{"text":"Empty Module","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":29},"hoverEvent":{"action":"show_text","contents":[{"text":"Ultimate Fragment","italic":false,"color":"white"}]}}

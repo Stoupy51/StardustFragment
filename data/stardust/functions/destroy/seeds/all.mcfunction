@@ -6,8 +6,8 @@ execute if entity @s[tag=stardust.advanced_diamond_seed] run function stardust:d
 execute if entity @s[tag=stardust.stardust_seed] run function stardust:destroy/seeds/stardust
 execute if entity @s[tag=stardust.advanced_stardust_seed] run function stardust:destroy/seeds/advanced_stardust
 execute if entity @s[tag=stardust.elite_stardust_seed] run function stardust:destroy/seeds/elite_stardust
-execute if entity @s[tag=stardust.legendary_seed] run function stardust:destroy/seeds/legendary
-execute if entity @s[tag=stardust.solar_seed] run function stardust:destroy/seeds/solar
-execute if entity @s[tag=stardust.dark_seed] run function stardust:destroy/seeds/dark
+execute if entity @s[tag=stardust.legendarium_seed] run function stardust:destroy/seeds/legendarium
+execute if entity @s[tag=stardust.solarium_seed] run function stardust:destroy/seeds/solar
+execute if entity @s[tag=stardust.darkium_seed] run function stardust:destroy/seeds/dark
 tag @e[type=item,tag=stardust.drop] remove stardust.drop
 kill @s

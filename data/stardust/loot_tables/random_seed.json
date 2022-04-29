@@ -32,15 +32,15 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"name": "stardust:i/legendary_seed"
+					"name": "stardust:i/legendarium_seed"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"name": "stardust:i/solar_seed"
+					"name": "stardust:i/solarium_seed"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"name": "stardust:i/dark_seed"
+					"name": "stardust:i/darkium_seed"
 				}
 			]
 		}

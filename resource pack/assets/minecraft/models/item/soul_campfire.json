@@ -3,10 +3,10 @@
     "overrides": [
       { "predicate": { "custom_model_data": 2012303 }, "model": "simplenergy:blocks/solar_panel" },
 
-	  { "predicate": { "custom_model_data": 2013248 }, "model": "stardust:others/machines/stardust_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013249 }, "model": "stardust:others/machines/awakened_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013250 }, "model": "stardust:others/machines/legendary_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013251 }, "model": "stardust:others/machines/solar_photovoltaic_panel" },
-      { "predicate": { "custom_model_data": 2013252 }, "model": "stardust:others/machines/dark_photovoltaic_panel" }
+	  { "predicate": { "custom_model_data": 2013248 }, "model": "stardust:others/machines/stardust_solar_panel" },
+      { "predicate": { "custom_model_data": 2013249 }, "model": "stardust:others/machines/awakened_solar_panel" },
+      { "predicate": { "custom_model_data": 2013250 }, "model": "stardust:others/machines/legendarium_solar_panel" },
+      { "predicate": { "custom_model_data": 2013251 }, "model": "stardust:others/machines/solarium_solar_panel" },
+      { "predicate": { "custom_model_data": 2013252 }, "model": "stardust:others/machines/darkium_solar_panel" }
     ]
 }

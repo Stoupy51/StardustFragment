@@ -1,0 +1,18 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:player_head"
+					],
+					"nbt": "{stardust:{legendarium_seed:1b}}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:place/seeds/legendarium/main"
+	}
+}

@@ -19,9 +19,9 @@
 		execute if entity @s[tag=stardust.seed] unless block ~ ~ ~ minecraft:moss_carpet run function stardust:destroy/seeds/all
 		execute if entity @s[tag=stardust.diamond_seeds] unless block ~ ~-1 ~ minecraft:stone run function stardust:destroy/seeds/all
 		execute if entity @s[tag=stardust.stardust_seeds] unless block ~ ~-1 ~ minecraft:diamond_block run function stardust:destroy/seeds/all
-		execute if entity @s[tag=stardust.legendary_seed] unless block ~ ~-1 ~ minecraft:lime_concrete run function stardust:destroy/seeds/all
-		execute if entity @s[tag=stardust.solar_seed] unless block ~ ~-1 ~ minecraft:magma_block run function stardust:destroy/seeds/all
-		execute if entity @s[tag=stardust.dark_seed] unless block ~ ~-1 ~ minecraft:obsidian run function stardust:destroy/seeds/all
+		execute if entity @s[tag=stardust.legendarium_seed] unless block ~ ~-1 ~ minecraft:lime_concrete run function stardust:destroy/seeds/all
+		execute if entity @s[tag=stardust.solarium_seed] unless block ~ ~-1 ~ minecraft:magma_block run function stardust:destroy/seeds/all
+		execute if entity @s[tag=stardust.darkium_seed] unless block ~ ~-1 ~ minecraft:obsidian run function stardust:destroy/seeds/all
 	execute if entity @s[tag=stardust.life_crystal] unless block ~ ~ ~ minecraft:glass run function stardust:destroy/life_crystal
 	execute if entity @s[tag=stardust.wind_turbine] unless block ~ ~ ~ minecraft:iron_trapdoor run function stardust:destroy/wind_turbine
 	execute if entity @s[tag=stardust.stardust_battery] unless block ~ ~ ~ minecraft:diamond_block run function stardust:destroy/stardust_battery

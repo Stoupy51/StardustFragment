@@ -5,26 +5,12 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/awakened_stardust",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": 9
-						},
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013004.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
 						}
 					]
 				}

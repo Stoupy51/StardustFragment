@@ -128,7 +128,7 @@
 				{
 					"type": "minecraft:loot_table",
 					"weight": 5,
-					"name": "simplenergy:i/stardust_ingot"
+					"name": "stardust:i/stardust_ingot"
 				},
 				{
 					"type": "minecraft:loot_table",

@@ -7,8 +7,8 @@
 		{ "predicate": { "custom_model_data": 2012106 }, "model": "simplenergy:equipments/simplunium_axe" },
 
 		{ "predicate": { "custom_model_data": 2013120 }, "model": "stardust:equipments/original_stardust_axe" },
-		{ "predicate": { "custom_model_data": 2013127 }, "model": "stardust:equipments/legendary_axe" },
-		{ "predicate": { "custom_model_data": 2013134 }, "model": "stardust:equipments/solar_axe" },
-		{ "predicate": { "custom_model_data": 2013141 }, "model": "stardust:equipments/dark_axe" }
+		{ "predicate": { "custom_model_data": 2013127 }, "model": "stardust:equipments/legendarium_axe" },
+		{ "predicate": { "custom_model_data": 2013134 }, "model": "stardust:equipments/solarium_axe" },
+		{ "predicate": { "custom_model_data": 2013141 }, "model": "stardust:equipments/darkium_axe" }
 	]
 }

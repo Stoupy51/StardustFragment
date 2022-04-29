@@ -5,26 +5,12 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_ingot",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": 8
-						},
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013001.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
 						}
 					]
 				}

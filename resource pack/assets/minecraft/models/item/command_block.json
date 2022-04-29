@@ -14,9 +14,9 @@
 		{ "predicate": { "custom_model_data": 2013004 }, "model": "stardust:materials/awakened_stardust" },
 		{ "predicate": { "custom_model_data": 2013006 }, "model": "stardust:materials/dragon_pearl" },
 		{ "predicate": { "custom_model_data": 2013007 }, "model": "stardust:materials/ender_dragon_pearl" },
-		{ "predicate": { "custom_model_data": 2013008 }, "model": "stardust:materials/legendary_fragment" },
-		{ "predicate": { "custom_model_data": 2013009 }, "model": "stardust:materials/solar_fragment" },
-		{ "predicate": { "custom_model_data": 2013010 }, "model": "stardust:materials/dark_fragment" },
+		{ "predicate": { "custom_model_data": 2013008 }, "model": "stardust:materials/legendarium_fragment" },
+		{ "predicate": { "custom_model_data": 2013009 }, "model": "stardust:materials/solarium_fragment" },
+		{ "predicate": { "custom_model_data": 2013010 }, "model": "stardust:materials/darkium_fragment" },
 		{ "predicate": { "custom_model_data": 2013011 }, "model": "stardust:materials/dog_excrement" },
 		{ "predicate": { "custom_model_data": 2013012 }, "model": "stardust:materials/ultimate_core" },
 		{ "predicate": { "custom_model_data": 2013013 }, "model": "stardust:materials/compacted_stardust" },
@@ -28,11 +28,16 @@
 		{ "predicate": { "custom_model_data": 2013033 }, "model": "stardust:materials/mirror" },
 		{ "predicate": { "custom_model_data": 2013034 }, "model": "stardust:materials/photovoltaic_cell/stardust" },
 		{ "predicate": { "custom_model_data": 2013035 }, "model": "stardust:materials/photovoltaic_cell/awakened" },
-		{ "predicate": { "custom_model_data": 2013036 }, "model": "stardust:materials/photovoltaic_cell/legendary" },
-		{ "predicate": { "custom_model_data": 2013037 }, "model": "stardust:materials/photovoltaic_cell/solar" },
-		{ "predicate": { "custom_model_data": 2013038 }, "model": "stardust:materials/photovoltaic_cell/dark" },
+		{ "predicate": { "custom_model_data": 2013036 }, "model": "stardust:materials/photovoltaic_cell/legendarium" },
+		{ "predicate": { "custom_model_data": 2013037 }, "model": "stardust:materials/photovoltaic_cell/solarium" },
+		{ "predicate": { "custom_model_data": 2013038 }, "model": "stardust:materials/photovoltaic_cell/darkium" },
 		{ "predicate": { "custom_model_data": 2013039 }, "model": "stardust:materials/empty_module" },
 		{ "predicate": { "custom_model_data": 2013040 }, "model": "stardust:materials/ultimate_fragment" },
+		{ "predicate": { "custom_model_data": 2013041 }, "model": "stardust:materials/legendarium_ingot" },
+		{ "predicate": { "custom_model_data": 2013042 }, "model": "stardust:materials/solarium_ingot" },
+		{ "predicate": { "custom_model_data": 2013043 }, "model": "stardust:materials/darkium_ingot" },
+		{ "predicate": { "custom_model_data": 2013044 }, "model": "stardust:materials/ultimate_ingot" },
+		
 		{ "predicate": { "custom_model_data": 2013155 }, "model": "stardust:equipments/ultimate_bullet" },
 		{ "predicate": { "custom_model_data": 2013156 }, "model": "stardust:equipments/health_artifact_lv1" },
 		{ "predicate": { "custom_model_data": 2013157 }, "model": "stardust:equipments/damage_artifact_lv1" },
@@ -50,7 +55,7 @@
 		{ "predicate": { "custom_model_data": 2013169 }, "model": "stardust:equipments/item_magnet" },
 
 		{ "predicate": { "custom_model_data": 2013229 }, "model": "stardust:others/stardust_dungeon_key" },
-	  { "predicate": { "custom_model_data": 2013257 }, "model": "stardust:others/fortune_module" },
-	  { "predicate": { "custom_model_data": 2013258 }, "model": "stardust:others/silk_touch_module" }
+		{ "predicate": { "custom_model_data": 2013257 }, "model": "stardust:others/fortune_module" },
+		{ "predicate": { "custom_model_data": 2013258 }, "model": "stardust:others/silk_touch_module" }
     ]
 }

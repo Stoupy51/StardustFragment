@@ -3,7 +3,7 @@ effect give @s[nbt={Inventory:[{Slot:102b,tag:{stardust:{ultimate_elytra:1b}}}]}
 execute if score @s stardust.wormhole matches 1.. run function stardust:opti/wormhole_potion/use
 attribute @s[tag=stardust.no_cooldown] minecraft:generic.attack_speed base set 2000
 execute if entity @s[tag=!global.ignore.gui] at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
-forceload add -29999999 2013
+forceload add -30000000 1600
 
 #Dimensions
 	scoreboard players add @s[scores={stardust.data=1..},nbt={SelectedItem:{tag:{stardust:{travel_staff:1b}}}}] stardust.data 10

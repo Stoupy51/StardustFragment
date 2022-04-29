@@ -1,3 +1,5 @@
+
+scoreboard objectives remove stardust.id
 scoreboard objectives remove stardust.advanced_stats
 scoreboard objectives remove stardust.config
 scoreboard objectives remove stardust.data
@@ -9,6 +11,7 @@ scoreboard objectives remove stardust.wormhole
 scoreboard objectives remove stardust.right_click
 scoreboard objectives remove stardust.jump
 scoreboard objectives remove stardust.cooldown
+scoreboard objectives remove stardust.life_crystals
 
 scoreboard objectives remove stardust.quarry_x
 scoreboard objectives remove stardust.quarry_y
@@ -29,9 +32,9 @@ team remove stardust.blue
 data remove storage stardust:main all
 data remove storage stardust:main temp
 
-tp @e[tag=stardust.destroyer] 0 -1000 0
+tp @e[tag=stardust.destroyer] 0 -10000 0
 kill @e[tag=stardust.destroyer]
 
-clear @a #stardust:main{stardust:{}}
+clear @a #stardust:items{ctc:{from:"stoupy:stardust"}}
 
-datapack disable "file/Stardust Fragment [v3.2.0]"
+tellraw @s {"text":"You can now disable Stardust Fragment or delete it of your data packs folder","color":"green"}

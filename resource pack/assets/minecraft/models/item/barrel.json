@@ -39,6 +39,9 @@
 		{ "predicate": { "custom_model_data": 2013026 }, "model": "stardust:materials/nether_stardust_ore" },
 		{ "predicate": { "custom_model_data": 2013027 }, "model": "stardust:materials/ender_stardust_ore" },
 		{ "predicate": { "custom_model_data": 2013028 }, "model": "stardust:materials/stardust_block" },
+		{ "predicate": { "custom_model_data": 2013045 }, "model": "stardust:materials/legendarium_block" },
+		{ "predicate": { "custom_model_data": 2013046 }, "model": "stardust:materials/solarium_block" },
+		{ "predicate": { "custom_model_data": 2013047 }, "model": "stardust:materials/darkium_block" },
 
 		{ "predicate": { "custom_model_data": 2013174 }, "model": "stardust:equipments/life_crystal_block" },
 

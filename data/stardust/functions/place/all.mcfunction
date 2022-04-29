@@ -65,11 +65,11 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:wind_tur
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:advanced_furnace_generator"} run function stardust:place/advanced_furnace_generator/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_furnace_generator"} run function stardust:place/stardust_furnace_generator/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_furnace_generator"} run function stardust:place/awakened_furnace_generator/main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_photovoltaic_panel"} run function stardust:place/stardust_photovoltaic_panel/main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_photovoltaic_panel"} run function stardust:place/awakened_photovoltaic_panel/main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendary_photovoltaic_panel"} run function stardust:place/legendary_photovoltaic_panel/main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:solar_photovoltaic_panel"} run function stardust:place/solar_photovoltaic_panel/main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:dark_photovoltaic_panel"} run function stardust:place/dark_photovoltaic_panel/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_solar_panel"} run function stardust:place/stardust_solar_panel/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_solar_panel"} run function stardust:place/awakened_solar_panel/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendarium_solar_panel"} run function stardust:place/legendarium_solar_panel/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium_solar_panel"} run function stardust:place/solarium_solar_panel/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_solar_panel"} run function stardust:place/darkium_solar_panel/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_battery"} run function stardust:place/stardust_battery/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_battery"} run function stardust:place/awakened_stardust_battery/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_battery"} run function stardust:place/ultimate_battery/main

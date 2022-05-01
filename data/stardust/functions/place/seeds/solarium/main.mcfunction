@@ -4,4 +4,4 @@
 #Place the custom block
 	execute as @e[type=area_effect_cloud,tag=simplenergy.placed,limit=1] at @s run function stardust:place/seeds/solar/primary
 #Revoke advancement
-	advancement revoke @s only stardust:place/seeds/solar
+	advancement revoke @s only stardust:place/seeds/solarium

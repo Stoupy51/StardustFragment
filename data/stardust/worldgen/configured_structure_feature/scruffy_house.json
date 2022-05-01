@@ -4,7 +4,7 @@
 		"start_pool": "stardust:scruffy_house",
 		"size": 1
 	},
-	"biomes": "#minecraft:is_taiga",
+	"biomes": "#stardust:is_taiga",
 	"adapt_noise": true,
 	"spawn_overrides": {}
 }

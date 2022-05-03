@@ -4,7 +4,7 @@
         "layer0": "item/warped_fungus_on_a_stick"
     },
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012900 }, "model": "simplenergy:joulemeter" },
+		{ "predicate": { "custom_model_data": 2012110 }, "model": "simplenergy:multimeter" },
 		
 		{ "predicate": { "custom_model_data": 2013152 }, "model": "stardust:equipments/stardust_sniper" },
 		{ "predicate": { "custom_model_data": 2013153 }, "model": "stardust:equipments/awakened_stardust_sniper" },

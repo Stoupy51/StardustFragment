@@ -1,7 +1,7 @@
 
 scoreboard players remove @s stardust.data 9
-playsound minecraft:block.portal.trigger ambient @s[scores={stardust.data=2}]
-playsound minecraft:block.portal.trigger ambient @s[nbt={SelectedItem:{tag:{stardust:{travel_staff:1b}}}},scores={stardust.data=7}]
+playsound block.portal.trigger ambient @s[scores={stardust.data=2}]
+playsound block.portal.trigger ambient @s[nbt={SelectedItem:{tag:{stardust:{travel_staff:1b}}}},scores={stardust.data=7}]
 effect give @s[scores={stardust.data=1..}] minecraft:nausea 5 0 true
 effect give @s[scores={stardust.data=..0}] minecraft:nausea 1 1 true
 scoreboard players reset @s[scores={stardust.data=..0}] stardust.data

@@ -36,9 +36,9 @@ team modify stardust.blue color blue
 team modify stardust.shulker collisionRule never
 
 # Default Config
-execute unless score #default_config stardust.config matches 1 run function stardust:config/default
-
+execute unless score #default_config stardust.config matches 2 run function stardust:config/default
 gamerule maxCommandChainLength 2147483647
+
 # Check region
 execute in minecraft:overworld run forceload add 0 0
 execute unless score #force_loaded stardust.data matches 1 run summon marker 0 -64 0 {Tags:["stardust.force_load","global.forceload"]}

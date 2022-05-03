@@ -4,7 +4,7 @@
     	"layer0": "item/diamond_axe"
   	},
     "overrides": [
-		{ "predicate": { "custom_model_data": 2012106 }, "model": "simplenergy:equipments/simplunium_axe" },
+		{ "predicate": { "custom_model_data": 2012107 }, "model": "simplenergy:equipments/simplunium_axe" },
 
 		{ "predicate": { "custom_model_data": 2013120 }, "model": "stardust:equipments/original_stardust_axe" },
 		{ "predicate": { "custom_model_data": 2013127 }, "model": "stardust:equipments/legendarium_axe" },

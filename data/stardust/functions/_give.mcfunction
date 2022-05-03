@@ -156,6 +156,9 @@ loot spawn ~ ~ ~ loot stardust:i/cavern_portal
 loot spawn ~ ~ ~ loot stardust:i/celestial_portal
 loot spawn ~ ~ ~ loot stardust:i/stardust_portal
 loot spawn ~ ~ ~ loot stardust:i/stardust_dungeon_portal
+loot spawn ~ ~ ~ loot stardust:i/legendarium_portal
+loot spawn ~ ~ ~ loot stardust:i/solarium_portal
+loot spawn ~ ~ ~ loot stardust:i/darkium_portal
 loot spawn ~ ~ ~ loot stardust:i/ultimate_portal
 loot spawn ~ ~ ~ loot stardust:i/wither_killer
 loot spawn ~ ~ ~ loot stardust:i/emerald_spawner

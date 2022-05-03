@@ -1,5 +1,5 @@
 
-scoreboard players set #default_config stardust.config 1
+scoreboard players set #default_config stardust.config 2
 
 # Configurations
 scoreboard players set UltimateSlaveCount stardust.config 3

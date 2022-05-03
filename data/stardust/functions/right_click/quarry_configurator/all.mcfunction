@@ -9,8 +9,8 @@ execute store result score Qz2 stardust.data_2 run data get entity @s SelectedIt
 setblock -30000000 14 1610 minecraft:yellow_shulker_box
 item replace block -30000000 14 1610 container.0 from entity @s weapon.mainhand
 
-execute if predicate stardust:sneaking run function stardust:rightclick/quarry_configurator/sneak
-execute unless predicate stardust:sneaking run function stardust:rightclick/quarry_configurator/no_sneak
+execute if predicate stardust:sneaking run function stardust:right_click/quarry_configurator/sneak
+execute unless predicate stardust:sneaking run function stardust:right_click/quarry_configurator/no_sneak
 
 data modify storage stardust:main temp set from block -30000000 14 1610 Items[0].tag
 execute store result storage stardust:main temp.stardust.quarry_x1 int 1 run scoreboard players get Qx1 stardust.data_2

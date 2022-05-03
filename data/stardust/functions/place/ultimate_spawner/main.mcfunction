@@ -9,19 +9,19 @@ data modify block ~ ~ ~ SpawnPotentials[2].data.entity.Item set value {id:"minec
 data modify block ~ ~ ~ SpawnPotentials[3].data.entity.Item set value {id:"minecraft:copper_ingot",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[4].data.entity.Item set value {id:"minecraft:diamond",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[5].data.entity.Item set value {id:"minecraft:netherite_scrap",Count:1b}
-data modify block ~ ~ ~ SpawnPotentials[6].data.entity.Item set from storage stardust:main all.2013229
+data modify block ~ ~ ~ SpawnPotentials[6].data.entity.Item set from storage stardust:main all.2013218
 data modify block ~ ~ ~ SpawnPotentials[7].data.entity.Item set value {id:"minecraft:enchanted_golden_apple",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[8].data.entity.Item set value {id:"minecraft:netherite_ingot",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[9].data.entity.Item set from storage stardust:main all.2013003
 data modify block ~ ~ ~ SpawnPotentials[10].data.entity.Item set value {id:"minecraft:dragon_egg",Count:1b}
 data modify block ~ ~ ~ SpawnPotentials[11].data.entity.Item set from storage stardust:main all.2013005
 data modify block ~ ~ ~ SpawnPotentials[12].data.entity.Item set value {id:"minecraft:nether_star",Count:4b}
-data modify block ~ ~ ~ SpawnPotentials[13].data.entity.Item set from storage stardust:main all.2013228
+data modify block ~ ~ ~ SpawnPotentials[13].data.entity.Item set from storage stardust:main all.2013217
 data modify block ~ ~ ~ SpawnPotentials[14].data.entity.Item set from storage stardust:main all.2013006
 data modify block ~ ~ ~ SpawnPotentials[15].data.entity.Item set from storage stardust:main all.2013008
 data modify block ~ ~ ~ SpawnPotentials[16].data.entity.Item set from storage stardust:main all.2013009
 data modify block ~ ~ ~ SpawnPotentials[17].data.entity.Item set from storage stardust:main all.2013010
 data modify block ~ ~ ~ SpawnPotentials[18].data.entity.Item set value {id:"minecraft:netherite_block",Count:16b}
 
-summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["global.ignore","global.ignore.kill","smithed.block","stardust.destroyer","stardust.destroy_spawner","stardust.ultimate_spawner"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013226}}}
+summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["global.ignore","global.ignore.kill","smithed.block","stardust.destroyer","stardust.destroy_spawner","stardust.ultimate_spawner"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"minecraft:barrel",Count:1b,tag:{CustomModelData:2013215}}}
 particle flame ~ ~ ~ 0.5 0.5 0.5 0.01 1000

@@ -2,7 +2,10 @@
 	"type": "minecraft:entity",
 	"pools": [
 		{
-			"rolls": 1,
+			"rolls": {
+				"min": 1,
+				"max": 2
+			},
 			"bonus_rolls": 0,
 			"entries": [
 				{
@@ -10,8 +13,8 @@
 					"name": "minecraft:iron_ingot"
 				},
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_fragment",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
@@ -19,42 +22,12 @@
 								"min": 1,
 								"max": 8
 							}
-						},
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013000.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
 						}
 					]
 				},
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
-					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "simplenergy:main"
-							},
-							"ops": [
-								{
-									"source": "all.2012005.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						}
-					],
+					"type": "minecraft:loot_table",
+					"name": "simplenergy:i/simplunium_ingot",
 					"conditions": [
 						{
 							"condition": "minecraft:random_chance",

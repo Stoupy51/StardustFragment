@@ -48,7 +48,7 @@ execute if score #temp stardust.data matches 1 run scoreboard players add #ultim
 
 execute if score #ultimate_build stardust.data matches 22 run function stardust:dimensions/structure/ultimate_build
 execute unless score #ultimate_build stardust.data matches 22 run tellraw @a {"text":"Stardust Fragment Error: The Ultimate Dimension couldn't be rebuilt. Something blocked the '/forceload' command in stardust:ultimate","italic":false,"color":"red"}
-scoreboard players set #ultimate_built stardust.data 1
+scoreboard players set #ultimate_built stardust.data 2
 scoreboard players reset #ultimate_build stardust.data
 
 execute as @e[distance=0..,type=!#energy:valid_block_entities] at @s unless block ~ ~1 ~ air run function stardust:boss/ultimate_boss/tp_up

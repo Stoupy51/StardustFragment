@@ -54,8 +54,8 @@
 		{ "predicate": { "custom_model_data": 2013168 }, "model": "stardust:equipments/ultimate_artifact" },
 		{ "predicate": { "custom_model_data": 2013169 }, "model": "stardust:equipments/item_magnet" },
 
-		{ "predicate": { "custom_model_data": 2013229 }, "model": "stardust:others/stardust_dungeon_key" },
-		{ "predicate": { "custom_model_data": 2013257 }, "model": "stardust:others/fortune_module" },
-		{ "predicate": { "custom_model_data": 2013258 }, "model": "stardust:others/silk_touch_module" }
+		{ "predicate": { "custom_model_data": 2013218 }, "model": "stardust:others/stardust_dungeon_key" },
+		{ "predicate": { "custom_model_data": 2013221 }, "model": "stardust:others/fortune_module" },
+		{ "predicate": { "custom_model_data": 2013222 }, "model": "stardust:others/silk_touch_module" }
     ]
 }

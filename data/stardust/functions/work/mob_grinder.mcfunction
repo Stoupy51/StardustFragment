@@ -1,6 +1,6 @@
 #Update visual
-	data modify entity @s Item.tag.CustomModelData set value 2013231
-	execute if score @s energy.storage matches 100.. run data modify entity @s Item.tag.CustomModelData set value 2013232
+	data modify entity @s Item.tag.CustomModelData set value 2013314
+	execute if score @s energy.storage matches 100.. run data modify entity @s Item.tag.CustomModelData set value 2013315
 
 #Kill Mobs
 	scoreboard players set #temp stardust.data 0

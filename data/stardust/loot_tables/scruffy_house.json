@@ -59,7 +59,7 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"weight": 100,
+					"weight": 10,
 					"name": "stardust:i/lucky_artifact_bag"
 				},
 				{

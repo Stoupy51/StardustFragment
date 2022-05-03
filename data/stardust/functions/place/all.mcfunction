@@ -11,6 +11,9 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:nether_s
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ender_stardust_ore"} run function stardust:place/ender_stardust_ore/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_block"} run function stardust:place/stardust_block/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_block"} run function stardust:place/awakened_stardust_block/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendarium_block"} run function stardust:place/legendarium_block/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium_block"} run function stardust:place/solarium_block/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_block"} run function stardust:place/darkium_block/main
 
 
 #Compressed Cobblestones

@@ -3,9 +3,9 @@
 	scoreboard players set #valid stardust.data 0
 	execute store success score #valid stardust.data if entity @s[tag=stardust.fortune_module] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:fortune",lvl:3}]}
 	execute if score #valid stardust.data matches 0 store success score #valid stardust.data if entity @s[tag=stardust.silk_touch_module] run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
-	execute if score #valid stardust.data matches 0 run setblock ~ ~ ~ minecraft:air destroy
+	execute if score #valid stardust.data matches 0 run setblock ~ ~ ~ air destroy
 	execute if score #valid stardust.data matches 1 run clone ~ ~ ~ ~ ~ ~ -29999999 1 2013
-	execute if score #valid stardust.data matches 1 run setblock ~ ~ ~ minecraft:air
+	execute if score #valid stardust.data matches 1 run setblock ~ ~ ~ air
 
 
 #Destroy some customs blocks
@@ -26,5 +26,5 @@
 
 #Destroy the block in a special way if the quarry use a module
 	execute if score #valid stardust.data matches 1 run clone -29999999 1 2013 -29999999 1 2013 ~ ~ ~
-	execute if score #valid stardust.data matches 1 run setblock ~ ~ ~ minecraft:air destroy
+	execute if score #valid stardust.data matches 1 run setblock ~ ~ ~ air destroy
 	execute if score #valid stardust.data matches 1 run kill @e[type=item,distance=..1.2,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore,tag=!stardust.mined_by_quarry]

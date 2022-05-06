@@ -1,5 +1,5 @@
 
-summon item 0 90 0 {Glowing:1,NoGravity:1b,Item:{id:"minecraft:cobblestone",Count:64b,tag:{stardust.give:1b}}}
+summon item 0 90 0 {Glowing:1,NoGravity:1b,Item:{id:"cobblestone",Count:64b,tag:{stardust.give:1b}}}
 data modify entity @e[type=item,nbt={Item:{tag:{stardust.give:1b}}},limit=1] Item set from storage stardust:main all.2013012
 
 execute as @a[nbt={Dimension:"stardust:ultimate"}] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:cobblestone",Count:64b,tag:{stardust.give:1b}},Tags:["stardust.giveConfig"]}

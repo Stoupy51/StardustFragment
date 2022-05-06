@@ -9,10 +9,7 @@
 
 
 #Destroy some customs blocks
-	execute if entity @e[type=glow_item_frame,tag=lthc.destroyable,distance=..1,limit=1] run function lthc.svext:custom_blocks/run
-	execute if entity @e[type=glow_item_frame,tag=lthc.mage.destroyable,distance=..1,limit=1] run function lthc.mage:block_object_life/check
-	execute if entity @e[type=#energy:valid_block_entities,tag=stardust.destroyer,distance=..1,limit=1] run function stardust:destroy/all
-	execute if entity @e[type=#energy:valid_block_entities,tag=simplenergy.destroyer,distance=..1,limit=1] run function simplenergy:destroy/all
+	function #stardust:signals/quarry_mined
 
 #Items pickup
 	tag @s add stardust.quarry_stock

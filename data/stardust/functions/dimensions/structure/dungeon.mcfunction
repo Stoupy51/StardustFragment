@@ -1,4 +1,17 @@
 
+setblock -3 63 -106 air replace
+setblock -5 44 -43 air replace
+setblock -8 56 -83 air replace
+setblock -19 54 -15 air replace
+setblock 31 65 -118 air replace
+setblock 36 141 -76 air replace
+setblock 51 67 -147 air replace
+setblock 57 123 4 air replace
+setblock 63 143 -77 air replace
+setblock 72 68 -150 air replace
+setblock 108 111 -35 air replace
+setblock 131 94 -85 air replace
+
 scoreboard players set #dungeon_build stardust.data 1
 execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock -3 63 -106 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-3_63_-106",ignoreEntities:0b} replace
 execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock -5 44 -43 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-5_44_-43",ignoreEntities:0b} replace

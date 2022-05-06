@@ -44,8 +44,8 @@ execute in minecraft:overworld run forceload add 0 0
 execute unless score #force_loaded stardust.data matches 1 run summon marker 0 -64 0 {Tags:["stardust.force_load","global.forceload"]}
 scoreboard players set #force_loaded stardust.data 1
 
-execute unless score #dungeon_built stardust.data matches 1 in stardust:dungeon run forceload add -27 40 182 -168
-execute unless score #ultimate_built stardust.data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
+execute unless score #dungeon_built stardust.data matches 2 in stardust:dungeon run forceload add -27 40 182 -168
+execute unless score #ultimate_built stardust.data matches 2 in stardust:ultimate run forceload add -73 -69 71 75
 
 scoreboard players set StardustFragment load.status 3040
 scoreboard players set #second stardust.data 10

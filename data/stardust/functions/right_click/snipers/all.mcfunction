@@ -1,5 +1,9 @@
 
 tag @s add stardust.shooter
+#Nbt manipulation for death messages
+	data modify storage stardust:main Sniper set from storage stardust:main SelectedItemTag
+	function stardust:right_click/snipers/decode_lore
+
 #Check what Sniper is it and set Base Damage
 	scoreboard players set #sniper_type stardust.data 0
 	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SelectedItemTag.stardust.stardust_sniper run summon area_effect_cloud ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.stardust_sniper],Age:0,Duration:0,Radius:0f}
@@ -46,4 +50,5 @@ tag @e[tag=stardust.shooted] remove stardust.shooted
 scoreboard players set @s stardust.cooldown 30
 scoreboard players reset #bullet_type stardust.data
 scoreboard players reset #bullet_damage stardust.data
+data remove storage stardust:main Sniper
 

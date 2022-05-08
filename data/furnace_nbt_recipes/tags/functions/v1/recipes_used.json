@@ -1,5 +1,5 @@
 {
 	"values": [
-		"stardust:furnace/recipes_used"
+		"stardust:calls/furnace_nbt_recipes/recipes_used"
 	]
 }

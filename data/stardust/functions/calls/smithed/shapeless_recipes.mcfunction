@@ -1,4 +1,6 @@
 
+##Called by function tag #smithed.craft:event/shapeless_recipes
+
 data modify storage smithed.crafter:main flags append value "consume_tools"
 
 #Stardust Manual

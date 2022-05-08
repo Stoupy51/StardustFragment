@@ -1,5 +1,5 @@
 
-function stardust:generate/structure/height_variation
+function stardust:calls/generate/structure/height_variation
 tp @s ~ ~96 ~
 
 #Choose a Structure

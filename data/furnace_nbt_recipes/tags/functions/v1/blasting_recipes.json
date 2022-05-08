@@ -1,5 +1,5 @@
 {
 	"values": [
-		"stardust:furnace/blasting_recipes"
+		"stardust:calls/furnace_nbt_recipes/blasting_recipes"
 	]
 }

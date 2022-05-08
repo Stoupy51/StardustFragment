@@ -1,5 +1,5 @@
 {
 	"values": [
-		"stardust:generate/main"
+		"stardust:calls/generate/main"
 	]
 }

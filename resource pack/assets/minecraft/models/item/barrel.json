@@ -70,6 +70,7 @@
 		{ "predicate": { "custom_model_data": 2013329 }, "model": "stardust:others/machines/awakened_furnace_generator_off" },
 		{ "predicate": { "custom_model_data": 2013336 }, "model": "stardust:others/machines/stardust_battery" },
 		{ "predicate": { "custom_model_data": 2013337 }, "model": "stardust:others/machines/awakened_stardust_battery" },
-		{ "predicate": { "custom_model_data": 2013338 }, "model": "stardust:others/machines/ultimate_battery" }
+		{ "predicate": { "custom_model_data": 2013338 }, "model": "stardust:others/machines/ultimate_battery" },
+		{ "predicate": { "custom_model_data": 2013339 }, "model": "stardust:others/machines/growth_accelerator" }
     ]
 }

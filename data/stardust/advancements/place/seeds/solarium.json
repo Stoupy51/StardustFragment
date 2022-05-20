@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/solar/main"
+		"function": "stardust:place/seeds/solarium/main"
 	}
 }

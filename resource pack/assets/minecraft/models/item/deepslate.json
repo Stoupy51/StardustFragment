@@ -24,7 +24,7 @@
 		{ "predicate": { "custom_model_data": 2012406 }, "model": "simplenergy:placed_model/electric_lamp_on" },
 
 
-		
+
 		{ "predicate": { "custom_model_data": 2013005 }, "model": "stardust:placed_model/awakened_stardust_block" },
 		{ "predicate": { "custom_model_data": 2013015 }, "model": "stardust:placed_model/cobblestone/compressed" },
 		{ "predicate": { "custom_model_data": 2013016 }, "model": "stardust:placed_model/cobblestone/double_compressed" },
@@ -88,6 +88,7 @@
 		{ "predicate": { "custom_model_data": 2013335 }, "model": "stardust:placed_model/machines/darkium_solar_panel" },
 		{ "predicate": { "custom_model_data": 2013336 }, "model": "stardust:placed_model/machines/stardust_battery" },
 		{ "predicate": { "custom_model_data": 2013337 }, "model": "stardust:placed_model/machines/awakened_stardust_battery" },
-		{ "predicate": { "custom_model_data": 2013338 }, "model": "stardust:placed_model/machines/ultimate_battery" }
+		{ "predicate": { "custom_model_data": 2013338 }, "model": "stardust:placed_model/machines/ultimate_battery" },
+		{ "predicate": { "custom_model_data": 2013339 }, "model": "stardust:placed_model/machines/growth_accelerator" }
 	]
 }

@@ -8,11 +8,11 @@ data modify storage smithed.crafter:main flags append value "consume_tools"
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_manual"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_manual
 
 #Stardust Fragment
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_block"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_fragment_x9
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_fragment_x8
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"compacted_stardust"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_fragment
 
 #Stardust Ingot
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_block"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot_x9
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,tag:{ctc:{id:"stardust_fragment"}}},{Count:1b,id:"minecraft:iron_ingot"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_essence"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot_x8
 
@@ -43,7 +43,7 @@ data modify storage smithed.crafter:main flags append value "consume_tools"
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:9b,tag:{ctc:{id:"compacted_stardust"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/very_compacted_stardust
 
 #Stardust Block
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:9b,tag:{ctc:{id:"stardust_fragment"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_block
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:9b,tag:{ctc:{id:"stardust_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_block
 
 #Empty Module
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,id:"minecraft:paper"},{Count:1b,tag:{ctc:{id:"simplunium_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/empty_module
@@ -89,7 +89,7 @@ data modify storage smithed.crafter:main flags append value "consume_tools"
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,id:"minecraft:stick"},{Count:1b,tag:{ctc:{id:"dragon_pearl"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/travel_staff
 
 #Ultimate Bullet
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"ultimate_core"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/ultimate_bullet_x2
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"ultimate_core"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/ultimate_bullet_x32
 
 #Stardust Apple
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,tag:{ctc:{id:"stardust_ingot"}}},{Count:1b,id:"minecraft:golden_apple"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_apple

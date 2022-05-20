@@ -76,6 +76,7 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_battery"} run function stardust:place/stardust_battery/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_battery"} run function stardust:place/awakened_stardust_battery/main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_battery"} run function stardust:place/ultimate_battery/main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:growth_accelerator"} run function stardust:place/growth_accelerator/main
 
 
 tag @s remove stardust.placer

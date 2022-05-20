@@ -31,7 +31,7 @@ tag @s add stardust.shooter
 	execute if score #bullet_type stardust.data matches 3 run clear @s minecraft:command_block{stardust:{stardust_fragment:1b}} 1
 	execute if score #bullet_type stardust.data matches 4 run scoreboard players add #bullet_damage stardust.data 20
 	execute if score #bullet_type stardust.data matches 4 run clear @s minecraft:command_block{stardust:{awakened_stardust:1b}} 1
-	execute if score #bullet_type stardust.data matches 5 run scoreboard players add #bullet_damage stardust.data 2048
+	execute if score #bullet_type stardust.data matches 5 run scoreboard players add #bullet_damage stardust.data 50
 	execute if score #bullet_type stardust.data matches 5 run clear @s minecraft:command_block{stardust:{ultimate_bullet:1b}} 1
 
 #Launch the bullet

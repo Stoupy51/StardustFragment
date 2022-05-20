@@ -81,3 +81,8 @@
 #Quarry Configurator
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:main root.temp{crafting_input:{0:[{Slot:0b,id:"minecraft:diamond"},{Slot:1b,id:"minecraft:diamond"},{Slot:2b,id:"minecraft:air"}],1:[{Slot:0b,id:"minecraft:quartz"},{Slot:1b,id:"minecraft:quartz"},{Slot:2b,id:"minecraft:air"}],2:[{Slot:0b,id:"minecraft:quartz"},{Slot:1b,id:"minecraft:quartz"},{Slot:2b,id:"minecraft:air"}]}} run loot replace block ~ ~ ~ container.16 loot stardust:i/quarry_configurator
 
+#Growth Accelerator
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:main root.temp{crafting_input:{0:[{Slot:0b,tag:{ctc:{id:"stardust_frame"}}},{Slot:1b,tag:{ctc:{id:"stardust_frame"}}},{Slot:2b,tag:{ctc:{id:"stardust_frame"}}}],1:[{Slot:0b,tag:{ctc:{id:"stardust_config"}}},{Slot:1b,id:"minecraft:wheat_seeds"},{Slot:2b,tag:{ctc:{id:"stardust_config"}}}],2:[{Slot:0b,tag:{ctc:{id:"stardust_config"}}},{Slot:1b,tag:{ctc:{id:"stardust_config"}}},{Slot:2b,tag:{ctc:{id:"stardust_config"}}}]}} run loot replace block ~ ~ ~ container.16 loot stardust:i/growth_accelerator
+
+
+

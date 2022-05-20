@@ -6,11 +6,11 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "stardust:i/ultimate_bullet",
+					"name": "stardust:i/stardust_ingot",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
-							"count": 2
+							"count": 9
 						}
 					]
 				}

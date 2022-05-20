@@ -14,7 +14,7 @@ execute as @a at @s run playsound entity.wither.spawn master @s
 kill @e[type=ender_dragon,tag=stardust.dragon]
 kill @e[type=shulker,tag=stardust.ultimate_orb]
 kill @e[type=armor_stand,tag=stardust.ultimate_orb]
-kill @e[type=minecraft:end_crystal,distance=0..]
+kill @e[type=minecraft:end_crystal,y=0]
 scoreboard players reset UltimateBossKilled stardust.data
 scoreboard players reset #ultimate_boss stardust.data
 execute in stardust:ultimate run function stardust:dimensions/structure/ultimate

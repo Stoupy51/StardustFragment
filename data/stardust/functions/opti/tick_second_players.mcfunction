@@ -3,10 +3,10 @@ data modify storage stardust:main Inventory set from entity @s Inventory
 
 #Inventory conditions
 	execute if data storage stardust:main Inventory[{Slot:102b,tag:{stardust:{ultimate_elytra:1b}}}] run effect give @s resistance 2 1 true
-	execute if data storage stardust:main Inventory[{Slot:101b,tag:{stardust:{solarium_helmet:1b}}}] run effect give @s fire_resistance 2 0 true
+	execute if data storage stardust:main Inventory[{Slot:103b,tag:{stardust:{solarium_helmet:1b}}}] run effect give @s fire_resistance 2 0 true
 	execute if data storage stardust:main Inventory[{Slot:102b,tag:{stardust:{solarium_chestplate:1b}}}] run effect give @s fire_resistance 2 0 true
-	execute if data storage stardust:main Inventory[{Slot:103b,tag:{stardust:{solarium_leggings:1b}}}] run effect give @s fire_resistance 2 0 true
-	execute if data storage stardust:main Inventory[{Slot:104b,tag:{stardust:{solarium_boots:1b}}}] run effect give @s fire_resistance 2 0 true
+	execute if data storage stardust:main Inventory[{Slot:101b,tag:{stardust:{solarium_leggings:1b}}}] run effect give @s fire_resistance 2 0 true
+	execute if data storage stardust:main Inventory[{Slot:100b,tag:{stardust:{solarium_boots:1b}}}] run effect give @s fire_resistance 2 0 true
 
 #Dimensions
 	scoreboard players add @s[scores={stardust.data=1..},nbt={SelectedItem:{tag:{stardust:{travel_staff:1b}}}}] stardust.data 10

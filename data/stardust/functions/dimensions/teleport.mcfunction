@@ -29,5 +29,7 @@ scoreboard players set #success_tp stardust.data 0
 	execute if score #success_tp stardust.data matches 0 store result score #success_tp stardust.data at @s[scores={stardust.data=6..}] align xyz positioned ~ ~-1 ~ if entity @e[type=glow_item_frame,tag=stardust.stardust_dungeon_portal,dx=0,dy=0,dz=0] run function stardust:dimensions/transition/dungeon
 	execute if score #success_tp stardust.data matches 0 store result score #success_tp stardust.data at @s[scores={stardust.data=6..}] align xyz positioned ~ ~-1 ~ if entity @e[type=glow_item_frame,tag=stardust.ultimate_portal,dx=0,dy=0,dz=0] run function stardust:dimensions/transition/ultimate
 
+execute if score #success_tp stardust.data matches 1 run scoreboard players reset @s stardust.data
+
 scoreboard players reset @s[scores={stardust.data=6..}] stardust.data
 scoreboard players reset #success_tp stardust.data

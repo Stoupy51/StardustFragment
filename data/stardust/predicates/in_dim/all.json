@@ -1,0 +1,53 @@
+{
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "minecraft:overworld"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "minecraft:the_nether"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "minecraft:the_end"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "stardust:cavern"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "stardust:celestial"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "stardust:stardust"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "stardust:dungeon"
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"dimension": "stardust:ultimate"
+			}
+		}
+	]
+}

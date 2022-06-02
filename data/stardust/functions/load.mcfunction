@@ -39,10 +39,6 @@ team modify stardust.shulker collisionRule never
 execute unless score #default_config stardust.config matches 2 run function stardust:config/default
 gamerule maxCommandChainLength 2147483647
 
-# Check region
-execute in minecraft:overworld run forceload add 0 0
-execute unless score #force_loaded stardust.data matches 1 store success score #force_loaded stardust.data run summon marker 0 -64 0 {Tags:["stardust.forceload","global.forceload"]}
-
 execute unless score #dungeon_built stardust.data matches 2 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score #ultimate_built stardust.data matches 2 in stardust:ultimate run forceload add -73 -69 71 75
 
@@ -267,7 +263,7 @@ scoreboard players set #-1 simplenergy.data -1
 	#Stardust Seeds
 		data modify storage stardust:main all.2013202 set value {Slot:16b,id:"minecraft:player_head"				,Count:1b,tag:{ctc:{id:"stardust_seeds",from:"stoupy:stardust",traits:{"seed":1b}}										,CustomModelData:2013202,simplenergy:{},stardust:{stardust_seeds:1b}												,HideFlags:127,display:{Lore:['[{"text":"It can only be planted on diamond block","italic":false,"color":"gray"}]','{"translate":"Stardust Fragment","color":"blue","italic":true}'],Name:'[{"text":"Stardust Seed","italic":false,"color":"white"}]'},SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}}}
 		data modify storage stardust:main all.2013203 set value {Slot:16b,id:"minecraft:player_head"				,Count:1b,tag:{ctc:{id:"advanced_stardust_seeds",from:"stoupy:stardust",traits:{"seed":1b}}								,CustomModelData:2013203,simplenergy:{},stardust:{advanced_stardust_seeds:1b}									,HideFlags:127,display:{Lore:['[{"text":"It can only be planted on diamond block","italic":false,"color":"gray"}]','{"translate":"Stardust Fragment","color":"blue","italic":true}'],Name:'[{"text":"Advanced Stardust Seed","italic":false,"color":"white"}]'},SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}}}
-		data modify storage stardust:main all.2013204 set value {Slot:16b,id:"minecraft:player_head"				,Count:1b,tag:{ctc:{id:"elite_stardust_seeds",from:"stoupy:stardust",traits:{"seed":1b}}									,CustomModelData:2013204,simplenergy:{},stardust:{elite_stardust_seeds:1b}										,HideFlags:127,display:{Lore:['[{"text":"It can only be planted on diamond block","italic":false,"color":"gray"}]','{"translate":"Stardust Fragment","color":"blue","italic":true}'],Name:'[{"text":"Elite Stardust Seed","italic":false,"color":"white"}]'},SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}}}
+		data modify storage stardust:main all.2013204 set value {Slot:16b,id:"minecraft:player_head"				,Count:1b,tag:{ctc:{id:"elite_stardust_seeds",from:"stoupy:stardust",traits:{"seed":1b}}								,CustomModelData:2013204,simplenergy:{},stardust:{elite_stardust_seeds:1b}										,HideFlags:127,display:{Lore:['[{"text":"It can only be planted on diamond block","italic":false,"color":"gray"}]','{"translate":"Stardust Fragment","color":"blue","italic":true}'],Name:'[{"text":"Elite Stardust Seed","italic":false,"color":"white"}]'},SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}}}
 	#Legendarium Seed
 		data modify storage stardust:main all.2013205 set value {Slot:16b,id:"minecraft:player_head"				,Count:1b,tag:{ctc:{id:"legendarium_seeds",from:"stoupy:stardust",traits:{"seed":1b}}									,CustomModelData:2013205,simplenergy:{},stardust:{legendarium_seeds:1b}											,HideFlags:127,display:{Lore:['[{"text":"It can only be planted on lime concrete block","italic":false,"color":"gray"}]','{"translate":"Stardust Fragment","color":"blue","italic":true}'],Name:'[{"text":"Legendarium Seed","italic":false,"color":"white"}]'},SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135]}}}
 	#Solarium Seed

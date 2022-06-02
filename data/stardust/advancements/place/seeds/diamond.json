@@ -7,7 +7,7 @@
 					"items": [
 						"minecraft:player_head"
 					],
-					"nbt": "{stardust:{diamond_seed:1b}}"
+					"nbt": "{stardust:{diamond_seeds:1b}}"
 				}
 			}
 		}

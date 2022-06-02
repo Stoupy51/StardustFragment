@@ -104,16 +104,16 @@ data modify storage smithed.crafter:main flags append value "consume_tools"
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,id:"minecraft:wheat_seeds"},{Count:1b,id:"minecraft:diamond"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/diamond_seed
 
 #Advanced Diamond Seed
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,id:"minecraft:diamond"},{Count:1b,tag:{ctc:{id:"diamond_seed"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/advanced_diamond_seed
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,id:"minecraft:diamond"},{Count:1b,tag:{ctc:{id:"diamond_seeds"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/advanced_diamond_seed
 
 #Stardust Seed
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:8b,id:"minecraft:wheat_seeds"},{Count:1b,tag:{ctc:{id:"stardust_fragment"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_seed
 
 #Advanced Stardust Seed
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_seed"}}},{Count:8b,tag:{ctc:{id:"stardust_fragment"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/advanced_stardust_seed
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"stardust_seeds"}}},{Count:8b,tag:{ctc:{id:"stardust_fragment"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/advanced_stardust_seed
 
 #Elite Stardust Seed
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"advanced_stardust_seed"}}},{Count:8b,tag:{ctc:{id:"stardust_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/elite_stardust_seed
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,tag:{ctc:{id:"advanced_stardust_seeds"}}},{Count:8b,tag:{ctc:{id:"stardust_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/elite_stardust_seed
 
 #Elementary Seeds
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,id:"minecraft:lime_dye"},{Count:8b,tag:{ctc:{id:"awakened_stardust"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/legendarium_seed

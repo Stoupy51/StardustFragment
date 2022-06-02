@@ -18,4 +18,4 @@ execute if entity @s[tag=stardust.portal] run function stardust:work/portals
 	execute if entity @s[tag=stardust.wind_turbine] unless score @s energy.storage matches 800.. run function stardust:work/wind_turbine
 
 execute if entity @s[tag=!stardust.update_v3.4.0,tag=!stardust.seed] run data modify entity @s Item.id set value "deepslate"
-tag @s add stardust.update_v3.4.0
+tag @s[tag=!stardust.update_v3.4.0] add stardust.update_v3.4.0

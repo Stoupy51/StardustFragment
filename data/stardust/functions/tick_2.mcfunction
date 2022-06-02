@@ -9,6 +9,6 @@ scoreboard players set #tick_2 stardust.data 0
 	execute as @e[type=armor_stand,tag=stardust.stardust_dim] at @s run function stardust:mobs/tick_2/main
 	execute if score #forge_craft stardust.data matches 1.. as @e[type=item,scores={stardust.forge_craft=0..}] at @s run function stardust:forge/particles
 	execute as @e[type=area_effect_cloud,tag=stardust.dimension_platform] at @s run function stardust:dimensions/platform
-	execute as @e[predicate=stardust:transition,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:dimensions/transitions
+	execute as @e[type=!#energy:valid_block_entities,predicate=stardust:transition,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:dimensions/transitions
 	execute as @a[sort=random] at @s run function stardust:opti/tick_2_players
 

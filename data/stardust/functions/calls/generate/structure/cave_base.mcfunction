@@ -22,9 +22,6 @@ execute at @s run function simplenergy:generate/utils/find_adjacent_air
 	execute if score #rotation stardust.data matches 12 at @s run place template stardust:cave_base_deepslate ~ ~-10 ~ 180
 	execute if score #rotation stardust.data matches 13 at @s run place template stardust:cave_base_deepslate ~ ~-10 ~ counterclockwise_90
 
-	execute if score #rotation stardust.data matches 1.. at @s run tp Stoupy51 @s
-say tried
-
 kill @s
 
 

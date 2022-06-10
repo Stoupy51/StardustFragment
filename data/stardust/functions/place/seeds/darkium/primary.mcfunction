@@ -1,4 +1,7 @@
 
 setblock ~ ~ ~ moss_carpet
-summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["global.ignore","global.ignore.kill","smithed.block","stardust.destroyer","stardust.darkium_seed","stardust.seed","stardust.elementary_seeds"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"cobblestone",Count:1b,tag:{CustomModelData:2013207}}}
-kill @s
+function stardust:place/block_tags
+data modify entity @s Item set value {id:"cobblestone",Count:1b,tag:{CustomModelData:2013207}}
+playsound item.crop.plant block @a[distance=..50]
+tag @s add stardust.darkium_seed
+tag @s add stardust.elementary_seeds

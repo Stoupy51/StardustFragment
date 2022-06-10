@@ -1,7 +1,5 @@
 
-#Look at where the block has been placed
-	function simplenergy:place/look_all_head
 #Place the custom block
-	execute as @e[type=area_effect_cloud,tag=simplenergy.placed,limit=1] at @s run function stardust:place/seeds/advanced_stardust/primary
+	execute as @e[type=item_frame,tag=stardust.set_new,tag=stardust.seed] at @s run function stardust:place/seeds/advanced_stardust/primary
 #Revoke advancement
 	advancement revoke @s only stardust:place/seeds/advanced_stardust

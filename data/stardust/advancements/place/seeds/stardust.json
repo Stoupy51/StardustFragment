@@ -1,11 +1,11 @@
 {
 	"criteria": {
 		"requirement": {
-			"trigger": "minecraft:placed_block",
+			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
 				"item": {
 					"items": [
-						"minecraft:player_head"
+						"minecraft:item_frame"
 					],
 					"nbt": "{stardust:{stardust_seeds:1b}}"
 				}

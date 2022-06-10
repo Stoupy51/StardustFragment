@@ -1,3 +1,4 @@
 
 setblock ~ ~ ~ cobbled_deepslate
-summon glow_item_frame ~ ~ ~ {ItemRotation:0b,Tags:["global.ignore","global.ignore.kill","smithed.block","stardust.destroyer","stardust.destroy_cobbled_deepslate","stardust.octuple_compressed_cobblestone"],Invisible:1b,Invulnerable:1b,Fixed:1b,Silent:1b,Facing:1b,Item:{id:"deepslate",Count:1b,tag:{CustomModelData:2013022}}}
+function stardust:place/glow_item_frame_0
+execute as @e[type=glow_item_frame,tag=stardust.set_new] at @s run function stardust:place/cobblestone/octuple_compressed/secondary

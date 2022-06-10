@@ -1,7 +1,7 @@
 
 ##Called by function tag #smithed.craft:event/shapeless_recipes
 
-data modify storage smithed.crafter:main flags append value "consume_tools"
+data modify storage smithed.crafter:input flags append value "consume_tools"
 
 #Stardust Manual
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:main root.temp{shapeless_crafting_input:[{Count:1b,id:"minecraft:book"},{Count:1b,tag:{ctc:{id:"stardust_fragment"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_manual

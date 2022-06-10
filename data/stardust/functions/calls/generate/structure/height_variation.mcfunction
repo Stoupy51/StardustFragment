@@ -1,3 +1,4 @@
+
 execute store result score PosY stardust.data run data get entity @s Pos[1]
 scoreboard players add PosY stardust.data 20
 execute store result score HeightVariation stardust.data run data get entity @s UUID[2]

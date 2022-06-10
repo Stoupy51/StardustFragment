@@ -3,7 +3,7 @@ function stardust:calls/generate/structure/height_variation
 tp @s ~ ~96 ~
 
 #Choose a Structure
-	execute if score #rotation stardust.data matches 0 at @s run setblock ~ ~1 ~ minecraft:structure_block{rotation:"NONE",posX:0,mode:"LOAD",posY:0,posZ:0,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:flying_saucer"}
-	execute if score #rotation stardust.data matches 1 at @s run setblock ~ ~1 ~ minecraft:structure_block{rotation:"CLOCKWISE_90",posX:0,mode:"LOAD",posY:0,posZ:0,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:flying_saucer"}
-	execute if score #rotation stardust.data matches 2 at @s run setblock ~ ~1 ~ minecraft:structure_block{rotation:"CLOCKWISE_180",posX:0,mode:"LOAD",posY:0,posZ:0,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:flying_saucer"}
-	execute if score #rotation stardust.data matches 3 at @s run setblock ~ ~1 ~ minecraft:structure_block{rotation:"COUNTERCLOCKWISE_90",posX:0,mode:"LOAD",posY:0,posZ:0,sizeX:6,sizeY:9,sizeZ:6,name:"stardust:flying_saucer"}
+	execute if score #rotation stardust.data matches 0 at @s run place template stardust:flying_saucer ~ ~ ~ none
+	execute if score #rotation stardust.data matches 1 at @s run place template stardust:flying_saucer ~ ~ ~ clockwise_90
+	execute if score #rotation stardust.data matches 2 at @s run place template stardust:flying_saucer ~ ~ ~ 180
+	execute if score #rotation stardust.data matches 3 at @s run place template stardust:flying_saucer ~ ~ ~ counterclockwise_90

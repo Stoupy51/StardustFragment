@@ -1,32 +1,18 @@
 
-setblock -3 63 -106 air replace
-setblock -5 44 -43 air replace
-setblock -8 56 -83 air replace
-setblock -19 54 -15 air replace
-setblock 31 65 -118 air replace
-setblock 36 141 -76 air replace
-setblock 51 67 -147 air replace
-setblock 57 123 4 air replace
-setblock 63 143 -77 air replace
-setblock 72 68 -150 air replace
-setblock 108 111 -35 air replace
-setblock 131 94 -85 air replace
+scoreboard players set #success stardust.data 1
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-3_63_-106 -3 63 -106
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-5_44_-43
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-8_56_-83 -8 56 -83
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-19_54_-15 -19 54 -15
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_31_65_-118 31 65 -118
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_36_141_-76 36 141 -76
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_51_67_-147 51 67 -147
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_57_123_4 57 123 4
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_63_143_-77 63 143 -77
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_72_68_-150 72 68 -150
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_108_111_-35 108 111 -35
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_131_94_-85 131 94 -85
 
-scoreboard players set #dungeon_build stardust.data 1
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock -3 63 -106 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-3_63_-106",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock -5 44 -43 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-5_44_-43",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock -8 56 -83 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-8_56_-83",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock -19 54 -15 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_-19_54_-15",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 31 65 -118 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_31_65_-118",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 36 141 -76 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_36_141_-76",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 51 67 -147 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_51_67_-147",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 57 123 4 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_57_123_4",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 63 143 -77 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_63_143_-77",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 72 68 -150 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_72_68_-150",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 108 111 -35 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_108_111_-35",ignoreEntities:0b} replace
-execute if score #dungeon_build stardust.data matches 1 store success score #dungeon_build stardust.data run setblock 131 94 -85 structure_block[mode=load]{mode:"LOAD",name:"stardust:dungeon_part_131_94_-85",ignoreEntities:0b} replace
-
-execute if score #dungeon_build stardust.data matches 1 run function stardust:dimensions/structure/dungeon_build
-execute if score #dungeon_build stardust.data matches 0 run tellraw @a {"text":"Stardust Fragment Error: The Stardust Dungeon couldn't be load. Something blocked the '/forceload' command in stardust:dungeon","italic":false,"color":"red"}
-scoreboard players reset #dungeon_build stardust.data
-
+execute if score #success stardust.data matches 1 run schedule function stardust:dimensions/structure/dungeon_built 1s
+execute if score #success stardust.data matches 0 run tellraw @a {"text":"Stardust Fragment Error: The Stardust Dungeon couldn't be load. Something blocked the '/forceload' command in stardust:dungeon","italic":false,"color":"red"}
+scoreboard players reset #success stardust.data

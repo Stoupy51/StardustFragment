@@ -9,7 +9,7 @@
 	execute if entity @s[tag=stardust.destroy_spawner] unless block ~ ~ ~ spawner run function stardust:destroy/groups/spawner
 	execute if entity @s[tag=stardust.destroy_furnace] unless block ~ ~ ~ furnace run function stardust:destroy/groups/furnace
 	execute if entity @s[tag=stardust.destroy_daylight_detector] unless block ~ ~ ~ daylight_detector run function stardust:destroy/groups/daylight_detector
-	execute if entity @s[tag=stardust.destroy_deepslate_diamond_ore] unless block ~ ~ ~ deepslate_diamond_ore run function stardust:destroy/groups/deepslate_diamond_ore
+	execute if entity @s[tag=stardust.destroy_polished_deepslate] unless block ~ ~ ~ polished_deepslate run function stardust:destroy/groups/polished_deepslate
 	execute if entity @s[tag=stardust.destroy_player_head] unless block ~ ~ ~ player_head run function stardust:destroy/groups/player_head
 	execute if entity @s[tag=stardust.destroy_diamond_block] unless block ~ ~ ~ diamond_block run function stardust:destroy/groups/diamond_block
 	execute if entity @s[tag=stardust.seed] run function stardust:destroy/groups/seed

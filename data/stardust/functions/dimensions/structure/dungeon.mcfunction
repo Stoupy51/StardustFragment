@@ -1,7 +1,7 @@
 
 scoreboard players set #success stardust.data 1
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-3_63_-106 -3 63 -106
-execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-5_44_-43
+execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-5_44_-43 -5 44 -43
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-8_56_-83 -8 56 -83
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-19_54_-15 -19 54 -15
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_31_65_-118 31 65 -118

@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:opti/life_crystal"
+		"function": "stardust:utils/life_crystal"
 	}
 }

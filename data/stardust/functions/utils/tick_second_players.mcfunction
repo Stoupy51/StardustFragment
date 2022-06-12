@@ -16,14 +16,14 @@ data modify storage stardust:main Inventory set from entity @s Inventory
 #Life crystals
 	scoreboard players set #success stardust.data 0
 	execute store success score #success stardust.data run attribute @s generic.max_health modifier value get 2013-0-0-0-0
-	execute if score #success stardust.data matches 0 run function stardust:opti/update_health
+	execute if score #success stardust.data matches 0 run function stardust:utils/update_health
 
 #Playsound remove tags
 	tag @s remove stardust.ps.nether_star_generator
 	tag @s remove stardust.ps.redstone_generator
 
 #Others
-	execute if score @s stardust.wormhole matches 1.. run function stardust:opti/wormhole_potion/use
+	execute if score @s stardust.wormhole matches 1.. run function stardust:utils/wormhole_potion/use
 	attribute @s[tag=stardust.no_cooldown] generic.attack_speed base set 2000
 	execute if entity @s[tag=!global.ignore.gui] at @s anchored eyes positioned ^ ^ ^2 run function stardust:visual/seed_status
 	forceload add -30000000 1600

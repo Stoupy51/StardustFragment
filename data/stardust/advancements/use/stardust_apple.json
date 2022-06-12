@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:opti/stardust_apple"
+		"function": "stardust:utils/stardust_apple"
 	}
 }

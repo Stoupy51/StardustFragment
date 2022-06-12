@@ -1,9 +1,6 @@
 #Others
 	scoreboard players set #second stardust.data 0
-	scoreboard players add #minute stardust.data 1
-	execute if score #minute stardust.data matches 60.. run function stardust:tick_minute
 	execute if score #dragon_killed stardust.data matches ..10 run function stardust:opti/dragon_egg/all
-	execute as @e[type=#energy:valid_block_entities,tag=stardust.destroyer] at @s run function stardust:destroy/all
 	execute as @e[type=glow_item_frame,tag=stardust.destroyer,sort=random] at @s run function stardust:opti/tick_second_glows
 	execute as @a[sort=random] at @s run function stardust:opti/tick_second_players
 	execute if entity @a[tag=stardust.is_in_dungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
@@ -16,5 +13,4 @@
 #Mobs
 	execute as @e[type=#stardust:global,predicate=stardust:in_dim/celestial_or_stardust,tag=] at @s run function stardust:mobs/dimensions_check
 	execute as @e[type=ender_dragon,predicate=stardust:in_dim/ultimate,tag=,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
-	execute at @e[type=bat,tag=stardust.stardust_bat] at @a[distance=5..12,tag=!stardust.no_bolt,gamemode=!spectator,gamemode=!creative] run summon lightning_bolt
 

@@ -10,4 +10,4 @@
 	scoreboard players remove @e[type=wolf,scores={stardust.wolfs=10..}] stardust.wolfs 10
 
 #Seeds
-	execute as @e[type=glow_item_frame,tag=stardust.seed,tag=!stardust.seed_done] at @s run function stardust:utils/seeds
+	execute as @e[type=item_frame,tag=stardust.seed,tag=!stardust.seed_done] at @s run function stardust:utils/seeds

@@ -42,25 +42,11 @@
 			"shift_y": 0,
 			"shift_z": "minecraft:shift_z"
 		},
-		"continents": "minecraft:overworld/continents",
-		"erosion": "minecraft:overworld/erosion",
-		"depth": "minecraft:overworld/depth",
+		"continents": 0,
+		"erosion": 0,
+		"depth": 0,
 		"ridges": 0,
-		"initial_density_without_jaggedness": {
-			"type": "minecraft:mul",
-			"argument1": 4,
-			"argument2": {
-				"type": "minecraft:quarter_negative",
-				"argument": {
-					"type": "minecraft:mul",
-					"argument1": "minecraft:overworld/depth",
-					"argument2": {
-						"type": "minecraft:cache_2d",
-						"argument": "minecraft:overworld/factor"
-					}
-				}
-			}
-		},
+		"initial_density_without_jaggedness": 0,
 		"final_density": {
 			"type": "minecraft:squeeze",
 			"argument": {
@@ -70,7 +56,43 @@
 					"type": "minecraft:interpolated",
 					"argument": {
 						"type": "minecraft:blend_density",
-						"argument": "minecraft:overworld/sloped_cheese"
+						"argument": {
+							"type": "minecraft:add",
+							"argument1": 2.5,
+							"argument2": {
+								"type": "minecraft:mul",
+								"argument1": {
+									"type": "minecraft:y_clamped_gradient",
+									"from_y": -72,
+									"to_y": -40,
+									"from_value": 0,
+									"to_value": 1
+								},
+								"argument2": {
+									"type": "minecraft:add",
+									"argument1": -2.5,
+									"argument2": {
+										"type": "minecraft:add",
+										"argument1": 0.9375,
+										"argument2": {
+											"type": "minecraft:mul",
+											"argument1": {
+												"type": "minecraft:y_clamped_gradient",
+												"from_y": 104,
+												"to_y": 128,
+												"from_value": 1,
+												"to_value": 0
+											},
+											"argument2": {
+												"type": "minecraft:add",
+												"argument1": -0.9375,
+												"argument2": "minecraft:nether/base_3d_noise"
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -229,17 +251,14 @@
 															"then_run": {
 																"type": "minecraft:block",
 																"result_state": {
-																	"Name": "minecraft:grass_block",
-																	"Properties": {
-																		"snowy": "false"
-																	}
+																	"Name": "minecraft:stone"
 																}
 															}
 														},
 														{
 															"type": "minecraft:block",
 															"result_state": {
-																"Name": "minecraft:dirt"
+																"Name": "minecraft:stone"
 															}
 														}
 													]
@@ -262,6 +281,58 @@
 											"type": "minecraft:y_above",
 											"anchor": {
 												"absolute": 62
+											},
+											"surface_depth_multiplier": 0,
+											"add_stone_depth": false
+										},
+										"then_run": {
+											"type": "minecraft:condition",
+											"if_true": {
+												"type": "minecraft:not",
+												"invert": {
+													"type": "minecraft:y_above",
+													"anchor": {
+														"absolute": 63
+													},
+													"surface_depth_multiplier": 0,
+													"add_stone_depth": false
+												}
+											},
+											"then_run": {
+												"type": "minecraft:condition",
+												"if_true": {
+													"type": "minecraft:noise_threshold",
+													"noise": "minecraft:surface_swamp",
+													"min_threshold": 0,
+													"max_threshold": 1.7976931348623157e+308
+												},
+												"then_run": {
+													"type": "minecraft:block",
+													"result_state": {
+														"Name": "minecraft:water",
+														"Properties": {
+															"level": "0"
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								{
+									"type": "minecraft:condition",
+									"if_true": {
+										"type": "minecraft:biome",
+										"biome_is": [
+											"minecraft:mangrove_swamp"
+										]
+									},
+									"then_run": {
+										"type": "minecraft:condition",
+										"if_true": {
+											"type": "minecraft:y_above",
+											"anchor": {
+												"absolute": 60
 											},
 											"surface_depth_multiplier": 0,
 											"add_stone_depth": false
@@ -1230,17 +1301,14 @@
 																		"then_run": {
 																			"type": "minecraft:block",
 																			"result_state": {
-																				"Name": "minecraft:grass_block",
-																				"Properties": {
-																					"snowy": "false"
-																				}
+																				"Name": "minecraft:stone"
 																			}
 																		}
 																	},
 																	{
 																		"type": "minecraft:block",
 																		"result_state": {
-																			"Name": "minecraft:dirt"
+																			"Name": "minecraft:stone"
 																		}
 																	}
 																]
@@ -1353,6 +1421,21 @@
 												"if_true": {
 													"type": "minecraft:biome",
 													"biome_is": [
+														"minecraft:mangrove_swamp"
+													]
+												},
+												"then_run": {
+													"type": "minecraft:block",
+													"result_state": {
+														"Name": "minecraft:mud"
+													}
+												}
+											},
+											{
+												"type": "minecraft:condition",
+												"if_true": {
+													"type": "minecraft:biome",
+													"biome_is": [
 														"minecraft:mushroom_fields"
 													]
 												},
@@ -1380,17 +1463,14 @@
 														"then_run": {
 															"type": "minecraft:block",
 															"result_state": {
-																"Name": "minecraft:grass_block",
-																"Properties": {
-																	"snowy": "false"
-																}
+																"Name": "minecraft:stone"
 															}
 														}
 													},
 													{
 														"type": "minecraft:block",
 														"result_state": {
-															"Name": "minecraft:dirt"
+															"Name": "minecraft:stone"
 														}
 													}
 												]
@@ -1648,7 +1728,7 @@
 														{
 															"type": "minecraft:block",
 															"result_state": {
-																"Name": "minecraft:dirt"
+																"Name": "minecraft:stone"
 															}
 														}
 													]
@@ -1960,7 +2040,7 @@
 															"then_run": {
 																"type": "minecraft:block",
 																"result_state": {
-																	"Name": "minecraft:dirt"
+																	"Name": "minecraft:stone"
 																}
 															}
 														},
@@ -1992,6 +2072,21 @@
 															]
 														}
 													]
+												}
+											},
+											{
+												"type": "minecraft:condition",
+												"if_true": {
+													"type": "minecraft:biome",
+													"biome_is": [
+														"minecraft:mangrove_swamp"
+													]
+												},
+												"then_run": {
+													"type": "minecraft:block",
+													"result_state": {
+														"Name": "minecraft:mud"
+													}
 												}
 											},
 											{

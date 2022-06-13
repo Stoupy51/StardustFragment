@@ -5,7 +5,7 @@
 		"settings": "stardust:cavern",
 		"biome_source": {
 			"type": "minecraft:fixed",
-			"biome": "minecraft:lush_caves"
+			"biome": "stardust:the_underground"
 		}
 	}
 }

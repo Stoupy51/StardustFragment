@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:player_head",
+					"name": "minecraft:item_frame",
 					"functions": [
 						{
 							"function": "minecraft:copy_nbt",

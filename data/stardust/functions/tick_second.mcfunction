@@ -1,7 +1,8 @@
+
 #Others
 	scoreboard players set #second stardust.data 0
 	execute if score #dragon_killed stardust.data matches ..10 run function stardust:utils/dragon_egg/all
-	execute as @e[type=glow_item_frame,tag=stardust.destroyer,sort=random] at @s run function stardust:utils/tick_second_glows
+	execute as @e[type=glow_item_frame,tag=stardust.destroyer,tag=!simplenergy.item_destroy,sort=random] at @s run function stardust:utils/tick_second_glows
 	execute as @a[sort=random] at @s run function stardust:utils/tick_second_players
 	execute if entity @a[tag=stardust.is_in_dungeon,limit=1] in stardust:dungeon run function stardust:tick_second_dungeon
 

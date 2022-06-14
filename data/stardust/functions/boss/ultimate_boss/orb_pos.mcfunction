@@ -21,4 +21,4 @@
 
 execute at @s if block ~ ~ ~ #stardust:non_solid if block ~ ~-1 ~ #stardust:non_solid if block ~ ~1 ~ #stardust:non_solid if block ~ ~ ~1 #stardust:non_solid if block ~ ~ ~-1 #stardust:non_solid if block ~1 ~ ~ #stardust:non_solid if block ~-1 ~ ~ #stardust:non_solid run summon shulker ~ ~ ~ {Passengers:[{id:"minecraft:armor_stand",Glowing:1b,Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"cobblestone",Count:1b,tag:{Enchantments:[{id:"protection",lvl:0}],CustomModelData:2013397}}],Tags:["stardust.ultimate_orb"]}],Peek:30b,NoAI:1b,Health:1,Attributes:[{Name:"generic.max_health",Base:1}],DeathLootTable:"none",Team:"stardust.team",Tags:["stardust.ultimate_orb"]}
 kill @s
-execute unless entity @e[type=armor_stand,tag=stardust.ultimate_orb,limit=1] run function stardust:boss/ultimate_boss/orb
+execute unless entity @e[tag=stardust.ultimate_orb,limit=1] run function stardust:boss/ultimate_boss/orb

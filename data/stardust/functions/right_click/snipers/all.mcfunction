@@ -36,14 +36,14 @@ tag @s add stardust.shooter
 
 #Launch the bullet
 	execute if entity @s[gamemode=creative] unless score #bullet_type stardust.data matches 1.. run scoreboard players set #bullet_type stardust.data 1
-	tp @e[type=area_effect_cloud,tag=stardust.to_throw,limit=1] @s
-	execute as @e[type=area_effect_cloud,tag=stardust.to_throw,limit=1] run tp @s ^ ^1.55 ^
-	execute if predicate stardust:sneaking as @e[type=area_effect_cloud,tag=stardust.to_throw,limit=1] at @s run tp @s ~ ~-0.3 ~
+	tp @e[tag=stardust.to_throw,limit=1] @s
+	execute as @e[tag=stardust.to_throw,limit=1] run tp @s ^ ^1.55 ^
+	execute if predicate stardust:sneaking as @e[tag=stardust.to_throw,limit=1] at @s run tp @s ~ ~-0.3 ~
 	execute unless score #bullet_type stardust.data matches 1.. run playsound block.note_block.snare ambient @s ~ ~ ~ 1 0.5
 	execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -1 run playsound stardust:sniper_shot_1 ambient @a[distance=..20] ~ ~ ~ 0.5
 	execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -2 run playsound stardust:sniper_shot_2 ambient @a[distance=..20] ~ ~ ~ 0.5
 	execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -3 run playsound stardust:sniper_shot_3 ambient @a[distance=..20] ~ ~ ~ 0.5
-	execute if score #bullet_type stardust.data matches 1.. as @e[type=area_effect_cloud,tag=stardust.to_throw,limit=1] at @s run function stardust:right_click/snipers/projectile_move
+	execute if score #bullet_type stardust.data matches 1.. as @e[tag=stardust.to_throw,limit=1] at @s run function stardust:right_click/snipers/projectile_move
 
 tag @s remove stardust.shooter
 tag @e[tag=stardust.shooted] remove stardust.shooted

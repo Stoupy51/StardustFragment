@@ -11,10 +11,9 @@ execute as @e[type=item,tag=stardust.giveAwak] run data modify entity @s Item.Co
 
 tellraw @a ["",{"text":"\n[Stardust","italic":false,"color":"dark_aqua"},{"text":"Fragment] ","italic":false,"color":"aqua"},{"text":"The "},{"text":"U","italic":false,"color":"dark_purple"},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" B","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"s","italic":false,"color":"dark_aqua"},{"text":"s","italic":false,"color":"aqua"},{"text":" has been defeated! Congratulations!\n"}]
 execute as @a at @s run playsound entity.wither.spawn master @s
-kill @e[type=ender_dragon,tag=stardust.dragon]
-kill @e[type=shulker,tag=stardust.ultimate_orb]
-kill @e[type=armor_stand,tag=stardust.ultimate_orb]
-kill @e[type=minecraft:end_crystal,y=0]
+kill @e[tag=stardust.dragon]
+kill @e[tag=stardust.ultimate_orb]
+kill @e[type=end_crystal,y=0]
 scoreboard players reset UltimateBossKilled stardust.data
 scoreboard players reset #ultimate_boss stardust.data
 execute in stardust:ultimate run function stardust:dimensions/structure/ultimate

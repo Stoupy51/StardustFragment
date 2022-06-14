@@ -7,4 +7,4 @@
 ##scoreboard players get #is_silk_touch simplenergy.data
 ##scoreboard players get #item_count simplenergy.data
 
-execute as @e[type=#energy:valid_block_entities,tag=stardust.destroyer,dx=0,dy=0,dz=0] at @s run function stardust:destroy/all
+execute as @e[tag=stardust.destroyer,dx=0,dy=0,dz=0] at @s run function stardust:destroy/all

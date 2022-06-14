@@ -44,5 +44,5 @@ data modify block ~ ~ ~ SpawnPotentials[17].data.entity.Item set from storage st
 data modify block ~ ~ ~ SpawnPotentials[18].data.entity.Item set value {id:"minecraft:netherite_block",Count:16b}
 
 function stardust:place/glow_item_frame_0
-execute as @e[type=glow_item_frame,tag=stardust.set_new] at @s run function stardust:place/ultimate_spawner/secondary
+execute as @e[tag=stardust.set_new] at @s run function stardust:place/ultimate_spawner/secondary
 particle flame ~ ~ ~ 0.5 0.5 0.5 0.01 100

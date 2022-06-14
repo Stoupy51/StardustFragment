@@ -12,8 +12,9 @@
 ##You should use the 2nd one, because it is shorter and more readable.
 
 
-execute if entity @e[type=player,distance=..9]
-execute if entity @a[distance=..9]
-execute if entity @a[distance=..9.0]
-execute if entity @e[type=player,distance=..9.0]
+execute if entity @e[]
+execute if entity @e[dx=0]
+execute if entity @e[dx=0,dy=0]
+execute if entity @e[dx=0,dy=0,dz=0]
+execute if entity @e[distance=..1]
 

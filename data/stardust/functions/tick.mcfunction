@@ -1,7 +1,7 @@
 
 #Others 1
-	#execute as @e at @e[limit=10] run function stardust:utils/z_personal_profiling
-	execute if score #stardust_pillar stardust.data matches 1.. as @e[type=wither,tag=stardust.stardust_pillar,tag=stardust.has_shield] run data modify entity @s NoAI set value 1b
+	#function stardust:utils/z_personal_profiling_launch
+	execute if score #stardust_pillar stardust.data matches 1.. as @e[tag=stardust.stardust_pillar,tag=stardust.has_shield] run data modify entity @s NoAI set value 1b
 
 #Timer
 	scoreboard players add #tick_2 stardust.data 1

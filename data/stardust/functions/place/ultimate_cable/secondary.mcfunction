@@ -1,6 +1,6 @@
 
 function stardust:place/block_tags
-data modify entity @s Item set value {id:"cobblestone",Count:1b,tag:{CustomModelData:2013600}}
+item replace entity @s container.0 with cobblestone{CustomModelData:2013600}
 tag @s add stardust.destroy_player_head
 tag @s add stardust.ultimate_cable
 tag @s add simplenergy.cable

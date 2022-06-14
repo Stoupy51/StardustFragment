@@ -1,6 +1,6 @@
 
 function stardust:place/block_tags
-data modify entity @s Item set value {id:"deepslate",Count:1b,tag:{CustomModelData:2013324}}
+item replace entity @s container.0 with deepslate{CustomModelData:2013324}
 tag @s add stardust.wind_turbine
 tag @s add simplenergy.rotable
 tag @s add energy.send

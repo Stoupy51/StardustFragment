@@ -51,16 +51,16 @@
 	
 	{"text":"\\n\\uec01","color":"reset"},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":75},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Solar Panel","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":76},"hoverEvent":{"action":"show_text","contents":[{"text":"Legendary Solar Panel","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":76},"hoverEvent":{"action":"show_text","contents":[{"text":"Legendarium Solar Panel","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":77},"hoverEvent":{"action":"show_text","contents":[{"text":"Solarium Solar Panel","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":78},"hoverEvent":{"action":"show_text","contents":[{"text":"Dark Solar Panel","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":78},"hoverEvent":{"action":"show_text","contents":[{"text":"Darkium Solar Panel","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":79},"hoverEvent":{"action":"show_text","contents":[{"text":"Stardust Battery","italic":false,"color":"white"}]}},
 	
 	{"text":"\\n\\uec01","color":"reset"},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":75},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Solar Panel","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":76},"hoverEvent":{"action":"show_text","contents":[{"text":"Legendary Solar Panel","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":76},"hoverEvent":{"action":"show_text","contents":[{"text":"Legendarium Solar Panel","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":77},"hoverEvent":{"action":"show_text","contents":[{"text":"Solarium Solar Panel","italic":false,"color":"white"}]}},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":78},"hoverEvent":{"action":"show_text","contents":[{"text":"Dark Solar Panel","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":78},"hoverEvent":{"action":"show_text","contents":[{"text":"Darkium Solar Panel","italic":false,"color":"white"}]}},
 	{"text":"\\uec00","clickEvent":{"action":"change_page","value":79},"hoverEvent":{"action":"show_text","contents":[{"text":"Stardust Battery","italic":false,"color":"white"}]}},
 	
 	{"text":"\\n\\uec01","color":"reset"},

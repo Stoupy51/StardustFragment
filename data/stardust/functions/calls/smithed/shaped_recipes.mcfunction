@@ -60,13 +60,13 @@
 #Awakened Solar Panel
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"awakened_photovoltaic_cell"}}},{Slot:1b,tag:{ctc:{id:"awakened_photovoltaic_cell"}}},{Slot:2b,tag:{ctc:{id:"awakened_photovoltaic_cell"}}}],1:[{Slot:0b,tag:{ctc:{id:"awakened_stardust"}}},{Slot:1b,tag:{ctc:{id:"stardust_solar_panel"}}},{Slot:2b,tag:{ctc:{id:"awakened_stardust"}}}],2:[{Slot:0b,tag:{ctc:{id:"awakened_stardust_block"}}},{Slot:1b,tag:{ctc:{id:"awakened_stardust_block"}}},{Slot:2b,tag:{ctc:{id:"awakened_stardust_block"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/awakened_solar_panel
 
-#Legendary Solar Panel
+#Legendarium Solar Panel
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"legendarium_photovoltaic_cell"}}},{Slot:1b,tag:{ctc:{id:"legendarium_photovoltaic_cell"}}},{Slot:2b,tag:{ctc:{id:"legendarium_photovoltaic_cell"}}}],1:[{Slot:0b,tag:{ctc:{id:"legendarium_fragment"}}},{Slot:1b,tag:{ctc:{id:"awakened_solar_panel"}}},{Slot:2b,tag:{ctc:{id:"legendarium_fragment"}}}],2:[{Slot:0b,id:"minecraft:iron_block"},{Slot:1b,id:"minecraft:iron_block"},{Slot:2b,id:"minecraft:iron_block"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/legendarium_solar_panel
 
 #Solarium Solar Panel
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"solarium_photovoltaic_cell"}}},{Slot:1b,tag:{ctc:{id:"solarium_photovoltaic_cell"}}},{Slot:2b,tag:{ctc:{id:"solarium_photovoltaic_cell"}}}],1:[{Slot:0b,tag:{ctc:{id:"solarium_fragment"}}},{Slot:1b,tag:{ctc:{id:"awakened_solar_panel"}}},{Slot:2b,tag:{ctc:{id:"solarium_fragment"}}}],2:[{Slot:0b,id:"minecraft:iron_block"},{Slot:1b,id:"minecraft:iron_block"},{Slot:2b,id:"minecraft:iron_block"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/solarium_solar_panel
 
-#Dark Solar Panel
+#Darkium Solar Panel
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"darkium_photovoltaic_cell"}}},{Slot:1b,tag:{ctc:{id:"darkium_photovoltaic_cell"}}},{Slot:2b,tag:{ctc:{id:"darkium_photovoltaic_cell"}}}],1:[{Slot:0b,tag:{ctc:{id:"darkium_fragment"}}},{Slot:1b,tag:{ctc:{id:"awakened_solar_panel"}}},{Slot:2b,tag:{ctc:{id:"darkium_fragment"}}}],2:[{Slot:0b,tag:{ctc:{id:"simplunium_block"}}},{Slot:1b,tag:{ctc:{id:"simplunium_block"}}},{Slot:2b,tag:{ctc:{id:"simplunium_block"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/darkium_solar_panel
 
 #Stardust Battery

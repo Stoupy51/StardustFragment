@@ -1,0 +1,16 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "minecraft:item/item_frame"
+	},
+	"overrides": [
+		{ "predicate": { "custom_model_data": 2013200 }, "model": "stardust:others/seeds/diamond_seed" },
+		{ "predicate": { "custom_model_data": 2013201 }, "model": "stardust:others/seeds/advanced_diamond_seed" },
+		{ "predicate": { "custom_model_data": 2013202 }, "model": "stardust:others/seeds/stardust_seed" },
+		{ "predicate": { "custom_model_data": 2013203 }, "model": "stardust:others/seeds/advanced_stardust_seed" },
+		{ "predicate": { "custom_model_data": 2013204 }, "model": "stardust:others/seeds/elite_stardust_seed" },
+		{ "predicate": { "custom_model_data": 2013205 }, "model": "stardust:others/seeds/legendarium_seed" },
+		{ "predicate": { "custom_model_data": 2013206 }, "model": "stardust:others/seeds/solarium_seed" },
+		{ "predicate": { "custom_model_data": 2013207 }, "model": "stardust:others/seeds/darkium_seed" }
+	]
+}

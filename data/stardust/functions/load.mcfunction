@@ -154,7 +154,7 @@ scoreboard players set #-1 simplenergy.data -1
 
 
 
-#Equipment
+#Equipments
 	#Damaged Armor/Tools
 		data modify storage stardust:main all.2013100 set value {Slot:16b,id:"minecraft:leather_helmet"				,Count:1b,tag:{ctc:{id:"damaged_stardust_helmet",from:"stoupy:stardust",traits:{"armor":1b}}							,CustomModelData:2013100,simplenergy:{},stardust:{damaged:1b,damaged_helmet:1b}									,HideFlags:64,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Slot:"head",Amount:4,Operation:0,UUID:[I;201302,201302,201302,201303]}	,{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Slot:"head",Amount:2,Operation:0,UUID:[I;201302,201302,201303,201303]}		,{AttributeName:"generic.max_health",Name:"generic.max_health",Slot:"head",Amount:5,Operation:0,UUID:[I;201301,201301,201301,201301]}]							,display:{color:335928,Lore:['{"translate":"Stardust Fragment","color":"blue","italic":true}']		,Name:'[{"text":"Damaged Stardust Helmet","italic":false,"color":"white"}]'}}}
 		data modify storage stardust:main all.2013101 set value {Slot:16b,id:"minecraft:leather_chestplate"			,Count:1b,tag:{ctc:{id:"damaged_stardust_chestplate",from:"stoupy:stardust",traits:{"armor":1b}}						,CustomModelData:2013101,simplenergy:{},stardust:{damaged:1b,damaged_chestplate:1b}								,HideFlags:64,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Slot:"chest",Amount:9,Operation:0,UUID:[I;201302,201302,201302,201303]}	,{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Slot:"chest",Amount:2,Operation:0,UUID:[I;201302,201302,201303,201303]}]																																									,display:{color:335928,Lore:['{"translate":"Stardust Fragment","color":"blue","italic":true}']		,Name:'[{"text":"Damaged Stardust Chestplate","italic":false,"color":"white"}]'}}}
@@ -362,6 +362,7 @@ scoreboard players set #-1 simplenergy.data -1
 #Stardust Manual
 	data modify storage stardust:main all.2013398 set value {Slot:18b,id:"minecraft:written_book"					,Count:1b,tag:{ctc:{id:"stardust_manual",from:"stoupy:stardust",traits:{}}												,CustomModelData:2013398,simplenergy:{},stardust:{stardust_manual:1b}											,HideFlags:127,display:{Lore:['{"translate":"Stardust Fragment","color":"blue","italic":true}']},pages:[],title:"Stardust Manual",author:""}}
 	function stardust:manual/all
+
 #Cables
 	#Stardust Cable
 		data modify storage stardust:main all.2013400 set value {Slot:16b,id:"minecraft:player_head"				,Count:1b,tag:{ctc:{id:"stardust_cable",from:"stoupy:stardust",traits:{"block":1b,"energy":1b}}							,CustomModelData:2013400,simplenergy:{},stardust:{stardust_cable:1b}											,HideFlags:127,display:{Lore:['[{"text":"[Transfer: 600 kW]","italic":false,"color":"gray"}]','{"translate":"Stardust Fragment","color":"blue","italic":true}'],Name:'[{"text":"Stardust Cable","italic":false,"color":"white"}]'},SkullOwner:{Id:[I;-709098200,1001541428,-2043264882,-430220135],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y4NDVlMzBlNmVjOGI0N2RmZWUxMzI5NmQzYjQ3NzY5YzVjMGE5Nzc3YzNkNTk2ZWJiNDA3ZmY3OTcwNDE1ZCJ9fX0="}]}}}}

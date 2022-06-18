@@ -1,4 +1,0 @@
-summon item ~ ~ ~ {Motion:[0.0,0.4,0.0],Item:{id:"minecraft:ghast_spawn_egg",Count:1b,tag:{PdC:1b,EntityTag:{id:"minecraft:area_effect_cloud",Age:0,Duration:0,Radius:0f,Tags:["PdC","SFegg"],NoAI:1b,Silent:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:20,ShowParticles:0b}]},HideFlags:127,display:{Lore:['[{"text":"Ce portail permet d\'accéder à un","italic":false,"color":"white"}]','[{"text":"monde rempli de cavernes !","italic":false,"color":"white"}]','{"text":" "}','[{"text":"[À poser sur un Iron Block]","italic":false,"color":"gray"}]'],Name:'[{"text":"Portail des Cavernes","italic":false,"color":"dark_gray"}]'}}}}
-playsound block.anvil.destroy block @a
-particle soul ~ ~ ~ 0.5 1 0.5 0.05 200
-kill @s

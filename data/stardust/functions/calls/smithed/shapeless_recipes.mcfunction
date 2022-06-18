@@ -213,5 +213,7 @@ data modify storage smithed.crafter:input flags append value "consume_tools"
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:input {recipe:[{Count:9b,tag:{ctc:{id:"solarium_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/solarium_block
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:input {recipe:[{Count:9b,tag:{ctc:{id:"darkium_ingot"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/darkium_block
 
+#Life Crystal Block
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:glass"},{Count:1b,tag:{ctc:{id:"life_crystal"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/life_crystal_block
 
 

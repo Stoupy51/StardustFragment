@@ -1,6 +1,6 @@
 
 tag @s add stardust.placer
-
+execute as @e[tag=stardust.destroyer] at @s run function stardust:destroy/all
 
 
 #Materials

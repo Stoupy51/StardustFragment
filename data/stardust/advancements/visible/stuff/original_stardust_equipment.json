@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:diamond_pickaxe", "nbt": "{CustomModelData:2013119}" },
+		"title": { "text": "Is it the final upgrade?", "color": "aqua" },
+		"description": { "text": "Use the power of Stardust Config to craft an Original Stardust equipment", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stuff/reinforced_stardust_equipment",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{normal:1b,original:1b}}"
+		}]}
+	}}
+}

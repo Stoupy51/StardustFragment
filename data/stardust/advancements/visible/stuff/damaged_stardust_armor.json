@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:leather_chestplate", "nbt": "{CustomModelData:2013101}" },
+		"title": { "text": "Protecting myself with Stardust", "color": "aqua" },
+		"description": { "text": "Upgrade your diamond armor into Damaged Stardust", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stuff/damaged_stardust_equipment",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{damaged:1b},ctc:{traits:{\"armor\":1b}}}"
+		}]}
+	}}
+}

@@ -1,40 +1,19 @@
 {
 	"display": {
-		"title": {
-			"text": "Stardust Fragment"
-		},
-		"description": {
-			"text": "What's this little blue thing?"
-		},
-		"icon": {
-			"item": "minecraft:command_block",
-			"nbt": "{CustomModelData:2013000}"
-		},
+		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013000}" },
+		"title": { "text": "Stardust Fragment", "color": "aqua" },
+		"description": { "text": "What's this little blue thing?", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false,
 		"background": "stardust:textures/materials/stardust_block.png"
 	},
-	"criteria": {
-		"StardustFragment": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": ["minecraft:command_block"],
-						"nbt": "{stardust:{stardust_fragment:1b}}"
-					}
-				]
-			}
-		}
-	},
-	"requirements": [
-		[
-			"StardustFragment"
-		]
-	],
-	"rewards": {
-		"experience": 10
-	}
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{stardust_fragment:1b}}"
+		}]}
+	}}
 }

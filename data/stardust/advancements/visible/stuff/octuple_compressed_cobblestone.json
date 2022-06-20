@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013022}" },
+		"title": { "text": "43,046,721", "color": "aqua" },
+		"description": { "text": "Obtain an Octuple Compressed Cobblestone", "color": "green" },
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"parent": "stardust:visible/stuff/compressed_cobblestone",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{octuple_compressed_cobblestone:1b}}"
+		}]}
+	}}
+}

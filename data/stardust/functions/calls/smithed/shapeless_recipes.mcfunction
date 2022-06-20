@@ -17,7 +17,7 @@ scoreboard players set #consume_tools stardust.data 0
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:input {recipe:[{Count:1b,tag:{ctc:{id:"stardust_essence"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot_x8
 
 #Stardust Essence
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,tag:{ctc:{id:"stardust_ingot"}}},{Count:1b,id:"minecraft:blaze_powder"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_essence
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,tag:{ctc:{id:"stardust_ingot"}}},{Count:1b,id:"minecraft:gunpowder"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_essence
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 1 if data storage smithed.crafter:input {recipe:[{Count:1b,tag:{ctc:{id:"stardust_config"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_essence_x8
 
 #Stardust Config

@@ -1,0 +1,71 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_config",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 4,
+								"max": 6
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/awakened_stardust_block",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 32,
+								"max": 64
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 48,
+				"max": 72
+			},
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "stardust:i/legendarium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "stardust:i/solarium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"name": "stardust:i/darkium_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 2,
+					"name": "stardust:i/ultimate_fragment"
+				}
+			]
+		}
+	]
+}

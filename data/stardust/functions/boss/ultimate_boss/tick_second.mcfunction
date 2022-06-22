@@ -11,7 +11,7 @@ scoreboard players remove @e[tag=stardust.dragon,scores={stardust.data=31..}] st
 execute as @e[type=arrow,tag=stardust.always_aiming] at @s run function stardust:boss/aim
 execute as @e[type=fireball,tag=stardust.always_aiming] at @s run function stardust:boss/aim
 execute as @e[tag=stardust.dragon,tag=!stardust.ultimate_boss,tag=!stardust.dragon_dead] at @s run function stardust:boss/ultimate_boss/check_health
-execute if entity @a[nbt={Dimension:"stardust:ultimate"},limit=1] unless entity @e[tag=stardust.ultimate_boss,limit=1] run scoreboard players add UltimateBossKilled stardust.data 1
-execute if score UltimateBossKilled stardust.data matches 10.. in stardust:ultimate run forceload add -73 -69 71 75
-execute if score UltimateBossKilled stardust.data matches 11.. run function stardust:boss/ultimate_boss/defeated
+execute if entity @a[nbt={Dimension:"stardust:ultimate"},limit=1] unless entity @e[tag=stardust.ultimate_boss,limit=1] run scoreboard players add #ultimate_boss_killed stardust.data 1
+execute if score #ultimate_boss_killed stardust.data matches 10.. in stardust:ultimate run forceload add -73 -69 71 75
+execute if score #ultimate_boss_killed stardust.data matches 11.. run function stardust:boss/ultimate_boss/defeated
 execute in stardust:ultimate run tp @e[x=0,z=0,distance=150..] 0 100 0

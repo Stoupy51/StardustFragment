@@ -8,7 +8,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "stardust:visible/stuff/stardust_ingot",
+	"parent": "stardust:visible/stardust_fragment",
 	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{

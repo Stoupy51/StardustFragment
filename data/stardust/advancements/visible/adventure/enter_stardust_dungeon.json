@@ -8,7 +8,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "stardust:visible/adventure/stardust_pillar",
+	"parent": "stardust:visible/adventure/enter_stardust_dungeon_dim",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:impossible",

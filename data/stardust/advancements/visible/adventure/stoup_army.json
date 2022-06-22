@@ -8,7 +8,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "stardust:visible/stardust_fragment",
+	"parent": "stardust:visible/adventure/enter_cavern",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:impossible",

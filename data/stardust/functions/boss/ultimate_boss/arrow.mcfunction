@@ -1,3 +1,4 @@
+
 summon arrow ~ ~5 ~ {crit:0,damage:10,NoGravity:1,Tags:["stardust.to_throw","stardust.thrown","stardust.always_aiming"]}
 summon arrow ~5 ~ ~5 {crit:0,damage:10,NoGravity:1,Tags:["stardust.to_throw","stardust.thrown","stardust.always_aiming"]}
 summon arrow ~-5 ~ ~5 {crit:0,damage:10,NoGravity:1,Tags:["stardust.to_throw","stardust.thrown","stardust.always_aiming"]}

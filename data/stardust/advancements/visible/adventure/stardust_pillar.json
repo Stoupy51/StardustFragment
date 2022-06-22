@@ -8,7 +8,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "stardust:visible/adventure/stoup_army",
+	"parent": "stardust:visible/adventure/enter_stardust",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:impossible",

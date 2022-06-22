@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:item_frame", "nbt": "{CustomModelData:2013201}" },
+		"title": { "text": "More diamonds!", "color": "aqua" },
+		"description": { "text": "Plant an Advanced Diamond Seed", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/seeds/diamond",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

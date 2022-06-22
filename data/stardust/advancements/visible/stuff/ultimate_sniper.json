@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013154}" },
-		"title": { "text": "Shooting stars", "color": "aqua" },
+		"title": { "text": "Shooting stars" },
 		"description": { "text": "Got this Ultimate Sniper!", "color": "green" },
 		"frame": "challenge",
 		"show_toast": true,

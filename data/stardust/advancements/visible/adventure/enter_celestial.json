@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013307}" },
+		"title": { "text": "Skyblock, isn't it?", "color": "aqua" },
+		"description": { "text": "Enter the Celestial Dimension", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/enter_cavern",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:changed_dimension",
+		"conditions": {
+			"to": "stardust:celestial"
+		}
+	}}
+}

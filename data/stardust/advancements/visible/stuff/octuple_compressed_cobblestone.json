@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013022}" },
-		"title": { "text": "43,046,721", "color": "aqua" },
+		"title": { "text": "43,046,721" },
 		"description": { "text": "Obtain an Octuple Compressed Cobblestone", "color": "green" },
 		"frame": "challenge",
 		"show_toast": true,

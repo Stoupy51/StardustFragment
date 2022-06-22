@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:item_frame", "nbt": "{CustomModelData:2013207}" },
+		"title": { "text": "Planting and shadowing", "color": "aqua" },
+		"description": { "text": "Plant a Darkium Seed", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/seeds/solarium",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

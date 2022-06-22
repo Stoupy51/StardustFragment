@@ -1,11 +1,12 @@
+
 execute store result score #health stardust.data run data get entity @s Health 1
-scoreboard players set 250 stardust.data 250
-scoreboard players operation #health stardust.data -= 250 stardust.data
+scoreboard players set #250 stardust.data 250
+scoreboard players operation #health stardust.data -= #250 stardust.data
 execute store result entity @s Health float 1 run scoreboard players get #health stardust.data
 
 execute store result score #absorption stardust.data run data get entity @s AbsorptionAmount 1
-scoreboard players set 16000 stardust.data 16000
-scoreboard players operation #absorption stardust.data -= 16000 stardust.data
+scoreboard players set #16000 stardust.data 16000
+scoreboard players operation #absorption stardust.data -= #16000 stardust.data
 execute store result entity @s AbsorptionAmount float 1 run scoreboard players get #absorption stardust.data
 
 execute as @a at @s run playsound entity.ender_dragon.growl hostile @s

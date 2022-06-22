@@ -1,14 +1,14 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:golden_apple", "nbt": "{CustomModelData:2013173}" },
-		"title": { "text": "Two health bars!", "color": "aqua" },
+		"title": { "text": "Two health bars!" },
 		"description": { "text": "Consume your 20th and final Life Crystal", "color": "green" },
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": true
 	},
-	"parent": "stardust:visible/stuff/stardust_apple",
+	"parent": "stardust:visible/stuff/life_crystal",
 	"criteria": {
 		"requirement": {
 			"trigger": "minecraft:impossible",

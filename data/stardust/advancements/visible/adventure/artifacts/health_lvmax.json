@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013165}" },
-		"title": { "text": "Increasing Max Health IV", "color": "aqua" },
+		"title": { "text": "Increasing Max Health IV" },
 		"description": { "text": "Get a maxed out Health Artifact", "color": "green" },
 		"frame": "challenge",
 		"show_toast": true,

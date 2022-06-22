@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013155}" },
-		"title": { "text": "Using appropriate bullets", "color": "aqua" },
+		"title": { "text": "Using appropriate bullets" },
 		"description": { "text": "Craft a bunch of Ultimate Bullets", "color": "green" },
 		"frame": "challenge",
 		"show_toast": true,

@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:wolf_spawn_egg", "nbt": "{CustomModelData:2013216}" },
+		"title": { "text": "Fighting a mini-boss", "color": "aqua" },
+		"description": { "text": "Fight against your first Stoup Army", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stardust_fragment",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

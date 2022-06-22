@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013152}" },
+		"title": { "text": "Shooting stardust bullets", "color": "aqua" },
+		"description": { "text": "Obtain a Stardust Sniper", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/use_awakened_forge",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{stardust_sniper:1b}}"
+		}]}
+	}}
+}

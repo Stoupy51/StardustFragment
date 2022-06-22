@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013218}" },
+		"title": { "text": "Entering the dungeon", "color": "aqua" },
+		"description": { "text": "Use a Stardust Dungeon Key", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/stardust_pillar",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013155}" },
+		"title": { "text": "Using appropriate bullets", "color": "aqua" },
+		"description": { "text": "Craft a bunch of Ultimate Bullets", "color": "green" },
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stuff/ultimate_sniper",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{ultimate_bullet:1b}}"
+		}]}
+	}}
+}

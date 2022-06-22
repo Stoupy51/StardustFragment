@@ -1,8 +1,8 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:diamond_sword", "nbt": "{CustomModelData:2013125}" },
-		"title": { "text": "Taking a breath", "color": "aqua" },
-		"description": { "text": "Choose the Legendarium path", "color": "green" },
+		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013041}" },
+		"title": { "text": "A featherweight material", "color": "aqua" },
+		"description": { "text": "Craft a Legendarium Ingot", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
@@ -13,7 +13,7 @@
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{
 			"tag": "stardust:items",
-			"nbt": "{stardust:{legendarium:1b}}"
+			"nbt": "{stardust:{legendarium_ingot:1b}}"
 		}]}
 	}}
 }

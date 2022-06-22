@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013214}" },
+		"title": { "text": "Spawning Emeralds", "color": "aqua" },
+		"description": { "text": "Place an Emerald Spawner", "color": "green" },
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/use_awakened_forge",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

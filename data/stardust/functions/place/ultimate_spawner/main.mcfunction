@@ -1,4 +1,5 @@
 
+advancement grant @s only stardust:visible/adventure/ultimate_spawner
 setblock ~ ~ ~ spawner{SpawnCount:1,SpawnData:{entity:{id:"minecraft:item",Item:{id:"minecraft:diamond",Count:1b}}},SpawnPotentials:[]}
 
 data modify block ~ ~ ~ SpawnPotentials append value {weight:500,data:{entity:{id:"minecraft:item",Item:{id:"cobblestone",Count:1b}}}}

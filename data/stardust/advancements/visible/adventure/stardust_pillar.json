@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013217}" },
+		"title": { "text": "A Stardust Pillar", "color": "aqua" },
+		"description": { "text": "Summon the Stardust Pillar", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/stoup_army",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

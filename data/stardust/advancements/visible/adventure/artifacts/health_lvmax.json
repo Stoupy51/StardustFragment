@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013165}" },
+		"title": { "text": "Increasing Max Health IV", "color": "aqua" },
+		"description": { "text": "Get a maxed out Health Artifact", "color": "green" },
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/artifacts/health_lv3",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{health_artifact_lvmax:1b}}"
+		}]}
+	}}
+}

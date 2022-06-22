@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:bow", "nbt": "{CustomModelData:2013149}" },
+		"title": { "text": "Shooting stardust arrows", "color": "aqua" },
+		"description": { "text": "Obtain a Stardust Bow", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/use_awakened_forge",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{stardust_bow:1b}}"
+		}]}
+	}}
+}

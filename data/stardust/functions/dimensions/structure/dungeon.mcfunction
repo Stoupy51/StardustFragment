@@ -1,4 +1,6 @@
 
+kill @e[type=!player,y=0]
+kill @e[type=!player,y=0]
 scoreboard players set #success stardust.data 1
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-3_63_-106 -3 63 -106
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_-5_44_-43 -5 44 -43

@@ -1,8 +1,10 @@
-setblock ~ ~ ~ air destroy
-execute if entity @s[tag=stardust.cobblestone_miner_lv1] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:main all.2013016
-execute if entity @s[tag=stardust.cobblestone_miner_lv2] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:main all.2013016
-execute if entity @s[tag=stardust.cobblestone_miner_lv2] run data modify entity @e[type=item,nbt={Item:{tag:{ctc:{id:"double_compressed_cobblestone"}}}},sort=nearest,limit=1] Item.Count set value 3b
-execute if entity @s[tag=stardust.cobblestone_miner_lv3] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:main all.2013017
-execute if entity @s[tag=stardust.cobblestone_miner_lv4] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:main all.2013017
-execute if entity @s[tag=stardust.cobblestone_miner_lv4] run data modify entity @e[type=item,nbt={Item:{tag:{ctc:{id:"triple_compressed_cobblestone"}}}},sort=nearest,limit=1] Item.Count set value 3b
-execute if entity @s[tag=stardust.cobblestone_miner_lv5] run data modify entity @e[type=item,nbt={Item:{id:"minecraft:cobblestone"}},sort=nearest,limit=1] Item set from storage stardust:main all.2013018
+
+setblock ~ ~ ~ air
+playsound block.stone.break block @a[distance=..50]
+particle block cobblestone ~.5 ~.5 ~.5 .5 .5 .5 0 25 normal @a[distance=..50]
+
+execute if entity @s[tag=stardust.cobblestone_miner_lv1] run loot spawn ~ ~ ~ loot stardust:cobblestone_miner/lv1
+execute if entity @s[tag=stardust.cobblestone_miner_lv2] run loot spawn ~ ~ ~ loot stardust:cobblestone_miner/lv2
+execute if entity @s[tag=stardust.cobblestone_miner_lv3] run loot spawn ~ ~ ~ loot stardust:cobblestone_miner/lv3
+execute if entity @s[tag=stardust.cobblestone_miner_lv4] run loot spawn ~ ~ ~ loot stardust:cobblestone_miner/lv4
+execute if entity @s[tag=stardust.cobblestone_miner_lv5] run loot spawn ~ ~ ~ loot stardust:cobblestone_miner/lv5

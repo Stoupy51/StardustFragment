@@ -21,4 +21,3 @@
 
 #Boss
 	execute if score #ultimate_boss stardust.data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick
-

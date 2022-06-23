@@ -1,0 +1,14 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/quadruple_compressed_cobblestone"
+				}
+			]
+		}
+	]
+}

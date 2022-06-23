@@ -13,9 +13,9 @@ tag @s add stardust.shooter
 	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SelectedItemTag.stardust.ultimate_sniper run summon area_effect_cloud ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.ultimate_sniper],Age:0,Duration:0,Radius:0f}
 	execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -3
 
-	execute if score #sniper_type stardust.data matches -1 run scoreboard players set #bullet_damage stardust.data 5
-	execute if score #sniper_type stardust.data matches -2 run scoreboard players set #bullet_damage stardust.data 50
-	execute if score #sniper_type stardust.data matches -3 run scoreboard players set #bullet_damage stardust.data 130
+	execute if score #sniper_type stardust.data matches -1 run scoreboard players set #bullet_damage stardust.data 6
+	execute if score #sniper_type stardust.data matches -2 run scoreboard players set #bullet_damage stardust.data 12
+	execute if score #sniper_type stardust.data matches -3 run scoreboard players set #bullet_damage stardust.data 24
 
 #Check bullet, add damage and clear one
 	execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_nugget"}]}] run scoreboard players set #bullet_type stardust.data 1

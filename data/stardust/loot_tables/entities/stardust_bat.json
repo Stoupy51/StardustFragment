@@ -22,24 +22,10 @@
 					]
 				},
 				{
-					"type": "minecraft:item",
 					"weight": 9,
-					"name": "minecraft:command_block",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_ingot",
 					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013001.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						},
 						{
 							"function": "minecraft:set_count",
 							"count": {
@@ -51,25 +37,9 @@
 					]
 				},
 				{
-					"type": "minecraft:item",
 					"weight": 1,
-					"name": "minecraft:command_block",
-					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013002.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						}
-					]
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_essence"
 				}
 			]
 		}

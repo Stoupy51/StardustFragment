@@ -6,23 +6,9 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_fragment",
 					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013000.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						},
 						{
 							"function": "minecraft:set_count",
 							"count": {

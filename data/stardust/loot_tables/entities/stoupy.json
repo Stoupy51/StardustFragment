@@ -6,23 +6,9 @@
 			"bonus_rolls": 0,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:barrel",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/triple_compressed_cobblestone",
 					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013017.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						},
 						{
 							"function": "minecraft:set_count",
 							"count": {
@@ -44,23 +30,9 @@
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"type": "minecraft:loot_table",
+					"name": "stardust:i/stardust_ingot",
 					"functions": [
-						{
-							"function": "minecraft:copy_nbt",
-							"source": {
-								"type": "minecraft:storage",
-								"source": "stardust:main"
-							},
-							"ops": [
-								{
-									"source": "all.2013001.tag",
-									"target": "{}",
-									"op": "merge"
-								}
-							]
-						},
 						{
 							"function": "minecraft:set_count",
 							"count": {

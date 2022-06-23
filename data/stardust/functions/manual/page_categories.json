@@ -17,9 +17,9 @@
 	{"text":"\\n\\n","color":"reset"},
 	
 	{"text":"\\n\\uec01\\uec00\\uec00","color":"reset"},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":4},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Forge","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":103},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Forge","italic":false,"color":"white"}]}},
 	{"text":"\\n\\uec01\\uec00\\uec00","color":"reset"},
-	{"text":"\\uec00","clickEvent":{"action":"change_page","value":4},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Forge","italic":false,"color":"white"}]}},
+	{"text":"\\uec00","clickEvent":{"action":"change_page","value":103},"hoverEvent":{"action":"show_text","contents":[{"text":"Awakened Forge","italic":false,"color":"white"}]}},
 	
 	{"text":"\\n\\n\\n\\n\\uec00\\uec00"},
 	

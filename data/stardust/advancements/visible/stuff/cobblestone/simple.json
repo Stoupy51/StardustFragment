@@ -1,8 +1,8 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013015}" },
-		"title": { "text": "I see, an easy material", "color": "aqua" },
-		"description": { "text": "Compress your first 9 cobblestones", "color": "green" },
+		"title": { "text": "Compressing I", "color": "aqua" },
+		"description": { "text": "Obtain a Compressed Cobblestone", "color": "green" },
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

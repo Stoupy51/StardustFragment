@@ -6,9 +6,9 @@
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,
-		"hidden": true
+		"hidden": false
 	},
-	"parent": "stardust:visible/stuff/compressed_cobblestone",
+	"parent": "stardust:visible/stuff/cobblestone/septuple",
 	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{

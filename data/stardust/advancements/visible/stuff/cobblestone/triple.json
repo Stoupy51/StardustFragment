@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013017}" },
+		"title": { "text": "Compressing III", "color": "aqua" },
+		"description": { "text": "Obtain a Triple Compressed Cobblestone", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stuff/cobblestone/double",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{triple_compressed_cobblestone:1b}}"
+		}]}
+	}}
+}

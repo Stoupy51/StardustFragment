@@ -1,6 +1,16 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "stardust:equipments/travel_staff"
-    }
+	"parent": "item/warped_fungus_on_a_stick",
+	"textures": {
+		"layer0": "stardust:equipments/travel_staff"
+	},
+	"display": {
+		"firstperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [7, 0, -7]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -90, 0],
+			"translation": [7, 0, -7]
+		}
+	}
 }

@@ -5,7 +5,6 @@
 	scoreboard players operation #storage simplenergy.data = @s energy.storage
 	execute if score #storage simplenergy.data matches 1.. as @e[type=item,nbt={Item:{tag:{energy:{}}}},limit=1,sort=nearest,distance=..1] run function simplenergy:destroy/keep_energy
 
-kill @e[type=item,nbt={Item:{tag:{simplenergy:{texture_item:1b}}}},distance=..1]
 #Call on a machine when broken to remove its connections
 function energy:v1/api/break_machine
 kill @s

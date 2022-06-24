@@ -7,7 +7,7 @@
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false,
-		"background": "stardust:textures/materials/stardust_block.png"
+		"background": "stardust:textures/advancement_background.png"
 	},
 	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",

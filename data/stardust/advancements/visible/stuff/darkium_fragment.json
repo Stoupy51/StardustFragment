@@ -8,7 +8,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "stardust:visible/stuff/original_stardust_armor",
+	"parent": "stardust:hidden/after_original_stardust_armor",
 	"criteria": { "requirement": {
 		"trigger": "minecraft:inventory_changed",
 		"conditions": { "items": [{

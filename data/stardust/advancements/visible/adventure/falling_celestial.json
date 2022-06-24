@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:feather", "nbt": "{CustomModelData:0}" },
+		"title": { "text": "Where did I put my bucket?", "color": "aqua" },
+		"description": { "text": "Fall from the Celestial dimension", "color": "green" },
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"parent": "stardust:visible/adventure/enter_celestial",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013208}" },
+		"title": { "text": "Cobbleing I", "color": "aqua" },
+		"description": { "text": "Place a level 1 Cobblestoner Miner", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stuff/cobblestone/simple",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:item_used_on_block",
+		"conditions": { "item": {
+			"tag": "stardust:items",
+			"nbt": "{stardust:{cobblestone_miner_lv1:1b}}"
+		}}
+	}}
+}

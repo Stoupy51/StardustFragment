@@ -18,21 +18,26 @@ tag @s add stardust.shooter
 	execute if score #sniper_type stardust.data matches -3 run scoreboard players set #bullet_damage stardust.data 24
 
 #Check bullet, add damage and clear one
-	execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_nugget"}]}] run scoreboard players set #bullet_type stardust.data 1
-	execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_nugget"}]}] run scoreboard players set #bullet_type stardust.data 2
-	execute if entity @s[nbt={Inventory:[{tag:{stardust:{stardust_fragment:1b}}}]}] run scoreboard players set #bullet_type stardust.data 3
-	execute if entity @s[nbt={Inventory:[{tag:{stardust:{awakened_stardust:1b}}}]}] run scoreboard players set #bullet_type stardust.data 4
 	execute if entity @s[nbt={Inventory:[{tag:{stardust:{ultimate_bullet:1b}}}]}] run scoreboard players set #bullet_type stardust.data 5
+	execute if entity @s[nbt={Inventory:[{tag:{stardust:{awakened_stardust:1b}}}]}] run scoreboard players set #bullet_type stardust.data 4
+	execute if entity @s[nbt={Inventory:[{tag:{stardust:{stardust_fragment:1b}}}]}] run scoreboard players set #bullet_type stardust.data 3
+	execute if entity @s[nbt={Inventory:[{id:"minecraft:gold_nugget"}]}] run scoreboard players set #bullet_type stardust.data 2
+	execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_nugget"}]}] run scoreboard players set #bullet_type stardust.data 1
 	execute if score #bullet_type stardust.data matches 1 run scoreboard players add #bullet_damage stardust.data 5
-	execute if score #bullet_type stardust.data matches 1 run clear @s minecraft:iron_nugget 1
+	execute if score #bullet_type stardust.data matches 1 run advancement grant @s only stardust:visible/adventure/shoot/iron_nugget
+	execute if score #bullet_type stardust.data matches 1 run clear @s iron_nugget 1
 	execute if score #bullet_type stardust.data matches 2 run scoreboard players add #bullet_damage stardust.data 10
-	execute if score #bullet_type stardust.data matches 2 run clear @s minecraft:gold_nugget 1
+	execute if score #bullet_type stardust.data matches 2 run advancement grant @s only stardust:visible/adventure/shoot/gold_nugget
+	execute if score #bullet_type stardust.data matches 2 run clear @s gold_nugget 1
 	execute if score #bullet_type stardust.data matches 3 run scoreboard players add #bullet_damage stardust.data 15
-	execute if score #bullet_type stardust.data matches 3 run clear @s minecraft:command_block{stardust:{stardust_fragment:1b}} 1
+	execute if score #bullet_type stardust.data matches 3 run advancement grant @s only stardust:visible/adventure/shoot/stardust_fragment
+	execute if score #bullet_type stardust.data matches 3 run clear @s #stardust:items{stardust:{stardust_fragment:1b}} 1
 	execute if score #bullet_type stardust.data matches 4 run scoreboard players add #bullet_damage stardust.data 20
-	execute if score #bullet_type stardust.data matches 4 run clear @s minecraft:command_block{stardust:{awakened_stardust:1b}} 1
+	execute if score #bullet_type stardust.data matches 4 run advancement grant @s only stardust:visible/adventure/shoot/awakened_stardust
+	execute if score #bullet_type stardust.data matches 4 run clear @s #stardust:items{stardust:{awakened_stardust:1b}} 1
 	execute if score #bullet_type stardust.data matches 5 run scoreboard players add #bullet_damage stardust.data 50
-	execute if score #bullet_type stardust.data matches 5 run clear @s minecraft:command_block{stardust:{ultimate_bullet:1b}} 1
+	execute if score #bullet_type stardust.data matches 5 run advancement grant @s only stardust:visible/adventure/shoot/ultimate_bullet
+	execute if score #bullet_type stardust.data matches 5 run clear @s #stardust:items{stardust:{ultimate_bullet:1b}} 1
 
 #Launch the bullet
 	execute if entity @s[gamemode=creative] unless score #bullet_type stardust.data matches 1.. run scoreboard players set #bullet_type stardust.data 1

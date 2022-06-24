@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013210}" },
+		"title": { "text": "Cobbleing III", "color": "aqua" },
+		"description": { "text": "Place a level 3 Cobblestoner Miner", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/stuff/cobblestone/miner/lv2",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:item_used_on_block",
+		"conditions": { "item": {
+			"tag": "stardust:items",
+			"nbt": "{stardust:{cobblestone_miner_lv3:1b}}"
+		}}
+	}}
+}

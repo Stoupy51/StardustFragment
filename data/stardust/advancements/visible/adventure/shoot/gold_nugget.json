@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:iron_nugget", "nbt": "{CustomModelData:0}" },
+		"title": { "text": "Golden Bullets", "color": "aqua" },
+		"description": { "text": "Shoot a gold nugget using a Sniper\n[+10 bullet damage]", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/shoot/iron_nugget",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

@@ -1,8 +1,8 @@
 
 execute if score @s stardust.quarry_status matches 1 run function stardust:quarry/working/start
 #Check Size
-	execute if score @s stardust.quarry_size matches 2000001.. run tellraw @a[distance=..3] [{"text":"ERROR: More than 2M blocks","italic":false,"color":"red"}]
-	scoreboard players set @s[scores={stardust.quarry_size=2000001..}] stardust.quarry_status 0
+	execute if score @s stardust.quarry_size matches 5000001.. run tellraw @a[distance=..3] [{"text":"ERROR: More than 5M blocks","italic":false,"color":"red"}]
+	scoreboard players set @s[scores={stardust.quarry_size=5000001..}] stardust.quarry_status 0
 	scoreboard players add @s stardust.quarry_speed 0
 	scoreboard players set #quarry_count stardust.data 0
 	scoreboard players set #quarry_temp stardust.data 0

@@ -1,0 +1,18 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:hopper",
+						"minecraft:hopper_minecart"
+					]
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:quarry/extract/advancement"
+	}
+}

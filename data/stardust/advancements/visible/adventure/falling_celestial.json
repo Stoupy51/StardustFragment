@@ -1,7 +1,7 @@
 {
 	"display": {
 		"icon": { "item": "minecraft:feather", "nbt": "{CustomModelData:0}" },
-		"title": { "text": "Where did I put my bucket?", "color": "aqua" },
+		"title": { "text": "Where did I put my bucket?" },
 		"description": { "text": "Fall from the Celestial dimension", "color": "green" },
 		"frame": "challenge",
 		"show_toast": true,

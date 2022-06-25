@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013322}" },
+		"title": { "text": "Feeling heat" },
+		"description": { "text": "Get a Heat Generator", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/technology/nether_star_generator",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{heat_generator:1b}}"
+		}]}
+	}}
+}

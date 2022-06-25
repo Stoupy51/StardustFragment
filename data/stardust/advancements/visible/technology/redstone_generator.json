@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013318}" },
+		"title": { "text": "Redstone Converting" },
+		"description": { "text": "Get a Redstone Generator", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/technology/elevator",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{redstone_generator:1b}}"
+		}]}
+	}}
+}

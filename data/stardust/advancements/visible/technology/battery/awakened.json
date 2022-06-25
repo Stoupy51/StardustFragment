@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013337}" },
+		"title": { "text": "Storing Energy II" },
+		"description": { "text": "Upgrade a Stardust Battery", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/technology/battery/stardust",
+	"criteria": { "requirement": {
+		"trigger": "minecraft:inventory_changed",
+		"conditions": { "items": [{
+			"tag": "stardust:items",
+			"nbt": "{stardust:{awakened_stardust_battery:1b}}"
+		}]}
+	}}
+}

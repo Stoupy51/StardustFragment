@@ -3,9 +3,9 @@
 
 [Direct link for server resource packs](https://github.com/Stoupy51/StardustFragment/blob/main/resource%20pack.zip)
 
-![Stardust Fragment Image](https://github.com/Stoupy51/StardustFragment/blob/main/public/minia.jpg)
+![Stardust Fragment Image](https://github.com/Stoupy51/StardustFragment/blob/main/public/minia.png)
 
-Datapack showcase :
+Datapack trailer :
 https://www.youtube.com/watch?v=5e_uT9OSwT0
 
 

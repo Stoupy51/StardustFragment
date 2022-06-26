@@ -24,7 +24,6 @@ Stardust Fragment is a very advanced Adventure & Technology Datapack created to 
 - 1 mini-boss, 2 boss, a end-game boss
 - A crafting manual (100+ pages)
 - 9 new structures
-- 3 tiers of cable to transfer energy
 - 100+ custom advancements to help you progress
 - Many other features
 

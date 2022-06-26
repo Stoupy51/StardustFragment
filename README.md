@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=5e_uT9OSwT0
 - /function stardust:uninstall	`Before removing the datapack`
 - /function stardust:stats		`Shows you some statistics`
 
-Stardust Fragment is a very advanced Adventure & Technology Datapack created to add a very special experience to the game.
+Stardust Fragment is a very advanced Adventure & Technology data pack created to add a very special experience to the game.
 
 ### Small list of features added by Stardust Fragment:
 - 190+ new items

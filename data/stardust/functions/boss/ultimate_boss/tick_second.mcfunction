@@ -16,7 +16,6 @@ execute if entity @e[tag=stardust.dragon,scores={stardust.data=14..16},limit=1] 
 
 #Defeat check
 scoreboard players set #success stardust.data 0
-scoreboard players set #is_boss stardust.data 0
 execute store success score #success stardust.data if entity @a[predicate=stardust:in_dim/ultimate]
 execute if score #success stardust.data matches 1 store success score #success stardust.data unless entity @e[tag=stardust.ultimate_boss,limit=1]
 execute if score #success stardust.data matches 1 run scoreboard players add #ultimate_boss_killed stardust.data 1

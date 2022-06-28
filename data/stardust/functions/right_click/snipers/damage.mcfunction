@@ -8,6 +8,7 @@ execute if score #absorption stardust.data matches 1.. run function stardust:rig
 
 execute if entity @s[type=ender_dragon] run summon creeper ~ ~2 ~ {Fuse:0,ignited:1b,ExplosionRadius:2b,Tags:["stardust.shooted"]}
 execute if entity @s[type=wither] run summon creeper ~ ~2 ~ {Fuse:0,ignited:1b,ExplosionRadius:2b,Tags:["stardust.shooted"]}
+execute if entity @s[type=end_crystal] run summon tnt
 
 scoreboard players operation @s[type=player] smithed.damage = #bullet_damage stardust.data
 execute if entity @s[type=player] run function #smithed.damage:entity/apply/projectile

@@ -12,6 +12,6 @@
 	execute as @e[type=wolf,tag=stardust.stoup_army] at @s run function stardust:boss/stouparmy
 
 #Mobs
-	execute as @e[type=#stardust:global,predicate=stardust:in_dim/celestial_or_stardust,tag=] at @s run function stardust:mobs/dimensions_check
-	execute as @e[type=ender_dragon,predicate=stardust:in_dim/ultimate,tag=,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
+	execute as @e[type=#stardust:global,predicate=stardust:in_dim/celestial_or_stardust,tag=!stardust.celestial_dim,tag=!stardust.stardust_dim,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity] at @s run function stardust:mobs/dimensions_check
+	execute as @e[type=ender_dragon,predicate=stardust:in_dim/ultimate,tag=!stardust.dragon,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.entity,nbt={Brain:{memories:{}}},limit=1] at @s run function stardust:boss/ultimate_boss/spawn
 

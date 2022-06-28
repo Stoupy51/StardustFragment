@@ -1,0 +1,17 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:end_crystal"
+					]
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:boss/ultimate_boss/summoning/advancement"
+	}
+}

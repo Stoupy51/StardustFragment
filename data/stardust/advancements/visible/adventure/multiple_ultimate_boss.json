@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": { "item": "minecraft:dragon_egg", "nbt": "{CustomModelData:0}" },
+		"title": { "text": "A journey to the end", "color": "aqua" },
+		"description": { "text": "Summon the Ultimate Boss", "color": "green" },
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "stardust:visible/adventure/ultimate_boss",
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	}
+}

@@ -18,3 +18,4 @@ execute in stardust:ultimate run function stardust:dimensions/structure/ultimate
 execute as @a at @s run playsound entity.wither.spawn master @s
 scoreboard players reset #ultimate_boss_killed stardust.data
 scoreboard players reset #ultimate_boss stardust.data
+bossbar remove stardust:ultimate_boss

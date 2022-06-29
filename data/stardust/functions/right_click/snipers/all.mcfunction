@@ -42,7 +42,7 @@ tag @s add stardust.shooter
 #Launch the bullet
 	execute if entity @s[gamemode=creative] unless score #bullet_type stardust.data matches 1.. run scoreboard players set #bullet_type stardust.data 1
 	tp @e[tag=stardust.to_throw,limit=1] @s
-	execute as @e[tag=stardust.to_throw,limit=1] run tp @s ^ ^1.55 ^
+	execute as @e[tag=stardust.to_throw,limit=1] run tp @s ^ ^1.55 ^.5
 	execute if predicate stardust:sneaking as @e[tag=stardust.to_throw,limit=1] at @s run tp @s ~ ~-0.3 ~
 	execute unless score #bullet_type stardust.data matches 1.. run playsound block.note_block.snare ambient @s ~ ~ ~ 1 0.5
 	execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -1 run playsound stardust:sniper_shot_1 ambient @a[distance=..20] ~ ~ ~ 0.5

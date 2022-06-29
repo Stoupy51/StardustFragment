@@ -34,6 +34,7 @@ bossbar set stardust:ultimate_boss color red
 bossbar set stardust:ultimate_boss style notched_10
 
 #Other
+fill -2 61 2 2 61 -2 air replace end_portal
 execute as @a at @s run playsound entity.wither.spawn master @s
 tellraw @a ["",{"text":"[Stardust","italic":false,"color":"dark_aqua"},{"text":"Fragment] ","italic":false,"color":"aqua"},{"text":"The "},{"text":"U","italic":false,"color":"dark_purple"},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" B","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"s","italic":false,"color":"dark_aqua"},{"text":"s","italic":false,"color":"aqua"},{"text":" has awoken!"}]
 scoreboard players reset #ultimate_summoning stardust.data

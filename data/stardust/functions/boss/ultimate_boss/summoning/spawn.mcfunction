@@ -23,6 +23,7 @@ summon end_crystal -34 94 24
 summon end_crystal -42 91 -1
 summon end_crystal -34 100 -25
 summon end_crystal -13 85 -40
+execute as @e[type=end_crystal,predicate=stardust:in_dim/ultimate] at @s positioned ~ ~ ~ run function stardust:boss/ultimate_boss/summoning/end_crystals
 
 #Bossbar
 bossbar remove stardust:ultimate_boss

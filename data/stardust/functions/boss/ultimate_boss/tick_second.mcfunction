@@ -12,7 +12,7 @@ scoreboard players remove @e[tag=stardust.dragon,scores={stardust.data=31..}] st
 scoreboard players add @e[tag=stardust.dragon_dead,limit=2,sort=random] stardust.data 2
 
 #Orbs
-execute if entity @e[tag=stardust.dragon,scores={stardust.data=14..16},limit=1] unless entity @e[tag=stardust.ultimate_orb,limit=1] run function stardust:boss/ultimate_boss/orb
+execute unless entity @e[tag=stardust.ultimate_orb,limit=1] run function stardust:boss/ultimate_boss/orb/summon
 
 #Defeat check
 scoreboard players set #success stardust.data 0

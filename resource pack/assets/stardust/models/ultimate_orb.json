@@ -1,5 +1,4 @@
 {
-	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/cube_all",
 	"textures": {
 		"0": "stardust:white",
@@ -87,7 +86,7 @@
 	],
 	"display": {
 		"head": {
-			"translation": [0, -47, 0],
+			"translation": [0, -65, 0],
 			"scale": [2.2, 2.2, 2.2]
 		},
 		"fixed": {

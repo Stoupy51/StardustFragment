@@ -1,8 +1,8 @@
 
 advancement revoke @s only stardust:place/end_crystal
 
-execute in stardust:ultimate at @e[type=end_crystal,tag=!stardust.end_crystal,y=0] run setblock ~ ~ ~ fire
-execute in stardust:ultimate run tag @e[type=end_crystal,y=0] add stardust.end_crystal
+execute at @e[type=end_crystal,tag=!stardust.end_crystal,predicate=stardust:in_dim/ultimate] run setblock ~ ~ ~ fire
+tag @e[type=end_crystal,predicate=stardust:in_dim/ultimate] add stardust.end_crystal
 
 scoreboard players set #success stardust.data 0
 execute in stardust:ultimate positioned -3 62 0 if entity @e[type=end_crystal,distance=..1] positioned 0 62 -3 if entity @e[type=end_crystal,distance=..1] positioned 3 62 0 if entity @e[type=end_crystal,distance=..1] positioned 0 62 3 if entity @e[type=end_crystal,distance=..1] run scoreboard players set #success stardust.data 1

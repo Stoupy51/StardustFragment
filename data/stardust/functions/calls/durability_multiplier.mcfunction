@@ -11,7 +11,7 @@
 	execute if score #chest_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main chest.tag.stardust.damaged run function durability_multiplier:v1.0/technical/chest
 	execute if score #legs_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main legs.tag.stardust.damaged run function durability_multiplier:v1.0/technical/legs
 	execute if score #feet_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main feet.tag.stardust.damaged run function durability_multiplier:v1.0/technical/feet
-	scoreboard players set #multiplier durability_multiplier.data 1200
+	scoreboard players set #multiplier durability_multiplier.data 12500
 	execute if score #mainhand_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main mainhand.tag.stardust.damaged run function durability_multiplier:v1.0/technical/mainhand
 
 #Custom durability for Reinforced Stardust Armor & Tools
@@ -20,7 +20,7 @@
 	execute if score #chest_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main chest.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/chest
 	execute if score #legs_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main legs.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/legs
 	execute if score #feet_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main feet.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/feet
-	scoreboard players set #multiplier durability_multiplier.data 1500
+	scoreboard players set #multiplier durability_multiplier.data 10000
 	execute if score #mainhand_valid durability_multiplier.data matches 1 if data storage durability_multiplier:main mainhand.tag.stardust.reinforced run function durability_multiplier:v1.0/technical/mainhand
 
 #Custom durability for Original Stardust & Elementary Armor & Tools

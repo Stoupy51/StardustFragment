@@ -18,6 +18,7 @@
 	execute if score #second stardust.data matches 10 run function stardust:utils/quarry_system
 	execute as @e[type=glow_item_frame,tag=stardust.destroy_barrel,sort=random] at @s run function stardust:utils/tick_glows
 	execute if score #second stardust.data matches 10 as @e[type=item,predicate=simplenergy:has_tag] at @s run function stardust:forge/detect_craft
+	execute as @e[type=armor_stand,tag=stardust.model,tag=!stardust.pillar_tick] at @s run function stardust:mobs/tick/main
 
 #Boss
 	execute if score #ultimate_boss stardust.data matches 1 in stardust:ultimate run function stardust:boss/ultimate_boss/tick

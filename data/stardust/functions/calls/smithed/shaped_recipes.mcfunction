@@ -1,6 +1,8 @@
 
 ##Called by function tag #smithed.craft:event/recipes
 
+scoreboard players set #consume_tools stardust.data 0
+
 #Machine Frame
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,id:"minecraft:iron_ingot"},{Slot:1b,id:"minecraft:iron_ingot"},{Slot:2b,id:"minecraft:iron_ingot"}],1:[{Slot:0b,id:"minecraft:iron_ingot"},{Slot:1b,tag:{ctc:{id:"simplunium_block"}}},{Slot:2b,id:"minecraft:iron_ingot"}],2:[{Slot:0b,id:"minecraft:iron_ingot"},{Slot:1b,id:"minecraft:iron_ingot"},{Slot:2b,id:"minecraft:iron_ingot"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/machine_frame
 
@@ -28,7 +30,7 @@
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"awakened_photovoltaic_cell"}}},{Slot:1b,tag:{ctc:{id:"awakened_photovoltaic_cell"}}},{Slot:2b,tag:{ctc:{id:"awakened_photovoltaic_cell"}}}],1:[{Slot:0b,id:"minecraft:air"},{Slot:1b,tag:{ctc:{id:"darkium_fragment"}}},{Slot:2b,id:"minecraft:air"}]} if data storage smithed.crafter:input recipe{2:[]} run loot replace block ~ ~ ~ container.16 loot stardust:i/darkium_photovoltaic_cell
 
 #Quarry Lv1
-	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"very_compacted_stardust"}}},{Slot:1b,tag:{ctc:{id:"very_compacted_stardust"}}},{Slot:2b,tag:{ctc:{id:"very_compacted_stardust"}}}],1:[{Slot:0b,tag:{ctc:{id:"triple_compressed_cobblestone"}}},{Slot:1b,id:"minecraft:netherite_pickaxe"},{Slot:2b,tag:{ctc:{id:"triple_compressed_cobblestone"}}}],2:[{Slot:0b,tag:{ctc:{id:"triple_compressed_cobblestone"}}},{Slot:1b,tag:{ctc:{id:"triple_compressed_cobblestone"}}},{Slot:2b,tag:{ctc:{id:"triple_compressed_cobblestone"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/quarry_lv1
+	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] store success score #consume_tools stardust.data if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"very_compacted_stardust"}}},{Slot:1b,tag:{ctc:{id:"very_compacted_stardust"}}},{Slot:2b,tag:{ctc:{id:"very_compacted_stardust"}}}],1:[{Slot:0b,tag:{ctc:{id:"triple_compressed_cobblestone"}}},{Slot:1b,id:"minecraft:netherite_pickaxe"},{Slot:2b,tag:{ctc:{id:"triple_compressed_cobblestone"}}}],2:[{Slot:0b,tag:{ctc:{id:"triple_compressed_cobblestone"}}},{Slot:1b,tag:{ctc:{id:"triple_compressed_cobblestone"}}},{Slot:2b,tag:{ctc:{id:"triple_compressed_cobblestone"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/quarry_lv1
 
 #Lucky Artifact Bag
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,id:"minecraft:leather"},{Slot:1b,id:"minecraft:air"},{Slot:2b,id:"minecraft:leather"}],1:[{Slot:0b,id:"minecraft:leather"},{Slot:1b,tag:{ctc:{id:"ultimate_fragment"}}},{Slot:2b,id:"minecraft:leather"}],2:[{Slot:0b,id:"minecraft:leather"},{Slot:1b,id:"minecraft:leather"},{Slot:2b,id:"minecraft:leather"}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/lucky_artifact_bag
@@ -84,5 +86,4 @@
 #Growth Accelerator
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if data storage smithed.crafter:input recipe{0:[{Slot:0b,tag:{ctc:{id:"stardust_frame"}}},{Slot:1b,tag:{ctc:{id:"stardust_frame"}}},{Slot:2b,tag:{ctc:{id:"stardust_frame"}}}],1:[{Slot:0b,tag:{ctc:{id:"stardust_config"}}},{Slot:1b,id:"minecraft:wheat_seeds"},{Slot:2b,tag:{ctc:{id:"stardust_config"}}}],2:[{Slot:0b,tag:{ctc:{id:"stardust_config"}}},{Slot:1b,tag:{ctc:{id:"stardust_config"}}},{Slot:2b,tag:{ctc:{id:"stardust_config"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/growth_accelerator
 
-
-
+execute if score #consume_tools stardust.data matches 1 run data modify storage smithed.crafter:input flags append value "consume_tools"

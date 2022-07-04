@@ -13,6 +13,7 @@
 		{ "predicate": { "custom_model_data": 2013010 }, "model": "stardust:mobs/stardust_evoker" },
 		{ "predicate": { "custom_model_data": 2013011 }, "model": "stardust:mobs/stardust_evoker_hurt" },
 
-		{ "predicate": { "custom_model_data": 2013015 }, "model": "stardust:mobs/stardust_bat" }
+		{ "predicate": { "custom_model_data": 2013015 }, "model": "stardust:mobs/stardust_bat" },
+		{ "predicate": { "custom_model_data": 2013016 }, "model": "stardust:mobs/stardust_bat" }
 	]
 }

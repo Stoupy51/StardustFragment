@@ -2,6 +2,6 @@
 ##Called by function tag #stardust:signals/growth_accelerator
 
 scoreboard players set #boost stardust.data 1
-execute as @e[tag=stardust.seed,tag=!stardust.seed_done] run function stardust:utils/seeds
+execute positioned ~-20 ~-20 ~-20 as @e[tag=stardust.seed,tag=!stardust.seed_done,dx=20,dy=20,dz=20] run function stardust:utils/seeds
 scoreboard players reset #boost stardust.data
 

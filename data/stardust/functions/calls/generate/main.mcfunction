@@ -4,7 +4,7 @@
 	scoreboard players set #xz_variation simplenergy.data 400
 	scoreboard players set #max_height simplenergy.data 400
 	execute as @e[limit=8] run summon area_effect_cloud ~ 0 ~ {Tags:["stardust.ore_pos"],Duration:0}
-	execute if predicate stardust:in_dim/the_nether run scoreboard players set #max_height simplenergy.data 1600
+	execute if predicate stardust:in_dim/the_nether run scoreboard players set #max_height simplenergy.data 1500
 	execute as @e[tag=stardust.ore_pos,predicate=stardust:in_dim/the_nether,limit=3] at @s run function stardust:calls/generate/awakened_stardust
 	execute as @e[tag=stardust.ore_pos] at @s run function stardust:calls/generate/stardust
 

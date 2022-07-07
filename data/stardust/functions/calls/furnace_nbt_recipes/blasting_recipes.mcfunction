@@ -18,9 +18,6 @@
 #Awakened Stardust Ore
 	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"awakened_stardust_ore"} run loot replace block ~ ~ ~ container.3 loot stardust:i/awakened_stardust
 
-#Stardust Essence
-	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"stardust_essence"} run loot replace block ~ ~ ~ container.3 loot stardust:i/awakened_stardust_x2
-
 #Octuple Compressed Cobblestone
 	execute if score #found furnace_nbt_recipes.data matches 0 store result score #found furnace_nbt_recipes.data if data storage furnace_nbt_recipes:main input.tag.ctc{id:"octuple_compressed_cobblestone"} run loot replace block ~ ~ ~ container.3 loot stardust:i/ultimate_core
 

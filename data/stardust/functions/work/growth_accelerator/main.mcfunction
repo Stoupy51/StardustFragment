@@ -3,7 +3,7 @@
 function #stardust:signals/growth_accelerator
 
 #Vanilla seeds
-scoreboard players set #count_y stardust.data 20
+scoreboard players set #count_y stardust.data 21
 execute positioned ~10 ~10 ~10 run function stardust:work/growth_accelerator/layer_y
 
 scoreboard players reset #count_x

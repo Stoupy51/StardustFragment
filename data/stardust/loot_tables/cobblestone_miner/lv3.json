@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "stardust:i/triple_compressed_cobblestone"
+					"name": "stardust:i/double_compressed_cobblestone"
 				}
 			]
 		}

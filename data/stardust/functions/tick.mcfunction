@@ -12,7 +12,6 @@
 	execute if score #second_5 stardust.data matches 100.. run function stardust:tick_second_5
 
 #Others 2
-	execute as @e[type=area_effect_cloud,tag=stardust.structure] at @s run function stardust:calls/generate/structure/all
 	execute as @a[sort=random] at @s run function stardust:utils/tick_players
 	tp @e[type=vex,predicate=stardust:in_dim/stardust] 0 -10000 0
 	execute if score #second stardust.data matches 10 run function stardust:utils/quarry_system

@@ -14,4 +14,4 @@ scoreboard players remove @s[tag=stardust.stardust_portal,tag=stardust.working_p
 scoreboard players remove @s[tag=stardust.stardust_dungeon_portal,tag=stardust.working_portal,tag=!stardust.infinite_energy] energy.storage 200
 scoreboard players remove @s[tag=stardust.ultimate_portal,tag=stardust.working_portal,tag=!stardust.infinite_energy] energy.storage 500
 
-execute at @s[tag=stardust.working_portal] positioned ~ ~1 ~ run scoreboard players add @a[distance=..1,dx=0] stardust.data 10
+execute at @s[tag=stardust.working_portal] positioned ~ ~1 ~ run scoreboard players add @a[distance=..1,dx=0,tag=!stardust.teleported] stardust.data 10

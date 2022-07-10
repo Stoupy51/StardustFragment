@@ -10,6 +10,7 @@ data modify storage stardust:main Inventory set from entity @s Inventory
 
 #Dimensions
 	scoreboard players add @s[scores={stardust.data=1..},nbt={SelectedItem:{tag:{stardust:{travel_staff:1b}}}}] stardust.data 10
+	execute if entity @s[tag=stardust.teleported] run function stardust:dimensions/remove_teleported
 	execute if score @s stardust.data matches 1.. run function stardust:dimensions/teleport
 	tag @s[nbt={Dimension:"stardust:dungeon"}] add stardust.is_in_dungeon
 

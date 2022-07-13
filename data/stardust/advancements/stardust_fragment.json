@@ -1,7 +1,7 @@
 {
 	"display": {
 		"title": "Stardust Fragment",
-		"description": "v3.4.4",
+		"description": "v3.4.5",
 		"icon": {
 			"item": "minecraft:command_block",
 			"nbt": "{CustomModelData:2013000}"

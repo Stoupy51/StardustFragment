@@ -1,4 +1,7 @@
 
+#Destroy mechanization custom blocks
+	execute as @e[tag=mechanization,dx=0,dy=0,dz=0,limit=1] at @s run function #mechanization:wrench_break
+
 #Mining the block at the current position
 	execute if score #module stardust.data matches 1 run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:fortune",lvl:3}]}
 	execute if score #module stardust.data matches 2 run loot spawn ~ ~ ~ mine ~ ~ ~ minecraft:netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}

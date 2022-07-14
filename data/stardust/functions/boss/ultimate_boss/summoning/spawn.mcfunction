@@ -5,7 +5,7 @@ execute if score #ultimate_boss stardust.data matches 1.. run advancement grant 
 scoreboard objectives add stardust.damage_taken_ub minecraft.custom:damage_taken
 
 #Summon Ultimate Boss & Slaves
-summon ender_dragon ~ ~ ~ {Health:1000.0f,AbsorptionAmount:11500.0f,Glowing:1b,Attributes:[{Name:"generic.max_health",Base:1000.0d}],Silent:1,Tags:["stardust.ultimate_boss","stardust.dragon"],Team:"stardust.team",ActiveEffects:[{Id:11,Amplifier:3,Duration:2147483647,ShowParticles:0b}],CustomName:'[{"text":"U","italic":false,"color":"dark_purple","bold":true},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" B","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"s","italic":false,"color":"dark_aqua"},{"text":"s","italic":false,"color":"aqua"}]'}
+summon ender_dragon ~ ~ ~ {DragonPhase:1,Health:1000.0f,AbsorptionAmount:11500.0f,Glowing:1b,Attributes:[{Name:"generic.max_health",Base:1000.0d}],Silent:1,Tags:["stardust.ultimate_boss","stardust.dragon"],Team:"stardust.team",ActiveEffects:[{Id:11,Amplifier:3,Duration:2147483647,ShowParticles:0b}],CustomName:'[{"text":"U","italic":false,"color":"dark_purple","bold":true},{"text":"l","italic":false,"color":"blue"},{"text":"t","italic":false,"color":"dark_aqua"},{"text":"i","italic":false,"color":"aqua"},{"text":"m","italic":false,"color":"green"},{"text":"a","italic":false,"color":"yellow"},{"text":"t","italic":false,"color":"gold"},{"text":"e","italic":false,"color":"dark_red"},{"text":" B","italic":false,"color":"dark_purple"},{"text":"o","italic":false,"color":"blue"},{"text":"s","italic":false,"color":"dark_aqua"},{"text":"s","italic":false,"color":"aqua"}]'}
 scoreboard players operation #temp stardust.data = UltimateSlaveCount stardust.config
 execute if score #temp stardust.data matches 1.. positioned ~ ~-20 ~ run function stardust:boss/ultimate_boss/summoning/slave
 scoreboard players add @e[tag=stardust.dragon,limit=1,sort=random] stardust.data 17
@@ -23,7 +23,7 @@ summon end_crystal -34 94 24
 summon end_crystal -42 91 -1
 summon end_crystal -34 100 -25
 summon end_crystal -13 85 -40
-execute as @e[type=end_crystal,predicate=stardust:in_dim/ultimate] at @s positioned ~ ~ ~ run function stardust:boss/ultimate_boss/summoning/end_crystals
+execute as @e[type=end_crystal,predicate=stardust:in_dim/ultimate] at @s positioned ~ ~-0.5 ~ run function stardust:boss/ultimate_boss/summoning/end_crystals
 
 #Bossbar
 bossbar remove stardust:ultimate_boss

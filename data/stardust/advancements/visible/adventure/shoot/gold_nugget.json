@@ -1,6 +1,6 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:iron_nugget", "nbt": "{CustomModelData:0}" },
+		"icon": { "item": "minecraft:gold_nugget", "nbt": "{CustomModelData:0}" },
 		"title": { "text": "Golden Bullets", "color": "aqua" },
 		"description": { "text": "Shoot a gold nugget using a Sniper\n[+10 bullet damage]", "color": "green" },
 		"frame": "task",

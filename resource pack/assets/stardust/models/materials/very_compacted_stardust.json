@@ -1,5 +1,5 @@
 {
-    "parent": "item/handheld",
+    "parent": "item/generated",
     "textures": {
         "layer0": "stardust:materials/very_compacted_stardust"
     }

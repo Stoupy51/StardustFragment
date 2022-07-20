@@ -36,7 +36,7 @@ team modify stardust.blue color blue
 team modify stardust.shulker collisionRule never
 
 # Default Config
-execute unless score #default_config stardust.config matches 2 run function stardust:config/default
+execute unless score #default_config stardust.config matches 3 run function stardust:config/default
 gamerule maxCommandChainLength 2147483647
 
 execute unless score #dungeon_built stardust.data matches 2 in stardust:dungeon run forceload add -27 40 182 -168

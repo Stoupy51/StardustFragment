@@ -12,7 +12,9 @@
 		"minecraft:deepslate",
 		"minecraft:netherrack",
 		"minecraft:soul_sand",
+		"minecraft:soul_soil",
 		"minecraft:dripstone_block",
-		"minecraft:end_stone"
+		"minecraft:end_stone",
+		"minecraft:basalt"
 	]
 }

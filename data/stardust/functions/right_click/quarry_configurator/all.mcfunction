@@ -6,7 +6,7 @@ execute store result score Qx2 stardust.data_2 run data get entity @s SelectedIt
 execute store result score Qy2 stardust.data_2 run data get entity @s SelectedItem.tag.stardust.quarry_y2
 execute store result score Qz2 stardust.data_2 run data get entity @s SelectedItem.tag.stardust.quarry_z2
 
-setblock -30000000 14 1610 minecraft:yellow_shulker_box
+setblock -30000000 14 1610 yellow_shulker_box
 item replace block -30000000 14 1610 container.0 from entity @s weapon.mainhand
 
 execute if predicate stardust:sneaking run function stardust:right_click/quarry_configurator/sneak

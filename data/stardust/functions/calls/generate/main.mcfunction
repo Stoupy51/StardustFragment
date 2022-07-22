@@ -29,7 +29,7 @@
 
 #Generate Life Crystals
 	scoreboard players set #xz_variation simplenergy.data 500
-	scoreboard players set #max_height simplenergy.data 400
+	scoreboard players set #max_height simplenergy.data 800
 	execute as @e[limit=8] run summon marker ~ 0 ~ {Tags:["stardust.ore_pos"]}
 	execute as @e[tag=stardust.ore_pos,limit=8,predicate=stardust:in_dim/all] at @s run function stardust:calls/generate/life_crystal
 

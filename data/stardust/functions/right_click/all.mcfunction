@@ -3,7 +3,7 @@ data modify storage stardust:main SelectedItemTag set from entity @s SelectedIte
 
 execute if data storage stardust:main SelectedItemTag.stardust.quarry_configurator run function stardust:right_click/quarry_configurator/all
 execute if data storage stardust:main SelectedItemTag.stardust.lucky_artifact_bag run function stardust:right_click/lucky_artifact_bag
-execute if data storage stardust:main SelectedItemTag.stardust.stardust_pillar run function stardust:right_click/stardust_pillar
+execute if data storage stardust:main SelectedItemTag.stardust.stardust_pillar run function stardust:right_click/stardust_pillar/main
 execute if data storage stardust:main SelectedItemTag.stardust.wormhole_potion run function stardust:right_click/wormhole_potion/main
 execute if data storage stardust:main SelectedItemTag.stardust.wither_killer run function stardust:right_click/wither_killer/main
 execute if data storage stardust:main SelectedItemTag.stardust.travel_staff run scoreboard players add @s stardust.data 1

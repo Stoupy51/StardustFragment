@@ -6,7 +6,7 @@ execute if data storage stardust:main SelectedItemTag.stardust.lucky_artifact_ba
 execute if data storage stardust:main SelectedItemTag.stardust.stardust_pillar run function stardust:right_click/stardust_pillar/main
 execute if data storage stardust:main SelectedItemTag.stardust.wormhole_potion run function stardust:right_click/wormhole_potion/main
 execute if data storage stardust:main SelectedItemTag.stardust.wither_killer run function stardust:right_click/wither_killer/main
-execute if data storage stardust:main SelectedItemTag.stardust.travel_staff run scoreboard players add @s stardust.data 1
+execute if data storage stardust:main SelectedItemTag.stardust.travel_staff unless score @s stardust.data matches 1.. run scoreboard players add @s stardust.data 1
 execute if data storage stardust:main SelectedItemTag.stardust.snip unless score @s stardust.cooldown matches 1.. at @s run function stardust:right_click/snipers/all
 
 data remove storage stardust:main SelectedItemTag

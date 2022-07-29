@@ -30,15 +30,15 @@ Stardust Fragment is a very advanced Adventure & Technology data pack created to
 
 # 📚 Misc
 
-|   	| Compatibilities 	|   	|   	|   	|
-|---	|-----------------	|---	|---	|---	|
-| ✅ 	| Multiplayer     	|   	|   	|   	|
-| ✅ 	| Vanilla         	|   	|   	|   	|
-| ✅ 	| Fabric          	|   	|   	|   	|
-| ✅ 	| Forge           	|   	|   	|   	|
-| ✅ 	| Spigot          	|   	|   	|   	|
-| ✅ 	| Paper           	|   	|   	|   	|
-| ❓ 	| Realms          	|   	|   	|   	|
+|   	| Compatibilities 	|
+|---	|-----------------	|
+| ✅ 	| Multiplayer     	|
+| ✅ 	| Vanilla         	|
+| ✅ 	| Fabric          	|
+| ✅ 	| Forge           	|
+| ✅ 	| Spigot          	|
+| ✅ 	| Paper           	|
+| ❓ 	| Realms          	|
 
 Requires at least SimplEnergy [v1.9.0] : https://github.com/Stoupy51/SimplEnergy
 

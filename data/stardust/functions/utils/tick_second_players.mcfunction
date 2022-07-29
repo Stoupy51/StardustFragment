@@ -15,9 +15,9 @@ data modify storage stardust:main Inventory set from entity @s Inventory
 	tag @s[nbt={Dimension:"stardust:dungeon"}] add stardust.is_in_dungeon
 
 #Life crystals
-	scoreboard players set #success stardust.data 0
-	execute store success score #success stardust.data run attribute @s generic.max_health modifier value get 2013-0-0-0-0
-	execute if score #success stardust.data matches 0 run function stardust:utils/update_health
+	execute unless score LifeCrystalDisabled stardust.config matches 1 run scoreboard players set #success stardust.data 0
+	execute unless score LifeCrystalDisabled stardust.config matches 1 store success score #success stardust.data run attribute @s generic.max_health modifier value get 2013-0-0-0-0
+	execute unless score LifeCrystalDisabled stardust.config matches 1 if score #success stardust.data matches 0 run function stardust:utils/update_health
 
 #Playsound remove tags
 	tag @s remove stardust.ps.nether_star_generator

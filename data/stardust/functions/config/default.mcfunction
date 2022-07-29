@@ -11,4 +11,5 @@ scoreboard players set StoupArmyWolfCount stardust.config 50
 scoreboard players set TravelStaffDisabled stardust.config 0
 scoreboard players set WormholePotionDisabled stardust.config 0
 scoreboard players set WitherKillerDisabled stardust.config 0
+scoreboard players set LifeCrystalDisabled stardust.config 0
 

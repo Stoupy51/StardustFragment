@@ -7,9 +7,9 @@
 	scoreboard players add #tick_2 stardust.data 1
 	scoreboard players add #second stardust.data 1
 	scoreboard players add #second_5 stardust.data 1
-	execute if score #tick_2 stardust.data matches 2.. run function stardust:tick_2
+	execute if score #tick_2 stardust.data matches 3.. run function stardust:tick_2
 	execute if score #second stardust.data matches 20.. run function stardust:tick_second
-	execute if score #second_5 stardust.data matches 100.. run function stardust:tick_second_5
+	execute if score #second_5 stardust.data matches 90.. run function stardust:tick_second_5
 
 #Others 2
 	execute as @a[sort=random] at @s run function stardust:utils/tick_players

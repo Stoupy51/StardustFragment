@@ -1,6 +1,6 @@
 
 #Others
-	scoreboard players set #minute stardust.data 0
+	scoreboard players set #minute stardust.data 1
 	execute store result score #stardust_pillar stardust.data if entity @e[type=wither,tag=stardust.stardust_pillar]
 	execute as @e[tag=stardust.cobblestone_miner,predicate=stardust:check_cobblestone] at @s align xyz positioned ~ ~-1 ~ run function stardust:work/cobblestone_miner
 

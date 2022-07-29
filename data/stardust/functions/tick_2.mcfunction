@@ -1,5 +1,5 @@
 
-scoreboard players set #tick_2 stardust.data 0
+scoreboard players set #tick_2 stardust.data 1
 #Destroy
 	execute as @e[tag=stardust.destroyer,tag=!simplenergy.item_destroy,predicate=!stardust:check_destroyer] at @s run function stardust:destroy/all
 

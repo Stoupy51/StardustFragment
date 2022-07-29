@@ -1,8 +1,8 @@
 
 #Others
-	scoreboard players set #second_5 stardust.data 0
+	scoreboard players set #second_5 stardust.data -10
 	scoreboard players add #minute stardust.data 1
-	execute if score #minute stardust.data matches 12.. run function stardust:tick_minute
+	execute if score #minute stardust.data matches 13.. run function stardust:tick_minute
 	execute as @e[tag=stardust.destroyer] at @s run function stardust:destroy/all
 
 #Entities

@@ -5,7 +5,7 @@ scoreboard players set #temp stardust.data 0
 scoreboard players set #success stardust.data 0
 scoreboard players set #hurt_time stardust.data 0
 scoreboard players operation #predicate stardust.data = @s stardust.id
-execute store success score #success stardust.data run data modify storage stardust:main temp set from entity @e[type=!armor_stand,tag=stardust.stardust_dim,distance=..2,predicate=stardust:equals_id,limit=1]
+execute store success score #success stardust.data run data modify storage stardust:main temp set from entity @e[type=!armor_stand,tag=stardust.stardust_mob,distance=..10,predicate=stardust:equals_id,limit=1]
 
 #Define HurtTime/Death & Applying entity rotation
 execute if score #success stardust.data matches 1 run function stardust:mobs/tick/is_alive

@@ -1,5 +1,5 @@
 
-execute store result score #count stardust.data if entity @e[tag=stardust.stardust_dim,distance=..40]
+execute store result score #count stardust.data if entity @e[tag=stardust.stardust_mob,distance=..40]
 execute if entity @s[tag=stardust.angry] run scoreboard players operation #count stardust.data *= #4 simplenergy.data
 execute store result score #max_count stardust.data if entity @a[distance=..200,gamemode=!spectator,gamemode=!creative]
 scoreboard players operation #max_count stardust.data *= #80 simplenergy.data

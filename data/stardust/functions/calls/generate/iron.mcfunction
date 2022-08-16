@@ -2,7 +2,7 @@
 function simplenergy:generate/utils/random_position
 
 scoreboard players set #max_attempts simplenergy.data 5
-execute at @s run function simplenergy:generate/utils/find_adjacent_air
+function simplenergy:generate/utils/find_adjacent_air
 
 #Placing Ore
 	execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/generate/iron_type

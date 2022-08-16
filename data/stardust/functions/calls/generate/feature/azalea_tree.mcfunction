@@ -2,7 +2,7 @@
 function simplenergy:generate/utils/random_position
 
 scoreboard players set #max_attempts simplenergy.data 50
-execute at @s run function simplenergy:generate/utils/find_adjacent_air
+function simplenergy:generate/utils/find_adjacent_air
 
 #Placing Ore
 	execute at @s if block ~ ~ ~ #azalea_grows_on run place feature azalea_tree

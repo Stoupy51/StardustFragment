@@ -3,7 +3,7 @@
 function simplenergy:generate/utils/random_position
 
 scoreboard players set #max_attempts simplenergy.data 50
-execute at @s run function simplenergy:generate/utils/find_adjacent_air
+function simplenergy:generate/utils/find_adjacent_air
 
 #Placing Ore
 	execute store result score #rotation stardust.data run data get entity @s UUID[1]

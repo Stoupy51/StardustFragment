@@ -33,3 +33,4 @@ execute if score #success_tp stardust.data matches 1 run function stardust:dimen
 
 scoreboard players reset @s[scores={stardust.data=6..}] stardust.data
 scoreboard players reset #success_tp stardust.data
+

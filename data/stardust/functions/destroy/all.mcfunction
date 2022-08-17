@@ -15,8 +15,6 @@
 	execute if entity @s[tag=stardust.seed] run function stardust:destroy/groups/seed
 
 #Out of a Group
-	execute if entity @s[tag=stardust.nether_stardust_ore] unless block ~ ~ ~ nether_quartz_ore run function stardust:destroy/nether_stardust_ore
-	execute if entity @s[tag=stardust.awakened_stardust_ore] unless block ~ ~ ~ deepslate_redstone_ore run function stardust:destroy/awakened_stardust_ore
 	execute if entity @s[tag=stardust.life_crystal] unless block ~ ~ ~ glass run function stardust:destroy/life_crystal
 	execute if entity @s[tag=stardust.wind_turbine] unless block ~ ~ ~ iron_trapdoor run function stardust:destroy/wind_turbine
 

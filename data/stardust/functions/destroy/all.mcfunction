@@ -19,3 +19,8 @@
 	execute if entity @s[tag=stardust.awakened_stardust_ore] unless block ~ ~ ~ deepslate_redstone_ore run function stardust:destroy/awakened_stardust_ore
 	execute if entity @s[tag=stardust.life_crystal] unless block ~ ~ ~ glass run function stardust:destroy/life_crystal
 	execute if entity @s[tag=stardust.wind_turbine] unless block ~ ~ ~ iron_trapdoor run function stardust:destroy/wind_turbine
+
+#Update
+	execute if entity @s[tag=stardust.awakened_stardust_ore,tag=!simplenergy.item_destroy] run function stardust:utils/update_3_4_8
+	execute if entity @s[tag=stardust.nether_stardust_ore,tag=!simplenergy.item_destroy] run function stardust:utils/update_3_4_8
+

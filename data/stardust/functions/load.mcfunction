@@ -42,7 +42,7 @@ gamerule maxCommandChainLength 2147483647
 execute unless score #dungeon_built stardust.data matches 2 in stardust:dungeon run forceload add -27 40 182 -168
 execute unless score #ultimate_built stardust.data matches 2 in stardust:ultimate run forceload add -73 -69 71 75
 
-scoreboard players set StardustFragment load.status 3047
+scoreboard players set StardustFragment load.status 3048
 scoreboard players set #second stardust.data 10
 
 scoreboard players set #1500 simplenergy.data 1500

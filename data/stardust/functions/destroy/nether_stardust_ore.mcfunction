@@ -1,13 +1,13 @@
 
-#Replace the item to keep Motion
-	data modify entity @e[type=item,nbt={Item:{id:"minecraft:nether_quartz_ore"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:main all.2013026
-	
-	execute store result score #count stardust.data run data get entity @e[type=item,nbt={Item:{id:"minecraft:quartz"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item.Count
-	execute store result score #temp stardust.data run data get entity @s UUID[1]
-	scoreboard players operation #temp stardust.data %= #4 simplenergy.data
-	scoreboard players add #temp stardust.data 1
-	scoreboard players operation #count stardust.data *= #temp stardust.data
-	data modify entity @e[type=item,nbt={Item:{id:"minecraft:quartz"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:main all.2013001
-	execute store result entity @e[type=item,nbt={Item:{tag:{stardust:{stardust_ingot:1b}}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get #count stardust.data
+#Replace the item
+	execute if score #is_silk_touch simplenergy.data matches 1 run data modify entity @e[type=item,nbt={Item:{id:"minecraft:polished_deepslate"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:main all.2013026
+
+	execute if score #is_silk_touch simplenergy.data matches 0 run data modify entity @e[type=item,nbt={Item:{id:"minecraft:polished_deepslate"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] Item set from storage stardust:main all.2013001
+	execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard players operation #count simplenergy.data = #item_count simplenergy.data
+	execute if score #is_silk_touch simplenergy.data matches 0 store result score #temp simplenergy.data run data get entity @s UUID[1]
+	execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard players operation #temp simplenergy.data %= #4 simplenergy.data
+	execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard players add #temp simplenergy.data 1
+	execute if score #is_silk_touch simplenergy.data matches 0 run scoreboard players operation #count simplenergy.data *= #temp simplenergy.data
+	execute if score #is_silk_touch simplenergy.data matches 0 store result entity @e[type=item,nbt={Age:0s,Item:{tag:{stardust:{stardust_ingot:1b}}}},limit=1,sort=nearest,distance=..1] Item.Count byte 1 run scoreboard players get #count simplenergy.data
 
 kill @s

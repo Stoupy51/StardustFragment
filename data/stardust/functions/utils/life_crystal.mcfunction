@@ -3,7 +3,7 @@ advancement grant @s only stardust:visible/stuff/life_crystal
 advancement revoke @s only stardust:use/life_crystal
 execute unless score LifeCrystalDisabled stardust.config matches 1 run scoreboard players add @s stardust.life_crystals 1
 
-attribute @s[scores={stardust.life_crystals=1..20}] minecraft:generic.max_health modifier remove 2013-0-0-0-0
+attribute @s[scores={stardust.life_crystals=1..20}] generic.max_health modifier remove 2013-0-0-0-0
 execute unless score LifeCrystalDisabled stardust.config matches 1 run function stardust:utils/update_health
 
 execute if score LifeCrystalDisabled stardust.config matches 1 run playsound entity.villager.no ambient @s

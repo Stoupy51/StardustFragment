@@ -1,5 +1,5 @@
 
-execute if block ~ ~ ~ minecraft:moss_carpet run setblock ~ ~ ~ air
+execute if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ air
 execute unless entity @e[type=item,nbt={Item:{id:"minecraft:moss_carpet"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] run summon item ~ ~ ~ {Motion:[0.00,0.20,0.00],Item:{id:"minecraft:moss_carpet",Count:1b}}
 tag @e[type=item,nbt={Item:{id:"minecraft:moss_carpet"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1] add stardust.drop
 

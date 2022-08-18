@@ -7,7 +7,7 @@ data modify storage stardust:main quarry.Item set from entity @s Item
 data modify block -30000000 14 1610 Items append from storage stardust:main quarry.Item
 execute if score #slots_count stardust.data matches 27 run function stardust:quarry/working/check_item_count
 
-loot insert ~ ~ ~ mine -30000000 14 1610 minecraft:air{drop_contents:true}
+loot insert ~ ~ ~ mine -30000000 14 1610 air{drop_contents:true}
 
 execute if score #slots_count stardust.data matches 27 run function stardust:quarry/working/check_item_count_2
 execute unless score #slots_count stardust.data matches 27 run kill @s

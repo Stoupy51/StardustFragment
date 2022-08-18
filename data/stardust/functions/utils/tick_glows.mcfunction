@@ -1,2 +1,2 @@
 
-execute unless block ~ ~ ~ minecraft:barrel run function stardust:destroy/groups/barrel
+execute unless block ~ ~ ~ barrel run function stardust:destroy/groups/barrel

@@ -1,6 +1,6 @@
 
 #Generate Stardust Ore (x4)
-#Or Awakened Stardust Ore (x4) in minecraft:the_nether
+#Or Awakened Stardust Ore (x4) in the_nether
 	scoreboard players set #xz_variation simplenergy.data 400
 	scoreboard players set #max_height simplenergy.data 400
 	execute as @e[limit=8] run summon marker ~ 0 ~ {Tags:["stardust.ore_pos"]}

@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/advanced_stardust/main"
+		"function": "stardust:place/seeds/advanced_stardust/"
 	}
 }

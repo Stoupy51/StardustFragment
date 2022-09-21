@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/darkium/main"
+		"function": "stardust:place/seeds/darkium/"
 	}
 }

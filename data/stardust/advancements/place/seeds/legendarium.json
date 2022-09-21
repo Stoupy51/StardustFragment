@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/legendarium/main"
+		"function": "stardust:place/seeds/legendarium/"
 	}
 }

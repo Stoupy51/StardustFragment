@@ -10,5 +10,5 @@ execute if score #success stardust.data matches 0 in stardust:ultimate positione
 execute if score #success stardust.data matches 0 in stardust:ultimate positioned -1 61 -1 if entity @e[type=end_crystal,distance=..1] positioned 1 61 1 if entity @e[type=end_crystal,distance=..1] run scoreboard players set #success stardust.data 1
 
 execute if score #success stardust.data matches 1 run scoreboard players set #ultimate_summoning stardust.data 0
-execute if score #success stardust.data matches 1 run schedule function stardust:boss/ultimate_boss/summoning/main 1t
+execute if score #success stardust.data matches 1 run schedule function stardust:boss/ultimate_boss/summoning/ 1t
 

@@ -1,6 +1,6 @@
 
 scoreboard players set #infinite stardust.data 1
-execute positioned ~ ~-1 ~ run function stardust:place/celestial_portal/main
+execute positioned ~ ~-1 ~ run function stardust:place/celestial_portal/
 scoreboard players reset #infinite stardust.data
 
 fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air

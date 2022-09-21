@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/stardust_cable/main"
+		"function": "stardust:place/stardust_cable/"
 	}
 }

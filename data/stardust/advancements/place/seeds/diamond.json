@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/seeds/diamond/main"
+		"function": "stardust:place/seeds/diamond/"
 	}
 }

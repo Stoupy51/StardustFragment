@@ -10,6 +10,6 @@ function simplenergy:generate/utils/find_adjacent_air
 	execute if score #rotation stardust.data matches 1 at @s run tp @s ~ ~ ~ ~50 ~
 	execute if score #rotation stardust.data matches 2 at @s run tp @s ~ ~ ~ ~150 ~
 	execute if score #rotation stardust.data matches 3 at @s run tp @s ~ ~ ~ ~250 ~
-	execute at @s unless block ~ ~ ~ #simplenergy:non_solid positioned ~ ~1 ~ if block ~ ~ ~ air if block ~ ~1 ~ air if block ~ ~2 ~ air run function stardust:place/life_crystal/main
+	execute at @s unless block ~ ~ ~ #simplenergy:non_solid positioned ~ ~1 ~ if block ~ ~ ~ air if block ~ ~1 ~ air if block ~ ~2 ~ air run function stardust:place/life_crystal/
 
 kill @s

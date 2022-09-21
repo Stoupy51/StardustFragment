@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/awakened_stardust_cable/main"
+		"function": "stardust:place/awakened_stardust_cable/"
 	}
 }

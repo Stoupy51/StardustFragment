@@ -13,6 +13,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:place/ultimate_cable/main"
+		"function": "stardust:place/ultimate_cable/"
 	}
 }

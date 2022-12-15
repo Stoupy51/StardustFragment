@@ -1,6 +1,6 @@
 {
 	"parent": "item/golden_apple",
 	"textures": {
-		"layer0": "stardust:equipments/stardust_apple"
+		"layer0": "stardust:item/equipments/stardust_apple"
 	}
 }

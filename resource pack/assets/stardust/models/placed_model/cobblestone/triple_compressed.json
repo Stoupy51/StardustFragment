@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/cobblestone/triple_compressed"
+		"all": "stardust:item/materials/cobblestone/triple_compressed"
 	},
 	"display": {
 		"head": {

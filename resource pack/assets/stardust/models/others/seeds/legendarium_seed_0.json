@@ -1,7 +1,7 @@
 {
 	"textures": {
 		"1": "block/lime_concrete",
-		"2": "stardust:others/seeds/legendarium_stage_0",
+		"2": "stardust:item/others/seeds/legendarium_stage_0",
 		"particle": "block/lime_concrete"
 	},
 	"elements": [

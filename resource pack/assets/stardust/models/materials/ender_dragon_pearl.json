@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:materials/ender_dragon_pearl"
+        "layer0": "stardust:item/materials/ender_dragon_pearl"
     }
 }

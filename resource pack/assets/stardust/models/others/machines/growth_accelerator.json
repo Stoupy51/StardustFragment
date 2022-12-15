@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "stardust:others/machines/growth_accelerator_bottom",
-		"up": "stardust:others/machines/growth_accelerator_top",
-		"north": "stardust:others/machines/growth_accelerator_side",
-		"south": "stardust:others/machines/growth_accelerator_side",
-		"west": "stardust:others/machines/growth_accelerator_side",
-		"east": "stardust:others/machines/growth_accelerator_side"
+		"down": "stardust:item/others/machines/growth_accelerator_bottom",
+		"up": "stardust:item/others/machines/growth_accelerator_top",
+		"north": "stardust:item/others/machines/growth_accelerator_side",
+		"south": "stardust:item/others/machines/growth_accelerator_side",
+		"west": "stardust:item/others/machines/growth_accelerator_side",
+		"east": "stardust:item/others/machines/growth_accelerator_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

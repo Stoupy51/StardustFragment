@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/cobblestone/octuple_compressed"
+		"all": "stardust:item/materials/cobblestone/octuple_compressed"
 	}
 }

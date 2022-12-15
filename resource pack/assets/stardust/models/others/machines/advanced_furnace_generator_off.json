@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "stardust:others/machines/furnace/advanced_top",
-		"up": "stardust:others/machines/furnace/advanced_top",
-		"north": "stardust:others/machines/furnace/advanced_front_off",
-		"south": "stardust:others/machines/furnace/advanced_side_off",
-		"west": "stardust:others/machines/furnace/advanced_side_off",
-		"east": "stardust:others/machines/furnace/advanced_side_off"
+		"down": "stardust:item/others/machines/furnace/advanced_top",
+		"up": "stardust:item/others/machines/furnace/advanced_top",
+		"north": "stardust:item/others/machines/furnace/advanced_front_off",
+		"south": "stardust:item/others/machines/furnace/advanced_side_off",
+		"west": "stardust:item/others/machines/furnace/advanced_side_off",
+		"east": "stardust:item/others/machines/furnace/advanced_side_off"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

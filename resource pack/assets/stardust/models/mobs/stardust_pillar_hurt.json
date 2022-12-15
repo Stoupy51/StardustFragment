@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 192],
 	"textures": {
-		"0": "stardust:mobs/stardust_pillar_hurt_model"
+		"0": "stardust:item/mobs/stardust_pillar_hurt_model"
 	},
 	"elements": [
 		{

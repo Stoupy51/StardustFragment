@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:others/cobblestone_miner/5"
+		"all": "stardust:item/others/cobblestone_miner/5"
 	}
 }

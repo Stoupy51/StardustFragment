@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:materials/solarium_ingot"
+        "layer0": "stardust:item/materials/solarium_ingot"
     }
 }

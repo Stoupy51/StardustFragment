@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/darkium_block"
+		"all": "stardust:item/materials/darkium_block"
 	}
 }

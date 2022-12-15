@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:equipments/original_stardust_axe"
+        "layer0": "stardust:item/equipments/original_stardust_axe"
     }
 }

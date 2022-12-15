@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "stardust:quarry_gui"
+		"texture": "stardust:item/quarry_gui"
 	},
 	"elements": [ 
 		{

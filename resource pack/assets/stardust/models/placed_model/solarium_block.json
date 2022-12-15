@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/solarium_block"
+		"all": "stardust:item/materials/solarium_block"
 	},
 	"display": {
 		"head": {

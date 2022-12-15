@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:materials/darkium_ingot"
+        "layer0": "stardust:item/materials/darkium_ingot"
     }
 }

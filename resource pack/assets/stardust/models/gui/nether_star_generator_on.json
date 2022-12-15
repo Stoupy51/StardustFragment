@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "stardust:gui/nether_star_generator_on"
+		"texture": "stardust:item/gui/nether_star_generator_on"
 	},
 	"elements": [ 
 		{

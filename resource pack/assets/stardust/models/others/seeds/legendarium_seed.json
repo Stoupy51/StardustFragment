@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "stardust:others/legendarium_seed"
+		"layer0": "stardust:item/others/legendarium_seed"
 	}
 }

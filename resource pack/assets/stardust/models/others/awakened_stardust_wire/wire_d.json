@@ -1,7 +1,7 @@
 {
 	"parent": "simplenergy:wire_pos",
 	"textures": {
-		"0": "stardust:others/awakened_stardust_wire"
+		"0": "stardust:item/others/awakened_stardust_wire"
 	},
 	"elements": [
 		{

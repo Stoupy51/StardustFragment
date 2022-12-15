@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/ender_stardust_ore"
+		"all": "stardust:item/materials/ender_stardust_ore"
 	}
 }

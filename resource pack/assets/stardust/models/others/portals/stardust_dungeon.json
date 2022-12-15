@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:others/portals/stardust_dungeon"
+		"all": "stardust:item/others/portals/stardust_dungeon"
 	}
 }

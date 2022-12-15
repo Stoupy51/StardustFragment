@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:equipments/damaged_stardust_leggings",
-        "layer1": "stardust:equipments/damaged_stardust_leggings"
+        "layer0": "stardust:item/equipments/damaged_stardust_leggings",
+        "layer1": "stardust:item/equipments/damaged_stardust_leggings"
     }
 }

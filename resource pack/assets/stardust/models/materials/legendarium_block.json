@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/legendarium_block"
+		"all": "stardust:item/materials/legendarium_block"
 	}
 }

@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:equipments/legendarium_boots",
-        "layer1": "stardust:equipments/legendarium_boots"
+        "layer0": "stardust:item/equipments/legendarium_boots",
+        "layer1": "stardust:item/equipments/legendarium_boots"
     }
 }

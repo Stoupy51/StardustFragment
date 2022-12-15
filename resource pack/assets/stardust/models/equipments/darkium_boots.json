@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:equipments/darkium_boots"
+        "layer0": "stardust:item/equipments/darkium_boots"
     }
 }

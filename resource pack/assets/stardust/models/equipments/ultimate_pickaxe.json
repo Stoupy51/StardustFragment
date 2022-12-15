@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:equipments/ultimate_pickaxe"
+        "layer0": "stardust:item/equipments/ultimate_pickaxe"
     }
 }

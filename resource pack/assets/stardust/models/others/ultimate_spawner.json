@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:others/ultimate_spawner"
+		"all": "stardust:item/others/ultimate_spawner"
 	}
 }

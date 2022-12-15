@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:equipments/solarium_chestplate",
-        "layer1": "stardust:equipments/solarium_chestplate"
+        "layer0": "stardust:item/equipments/solarium_chestplate",
+        "layer1": "stardust:item/equipments/solarium_chestplate"
     }
 }

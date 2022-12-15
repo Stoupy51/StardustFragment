@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/deepslate_stardust_ore"
+		"all": "stardust:item/materials/deepslate_stardust_ore"
 	}
 }

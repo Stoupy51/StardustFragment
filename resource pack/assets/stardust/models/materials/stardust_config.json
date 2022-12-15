@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "stardust:materials/stardust_config"
+        "all": "stardust:item/materials/stardust_config"
     }
 }

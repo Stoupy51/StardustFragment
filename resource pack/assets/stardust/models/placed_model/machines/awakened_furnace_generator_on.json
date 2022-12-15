@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "stardust:others/machines/furnace/awakened_top",
-		"up": "stardust:others/machines/furnace/awakened_top",
-		"north": "stardust:others/machines/furnace/awakened_front_on",
-		"south": "stardust:others/machines/furnace/awakened_side_on",
-		"west": "stardust:others/machines/furnace/awakened_side_on",
-		"east": "stardust:others/machines/furnace/awakened_side_on"
+		"down": "stardust:item/others/machines/furnace/awakened_top",
+		"up": "stardust:item/others/machines/furnace/awakened_top",
+		"north": "stardust:item/others/machines/furnace/awakened_front_on",
+		"south": "stardust:item/others/machines/furnace/awakened_side_on",
+		"west": "stardust:item/others/machines/furnace/awakened_side_on",
+		"east": "stardust:item/others/machines/furnace/awakened_side_on"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

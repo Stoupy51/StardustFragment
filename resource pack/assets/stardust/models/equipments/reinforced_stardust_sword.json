@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:equipments/reinforced_stardust_sword"
+        "layer0": "stardust:item/equipments/reinforced_stardust_sword"
     }
 }

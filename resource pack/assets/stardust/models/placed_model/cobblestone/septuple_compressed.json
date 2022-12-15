@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/cobblestone/septuple_compressed"
+		"all": "stardust:item/materials/cobblestone/septuple_compressed"
 	},
 	"display": {
 		"head": {

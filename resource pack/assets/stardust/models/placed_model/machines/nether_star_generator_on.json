@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "stardust:others/machines/nether_star_generator_top",
-		"up": "stardust:others/machines/nether_star_generator_top",
-		"north": "stardust:others/machines/nether_star_generator_front_on",
-		"south": "stardust:others/machines/nether_star_generator_side",
-		"west": "stardust:others/machines/nether_star_generator_side",
-		"east": "stardust:others/machines/nether_star_generator_side"
+		"down": "stardust:item/others/machines/nether_star_generator_top",
+		"up": "stardust:item/others/machines/nether_star_generator_top",
+		"north": "stardust:item/others/machines/nether_star_generator_front_on",
+		"south": "stardust:item/others/machines/nether_star_generator_side",
+		"west": "stardust:item/others/machines/nether_star_generator_side",
+		"east": "stardust:item/others/machines/nether_star_generator_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

@@ -1,7 +1,7 @@
 {
 	"parent": "item/warped_fungus_on_a_stick",
 	"textures": {
-		"layer0": "stardust:equipments/travel_staff"
+		"layer0": "stardust:item/equipments/travel_staff"
 	},
 	"display": {
 		"firstperson_righthand": {

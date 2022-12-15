@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/nether_stardust_ore"
+		"all": "stardust:item/materials/nether_stardust_ore"
 	},
 	"display": {
 		"head": {

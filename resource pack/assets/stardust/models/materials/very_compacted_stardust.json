@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:materials/very_compacted_stardust"
+        "layer0": "stardust:item/materials/very_compacted_stardust"
     }
 }

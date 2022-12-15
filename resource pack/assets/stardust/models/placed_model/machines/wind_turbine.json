@@ -1,10 +1,10 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"0": "stardust:others/machines/wind_turbine_blades",
+		"0": "stardust:item/others/machines/wind_turbine_blades",
 		"1": "minecraft:block/iron_block",
-		"2": "stardust:others/machines/wind_turbine_side",
-		"particle": "stardust:others/machines/wind_turbine_blades"
+		"2": "stardust:item/others/machines/wind_turbine_side",
+		"particle": "stardust:item/others/machines/wind_turbine_blades"
 	},
 	"elements": [
 		{

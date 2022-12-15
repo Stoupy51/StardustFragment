@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:materials/stardust_block"
+		"all": "stardust:item/materials/stardust_block"
 	},
 	"display": {
 		"head": {

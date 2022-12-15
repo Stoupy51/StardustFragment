@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:others/machines/elevator_on"
+		"all": "stardust:item/others/machines/elevator_on"
 	},
 	"display": {
 		"head": {

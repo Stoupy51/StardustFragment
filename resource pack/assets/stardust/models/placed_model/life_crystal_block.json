@@ -2,7 +2,7 @@
 	"parent": "block/cube_all",
 	"textures": {
 		"1": "block/glass",
-		"down": "stardust:equipments/life_crystal_block",
+		"down": "stardust:item/equipments/life_crystal_block",
 		"particle": "block/glass"
 	},
 	"elements": [

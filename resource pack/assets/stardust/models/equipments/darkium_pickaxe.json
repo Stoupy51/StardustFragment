@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:equipments/darkium_pickaxe"
+        "layer0": "stardust:item/equipments/darkium_pickaxe"
     }
 }

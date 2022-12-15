@@ -1,7 +1,7 @@
 {
 	"textures": {
 		"1": "block/obsidian",
-		"2": "stardust:others/seeds/darkium_stage_1",
+		"2": "stardust:item/others/seeds/darkium_stage_1",
 		"particle": "block/obsidian"
 	},
 	"elements": [

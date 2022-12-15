@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:equipments/stardust_sniper"
+        "layer0": "stardust:item/equipments/stardust_sniper"
     }
 }

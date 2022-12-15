@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:others/quarry_configurator"
+        "layer0": "stardust:item/others/quarry_configurator"
     }
 }

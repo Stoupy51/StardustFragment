@@ -1,6 +1,6 @@
 {
 	"parent": "item/bow",
 	"textures": {
-		"layer0": "stardust:equipments/stardust_bow_pulling_1"
+		"layer0": "stardust:item/equipments/stardust_bow_pulling_1"
 	}
 }

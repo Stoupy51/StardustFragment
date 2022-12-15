@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "stardust:equipments/reinforced_stardust_helmet",
-        "layer1": "stardust:equipments/reinforced_stardust_helmet"
+        "layer0": "stardust:item/equipments/reinforced_stardust_helmet",
+        "layer1": "stardust:item/equipments/reinforced_stardust_helmet"
     }
 }

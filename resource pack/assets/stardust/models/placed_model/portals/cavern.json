@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "stardust:others/portals/cavern"
+		"all": "stardust:item/others/portals/cavern"
 	},
 	"display": {
 		"head": {

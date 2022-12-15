@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "stardust:gui/furnace_generator_on"
+		"texture": "stardust:item/gui/furnace_generator_on"
 	},
 	"elements": [ 
 		{

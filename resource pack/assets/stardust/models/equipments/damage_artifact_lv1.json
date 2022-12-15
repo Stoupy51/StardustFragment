@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "stardust:equipments/damage_artifact_lv1"
+		"layer0": "stardust:item/equipments/damage_artifact_lv1"
 	}
 }

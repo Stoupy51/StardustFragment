@@ -1,12 +1,12 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"down": "stardust:others/machines/mob_grinder_top",
-		"up": "stardust:others/machines/mob_grinder_top",
-		"north": "stardust:others/machines/mob_grinder_front_off",
-		"south": "stardust:others/machines/mob_grinder_side",
-		"west": "stardust:others/machines/mob_grinder_side",
-		"east": "stardust:others/machines/mob_grinder_side"
+		"down": "stardust:item/others/machines/mob_grinder_top",
+		"up": "stardust:item/others/machines/mob_grinder_top",
+		"north": "stardust:item/others/machines/mob_grinder_front_off",
+		"south": "stardust:item/others/machines/mob_grinder_side",
+		"west": "stardust:item/others/machines/mob_grinder_side",
+		"east": "stardust:item/others/machines/mob_grinder_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

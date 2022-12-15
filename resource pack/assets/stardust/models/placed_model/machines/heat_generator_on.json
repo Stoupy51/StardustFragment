@@ -1,7 +1,7 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "stardust:others/machines/heat_generator_on"
+		"all": "stardust:item/others/machines/heat_generator_on"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

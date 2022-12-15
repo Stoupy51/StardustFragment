@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "stardust:equipments/health_artifact_lvmax"
+        "layer0": "stardust:item/equipments/health_artifact_lvmax"
     }
 }

@@ -1,12 +1,12 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"down": "stardust:others/quarry/5_bottom",
-		"up": "stardust:others/quarry/5_top",
-		"north": "stardust:others/quarry/5_side",
-		"south": "stardust:others/quarry/5_side",
-		"west": "stardust:others/quarry/5_side",
-		"east": "stardust:others/quarry/5_side"
+		"down": "stardust:item/others/quarry/5_bottom",
+		"up": "stardust:item/others/quarry/5_top",
+		"north": "stardust:item/others/quarry/5_side",
+		"south": "stardust:item/others/quarry/5_side",
+		"west": "stardust:item/others/quarry/5_side",
+		"east": "stardust:item/others/quarry/5_side"
 	},
 	"elements": [{
 		"from": [ 0, 0, 0 ],

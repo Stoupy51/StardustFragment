@@ -6,11 +6,11 @@ tag @s add stardust.shooter
 
 #Check what Sniper is it and set Base Damage
 	scoreboard players set #sniper_type stardust.data 0
-	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SelectedItemTag.stardust.stardust_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.stardust_sniper],Age:0,Radius:0f}
+	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SIT.stardust.stardust_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.stardust_sniper]}
 	execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -1
-	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SelectedItemTag.stardust.awakened_stardust_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.awakened_stardust_sniper],Age:0,Radius:0f}
+	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SIT.stardust.awakened_stardust_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.awakened_stardust_sniper]}
 	execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -2
-	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SelectedItemTag.stardust.ultimate_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.ultimate_sniper],Age:0,Radius:0f}
+	execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SIT.stardust.ultimate_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.ultimate_sniper]}
 	execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -3
 
 	execute if score #sniper_type stardust.data matches -1 run scoreboard players set #bullet_damage stardust.data 6

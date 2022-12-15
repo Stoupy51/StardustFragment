@@ -7,3 +7,5 @@ scoreboard players operation #temp stardust.data += #y stardust.data
 scoreboard players operation #temp stardust.data += #z stardust.data
 
 execute unless score #temp stardust.data = @s stardust.data_2 run tag @s remove stardust.teleported
+execute unless score #temp stardust.data = @s stardust.data_2 run scoreboard players reset @s stardust.data_2
+

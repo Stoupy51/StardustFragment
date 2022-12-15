@@ -12,11 +12,11 @@
 							"function": "minecraft:copy_nbt",
 							"source": {
 								"type": "minecraft:storage",
-								"source": "stardust:main"
+								"source": "stardust:manual"
 							},
 							"ops": [
 								{
-									"source": "all.2013398.tag",
+									"source": "Item.tag",
 									"target": "{}",
 									"op": "merge"
 								}

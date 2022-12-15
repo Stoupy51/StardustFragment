@@ -1,6 +1,6 @@
 
-execute store result score #hurt_time stardust.data run data get storage stardust:main temp.HurtTime
-data modify entity @s Rotation set from storage stardust:main temp.Rotation
+execute store result score #hurt_time stardust.data run data get storage stardust:temp all.HurtTime
+data modify entity @s Rotation set from storage stardust:temp all.Rotation
 
 execute if score @s stardust.cooldown matches 0 run scoreboard players set #temp stardust.data 1
 execute if score @s stardust.cooldown matches 0 unless score #hurt_time stardust.data matches 0 run scoreboard players set #temp stardust.data 2

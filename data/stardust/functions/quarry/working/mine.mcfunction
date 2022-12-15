@@ -14,7 +14,7 @@
 	function #stardust:signals/quarry_mined
 
 #Items pickup
-	execute as @e[type=item,dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore] at @e[tag=stardust.quarry_stock,limit=1] run function stardust:quarry/working/store_item
+	execute as @e[type=item,dx=0,dy=0,dz=0,tag=!global.ignore,tag=!global.ignore.pos,tag=!smithed.ignore] at 00003a98-0000-2ee0-0000-4e20000055f0 run function stardust:quarry/working/store_item
 
 #Others
 	kill @e[type=experience_orb,dx=0,dy=0,dz=0]

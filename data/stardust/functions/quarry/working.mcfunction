@@ -8,7 +8,7 @@ execute if score @s stardust.quarry_status matches 1 run function stardust:quarr
 	scoreboard players set #quarry_temp stardust.data 0
 
 #Working
-	tag @s add stardust.quarry_stock
+	execute at @s run summon marker ~ ~ ~ {UUID:[I;15000,12000,20000,22000]}
 	scoreboard players set #module stardust.data 0
 	execute if entity @s[tag=stardust.fortune_module] run scoreboard players set #module stardust.data 1
 	execute if entity @s[tag=stardust.silk_touch_module] run scoreboard players set #module stardust.data 2
@@ -24,4 +24,4 @@ execute if score @s stardust.quarry_status matches 1 run function stardust:quarr
 	execute if entity @s[scores={stardust.quarry_status=2},tag=stardust.quarry_lv5] run scoreboard players set #quarry_count stardust.data 250
 	execute if entity @s[scores={stardust.quarry_status=2},tag=stardust.quarry_lv6] run scoreboard players set #quarry_count stardust.data 2500
 	execute if score @s stardust.quarry_status matches 2 if score #quarry_count stardust.data matches 1.. at @s run function stardust:quarry/working/pos_check
-	tag @s remove stardust.quarry_stock
+	kill 00003a98-0000-2ee0-0000-4e20000055f0

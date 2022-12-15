@@ -30,7 +30,10 @@ team remove stardust.red
 team remove stardust.blue
 
 data remove storage stardust:main all
-data remove storage stardust:main temp
+data remove storage stardust:quarry all
+data remove storage stardust:inventory all
+data remove storage stardust:temp all
+data remove storage stardust:manual all
 
 tp @e[tag=stardust.destroyer] 0 -10000 0
 kill @e[tag=stardust.destroyer]

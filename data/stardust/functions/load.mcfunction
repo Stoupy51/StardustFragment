@@ -58,6 +58,10 @@ scoreboard players set #-10 simplenergy.data -10
 scoreboard players set #-1 simplenergy.data -1
 
 #define storage stardust:main
+#define storage stardust:quarry
+#define storage stardust:inventory
+#define storage stardust:temp
+#define storage stardust:manual
 
 #Materials
 	#Stardust Fragment
@@ -360,7 +364,7 @@ scoreboard players set #-1 simplenergy.data -1
 
 
 #Stardust Manual
-	data modify storage stardust:main all.2013398 set value {Slot:18b,id:"minecraft:written_book"					,Count:1b,tag:{ctc:{id:"stardust_manual",from:"stoupy:stardust",traits:{}}												,CustomModelData:2013398,simplenergy:{},stardust:{stardust_manual:1b}											,HideFlags:127,display:{Lore:['{"translate":"Stardust Fragment","color":"blue","italic":true}']},pages:[],title:"Stardust Manual",author:""}}
+	data modify storage stardust:manual Item set value {Slot:18b,id:"minecraft:written_book"					,Count:1b,tag:{ctc:{id:"stardust_manual",from:"stoupy:stardust",traits:{}}												,CustomModelData:2013398,simplenergy:{},stardust:{stardust_manual:1b}											,HideFlags:127,display:{Lore:['{"translate":"Stardust Fragment","color":"blue","italic":true}']},pages:[],title:"Stardust Manual",author:""}}
 	function stardust:manual/all
 
 #Cables

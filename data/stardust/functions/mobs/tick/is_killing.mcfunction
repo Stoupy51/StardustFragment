@@ -1,5 +1,5 @@
 
-data modify storage stardust:main temp set from entity @s
+data modify storage stardust:temp all set from entity @s
 scoreboard players set #temp stardust.data 2
 scoreboard players set #death stardust.data 1
 

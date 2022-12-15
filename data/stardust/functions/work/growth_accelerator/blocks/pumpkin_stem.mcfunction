@@ -1,4 +1,5 @@
 
+scoreboard players set #block stardust.data 1
 scoreboard players set #success stardust.data 0
 execute if score #success stardust.data matches 0 store success score #success stardust.data if block ~ ~ ~ pumpkin_stem[age=7]
 execute if score #success stardust.data matches 0 store success score #success stardust.data if block ~ ~ ~ pumpkin_stem[age=6] run setblock ~ ~ ~ pumpkin_stem[age=7]

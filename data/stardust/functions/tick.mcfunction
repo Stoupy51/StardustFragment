@@ -12,7 +12,6 @@
 	execute if score #second_5 stardust.data matches 90.. run function stardust:tick_second_5
 
 #Others 2
-	execute as @a[sort=random] at @s run function stardust:utils/tick_players
 	tp @e[type=vex,predicate=stardust:in_dim/stardust] 0 -10000 0
 	execute if score #second stardust.data matches 10 run function stardust:utils/quarry_system
 	execute as @e[type=glow_item_frame,tag=stardust.destroy_barrel,sort=random] at @s run function stardust:utils/tick_glows

@@ -5,6 +5,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:utils/inventory_changed"
+		"function": "stardust:advancements/inventory_changed"
 	}
 }

@@ -14,3 +14,4 @@ execute if data storage stardust:main Inventory[{Slot:103b}].tag.stardust.solari
 
 #Memory dump
 data remove storage stardust:main Inventory
+

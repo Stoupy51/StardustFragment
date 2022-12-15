@@ -1,4 +1,6 @@
 
+advancement revoke @s only stardust:right_click
+
 data modify storage stardust:main SIT set from entity @s SelectedItem.tag
 
 execute if data storage stardust:main SIT.stardust.quarry_configurator run function stardust:right_click/quarry_configurator/

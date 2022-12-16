@@ -24,6 +24,6 @@
 		}
 	},
 	"rewards": {
-		"function": "stardust:utils/dragon_egg/0"
+		"function": "stardust:advancements/dragon_egg/0"
 	}
 }

@@ -8,3 +8,4 @@ execute if score @s stardust.cooldown matches 11.. at @s run tp @s ~ ~-0.22 ~
 
 #death particles: /particle poof ~ ~1 ~ .1 .5 .1 0.05 10 normal @a[distance=..25]
 execute if score @s stardust.cooldown matches 0 run kill @s
+

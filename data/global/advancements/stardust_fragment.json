@@ -1,7 +1,7 @@
 {
 	"display": {
 		"title": "Stardust Fragment",
-		"description": "v3.4.8",
+		"description": "v3.4.9",
 		"icon": {
 			"item": "minecraft:command_block",
 			"nbt": "{CustomModelData:2013000}"
@@ -10,7 +10,7 @@
 		"announce_to_chat": false,
 		"frame": "challenge"
 	},
-	"parent": "simplenergy:simplenergy",
+	"parent": "global:simplenergy",
 	"criteria": {
 		"always": {
 			"trigger": "minecraft:tick"

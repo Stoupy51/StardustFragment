@@ -1,5 +1,5 @@
 {
 	"values": [
-		"stardust:tick"
+		"stardust:utils/tick_verification"
 	]
 }

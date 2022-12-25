@@ -1,7 +1,5 @@
 {
     "values": [
-		"#energy:load",
-		"simplenergy:load",
 		"stardust:load"
 	]
 }

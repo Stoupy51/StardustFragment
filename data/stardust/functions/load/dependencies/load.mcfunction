@@ -1,0 +1,3 @@
+
+function #smithed.damage:load
+

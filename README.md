@@ -59,7 +59,7 @@ Requires at least SimplEnergy [v1.9.0] : https://github.com/Stoupy51/SimplEnergy
 [Join our Energy Datapacks Discord Server here: https://discord.gg/a2yX6GD4J7]
 
 Credits :
-- [Used libraries authors](https://github.com/Stoupy51/Energy-Datapack-Template#-librairiesmodules-used-conventions-guideline-tips-followed)
+- [Used libraries authors](https://github.com/Stoupy51/StardustFragment#-librairiesmodules-used-conventions-guideline-tips-followed)
 - Resource Pack: Resnox, fabien5525
 - Mob models: VieuxGreluchon
 - Base Quarry System: AirDox_

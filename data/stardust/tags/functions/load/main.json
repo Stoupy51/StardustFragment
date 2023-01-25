@@ -1,0 +1,9 @@
+{
+	"values": [
+		{
+			"id": "#stardust:load/dependencies",
+			"required": false
+		},
+		"stardust:load/"
+	]
+}

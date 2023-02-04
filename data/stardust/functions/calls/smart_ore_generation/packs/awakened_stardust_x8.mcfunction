@@ -1,0 +1,11 @@
+
+# Generate Awakened Stardust Ore (x8)
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+function stardust:calls/smart_ore_generation/awakened_stardust
+

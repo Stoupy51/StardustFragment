@@ -1,5 +1,5 @@
 
-function stardust:calls/generate/structure/height_variation
+function stardust:calls/smart_ore_generation/structure/height_variation
 tp @s ~ ~96 ~
 
 #Choose a Structure

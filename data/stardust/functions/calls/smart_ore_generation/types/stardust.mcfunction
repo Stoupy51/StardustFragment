@@ -10,3 +10,4 @@ execute if block ~ ~ ~ deepslate run function stardust:place/deepslate_stardust_
 
 #Update Stats
 scoreboard players add StardustOreCount stardust.advanced_stats 1
+

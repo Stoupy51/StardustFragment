@@ -1,15 +1,12 @@
 
-function simplenergy:generate/utils/random_position
+## Try to find a random position adjacent to air in the region to generate the ore
+function #smart_ore_generation:v1/slots/random_position
 
-scoreboard players set #max_attempts simplenergy.data 50
-function simplenergy:generate/utils/find_adjacent_air
+# Placing Stardust Ore Patch
+execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/types/stardust
+execute at @s positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/types/stardust
+execute at @s positioned ~ ~0.5 ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/types/stardust
+execute at @s positioned ~0.5 ~0.5 ~ if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/types/stardust
+execute at @s positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/types/stardust
+execute at @s positioned ~ ~0.5 ~ if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/types/stardust
 
-#Placing Ore
-	execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/stardust_type
-	execute at @s positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/stardust_type
-	execute at @s positioned ~ ~0.5 ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/stardust_type
-	execute at @s positioned ~0.5 ~0.5 ~ if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/stardust_type
-	execute at @s positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/stardust_type
-	execute at @s positioned ~ ~0.5 ~ if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:calls/smart_ore_generation/stardust_type
-
-kill @s

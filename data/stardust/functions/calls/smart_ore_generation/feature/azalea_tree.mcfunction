@@ -1,10 +1,7 @@
 
-function simplenergy:generate/utils/random_position
+## Try to find a random position adjacent to air in the region to generate the ore
+function #smart_ore_generation:v1/slots/random_position
 
-scoreboard players set #max_attempts simplenergy.data 50
-function simplenergy:generate/utils/find_adjacent_air
+# Placing Azalea Tree
+execute at @s if block ~ ~ ~ #azalea_grows_on run place feature azalea_tree
 
-#Placing Ore
-	execute at @s if block ~ ~ ~ #azalea_grows_on run place feature azalea_tree
-
-kill @s

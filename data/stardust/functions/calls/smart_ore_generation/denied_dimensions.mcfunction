@@ -1,5 +1,5 @@
 
-#> smart_ore_generation:v1.0/signals/denied_dimensions
+#> smart_ore_generation:v1.1/signals/denied_dimensions
 #
 # @within			#smart_ore_generation:v1/signals/denied_dimensions
 # @executed			as & at the player who triggered the event

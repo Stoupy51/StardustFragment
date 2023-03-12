@@ -1,11 +1,8 @@
 
-function simplenergy:generate/utils/random_position
+## Try to find a random position adjacent to air in the region to generate the ore
+function #smart_ore_generation:v1/slots/random_position
 
-scoreboard players set #max_attempts simplenergy.data 50
-function simplenergy:generate/utils/find_adjacent_air
+# Placing Awakened Stardust Ore Patch
+execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run scoreboard players add AwakenedStardustOreCount stardust.advanced_stats 1
+execute at @s if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:place/awakened_stardust_ore/optimized_for_generation
 
-#Placing Ore
-	execute at @s if score #pos_y simplenergy.data matches 0..1500 if block ~ ~ ~ #stardust:for_stardust_ore run scoreboard players add AwakenedStardustOreCount stardust.advanced_stats 1
-	execute at @s if score #pos_y simplenergy.data matches 0..1500 if block ~ ~ ~ #stardust:for_stardust_ore run function stardust:place/awakened_stardust_ore/
-
-kill @s

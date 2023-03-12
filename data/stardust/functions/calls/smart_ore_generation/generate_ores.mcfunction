@@ -36,7 +36,7 @@ execute if score #dimension smart_ore_generation.data matches 3 run function sta
 # Generate Life Crystals (x8) in all known dimensions with max height at 60 blocks but in the_end with max height at 240 blocks
 scoreboard players set #max_height smart_ore_generation.data 60
 execute if score #dimension smart_ore_generation.data matches 2 run scoreboard players set #max_height smart_ore_generation.data 240
-execute if predicate stardust:in_dim/all run function stardust:calls/smart_ore_generation/packs/life_crystal_x8
+execute if predicate stardust:in_dim/all run function stardust:calls/smart_ore_generation/packs/life_crystal_x2
 
 
 # Generate Azalea Trees Features (x8) in the cavern dimension with max height at 100 blocks

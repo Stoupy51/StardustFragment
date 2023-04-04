@@ -8,4 +8,3 @@ function stardust:manual/page_energy
 function stardust:manual/crafting_pages
 function stardust:manual/stardust_forges
 
-

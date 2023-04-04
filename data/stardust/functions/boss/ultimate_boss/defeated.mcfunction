@@ -1,5 +1,5 @@
 
-#Advancement
+# Advancement
 advancement grant @a[distance=..200] only stardust:visible/adventure/ultimate_boss
 execute as @a[distance=..200] unless score @s stardust.damage_taken_ub matches 200.. run advancement grant @s only stardust:visible/adventure/ultimate_boss_ez
 scoreboard objectives remove stardust.damage_taken_ub

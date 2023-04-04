@@ -1,4 +1,4 @@
 
 setblock ~ ~ ~ polished_deepslate
-function stardust:place/glow_item_frame_0
-execute as @e[tag=stardust.set_new] at @s run function stardust:place/stardust_ore/secondary
+execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:place/stardust_ore/secondary
+

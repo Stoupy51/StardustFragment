@@ -5,3 +5,4 @@ attribute @s generic.max_health modifier add 1-1-1-1-2 "2" 3 multiply_base
 data modify entity @s Health set value 2048
 team join stardust.team @s
 tag @s add stardust.dungeon_dim
+

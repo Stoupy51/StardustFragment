@@ -7,5 +7,5 @@
 	kill @e[type=item,nbt={Item:{Count:64b,tag:{stardust:{very_compacted_stardust:1b}}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:32b,tag:{stardust:{stardust_config:1b}}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:16b,tag:{stardust:{awakened_stardust_block:1b}}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:dragon_egg"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:dragon_egg"}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted

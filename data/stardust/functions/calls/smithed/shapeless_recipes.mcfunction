@@ -216,5 +216,4 @@ scoreboard players set #consume_tools stardust.data 0
 #Life Crystal Block
 	execute store result score @s smithed.data if entity @s[scores={smithed.data=0}] if score count smithed.data matches 2 if data storage smithed.crafter:input {recipe:[{Count:8b,id:"minecraft:glass"},{Count:1b,tag:{ctc:{id:"life_crystal"}}}]} run loot replace block ~ ~ ~ container.16 loot stardust:i/life_crystal_block
 
-
 execute if score #consume_tools stardust.data matches 1 run data modify storage smithed.crafter:input flags append value "consume_tools"

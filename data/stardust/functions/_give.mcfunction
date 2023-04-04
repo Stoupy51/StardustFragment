@@ -2,8 +2,7 @@
 loot spawn ~ ~ ~ loot smithed.crafter:blocks/table
 loot spawn ~ ~ ~ loot stardust:all_items
 
-
-#Materials
+# Materials
 loot spawn ~ ~ ~ loot stardust:i/stardust_fragment
 loot spawn ~ ~ ~ loot stardust:i/stardust_ingot
 loot spawn ~ ~ ~ loot stardust:i/stardust_essence
@@ -52,7 +51,6 @@ loot spawn ~ ~ ~ loot stardust:i/ultimate_ingot
 loot spawn ~ ~ ~ loot stardust:i/legendarium_block
 loot spawn ~ ~ ~ loot stardust:i/solarium_block
 loot spawn ~ ~ ~ loot stardust:i/darkium_block
-
 
 #Equipment
 loot spawn ~ ~ ~ loot stardust:i/damaged_stardust_helmet
@@ -130,7 +128,6 @@ loot spawn ~ ~ ~ loot stardust:i/wormhole_potion
 loot spawn ~ ~ ~ loot stardust:i/stardust_apple
 loot spawn ~ ~ ~ loot stardust:i/life_crystal
 loot spawn ~ ~ ~ loot stardust:i/life_crystal_block
-
 
 #Others
 loot spawn ~ ~ ~ loot stardust:i/diamond_seed

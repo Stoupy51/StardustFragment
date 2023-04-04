@@ -1,5 +1,5 @@
 
-#Advancement
+# Advancement
 advancement grant @a[distance=..200] only stardust:visible/adventure/summon_ultimate_boss
 execute if score #ultimate_boss stardust.data matches 1.. run advancement grant @a[distance=..200] only stardust:visible/adventure/multiple_ultimate_boss
 scoreboard objectives add stardust.damage_taken_ub minecraft.custom:damage_taken

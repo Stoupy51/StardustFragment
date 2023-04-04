@@ -5,6 +5,6 @@
 #Kill materials + Sound + Visual
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{stardust:{stardust_dungeon_portal:1b}}}},limit=1,sort=nearest,distance=..1]
 	kill @e[type=item,nbt={Item:{Count:1b,tag:{stardust:{stardust_config:1b}}}},limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:64b,id:"minecraft:crying_obsidian"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
-	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:dragon_egg"}},predicate=!simplenergy:has_tag,limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:64b,id:"minecraft:crying_obsidian"}},limit=1,sort=nearest,distance=..1]
+	kill @e[type=item,nbt={Item:{Count:1b,id:"minecraft:dragon_egg"}},limit=1,sort=nearest,distance=..1]
 	function stardust:forge/crafted

@@ -10,3 +10,4 @@ execute if score #quarry_count stardust.data matches 1 if score #quarry_temp sta
 
 scoreboard players remove #quarry_count stardust.data 1
 execute at @s align xyz run function stardust:quarry/working/mine
+

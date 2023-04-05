@@ -8,8 +8,8 @@
 #
 
 # Summon the stardust pillar base mob and run the setup function
-summon wither ~ ~ ~ {Passengers:[{id:"minecraft:item_display"}],CustomName:'{"text":"Stardust Pillar (Shield On)","italic":false,"color":"aqua"}',NoAI:1b,Health:351,Attributes:[{Name:"generic.max_health",Base:351}],Invulnerable:1,Tags:["stardust.stardust_pillar","stardust.stardust_mob","stardust.has_shield","stardust.new_mob"],Team:"stardust.team",ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}
-execute as @e[type=wither,tag=stardust.new_mob,limit=1] run function stardust:boss/stardust_pillar/setup
+summon wither ~ ~ ~ {Passengers:[{id:"minecraft:item_display"}],CustomName:'{"text":"Stardust Pillar (Shield On)","italic":false,"color":"aqua"}',NoAI:1b,Health:351,Attributes:[{Name:"generic.max_health",Base:351}],Invulnerable:1,Tags:["stardust.stardust_pillar","stardust.stardust_mob","stardust.has_shield","stardust.new"],Team:"stardust.team",ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}
+execute as @e[type=wither,tag=stardust.new,limit=1] on passengers run function stardust:boss/stardust_pillar/setup
 
 # Increment Stardust Pillar count
 scoreboard players add #stardust_pillar stardust.data 1

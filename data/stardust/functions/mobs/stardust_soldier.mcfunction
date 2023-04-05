@@ -1,4 +1,12 @@
 
-summon stray ~ ~ ~ {Passengers:[{id:"minecraft:armor_stand",Tags:["global.ignore","global.ignore.kill","smithed.entity","smithed.strict","stardust.model","stardust.stardust_mob","stardust.stardust_soldier","stardust.new"],Invisible:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"golden_hoe",Count:1b,tag:{CustomModelData:2013005}}]}],DeathLootTable:"stardust:entities/stardust_dimension",Health:50,Attributes:[{Name:"generic.max_health",Base:40d},{Name:"generic.attack_damage",Base:5d},{Name:"generic.movement_speed",Base:0.32d}],Tags:["stardust.stardust_mob","stardust.to_throw","stardust.new"],Team:"stardust.team",ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Paper.SpawnReason:"NATURAL"}
-execute as @e[type=#stardust:mobs,tag=stardust.new] run function stardust:mobs/next_id
-scoreboard players add #next_mob stardust.id 1
+#> stardust:mobs/stardust_soldier
+#
+# @within			stardust:mobs/stardust
+# @executed			usually default context
+#
+# @description		Summon a Stardust Soldier with the given model
+#
+
+summon stray ~ ~ ~ {Passengers:[{id:"minecraft:item_display"}],DeathLootTable:"stardust:entities/stardust_dimension",Health:50.0f,Attributes:[{Name:"generic.max_health",Base:40d},{Name:"generic.attack_damage",Base:5d},{Name:"generic.movement_speed",Base:0.32d}],Tags:["stardust.stardust_mob","stardust.to_throw","stardust.new"],Team:"stardust.team",ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Paper.SpawnReason:"NATURAL"}
+execute as @e[type=stray,tag=stardust.new,limit=1] on passengers run function stardust:mobs/item_display/stardust_soldier
+

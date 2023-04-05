@@ -22,5 +22,5 @@ execute as @e[tag=stardust.dragon] at @s if entity @s[y=150,dy=800] run data mod
 execute at @e[tag=stardust.dragon,scores={stardust.data=30..}] as @a[gamemode=!creative,gamemode=!spectator,distance=..200] run function stardust:boss/ultimate_boss/fireball
 
 # Check if orbs are destroyed
-execute as @e[type=armor_stand,tag=stardust.ultimate_orb] at @s positioned ~ ~-2 ~ unless entity @e[type=!armor_stand,tag=stardust.ultimate_orb,distance=..1] run function stardust:boss/ultimate_boss/orb/check_destroy
+execute as @e[type=item_display,tag=stardust.ultimate_orb] run function stardust:boss/ultimate_boss/orb/check_destroy
 

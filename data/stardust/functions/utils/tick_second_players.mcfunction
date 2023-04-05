@@ -2,7 +2,7 @@
 #> stardust:utils/tick_second_players
 #
 # @within			stardust:tick_second
-# @executed			as and at current player
+# @executed			as & at current player
 #
 # @description		Function executed every second for every player
 #

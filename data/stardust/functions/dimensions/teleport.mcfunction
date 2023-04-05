@@ -2,7 +2,7 @@
 #> stardust:dimensions/teleport
 #
 # @within			stardust:tick_second_players
-# @executed			as and at current player
+# @executed			as & at current player
 #
 # @description		Function executed every second when a player is teleporting through a portal or using a travel staff
 #					Handles the teleportation and the forceload of the chunks

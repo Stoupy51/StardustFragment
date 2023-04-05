@@ -20,9 +20,6 @@ execute as @e[type=marker,tag=stardust.structure] at @s run function stardust:ca
 # Tick entities (2 ticks)
 execute as @e[type=item_display,tag=stardust.tick_2_entities,sort=random] at @s run function stardust:utils/tick_2_entities
 
-# Stardust pillar loop if there is 1 or more
-execute if score #stardust_pillar stardust.data matches 1.. as @e[tag=stardust.pillar_tick] at @s positioned ~ ~-2 ~ run function stardust:boss/stardust_pillar/tick_2
-
 # Forge loop if there is an incoming craft
 execute if score #forge_craft stardust.data matches 1.. as @e[type=item,scores={stardust.forge_craft=0..}] at @s run function stardust:forge/particles
 

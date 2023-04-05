@@ -2,7 +2,7 @@
 #> stardust:utils/tick_second_entities
 #
 # @within			stardust:tick_second
-# @executed			as and at current entity (custom block)
+# @executed			as & at current entity (custom block)
 #
 # @description		Function executed every second for every entity that are no ores
 #

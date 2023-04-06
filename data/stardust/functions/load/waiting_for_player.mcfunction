@@ -12,7 +12,6 @@ execute if score #load_error stardust.data matches 1 run tellraw @a {"text":"Sta
 execute if score #load_error stardust.data matches 2 run tellraw @a {"text":"Stardust Fragment Error: SimplEnergy v2.0.x is missing, click [here] to download","italic":false,"color":"red","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/simplenergy/"}}
 execute if score #load_error stardust.data matches 3 run tellraw @a {"text":"Stardust Fragment Error: SimplEnergy v2.0.x is required, click [here] to download","italic":false,"color":"red","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/data-pack/simplenergy/"}}
 execute if score #load_error stardust.data matches 4 run tellraw @a {"text":"Stardust Fragment Error: Libraries are missing\nplease download the right Stardust Fragment datapack\nor download each of these libraries one by one:","color":"red"}
-execute if score #load_error stardust.data matches 4 unless score #smithed.damage.major load.status matches 0.. run tellraw @a {"text":"- [Smithed Custom Damage]","color":"gold","clickEvent":{"action":"open_url","value":"https://wiki.smithed.dev/libraries/damage/"}}
 
 # Load Stardust Fragment
 execute if score #game_version simplenergy.data matches 1.. if score #load_error stardust.data matches 0 run function stardust:load/confirm_load

@@ -1,19 +1,25 @@
 
+#> stardust:right_click/snipers/all
+#
+# @within			stardust:right_click/all
+# @executed			as & at current player
+#
+# @description		Manage shooting with all snipers
+#
+
+# Add temporary tag to the shooter (to prevent shooting himself and keep track of him)
 tag @s add stardust.shooter
 
-# Nbt manipulation for death messages
-data modify storage stardust:main Sniper set from storage stardust:main SelectedItemTag
-function stardust:right_click/snipers/decode_lore
-
-# Check what Sniper is it and set Base Damage
+# Check what Sniper is it and summon bullet (marker)
 scoreboard players set #sniper_type stardust.data 0
-execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SIT.stardust.stardust_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.stardust_sniper]}
+execute if score #sniper_type stardust.data matches 0 store success score #sniper_type stardust.data if data storage stardust:main SIT.stardust.stardust_sniper run summon marker ~ ~ ~ {Tags:["stardust.to_throw","stardust.bullet","stardust.shooter","stardust.stardust_sniper"]}
 execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -1
-execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SIT.stardust.awakened_stardust_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.awakened_stardust_sniper]}
+execute if score #sniper_type stardust.data matches 0 store success score #sniper_type stardust.data if data storage stardust:main SIT.stardust.awakened_stardust_sniper run summon marker ~ ~ ~ {Tags:["stardust.to_throw","stardust.bullet","stardust.shooter","stardust.awakened_stardust_sniper"]}
 execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -2
-execute if score #sniper_type stardust.data matches 0 store result score #sniper_type stardust.data if data storage stardust:main SIT.stardust.ultimate_sniper run summon marker ~ ~ ~ {Tags:[stardust.to_throw,stardust.bullet,stardust.shooter,stardust.ultimate_sniper]}
+execute if score #sniper_type stardust.data matches 0 store success score #sniper_type stardust.data if data storage stardust:main SIT.stardust.ultimate_sniper run summon marker ~ ~ ~ {Tags:["stardust.to_throw","stardust.bullet","stardust.shooter","stardust.ultimate_sniper"]}
 execute if score #sniper_type stardust.data matches 1 run scoreboard players set #sniper_type stardust.data -3
 
+# Set Base Damage
 execute if score #sniper_type stardust.data matches -1 run scoreboard players set #bullet_damage stardust.data 6
 execute if score #sniper_type stardust.data matches -2 run scoreboard players set #bullet_damage stardust.data 12
 execute if score #sniper_type stardust.data matches -3 run scoreboard players set #bullet_damage stardust.data 24
@@ -40,21 +46,28 @@ execute if score #bullet_type stardust.data matches 5 run scoreboard players add
 execute if score #bullet_type stardust.data matches 5 run advancement grant @s only stardust:visible/adventure/shoot/ultimate_bullet
 execute if score #bullet_type stardust.data matches 5 run clear @s #stardust:items{stardust:{ultimate_bullet:1b}} 1
 
-# Launch the bullet
+## Launch the bullet
+# If no bullet found and player is in creative, set bullet to iron_nugget
 execute if entity @s[gamemode=creative] unless score #bullet_type stardust.data matches 1.. run scoreboard players set #bullet_type stardust.data 1
-tp @e[tag=stardust.to_throw,limit=1] @s
-execute as @e[tag=stardust.to_throw,limit=1] run tp @s ^ ^1.55 ^.5
-execute if predicate stardust:sneaking as @e[tag=stardust.to_throw,limit=1] at @s run tp @s ~ ~-0.3 ~
+
+# Teleport the bullet marker to the player head (Not one command because we need rotation)
+tp @e[type=marker,tag=stardust.to_throw,limit=1] @s
+execute as @e[type=marker,tag=stardust.to_throw,limit=1] run tp @s ^ ^1.55 ^.5
+execute if predicate stardust:sneaking as @e[type=marker,tag=stardust.to_throw,limit=1] at @s run tp @s ~ ~-0.3 ~
+
+# Playsounds depending on sniper type and if bullet is found
 execute unless score #bullet_type stardust.data matches 1.. run playsound block.note_block.snare ambient @s ~ ~ ~ 1 0.5
 execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -1 run playsound stardust:sniper_shot_1 ambient @a[distance=..20] ~ ~ ~ 0.5
 execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -2 run playsound stardust:sniper_shot_2 ambient @a[distance=..20] ~ ~ ~ 0.5
 execute if score #bullet_type stardust.data matches 1.. if score #sniper_type stardust.data matches -3 run playsound stardust:sniper_shot_3 ambient @a[distance=..20] ~ ~ ~ 0.5
-execute if score #bullet_type stardust.data matches 1.. as @e[tag=stardust.to_throw,limit=1] at @s run function stardust:right_click/snipers/projectile_move
 
+# Launch the bullet
+execute if score #bullet_type stardust.data matches 1.. as @e[type=marker,tag=stardust.to_throw,limit=1] at @s run function stardust:right_click/snipers/projectile_move
+
+# Remove temporary tags, set cooldown and clear data
 tag @s remove stardust.shooter
 tag @e[tag=stardust.shooted] remove stardust.shooted
 scoreboard players set @s stardust.cooldown 30
 scoreboard players reset #bullet_type stardust.data
 scoreboard players reset #bullet_damage stardust.data
-data remove storage stardust:main Sniper
 

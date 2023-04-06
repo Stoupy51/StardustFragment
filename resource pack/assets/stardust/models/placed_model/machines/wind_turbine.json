@@ -2,15 +2,15 @@
 	"parent": "minecraft:block/cube_all",
 	"textures": {
 		"0": "stardust:item/others/machines/wind_turbine_blades",
-		"1": "minecraft:block/iron_block",
+		"1": "block/iron_block",
 		"2": "stardust:item/others/machines/wind_turbine_side",
 		"particle": "stardust:item/others/machines/wind_turbine_blades"
 	},
 	"elements": [
 		{
 			"name": "blades",
-			"from": [1, 4, 8.5],
-			"to": [15, 18, 8.5],
+			"from": [1, 4, 7.5],
+			"to": [15, 18, 7.5],
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "north"},
 				"south": {"uv": [16, 0, 0, 16], "texture": "#0", "cullface": "south"}
@@ -29,8 +29,8 @@
 			}
 		},
 		{
-			"from": [7, 3, 7.49],
-			"to": [9, 13, 8.49],
+			"from": [7, 3, 7.51],
+			"to": [9, 13, 8.51],
 			"faces": {
 				"north": {"uv": [0, 3, 16, 13], "texture": "#1", "cullface": "north"},
 				"east": {"uv": [0, 3, 16, 13], "texture": "#1", "cullface": "north"},

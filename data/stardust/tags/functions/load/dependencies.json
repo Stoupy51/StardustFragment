@@ -3,10 +3,6 @@
 		{
 			"id": "#simplenergy:load/main",
 			"required": false
-		},
-		{
-			"id": "#smithed.damage:load",
-			"required": false
 		}
 	]
 }

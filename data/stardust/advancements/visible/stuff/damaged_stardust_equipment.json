@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:stone_pickaxe", "nbt": "{CustomModelData:2013105}" },
-		"title": { "text": "Crafting ancient equipment", "color": "aqua" },
-		"description": { "text": "Get an equipment of Damaged Stardust", "color": "green" },
+		"icon": {
+			"item": "minecraft:stone_pickaxe",
+			"nbt": "{CustomModelData:2013105}"
+		},
+		"title": {
+			"text": "Crafting ancient equipment",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Get an equipment of Damaged Stardust",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/stuff/stardust_ingot",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{damaged:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{damaged:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

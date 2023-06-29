@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013301}" },
-		"title": { "text": "Mining industry II", "color": "aqua" },
-		"description": { "text": "Get a level 2 Quarry", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013301}"
+		},
+		"title": {
+			"text": "Mining industry II",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Get a level 2 Quarry",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/technology/quarry/lv1",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{quarry_lv2:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{quarry_lv2:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

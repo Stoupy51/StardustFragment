@@ -1,8 +1,17 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013012}" },
-		"title": { "text": "Stard'End", "color": "aqua" },
-		"description": { "text": "Defeat the Ultimate Boss", "color": "green" },
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013012}"
+		},
+		"title": {
+			"text": "Stard'End",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Defeat the Ultimate Boss",
+			"color": "green"
+		},
 		"frame": "goal",
 		"show_toast": true,
 		"announce_to_chat": true,

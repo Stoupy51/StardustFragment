@@ -1,8 +1,17 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:gold_nugget", "nbt": "{CustomModelData:0}" },
-		"title": { "text": "Golden Bullets", "color": "aqua" },
-		"description": { "text": "Shoot a gold nugget using a Sniper\n[+10 bullet damage]", "color": "green" },
+		"icon": {
+			"item": "minecraft:gold_nugget",
+			"nbt": "{CustomModelData:0}"
+		},
+		"title": {
+			"text": "Golden Bullets",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Shoot a gold nugget using a Sniper\n[+10 bullet damage]",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

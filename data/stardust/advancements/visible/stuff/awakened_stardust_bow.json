@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:bow", "nbt": "{CustomModelData:2013150}" },
-		"title": { "text": "Awakened Bow", "color": "aqua" },
-		"description": { "text": "Upgrade your Stardust Bow", "color": "green" },
+		"icon": {
+			"item": "minecraft:bow",
+			"nbt": "{CustomModelData:2013150}"
+		},
+		"title": {
+			"text": "Awakened Bow",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Upgrade your Stardust Bow",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/stuff/stardust_bow",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{awakened_stardust_bow:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{awakened_stardust_bow:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

@@ -1,18 +1,29 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013313}" },
-		"title": { "text": "The Ultimate Dimension", "color": "aqua" },
-		"description": { "text": "Travel to the Ultimate Dimension", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013313}"
+		},
+		"title": {
+			"text": "The Ultimate Dimension",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Travel to the Ultimate Dimension",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/adventure/enter_stardust_dungeon_dim",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:changed_dimension",
-		"conditions": {
-			"to": "stardust:ultimate"
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:changed_dimension",
+			"conditions": {
+				"to": "stardust:ultimate"
+			}
 		}
-	}}
+	}
 }

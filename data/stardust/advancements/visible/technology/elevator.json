@@ -1,8 +1,16 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013316}" },
-		"title": { "text": "Height Teleportation" },
-		"description": { "text": "Use an Elevator", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013316}"
+		},
+		"title": {
+			"text": "Height Teleportation"
+		},
+		"description": {
+			"text": "Use an Elevator",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -3,12 +3,17 @@
 		"requirement": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:hopper",
-						"minecraft:hopper_minecart"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:hopper",
+								"minecraft:hopper_minecart"
+							]
+						}
+					}
+				]
 			}
 		}
 	},

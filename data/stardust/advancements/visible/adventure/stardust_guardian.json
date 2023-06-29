@@ -1,25 +1,38 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:wither_skeleton_skull", "nbt": "{CustomModelData:0}" },
-		"title": { "text": "Making another step", "color": "aqua" },
-		"description": { "text": "Kill the Stardust Guardian", "color": "green" },
+		"icon": {
+			"item": "minecraft:wither_skeleton_skull",
+			"nbt": "{CustomModelData:0}"
+		},
+		"title": {
+			"text": "Making another step",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Kill the Stardust Guardian",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/adventure/enter_stardust_dungeon",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:player_killed_entity",
-		"conditions": {
-			"entity": [{
-				"condition": "minecraft:entity_properties",
-				"entity": "this",
-				"predicate": {
-					"type": "minecraft:wither_skeleton",
-					"nbt": "{DeathLootTable:\"stardust:entities/stardust_guardian\",Tags:[\"stardust.stardust_guardian\"]}"
-				}
-			}]
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:wither_skeleton",
+							"nbt": "{DeathLootTable:\"stardust:entities/stardust_guardian\",Tags:[\"stardust.stardust_guardian\"]}"
+						}
+					}
+				]
+			}
 		}
-	}}
+	}
 }

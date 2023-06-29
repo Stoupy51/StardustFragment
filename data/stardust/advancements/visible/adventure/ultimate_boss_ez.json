@@ -1,8 +1,16 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013012,Enchantments:[{}]}" },
-		"title": { "text": "Star Fighter" },
-		"description": { "text": "Defeat the Ultimate Boss\nby taking less than 10 hearts of damage", "color": "green" },
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013012,Enchantments:[{}]}"
+		},
+		"title": {
+			"text": "Star Fighter"
+		},
+		"description": {
+			"text": "Defeat the Ultimate Boss\nby taking less than 10 hearts of damage",
+			"color": "green"
+		},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

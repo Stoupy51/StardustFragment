@@ -3,12 +3,17 @@
 		"requirement": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:item_frame"
-					],
-					"nbt": "{stardust:{advanced_stardust_seeds:1b}}"
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:item_frame"
+							],
+							"nbt": "{stardust:{advanced_stardust_seeds:1b}}"
+						}
+					}
+				]
 			}
 		}
 	},

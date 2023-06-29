@@ -1,8 +1,16 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013215}" },
-		"title": { "text": "End game." },
-		"description": { "text": "Place an Ultimate Spawner", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013215}"
+		},
+		"title": {
+			"text": "End game."
+		},
+		"description": {
+			"text": "Place an Ultimate Spawner",
+			"color": "green"
+		},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

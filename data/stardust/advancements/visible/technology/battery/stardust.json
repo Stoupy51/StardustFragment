@@ -1,19 +1,33 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013336}" },
-		"title": { "text": "Storing Energy I" },
-		"description": { "text": "Upgrade an Elite Battery", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013336}"
+		},
+		"title": {
+			"text": "Storing Energy I"
+		},
+		"description": {
+			"text": "Upgrade an Elite Battery",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/technology/simplenergy_manual",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{stardust_battery:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{stardust_battery:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

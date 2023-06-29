@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013041}" },
-		"title": { "text": "A featherweight material", "color": "aqua" },
-		"description": { "text": "Craft a Legendarium Ingot", "color": "green" },
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013041}"
+		},
+		"title": {
+			"text": "A featherweight material",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Craft a Legendarium Ingot",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/stuff/legendarium_fragment",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{legendarium_ingot:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{legendarium_ingot:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

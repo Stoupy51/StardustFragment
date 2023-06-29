@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:leather_chestplate", "nbt": "{CustomModelData:2013115}" },
-		"title": { "text": "Achieved it!", "color": "aqua" },
-		"description": { "text": "Equip yourself with an Original Stardust armor", "color": "green" },
+		"icon": {
+			"item": "minecraft:leather_chestplate",
+			"nbt": "{CustomModelData:2013115}"
+		},
+		"title": {
+			"text": "Achieved it!",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Equip yourself with an Original Stardust armor",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/stuff/original_stardust_equipment",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{normal:1b,original:1b},ctc:{traits:{\"armor\":1b}}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{normal:1b,original:1b},ctc:{traits:{\"armor\":1b}}}"
+					}
+				]
+			}
+		}
+	}
 }

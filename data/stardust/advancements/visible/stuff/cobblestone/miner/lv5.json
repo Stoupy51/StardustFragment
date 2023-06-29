@@ -1,19 +1,37 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013212}" },
-		"title": { "text": "Cobbleing V", "color": "aqua" },
-		"description": { "text": "Place a level 5 Cobblestoner Miner", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013212}"
+		},
+		"title": {
+			"text": "Cobbleing V",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Place a level 5 Cobblestoner Miner",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/stuff/cobblestone/miner/lv4",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:item_used_on_block",
-		"conditions": { "item": {
-			"tag": "stardust:items",
-			"nbt": "{stardust:{cobblestone_miner_lv5:1b}}"
-		}}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "stardust:items",
+							"nbt": "{stardust:{cobblestone_miner_lv5:1b}}"
+						}
+					}
+				]
+			}
+		}
+	}
 }

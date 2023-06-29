@@ -1,8 +1,16 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013155}" },
-		"title": { "text": "Using appropriate bullets" },
-		"description": { "text": "Shoot your first Ultimate Bullet", "color": "green" },
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013155}"
+		},
+		"title": {
+			"text": "Using appropriate bullets"
+		},
+		"description": {
+			"text": "Shoot your first Ultimate Bullet",
+			"color": "green"
+		},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

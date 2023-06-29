@@ -1,8 +1,17 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013170}" },
-		"title": { "text": "Traveling home", "color": "aqua" },
-		"description": { "text": "Obtain a Travel Staff", "color": "green" },
+		"icon": {
+			"item": "minecraft:warped_fungus_on_a_stick",
+			"nbt": "{CustomModelData:2013170}"
+		},
+		"title": {
+			"text": "Traveling home",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Obtain a Travel Staff",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

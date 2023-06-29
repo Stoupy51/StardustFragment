@@ -1,19 +1,33 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:warped_fungus_on_a_stick", "nbt": "{CustomModelData:2013154}" },
-		"title": { "text": "Shooting rainbows" },
-		"description": { "text": "Got this Ultimate Sniper!", "color": "green" },
+		"icon": {
+			"item": "minecraft:warped_fungus_on_a_stick",
+			"nbt": "{CustomModelData:2013154}"
+		},
+		"title": {
+			"text": "Shooting rainbows"
+		},
+		"description": {
+			"text": "Got this Ultimate Sniper!",
+			"color": "green"
+		},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/stuff/awakened_stardust_sniper",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{ultimate_sniper:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{ultimate_sniper:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

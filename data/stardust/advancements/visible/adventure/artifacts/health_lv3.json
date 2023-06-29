@@ -1,19 +1,34 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:command_block", "nbt": "{CustomModelData:2013162}" },
-		"title": { "text": "Increasing Max Health III", "color": "aqua" },
-		"description": { "text": "Get a level 3 Health Artifact", "color": "green" },
+		"icon": {
+			"item": "minecraft:command_block",
+			"nbt": "{CustomModelData:2013162}"
+		},
+		"title": {
+			"text": "Increasing Max Health III",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Get a level 3 Health Artifact",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/adventure/artifacts/health_lv2",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{health_artifact_lv3:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{health_artifact_lv3:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

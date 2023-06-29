@@ -1,19 +1,33 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:barrel", "nbt": "{CustomModelData:2013304}" },
-		"title": { "text": "Mining industry V" },
-		"description": { "text": "Get a level 5 Quarry", "color": "green" },
+		"icon": {
+			"item": "minecraft:barrel",
+			"nbt": "{CustomModelData:2013304}"
+		},
+		"title": {
+			"text": "Mining industry V"
+		},
+		"description": {
+			"text": "Get a level 5 Quarry",
+			"color": "green"
+		},
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,
 		"hidden": false
 	},
 	"parent": "stardust:visible/technology/quarry/lv4",
-	"criteria": { "requirement": {
-		"trigger": "minecraft:inventory_changed",
-		"conditions": { "items": [{
-			"tag": "stardust:items",
-			"nbt": "{stardust:{quarry_lv5:1b}}"
-		}]}
-	}}
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "stardust:items",
+						"nbt": "{stardust:{quarry_lv5:1b}}"
+					}
+				]
+			}
+		}
+	}
 }

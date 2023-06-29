@@ -3,11 +3,16 @@
 		"requirement": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:end_crystal"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:end_crystal"
+							]
+						}
+					}
+				]
 			}
 		}
 	},

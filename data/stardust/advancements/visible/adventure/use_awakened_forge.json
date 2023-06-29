@@ -1,8 +1,17 @@
 {
 	"display": {
-		"icon": { "item": "minecraft:dragon_egg", "nbt": "{CustomModelData:0}" },
-		"title": { "text": "A new crafting structure", "color": "aqua" },
-		"description": { "text": "Use the Awakened Forge", "color": "green" },
+		"icon": {
+			"item": "minecraft:dragon_egg",
+			"nbt": "{CustomModelData:0}"
+		},
+		"title": {
+			"text": "A new crafting structure",
+			"color": "aqua"
+		},
+		"description": {
+			"text": "Use the Awakened Forge",
+			"color": "green"
+		},
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

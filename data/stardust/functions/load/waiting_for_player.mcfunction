@@ -3,7 +3,7 @@
 execute unless entity @p run schedule function stardust:load/waiting_for_player 1t replace
 
 # Check if the game version is supported & Check SimplEnergy version
-execute if entity @p unless score #game_version simplenergy.data matches 3337.. run scoreboard players set #load_error stardust.data 1
+execute if entity @p unless score #game_version simplenergy.data matches 3454.. run scoreboard players set #load_error stardust.data 1
 execute if score #game_version simplenergy.data matches 1.. unless score #SimplEnergyLoaded load.status matches 1 run scoreboard players set #load_error stardust.data 2
 execute if score #game_version simplenergy.data matches 1.. if score #SimplEnergyLoaded load.status matches 1 unless score SimplEnergy load.status matches 1900..2009 run scoreboard players set #load_error stardust.data 3
 

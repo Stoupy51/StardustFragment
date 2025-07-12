@@ -14,8 +14,6 @@ minecraft: "1.21.7"
 directory: "."
 # Path to a folder for beet to output. If not defined, no files will visibly output
 output: "build"
-# List of files or glob patterns that should be ignored by the file watcher and not cause any rebuild when using `$ beet watch`
-ignore: []
 
 # A list of importable plugin strings
 require:
@@ -44,22 +42,6 @@ pipeline:
 
 # Generic dict which holds extra information usable by plugins
 meta:
-    # Model resolver configuration for caching models
-    model_resolver:
-        use_cache: true
-
-    # Mecha configuration for multiline support and pattern matching
-    mecha:
-        multiline: true
-        match: ["simplenergy:**"]
-        formatting:
-            layout: "preserve"
-            cmd_compact: true
-            nbt_compact: true
-            json_compact: true
-            json_ensure_ascii: true
-            json_allow_nan: true
-            json_sort_keys: true
 
     # StewBeet specific configuration
     stewbeet:
@@ -79,8 +61,6 @@ meta:
             datapack: ["D:/latest_snapshot/world/datapacks"]
             # Paths to copy the resource pack(s) to
             resource_pack: ["D:/minecraft/snapshot/resourcepacks"]
-        # Custom item lore configuration. If set to "auto" or unset, uses project icon followed by PROJECT_NAME
-        source_lore: "auto"
         # Automagically checks for dependencies and their minimum required versions at runtime.
         # The url is used when the dependency is not found to suggest where to get it.
         # The version dict key contains the minimum required version of the dependency in [major, minor, patch] format.
@@ -89,8 +69,8 @@ meta:
         load_dependencies:
             simplenergy:
                 version: [2, 0, 4]
-                name: "DatapackEnergy"
-                url: "https://github.com/ICY105/DatapackEnergy"
+                name: "SimplEnergy"
+                url: "https://modrinth.com/datapack/simplenergy"
         # Configuration for in-game manual
         manual:
             # Enables grid display in the manual for debugging
@@ -114,5 +94,5 @@ meta:
             # Maximum number of rows displayed per page in manual (max: 6)
             max_rows_per_page: 5
             # Text component used for the manual's first page
-            first_page_text: [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color": "#505050"}]
+            first_page_text: [{"text":"The following manual will guide you through everything about Stardust Fragment, try to keep it always with you.", "color": "#505050"}]
 

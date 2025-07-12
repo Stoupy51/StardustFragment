@@ -1,0 +1,38 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"fragment": {"legendarium": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"legendarium_fragment": true
+									}
+								},
+								"minecraft:item_model": "stardust:legendarium_fragment",
+								"minecraft:item_name": "Legendarium Fragment",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

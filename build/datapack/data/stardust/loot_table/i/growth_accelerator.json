@@ -1,0 +1,69 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "{\"text\":\"Growth Accelerator\",\"italic\":false,\"color\":\"green\"}",
+								"minecraft:lore": [
+									{
+										"translate": "stardust.only_growth_seeds_in_a_radius",
+										"italic": false,
+										"color": "white"
+									},
+									{
+										"translate": "stardust.of_10_blocks_every_minute",
+										"italic": false,
+										"color": "white"
+									},
+									"",
+									{
+										"translate": "stardust.power_usage_100_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_12_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:growth_accelerator",
+								"minecraft:custom_data": {
+									"stardust": {
+										"growth_accelerator": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:growth_accelerator","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

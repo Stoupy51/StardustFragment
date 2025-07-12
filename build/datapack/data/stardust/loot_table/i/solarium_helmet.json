@@ -1,0 +1,55 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"solarium": true,"helmet": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"solarium_helmet": true
+									}
+								},
+								"minecraft:max_damage": 7260,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 9.5,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor_toughness.head"
+									}
+								],
+								"minecraft:item_model": "stardust:solarium_helmet",
+								"minecraft:item_name": "Solarium Helmet",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

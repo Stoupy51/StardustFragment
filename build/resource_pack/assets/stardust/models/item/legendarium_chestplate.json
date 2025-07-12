@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/leather_chestplate",
+	"textures": {
+		"layer0": "stardust:item/legendarium_chestplate",
+		"layer1": "stardust:item/legendarium_chestplate"
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:stone_sword",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_damage": 250,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 8,
+										"operation": "add_value",
+										"slot": "mainhand"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -2.25,
+										"operation": "add_value",
+										"slot": "mainhand"
+									}
+								],
+								"minecraft:item_model": "stardust:damaged_stardust_sword",
+								"minecraft:item_name": "Damaged Stardust Sword",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"damaged_stardust_sword": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

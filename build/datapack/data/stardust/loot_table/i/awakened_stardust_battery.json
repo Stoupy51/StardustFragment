@@ -1,0 +1,53 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"translate": "stardust.energy_storage_500_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:awakened_stardust_battery",
+								"minecraft:item_name": "Awakened Stardust Battery",
+								"minecraft:custom_data": {
+									"stardust": {
+										"awakened_stardust_battery": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_battery","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

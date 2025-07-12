@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:item/leather_helmet",
+	"textures": {
+		"layer0": "stardust:item/solarium_helmet",
+		"layer1": "stardust:item/solarium_helmet"
+	}
+}

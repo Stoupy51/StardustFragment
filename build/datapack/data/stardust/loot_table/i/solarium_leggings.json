@@ -1,0 +1,55 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"solarium": true,"leggings": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"solarium_leggings": true
+									}
+								},
+								"minecraft:max_damage": 9900,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 12.5,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:armor.legs"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:armor_toughness.legs"
+									}
+								],
+								"minecraft:item_model": "stardust:solarium_leggings",
+								"minecraft:item_name": "Solarium Leggings",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

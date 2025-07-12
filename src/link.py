@@ -25,6 +25,7 @@ def beet_default(ctx: Context) -> None:
 
 	# Add commands to place and destroy functions for energy items
 	insert_lib_calls()
+	return
 
 	# Add advancements to the datapack
 	add_visible_advancements()
@@ -36,6 +37,7 @@ def beet_default(ctx: Context) -> None:
 			"electric_furnace": GuiTranslation.furnace_bottom,
 			"electric_smelter": GuiTranslation.furnace_bottom,
 			"furnace_generator": GuiTranslation.furnace_top,
+			"redstone_generator": GuiTranslation.furnace_bottom,
 			"pulverizer": GuiTranslation.barrel_bottom_right,
 		}
 	)
@@ -50,7 +52,7 @@ def beet_default(ctx: Context) -> None:
 	keep_energy_for_batteries(["simple_battery", "advanced_battery", "elite_battery", "creative_battery"])
 
 	# Setup energy balancing
-	setup_energy_balancing(["solar_panel", "cauldron_generator", "simple_battery", "advanced_battery", "elite_battery"])
+	setup_energy_balancing(["solar_panel", "cauldron_generator", "heat_generator", "simple_battery", "advanced_battery", "elite_battery"])
 
 	# Setup cables models
 	setup_cables_models(["simple_cable", "advanced_cable", "elite_cable"])

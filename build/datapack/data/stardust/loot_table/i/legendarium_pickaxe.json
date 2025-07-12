@@ -1,0 +1,62 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_pickaxe",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"tools": {"legendarium": true,"pickaxe": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"legendarium_pickaxe": true
+									}
+								},
+								"minecraft:max_damage": 31220,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 17,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -2.8,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "mining_efficiency",
+										"amount": 4.0,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:mining_efficiency.mainhand"
+									}
+								],
+								"minecraft:item_model": "stardust:legendarium_pickaxe",
+								"minecraft:item_name": "Legendarium Pickaxe",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

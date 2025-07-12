@@ -1,0 +1,55 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"darkium": true,"helmet": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"darkium_helmet": true
+									}
+								},
+								"minecraft:max_damage": 7260,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 9.5,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor_toughness.head"
+									}
+								],
+								"minecraft:item_model": "stardust:darkium_helmet",
+								"minecraft:item_name": "Darkium Helmet",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

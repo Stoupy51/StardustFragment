@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"bottom": "stardust:item/growth_accelerator_bottom",
+		"side": "stardust:item/growth_accelerator_side",
+		"top": "stardust:item/growth_accelerator_top"
+	}
+}

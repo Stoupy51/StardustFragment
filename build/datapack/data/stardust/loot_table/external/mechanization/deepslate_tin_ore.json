@@ -1,0 +1,36 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:blast_furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"ore": {"tin": true}}
+									},
+									"mechanization": {
+										"id": "tin_ore"
+									}
+								},
+								"minecraft:item_name": "Deepslate Tin Ore",
+								"minecraft:lore": [
+									{
+										"translate": "stardust.mechanization",
+										"italic": true,
+										"color": "blue"
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

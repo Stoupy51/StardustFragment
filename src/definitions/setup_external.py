@@ -26,7 +26,7 @@ def beet_default(ctx: Context) -> None:
 		"mechanization:titanium_ingot": {"id":"minecraft:structure_block",			"custom_data": {"smithed": {"dict": {"ingot": {"titanium": True}}},		"mechanization": {"id": "titanium_ingot"}}},
 	})
 
-	# Mechanization config
+	# External items config
 	add_item_name_and_lore_if_missing(is_external = True)
 
 	# Debug external definitions

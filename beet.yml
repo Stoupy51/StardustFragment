@@ -8,7 +8,7 @@ author: "Stoupy51"
 # Project version in semantic versioning format: major.minor.patch (e.g., 1.0.0 or 2.84.615).
 version: "3.5.0"
 # Minecraft version. Determines what resources beet loads (plugins like `mecha` determine what commands to use). Defaults: Latest
-minecraft: "1.21.7"
+minecraft: "1.21.8"
 
 # Defines the directory that beet uses for the base path
 directory: "."
@@ -68,7 +68,7 @@ meta:
         # The name can be whatever you want, it's just used in messages
         load_dependencies:
             simplenergy:
-                version: [2, 0, 4]
+                version: [2, 0, 8]
                 name: "SimplEnergy"
                 url: "https://modrinth.com/datapack/simplenergy"
         # Configuration for in-game manual
@@ -84,7 +84,7 @@ meta:
             # Enables caching of Minecraft assets and item renders
             cache_assets: true
             # Enables caching of manual content and images
-            cache_pages: false
+            cache_pages: true
             # Path for manual debug dump
             json_dump_path: "manual_cache/content.json"
             # Manual title used in book and first page. Defaults to "{name} Manual"

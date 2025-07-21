@@ -1,3 +1,4 @@
+
 # ruff: noqa: E501
 # Imports
 from stewbeet.core import *
@@ -461,10 +462,6 @@ def main_additions() -> None:
 		"damaged_stardust_sword": {
 			"id": "minecraft:stone_sword", CATEGORY: TOOLS,
 			"max_damage": 250,
-			"attribute_modifiers": [
-				{"type": "attack_damage", "amount": 8, "operation": "add_value", "slot": "mainhand"},
-				{"type": "attack_speed", "amount": -2.25, "operation": "add_value", "slot": "mainhand"}
-			],
 			WIKI_COMPONENT: [
 				{"text":"Basic stardust sword with limited durability.","color":"yellow"},
 				{"text":"\nEntry-level stardust weapon","color":"gray"},
@@ -473,11 +470,7 @@ def main_additions() -> None:
 		},
 		"original_stardust_sword": {
 			"id": "minecraft:diamond_sword", CATEGORY: TOOLS,
-			"enchantments": [{"id": "minecraft:looting", "level": 2}],
-			"attribute_modifiers": [
-				{"type": "attack_damage", "amount": 16, "operation": "add_value", "slot": "mainhand"},
-				{"type": "attack_speed", "amount": -2.25, "operation": "add_value", "slot": "mainhand"}
-			],
+			"enchantments": {"minecraft:looting": 2},
 			WIKI_COMPONENT: [
 				{"text":"High-quality stardust sword.","color":"yellow"},
 				{"text":"\nEnhanced with Looting II","color":"gray"},

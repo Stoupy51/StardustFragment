@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "stardust:ender_stardust_ore",
-								"minecraft:item_name": "Ender Stardust Ore",
+								"minecraft:item_name": {
+									"translate": "stardust.ender_stardust_ore"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -23,7 +23,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:awakened_stardust_battery",
-								"minecraft:item_name": "Awakened Stardust Battery",
+								"minecraft:item_name": {
+									"translate": "stardust.awakened_stardust_battery"
+								},
 								"minecraft:custom_data": {
 									"stardust": {
 										"awakened_stardust_battery": true

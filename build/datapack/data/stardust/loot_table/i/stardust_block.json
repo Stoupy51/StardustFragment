@@ -10,17 +10,10 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_data": {
-									"smithed": {
-										"dict": {"block": {"stardust": true}},
-										"ignore": {"functionality": true,"crafting": true}
-									},
-									"stardust": {
-										"stardust_block": true
-									}
-								},
 								"minecraft:item_model": "stardust:stardust_block",
-								"minecraft:item_name": "Stardust Block",
+								"minecraft:item_name": {
+									"translate": "stardust_block"
+								},
 								"minecraft:lore": [
 									[
 										"",
@@ -28,6 +21,14 @@
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
 								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"stardust_block": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

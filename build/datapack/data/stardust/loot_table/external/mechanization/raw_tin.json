@@ -18,7 +18,9 @@
 										"id": "raw_tin"
 									}
 								},
-								"minecraft:item_name": "Raw Tin",
+								"minecraft:item_name": {
+									"translate": "stardust.raw_tin"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.mechanization",

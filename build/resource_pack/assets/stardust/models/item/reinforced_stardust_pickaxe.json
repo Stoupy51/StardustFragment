@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/diamond_pickaxe",
+	"textures": {
+		"layer0": "stardust:item/reinforced_stardust_pickaxe"
+	}
+}

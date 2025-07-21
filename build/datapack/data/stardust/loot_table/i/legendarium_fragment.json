@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:legendarium_fragment",
-								"minecraft:item_name": "Legendarium Fragment",
+								"minecraft:item_name": {
+									"translate": "stardust.legendarium_fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",

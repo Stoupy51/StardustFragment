@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:solarium_ingot",
-								"minecraft:item_name": "Solarium Ingot",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

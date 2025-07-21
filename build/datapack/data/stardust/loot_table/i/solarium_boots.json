@@ -19,25 +19,34 @@
 										"solarium_boots": true
 									}
 								},
-								"minecraft:max_damage": 8580,
+								"minecraft:max_damage": 1848,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 9.5,
+										"amount": 9.0,
 										"operation": "add_value",
 										"slot": "feet",
 										"id": "stardust:armor.feet"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2,
+										"amount": 4.8,
 										"operation": "add_value",
 										"slot": "feet",
 										"id": "stardust:armor_toughness.feet"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "stardust:knockback_resistance.feet"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_boots",
-								"minecraft:item_name": "Solarium Boots",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_boots"
+								},
 								"minecraft:lore": [
 									[
 										"",

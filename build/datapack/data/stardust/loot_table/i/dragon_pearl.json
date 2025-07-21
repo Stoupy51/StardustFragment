@@ -10,7 +10,11 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": "{\"text\":\"Dragon Pearl\",\"italic\":false,\"color\":\"dark_purple\"}",
+								"minecraft:item_name": {
+									"translate": "stardust.dragon_pearl",
+									"italic": false,
+									"color": "dark_purple"
+								},
 								"minecraft:item_model": "stardust:dragon_pearl",
 								"minecraft:lore": [
 									[

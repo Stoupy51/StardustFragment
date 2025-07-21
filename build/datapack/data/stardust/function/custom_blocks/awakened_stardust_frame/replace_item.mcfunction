@@ -1,0 +1,9 @@
+
+#> stardust:custom_blocks/awakened_stardust_frame/replace_item
+#
+# @within	stardust:custom_blocks/awakened_stardust_frame/destroy
+#
+
+data modify entity @s Item.components set from storage stardust:items all.awakened_stardust_frame.components
+data modify entity @s Item.id set from storage stardust:items all.awakened_stardust_frame.id
+

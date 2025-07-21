@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/diamond_pickaxe",
+	"parent": "minecraft:item/netherite_pickaxe",
 	"textures": {
 		"layer0": "stardust:item/darkium_pickaxe"
 	}

@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:diamond_sword",
+					"name": "minecraft:netherite_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -19,11 +19,11 @@
 										"darkium_sword": true
 									}
 								},
-								"minecraft:max_damage": 31220,
+								"minecraft:max_damage": 8585,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 23,
+										"amount": 24,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"
@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "stardust:darkium_sword",
-								"minecraft:item_name": "Darkium Sword",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

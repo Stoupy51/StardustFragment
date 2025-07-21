@@ -28,7 +28,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:awakened_solar_panel",
-								"minecraft:item_name": "Awakened Solar Panel",
+								"minecraft:item_name": {
+									"translate": "stardust.awakened_solar_panel"
+								},
 								"minecraft:custom_data": {
 									"stardust": {
 										"awakened_solar_panel": true

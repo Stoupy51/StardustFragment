@@ -1,8 +1,9 @@
 {
 	"values": [
-		"minecraft:cobblestone",
+		"minecraft:deepslate",
 		"minecraft:diamond_block",
 		"minecraft:lapis_block",
+		"minecraft:obsidian",
 		"minecraft:polished_deepslate",
 		"minecraft:redstone_block"
 	]

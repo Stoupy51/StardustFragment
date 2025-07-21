@@ -11,10 +11,10 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.double_compressed_cobblestone
-tag @s add stardust.vanilla.minecraft_cobblestone
+tag @s add stardust.vanilla.minecraft_deepslate
 
 # Add a custom name
-data merge entity @s {"CustomName": "Double Compressed Cobblestone"}
+data merge entity @s {"CustomName": {"translate": "stardust.double_compressed_cobblestone"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="stardust:double_compressed_cobblestone"]

@@ -19,7 +19,7 @@
 										"darkium_leggings": true
 									}
 								},
-								"minecraft:max_damage": 9900,
+								"minecraft:max_damage": 2346,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
@@ -30,14 +30,23 @@
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2,
+										"amount": 5.0,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor_toughness.legs"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:knockback_resistance.legs"
 									}
 								],
 								"minecraft:item_model": "stardust:darkium_leggings",
-								"minecraft:item_name": "Darkium Leggings",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

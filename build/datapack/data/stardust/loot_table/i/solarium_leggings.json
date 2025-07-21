@@ -19,25 +19,34 @@
 										"solarium_leggings": true
 									}
 								},
-								"minecraft:max_damage": 9900,
+								"minecraft:max_damage": 2132,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 12.5,
+										"amount": 12.0,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor.legs"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2,
+										"amount": 4.8,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor_toughness.legs"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:knockback_resistance.legs"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_leggings",
-								"minecraft:item_name": "Solarium Leggings",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_leggings"
+								},
 								"minecraft:lore": [
 									[
 										"",

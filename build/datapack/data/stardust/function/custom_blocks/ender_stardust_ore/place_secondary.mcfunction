@@ -14,7 +14,7 @@ tag @s add stardust.ender_stardust_ore
 tag @s add stardust.vanilla.minecraft_polished_deepslate
 
 # Add a custom name
-data merge entity @s {"CustomName": "Ender Stardust Ore"}
+data merge entity @s {"CustomName": {"translate": "stardust.ender_stardust_ore"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="stardust:ender_stardust_ore"]

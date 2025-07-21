@@ -1,0 +1,57 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"damaged_stardust": true,"chestplate": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"damaged_stardust_chestplate": true
+									}
+								},
+								"minecraft:max_damage": 660,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 8.5,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 2.5,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor_toughness.chest"
+									}
+								],
+								"minecraft:item_model": "stardust:damaged_stardust_chestplate",
+								"minecraft:item_name": {
+									"translate": "stardust.damaged_stardust_chestplate"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

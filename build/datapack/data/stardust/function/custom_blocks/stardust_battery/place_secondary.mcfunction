@@ -14,7 +14,7 @@ tag @s add stardust.stardust_battery
 tag @s add stardust.vanilla.minecraft_diamond_block
 
 # Add a custom name
-data merge entity @s {"CustomName": "Stardust Battery"}
+data merge entity @s {"CustomName": {"translate": "stardust_battery"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="stardust:stardust_battery"]

@@ -10,17 +10,10 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_data": {
-									"smithed": {
-										"dict": {"block": {"stardust": true},"ore": {"stardust": true}},
-										"ignore": {"functionality": true,"crafting": true}
-									},
-									"stardust": {
-										"deepslate_stardust_ore": true
-									}
-								},
 								"minecraft:item_model": "stardust:deepslate_stardust_ore",
-								"minecraft:item_name": "Deepslate Stardust Ore",
+								"minecraft:item_name": {
+									"translate": "stardust.deepslate_stardust_ore"
+								},
 								"minecraft:lore": [
 									[
 										"",
@@ -28,6 +21,14 @@
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
 								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"deepslate_stardust_ore": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

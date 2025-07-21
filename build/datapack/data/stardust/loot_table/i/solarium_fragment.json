@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:solarium_fragment",
-								"minecraft:item_name": "Solarium Fragment",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",

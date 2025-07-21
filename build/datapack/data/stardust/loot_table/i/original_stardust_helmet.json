@@ -1,0 +1,64 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"original_stardust": true,"helmet": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"original_stardust_helmet": true
+									}
+								},
+								"minecraft:max_damage": 938,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 6.5,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 4.5,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor_toughness.head"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:knockback_resistance.head"
+									}
+								],
+								"minecraft:item_model": "stardust:original_stardust_helmet",
+								"minecraft:item_name": {
+									"translate": "stardust.original_stardust_helmet"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

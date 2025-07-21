@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/diamond_sword",
+	"parent": "minecraft:item/netherite_sword",
 	"textures": {
 		"layer0": "stardust:item/legendarium_sword"
 	}

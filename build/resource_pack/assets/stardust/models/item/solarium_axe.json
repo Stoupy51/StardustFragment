@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/diamond_axe",
+	"parent": "minecraft:item/netherite_axe",
 	"textures": {
 		"layer0": "stardust:item/solarium_axe"
 	}

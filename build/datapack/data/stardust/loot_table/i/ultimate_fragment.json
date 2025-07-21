@@ -10,23 +10,26 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": "{\"text\":\"Ultimate Fragment\",\"italic\":false,\"color\":\"dark_red\"}",
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"fragment": {"ultimate": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"ultimate_fragment": true
+									}
+								},
 								"minecraft:item_model": "stardust:ultimate_fragment",
+								"minecraft:item_name": {
+									"translate": "stardust.ultimate_fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"stardust": {
-										"ultimate_fragment": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

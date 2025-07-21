@@ -10,20 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:item_model": "stardust:triple_compressed_cobblestone",
+								"minecraft:item_name": {
+									"translate": "stardust.triple_compressed_cobblestone"
+								},
 								"minecraft:lore": [
-									{
-										"translate": "stardust.equals_to_729_cobblestones",
-										"italic": false,
-										"color": "gray"
-									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
 								],
-								"minecraft:item_model": "stardust:triple_compressed_cobblestone",
-								"minecraft:item_name": "Triple Compressed Cobblestone",
 								"minecraft:custom_data": {
 									"stardust": {
 										"triple_compressed_cobblestone": true

@@ -1,0 +1,57 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_sword",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"tools": {"reinforced_stardust": true,"sword": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"reinforced_stardust_sword": true
+									}
+								},
+								"minecraft:max_damage": 2341,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 11,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -2.4,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									}
+								],
+								"minecraft:item_model": "stardust:reinforced_stardust_sword",
+								"minecraft:item_name": {
+									"translate": "stardust.reinforced_stardust_sword"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

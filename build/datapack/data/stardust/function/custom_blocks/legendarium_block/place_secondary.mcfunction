@@ -14,7 +14,7 @@ tag @s add stardust.legendarium_block
 tag @s add stardust.vanilla.minecraft_diamond_block
 
 # Add a custom name
-data merge entity @s {"CustomName": "Legendarium Block"}
+data merge entity @s {"CustomName": {"translate": "stardust.legendarium_block"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="stardust:legendarium_block"]

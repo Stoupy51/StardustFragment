@@ -18,7 +18,9 @@
 										"id": "titanium_ore"
 									}
 								},
-								"minecraft:item_name": "Titanium Ore",
+								"minecraft:item_name": {
+									"translate": "stardust.titanium_ore"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.mechanization",

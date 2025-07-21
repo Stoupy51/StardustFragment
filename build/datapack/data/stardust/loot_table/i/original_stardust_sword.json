@@ -10,43 +10,46 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:enchantments": [
-									{
-										"id": "minecraft:looting",
-										"level": 2
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"tools": {"original_stardust": true,"sword": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"original_stardust_sword": true
 									}
-								],
+								},
+								"minecraft:max_damage": 4683,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
 										"amount": 16,
 										"operation": "add_value",
-										"slot": "mainhand"
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
 									},
 									{
 										"type": "attack_speed",
-										"amount": -2.25,
+										"amount": -2.4,
 										"operation": "add_value",
-										"slot": "mainhand"
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
 									}
 								],
+								"minecraft:enchantments": {
+									"minecraft:looting": 2
+								},
 								"minecraft:item_model": "stardust:original_stardust_sword",
-								"minecraft:item_name": "Original Stardust Sword",
+								"minecraft:item_name": {
+									"translate": "stardust.original_stardust_sword"
+								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"stardust": {
-										"original_stardust_sword": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

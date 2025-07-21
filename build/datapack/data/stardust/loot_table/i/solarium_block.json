@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:solarium_block",
-								"minecraft:item_name": "Solarium Block",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_block"
+								},
 								"minecraft:lore": [
 									[
 										"",

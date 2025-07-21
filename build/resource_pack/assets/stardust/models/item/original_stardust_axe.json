@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/netherite_axe",
+	"textures": {
+		"layer0": "stardust:item/original_stardust_axe"
+	}
+}

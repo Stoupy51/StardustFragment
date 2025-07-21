@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:darkium_block",
-								"minecraft:item_name": "Darkium Block",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_block"
+								},
 								"minecraft:lore": [
 									[
 										"",

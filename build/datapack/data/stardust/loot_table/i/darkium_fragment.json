@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:darkium_fragment",
-								"minecraft:item_name": "Darkium Fragment",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_fragment"
+								},
 								"minecraft:lore": [
 									[
 										"",

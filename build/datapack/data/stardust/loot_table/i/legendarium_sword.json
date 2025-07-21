@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:diamond_sword",
+					"name": "minecraft:netherite_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -19,11 +19,11 @@
 										"legendarium_sword": true
 									}
 								},
-								"minecraft:max_damage": 31220,
+								"minecraft:max_damage": 7024,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 19,
+										"amount": 20,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"
@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "stardust:legendarium_sword",
-								"minecraft:item_name": "Legendarium Sword",
+								"minecraft:item_name": {
+									"translate": "stardust.legendarium_sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -10,23 +10,26 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"awakened_stardust": {"awakened_stardust": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"awakened_stardust": true
+									}
+								},
 								"minecraft:item_model": "stardust:awakened_stardust",
-								"minecraft:item_name": "Awakened Stardust",
+								"minecraft:item_name": {
+									"translate": "stardust.awakened_stardust"
+								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"stardust": {
-										"awakened_stardust": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

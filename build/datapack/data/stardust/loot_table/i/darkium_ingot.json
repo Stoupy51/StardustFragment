@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:darkium_ingot",
-								"minecraft:item_name": "Darkium Ingot",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_ingot"
+								},
 								"minecraft:lore": [
 									[
 										"",

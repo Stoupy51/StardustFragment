@@ -1,9 +1,10 @@
 {
 	"condition": "minecraft:any_of",
 	"terms": [
-		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_cobblestone\"]}","location": {"block": {"blocks": "minecraft:cobblestone"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_deepslate\"]}","location": {"block": {"blocks": "minecraft:deepslate"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_diamond_block\"]}","location": {"block": {"blocks": "minecraft:diamond_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_lapis_block\"]}","location": {"block": {"blocks": "minecraft:lapis_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_obsidian\"]}","location": {"block": {"blocks": "minecraft:obsidian"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_polished_deepslate\"]}","location": {"block": {"blocks": "minecraft:polished_deepslate"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_redstone_block\"]}","location": {"block": {"blocks": "minecraft:redstone_block"}}}}
 	]

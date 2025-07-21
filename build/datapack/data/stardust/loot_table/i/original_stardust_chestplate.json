@@ -1,0 +1,64 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"original_stardust": true,"chestplate": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"original_stardust_chestplate": true
+									}
+								},
+								"minecraft:max_damage": 1365,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 11.5,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 4.5,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor_toughness.chest"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:knockback_resistance.chest"
+									}
+								],
+								"minecraft:item_model": "stardust:original_stardust_chestplate",
+								"minecraft:item_name": {
+									"translate": "stardust.original_stardust_chestplate"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

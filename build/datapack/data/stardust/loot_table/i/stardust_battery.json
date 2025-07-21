@@ -23,7 +23,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:stardust_battery",
-								"minecraft:item_name": "Stardust Battery",
+								"minecraft:item_name": {
+									"translate": "stardust_battery"
+								},
 								"minecraft:custom_data": {
 									"stardust": {
 										"stardust_battery": true

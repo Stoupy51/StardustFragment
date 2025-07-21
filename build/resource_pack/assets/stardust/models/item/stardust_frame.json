@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
+	"parent": "block/cube_all",
 	"textures": {
-		"layer0": "stardust:item/stardust_frame"
+		"all": "stardust:item/stardust_frame"
 	}
 }

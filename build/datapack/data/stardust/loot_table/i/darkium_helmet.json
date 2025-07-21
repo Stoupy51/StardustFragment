@@ -19,7 +19,7 @@
 										"darkium_helmet": true
 									}
 								},
-								"minecraft:max_damage": 7260,
+								"minecraft:max_damage": 1720,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
@@ -30,14 +30,23 @@
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2,
+										"amount": 5.0,
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:armor_toughness.head"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:knockback_resistance.head"
 									}
 								],
 								"minecraft:item_model": "stardust:darkium_helmet",
-								"minecraft:item_name": "Darkium Helmet",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_helmet"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -18,7 +18,9 @@
 										"id": "titanium_ingot"
 									}
 								},
-								"minecraft:item_name": "Titanium Ingot",
+								"minecraft:item_name": {
+									"translate": "stardust.titanium_ingot"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.mechanization",

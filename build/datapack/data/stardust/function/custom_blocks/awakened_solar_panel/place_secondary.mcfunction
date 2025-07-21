@@ -14,7 +14,7 @@ tag @s add stardust.awakened_solar_panel
 tag @s add stardust.vanilla.minecraft_diamond_block
 
 # Add a custom name
-data merge entity @s {"CustomName": "Awakened Solar Panel"}
+data merge entity @s {"CustomName": {"translate": "stardust.awakened_solar_panel"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s container.0 with minecraft:furnace[item_model="stardust:awakened_solar_panel"]

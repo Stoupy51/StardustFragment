@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:diamond_sword",
+					"name": "minecraft:netherite_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -19,11 +19,11 @@
 										"solarium_sword": true
 									}
 								},
-								"minecraft:max_damage": 31220,
+								"minecraft:max_damage": 7805,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 21,
+										"amount": 22,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"
@@ -37,7 +37,9 @@
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_sword",
-								"minecraft:item_name": "Solarium Sword",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_sword"
+								},
 								"minecraft:lore": [
 									[
 										"",

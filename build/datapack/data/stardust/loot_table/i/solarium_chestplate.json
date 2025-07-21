@@ -19,25 +19,34 @@
 										"solarium_chestplate": true
 									}
 								},
-								"minecraft:max_damage": 10560,
+								"minecraft:max_damage": 2275,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 14.5,
+										"amount": 14.0,
 										"operation": "add_value",
 										"slot": "chest",
 										"id": "stardust:armor.chest"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2,
+										"amount": 4.8,
 										"operation": "add_value",
 										"slot": "chest",
 										"id": "stardust:armor_toughness.chest"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:knockback_resistance.chest"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_chestplate",
-								"minecraft:item_name": "Solarium Chestplate",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_chestplate"
+								},
 								"minecraft:lore": [
 									[
 										"",

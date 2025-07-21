@@ -18,7 +18,9 @@
 										"id": "tin_ore"
 									}
 								},
-								"minecraft:item_name": "Tin Ore",
+								"minecraft:item_name": {
+									"translate": "stardust.tin_ore"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.mechanization",

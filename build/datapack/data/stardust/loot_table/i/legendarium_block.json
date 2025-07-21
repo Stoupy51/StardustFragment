@@ -20,7 +20,9 @@
 									}
 								},
 								"minecraft:item_model": "stardust:legendarium_block",
-								"minecraft:item_name": "Legendarium Block",
+								"minecraft:item_name": {
+									"translate": "stardust.legendarium_block"
+								},
 								"minecraft:lore": [
 									[
 										"",

@@ -1,0 +1,57 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:leather_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"reinforced_stardust": true,"leggings": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"reinforced_stardust_leggings": true
+									}
+								},
+								"minecraft:max_damage": 742,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 7.5,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:armor.legs"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 3.0,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:armor_toughness.legs"
+									}
+								],
+								"minecraft:item_model": "stardust:reinforced_stardust_leggings",
+								"minecraft:item_name": {
+									"translate": "stardust.reinforced_stardust_leggings"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

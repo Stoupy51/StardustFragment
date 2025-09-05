@@ -2,6 +2,34 @@
 #> stardust:custom_blocks/deepslate_stardust_ore/place_main
 #
 # @within	stardust:custom_blocks/place
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~-0.2 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~-0.2 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~-0.2 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~0.0 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~0.0 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~0.0 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~0.2 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~0.2 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~-0.2 ~0.2 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~-0.2 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~-0.2 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~-0.2 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~0.0 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~0.0 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~0.0 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~0.2 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~0.2 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.0 ~0.2 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~-0.2 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~-0.2 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~-0.2 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~0.0 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~0.0 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~0.0 ~0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~0.2 ~-0.2 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~0.2 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/deepslate_stardust_ore [ at @s & positioned ~0.2 ~0.2 ~0.2 ]
 #
 
 tag @s add stardust.placer

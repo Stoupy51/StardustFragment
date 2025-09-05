@@ -7,6 +7,7 @@ from stewbeet import (
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
 	NO_SILK_TOUCH_DROP,
+	OVERRIDE_MODEL,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
 	VANILLA_BLOCK_FOR_ORES,
@@ -295,7 +296,7 @@ def main_additions() -> None:
 			])
 		},
 		"stardust_frame": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:lapis_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced frame made with stardust.","color":"yellow"},
@@ -454,6 +455,7 @@ def main_additions() -> None:
 		"stardust_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":8, "max_storage": 1200}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/stardust_solar_panel_side", "top": f"{ns}:item/stardust_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Stardust-enhanced solar energy collector.","color":"yellow"},
 				{"text":"\nGenerates 8 kW during daylight","color":"gray"},
@@ -463,6 +465,7 @@ def main_additions() -> None:
 		"awakened_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":16, "max_storage": 2400}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/awakened_solar_panel_side", "top": f"{ns}:item/awakened_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Advanced solar panel with awakened stardust.","color":"yellow"},
 				{"text":"\nDouble the power of basic solar panels","color":"gray"},
@@ -472,6 +475,7 @@ def main_additions() -> None:
 		"legendarium_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/legendarium_solar_panel_side", "top": f"{ns}:item/legendarium_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Advanced solar panel with legendarium material.","color":"yellow"},
 				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
@@ -481,6 +485,7 @@ def main_additions() -> None:
 		"solarium_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/solarium_solar_panel_side", "top": f"{ns}:item/solarium_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Advanced solar panel with solarium material.","color":"yellow"},
 				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
@@ -490,6 +495,7 @@ def main_additions() -> None:
 		"darkium_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/darkium_solar_panel_side", "top": f"{ns}:item/darkium_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Advanced solar panel with darkium material.","color":"yellow"},
 				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
@@ -499,6 +505,7 @@ def main_additions() -> None:
 		"ultimate_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":128, "max_storage": 19200}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/ultimate_solar_panel_side", "top": f"{ns}:item/ultimate_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Ultimate solar panel combining all three elements.","color":"yellow"},
 				{"text":"\nGenerates 128 kW during daylight only","color":"gray"},
@@ -509,35 +516,37 @@ def main_additions() -> None:
 		"growth_accelerator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
-			"item_name": '{"text":"Growth Accelerator","italic":false,"color":"green"}',
+			"item_name": {"text":"Growth Accelerator","italic":False,"color":"green"},
 			"lore": [
 				{"text":"Only growth seeds in a radius","italic":False,"color":"white"},
 				{"text":"of 10 blocks every minute","italic":False,"color":"white"},
-				"",
-				{"text":"[Power Usage: 100 kW]","italic":False,"color":"gray"},
-				{"text":"[Energy Buffer: 12 MJ]","italic":False,"color":"gray"},
 			],
 			WIKI_COMPONENT: [
 				{"text":"Accelerates crop and plant growth.","color":"yellow"},
 				{"text":"\nAccelerates growth in 10-block radius","color":"gray"},
 				{"text":"\nOperates once per minute when powered","color":"gray"},
-				{"text":"\nConsumes 100 kW of power","color":"gray"},
-			],
-		},
-
-		# Manual
-		"manual": {
-			"id": "minecraft:written_book", CATEGORY: MISC,
-			WIKI_COMPONENT: [
-				{"text":"Complete guide to Stardust Fragment technology.","color":"yellow"},
-				{"text":"\nContains all recipes and information","color":"gray"},
-				{"text":"\nYour comprehensive reference manual","color":"gray"},
 			],
 		},
 	}
 	additions["stardust_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["stardust_cable"]["profile"]) + "}"}
 	additions["awakened_stardust_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["awakened_stardust_cable"]["profile"]) + "}"}
 	additions["ultimate_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["ultimate_cable"]["profile"]) + "}"}
+
+	additions["manual"] = {
+		"id": "minecraft:written_book", "category": MISC,
+		RESULT_OF_CRAFTING: [
+			# Put a book and a steel ingot in the crafting grid to get the manual
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("simplunium_ingot", ns)]},
+
+			# Put the manual in the crafting grid to get the manual back (update the manual)
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("manual", ns)]},
+		],
+		WIKI_COMPONENT: [
+			{"text":"Complete guide to Stardust Fragment technology.","color":"yellow"},
+			{"text":"\nContains all recipes and information","color":"gray"},
+			{"text":"\nYour comprehensive reference manual","color":"gray"},
+		],
+	}
 
 	# Update the definitions with new data
 	for k, v in additions.items():

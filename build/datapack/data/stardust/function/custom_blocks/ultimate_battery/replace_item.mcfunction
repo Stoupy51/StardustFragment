@@ -9,3 +9,6 @@
 data modify entity @s Item.components set from storage stardust:items all.ultimate_battery.components
 data modify entity @s Item.id set from storage stardust:items all.ultimate_battery.id
 
+# Keep energy
+function stardust:utils/keep_energy
+

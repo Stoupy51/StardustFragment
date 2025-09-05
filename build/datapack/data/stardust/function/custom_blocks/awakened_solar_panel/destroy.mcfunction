@@ -6,6 +6,9 @@
 # @within	stardust:custom_blocks/_groups/minecraft_daylight_detector
 #
 
+# Datapack Energy
+function energy:v1/api/break_machine
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:daylight_detector"}},distance=..1] run function stardust:custom_blocks/awakened_solar_panel/replace_item
 

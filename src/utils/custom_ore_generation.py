@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet.core import *
+from stewbeet.core import CustomOreGeneration
 from stouputils.print import info
 
 
@@ -9,21 +9,21 @@ def setup_custom_ore_generation():
 
 	# Custom Ore generation
 	CustomOreGeneration.all_with_config(ore_configs = {
-		"simplunium_ore": [
+		"stardust_ore": [
 			CustomOreGeneration(
 				dimensions = ["minecraft:overworld"],
 				maximum_height = 50,
 				minimum_height = 0,
-				veins_per_region = 2,
-				vein_size_logic = 0.4,
+				veins_per_region = 1,
+				vein_size_logic = 0.2,
 			)
 		],
-		"deepslate_simplunium_ore": [
+		"deepslate_stardust_ore": [
 			CustomOreGeneration(
 				dimensions = ["minecraft:overworld"],
 				maximum_height = 0,
-				veins_per_region = 2,
-				vein_size_logic = 0.4,
+				veins_per_region = 1,
+				vein_size_logic = 0.2,
 			)
 		],
 	})

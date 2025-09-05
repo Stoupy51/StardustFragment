@@ -10,7 +10,11 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": "{\"text\":\"Growth Accelerator\",\"italic\":false,\"color\":\"green\"}",
+								"minecraft:item_name": {
+									"translate": "stardust.growth_accelerator",
+									"italic": false,
+									"color": "green"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.only_growth_seeds_in_a_radius",
@@ -21,17 +25,6 @@
 										"translate": "stardust.of_10_blocks_every_minute",
 										"italic": false,
 										"color": "white"
-									},
-									"",
-									{
-										"translate": "stardust.power_usage_100_kw",
-										"italic": false,
-										"color": "gray"
-									},
-									{
-										"translate": "stardust.energy_buffer_12_mj",
-										"italic": false,
-										"color": "gray"
 									},
 									[
 										"",

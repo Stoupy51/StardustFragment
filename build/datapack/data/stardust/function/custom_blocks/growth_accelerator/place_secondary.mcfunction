@@ -16,7 +16,7 @@ tag @s add stardust.growth_accelerator
 tag @s add stardust.vanilla.minecraft_diamond_block
 
 # Add a custom name
-data merge entity @s {"CustomName": "{\"text\":\"Growth Accelerator\",\"italic\":false,\"color\":\"green\"}"}
+data merge entity @s {"CustomName": {"translate": "stardust.growth_accelerator","italic": false,"color": "green"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:growth_accelerator"]

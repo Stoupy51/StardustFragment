@@ -4,6 +4,7 @@ from stewbeet import (
 	Context,
 	DefaultOre,
 	EquipmentsConfig,
+	Mem,
 	VanillaEquipments,
 	add_energy_lore_to_definitions,
 	add_item_model_component,
@@ -44,6 +45,9 @@ def beet_default(ctx: Context) -> None:
 
 	# Apply database additions
 	main_additions()
+
+	# Sort by category (material in first position)
+	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "material", x[1].get("category", ""), x[0])))
 
 	# Final adjustments
 	add_energy_lore_to_definitions()

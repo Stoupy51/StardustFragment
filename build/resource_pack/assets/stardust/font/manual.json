@@ -219,7 +219,7 @@
 		{"type": "bitmap","file": "stardust:font/high_res/oak_log.png","ascent": 7,"height": 16,"chars": ["腫"]},
 		{"type": "bitmap","file": "stardust:font/high_res/crafting_table.png","ascent": 7,"height": 16,"chars": ["腬"]},
 		{"type": "bitmap","file": "stardust:font/high_res/smooth_stone.png","ascent": 7,"height": 16,"chars": ["腭"]},
-		{"type": "bitmap","file": "stardust:font/category/categories_page.png","ascent": 0,"height": 130,"chars": ["အ"]},
+		{"type": "bitmap","file": "stardust:font/category/categories_page.png","ascent": 1,"height": 131,"chars": ["အ"]},
 		{"type": "bitmap","file": "stardust:font/page/_logo.png","ascent": 0,"height": 40,"chars": ["ဠ"]},
 		{"type": "bitmap","file": "stardust:font/none.png","ascent": 8,"height": 20,"chars": [" "]},
 		{"type": "bitmap","file": "stardust:font/none.png","ascent": 8,"height": 18,"chars": ["!"]},

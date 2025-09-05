@@ -1,7 +1,9 @@
 
 #> stardust:custom_blocks/growth_accelerator/replace_item
 #
-# @within	stardust:custom_blocks/growth_accelerator/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:diamond_block"}},distance=..1]
+#
+# @within	stardust:custom_blocks/growth_accelerator/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:diamond_block"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage stardust:items all.growth_accelerator.components

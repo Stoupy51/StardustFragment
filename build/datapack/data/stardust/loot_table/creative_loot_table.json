@@ -92,10 +92,16 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/empty_module"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/awakened_stardust_cable"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_battery"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/awakened_stardust_battery"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_battery"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_solar_panel"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/awakened_solar_panel"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/legendarium_solar_panel"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/solarium_solar_panel"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/darkium_solar_panel"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_solar_panel"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/growth_accelerator"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/manual"}]}
 	]

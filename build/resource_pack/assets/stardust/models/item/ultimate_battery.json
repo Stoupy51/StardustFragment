@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"bottom": "stardust:item/ultimate_battery_bottom",
+		"side": "stardust:item/ultimate_battery_side",
+		"top": "stardust:item/ultimate_battery_top"
+	}
+}

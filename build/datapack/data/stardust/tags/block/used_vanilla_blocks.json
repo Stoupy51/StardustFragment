@@ -1,10 +1,18 @@
 {
 	"values": [
+		"minecraft:crimson_hyphae",
+		"minecraft:crying_obsidian",
+		"minecraft:daylight_detector",
 		"minecraft:deepslate",
 		"minecraft:diamond_block",
+		"minecraft:emerald_block",
 		"minecraft:lapis_block",
+		"minecraft:netherite_block",
 		"minecraft:obsidian",
+		"minecraft:player_head",
 		"minecraft:polished_deepslate",
-		"minecraft:redstone_block"
+		"minecraft:redstone_block",
+		"minecraft:warped_hyphae",
+		"minecraft:waxed_copper_block"
 	]
 }

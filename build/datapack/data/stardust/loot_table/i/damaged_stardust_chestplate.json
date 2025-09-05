@@ -19,7 +19,7 @@
 										"damaged_stardust_chestplate": true
 									}
 								},
-								"minecraft:max_damage": 660,
+								"minecraft:max_damage": 659,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

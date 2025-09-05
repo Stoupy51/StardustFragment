@@ -1,66 +1,82 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import *
+from stewbeet import (
+	CATEGORY,
+	CUSTOM_BLOCK_HEAD,
+	CUSTOM_BLOCK_VANILLA,
+	CUSTOM_ITEM_VANILLA,
+	NO_SILK_TOUCH_DROP,
+	RESULT_OF_CRAFTING,
+	VANILLA_BLOCK,
+	VANILLA_BLOCK_FOR_ORES,
+	WIKI_COMPONENT,
+	JsonDict,
+	Mem,
+	ingr_repr,
+)
 from stouputils.print import info
-
-# Constants
-STARDUST_ORE_WIKI: TextComponent = [
-	{"text":"Mystical ore containing stardust fragments.","color":"yellow"},
-	{"text":"\nFound in all dimensions at various levels","color":"gray"},
-	{"text":"\nMine to obtain Stardust Fragments","color":"gray"},
-	{"text":"\nUsed to create advanced materials and energy systems","color":"gray"}
-]
-ENERGY_LORE: TextComponent = [
-	{"text":"Advanced energy system component.","color":"yellow"},
-	{"text":"\nPart of the Stardust Fragment energy network","color":"gray"}
-]
 
 
 def main_additions() -> None:
 	ENERGY: str = "energy"
 	MATERIALS: str = "materials"
-	TOOLS: str = "tools"
 	MISC: str = "miscellaneous"
+	ns: str = Mem.ctx.project_id
 
 	# Give Additional data for every item
-	additions = {
+	additions: dict[str, JsonDict] = {
 
 		# Ores
 		"stardust_ore": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: "stardust_fragment",
-			WIKI_COMPONENT: STARDUST_ORE_WIKI,
+			NO_SILK_TOUCH_DROP: {"id": "stardust_fragment", "count": {"min": 1, "max": 4}},
+			WIKI_COMPONENT: [
+				{"text":"Primary ore for the datapack.","color":"yellow"},
+				{"text":"\nFound in the Overworld between Y=0 and Y=50","color":"gray"},
+				{"text":"\nDeepslate variant generates below Y=0","color":"gray"},
+				{"text":"\nDrops between 1 and 4 stardust fragments when mined","color":"gray"},
+			],
 		},
 		"deepslate_stardust_ore": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: "stardust_fragment",
+			NO_SILK_TOUCH_DROP: {"id": "stardust_fragment", "count": {"min": 2, "max": 6}},
 			WIKI_COMPONENT: [
 				{"text":"Deepslate variant of stardust ore.","color":"yellow"},
 				{"text":"\nFound in deepslate layers below Y=0","color":"gray"},
-				{"text":"\nSame properties as regular stardust ore","color":"gray"},
+				{"text":"\nDrops between 2 and 6 stardust fragments when mined","color":"gray"},
 			],
 		},
 		"nether_stardust_ore": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: "stardust_ingot",
+			NO_SILK_TOUCH_DROP: {"id": "stardust_ingot", "count": {"min": 1, "max": 3}},
 			WIKI_COMPONENT: [
 				{"text":"Nether variant of stardust ore.","color":"yellow"},
 				{"text":"\nFound throughout the Nether dimension","color":"gray"},
-				{"text":"\nHeat-resistant stardust crystals","color":"gray"},
+				{"text":"\nDrops between 1 and 3 stardust ingots when mined","color":"gray"},
 			],
 		},
 		"ender_stardust_ore": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: "stardust_essence",
+			NO_SILK_TOUCH_DROP: {"id": "stardust_essence", "count": {"min": 1, "max": 2}},
 			WIKI_COMPONENT: [
 				{"text":"End dimension stardust ore.","color":"yellow"},
 				{"text":"\nFound in the End dimension","color":"gray"},
-				{"text":"\nContains void-touched stardust","color":"gray"},
+				{"text":"\nDrops between 1 and 2 stardust essences when mined","color":"gray"},
+			],
+		},
+		"awakened_stardust_ore": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
+			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
+			NO_SILK_TOUCH_DROP: {"id": "awakened_stardust", "count": {"min": 2, "max": 8}},	# TODO: Add in the manual that mining this ore drops this item
+			WIKI_COMPONENT: [
+				{"text":"Variant of the nether stardust ore.","color":"yellow"},
+				{"text":"\nFound throughout the Nether dimension","color":"gray"},
+				{"text":"\nDrops between 2 and 8 awakened stardust when mined","color":"gray"},
 			],
 		},
 
@@ -72,6 +88,7 @@ def main_additions() -> None:
 				{"text":"\nMined from Stardust Ore found in all dimensions","color":"gray"},
 				{"text":"\nUsed to craft ingots, tools, armor, and machines","color":"gray"},
 			],
+			# TODO: Recipes (smelting ores, uncrafting ingots, etc.)
 		},
 		"stardust_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
@@ -85,15 +102,17 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:lapis_block", "apply_facing":False},
 			WIKI_COMPONENT: [
-				{"text":"Compressed stardust for storage and building.","color":"yellow"},
+				{"text":"Compressed stardust for storage and crafting.","color":"yellow"},
 				{"text":"\nCrafted from 9 Stardust Ingots","color":"gray"},
-				{"text":"\nUsed in advanced constructions","color":"gray"},
+			],
+			RESULT_OF_CRAFTING:[
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients": 9 * [ingr_repr("stardust_ingot", ns)]},
 			],
 		},
 		"stardust_essence": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Concentrated stardust energy in crystalline form.","color":"yellow"},
+				{"text":"Concentrated stardust energy.","color":"yellow"},
 				{"text":"\nCrafted from Stardust Ingots","color":"gray"},
 				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
 			],
@@ -104,13 +123,13 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Central component of stardust technology.","color":"yellow"},
 				{"text":"\nCrafted from Stardust Essences","color":"gray"},
-				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
+				{"text":"\nUsed in top-tier crafting recipes","color":"gray"},
 			]
 		},
 		"compacted_stardust": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Central component of stardust technology.","color":"yellow"},
+				{"text":"Component of stardust technology.","color":"yellow"},
 				{"text":"\nCrafted from Stardust Essences","color":"gray"},
 				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
 			]
@@ -118,7 +137,7 @@ def main_additions() -> None:
 		"very_compacted_stardust": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Central component of stardust technology.","color":"yellow"},
+				{"text":"Component of stardust technology.","color":"yellow"},
 				{"text":"\nCrafted from Stardust Essences","color":"gray"},
 				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
 			]
@@ -127,7 +146,7 @@ def main_additions() -> None:
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Enhanced stardust with increased energy potential.","color":"yellow"},
-				{"text":"\nCrafted using special awakening processes","color":"gray"},
+				{"text":"\nObtained through mining or some special mobs","color":"gray"},
 				{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 			],
 		},
@@ -137,31 +156,30 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Compressed awakened stardust block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Awakened Stardust","color":"gray"},
-				{"text":"\nUsed in ultimate constructions","color":"gray"},
+				{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 			],
 		},
 		"dragon_pearl": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
+			"id": "minecraft:ender_pearl", CATEGORY: MATERIALS,
 			"item_name": {"text":"Dragon Pearl","italic":False,"color":"dark_purple"},
 			WIKI_COMPONENT: [
-				{"text":"Rare crystalline structure with draconic energy.","color":"yellow"},
-				{"text":"\nDropped by defeated dragons","color":"gray"},
-				{"text":"\nUsed in ultimate-tier crafting","color":"gray"},
+				{"text":"Upgraded ender pearl variant","color":"yellow"},
+				{"text":"\nThrows x1.5 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
 			],
 		},
 		"ender_dragon_pearl": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
+			"id": "minecraft:ender_pearl", CATEGORY: MATERIALS,
 			"item_name": [{"text":"Ender ","italic":False,"color":"dark_aqua"},{"text":"Dragon Pearl","italic":False,"color":"dark_purple"}],
 			WIKI_COMPONENT: [
-				{"text":"Rare crystalline structure with draconic energy.","color":"yellow"},
-				{"text":"\nDropped by defeated dragons","color":"gray"},
-				{"text":"\nUsed in ultimate-tier crafting","color":"gray"},
+				{"text":"Upgraded dragon pearl variant","color":"yellow"},
+				{"text":"\nThrows x2 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
+				{"text":"\nUsed in high-tier crafting","color":"gray"},
 			],
 		},
 		"legendarium_fragment": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Legendary material fragment with immense power.","color":"yellow"},
+				{"text":"Legendary material fragment with wind power.","color":"yellow"},
 				{"text":"\nExtremely rare and valuable","color":"gray"},
 				{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 			],
@@ -169,24 +187,23 @@ def main_additions() -> None:
 		"legendarium_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Refined legendarium material.","color":"yellow"},
-				{"text":"\nSmelted from Legendarium Fragments","color":"gray"},
-				{"text":"\nUsed for legendarium equipment","color":"gray"},
+				{"text":"Refined legendary material with wind power.","color":"yellow"},
+				{"text":"\nExtremely rare and valuable","color":"gray"},
+				{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 			],
 		},
 		"legendarium_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:emerald_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed legendarium storage block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Legendarium Ingots","color":"gray"},
-				{"text":"\nExtremely durable construction material","color":"gray"},
 			],
 		},
 		"solarium_fragment": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Solarium material fragment with immense power.","color":"yellow"},
+				{"text":"Solarium material fragment with fire power.","color":"yellow"},
 				{"text":"\nExtremely rare and valuable","color":"gray"},
 				{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 			],
@@ -194,24 +211,23 @@ def main_additions() -> None:
 		"solarium_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Refined solarium material.","color":"yellow"},
-				{"text":"\nSmelted from Solarium Fragments","color":"gray"},
-				{"text":"\nUsed for solarium equipment","color":"gray"},
+				{"text":"Refined solarium material with fire power.","color":"yellow"},
+				{"text":"\nExtremely rare and valuable","color":"gray"},
+				{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 			],
 		},
 		"solarium_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:waxed_copper_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed solarium storage block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Solarium Ingots","color":"gray"},
-				{"text":"\nExtremely durable construction material","color":"gray"},
 			],
 		},
 		"darkium_fragment": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Darkium material fragment with immense power.","color":"yellow"},
+				{"text":"Darkium material fragment with darkness power.","color":"yellow"},
 				{"text":"\nExtremely rare and valuable","color":"gray"},
 				{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 			],
@@ -219,18 +235,17 @@ def main_additions() -> None:
 		"darkium_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Refined darkium material.","color":"yellow"},
-				{"text":"\nSmelted from Darkium Fragments","color":"gray"},
-				{"text":"\nUsed for darkium equipment","color":"gray"},
+				{"text":"Refined darkium material with darkness power.","color":"yellow"},
+				{"text":"\nExtremely rare and valuable","color":"gray"},
+				{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 			],
 		},
 		"darkium_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:netherite_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed darkium storage block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Darkium Ingots","color":"gray"},
-				{"text":"\nExtremely durable construction material","color":"gray"},
 			],
 		},
 		"ultimate_fragment": {
@@ -261,9 +276,8 @@ def main_additions() -> None:
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
 			"item_name": {"text":"Dog Excrement","italic":False,"color":"#582900"},
 			WIKI_COMPONENT: [
-				{"text":"A smelly piece of dog excrement.","color":"brown"},
-				{"text":"\nUsed for comedic purposes","color":"gray"},
-				{"text":"\nNot useful for crafting","color":"gray"},
+				{"text":"A smelly piece of dog excrement.","color":"#582900"},
+				{"text":"\nUsed for comedic purposes and boss summoning","color":"gray"},
 			],
 		},
 		**{
@@ -272,7 +286,7 @@ def main_additions() -> None:
 				VANILLA_BLOCK: {"id":"minecraft:deepslate" if i < 4 else "minecraft:obsidian", "apply_facing":False},
 				WIKI_COMPONENT: [
 					{"text":f"{tier.capitalize()} compressed cobblestone.","color":"yellow"},
-					{"text":f"\nEquals to {9**(i+1)} cobblestones","color":"gray"},
+					{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
 				],
 			}
 			for i, tier in enumerate([
@@ -281,11 +295,11 @@ def main_additions() -> None:
 			])
 		},
 		"stardust_frame": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:lapis_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced frame made with stardust.","color":"yellow"},
-				{"text":"\nUpgraded version of machine frame","color":"gray"},
+				{"text":"\nUpgraded version of machine block","color":"gray"},
 				{"text":"\nUsed for advanced machines","color":"gray"},
 			],
 		},
@@ -300,7 +314,7 @@ def main_additions() -> None:
 		},
 		"ultimate_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:obsidian", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Ultimate frame made with advanced materials.","color":"yellow"},
 				{"text":"\nCrafted from Ultimate Ingots","color":"gray"},
@@ -374,70 +388,72 @@ def main_additions() -> None:
 
 		# Energy Systems - Cables
 		"stardust_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY,
-			"lore": [
-				{"text":"[Transfer: 600 kW]","italic":False,"color":"gray"},
-			],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY, "custom_data": {"energy": {"transfer":480}},
 			"profile": {
 				"id": [-709098200,1001541428,-2043264882,-430220135],
 				"properties":[{"name":"textures", "value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y4NDVlMzBlNmVjOGI0N2RmZWUxMzI5NmQzYjQ3NzY5YzVjMGE5Nzc3YzNkNTk2ZWJiNDA3ZmY3OTcwNDE1ZCJ9fX0="}],
 			},
 			WIKI_COMPONENT: [
 				{"text":"High-capacity energy transmission cable.","color":"yellow"},
-				{"text":"\nTransfers up to 600 kW","color":"gray"},
+				{"text":"\nTransfers up to 480 kW","color":"gray"},
 				{"text":"\nConnects generators to machines and batteries","color":"gray"},
 			],
 		},
 		"awakened_stardust_cable": {
-			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY,
-			"lore": [
-				{"text":"[Transfer: 1800 kW]","italic":False,"color":"gray"},
-			],
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY, "custom_data": {"energy": {"transfer":960}},
 			"profile": {
 				"id": [-709098200,1001541428,-2043264882,-430220135],
 				"properties":[{"name":"textures", "value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5ZmE4MTE1Y2MyY2FhNDE2MzA4N2Y1MzU5YTIzZjNmYzAxZjIxZTliMWRjOTE0ZDJkMzBkYTk4ZTZjMDUxYiJ9fX0="}],
 			},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced energy transmission cable.","color":"yellow"},
-				{"text":"\nTransfers up to 1800 kW","color":"gray"},
+				{"text":"\nTransfers up to 960 kW","color":"gray"},
 				{"text":"\nUpgraded version of stardust cable","color":"gray"},
+			],
+		},
+		"ultimate_cable": {
+			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY, "custom_data": {"energy": {"transfer":1920}},
+			"profile": {
+				"id": [-709098200,1001541428,-2043264882,-430220135],
+				"properties":[{"name":"textures", "value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ4NGE3OGU4YTY5YjZhYWUwNmQ3ZTI2OWM3NWJjZjkxM2U4ZWY3ZDU1Y2Q3ZjY2MjZiZTZjOWIwZjQ2OGQ5MyJ9fX0="}],
+			},
+			WIKI_COMPONENT: [
+				{"text":"Ultimate energy transmission cable.","color":"yellow"},
+				{"text":"\nTransfers up to 1920 kW","color":"gray"},
+				{"text":"\nUpgraded version of awakened stardust cable","color":"gray"},
 			],
 		},
 
 		# Energy Systems - Batteries
 		"stardust_battery": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
-			"lore": [
-				{"text":"[Energy Storage: 200 MJ]","italic":False,"color":"gray"},
-			],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage": 200000}},
+			VANILLA_BLOCK: {"id":"minecraft:warped_hyphae", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Large-capacity energy storage device.","color":"yellow"},
 				{"text":"\nStores up to 200 MJ of energy","color":"gray"},
-				{"text":"\nConnects to energy networks","color":"gray"},
 			],
 		},
 		"awakened_stardust_battery": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
-			"lore": [
-				{"text":"[Energy Storage: 500 MJ]","italic":False,"color":"gray"},
-			],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage": 500000}},
+			VANILLA_BLOCK: {"id":"minecraft:crimson_hyphae", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced energy storage with awakened stardust.","color":"yellow"},
 				{"text":"\nStores up to 500 MJ of energy","color":"gray"},
-				{"text":"\nFaster charge/discharge rates","color":"gray"},
+			],
+		},
+		"ultimate_battery": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage": 1000000}},
+			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
+			WIKI_COMPONENT: [
+				{"text":"Ultimate energy storage device.","color":"yellow"},
+				{"text":"\nStores up to 1000 MJ of energy","color":"gray"},
 			],
 		},
 
 		# Energy Systems - Solar Panels
 		"stardust_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
-			"lore": [
-				{"text":"[Generate: 8 kW]","italic":False,"color":"gray"},
-				{"text":"[Energy Buffer: 800 kJ]","italic":False,"color":"gray"},
-			],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":8, "max_storage": 1200}},
+			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Stardust-enhanced solar energy collector.","color":"yellow"},
 				{"text":"\nGenerates 8 kW during daylight","color":"gray"},
@@ -445,36 +461,47 @@ def main_additions() -> None:
 			],
 		},
 		"awakened_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
-			"lore": [
-				{"text":"[Generate: 16 kW]","italic":False,"color":"gray"},
-				{"text":"[Energy Buffer: 1600 kJ]","italic":False,"color":"gray"},
-			],
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":16, "max_storage": 2400}},
+			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Advanced solar panel with awakened stardust.","color":"yellow"},
 				{"text":"\nDouble the power of basic solar panels","color":"gray"},
 				{"text":"\nGenerates 16 kW during daylight","color":"gray"},
 			],
 		},
-
-		# Tools
-		"damaged_stardust_sword": {
-			"id": "minecraft:stone_sword", CATEGORY: TOOLS,
-			"max_damage": 250,
+		"legendarium_solar_panel": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
+			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			WIKI_COMPONENT: [
-				{"text":"Basic stardust sword with limited durability.","color":"yellow"},
-				{"text":"\nEntry-level stardust weapon","color":"gray"},
-				{"text":"\nCan be upgraded to reinforced tier","color":"gray"},
+				{"text":"Advanced solar panel with legendarium material.","color":"yellow"},
+				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
+				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
 			],
 		},
-		"original_stardust_sword": {
-			"id": "minecraft:diamond_sword", CATEGORY: TOOLS,
-			"enchantments": {"minecraft:looting": 2},
+		"solarium_solar_panel": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
+			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			WIKI_COMPONENT: [
-				{"text":"High-quality stardust sword.","color":"yellow"},
-				{"text":"\nEnhanced with Looting II","color":"gray"},
-				{"text":"\nBalanced power and durability","color":"gray"},
+				{"text":"Advanced solar panel with solarium material.","color":"yellow"},
+				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
+				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
+			],
+		},
+		"darkium_solar_panel": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
+			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			WIKI_COMPONENT: [
+				{"text":"Advanced solar panel with darkium material.","color":"yellow"},
+				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
+				{"text":"\nGenerates 32 kW during nighttime instead of daylight","color":"gray"},
+			],
+		},
+		"ultimate_solar_panel": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":128, "max_storage": 19200}},
+			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			WIKI_COMPONENT: [
+				{"text":"Ultimate solar panel combining all three elements.","color":"yellow"},
+				{"text":"\nGenerates 128 kW during daylight only","color":"gray"},
 			],
 		},
 
@@ -508,6 +535,9 @@ def main_additions() -> None:
 			],
 		},
 	}
+	additions["stardust_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["stardust_cable"]["profile"]) + "}"}
+	additions["awakened_stardust_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["awakened_stardust_cable"]["profile"]) + "}"}
+	additions["ultimate_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["ultimate_cable"]["profile"]) + "}"}
 
 	# Update the definitions with new data
 	for k, v in additions.items():

@@ -1,6 +1,8 @@
 
 #> stardust:custom_blocks/awakened_stardust_ore/destroy
 #
+# @executed	as @e[type=item_display,tag=...,predicate=!stardust:check_vanilla_blocks] & at @s
+#
 # @within	stardust:custom_blocks/_groups/minecraft_polished_deepslate
 #
 

@@ -19,7 +19,7 @@
 										"darkium_leggings": true
 									}
 								},
-								"minecraft:max_damage": 2346,
+								"minecraft:max_damage": 2345,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

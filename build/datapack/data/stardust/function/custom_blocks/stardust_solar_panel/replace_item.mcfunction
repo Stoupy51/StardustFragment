@@ -1,7 +1,9 @@
 
 #> stardust:custom_blocks/stardust_solar_panel/replace_item
 #
-# @within	stardust:custom_blocks/stardust_solar_panel/destroy
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:daylight_detector"}},distance=..1]
+#
+# @within	stardust:custom_blocks/stardust_solar_panel/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:daylight_detector"}},distance=..1] ]
 #
 
 data modify entity @s Item.components set from storage stardust:items all.stardust_solar_panel.components

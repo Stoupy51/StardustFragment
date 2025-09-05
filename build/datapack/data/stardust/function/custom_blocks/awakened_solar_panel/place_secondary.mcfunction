@@ -1,7 +1,9 @@
 
 #> stardust:custom_blocks/awakened_solar_panel/place_secondary
 #
-# @within	stardust:custom_blocks/awakened_solar_panel/place_main
+# @executed	at @s
+#
+# @within	stardust:custom_blocks/awakened_solar_panel/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag
@@ -11,13 +13,13 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.awakened_solar_panel
-tag @s add stardust.vanilla.minecraft_diamond_block
+tag @s add stardust.vanilla.minecraft_daylight_detector
 
 # Add a custom name
 data merge entity @s {"CustomName": {"translate": "stardust.awakened_solar_panel"}}
 
 # Modify item display entity to match the custom block
-item replace entity @s container.0 with minecraft:furnace[item_model="stardust:awakened_solar_panel"]
+item replace entity @s contents with minecraft:furnace[item_model="stardust:awakened_solar_panel"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 data modify entity @s brightness set value {block:15,sky:15}
 

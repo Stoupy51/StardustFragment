@@ -1,6 +1,17 @@
 
 # Imports
-from stewbeet.core import *
+from stewbeet import (
+	Context,
+	DefaultOre,
+	EquipmentsConfig,
+	VanillaEquipments,
+	add_energy_lore_to_definitions,
+	add_item_model_component,
+	add_item_name_and_lore_if_missing,
+	add_private_custom_data_for_namespace,
+	add_smithed_ignore_vanilla_behaviours_convention,
+	generate_everything_about_these_materials,
+)
 
 from .additions import main_additions
 from .manual_assets import manual_assets_main
@@ -27,8 +38,6 @@ ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 
 # Make all the item definitions
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None:
-		Mem.ctx = ctx
 
 	# Generate ores in database
 	generate_everything_about_these_materials(ORES_CONFIGS, ignore_recipes=True)

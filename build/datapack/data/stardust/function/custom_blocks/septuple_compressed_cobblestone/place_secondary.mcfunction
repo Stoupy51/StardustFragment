@@ -1,7 +1,9 @@
 
 #> stardust:custom_blocks/septuple_compressed_cobblestone/place_secondary
 #
-# @within	stardust:custom_blocks/septuple_compressed_cobblestone/place_main
+# @executed	at @s
+#
+# @within	stardust:custom_blocks/septuple_compressed_cobblestone/place_main [ at @s ]
 #
 
 # Add convention and utils tags, and the custom block tag
@@ -17,7 +19,7 @@ tag @s add stardust.vanilla.minecraft_obsidian
 data merge entity @s {"CustomName": {"translate": "stardust.septuple_compressed_cobblestone"}}
 
 # Modify item display entity to match the custom block
-item replace entity @s container.0 with minecraft:furnace[item_model="stardust:septuple_compressed_cobblestone"]
+item replace entity @s contents with minecraft:furnace[item_model="stardust:septuple_compressed_cobblestone"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 data modify entity @s brightness set value {block:15,sky:15}
 

@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:ender_pearl",
 					"functions": [
 						{
 							"function": "minecraft:set_components",

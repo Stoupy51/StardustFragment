@@ -1,7 +1,9 @@
 
 #> stardust:calls/common_signals/on_ore_destroyed
 #
-# @within	stardust:calls/common_signals/new_item
+# @executed	at @s & align xyz
+#
+# @within	stardust:calls/common_signals/new_item [ at @s & align xyz ]
 #
 
 # Get in a score the item count and if it is a silk touch

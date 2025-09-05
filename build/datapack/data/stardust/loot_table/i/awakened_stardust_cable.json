@@ -10,18 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:lore": [
-									{
-										"translate": "stardust.transfer_1800_kw",
-										"italic": false,
-										"color": "gray"
+								"minecraft:custom_data": {
+									"energy": {
+										"transfer": 960
 									},
-									[
-										"",
-										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
-										{"translate": "stardustfragment","italic": true,"color": "blue"}
-									]
-								],
+									"stardust": {
+										"awakened_stardust_cable": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:profile": {
 									"id": [
 										-709098200,
@@ -33,16 +32,20 @@
 										{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5ZmE4MTE1Y2MyY2FhNDE2MzA4N2Y1MzU5YTIzZjNmYzAxZjIxZTliMWRjOTE0ZDJkMzBkYTk4ZTZjMDUxYiJ9fX0="}
 									]
 								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.transfer_speed_960_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
 								"minecraft:item_name": {
 									"translate": "stardust.awakened_stardust_cable"
-								},
-								"minecraft:custom_data": {
-									"stardust": {
-										"awakened_stardust_cable": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
 								}
 							}
 						}

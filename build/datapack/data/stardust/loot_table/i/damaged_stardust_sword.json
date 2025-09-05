@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:stone_sword",
+					"name": "minecraft:diamond_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -19,7 +19,7 @@
 										"damaged_stardust_sword": true
 									}
 								},
-								"minecraft:max_damage": 250,
+								"minecraft:max_damage": 1951,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",

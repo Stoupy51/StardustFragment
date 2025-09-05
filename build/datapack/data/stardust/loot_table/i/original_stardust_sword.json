@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:diamond_sword",
+					"name": "minecraft:netherite_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -36,9 +36,6 @@
 										"id": "minecraft:base_attack_speed"
 									}
 								],
-								"minecraft:enchantments": {
-									"minecraft:looting": 2
-								},
 								"minecraft:item_model": "stardust:original_stardust_sword",
 								"minecraft:item_name": {
 									"translate": "stardust.original_stardust_sword"

@@ -10,14 +10,26 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"generation": 8,
+										"max_storage": 1200
+									},
+									"stardust": {
+										"stardust_solar_panel": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.generate_8_kw",
+										"translate": "stardust.energy_generation_8_kw",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_800_kj",
+										"translate": "stardust.energy_buffer_1200_kj",
 										"italic": false,
 										"color": "gray"
 									},
@@ -30,14 +42,6 @@
 								"minecraft:item_model": "stardust:stardust_solar_panel",
 								"minecraft:item_name": {
 									"translate": "stardust_solar_panel"
-								},
-								"minecraft:custom_data": {
-									"stardust": {
-										"stardust_solar_panel": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
 								},
 								"minecraft:container": [
 									{

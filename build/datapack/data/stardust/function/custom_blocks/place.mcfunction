@@ -24,13 +24,17 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:quintupl
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:sextuple_compressed_cobblestone"} run function stardust:custom_blocks/sextuple_compressed_cobblestone/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:septuple_compressed_cobblestone"} run function stardust:custom_blocks/septuple_compressed_cobblestone/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:octuple_compressed_cobblestone"} run function stardust:custom_blocks/octuple_compressed_cobblestone/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_frame"} run function stardust:custom_blocks/stardust_frame/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_frame"} run function stardust:custom_blocks/awakened_stardust_frame/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_frame"} run function stardust:custom_blocks/ultimate_frame/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_battery"} run function stardust:custom_blocks/stardust_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_battery"} run function stardust:custom_blocks/awakened_stardust_battery/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_battery"} run function stardust:custom_blocks/ultimate_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_solar_panel"} run function stardust:custom_blocks/stardust_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_solar_panel"} run function stardust:custom_blocks/awakened_solar_panel/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendarium_solar_panel"} run function stardust:custom_blocks/legendarium_solar_panel/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium_solar_panel"} run function stardust:custom_blocks/solarium_solar_panel/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_solar_panel"} run function stardust:custom_blocks/darkium_solar_panel/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_solar_panel"} run function stardust:custom_blocks/ultimate_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:growth_accelerator"} run function stardust:custom_blocks/growth_accelerator/place_main
 tag @s remove stardust.placer
 

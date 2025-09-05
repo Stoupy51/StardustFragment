@@ -1,11 +1,19 @@
 {
 	"condition": "minecraft:any_of",
 	"terms": [
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_crimson_hyphae\"]}","location": {"block": {"blocks": "minecraft:crimson_hyphae"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_crying_obsidian\"]}","location": {"block": {"blocks": "minecraft:crying_obsidian"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_daylight_detector\"]}","location": {"block": {"blocks": "minecraft:daylight_detector"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_deepslate\"]}","location": {"block": {"blocks": "minecraft:deepslate"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_diamond_block\"]}","location": {"block": {"blocks": "minecraft:diamond_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_emerald_block\"]}","location": {"block": {"blocks": "minecraft:emerald_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_lapis_block\"]}","location": {"block": {"blocks": "minecraft:lapis_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_netherite_block\"]}","location": {"block": {"blocks": "minecraft:netherite_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_obsidian\"]}","location": {"block": {"blocks": "minecraft:obsidian"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_player_head\"]}","location": {"block": {"blocks": "minecraft:player_head"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_polished_deepslate\"]}","location": {"block": {"blocks": "minecraft:polished_deepslate"}}}},
-		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_redstone_block\"]}","location": {"block": {"blocks": "minecraft:redstone_block"}}}}
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_redstone_block\"]}","location": {"block": {"blocks": "minecraft:redstone_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_warped_hyphae\"]}","location": {"block": {"blocks": "minecraft:warped_hyphae"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_waxed_copper_block\"]}","location": {"block": {"blocks": "minecraft:waxed_copper_block"}}}}
 	]
 }

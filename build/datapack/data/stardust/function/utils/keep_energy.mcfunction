@@ -1,10 +1,10 @@
 
 #> stardust:utils/keep_energy
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:crimson_hyphae"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:warped_hyphae"}},distance=..1]
 #
-# @within	stardust:custom_blocks/awakened_stardust_battery/replace_item
-#			stardust:custom_blocks/stardust_battery/replace_item
+# @within	stardust:custom_blocks/stardust_battery/replace_item
+#			stardust:custom_blocks/awakened_stardust_battery/replace_item
 #			stardust:custom_blocks/ultimate_battery/replace_item
 #
 

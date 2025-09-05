@@ -42,7 +42,7 @@ def beet_default(ctx: Context) -> None:
 	)
 
 	# Setup machines
-	#setup_machines(gui)
+	setup_machines(gui)
 
 	# Setup rotatable tags
 	#setup_wrench(["furnace_generator", "electric_furnace", "electric_smelter", "pulverizer"])

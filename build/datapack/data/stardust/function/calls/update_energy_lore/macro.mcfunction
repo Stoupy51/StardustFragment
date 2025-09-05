@@ -1,7 +1,7 @@
 
 #> stardust:calls/update_energy_lore/macro
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:crimson_hyphae"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:warped_hyphae"}},distance=..1]
 #
 # @within	stardust:calls/update_energy_lore/main with storage stardust:temp macro
 #

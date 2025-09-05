@@ -47,7 +47,7 @@ def beet_default(ctx: Context) -> None:
 	main_additions()
 
 	# Sort by category (material in first position)
-	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "material", x[1].get("category", ""), x[0])))
+	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", ""))))
 
 	# Final adjustments
 	add_energy_lore_to_definitions()

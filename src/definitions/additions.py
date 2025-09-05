@@ -163,17 +163,21 @@ def main_additions() -> None:
 		"dragon_pearl": {
 			"id": "minecraft:ender_pearl", CATEGORY: MATERIALS,
 			"item_name": {"text":"Dragon Pearl","italic":False,"color":"dark_purple"},
+			"use_cooldown": {"seconds": 0.5},
 			WIKI_COMPONENT: [
 				{"text":"Upgraded ender pearl variant","color":"yellow"},
 				{"text":"\nThrows x1.5 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
+				{"text":"\nCooldown is 0.5 seconds instead of 1 second","color":"gray"},
 			],
 		},
 		"ender_dragon_pearl": {
 			"id": "minecraft:ender_pearl", CATEGORY: MATERIALS,
 			"item_name": [{"text":"Ender ","italic":False,"color":"dark_aqua"},{"text":"Dragon Pearl","italic":False,"color":"dark_purple"}],
+			"use_cooldown": {"seconds": 0.25},
 			WIKI_COMPONENT: [
 				{"text":"Upgraded dragon pearl variant","color":"yellow"},
 				{"text":"\nThrows x2 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
+				{"text":"\nCooldown is 0.25 seconds instead of 1 second","color":"gray"},
 				{"text":"\nUsed in high-tier crafting","color":"gray"},
 			],
 		},

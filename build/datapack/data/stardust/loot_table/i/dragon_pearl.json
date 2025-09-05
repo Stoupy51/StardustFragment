@@ -15,6 +15,9 @@
 									"italic": false,
 									"color": "dark_purple"
 								},
+								"minecraft:use_cooldown": {
+									"seconds": 0.5
+								},
 								"minecraft:item_model": "stardust:dragon_pearl",
 								"minecraft:lore": [
 									[

@@ -22,6 +22,9 @@
 										"color": "dark_purple"
 									}
 								],
+								"minecraft:use_cooldown": {
+									"seconds": 0.25
+								},
 								"minecraft:item_model": "stardust:ender_dragon_pearl",
 								"minecraft:lore": [
 									[

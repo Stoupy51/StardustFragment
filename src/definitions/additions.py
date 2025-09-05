@@ -540,7 +540,7 @@ def main_additions() -> None:
 		"id": "minecraft:written_book", "category": MISC,
 		RESULT_OF_CRAFTING: [
 			# Put a book and a steel ingot in the crafting grid to get the manual
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("simplunium_ingot", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("stardust_fragment", ns)]},
 
 			# Put the manual in the crafting grid to get the manual back (update the manual)
 			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("manual", ns)]},

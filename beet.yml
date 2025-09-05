@@ -42,7 +42,7 @@ pipeline:
     - "stewbeet.plugins.resource_pack.item_models"
     - "stewbeet.plugins.resource_pack.check_power_of_2"
     - "stewbeet.plugins.custom_recipes"
-    # - "stewbeet.plugins.ingame_manual"
+    - "stewbeet.plugins.ingame_manual"
     - "stewbeet.plugins.datapack.loading"
     - "stewbeet.plugins.datapack.custom_blocks"
     - "stewbeet.plugins.datapack.loot_tables"
@@ -106,7 +106,7 @@ meta:
             # Enables caching of Minecraft assets and item renders
             cache_assets: true
             # Enables caching of manual content and images
-            cache_pages: true
+            cache_pages: false
             # Path for manual debug dump
             json_dump_path: "manual_cache/content.json"
             # Manual title used in book and first page. Defaults to "{name} Manual"

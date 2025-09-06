@@ -583,7 +583,7 @@
 		"custom_data": {"stardust": {"growth_accelerator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"damaged_stardust_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"damaged_stardust": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"damaged_stardust_helmet": true}},
 		"max_damage": 453,
@@ -593,7 +593,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"damaged_stardust_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"damaged_stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"damaged_stardust_chestplate": true}},
 		"max_damage": 659,
@@ -603,7 +603,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"damaged_stardust_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"damaged_stardust": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"damaged_stardust_leggings": true}},
 		"max_damage": 618,
@@ -613,7 +613,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"damaged_stardust_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"damaged_stardust": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"damaged_stardust_boots": true}},
 		"max_damage": 536,
@@ -653,7 +653,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"reinforced_stardust_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:diamond_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"reinforced_stardust": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"reinforced_stardust_helmet": true}},
 		"max_damage": 544,
@@ -663,7 +663,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"reinforced_stardust_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:diamond_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"reinforced_stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"reinforced_stardust_chestplate": true}},
 		"max_damage": 791,
@@ -673,7 +673,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"reinforced_stardust_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:diamond_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"reinforced_stardust": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"reinforced_stardust_leggings": true}},
 		"max_damage": 742,
@@ -683,7 +683,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"reinforced_stardust_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:diamond_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"reinforced_stardust": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"reinforced_stardust_boots": true}},
 		"max_damage": 643,
@@ -723,7 +723,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"original_stardust_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:netherite_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_helmet": true}},
 		"max_damage": 938,
@@ -733,7 +733,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"original_stardust_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:netherite_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_chestplate": true}},
 		"max_damage": 1365,
@@ -743,7 +743,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"original_stardust_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:netherite_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_leggings": true}},
 		"max_damage": 1279,
@@ -753,7 +753,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"original_stardust_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:netherite_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_boots": true}},
 		"max_damage": 1109,
@@ -793,7 +793,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"legendarium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:netherite_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_helmet": true}},
 		"max_damage": 1407,
@@ -803,7 +803,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"legendarium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:netherite_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_chestplate": true}},
 		"max_damage": 2047,
@@ -813,7 +813,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"legendarium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:netherite_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_leggings": true}},
 		"max_damage": 1919,
@@ -823,7 +823,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"legendarium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:netherite_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_boots": true}},
 		"max_damage": 1663,
@@ -863,7 +863,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"solarium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:netherite_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_helmet": true}},
 		"max_damage": 1564,
@@ -873,7 +873,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"solarium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:netherite_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_chestplate": true}},
 		"max_damage": 2275,
@@ -883,7 +883,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"solarium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:netherite_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_leggings": true}},
 		"max_damage": 2132,
@@ -893,7 +893,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"solarium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:netherite_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_boots": true}},
 		"max_damage": 1848,
@@ -933,7 +933,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"darkium_helmet": {
-		"id": "minecraft:leather_helmet",
+		"id": "minecraft:netherite_helmet",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_helmet": true}},
 		"max_damage": 1720,
@@ -943,7 +943,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"darkium_chestplate": {
-		"id": "minecraft:leather_chestplate",
+		"id": "minecraft:netherite_chestplate",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_chestplate": true}},
 		"max_damage": 2502,
@@ -953,7 +953,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"darkium_leggings": {
-		"id": "minecraft:leather_leggings",
+		"id": "minecraft:netherite_leggings",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_leggings": true}},
 		"max_damage": 2345,
@@ -963,7 +963,7 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"darkium_boots": {
-		"id": "minecraft:leather_boots",
+		"id": "minecraft:netherite_boots",
 		"category": "equipment",
 		"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_boots": true}},
 		"max_damage": 2033,

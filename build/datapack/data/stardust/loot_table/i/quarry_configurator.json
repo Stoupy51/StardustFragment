@@ -1,0 +1,49 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									[
+										{"keybind": "key.use","italic": false,"color": "gray"},
+										{"translate": "stardust.to_set_1st_coordinates","italic": false,"color": "gray"}
+									],
+									[
+										{"keybind": "key.sneak","italic": false,"color": "gray"},
+										{"text": " + ","italic": false,"color": "gray"},
+										{"keybind": "key.use","italic": false,"color": "gray"},
+										{"translate": "stardust.to_set_2nd_coordinates","italic": false,"color": "gray"}
+									],
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:quarry_configurator",
+								"minecraft:item_name": {
+									"translate": "stardust.quarry_configurator"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"quarry_configurator": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

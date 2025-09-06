@@ -138,6 +138,17 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/legendarium_seed"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/solarium_seed"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/darkium_seed"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv1"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv2"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv3"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv4"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv5"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stoupegg"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_pillar"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_dungeon_key"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_configurator"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/fortune_module"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/silk_touch_module"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/manual"}]}
 	]
 }

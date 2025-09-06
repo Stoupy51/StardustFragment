@@ -11,7 +11,9 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:consumable": {
-									"consume_seconds": 1024
+									"consume_seconds": 1024,
+									"animation": "drink",
+									"has_consume_particles": false
 								},
 								"minecraft:max_stack_size": 16,
 								"minecraft:item_model": "stardust:wormhole_potion",

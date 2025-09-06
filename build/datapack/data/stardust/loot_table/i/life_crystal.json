@@ -20,7 +20,12 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.right_click_to_permanently_increase_max_health_by_1_0_5_heart",
+										"translate": "stardust.right_click_to_permanently_increase",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.your_max_health_by_1_0_5_heart",
 										"italic": false,
 										"color": "gray"
 									},

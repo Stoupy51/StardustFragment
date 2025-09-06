@@ -22,6 +22,11 @@ scoreboard players add #total_vanilla_deepslate stardust.data 0
 scoreboard players add #total_vanilla_daylight_detector stardust.data 0
 scoreboard players add #total_vanilla_crying_obsidian stardust.data 0
 scoreboard players add #total_vanilla_crimson_hyphae stardust.data 0
+scoreboard players add #total_cobblestone_miner_lv5 stardust.data 0
+scoreboard players add #total_cobblestone_miner_lv4 stardust.data 0
+scoreboard players add #total_cobblestone_miner_lv3 stardust.data 0
+scoreboard players add #total_cobblestone_miner_lv2 stardust.data 0
+scoreboard players add #total_cobblestone_miner_lv1 stardust.data 0
 scoreboard players add #total_darkium_seed stardust.data 0
 scoreboard players add #total_solarium_seed stardust.data 0
 scoreboard players add #total_legendarium_seed stardust.data 0
@@ -110,6 +115,11 @@ tellraw @s [{"translate": "stardust.total_elite_stardust_seed","color":"gold"},{
 tellraw @s [{"translate": "stardust.total_legendarium_seed","color":"gold"},{"score":{"name":"#total_legendarium_seed","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_solarium_seed","color":"gold"},{"score":{"name":"#total_solarium_seed","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_darkium_seed","color":"gold"},{"score":{"name":"#total_darkium_seed","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv1","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv1","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv2","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv2","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv3","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv3","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv4","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv4","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv5","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv5","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_crimson_hyphae","color":"gray"},{"score":{"name":"#total_vanilla_crimson_hyphae","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_crying_obsidian","color":"gray"},{"score":{"name":"#total_vanilla_crying_obsidian","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_daylight_detector","color":"gray"},{"score":{"name":"#total_vanilla_daylight_detector","objective":"stardust.data"},"color":"white"}]

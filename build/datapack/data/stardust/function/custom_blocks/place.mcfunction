@@ -38,5 +38,10 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_solar_panel"} run function stardust:custom_blocks/ultimate_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:growth_accelerator"} run function stardust:custom_blocks/growth_accelerator/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:life_crystal_block"} run function stardust:custom_blocks/life_crystal_block/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv1"} run function stardust:custom_blocks/cobblestone_miner_lv1/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv2"} run function stardust:custom_blocks/cobblestone_miner_lv2/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv3"} run function stardust:custom_blocks/cobblestone_miner_lv3/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv4"} run function stardust:custom_blocks/cobblestone_miner_lv4/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv5"} run function stardust:custom_blocks/cobblestone_miner_lv5/place_main
 tag @s remove stardust.placer
 

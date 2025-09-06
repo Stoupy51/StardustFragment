@@ -11,7 +11,8 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:consumable": {
-									"consume_seconds": 1024
+									"consume_seconds": 1024,
+									"has_consume_particles": false
 								},
 								"minecraft:max_damage": 64,
 								"minecraft:item_model": "stardust:home_travel_staff",

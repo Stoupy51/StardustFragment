@@ -20,11 +20,6 @@
 										"color": "gray",
 										"italic": false
 									},
-									{
-										"translate": "stardust.10_base_speed",
-										"color": "gray",
-										"italic": false
-									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},

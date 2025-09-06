@@ -10,12 +10,10 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:item_name": {
-									"translate": "stardust.ultimate_bullet",
-									"italic": false,
-									"color": "gray"
-								},
 								"minecraft:item_model": "stardust:ultimate_bullet",
+								"minecraft:item_name": {
+									"translate": "stardust.ultimate_bullet"
+								},
 								"minecraft:lore": [
 									[
 										"",

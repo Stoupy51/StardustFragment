@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_helmet",
+	"parent": "minecraft:item/netherite_helmet",
 	"textures": {
-		"layer0": "stardust:item/darkium_helmet",
-		"layer1": "stardust:item/darkium_helmet"
+		"layer0": "stardust:item/darkium_helmet"
 	}
 }

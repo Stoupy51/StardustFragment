@@ -1,7 +1,6 @@
 {
-	"parent": "minecraft:item/leather_helmet",
+	"parent": "minecraft:item/diamond_helmet",
 	"textures": {
-		"layer0": "stardust:item/damaged_stardust_helmet",
-		"layer1": "stardust:item/damaged_stardust_helmet"
+		"layer0": "stardust:item/damaged_stardust_helmet"
 	}
 }

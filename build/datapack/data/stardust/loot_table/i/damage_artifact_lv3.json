@@ -1,0 +1,54 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": {
+									"translate": "stardust.damage_artifact_lv_3"
+								},
+								"minecraft:rarity": "rare",
+								"minecraft:lore": [
+									{
+										"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect",
+										"color": "gray",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 0.3,
+										"operation": "add_multiplied_total",
+										"slot": "hand",
+										"id": "stardust:base_attack_damage"
+									}
+								],
+								"minecraft:item_model": "stardust:damage_artifact_lv3",
+								"minecraft:custom_data": {
+									"stardust": {
+										"damage_artifact_lv3": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

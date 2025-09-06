@@ -1,0 +1,54 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": {
+									"translate": "stardust.speed_artifact_lv_max"
+								},
+								"minecraft:rarity": "epic",
+								"minecraft:lore": [
+									{
+										"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect",
+										"color": "gray",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "movement_speed",
+										"amount": 0.25,
+										"operation": "add_multiplied_base",
+										"slot": "hand",
+										"id": "stardust:base_movement_speed"
+									}
+								],
+								"minecraft:item_model": "stardust:speed_artifact_lvmax",
+								"minecraft:custom_data": {
+									"stardust": {
+										"speed_artifact_lvmax": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

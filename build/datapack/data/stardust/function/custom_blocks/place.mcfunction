@@ -37,5 +37,6 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_solar_panel"} run function stardust:custom_blocks/darkium_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_solar_panel"} run function stardust:custom_blocks/ultimate_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:growth_accelerator"} run function stardust:custom_blocks/growth_accelerator/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:life_crystal_block"} run function stardust:custom_blocks/life_crystal_block/place_main
 tag @s remove stardust.placer
 

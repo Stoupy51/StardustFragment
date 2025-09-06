@@ -1,0 +1,57 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:consumable": {
+									"consume_seconds": 0.8,
+									"animation": "toot_horn",
+									"sound": {
+										"sound_id": "stardust:life_crystal",
+										"range": 3
+									}
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.right_click_to_permanently_increase_max_health_by_1_0_5_heart",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.max_20_uses_10_hearts",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:life_crystal",
+								"minecraft:item_name": {
+									"translate": "stardust.life_crystal"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"life_crystal": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

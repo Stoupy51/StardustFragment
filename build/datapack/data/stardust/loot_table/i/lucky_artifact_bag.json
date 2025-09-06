@@ -1,0 +1,47 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:consumable": {
+									"consume_seconds": 1024
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.right_click_to_open_and_receive_a_random_artifact",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:lucky_artifact_bag",
+								"minecraft:item_name": {
+									"translate": "stardust.lucky_artifact_bag"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"lucky_artifact_bag": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

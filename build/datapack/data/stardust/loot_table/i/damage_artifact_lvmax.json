@@ -20,6 +20,11 @@
 										"color": "gray",
 										"italic": false
 									},
+									{
+										"translate": "stardust.50_damage",
+										"color": "gray",
+										"italic": false
+									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},

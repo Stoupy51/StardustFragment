@@ -1,0 +1,53 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"translate": "stardust.can_only_be_planted_on_diamond_block",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:stardust_seed",
+								"minecraft:item_name": {
+									"translate": "stardust_seed"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"stardust_seed": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Tags": [
+										"stardust.new",
+										"stardust.stardust_seed"
+									],
+									"Invisible": true,
+									"Silent": true
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:consumable": {
+									"consume_seconds": 1024
+								},
+								"minecraft:max_damage": 64,
+								"minecraft:item_model": "stardust:home_travel_staff",
+								"minecraft:item_name": {
+									"translate": "stardust.home_travel_staff"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"home_travel_staff": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

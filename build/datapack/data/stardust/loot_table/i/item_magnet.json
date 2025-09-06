@@ -1,0 +1,49 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:lore": [
+									{
+										"translate": "stardust.hold_in_offhand_to_attract_items",
+										"color": "gray",
+										"italic": false
+									},
+									{
+										"translate": "stardust.within_a_4_blocks_radius",
+										"color": "gray",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:item_magnet",
+								"minecraft:item_name": {
+									"translate": "stardust.item_magnet"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"item_magnet": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

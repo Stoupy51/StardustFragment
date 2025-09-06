@@ -3,12 +3,14 @@
 # Imports
 from stewbeet import (
 	CATEGORY,
+	CUSTOM_BLOCK_ALTERNATIVE,
 	CUSTOM_BLOCK_HEAD,
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
 	NO_SILK_TOUCH_DROP,
 	OVERRIDE_MODEL,
 	RESULT_OF_CRAFTING,
+	STAGED_SEED,
 	VANILLA_BLOCK,
 	VANILLA_BLOCK_FOR_ORES,
 	WIKI_COMPONENT,
@@ -545,6 +547,20 @@ def main_additions() -> None:
 		},
 
 		# Equipments
+		"ultimate_elytra": {
+			"id": "minecraft:elytra", CATEGORY: EQUIPMENT,
+			"max_damage": 3456,	# x8 the durability of regular elytra (432)
+			"attribute_modifiers": [
+				{"type":"armor","amount": 10,"operation":"add_value","slot":"chest","id":"stardust:armor.chest"},
+				{"type":"armor_toughness","amount": 4,"operation":"add_value","slot":"chest","id":"stardust:armor_toughness.chest"},
+				{"type":"knockback_resistance","amount": 0.1,"operation":"add_value","slot":"chest","id":"stardust:knockback_resistance.chest"}
+			],
+			WIKI_COMPONENT: [
+				{"text":"Elytra crafted from ultimate materials.","color":"yellow"},
+				{"text":"\nHigher durability (x8) than regular elytra","color":"gray"},
+				{"text":"\nProvides armor (10), toughness (4), and knockback resistance (0.1) when worn","color":"gray"},
+			],
+		},
 		"stardust_bow": {
 			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
 			"max_damage": 768,	# x2 the durability of regular bow (384)
@@ -602,6 +618,15 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 		},
+		"ultimate_bullet": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"item_name": {"text":"Ultimate Bullet","italic":False,"color":"gray"},
+			WIKI_COMPONENT: [
+				{"text":"Best ammunition for snipers.","color":"yellow"},
+				{"text":"\nCrafted from ultimate materials","color":"gray"},
+				{"text":"\n+35 damage when shooting","color":"gray"},
+			],
+		},
 		**{
 			f"{artifact}_artifact_lv{i+1 if i < 3 else 'max'}": {
 				"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
@@ -609,6 +634,7 @@ def main_additions() -> None:
 				"rarity": "epic" if i == 3 else "rare",
 				"lore": [
 					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
+					{"text":f"[+{level}% {lore}]","color":"gray","italic":False},
 				],
 				"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
 				WIKI_COMPONENT: [
@@ -623,6 +649,198 @@ def main_additions() -> None:
 				("speed", "Base Speed", "movement_speed", (10, 15, 20, 25))
 			)
 			for i, level in enumerate(levels)
+		},
+		"lucky_artifact_bag": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"consumable": {"consume_seconds": 1024},
+			"lore": [
+				{"text":"Right-click to open and receive a random artifact.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"A mysterious bag containing a random artifact.","color":"yellow"},
+				{"text":"\nRight-click to open and receive a random artifact","color":"gray"},
+				{"text":"\nCan contain Health, Damage, or Speed Artifacts","color":"gray"},
+				{"text":"\nThis can be found in various structures","color":"gray"},
+			],
+		},
+		"item_magnet": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"lore": [
+				{"text":"Hold in offhand to attract items","color":"gray","italic":False},
+				{"text":"within a 4 blocks radius","color":"gray","italic":False},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magnet that attracts nearby items.","color":"yellow"},
+				{"text":"\nHold in offhand to attract items within a 4 blocks radius","color":"gray"},
+				{"text":"\nUseful for collecting dropped items","color":"gray"},
+			],
+		},
+		"home_travel_staff": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"consumable": {"consume_seconds": 1024},
+			"max_damage": 64,
+			WIKI_COMPONENT: [
+				{"text":"Staff that teleports you to your spawn point.","color":"yellow"},
+				{"text":"\nRight-click to teleport to your bed or world spawn","color":"gray"},
+				{"text":"\nHas 64 uses before breaking","color":"gray"},
+			],
+		},
+		"wormhole_potion": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"consumable": {"consume_seconds": 1024},
+			"max_stack_size": 16,
+		},
+		"stardust_apple": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"food": {"can_always_eat": True, "nutrition": 4, "saturation": 9.6},	# Golden apple default
+			"consumable": {
+				"on_consume_effects": [{"type": "minecraft:apply_effects", "effects": [
+					{"amplifier": 2, "duration": 100, "id": "minecraft:regeneration", "show_icon": True},	# Regeneration III for 5 seconds
+					{"amplifier": 1, "duration": 2400, "id": "minecraft:absorption", "show_icon": True}		# Absorption II for 2 minutes
+				]}]
+			}
+		},
+		"life_crystal": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"consumable": {
+				"consume_seconds": 0.8,
+				"animation": "toot_horn",
+				"sound": {"sound_id": f"{ns}:life_crystal","range": 3}
+			},
+			"lore": [
+				{"text":"Right-click to permanently increase max health by 1 (0.5 heart)","italic":False,"color":"gray"},
+				{"text":"Max 20 uses (+10 hearts)","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Crystal that increases your maximum health.","color":"yellow"},
+				{"text":"\nFound in underground caves in the overworld","color":"gray"},
+				{"text":"\nRight-click to permanently increase max health by 1 (0.5 heart)","color":"gray"},
+				{"text":"\nMax 20 uses (+10 hearts)","color":"gray"},
+			],
+		},
+		"life_crystal_block": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: EQUIPMENT,
+			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":True},	# TODO: No silk touch drop even when not a VANILLA_BLOCK_FOR_ORES
+			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},
+			WIKI_COMPONENT: [
+				{"text":"Decorative block made from life crystals.","color":"yellow"},
+				{"text":"\nFound in underground caves in the overworld","color":"gray"},
+				{"text":"\nCan be broken to retrieve a life crystal","color":"gray"},
+			],
+		},
+
+		# Miscellaneous
+		"diamond_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"diamond","stages":3,"seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":2}]},	# TODO: Implement + fortune support + verify definitions
+			"lore": [
+				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows diamonds.","color":"yellow"},
+				{"text":"\nCan only be planted on stone blocks","color":"gray"},
+				{"text":"\nGrows fully after 20 minutes","color":"gray"},
+				{"text":"\nYields 0-2 diamonds when harvested","color":"gray"},
+			],
+		},
+		"advanced_diamond_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"advanced_diamond","stages":3,"seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":24}]},
+			"lore": [
+				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows diamonds.","color":"yellow"},
+				{"text":"\nCan only be planted on stone blocks","color":"gray"},
+				{"text":"\nGrows fully after 20 minutes","color":"gray"},
+				{"text":"\nYields 0-24 diamonds when harvested","color":"gray"},
+			],
+		},
+		"stardust_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"stardust","stages":3,"seconds":480,"planted_on":"diamond_block","loots":[{"id":"stardust_fragment","min_count":3,"max_count":9}]},
+			"lore": [
+				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows stardust fragments.","color":"yellow"},
+				{"text":"\nCan only be planted on diamond blocks","color":"gray"},
+				{"text":"\nGrows fully after 8 minutes","color":"gray"},
+				{"text":"\nYields 3-9 stardust fragments when harvested","color":"gray"},
+			],
+		},
+		"advanced_stardust_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"advanced_stardust","stages":3,"seconds":960,"planted_on":"diamond_block","loots":[{"id":"stardust_ingot","min_count":1,"max_count":4}]},
+			"lore": [
+				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows stardust ingots.","color":"yellow"},
+				{"text":"\nCan only be planted on diamond blocks","color":"gray"},
+				{"text":"\nGrows fully after 16 minutes","color":"gray"},
+				{"text":"\nYields 1-4 stardust ingots when harvested","color":"gray"},
+			],
+		},
+		"elite_stardust_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"elite_stardust","stages":3,"seconds":1920,"planted_on":"diamond_block","loots":[{"id":"stardust_essence","min_count":1,"max_count":2}]},
+			"lore": [
+				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows stardust essences.","color":"yellow"},
+				{"text":"\nCan only be planted on diamond blocks","color":"gray"},
+				{"text":"\nGrows fully after 32 minutes","color":"gray"},
+				{"text":"\nYields 1-2 stardust essences when harvested","color":"gray"},
+			],
+		},
+		"legendarium_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"legendarium","stages":3,"seconds":3840,"planted_on":"emerald_block","loots":[{"id":"legendarium_fragment","min_count":1,"max_count":2}]},
+			"lore": [
+				{"text":"Can only be planted on emerald block.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows legendarium.","color":"yellow"},
+				{"text":"\nCan only be planted on emerald blocks","color":"gray"},
+				{"text":"\nGrows fully after 64 minutes","color":"gray"},
+				{"text":"\nYields 1-2 legendarium fragments when harvested","color":"gray"},
+			],
+		},
+		"solarium_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"solarium","stages":3,"seconds":3840,"planted_on":"magma_block","loots":[{"id":"solarium_fragment","min_count":1,"max_count":2}]},
+			"lore": [
+				{"text":"Can only be planted on magma block.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows solarium.","color":"yellow"},
+				{"text":"\nCan only be planted on magma blocks","color":"gray"},
+				{"text":"\nGrows fully after 64 minutes","color":"gray"},
+				{"text":"\nYields 1-2 solarium fragments when harvested","color":"gray"},
+			],
+		},
+		"darkium_seed": {
+			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
+			VANILLA_BLOCK: {"contents": True},
+			STAGED_SEED: {"texture_basename":"darkium","stages":3,"seconds":3840,"planted_on":"obsidian","loots":[{"id":"darkium_fragment","min_count":1,"max_count":2}]},
+			"lore": [
+				{"text":"Can only be planted on obsidian.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Magical seed that grows darkium.","color":"yellow"},
+				{"text":"\nCan only be planted on obsidian","color":"gray"},
+				{"text":"\nGrows fully after 64 minutes","color":"gray"},
+				{"text":"\nYields 1-2 darkium fragments when harvested","color":"gray"},
+			],
 		},
 	}
 

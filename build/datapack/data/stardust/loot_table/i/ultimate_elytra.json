@@ -1,0 +1,63 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:elytra",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_damage": 3456,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 10,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 4,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor_toughness.chest"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:knockback_resistance.chest"
+									}
+								],
+								"minecraft:item_model": "stardust:ultimate_elytra",
+								"minecraft:item_name": {
+									"translate": "stardust.ultimate_elytra"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"ultimate_elytra": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

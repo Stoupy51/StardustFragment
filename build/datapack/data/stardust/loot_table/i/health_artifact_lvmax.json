@@ -20,6 +20,11 @@
 										"color": "gray",
 										"italic": false
 									},
+									{
+										"translate": "stardust.50_health_points",
+										"color": "gray",
+										"italic": false
+									},
 									[
 										"",
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},

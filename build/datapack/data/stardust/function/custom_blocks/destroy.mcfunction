@@ -10,6 +10,7 @@
 #			stardust:calls/common_signals/on_item_frame_destroy [ as @e[tag=stardust.custom_block,dx=0,dy=0,dz=0] & at @s ]
 #
 
+execute if score #total_vanilla_barrel stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_barrel] unless block ~ ~ ~ minecraft:barrel run function stardust:custom_blocks/_groups/minecraft_barrel
 execute if score #total_vanilla_crimson_hyphae stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_crimson_hyphae] unless block ~ ~ ~ minecraft:crimson_hyphae run function stardust:custom_blocks/_groups/minecraft_crimson_hyphae
 execute if score #total_vanilla_crying_obsidian stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_crying_obsidian] unless block ~ ~ ~ minecraft:crying_obsidian run function stardust:custom_blocks/_groups/minecraft_crying_obsidian
 execute if score #total_vanilla_daylight_detector stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_daylight_detector] unless block ~ ~ ~ minecraft:daylight_detector run function stardust:custom_blocks/_groups/minecraft_daylight_detector

@@ -1,0 +1,126 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"usage": 500,
+										"max_storage": 24000
+									},
+									"stardust": {
+										"ultimate_portal": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": [
+									{
+										"text": "U",
+										"italic": false,
+										"color": "dark_purple",
+										"bold": true
+									},
+									{
+										"text": "l",
+										"color": "blue"
+									},
+									{
+										"text": "t",
+										"color": "dark_aqua"
+									},
+									{
+										"text": "i",
+										"color": "aqua"
+									},
+									{
+										"text": "m",
+										"color": "green"
+									},
+									{
+										"text": "a",
+										"color": "yellow"
+									},
+									{
+										"text": "t",
+										"color": "gold"
+									},
+									{
+										"text": "e",
+										"color": "dark_red"
+									},
+									{
+										"text": " P",
+										"color": "dark_purple"
+									},
+									{
+										"text": "o",
+										"color": "blue"
+									},
+									{
+										"text": "r",
+										"color": "dark_aqua"
+									},
+									{
+										"text": "t",
+										"color": "aqua"
+									},
+									{
+										"text": "a",
+										"color": "green"
+									},
+									{
+										"text": "l",
+										"color": "yellow"
+									}
+								],
+								"minecraft:lore": [
+									{
+										"translate": "stardust.this_portal_allows_access_to_the_dimension_of_the_ultimate_boss",
+										"italic": false,
+										"color": "white"
+									},
+									{
+										"translate": "stardust.power_usage_500_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_24_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:ultimate_portal",
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_portal","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -507,10 +507,10 @@
 		"category": "energy",
 		"custom_data": {"energy": {"storage": 0,"max_storage": 1000000},"stardust": {"ultimate_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:crying_obsidian","apply_facing": false},
+		"item_name": {"text": "Ultimate Battery","color": "dark_red"},
 		"wiki_components": [{"text": "Ultimate energy storage device.","color": "yellow"},{"text": "\nStores up to 1000 MJ of energy","color": "gray"}],
 		"lore": [{"text": "[Energy Storage: 1000 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"item_model": "stardust:ultimate_battery",
-		"item_name": {"text": "Ultimate Battery"}
+		"item_model": "stardust:ultimate_battery"
 	},
 	"stardust_solar_panel": {
 		"id": "minecraft:furnace",
@@ -565,22 +565,183 @@
 	"ultimate_solar_panel": {
 		"id": "minecraft:furnace",
 		"category": "energy",
-		"custom_data": {"energy": {"generation": 128,"max_storage": 19200},"stardust": {"ultimate_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"energy": {"generation": 128,"max_storage": 20000},"stardust": {"ultimate_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:daylight_detector","apply_facing": false},
 		"wiki_components": [{"text": "Ultimate solar panel combining all three elements.","color": "yellow"},{"text": "\nGenerates 128 kW during daylight only","color": "gray"}],
-		"lore": [{"text": "[Energy Generation: 128 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 19 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"lore": [{"text": "[Energy Generation: 128 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 20 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"item_model": "stardust:ultimate_solar_panel",
 		"item_name": {"text": "Ultimate Solar Panel"}
+	},
+	"quarry_lv1": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 125,"max_storage": 20000},"stardust": {"quarry_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Quarry Lv.1","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Level 1 quarry for automated mining.","color": "yellow"},{"text": "\nConsumes 125 kW of power","color": "gray"},{"text": "\nEnergy buffer: 20 MJ","color": "gray"},{"text": "\nMines blocks in a configured area","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 125 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 20 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:quarry_lv1"
+	},
+	"quarry_lv2": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 250,"max_storage": 60000},"stardust": {"quarry_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Quarry Lv.2","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Level 2 quarry for automated mining.","color": "yellow"},{"text": "\nConsumes 250 kW of power","color": "gray"},{"text": "\nEnergy buffer: 60 MJ","color": "gray"},{"text": "\nMines blocks in a configured area","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 250 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 60 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:quarry_lv2"
+	},
+	"quarry_lv3": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 375,"max_storage": 100000},"stardust": {"quarry_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Quarry Lv.3","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Level 3 quarry for automated mining.","color": "yellow"},{"text": "\nConsumes 375 kW of power","color": "gray"},{"text": "\nEnergy buffer: 100 MJ","color": "gray"},{"text": "\nMines blocks in a configured area","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 375 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 100 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:quarry_lv3"
+	},
+	"quarry_lv4": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 500,"max_storage": 140000},"stardust": {"quarry_lv4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Quarry Lv.4","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Level 4 quarry for automated mining.","color": "yellow"},{"text": "\nConsumes 500 kW of power","color": "gray"},{"text": "\nEnergy buffer: 140 MJ","color": "gray"},{"text": "\nMines blocks in a configured area","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 140 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:quarry_lv4"
+	},
+	"quarry_lv5": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 625,"max_storage": 180000},"stardust": {"quarry_lv5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Quarry Lv.5","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Level 5 quarry for automated mining.","color": "yellow"},{"text": "\nConsumes 625 kW of power","color": "gray"},{"text": "\nEnergy buffer: 180 MJ","color": "gray"},{"text": "\nMines blocks in a configured area","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 625 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 180 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:quarry_lv5"
+	},
+	"quarry_creative": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry_creative": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Creative Quarry","italic": false,"color": "white"},
+		"enchantment_glint_override": true,
+		"wiki_components": [{"text": "Creative quarry with unlimited power.","color": "yellow"},{"text": "\nRequires no power to operate","color": "gray"},{"text": "\nEquivalent to a Level 1000 quarry","color": "gray"},{"text": "\nFor creative/testing purposes only","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 0 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:quarry_creative"
+	},
+	"cavern_portal": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Cavern Portal","italic": false,"color": "dark_gray"},
+		"lore": [{"text": "This portal allows access to a world full of caverns!","italic": false,"color": "white"},{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Portal to the Cavern dimension.","color": "yellow"},{"text": "\nThis portal allows access to a world full of caverns!","color": "gray"},{"text": "\nConsumes 20 kW of power","color": "gray"},{"text": "\nEnergy buffer: 800 kJ","color": "gray"}],
+		"item_model": "stardust:cavern_portal"
+	},
+	"celestial_portal": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"celestial_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Celestial Portal","italic": false,"color": "gray"},
+		"lore": [{"text": "This portal allows access to a dimension filled with floating islands","italic": false,"color": "white"},{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Portal to the Celestial dimension.","color": "yellow"},{"text": "\nThis portal allows access to a dimension filled with floating islands","color": "gray"},{"text": "\nConsumes 20 kW of power","color": "gray"},{"text": "\nEnergy buffer: 800 kJ","color": "gray"}],
+		"item_model": "stardust:celestial_portal"
+	},
+	"stardust_portal": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 100,"max_storage": 6000},"stardust": {"stardust_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Stardust Portal","italic": false,"color": "blue"},
+		"lore": [{"text": "This portal allows access to the Stardust dimension with lots of powerful mobs!","italic": false,"color": "white"},{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 6000 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Portal to the Stardust dimension.","color": "yellow"},{"text": "\nThis portal allows access to the Stardust dimension with lots of powerful mobs!","color": "gray"},{"text": "\nConsumes 100 kW of power","color": "gray"},{"text": "\nEnergy buffer: 6 MJ","color": "gray"}],
+		"item_model": "stardust:stardust_portal"
+	},
+	"stardust_dungeon_portal": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 200,"max_storage": 12000},"stardust": {"stardust_dungeon_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Stardust Dungeon Portal","italic": false,"color": "red"},
+		"lore": [{"text": "This portal allows access to the dimension of the Stardust Dungeon!","italic": false,"color": "white"},{"text": "[Power Usage: 200 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 12 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Portal to the Stardust Dungeon.","color": "yellow"},{"text": "\nThis portal allows access to the dimension of the Stardust Dungeon!","color": "gray"},{"text": "\nConsumes 200 kW of power","color": "gray"},{"text": "\nEnergy buffer: 12 MJ","color": "gray"}],
+		"item_model": "stardust:stardust_dungeon_portal"
+	},
+	"ultimate_portal": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 500,"max_storage": 24000},"stardust": {"ultimate_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": [{"text": "U","italic": false,"color": "dark_purple","bold": true},{"text": "l","color": "blue"},{"text": "t","color": "dark_aqua"},{"text": "i","color": "aqua"},{"text": "m","color": "green"},{"text": "a","color": "yellow"},{"text": "t","color": "gold"},{"text": "e","color": "dark_red"},{"text": " P","color": "dark_purple"},{"text": "o","color": "blue"},{"text": "r","color": "dark_aqua"},{"text": "t","color": "aqua"},{"text": "a","color": "green"},{"text": "l","color": "yellow"}],
+		"lore": [{"text": "This portal allows access to the dimension of the Ultimate Boss!","italic": false,"color": "white"},{"text": "[Power Usage: 500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 24 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Portal to the Ultimate Boss dimension.","color": "yellow"},{"text": "\nAccess to the most challenging content","color": "gray"},{"text": "\nConsumes 500 kW of power","color": "gray"},{"text": "\nEnergy buffer: 24 MJ","color": "gray"}],
+		"item_model": "stardust:ultimate_portal"
 	},
 	"growth_accelerator": {
 		"id": "minecraft:furnace",
 		"category": "energy",
+		"custom_data": {"energy": {"usage": 100,"max_storage": 12000},"stardust": {"growth_accelerator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
 		"item_name": {"text": "Growth Accelerator","italic": false,"color": "green"},
-		"lore": [{"text": "Only growth seeds in a radius","italic": false,"color": "white"},{"text": "of 10 blocks every minute","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"lore": [{"text": "Only growth seeds in a radius","italic": false,"color": "white"},{"text": "of 10 blocks every minute","italic": false,"color": "white"},{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 12 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Accelerates crop and plant growth.","color": "yellow"},{"text": "\nAccelerates growth in 10-block radius","color": "gray"},{"text": "\nOperates once per minute when powered","color": "gray"}],
-		"item_model": "stardust:growth_accelerator",
-		"custom_data": {"stardust": {"growth_accelerator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		"item_model": "stardust:growth_accelerator"
+	},
+	"mob_grinder": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"usage": 100,"max_storage": 15000},"stardust": {"mob_grinder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Mob Grinder","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Automated mob killing machine.","color": "yellow"},{"text": "\nKills mobs in a large area around it","color": "gray"},{"text": "\nConsumes 100 kW of power","color": "gray"},{"text": "\nCollects drops automatically","color": "gray"}],
+		"lore": [{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 15 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:mob_grinder"
+	},
+	"nether_star_generator": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"generation": 1500,"max_storage": 30000},"stardust": {"nether_star_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Nether Star Generator","italic": false,"color": "white"},
+		"wiki_components": [{"text": "High-power generator using nether stars.","color": "yellow"},{"text": "\nGenerates 1500 kW when supplied with nether stars","color": "gray"},{"text": "\nEnergy buffer: 30 MJ","color": "gray"},{"text": "\nConsumes nether stars from inventory","color": "gray"}],
+		"lore": [{"text": "[Energy Generation: 1500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 30 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:nether_star_generator"
+	},
+	"advanced_furnace_generator": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"generation": 20,"max_storage": 1600},"stardust": {"advanced_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Advanced Furnace Generator","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Enhanced furnace generator.","color": "yellow"},{"text": "\nGenerates 20 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nMore efficient than basic furnace generators","color": "gray"}],
+		"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:advanced_furnace_generator"
+	},
+	"stardust_furnace_generator": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"generation": 40,"max_storage": 1600},"stardust": {"stardust_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Stardust Furnace Generator","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Stardust-enhanced furnace generator.","color": "yellow"},{"text": "\nGenerates 40 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nHigher efficiency than advanced generators","color": "gray"}],
+		"lore": [{"text": "[Energy Generation: 40 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:stardust_furnace_generator"
+	},
+	"awakened_furnace_generator": {
+		"id": "minecraft:furnace",
+		"category": "energy",
+		"custom_data": {"energy": {"generation": 80,"max_storage": 1600},"stardust": {"awakened_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
+		"item_name": {"text": "Awakened Furnace Generator","italic": false,"color": "white"},
+		"wiki_components": [{"text": "Top-tier furnace generator with awakened stardust.","color": "yellow"},{"text": "\nGenerates 80 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nMaximum efficiency furnace generator","color": "gray"}],
+		"lore": [{"text": "[Energy Generation: 80 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"item_model": "stardust:awakened_furnace_generator"
 	},
 	"damaged_stardust_helmet": {
 		"id": "minecraft:diamond_helmet",
@@ -1267,8 +1428,8 @@
 	"life_crystal": {
 		"id": "minecraft:command_block",
 		"category": "equipment",
-		"consumable": {"consume_seconds": 0.8,"animation": "toot_horn","sound": {"sound_id": "stardust:life_crystal","range": 3}},
-		"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses => +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"consumable": {"consume_seconds": 0.8,"animation": "toot_horn","has_consume_particles": false,"sound": {"sound_id": "stardust:life_crystal","range": 3}},
+		"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Crystal that increases your maximum health.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nRight-click to permanently increase max health by 1 (0.5 heart)","color": "gray"},{"text": "\nMaximum of 20 uses (+10 hearts)","color": "gray"}],
 		"item_model": "stardust:life_crystal",
 		"item_name": {"text": "Life Crystal"},
@@ -1471,8 +1632,8 @@
 	"quarry_configurator": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",
-		"lore": [[{"keybind": "key.use","italic": false,"color": "gray"},{"text": " to set 1st coordinates","italic": false,"color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "gray"},{"text": " + ","italic": false,"color": "gray"},{"keybind": "key.use","italic": false,"color": "gray"},{"text": " to set 2nd coordinates","italic": false,"color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "gray"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "gray"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "gray"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "gray"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}],
+		"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "white"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}],
 		"item_model": "stardust:quarry_configurator",
 		"item_name": {"text": "Quarry Configurator"},
 		"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1480,9 +1641,9 @@
 	"fortune_module": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",
-		"max_stack_size": 3,
-		"lore": [{"text": "Increases fortune level of the quarry","italic": false,"color": "gray"},{"text": "by 1 (max 3)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Module that increases the fortune level of compatible machines.","color": "yellow"},{"text": "\nEach module increases fortune by 1, up to a maximum of 3","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
+		"max_stack_size": 5,
+		"lore": [{"text": "Increases fortune level of the quarry","italic": false,"color": "gray"},{"text": "by 1 (max 5)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Module that increases the fortune level of compatible machines.","color": "yellow"},{"text": "\nEach module increases fortune by 1, up to a maximum of 5","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
 		"item_model": "stardust:fortune_module",
 		"item_name": {"text": "Fortune Module"},
 		"custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}

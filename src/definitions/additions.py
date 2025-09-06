@@ -448,7 +448,7 @@ def main_additions() -> None:
 
 		# Energy Systems - Batteries
 		"stardust_battery": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage": 200000}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":200000}},
 			VANILLA_BLOCK: {"id":"minecraft:warped_hyphae", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Large-capacity energy storage device.","color":"yellow"},
@@ -456,7 +456,7 @@ def main_additions() -> None:
 			],
 		},
 		"awakened_stardust_battery": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage": 500000}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":500000}},
 			VANILLA_BLOCK: {"id":"minecraft:crimson_hyphae", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced energy storage with awakened stardust.","color":"yellow"},
@@ -464,8 +464,9 @@ def main_additions() -> None:
 			],
 		},
 		"ultimate_battery": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage": 1000000}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":1000000}},
 			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
+			"item_name": {"text":"Ultimate Battery","color":"dark_red"},
 			WIKI_COMPONENT: [
 				{"text":"Ultimate energy storage device.","color":"yellow"},
 				{"text":"\nStores up to 1000 MJ of energy","color":"gray"},
@@ -474,7 +475,7 @@ def main_additions() -> None:
 
 		# Energy Systems - Solar Panels
 		"stardust_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":8, "max_storage": 1200}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":8, "max_storage":1200}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/stardust_solar_panel_side", "top": f"{ns}:item/stardust_solar_panel_top"}},
 			WIKI_COMPONENT: [
@@ -484,7 +485,7 @@ def main_additions() -> None:
 			],
 		},
 		"awakened_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":16, "max_storage": 2400}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":16, "max_storage":2400}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/awakened_solar_panel_side", "top": f"{ns}:item/awakened_solar_panel_top"}},
 			WIKI_COMPONENT: [
@@ -494,7 +495,7 @@ def main_additions() -> None:
 			],
 		},
 		"legendarium_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage":4800}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/legendarium_solar_panel_side", "top": f"{ns}:item/legendarium_solar_panel_top"}},
 			WIKI_COMPONENT: [
@@ -504,7 +505,7 @@ def main_additions() -> None:
 			],
 		},
 		"solarium_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage":4800}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/solarium_solar_panel_side", "top": f"{ns}:item/solarium_solar_panel_top"}},
 			WIKI_COMPONENT: [
@@ -514,7 +515,7 @@ def main_additions() -> None:
 			],
 		},
 		"darkium_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage": 4800}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage":4800}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/darkium_solar_panel_side", "top": f"{ns}:item/darkium_solar_panel_top"}},
 			WIKI_COMPONENT: [
@@ -524,7 +525,7 @@ def main_additions() -> None:
 			],
 		},
 		"ultimate_solar_panel": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":128, "max_storage": 19200}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":128, "max_storage":20000}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/ultimate_solar_panel_side", "top": f"{ns}:item/ultimate_solar_panel_top"}},
 			WIKI_COMPONENT: [
@@ -533,9 +534,97 @@ def main_additions() -> None:
 			],
 		},
 
-		# Special Machines
-		"growth_accelerator": {
+		# Quarries
+		**{
+			f"quarry_lv{i+1}": {
+				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+				"custom_data": {"energy": {"usage":usage, "max_storage":storage}},
+				VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+				"item_name": {"text":f"Quarry Lv.{i+1}","italic":False,"color":"white"},
+				WIKI_COMPONENT: [
+					{"text":f"Level {i+1} quarry for automated mining.","color":"yellow"},
+					{"text":f"\nConsumes {usage} kW of power","color":"gray"},
+					{"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"},
+					{"text":"\nMines blocks in a configured area","color":"gray"},
+				],
+			}
+			for i, (usage, storage) in enumerate([(125, 20000), (250, 60000), (375, 100000), (500, 140000), (625, 180000)])
+		},
+		"quarry_creative": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":0, "max_storage":1}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": {"text":"Creative Quarry","italic":False,"color":"white"},
+			"enchantment_glint_override": True,
+			WIKI_COMPONENT: [
+				{"text":"Creative quarry with unlimited power.","color":"yellow"},
+				{"text":"\nRequires no power to operate","color":"gray"},
+				{"text":"\nEquivalent to a Level 1000 quarry","color":"gray"},
+				{"text":"\nFor creative/testing purposes only","color":"gray"},
+			],
+		},
+
+		# Portals
+		**{
+			portal_name: {
+				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+				"custom_data": {"energy": {"usage":usage, "max_storage":storage}},
+				VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+				"item_name": {"text":display_name,"italic":False,"color":color},
+				"lore": [
+					{"text":description,"italic":False,"color":"white"},
+				],
+				WIKI_COMPONENT: [
+					{"text":f"Portal to {dimension}.","color":"yellow"},
+					{"text":f"\n{description}","color":"gray"},
+					{"text":f"\nConsumes {usage} kW of power","color":"gray"},
+					{"text":f"\nEnergy buffer: {storage//1000 if storage >= 1000 else storage} {'MJ' if storage >= 1000 else 'kJ'}","color":"gray"},
+				],
+			}
+			for portal_name, display_name, color, description, dimension, usage, storage in [
+				("cavern_portal", "Cavern Portal", "dark_gray", "This portal allows access to a world full of caverns!", "the Cavern dimension", 20, 800),
+				("celestial_portal", "Celestial Portal", "gray", "This portal allows access to a dimension filled with floating islands", "the Celestial dimension", 20, 800),
+				("stardust_portal", "Stardust Portal", "blue", "This portal allows access to the Stardust dimension with lots of powerful mobs!", "the Stardust dimension", 100, 6000),
+				("stardust_dungeon_portal", "Stardust Dungeon Portal", "red", "This portal allows access to the dimension of the Stardust Dungeon!", "the Stardust Dungeon", 200, 12000),
+				# ("legendarium_portal", "Legendarium Portal", "red", "This portal provides access to LEGENDARIUM's dimension", "the Legendarium dimension", 250, 18000),
+				# ("solarium_portal", "Solarium Portal", "red", "This portal provides access to SOLARIUM's dimension", "the Solarium dimension", 250, 18000),
+				# ("darkium_portal", "Darkium Portal", "red", "This portal provides access to DARKIUM's dimension", "the Darkium dimension", 250, 18000),
+			]
+		},
+		"ultimate_portal": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":500, "max_storage":24000}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": [
+				{"text":"U","italic":False,"color":"dark_purple","bold":True},
+				{"text":"l","color":"blue"},
+				{"text":"t","color":"dark_aqua"},
+				{"text":"i","color":"aqua"},
+				{"text":"m","color":"green"},
+				{"text":"a","color":"yellow"},
+				{"text":"t","color":"gold"},
+				{"text":"e","color":"dark_red"},
+				{"text":" P","color":"dark_purple"},
+				{"text":"o","color":"blue"},
+				{"text":"r","color":"dark_aqua"},
+				{"text":"t","color":"aqua"},
+				{"text":"a","color":"green"},
+				{"text":"l","color":"yellow"}
+			],
+			"lore": [
+				{"text":"This portal allows access to the dimension of the Ultimate Boss!","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Portal to the Ultimate Boss dimension.","color":"yellow"},
+				{"text":"\nAccess to the most challenging content","color":"gray"},
+				{"text":"\nConsumes 500 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 24 MJ","color":"gray"},
+			],
+		},
+
+		# Other Machines
+		"growth_accelerator": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"usage":100, "max_storage":12000}},
 			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
 			"item_name": {"text":"Growth Accelerator","italic":False,"color":"green"},
 			"lore": [
@@ -546,6 +635,68 @@ def main_additions() -> None:
 				{"text":"Accelerates crop and plant growth.","color":"yellow"},
 				{"text":"\nAccelerates growth in 10-block radius","color":"gray"},
 				{"text":"\nOperates once per minute when powered","color":"gray"},
+			],
+		},
+		"mob_grinder": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": {"text":"Mob Grinder","italic":False,"color":"white"},
+			WIKI_COMPONENT: [
+				{"text":"Automated mob killing machine.","color":"yellow"},
+				{"text":"\nKills mobs in a large area around it","color":"gray"},
+				{"text":"\nConsumes 100 kW of power","color":"gray"},
+				{"text":"\nCollects drops automatically","color":"gray"},
+			],
+		},
+
+		# Generators
+		"nether_star_generator": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"generation":1500, "max_storage":30000}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": {"text":"Nether Star Generator","italic":False,"color":"white"},
+			WIKI_COMPONENT: [
+				{"text":"High-power generator using nether stars.","color":"yellow"},
+				{"text":"\nGenerates 1500 kW when supplied with nether stars","color":"gray"},
+				{"text":"\nEnergy buffer: 30 MJ","color":"gray"},
+				{"text":"\nConsumes nether stars from inventory","color":"gray"},
+			],
+		},
+		"advanced_furnace_generator": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"generation":20, "max_storage":1600}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": {"text":"Advanced Furnace Generator","italic":False,"color":"white"},
+			WIKI_COMPONENT: [
+				{"text":"Enhanced furnace generator.","color":"yellow"},
+				{"text":"\nGenerates 20 kW when supplied with fuel","color":"gray"},
+				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
+				{"text":"\nMore efficient than basic furnace generators","color":"gray"},
+			],
+		},
+		"stardust_furnace_generator": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"generation":40, "max_storage":1600}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": {"text":"Stardust Furnace Generator","italic":False,"color":"white"},
+			WIKI_COMPONENT: [
+				{"text":"Stardust-enhanced furnace generator.","color":"yellow"},
+				{"text":"\nGenerates 40 kW when supplied with fuel","color":"gray"},
+				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
+				{"text":"\nHigher efficiency than advanced generators","color":"gray"},
+			],
+		},
+		"awakened_furnace_generator": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"generation":80, "max_storage":1600}},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			"item_name": {"text":"Awakened Furnace Generator","italic":False,"color":"white"},
+			WIKI_COMPONENT: [
+				{"text":"Top-tier furnace generator with awakened stardust.","color":"yellow"},
+				{"text":"\nGenerates 80 kW when supplied with fuel","color":"gray"},
+				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
+				{"text":"\nMaximum efficiency furnace generator","color":"gray"},
 			],
 		},
 
@@ -706,12 +857,13 @@ def main_additions() -> None:
 			"consumable": {
 				"consume_seconds": 0.8,
 				"animation": "toot_horn",
-				"sound": {"sound_id": f"{ns}:life_crystal","range": 3}
+				"has_consume_particles": False,
+				"sound": {"sound_id": f"{ns}:life_crystal", "range": 3}
 			},
 			"lore": [
 				{"text":"Right-click to permanently increase","italic":False,"color":"gray"},
 				{"text":"your max health by 1 (0.5 heart)","italic":False,"color":"gray"},
-				{"text":"(Max 20 uses => +10 hearts)","italic":False,"color":"gray"},
+				{"text":"(Max 20 uses: +10 hearts)","italic":False,"color":"gray"},
 			],
 			WIKI_COMPONENT: [
 				{"text":"Crystal that increases your maximum health.","color":"yellow"},
@@ -915,33 +1067,33 @@ def main_additions() -> None:
 		"quarry_configurator": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
 			"lore": [
-				[{"keybind":"key.use","italic":False,"color":"gray"},{"text":" to set 1st coordinates","italic":False,"color":"gray"}],
-				[{"keybind":"key.sneak","italic":False,"color":"gray"},{"text":" + ","italic":False,"color":"gray"},{"keybind":"key.use","italic":False,"color":"gray"},{"text":" to set 2nd coordinates","italic":False,"color":"gray"}],
+				[{"keybind":"key.use","italic":False,"color":"white"},{"text":" to set 1st coordinates","color":"gray"}],
+				[{"keybind":"key.sneak","italic":False,"color":"white"},{"text":" + ","color":"gray"},{"keybind":"key.use"},{"text":" to set 2nd coordinates","color":"gray"}],
 			],
 			WIKI_COMPONENT: [
 				{"text":"Configurator for setting up quarries.\n","color":"yellow"},
-				{"keybind":"key.use","color":"gray"},
+				{"keybind":"key.use","color":"white"},
 				{"text":" to set the first corner of the quarry area\n","color":"gray"},
-				{"keybind":"key.sneak","color":"gray"},
+				{"keybind":"key.sneak","color":"white"},
 				{"text":" + ","color":"gray"},
-				{"keybind":"key.use","color":"gray"},
+				{"keybind":"key.use","color":"white"},
 				{"text":" to set the opposite corner of the quarry area","color":"gray"},
 				{"text":"\nFinally, just ","color":"gray"},
-				{"keybind":"key.use","color":"gray"},
+				{"keybind":"key.use","color":"white"},
 				{"text":" the quarry you want to apply the region configuration","color":"gray"},
 				{"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"},
 			],
 		},
 		"fortune_module": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
-			"max_stack_size": 3,
+			"max_stack_size": 5,
 			"lore": [
 				{"text":"Increases fortune level of the quarry","italic":False,"color":"gray"},
-				{"text":"by 1 (max 3)","italic":False,"color":"gray"},
+				{"text":"by 1 (max 5)","italic":False,"color":"gray"},
 			],
 			WIKI_COMPONENT: [
 				{"text":"Module that increases the fortune level of compatible machines.","color":"yellow"},
-				{"text":"\nEach module increases fortune by 1, up to a maximum of 3","color":"gray"},
+				{"text":"\nEach module increases fortune by 1, up to a maximum of 5","color":"gray"},
 				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
 			],
 		},

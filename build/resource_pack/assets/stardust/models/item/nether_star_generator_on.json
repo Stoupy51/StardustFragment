@@ -1,0 +1,8 @@
+{
+	"parent": "block/orientable",
+	"textures": {
+		"front": "stardust:item/nether_star_generator_front_on",
+		"side": "stardust:item/nether_star_generator_side",
+		"top": "stardust:item/nether_star_generator_top"
+	}
+}

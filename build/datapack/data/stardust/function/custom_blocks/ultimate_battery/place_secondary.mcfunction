@@ -16,7 +16,7 @@ tag @s add stardust.ultimate_battery
 tag @s add stardust.vanilla.minecraft_crying_obsidian
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.ultimate_battery"}}
+data merge entity @s {"CustomName": {"translate": "stardust.ultimate_battery","color": "dark_red"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:ultimate_battery"]

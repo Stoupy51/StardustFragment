@@ -1,0 +1,71 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"usage": 100,
+										"max_storage": 6000
+									},
+									"stardust": {
+										"stardust_portal": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"translate": "stardust_portal",
+									"italic": false,
+									"color": "blue"
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.this_portal_allows_access_to_the_stardust_dimension_with_lots_of",
+										"italic": false,
+										"color": "white"
+									},
+									{
+										"translate": "stardust.power_usage_100_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_6000_kj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:stardust_portal",
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_portal","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

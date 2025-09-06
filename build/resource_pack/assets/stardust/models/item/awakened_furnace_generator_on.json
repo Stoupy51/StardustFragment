@@ -1,0 +1,8 @@
+{
+	"parent": "block/orientable",
+	"textures": {
+		"front": "stardust:item/awakened_furnace_generator_front_on",
+		"side": "stardust:item/awakened_furnace_generator_side_on",
+		"top": "stardust:item/awakened_furnace_generator_top"
+	}
+}

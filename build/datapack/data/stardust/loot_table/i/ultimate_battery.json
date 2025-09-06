@@ -22,6 +22,10 @@
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
+								"minecraft:item_name": {
+									"translate": "stardust.ultimate_battery",
+									"color": "dark_red"
+								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.energy_storage_1000_mj",
@@ -35,9 +39,6 @@
 									]
 								],
 								"minecraft:item_model": "stardust:ultimate_battery",
-								"minecraft:item_name": {
-									"translate": "stardust.ultimate_battery"
-								},
 								"minecraft:container": [
 									{
 										"slot": 0,

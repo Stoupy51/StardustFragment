@@ -1,0 +1,71 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"usage": 20,
+										"max_storage": 800
+									},
+									"stardust": {
+										"celestial_portal": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"translate": "stardust.celestial_portal",
+									"italic": false,
+									"color": "gray"
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.this_portal_allows_access_to_a_dimension_filled_with_floating_is",
+										"italic": false,
+										"color": "white"
+									},
+									{
+										"translate": "stardust.power_usage_20_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_800_kj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:celestial_portal",
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:celestial_portal","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

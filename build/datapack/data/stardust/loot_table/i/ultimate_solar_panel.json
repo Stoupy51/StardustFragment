@@ -13,7 +13,7 @@
 								"minecraft:custom_data": {
 									"energy": {
 										"generation": 128,
-										"max_storage": 19200
+										"max_storage": 20000
 									},
 									"stardust": {
 										"ultimate_solar_panel": true
@@ -29,7 +29,7 @@
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_19_mj",
+										"translate": "stardust.energy_buffer_20_mj",
 										"italic": false,
 										"color": "gray"
 									},

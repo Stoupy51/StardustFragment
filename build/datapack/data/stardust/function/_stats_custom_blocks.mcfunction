@@ -22,6 +22,7 @@ scoreboard players add #total_vanilla_deepslate stardust.data 0
 scoreboard players add #total_vanilla_daylight_detector stardust.data 0
 scoreboard players add #total_vanilla_crying_obsidian stardust.data 0
 scoreboard players add #total_vanilla_crimson_hyphae stardust.data 0
+scoreboard players add #total_vanilla_barrel stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv5 stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv4 stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv3 stardust.data 0
@@ -36,7 +37,23 @@ scoreboard players add #total_stardust_seed stardust.data 0
 scoreboard players add #total_advanced_diamond_seed stardust.data 0
 scoreboard players add #total_diamond_seed stardust.data 0
 scoreboard players add #total_life_crystal_block stardust.data 0
+scoreboard players add #total_awakened_furnace_generator stardust.data 0
+scoreboard players add #total_stardust_furnace_generator stardust.data 0
+scoreboard players add #total_advanced_furnace_generator stardust.data 0
+scoreboard players add #total_nether_star_generator stardust.data 0
+scoreboard players add #total_mob_grinder stardust.data 0
 scoreboard players add #total_growth_accelerator stardust.data 0
+scoreboard players add #total_ultimate_portal stardust.data 0
+scoreboard players add #total_stardust_dungeon_portal stardust.data 0
+scoreboard players add #total_stardust_portal stardust.data 0
+scoreboard players add #total_celestial_portal stardust.data 0
+scoreboard players add #total_cavern_portal stardust.data 0
+scoreboard players add #total_quarry_creative stardust.data 0
+scoreboard players add #total_quarry_lv5 stardust.data 0
+scoreboard players add #total_quarry_lv4 stardust.data 0
+scoreboard players add #total_quarry_lv3 stardust.data 0
+scoreboard players add #total_quarry_lv2 stardust.data 0
+scoreboard players add #total_quarry_lv1 stardust.data 0
 scoreboard players add #total_ultimate_solar_panel stardust.data 0
 scoreboard players add #total_darkium_solar_panel stardust.data 0
 scoreboard players add #total_solarium_solar_panel stardust.data 0
@@ -105,7 +122,23 @@ tellraw @s [{"translate": "stardust.total_legendarium_solar_panel","color":"gold
 tellraw @s [{"translate": "stardust.total_solarium_solar_panel","color":"gold"},{"score":{"name":"#total_solarium_solar_panel","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_darkium_solar_panel","color":"gold"},{"score":{"name":"#total_darkium_solar_panel","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_ultimate_solar_panel","color":"gold"},{"score":{"name":"#total_ultimate_solar_panel","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_quarry_lv1","color":"gold"},{"score":{"name":"#total_quarry_lv1","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_quarry_lv2","color":"gold"},{"score":{"name":"#total_quarry_lv2","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_quarry_lv3","color":"gold"},{"score":{"name":"#total_quarry_lv3","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_quarry_lv4","color":"gold"},{"score":{"name":"#total_quarry_lv4","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_quarry_lv5","color":"gold"},{"score":{"name":"#total_quarry_lv5","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_quarry_creative","color":"gold"},{"score":{"name":"#total_quarry_creative","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_cavern_portal","color":"gold"},{"score":{"name":"#total_cavern_portal","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_celestial_portal","color":"gold"},{"score":{"name":"#total_celestial_portal","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_stardust_portal","color":"gold"},{"score":{"name":"#total_stardust_portal","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_stardust_dungeon_portal","color":"gold"},{"score":{"name":"#total_stardust_dungeon_portal","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_ultimate_portal","color":"gold"},{"score":{"name":"#total_ultimate_portal","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_growth_accelerator","color":"gold"},{"score":{"name":"#total_growth_accelerator","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_mob_grinder","color":"gold"},{"score":{"name":"#total_mob_grinder","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_nether_star_generator","color":"gold"},{"score":{"name":"#total_nether_star_generator","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_advanced_furnace_generator","color":"gold"},{"score":{"name":"#total_advanced_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_stardust_furnace_generator","color":"gold"},{"score":{"name":"#total_stardust_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_awakened_furnace_generator","color":"gold"},{"score":{"name":"#total_awakened_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_life_crystal_block","color":"gold"},{"score":{"name":"#total_life_crystal_block","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_diamond_seed","color":"gold"},{"score":{"name":"#total_diamond_seed","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_advanced_diamond_seed","color":"gold"},{"score":{"name":"#total_advanced_diamond_seed","objective":"stardust.data"},"color":"yellow"}]
@@ -120,6 +153,7 @@ tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv2","color":"gold"}
 tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv3","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv3","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv4","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv4","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv5","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv5","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.vanilla_minecraft_barrel","color":"gray"},{"score":{"name":"#total_vanilla_barrel","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_crimson_hyphae","color":"gray"},{"score":{"name":"#total_vanilla_crimson_hyphae","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_crying_obsidian","color":"gray"},{"score":{"name":"#total_vanilla_crying_obsidian","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_daylight_detector","color":"gray"},{"score":{"name":"#total_vanilla_daylight_detector","objective":"stardust.data"},"color":"white"}]

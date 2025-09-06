@@ -13,6 +13,7 @@
 								"minecraft:consumable": {
 									"consume_seconds": 0.8,
 									"animation": "toot_horn",
+									"has_consume_particles": false,
 									"sound": {
 										"sound_id": "stardust:life_crystal",
 										"range": 3

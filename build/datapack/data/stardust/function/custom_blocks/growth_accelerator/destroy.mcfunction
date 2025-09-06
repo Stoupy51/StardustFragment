@@ -6,6 +6,9 @@
 # @within	stardust:custom_blocks/_groups/minecraft_diamond_block
 #
 
+# Datapack Energy
+function energy:v1/api/break_machine
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:diamond_block"}},distance=..1] run function stardust:custom_blocks/growth_accelerator/replace_item
 

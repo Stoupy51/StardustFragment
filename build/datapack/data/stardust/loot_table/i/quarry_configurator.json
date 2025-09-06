@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									[
-										{"keybind": "key.use","italic": false,"color": "gray"},
-										{"translate": "stardust.to_set_1st_coordinates","italic": false,"color": "gray"}
+										{"keybind": "key.use","italic": false,"color": "white"},
+										{"translate": "stardust.to_set_1st_coordinates","color": "gray"}
 									],
 									[
-										{"keybind": "key.sneak","italic": false,"color": "gray"},
-										{"text": " + ","italic": false,"color": "gray"},
-										{"keybind": "key.use","italic": false,"color": "gray"},
-										{"translate": "stardust.to_set_2nd_coordinates","italic": false,"color": "gray"}
+										{"keybind": "key.sneak","italic": false,"color": "white"},
+										{"text": " + ","color": "gray"},
+										{"keybind": "key.use"},
+										{"translate": "stardust.to_set_2nd_coordinates","color": "gray"}
 									],
 									[
 										"",

@@ -303,6 +303,9 @@ def main_additions() -> None:
 			f"{tier}_cobblestone": {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 				VANILLA_BLOCK: {"id":"minecraft:deepslate" if i < 4 else "minecraft:obsidian", "apply_facing":False},
+				"lore": [
+					{"text":f"Equivalent to {9**(i+1):,} cobblestones","color":"gray","italic":False},
+				],
 				WIKI_COMPONENT: [
 					{"text":f"{tier.capitalize()} compressed cobblestone.","color":"yellow"},
 					{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
@@ -620,7 +623,6 @@ def main_additions() -> None:
 		},
 		"ultimate_bullet": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"item_name": {"text":"Ultimate Bullet","italic":False,"color":"gray"},
 			WIKI_COMPONENT: [
 				{"text":"Best ammunition for snipers.","color":"yellow"},
 				{"text":"\nCrafted from ultimate materials","color":"gray"},
@@ -634,7 +636,6 @@ def main_additions() -> None:
 				"rarity": "epic" if i == 3 else "rare",
 				"lore": [
 					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
-					{"text":f"[+{level}% {lore}]","color":"gray","italic":False},
 				],
 				"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
 				WIKI_COMPONENT: [
@@ -652,7 +653,7 @@ def main_additions() -> None:
 		},
 		"lucky_artifact_bag": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {"consume_seconds": 1024},
+			"consumable": {"consume_seconds": 1024, "has_consume_particles": False},
 			"lore": [
 				{"text":"Right-click to open and receive a random artifact.","italic":False,"color":"gray"},
 			],
@@ -677,7 +678,7 @@ def main_additions() -> None:
 		},
 		"home_travel_staff": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {"consume_seconds": 1024},
+			"consumable": {"consume_seconds": 1024, "has_consume_particles": False},
 			"max_damage": 64,
 			WIKI_COMPONENT: [
 				{"text":"Staff that teleports you to your spawn point.","color":"yellow"},
@@ -687,7 +688,7 @@ def main_additions() -> None:
 		},
 		"wormhole_potion": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {"consume_seconds": 1024},
+			"consumable": {"consume_seconds": 1024, "animation": "drink", "has_consume_particles": False},
 			"max_stack_size": 16,
 		},
 		"stardust_apple": {
@@ -708,25 +709,27 @@ def main_additions() -> None:
 				"sound": {"sound_id": f"{ns}:life_crystal","range": 3}
 			},
 			"lore": [
-				{"text":"Right-click to permanently increase max health by 1 (0.5 heart)","italic":False,"color":"gray"},
-				{"text":"Max 20 uses (+10 hearts)","italic":False,"color":"gray"},
+				{"text":"Right-click to permanently increase","italic":False,"color":"gray"},
+				{"text":"your max health by 1 (0.5 heart)","italic":False,"color":"gray"},
+				{"text":"(Max 20 uses => +10 hearts)","italic":False,"color":"gray"},
 			],
 			WIKI_COMPONENT: [
 				{"text":"Crystal that increases your maximum health.","color":"yellow"},
 				{"text":"\nFound in underground caves in the overworld","color":"gray"},
 				{"text":"\nRight-click to permanently increase max health by 1 (0.5 heart)","color":"gray"},
-				{"text":"\nMax 20 uses (+10 hearts)","color":"gray"},
+				{"text":"\nMaximum of 20 uses (+10 hearts)","color":"gray"},
 			],
 		},
 		"life_crystal_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: EQUIPMENT,
-			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":True},	# TODO: No silk touch drop even when not a VANILLA_BLOCK_FOR_ORES
-			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},
+			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":"entity"},
+			#NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},	# TODO: No silk touch drop even when not a VANILLA_BLOCK_FOR_ORES
 			WIKI_COMPONENT: [
 				{"text":"Decorative block made from life crystals.","color":"yellow"},
 				{"text":"\nFound in underground caves in the overworld","color":"gray"},
 				{"text":"\nCan be broken to retrieve a life crystal","color":"gray"},
 			],
+			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"1":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#1"},"east":{"uv":[0,0,16,16],"texture":"#1"},"south":{"uv":[0,0,16,16],"texture":"#1"},"west":{"uv":[0,0,16,16],"texture":"#1"},"up":{"uv":[0,0,16,16],"texture":"#1"},"down":{"uv":[0,0,16,16],"texture":"#1"}}}]}
 		},
 
 		# Miscellaneous
@@ -842,6 +845,117 @@ def main_additions() -> None:
 				{"text":"\nYields 1-2 darkium fragments when harvested","color":"gray"},
 			],
 		},
+		**{
+			f"cobblestone_miner_lv{i+1}": {
+				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MISC,
+				VANILLA_BLOCK: {"id":"minecraft:deepslate", "apply_facing":False},
+				"item_name": {"text":f"Cobblestone Miner Lv.{i+1}"},
+				"rarity": "rare" if i < 4 else "epic",
+				"lore": [
+					{"text":"Only mines cobblestone directly below","color":"white","italic":False},
+					{"text":f"[x{9*(5**i):,} per minute]","color":"gray","italic":False},
+				],
+				WIKI_COMPONENT: [
+					{"text":f"Cobblestone Miner Lv.{i+1}","color":"yellow"},
+					{"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"},
+					{"text":f"\nProduction rate is {9*(5**i):,} cobblestone per minute","color":"gray"},
+					{"text":"\nNo energy required","color":"gray"},
+				],
+			}
+			for i in range(5)
+		},
+		"stoupegg": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:stoupegg_consuming"}},
+			"item_name": {"text":"StoupEgg"},
+			"rarity": "epic",
+			"lore": [
+				{"text":"Summoner of the StoupArmy mini-boss","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Mystical egg that summons the StoupArmy mini-boss.","color":"yellow"},
+				{"text":"\nUpon defeat, it drops valuable early-game resources","color":"gray"},
+				{"text":"\nUse with caution, the improved wolves are strong","color":"gray"},
+				{"text":"\nand will automatically target nearby players","color":"gray"},
+			],
+		},
+		"stardust_pillar": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:pillar_consuming"}},
+			"item_name": {"text":"Stardust Pillar"},
+			"rarity": "epic",
+			"lore": [
+				{"text":"Summoner of the Stardust Pillar boss","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Mystical creature that summons the Stardust Pillar boss.","color":"yellow"},
+				{"text":"\nUpon defeat, it drops valuable mid-game resources","color":"gray"},
+				{"text":"\nalong with a Stardust Dungeon Key","color":"gray"},
+				{"text":"\n\nInspired by Terraria's Stardust Pillar,","color":"gray"},
+				{"text":"\nthe shield around the boss will be lowered after 50 enemies are killed near it","color":"gray"},
+				{"text":"\n(+15 kills required per player in the area, capped at 150)","color":"gray"},
+				{"text":"\nThen, the pillar will start to move like a normal wither","color":"gray"},
+				{"text":"\nwith more health and damage while still summoning mobs","color":"gray"},
+			],
+		},
+		"stardust_dungeon_key": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"rarity": "epic",
+			"lore": [
+				{"text":"One-time use key for the Stardust Dungeon","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Key that allows access to the Stardust Dungeon.","color":"yellow"},
+				{"text":"\nObtained by defeating the Stardust Pillar boss","color":"gray"},
+				{"text":"\nOnce used, the key will be consumed","color":"gray"},
+				{"text":"\nInside the dungeon, face challenging enemies and traps","color":"gray"},
+				{"text":"\nto earn valuable rewards","color":"gray"},
+			],
+		},
+		"quarry_configurator": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"lore": [
+				[{"keybind":"key.use","italic":False,"color":"gray"},{"text":" to set 1st coordinates","italic":False,"color":"gray"}],
+				[{"keybind":"key.sneak","italic":False,"color":"gray"},{"text":" + ","italic":False,"color":"gray"},{"keybind":"key.use","italic":False,"color":"gray"},{"text":" to set 2nd coordinates","italic":False,"color":"gray"}],
+			],
+			WIKI_COMPONENT: [
+				{"text":"Configurator for setting up quarries.\n","color":"yellow"},
+				{"keybind":"key.use","color":"gray"},
+				{"text":" to set the first corner of the quarry area\n","color":"gray"},
+				{"keybind":"key.sneak","color":"gray"},
+				{"text":" + ","color":"gray"},
+				{"keybind":"key.use","color":"gray"},
+				{"text":" to set the opposite corner of the quarry area","color":"gray"},
+				{"text":"\nFinally, just ","color":"gray"},
+				{"keybind":"key.use","color":"gray"},
+				{"text":" the quarry you want to apply the region configuration","color":"gray"},
+				{"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"},
+			],
+		},
+		"fortune_module": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"max_stack_size": 3,
+			"lore": [
+				{"text":"Increases fortune level of the quarry","italic":False,"color":"gray"},
+				{"text":"by 1 (max 3)","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Module that increases the fortune level of compatible machines.","color":"yellow"},
+				{"text":"\nEach module increases fortune by 1, up to a maximum of 3","color":"gray"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			],
+		},
+		"silk_touch_module": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"max_stack_size": 1,
+			"lore": [
+				{"text":"Enables silk touch enchantment for the quarry","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Module that enables silk touch enchantment for compatible machines.","color":"yellow"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			],
+		}
 	}
 
 	# Vanilla block for cables

@@ -14,15 +14,27 @@ from stewbeet import (
 	WIKI_COMPONENT,
 	JsonDict,
 	Mem,
+	TextComponent,
 	ingr_repr,
 )
 from stouputils.print import info
 
+# Constants
+SNIPER_BULLETS_WIKI: list[TextComponent] = [
+	{"text":"\nPossible bullet types:","color":"gray"},
+	{"text":"\n- Copper nugget: +3 damage","color":"gray"},
+	{"text":"\n- Iron nugget: +5 damage","color":"gray"},
+	{"text":"\n- Gold nugget: +7 damage","color":"gray"},
+	{"text":"\n- Stardust Essence: +10 damage","color":"gray"},
+	{"text":"\n- Awakened Stardust: +20 damage","color":"gray"},
+	{"text":"\n- Ultimate bullet: +35 damage","color":"gray"},
+]
 
 def main_additions() -> None:
 	ENERGY: str = "energy"
 	MATERIALS: str = "materials"
 	MISC: str = "miscellaneous"
+	EQUIPMENT: str = "equipment"
 	ns: str = Mem.ctx.project_id
 
 	# Give Additional data for every item
@@ -531,11 +543,95 @@ def main_additions() -> None:
 				{"text":"\nOperates once per minute when powered","color":"gray"},
 			],
 		},
+
+		# Equipments
+		"stardust_bow": {
+			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
+			"max_damage": 768,	# x2 the durability of regular bow (384)
+			WIKI_COMPONENT: [
+				{"text":"Bow crafted from stardust materials.","color":"yellow"},
+				{"text":"\nHigher durability (x2) and power (x1.5) than regular bows","color":"gray"},
+				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},	# TODO: Implement this behavior
+			],
+		},
+		"awakened_stardust_bow": {
+			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
+			"max_damage": 1536,	# x4 the durability of regular bow (384)
+			WIKI_COMPONENT: [
+				{"text":"Bow crafted from awakened stardust materials.","color":"yellow"},
+				{"text":"\nHigher durability (x4) and power (x2) than regular bows","color":"gray"},
+				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
+			],
+		},
+		"ultimate_bow": {
+			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
+			"max_damage": 3072,	# x8 the durability of regular bow (384)
+			WIKI_COMPONENT: [
+				{"text":"Bow crafted from ultimate stardust materials.","color":"yellow"},
+				{"text":"\nHigher durability (x8) and power (x4) than regular bows","color":"gray"},
+				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
+			],
+		},
+		"stardust_sniper": {
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			"max_damage": 672,
+			WIKI_COMPONENT: [
+				{"text":"Sniper crafted from stardust materials.","color":"yellow"},
+				{"text":"\nBase damage: 6","color":"gray"},
+				{"text":"\nCooldown: 1.00s","color":"gray"},
+				*SNIPER_BULLETS_WIKI,
+			],
+		},
+		"awakened_stardust_sniper": {
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			"max_damage": 1344,
+			WIKI_COMPONENT: [
+				{"text":"Sniper crafted from awakened stardust materials.","color":"yellow"},
+				{"text":"\nBase damage: 12","color":"gray"},
+				{"text":"\nCooldown: 0.75s","color":"gray"},
+				*SNIPER_BULLETS_WIKI,
+			],
+		},
+		"ultimate_sniper": {
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			"max_damage": 2688,
+			WIKI_COMPONENT: [
+				{"text":"Sniper crafted from ultimate stardust materials.","color":"yellow"},
+				{"text":"\nBase damage: 24","color":"gray"},
+				{"text":"\nCooldown: 0.50s","color":"gray"},
+				*SNIPER_BULLETS_WIKI,
+			],
+		},
+		**{
+			f"{artifact}_artifact_lv{i+1 if i < 3 else 'max'}": {
+				"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+				"item_name": {"text":f"{artifact.capitalize()} Artifact Lv.{i+1 if i < 3 else 'Max'}"},
+				"rarity": "epic" if i == 3 else "rare",
+				"lore": [
+					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
+				],
+				"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
+				WIKI_COMPONENT: [
+					{"text":f"Lv.{i+1 if i < 3 else 'Max'} {artifact} Artifact","color":"yellow"},
+					{"text":f"\nHold in any hand to get the {artifact} effect","color":"gray"},
+					{"text":f"\n[+{level}% {lore}]","color":"gray"},
+				],
+			}
+			for artifact, lore, attribute, levels in (
+				("health", "Health Points", "max_health", (10, 20, 30, 50)),
+				("damage", "Damage", "attack_damage", (10, 20, 30, 50)),
+				("speed", "Base Speed", "movement_speed", (10, 15, 20, 25))
+			)
+			for i, level in enumerate(levels)
+		},
 	}
+
+	# Vanilla block for cables
 	additions["stardust_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["stardust_cable"]["profile"]) + "}"}
 	additions["awakened_stardust_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["awakened_stardust_cable"]["profile"]) + "}"}
 	additions["ultimate_cable"][VANILLA_BLOCK] = {"apply_facing": False, "id": "minecraft:player_head{profile:" + str(additions["ultimate_cable"]["profile"]) + "}"}
 
+	# Manual item and recipes
 	additions["manual"] = {
 		"id": "minecraft:written_book", "category": MISC,
 		RESULT_OF_CRAFTING: [

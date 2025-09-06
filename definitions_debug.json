@@ -1002,6 +1002,198 @@
 		"item_name": {"text": "Darkium Axe"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
+	"stardust_bow": {
+		"id": "minecraft:bow",
+		"category": "equipment",
+		"max_damage": 768,
+		"wiki_components": [{"text": "Bow crafted from stardust materials.","color": "yellow"},{"text": "\nHigher durability (x2) and power (x1.5) than regular bows","color": "gray"},{"text": "\nShooting while sneaking makes no gravity arrows","color": "gray"}],
+		"item_model": "stardust:stardust_bow",
+		"item_name": {"text": "Stardust Bow"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"awakened_stardust_bow": {
+		"id": "minecraft:bow",
+		"category": "equipment",
+		"max_damage": 1536,
+		"wiki_components": [{"text": "Bow crafted from awakened stardust materials.","color": "yellow"},{"text": "\nHigher durability (x4) and power (x2) than regular bows","color": "gray"},{"text": "\nShooting while sneaking makes no gravity arrows","color": "gray"}],
+		"item_model": "stardust:awakened_stardust_bow",
+		"item_name": {"text": "Awakened Stardust Bow"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"awakened_stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_bow": {
+		"id": "minecraft:bow",
+		"category": "equipment",
+		"max_damage": 3072,
+		"wiki_components": [{"text": "Bow crafted from ultimate stardust materials.","color": "yellow"},{"text": "\nHigher durability (x8) and power (x4) than regular bows","color": "gray"},{"text": "\nShooting while sneaking makes no gravity arrows","color": "gray"}],
+		"item_model": "stardust:ultimate_bow",
+		"item_name": {"text": "Ultimate Bow"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"ultimate_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_sniper": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"category": "equipment",
+		"max_damage": 672,
+		"wiki_components": [{"text": "Sniper crafted from stardust materials.","color": "yellow"},{"text": "\nBase damage: 6","color": "gray"},{"text": "\nCooldown: 1.00s","color": "gray"},{"text": "\nPossible bullet types:","color": "gray"},{"text": "\n- Copper nugget: +3 damage","color": "gray"},{"text": "\n- Iron nugget: +5 damage","color": "gray"},{"text": "\n- Gold nugget: +7 damage","color": "gray"},{"text": "\n- Stardust Essence: +10 damage","color": "gray"},{"text": "\n- Awakened Stardust: +20 damage","color": "gray"},{"text": "\n- Ultimate bullet: +35 damage","color": "gray"}],
+		"item_model": "stardust:stardust_sniper",
+		"item_name": {"text": "Stardust Sniper"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"awakened_stardust_sniper": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"category": "equipment",
+		"max_damage": 1344,
+		"wiki_components": [{"text": "Sniper crafted from awakened stardust materials.","color": "yellow"},{"text": "\nBase damage: 12","color": "gray"},{"text": "\nCooldown: 0.75s","color": "gray"},{"text": "\nPossible bullet types:","color": "gray"},{"text": "\n- Copper nugget: +3 damage","color": "gray"},{"text": "\n- Iron nugget: +5 damage","color": "gray"},{"text": "\n- Gold nugget: +7 damage","color": "gray"},{"text": "\n- Stardust Essence: +10 damage","color": "gray"},{"text": "\n- Awakened Stardust: +20 damage","color": "gray"},{"text": "\n- Ultimate bullet: +35 damage","color": "gray"}],
+		"item_model": "stardust:awakened_stardust_sniper",
+		"item_name": {"text": "Awakened Stardust Sniper"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"awakened_stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_sniper": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"category": "equipment",
+		"max_damage": 2688,
+		"wiki_components": [{"text": "Sniper crafted from ultimate stardust materials.","color": "yellow"},{"text": "\nBase damage: 24","color": "gray"},{"text": "\nCooldown: 0.50s","color": "gray"},{"text": "\nPossible bullet types:","color": "gray"},{"text": "\n- Copper nugget: +3 damage","color": "gray"},{"text": "\n- Iron nugget: +5 damage","color": "gray"},{"text": "\n- Gold nugget: +7 damage","color": "gray"},{"text": "\n- Stardust Essence: +10 damage","color": "gray"},{"text": "\n- Awakened Stardust: +20 damage","color": "gray"},{"text": "\n- Ultimate bullet: +35 damage","color": "gray"}],
+		"item_model": "stardust:ultimate_sniper",
+		"item_name": {"text": "Ultimate Sniper"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"ultimate_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"health_artifact_lv1": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Health Artifact Lv.1"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "max_health","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
+		"wiki_components": [{"text": "Lv.1 health Artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+10% Health Points]","color": "gray"}],
+		"item_model": "stardust:health_artifact_lv1",
+		"custom_data": {"stardust": {"health_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"health_artifact_lv2": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Health Artifact Lv.2"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "max_health","amount": 0.2,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
+		"wiki_components": [{"text": "Lv.2 health Artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+20% Health Points]","color": "gray"}],
+		"item_model": "stardust:health_artifact_lv2",
+		"custom_data": {"stardust": {"health_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"health_artifact_lv3": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Health Artifact Lv.3"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "max_health","amount": 0.3,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
+		"wiki_components": [{"text": "Lv.3 health Artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+30% Health Points]","color": "gray"}],
+		"item_model": "stardust:health_artifact_lv3",
+		"custom_data": {"stardust": {"health_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"health_artifact_lvmax": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Health Artifact Lv.Max"},
+		"rarity": "epic",
+		"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "max_health","amount": 0.5,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
+		"wiki_components": [{"text": "Lv.Max health Artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+50% Health Points]","color": "gray"}],
+		"item_model": "stardust:health_artifact_lvmax",
+		"custom_data": {"stardust": {"health_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"damage_artifact_lv1": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Damage Artifact Lv.1"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
+		"wiki_components": [{"text": "Lv.1 damage Artifact","color": "yellow"},{"text": "\nHold in any hand to get the damage effect","color": "gray"},{"text": "\n[+10% Damage]","color": "gray"}],
+		"item_model": "stardust:damage_artifact_lv1",
+		"custom_data": {"stardust": {"damage_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"damage_artifact_lv2": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Damage Artifact Lv.2"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 0.2,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
+		"wiki_components": [{"text": "Lv.2 damage Artifact","color": "yellow"},{"text": "\nHold in any hand to get the damage effect","color": "gray"},{"text": "\n[+20% Damage]","color": "gray"}],
+		"item_model": "stardust:damage_artifact_lv2",
+		"custom_data": {"stardust": {"damage_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"damage_artifact_lv3": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Damage Artifact Lv.3"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 0.3,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
+		"wiki_components": [{"text": "Lv.3 damage Artifact","color": "yellow"},{"text": "\nHold in any hand to get the damage effect","color": "gray"},{"text": "\n[+30% Damage]","color": "gray"}],
+		"item_model": "stardust:damage_artifact_lv3",
+		"custom_data": {"stardust": {"damage_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"damage_artifact_lvmax": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Damage Artifact Lv.Max"},
+		"rarity": "epic",
+		"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "attack_damage","amount": 0.5,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
+		"wiki_components": [{"text": "Lv.Max damage Artifact","color": "yellow"},{"text": "\nHold in any hand to get the damage effect","color": "gray"},{"text": "\n[+50% Damage]","color": "gray"}],
+		"item_model": "stardust:damage_artifact_lvmax",
+		"custom_data": {"stardust": {"damage_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"speed_artifact_lv1": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Speed Artifact Lv.1"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "movement_speed","amount": 0.1,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
+		"wiki_components": [{"text": "Lv.1 speed Artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+10% Base Speed]","color": "gray"}],
+		"item_model": "stardust:speed_artifact_lv1",
+		"custom_data": {"stardust": {"speed_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"speed_artifact_lv2": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Speed Artifact Lv.2"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "movement_speed","amount": 0.15,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
+		"wiki_components": [{"text": "Lv.2 speed Artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+15% Base Speed]","color": "gray"}],
+		"item_model": "stardust:speed_artifact_lv2",
+		"custom_data": {"stardust": {"speed_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"speed_artifact_lv3": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Speed Artifact Lv.3"},
+		"rarity": "rare",
+		"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "movement_speed","amount": 0.2,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
+		"wiki_components": [{"text": "Lv.3 speed Artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+20% Base Speed]","color": "gray"}],
+		"item_model": "stardust:speed_artifact_lv3",
+		"custom_data": {"stardust": {"speed_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"speed_artifact_lvmax": {
+		"id": "minecraft:command_block",
+		"category": "equipment",
+		"item_name": {"text": "Speed Artifact Lv.Max"},
+		"rarity": "epic",
+		"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"attribute_modifiers": [{"type": "movement_speed","amount": 0.25,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
+		"wiki_components": [{"text": "Lv.Max speed Artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+25% Base Speed]","color": "gray"}],
+		"item_model": "stardust:speed_artifact_lvmax",
+		"custom_data": {"stardust": {"speed_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"dog_excrement": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",

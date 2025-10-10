@@ -87,7 +87,7 @@ def main_additions() -> None:
 		"awakened_stardust_ore": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: {"id": "awakened_stardust", "count": {"min": 2, "max": 8}},	# TODO: Add in the manual that mining this ore drops this item
+			NO_SILK_TOUCH_DROP: {"id": "awakened_stardust", "count": {"min": 2, "max": 8}},
 			WIKI_COMPONENT: [
 				{"text":"Variant of the nether stardust ore.","color":"yellow"},
 				{"text":"\nFound throughout the Nether dimension","color":"gray"},
@@ -887,7 +887,7 @@ def main_additions() -> None:
 		# Miscellaneous
 		"diamond_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"contents": True},
+			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
 			GROWING_SEED: {"texture_basename":"diamond","stages":3,"seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":2}]},	# TODO: Implement + fortune support + verify definitions
 			"lore": [
 				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},

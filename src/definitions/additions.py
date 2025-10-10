@@ -875,13 +875,13 @@ def main_additions() -> None:
 		"life_crystal_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: EQUIPMENT,
 			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":"entity"},
-			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},	# TODO: No silk touch drop even when not a VANILLA_BLOCK_FOR_ORES
+			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},
 			WIKI_COMPONENT: [
 				{"text":"Decorative block made from life crystals.","color":"yellow"},
 				{"text":"\nFound in underground caves in the overworld","color":"gray"},
 				{"text":"\nCan be broken to retrieve a life crystal","color":"gray"},
 			],
-			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"1":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#1"},"east":{"uv":[0,0,16,16],"texture":"#1"},"south":{"uv":[0,0,16,16],"texture":"#1"},"west":{"uv":[0,0,16,16],"texture":"#1"},"up":{"uv":[0,0,16,16],"texture":"#1"},"down":{"uv":[0,0,16,16],"texture":"#1"}}}]}
+			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"all":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"name":"crystal","from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#all"},"east":{"uv":[0,0,16,16],"texture":"#all"},"south":{"uv":[0,0,16,16],"texture":"#all"},"west":{"uv":[0,0,16,16],"texture":"#all"},"up":{"uv":[0,0,16,16],"texture":"#all"},"down":{"uv":[0,0,16,16],"texture":"#all"}}}]}
 		},
 
 		# Miscellaneous

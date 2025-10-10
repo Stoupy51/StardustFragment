@@ -9,3 +9,6 @@
 data modify entity @s Item.components set from storage stardust:items all.diamond_seed.components
 data modify entity @s Item.id set from storage stardust:items all.diamond_seed.id
 
+# Check if the seed is fully grown
+function stardust:custom_blocks/diamond_seed/is_fully_grown
+

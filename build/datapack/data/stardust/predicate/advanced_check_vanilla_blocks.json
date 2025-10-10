@@ -17,7 +17,6 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_polished_deepslate\"]}","location": {"block": {"blocks": "minecraft:polished_deepslate"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_redstone_block\"]}","location": {"block": {"blocks": "minecraft:redstone_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_warped_hyphae\"]}","location": {"block": {"blocks": "minecraft:warped_hyphae"}}}},
-		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_waxed_copper_block\"]}","location": {"block": {"blocks": "minecraft:waxed_copper_block"}}}},
-		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_item_frame\"]}","slots": {"contents": {"predicates": {"minecraft:custom_data": {"stardust": {"item_frame_destroy": true}}}}}}}
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_waxed_copper_block\"]}","location": {"block": {"blocks": "minecraft:waxed_copper_block"}}}}
 	]
 }

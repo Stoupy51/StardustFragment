@@ -4,9 +4,10 @@
 # @within	???
 #
 
+scoreboard players add #minute_entities stardust.data 0
 scoreboard players add #second_entities stardust.data 0
+scoreboard players add #total_growing_seeds stardust.data 0
 scoreboard players add #total_custom_blocks stardust.data 0
-scoreboard players add #total_vanilla_item_frame stardust.data 0
 scoreboard players add #total_vanilla_waxed_copper_block stardust.data 0
 scoreboard players add #total_vanilla_warped_hyphae stardust.data 0
 scoreboard players add #total_vanilla_redstone_block stardust.data 0
@@ -171,7 +172,8 @@ tellraw @s [{"translate": "stardust.vanilla_minecraft_polished_deepslate","color
 tellraw @s [{"translate": "stardust.vanilla_minecraft_redstone_block","color":"gray"},{"score":{"name":"#total_vanilla_redstone_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_warped_hyphae","color":"gray"},{"score":{"name":"#total_vanilla_warped_hyphae","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_waxed_copper_block","color":"gray"},{"score":{"name":"#total_vanilla_waxed_copper_block","objective":"stardust.data"},"color":"white"}]
-tellraw @s [{"translate": "stardust.vanilla_minecraft_item_frame","color":"gray"},{"score":{"name":"#total_vanilla_item_frame","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.total_custom_blocks","color":"dark_aqua"},{"score":{"name":"#total_custom_blocks","objective":"stardust.data"},"color":"aqua"}]
+tellraw @s [{"translate": "stardust.total_growing_seeds","color":"dark_aqua"},{"score":{"name":"#total_growing_seeds","objective":"stardust.data"},"color":"aqua"}]
 tellraw @s [{"translate": "stardust.second_tag_function","color":"green"},{"score":{"name":"#second_entities","objective":"stardust.data"},"color":"dark_green"}]
+tellraw @s [{"translate": "stardust.minute_tag_function","color":"green"},{"score":{"name":"#minute_entities","objective":"stardust.data"},"color":"dark_green"}]
 

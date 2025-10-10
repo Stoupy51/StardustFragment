@@ -1439,6 +1439,7 @@
 		"id": "minecraft:furnace",
 		"category": "equipment",
 		"vanilla_block": {"id": "minecraft:glass","apply_facing": "entity"},
+		"no_silk_touch_drop": {"id": "life_crystal","count": 1},
 		"wiki_components": [{"text": "Decorative block made from life crystals.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nCan be broken to retrieve a life crystal","color": "gray"}],
 		"item_model": "stardust:life_crystal_block",
 		"item_name": {"text": "Life Crystal Block"},
@@ -1458,9 +1459,9 @@
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
 		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
-		"staged_seed": {"texture_basename": "diamond","seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","min_count": 0,"max_count": 2}]},
+		"staged_seed": {"texture_basename": "diamond","seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","rolls": {"type": "minecraft:uniform","min": 0,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-2 diamonds when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-2 diamonds when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
 		"item_model": "stardust:diamond_seed",
 		"item_name": {"text": "Diamond Seed"},
 		"custom_data": {"stardust": {"diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1468,10 +1469,10 @@
 	"advanced_diamond_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "advanced_diamond","seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","min_count": 0,"max_count": 24}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "advanced_diamond","seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","rolls": {"type": "minecraft:uniform","min": 0,"max": 24},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-24 diamonds when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-24 diamonds when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
 		"item_model": "stardust:advanced_diamond_seed",
 		"item_name": {"text": "Advanced Diamond Seed"},
 		"custom_data": {"stardust": {"advanced_diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1479,10 +1480,10 @@
 	"stardust_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "stardust","seconds": 480,"planted_on": "diamond_block","loots": [{"id": "stardust_fragment","min_count": 3,"max_count": 9}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "stardust","seconds": 480,"planted_on": "diamond_block","loots": [{"id": "stardust_fragment","rolls": {"type": "minecraft:uniform","min": 3,"max": 9},"fortune": {"extra": 0,"probability": 0.5}}]},
 		"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows stardust fragments.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 8 minutes","color": "gray"},{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows stardust fragments.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 8 minutes","color": "gray"},{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+50% per level)","color": "gray"}],
 		"item_model": "stardust:stardust_seed",
 		"item_name": {"text": "Stardust Seed"},
 		"custom_data": {"stardust": {"stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1490,10 +1491,10 @@
 	"advanced_stardust_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "advanced_stardust","seconds": 960,"planted_on": "diamond_block","loots": [{"id": "stardust_ingot","min_count": 1,"max_count": 4}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "advanced_stardust","seconds": 960,"planted_on": "diamond_block","loots": [{"id": "stardust_ingot","rolls": {"type": "minecraft:uniform","min": 1,"max": 4},"fortune": {"extra": 0,"probability": 0.3}}]},
 		"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows stardust ingots.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 16 minutes","color": "gray"},{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows stardust ingots.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 16 minutes","color": "gray"},{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"},{"text": "\nFortune effect applies (+30% per level)","color": "gray"}],
 		"item_model": "stardust:advanced_stardust_seed",
 		"item_name": {"text": "Advanced Stardust Seed"},
 		"custom_data": {"stardust": {"advanced_stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1501,10 +1502,10 @@
 	"elite_stardust_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "elite_stardust","seconds": 1920,"planted_on": "diamond_block","loots": [{"id": "stardust_essence","min_count": 1,"max_count": 2}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "elite_stardust","seconds": 1920,"planted_on": "diamond_block","loots": [{"id": "stardust_essence","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.2}}]},
 		"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows stardust essences.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 32 minutes","color": "gray"},{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows stardust essences.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 32 minutes","color": "gray"},{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"},{"text": "\nFortune effect applies (+20% per level)","color": "gray"}],
 		"item_model": "stardust:elite_stardust_seed",
 		"item_name": {"text": "Elite Stardust Seed"},
 		"custom_data": {"stardust": {"elite_stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1512,10 +1513,10 @@
 	"legendarium_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "legendarium","seconds": 3840,"planted_on": "emerald_block","loots": [{"id": "legendarium_fragment","min_count": 1,"max_count": 2}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "legendarium","seconds": 3840,"planted_on": "emerald_block","loots": [{"id": "legendarium_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on emerald block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows legendarium.","color": "yellow"},{"text": "\nCan only be planted on emerald blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 legendarium fragments when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows legendarium.","color": "yellow"},{"text": "\nCan only be planted on emerald blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 legendarium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
 		"item_model": "stardust:legendarium_seed",
 		"item_name": {"text": "Legendarium Seed"},
 		"custom_data": {"stardust": {"legendarium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1523,10 +1524,10 @@
 	"solarium_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "solarium","seconds": 3840,"planted_on": "magma_block","loots": [{"id": "solarium_fragment","min_count": 1,"max_count": 2}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "solarium","seconds": 3840,"planted_on": "magma_block","loots": [{"id": "solarium_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on magma block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows solarium.","color": "yellow"},{"text": "\nCan only be planted on magma blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 solarium fragments when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows solarium.","color": "yellow"},{"text": "\nCan only be planted on magma blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 solarium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
 		"item_model": "stardust:solarium_seed",
 		"item_name": {"text": "Solarium Seed"},
 		"custom_data": {"stardust": {"solarium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1534,10 +1535,10 @@
 	"darkium_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
-		"staged_seed": {"texture_basename": "darkium","seconds": 3840,"planted_on": "obsidian","loots": [{"id": "darkium_fragment","min_count": 1,"max_count": 2}]},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
+		"staged_seed": {"texture_basename": "darkium","seconds": 3840,"planted_on": "obsidian","loots": [{"id": "darkium_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on obsidian.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Magical seed that grows darkium.","color": "yellow"},{"text": "\nCan only be planted on obsidian","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 darkium fragments when harvested","color": "gray"}],
+		"wiki_components": [{"text": "Magical seed that grows darkium.","color": "yellow"},{"text": "\nCan only be planted on obsidian","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 darkium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
 		"item_model": "stardust:darkium_seed",
 		"item_name": {"text": "Darkium Seed"},
 		"custom_data": {"stardust": {"darkium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}

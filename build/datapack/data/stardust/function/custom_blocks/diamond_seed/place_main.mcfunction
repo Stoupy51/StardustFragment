@@ -16,5 +16,6 @@ tag @s remove stardust.placer
 scoreboard players add #total_custom_blocks stardust.data 1
 scoreboard players add #total_vanilla_moss_carpet stardust.data 1
 scoreboard players add #total_diamond_seed stardust.data 1
+scoreboard players add #total_growing_seeds stardust.data 1
 kill @s[type=item_frame]
 

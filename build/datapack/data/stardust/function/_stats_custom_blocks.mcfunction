@@ -14,6 +14,7 @@ scoreboard players add #total_vanilla_polished_deepslate stardust.data 0
 scoreboard players add #total_vanilla_player_head stardust.data 0
 scoreboard players add #total_vanilla_obsidian stardust.data 0
 scoreboard players add #total_vanilla_netherite_block stardust.data 0
+scoreboard players add #total_vanilla_moss_carpet stardust.data 0
 scoreboard players add #total_vanilla_lapis_block stardust.data 0
 scoreboard players add #total_vanilla_glass stardust.data 0
 scoreboard players add #total_vanilla_emerald_block stardust.data 0
@@ -162,6 +163,7 @@ tellraw @s [{"translate": "stardust.vanilla_minecraft_diamond_block","color":"gr
 tellraw @s [{"translate": "stardust.vanilla_minecraft_emerald_block","color":"gray"},{"score":{"name":"#total_vanilla_emerald_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_glass","color":"gray"},{"score":{"name":"#total_vanilla_glass","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_lapis_block","color":"gray"},{"score":{"name":"#total_vanilla_lapis_block","objective":"stardust.data"},"color":"white"}]
+tellraw @s [{"translate": "stardust.vanilla_minecraft_moss_carpet","color":"gray"},{"score":{"name":"#total_vanilla_moss_carpet","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_netherite_block","color":"gray"},{"score":{"name":"#total_vanilla_netherite_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_obsidian","color":"gray"},{"score":{"name":"#total_vanilla_obsidian","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_player_head","color":"gray"},{"score":{"name":"#total_vanilla_player_head","objective":"stardust.data"},"color":"white"}]

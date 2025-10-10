@@ -1457,7 +1457,7 @@
 	"diamond_seed": {
 		"id": "minecraft:item_frame",
 		"category": "miscellaneous",
-		"vanilla_block": {"contents": true},
+		"vanilla_block": {"id": "minecraft:moss_carpet","apply_facing": false},
 		"staged_seed": {"texture_basename": "diamond","stages": 3,"seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","min_count": 0,"max_count": 2}]},
 		"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-2 diamonds when harvested","color": "gray"}],

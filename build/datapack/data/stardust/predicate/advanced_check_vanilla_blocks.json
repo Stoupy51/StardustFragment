@@ -10,6 +10,7 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_emerald_block\"]}","location": {"block": {"blocks": "minecraft:emerald_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_glass\"]}","location": {"block": {"blocks": "minecraft:glass"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_lapis_block\"]}","location": {"block": {"blocks": "minecraft:lapis_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_moss_carpet\"]}","location": {"block": {"blocks": "minecraft:moss_carpet"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_netherite_block\"]}","location": {"block": {"blocks": "minecraft:netherite_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_obsidian\"]}","location": {"block": {"blocks": "minecraft:obsidian"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_player_head\"]}","location": {"block": {"blocks": "minecraft:player_head"}}}},

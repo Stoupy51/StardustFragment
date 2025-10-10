@@ -7,7 +7,6 @@
 #			stardust:calls/common_signals/item_frame_destroy_alt [ as @n[type=item,nbt={Item:{id:"minecraft:item_frame"}},distance=..1] ]
 #
 
-execute if score #total_diamond_seed stardust.data matches 1.. if entity @s[tag=stardust.diamond_seed] run function stardust:custom_blocks/diamond_seed/destroy
 execute if score #total_advanced_diamond_seed stardust.data matches 1.. if entity @s[tag=stardust.advanced_diamond_seed] run function stardust:custom_blocks/advanced_diamond_seed/destroy
 execute if score #total_stardust_seed stardust.data matches 1.. if entity @s[tag=stardust.stardust_seed] run function stardust:custom_blocks/stardust_seed/destroy
 execute if score #total_advanced_stardust_seed stardust.data matches 1.. if entity @s[tag=stardust.advanced_stardust_seed] run function stardust:custom_blocks/advanced_stardust_seed/destroy

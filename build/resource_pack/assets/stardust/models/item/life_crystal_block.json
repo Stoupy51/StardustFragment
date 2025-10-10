@@ -1,12 +1,13 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"1": "minecraft:block/glass",
+		"all": "minecraft:block/glass",
 		"down": "stardust:item/life_crystal_block",
 		"particle": "minecraft:block/glass"
 	},
 	"elements": [
 		{
+			"name": "crystal",
 			"from": [
 				2,
 				2,
@@ -35,12 +36,12 @@
 				16
 			],
 			"faces": {
-				"north": {"uv": [0,0,16,16],"texture": "#1"},
-				"east": {"uv": [0,0,16,16],"texture": "#1"},
-				"south": {"uv": [0,0,16,16],"texture": "#1"},
-				"west": {"uv": [0,0,16,16],"texture": "#1"},
-				"up": {"uv": [0,0,16,16],"texture": "#1"},
-				"down": {"uv": [0,0,16,16],"texture": "#1"}
+				"north": {"uv": [0,0,16,16],"texture": "#all"},
+				"east": {"uv": [0,0,16,16],"texture": "#all"},
+				"south": {"uv": [0,0,16,16],"texture": "#all"},
+				"west": {"uv": [0,0,16,16],"texture": "#all"},
+				"up": {"uv": [0,0,16,16],"texture": "#all"},
+				"down": {"uv": [0,0,16,16],"texture": "#all"}
 			}
 		}
 	]

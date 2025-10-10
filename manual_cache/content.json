@@ -9,15 +9,15 @@
 		{"text": "","font": "stardust:manual","color": "white"},
 		{"text": "Heavy Workbench\n","font": "minecraft:default","color": "black","underlined": true},
 		"\"A\n\"",
-		{"text": "$艌$艌$艌\n","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+		{"text": "$艔$艔$艔\n","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
 		"\"",
 		{"text": "`$`$`$\n","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
 		"\"",
-		{"text": "$艌","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
-		{"text": "$艍","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
-		{"text": "$艌","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+		{"text": "$艔","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
+		{"text": "$艕","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
+		{"text": "$艔","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
 		"\"\"",
-		{"text": "$$艋\n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench"}}},
+		{"text": "$$艓\n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench"}}},
 		"\"",
 		{"text": "`$","hover_event": {"action": "show_item","id": "minecraft:oak_log","components": {}}},
 		{"text": "`$","hover_event": {"action": "show_item","id": "minecraft:crafting_table","components": {}}},
@@ -25,7 +25,7 @@
 		"\"\"",
 		{"text": "`$\n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": "Heavy Workbench"}}},
 		"\"",
-		{"text": "$艎$艎$艎\n","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
+		{"text": "$艖$艖$艖\n","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
 		"\"",
 		{"text": "`$`$`$\n","hover_event": {"action": "show_item","id": "minecraft:smooth_stone","components": {}}},
 		[{"text": "\nEvery recipe that uses custom items ","font": "minecraft:default","color": "black"},{"text": "must","color": "red","underlined": true}," be crafted using the Heavy Workbench."]
@@ -2359,28 +2359,34 @@
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
 		{"text": "Life Crystal\n","font": "minecraft:default","color": "black","underlined": true},
-		"!!Ⴚ\n!!",
-		{"text": "  \n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}},"click_event": {"action": "change_page","page": 155}},
-		"!!",
-		{"text": "  \n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}},"click_event": {"action": "change_page","page": 155}},
-		"!!",
-		{"text": "  \n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}},"click_event": {"action": "change_page","page": 155}},
-		"!!",
-		{"text": "  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}},"click_event": {"action": "change_page","page": 155}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Crystal that increases your maximum health.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nRight-click to permanently increase max health by 1 (0.5 heart)","color": "gray"},{"text": "\nMaximum of 20 uses (+10 hearts)","color": "gray"}]}}
+		"\"E\n\n\n\"",
+		{"text": "$腁","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 156}},
+		"\"\"\"\"#`$",
+		{"text": "$$舭\n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}}},
+		"\"",
+		{"text": "`$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 156}},
+		"\"\"\"\"#`$",
+		{"text": "`$\n\n\n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}}},
+		{"text": "1##","hover_event": {"action": "show_text","value": [{"text": "Crystal that increases your maximum health.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nRight-click to permanently increase max health by 1 (0.5 heart)","color": "gray"},{"text": "\nMaximum of 20 uses (+10 hearts)","color": "gray"}]}},
+		{"text": "舱\n","hover_event": {"action": "show_text","value": [{"text": "Mining\n","color": "yellow"},{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"U\n","\n\n","\"",{"text": "$腁"},"\"\"\"\"#`$",{"text": "$$舭"},"\n","\"",{"text": "`$"},"\"\"\"\"#`$",{"text": "`$"},"\n","\n"],{"text": "\n- Mine: ","color": "gray"},{"text": "Life Crystal Block","color": "gray"},{"text": "\n- Drops: x1 ","color": "gray"},{"text": "Life Crystal","color": "gray"}]},"click_event": {"action": "change_page","page": 156,"blue_craft": false}},
+		{"text": "0##","hover_event": {"action": "show_text","value": [{"text": "Crystal that increases your maximum health.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nRight-click to permanently increase max health by 1 (0.5 heart)","color": "gray"},{"text": "\nMaximum of 20 uses (+10 hearts)","color": "gray"}]}},
+		{"text": "0##","hover_event": {"action": "show_text","value": [{"text": "Mining\n","color": "yellow"},{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"U\n","\n\n","\"",{"text": "$腁"},"\"\"\"\"#`$",{"text": "$$舭"},"\n","\"",{"text": "`$"},"\"\"\"\"#`$",{"text": "`$"},"\n","\n"],{"text": "\n- Mine: ","color": "gray"},{"text": "Life Crystal Block","color": "gray"},{"text": "\n- Drops: x1 ","color": "gray"},{"text": "Life Crystal","color": "gray"}]},"click_event": {"action": "change_page","page": 156,"blue_craft": false}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
 		{"text": "Life Crystal Block\n","font": "minecraft:default","color": "black","underlined": true},
-		"!!Ⴛ\n!!",
-		{"text": "  \n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 156}},
-		"!!",
-		{"text": "  \n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 156}},
-		"!!",
-		{"text": "  \n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 156}},
-		"!!",
-		{"text": "  \n\n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "change_page","page": 156}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Decorative block made from life crystals.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nCan be broken to retrieve a life crystal","color": "gray"}]}}
+		"\"E\n\n\n\"",
+		{"text": "$腁","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}}},
+		"\"\"\"\"#`$",
+		{"text": "$$舭\n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}},"click_event": {"action": "change_page","page": 155}},
+		"\"",
+		{"text": "`$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"text": "Life Crystal Block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]}}},
+		"\"\"\"\"#`$",
+		{"text": "`$\n\n\n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Life Crystal"}}},"click_event": {"action": "change_page","page": 155}},
+		{"text": "1##","hover_event": {"action": "show_text","value": [{"text": "Decorative block made from life crystals.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nCan be broken to retrieve a life crystal","color": "gray"}]}},
+		{"text": "舶\n","hover_event": {"action": "show_text","value": [{"text": "Mining\n","color": "yellow"},{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"U\n","\n\n","\"",{"text": "$腁"},"\"\"\"\"#`$",{"text": "$$舭"},"\n","\"",{"text": "`$"},"\"\"\"\"#`$",{"text": "`$"},"\n","\n"],{"text": "\n- Mine: ","color": "gray"},{"text": "Life Crystal Block","color": "gray"},{"text": "\n- Drops: x1 ","color": "gray"},{"text": "Life Crystal","color": "gray"}]},"click_event": {"action": "change_page","page": 155}},
+		{"text": "0##","hover_event": {"action": "show_text","value": [{"text": "Decorative block made from life crystals.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nCan be broken to retrieve a life crystal","color": "gray"}]}},
+		{"text": "0##","hover_event": {"action": "show_text","value": [{"text": "Mining\n","color": "yellow"},{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"U\n","\n\n","\"",{"text": "$腁"},"\"\"\"\"#`$",{"text": "$$舭"},"\n","\"",{"text": "`$"},"\"\"\"\"#`$",{"text": "`$"},"\n","\n"],{"text": "\n- Mine: ","color": "gray"},{"text": "Life Crystal Block","color": "gray"},{"text": "\n- Drops: x1 ","color": "gray"},{"text": "Life Crystal","color": "gray"}]},"click_event": {"action": "change_page","page": 155}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2406,7 +2412,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Diamond Seed"}}},"click_event": {"action": "change_page","page": 158}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Diamond Seed"}}},"click_event": {"action": "change_page","page": 158}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-2 diamonds when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-2 diamonds when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2419,7 +2425,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Advanced Diamond Seed"}}},"click_event": {"action": "change_page","page": 159}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Advanced Diamond Seed"}}},"click_event": {"action": "change_page","page": 159}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-24 diamonds when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-24 diamonds when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2432,7 +2438,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Stardust Seed"}}},"click_event": {"action": "change_page","page": 160}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Stardust Seed"}}},"click_event": {"action": "change_page","page": 160}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows stardust fragments.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 8 minutes","color": "gray"},{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows stardust fragments.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 8 minutes","color": "gray"},{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+50% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2445,7 +2451,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Advanced Stardust Seed"}}},"click_event": {"action": "change_page","page": 161}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Advanced Stardust Seed"}}},"click_event": {"action": "change_page","page": 161}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows stardust ingots.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 16 minutes","color": "gray"},{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows stardust ingots.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 16 minutes","color": "gray"},{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"},{"text": "\nFortune effect applies (+30% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2458,7 +2464,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Elite Stardust Seed"}}},"click_event": {"action": "change_page","page": 162}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Elite Stardust Seed"}}},"click_event": {"action": "change_page","page": 162}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows stardust essences.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 32 minutes","color": "gray"},{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows stardust essences.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 32 minutes","color": "gray"},{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"},{"text": "\nFortune effect applies (+20% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2471,7 +2477,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on emerald block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Legendarium Seed"}}},"click_event": {"action": "change_page","page": 163}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on emerald block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Legendarium Seed"}}},"click_event": {"action": "change_page","page": 163}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows legendarium.","color": "yellow"},{"text": "\nCan only be planted on emerald blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 legendarium fragments when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows legendarium.","color": "yellow"},{"text": "\nCan only be planted on emerald blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 legendarium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2484,7 +2490,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on magma block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Solarium Seed"}}},"click_event": {"action": "change_page","page": 164}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on magma block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Solarium Seed"}}},"click_event": {"action": "change_page","page": 164}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows solarium.","color": "yellow"},{"text": "\nCan only be planted on magma blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 solarium fragments when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows solarium.","color": "yellow"},{"text": "\nCan only be planted on magma blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 solarium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},
@@ -2497,7 +2503,7 @@
 		{"text": "  \n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on obsidian.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Darkium Seed"}}},"click_event": {"action": "change_page","page": 165}},
 		"!!",
 		{"text": "  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"text": "Can only be planted on obsidian.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_name": {"text": "Darkium Seed"}}},"click_event": {"action": "change_page","page": 165}},
-		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows darkium.","color": "yellow"},{"text": "\nCan only be planted on obsidian","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 darkium fragments when harvested","color": "gray"}]}}
+		{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"text": "Magical seed that grows darkium.","color": "yellow"},{"text": "\nCan only be planted on obsidian","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 darkium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}]}}
 	],
 	[
 		{"text": "","font": "stardust:manual","color": "white"},

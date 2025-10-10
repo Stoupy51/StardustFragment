@@ -3,7 +3,7 @@
 #
 # @executed	as @e[type=item_frame,tag=...] & at @s
 #
-# @within	stardust:custom_blocks/solarium_seed/search [ as @e[type=item_frame,tag=...] & at @s ]
+# @within	stardust:custom_blocks/solarium_seed/place_check
 #
 
 # Get the facing direction of the item frame

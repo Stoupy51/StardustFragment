@@ -888,7 +888,7 @@ def main_additions() -> None:
 		"diamond_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"diamond","stages":3,"seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":2}]},	# TODO: Implement + fortune support + verify definitions
+			GROWING_SEED: {"texture_basename":"diamond","seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":2}]},	# TODO: Implement + fortune support + verify definitions
 			"lore": [
 				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
 			],
@@ -902,7 +902,7 @@ def main_additions() -> None:
 		"advanced_diamond_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"advanced_diamond","stages":3,"seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":24}]},
+			GROWING_SEED: {"texture_basename":"advanced_diamond","seconds":1200,"planted_on":"stone","loots":[{"id":"minecraft:diamond","min_count":0,"max_count":24}]},
 			"lore": [
 				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
 			],
@@ -916,7 +916,7 @@ def main_additions() -> None:
 		"stardust_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"stardust","stages":3,"seconds":480,"planted_on":"diamond_block","loots":[{"id":"stardust_fragment","min_count":3,"max_count":9}]},
+			GROWING_SEED: {"texture_basename":"stardust","seconds":480,"planted_on":"diamond_block","loots":[{"id":"stardust_fragment","min_count":3,"max_count":9}]},
 			"lore": [
 				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
 			],
@@ -930,7 +930,7 @@ def main_additions() -> None:
 		"advanced_stardust_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"advanced_stardust","stages":3,"seconds":960,"planted_on":"diamond_block","loots":[{"id":"stardust_ingot","min_count":1,"max_count":4}]},
+			GROWING_SEED: {"texture_basename":"advanced_stardust","seconds":960,"planted_on":"diamond_block","loots":[{"id":"stardust_ingot","min_count":1,"max_count":4}]},
 			"lore": [
 				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
 			],
@@ -944,7 +944,7 @@ def main_additions() -> None:
 		"elite_stardust_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"elite_stardust","stages":3,"seconds":1920,"planted_on":"diamond_block","loots":[{"id":"stardust_essence","min_count":1,"max_count":2}]},
+			GROWING_SEED: {"texture_basename":"elite_stardust","seconds":1920,"planted_on":"diamond_block","loots":[{"id":"stardust_essence","min_count":1,"max_count":2}]},
 			"lore": [
 				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
 			],
@@ -958,7 +958,7 @@ def main_additions() -> None:
 		"legendarium_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"legendarium","stages":3,"seconds":3840,"planted_on":"emerald_block","loots":[{"id":"legendarium_fragment","min_count":1,"max_count":2}]},
+			GROWING_SEED: {"texture_basename":"legendarium","seconds":3840,"planted_on":"emerald_block","loots":[{"id":"legendarium_fragment","min_count":1,"max_count":2}]},
 			"lore": [
 				{"text":"Can only be planted on emerald block.","italic":False,"color":"gray"},
 			],
@@ -972,7 +972,7 @@ def main_additions() -> None:
 		"solarium_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"solarium","stages":3,"seconds":3840,"planted_on":"magma_block","loots":[{"id":"solarium_fragment","min_count":1,"max_count":2}]},
+			GROWING_SEED: {"texture_basename":"solarium","seconds":3840,"planted_on":"magma_block","loots":[{"id":"solarium_fragment","min_count":1,"max_count":2}]},
 			"lore": [
 				{"text":"Can only be planted on magma block.","italic":False,"color":"gray"},
 			],
@@ -986,7 +986,7 @@ def main_additions() -> None:
 		"darkium_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
 			VANILLA_BLOCK: {"contents": True},
-			GROWING_SEED: {"texture_basename":"darkium","stages":3,"seconds":3840,"planted_on":"obsidian","loots":[{"id":"darkium_fragment","min_count":1,"max_count":2}]},
+			GROWING_SEED: {"texture_basename":"darkium","seconds":3840,"planted_on":"obsidian","loots":[{"id":"darkium_fragment","min_count":1,"max_count":2}]},
 			"lore": [
 				{"text":"Can only be planted on obsidian.","italic":False,"color":"gray"},
 			],

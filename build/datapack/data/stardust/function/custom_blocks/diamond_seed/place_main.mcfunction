@@ -3,7 +3,7 @@
 #
 # @executed	as @e[type=item_frame,tag=...] & at @s
 #
-# @within	stardust:custom_blocks/diamond_seed/search [ as @e[type=item_frame,tag=...] & at @s ]
+# @within	stardust:custom_blocks/diamond_seed/place_check
 #
 
 tag @s add stardust.placer
@@ -16,4 +16,5 @@ tag @s remove stardust.placer
 scoreboard players add #total_custom_blocks stardust.data 1
 scoreboard players add #total_vanilla_moss_carpet stardust.data 1
 scoreboard players add #total_diamond_seed stardust.data 1
+kill @s[type=item_frame]
 

@@ -10,5 +10,7 @@
 advancement revoke @s only stardust:custom_block_alternative/darkium_seed
 
 # Execute the place function as and at the new placed item frame
-execute as @e[type=item_frame,tag=stardust.new,tag=stardust.darkium_seed] at @s run function stardust:custom_blocks/darkium_seed/place_main
+tag @s add stardust.to_refund
+execute as @e[type=item_frame,tag=stardust.new,tag=stardust.darkium_seed] at @s run function stardust:custom_blocks/darkium_seed/place_check
+tag @s remove stardust.to_refund
 

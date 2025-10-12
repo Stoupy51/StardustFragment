@@ -100,10 +100,16 @@ def main_additions() -> None:
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"The fundamental building block of stardust technology.","color":"yellow"},
-				{"text":"\nMined from Stardust Ore found in all dimensions","color":"gray"},
+				{"text":"\nMined from Stardust Ore found in the overworld","color":"gray"},
 				{"text":"\nUsed to craft ingots, tools, armor, and machines","color":"gray"},
 			],
-			# TODO: Recipes (smelting ores, uncrafting ingots, etc.)
+			RESULT_OF_CRAFTING: [
+				{"type":"smelting","result_count":2,"category":"misc","experience":0.8,"cookingtime":200,"ingredient":ingr_repr("stardust_ore", ns)},
+				{"type":"blasting","result_count":2,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("stardust_ore", ns)},
+				{"type":"smelting","result_count":4,"category":"misc","experience":0.8,"cookingtime":200,"ingredient":ingr_repr("deepslate_stardust_ore", ns)},
+				{"type":"blasting","result_count":4,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("deepslate_stardust_ore", ns)},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)]},
+			]
 		},
 		"stardust_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
@@ -112,16 +118,26 @@ def main_additions() -> None:
 				{"text":"\nCrafted from Stardust Fragments","color":"gray"},
 				{"text":"\nUsed in tool, armor, and machine construction","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"smelting","result_count":2,"category":"misc","experience":0.8,"cookingtime":200,"ingredient":ingr_repr("nether_stardust_ore", ns)},
+				{"type":"blasting","result_count":2,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("nether_stardust_ore", ns)},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:iron_ingot")] + 8*[ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:copper_ingot")] + 8*[ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:gold_ingot")] + 8*[ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("stardust_essence", ns)]},
+				{"type":"crafting_shapeless","result_count":9,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)]},
+			]
 		},
 		"stardust_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:lapis_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed stardust for storage and crafting.","color":"yellow"},
-				{"text":"\nCrafted from 9 Stardust Ingots","color":"gray"},
+				{"text":"\nCrafted from 8 Stardust Ingots and a Diamond Block","color":"gray"},
 			],
 			RESULT_OF_CRAFTING:[
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients": 9 * [ingr_repr("stardust_ingot", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:diamond_block")] + 8*[ingr_repr("stardust_ingot", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:gold_block")] + 8*[ingr_repr("stardust_ingot", ns)]},
 			],
 		},
 		"stardust_essence": {
@@ -131,6 +147,13 @@ def main_additions() -> None:
 				{"text":"\nCrafted from Stardust Ingots","color":"gray"},
 				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"smelting","result_count":1,"category":"misc","experience":0.8,"cookingtime":200,"ingredient":ingr_repr("ender_stardust_ore", ns)},
+				{"type":"blasting","result_count":1,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("ender_stardust_ore", ns)},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:blaze_powder")] + 8*[ingr_repr("stardust_ingot", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:wind_charge")] + 8*[ingr_repr("stardust_ingot", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("stardust_core", ns)]},
+			]
 		},
 		"stardust_core": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
@@ -139,22 +162,21 @@ def main_additions() -> None:
 				{"text":"Central component of stardust technology.","color":"yellow"},
 				{"text":"\nCrafted from Stardust Essences","color":"gray"},
 				{"text":"\nUsed in top-tier crafting recipes","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:crafter")] + 8*[ingr_repr("stardust_essence", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:observer")] + 8*[ingr_repr("stardust_essence", ns)]},
 			]
 		},
-		"compacted_stardust": {
+		"compacted_stardust_shard": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Component of stardust technology.","color":"yellow"},
-				{"text":"\nCrafted from Stardust Essences","color":"gray"},
+				{"text":"\nFilled with stardust energy","color":"gray"},
 				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
-			]
-		},
-		"very_compacted_stardust": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				{"text":"Component of stardust technology.","color":"yellow"},
-				{"text":"\nCrafted from Stardust Essences","color":"gray"},
-				{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:amethyst_shard")] + 8*[ingr_repr("stardust_block", ns)]},
 			]
 		},
 		"awakened_stardust": {
@@ -164,15 +186,21 @@ def main_additions() -> None:
 				{"text":"\nObtained through mining or some special mobs","color":"gray"},
 				{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients": [ingr_repr("awakened_stardust_block", ns)]},
+			]
 		},
 		"awakened_stardust_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:redstone_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed awakened stardust block.","color":"yellow"},
-				{"text":"\nCrafted from 9 Awakened Stardust","color":"gray"},
+				{"text":"\nCrafted from 8 Awakened Stardust","color":"gray"},
 				{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("quadruple_compressed_cobblestone", ns)] + 8*[ingr_repr("awakened_stardust", ns)]},
+			]
 		},
 		"dragon_pearl": {
 			"id": "minecraft:ender_pearl", CATEGORY: MATERIALS,
@@ -183,6 +211,10 @@ def main_additions() -> None:
 				{"text":"\nThrows x1.5 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
 				{"text":"\nCooldown is 0.5 seconds instead of 1 second","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:ender_pearl")] + 8*[ingr_repr("minecraft:dragon_breath")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("ender_dragon_pearl", ns)]},
+			]
 		},
 		"ender_dragon_pearl": {
 			"id": "minecraft:ender_pearl", CATEGORY: MATERIALS,
@@ -194,14 +226,21 @@ def main_additions() -> None:
 				{"text":"\nCooldown is 0.25 seconds instead of 1 second","color":"gray"},
 				{"text":"\nUsed in high-tier crafting","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("dragon_pearl", ns)] + 8*[ingr_repr("minecraft:ender_pearl")]},
+			]
 		},
 		"legendarium_fragment": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Legendary material fragment with wind power.","color":"yellow"},
 				{"text":"\nExtremely rare and valuable","color":"gray"},
+				{"text":"\nObtained through legendarium seeds","color":"gray"},
 				{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients": [ingr_repr("legendarium_block", ns)]},
+			]
 		},
 		"legendarium_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,

@@ -1,0 +1,43 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient": "minecraft:furnace",
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:item_model": "stardust:stardust_ingot",
+			"minecraft:item_name": {
+				"translate": "stardust_ingot"
+			},
+			"minecraft:lore": [
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "stardust:icons"
+					},
+					{
+						"translate": "stardustfragment",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:custom_data": {
+				"stardust": {
+					"stardust_ingot": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			}
+		}
+	},
+	"experience": 0.8,
+	"cookingtime": 100
+}

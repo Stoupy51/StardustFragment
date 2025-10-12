@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		"minecraft:ender_pearl",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath",
+		"minecraft:dragon_breath"
+	],
+	"result": {
+		"id": "minecraft:ender_pearl",
+		"count": 1,
+		"components": {
+			"minecraft:item_name": {
+				"translate": "stardust.dragon_pearl",
+				"italic": false,
+				"color": "dark_purple"
+			},
+			"minecraft:use_cooldown": {
+				"seconds": 0.5
+			},
+			"minecraft:item_model": "stardust:dragon_pearl",
+			"minecraft:lore": [
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "stardust:icons"
+					},
+					{
+						"translate": "stardustfragment",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:custom_data": {
+				"stardust": {
+					"dragon_pearl": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			}
+		}
+	}
+}

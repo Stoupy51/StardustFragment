@@ -4,6 +4,7 @@ from stewbeet import (
 	Context,
 	DefaultOre,
 	EquipmentsConfig,
+	JsonDict,
 	Mem,
 	VanillaEquipments,
 	add_energy_lore_to_definitions,
@@ -45,6 +46,16 @@ def beet_default(ctx: Context) -> None:
 
 	# Apply database additions
 	main_additions()
+
+	# Reorder some definitions
+	reorder_list: list[str] = [
+		"stardust_fragment","stardust_ingot","stardust_ingot","stardust_essence","stardust_core","compacted_stardust_shard",
+		"stardust_block","stardust_ore","deepslate_stardust_ore","nether_stardust_ore","ender_stardust_ore"
+	]
+	ordered: JsonDict = {k: {} for k in reorder_list}
+	for k, v in Mem.definitions.items():
+		ordered[k] = v
+	Mem.definitions = ordered
 
 	# Sort by category (material in first position)
 	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", ""))))

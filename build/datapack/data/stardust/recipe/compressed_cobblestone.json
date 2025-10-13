@@ -1,0 +1,81 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone",
+		"minecraft:cobblestone"
+	],
+	"result": {
+		"id": "minecraft:furnace",
+		"count": 1,
+		"components": {
+			"minecraft:lore": [
+				{
+					"translate": "stardust.equivalent_to_9_cobblestones",
+					"color": "gray",
+					"italic": false
+				},
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "stardust:icons"
+					},
+					{
+						"translate": "stardustfragment",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:item_model": "stardust:compressed_cobblestone",
+			"minecraft:item_name": {
+				"translate": "stardust.compressed_cobblestone"
+			},
+			"minecraft:custom_data": {
+				"stardust": {
+					"compressed_cobblestone": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			},
+			"minecraft:container": [
+				{
+					"slot": 0,
+					"item": {
+						"id": "minecraft:stone",
+						"count": 1,
+						"components": {
+							"minecraft:custom_data": {
+								"smithed": {
+									"block": {
+										"id": "stardust:compressed_cobblestone",
+										"from": "stardust"
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"minecraft:tooltip_display": {
+				"hidden_components": [
+					"minecraft:container"
+				]
+			}
+		}
+	}
+}

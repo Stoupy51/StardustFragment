@@ -31,6 +31,10 @@ SNIPER_BULLETS_WIKI: list[TextComponent] = [
 	{"text":"\n- Awakened Stardust: +20 damage","color":"gray"},
 	{"text":"\n- Ultimate bullet: +35 damage","color":"gray"},
 ]
+COBBLESTONE_TIERS: list[str] = [
+	"compressed", "double_compressed", "triple_compressed", "quadruple_compressed",
+	"quintuple_compressed", "sextuple_compressed", "septuple_compressed", "octuple_compressed",
+]
 
 def main_additions() -> None:
 	ENERGY: str = "energy"
@@ -187,7 +191,7 @@ def main_additions() -> None:
 				{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients": [ingr_repr("awakened_stardust_block", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("awakened_stardust_block", ns)]},
 			]
 		},
 		"awakened_stardust_block": {
@@ -239,7 +243,7 @@ def main_additions() -> None:
 				{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients": [ingr_repr("legendarium_block", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("legendarium_ingot", ns)]},
 			]
 		},
 		"legendarium_ingot": {
@@ -249,6 +253,10 @@ def main_additions() -> None:
 				{"text":"\nExtremely rare and valuable","color":"gray"},
 				{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)] + 8*[ingr_repr("legendarium_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("legendarium_block", ns)]},
+			]
 		},
 		"legendarium_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
@@ -257,14 +265,21 @@ def main_additions() -> None:
 				{"text":"Compressed legendarium storage block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Legendarium Ingots","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)] + 8*[ingr_repr("legendarium_ingot", ns)]},
+			]
 		},
 		"solarium_fragment": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Solarium material fragment with fire power.","color":"yellow"},
 				{"text":"\nExtremely rare and valuable","color":"gray"},
+				{"text":"\nObtained through solarium seeds","color":"gray"},
 				{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("solarium_ingot", ns)]},
+			]
 		},
 		"solarium_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
@@ -273,6 +288,10 @@ def main_additions() -> None:
 				{"text":"\nExtremely rare and valuable","color":"gray"},
 				{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)] + 8*[ingr_repr("solarium_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("solarium_block", ns)]},
+			]
 		},
 		"solarium_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
@@ -281,14 +300,21 @@ def main_additions() -> None:
 				{"text":"Compressed solarium storage block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Solarium Ingots","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)] + 8*[ingr_repr("solarium_ingot", ns)]},
+			]
 		},
 		"darkium_fragment": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Darkium material fragment with darkness power.","color":"yellow"},
 				{"text":"\nExtremely rare and valuable","color":"gray"},
+				{"text":"\nObtained through darkium seeds","color":"gray"},
 				{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("darkium_ingot", ns)]},
+			]
 		},
 		"darkium_ingot": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
@@ -297,6 +323,10 @@ def main_additions() -> None:
 				{"text":"\nExtremely rare and valuable","color":"gray"},
 				{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)] + 8*[ingr_repr("darkium_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("darkium_block", ns)]},
+			]
 		},
 		"darkium_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
@@ -305,130 +335,155 @@ def main_additions() -> None:
 				{"text":"Compressed darkium storage block.","color":"yellow"},
 				{"text":"\nCrafted from 9 Darkium Ingots","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)] + 8*[ingr_repr("darkium_ingot", ns)]},
+			]
 		},
-		"ultimate_fragment": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				{"text":"The pinnacle of material science and energy.","color":"yellow"},
-				{"text":"\nCombines all advanced materials","color":"gray"},
-				{"text":"\nUsed for ultimate-tier equipment and machines","color":"gray"},
-			],
-		},
-		"ultimate_ingot": {
+		"ultimate_shard": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"The ultimate refined material.","color":"yellow"},
 				{"text":"\nSmelted from Ultimate Fragments","color":"gray"},
 				{"text":"\nUsed for ultimate equipment","color":"gray"},
 			],
-		},
-		"ultimate_core": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				{"text":"The ultimate refined material.","color":"yellow"},
-				{"text":"\nSmelted from Ultimate Fragments","color":"gray"},
-				{"text":"\nUsed for ultimate equipment","color":"gray"},
-			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+					ingr_repr("minecraft:popped_chorus_fruit"),ingr_repr("stardust_core", ns),ingr_repr("minecraft:echo_shard"),
+					ingr_repr("legendarium_block", ns),ingr_repr("compacted_stardust_shard", ns),ingr_repr("solarium_block", ns),
+					ingr_repr("minecraft:resin_brick"),ingr_repr("darkium_block", ns),ingr_repr("minecraft:turtle_scute"),
+				]},
+			]
 		},
 		"dog_excrement": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
-			"item_name": {"text":"Dog Excrement","italic":False,"color":"#582900"},
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
+			"item_name": {"text":"Dog Excrement","italic":False,"color":"#693100"},
 			WIKI_COMPONENT: [
-				{"text":"A smelly piece of dog excrement.","color":"#582900"},
+				{"text":"A smelly piece of dog excrement.","color":"#693100"},
 				{"text":"\nUsed for comedic purposes and boss summoning","color":"gray"},
+				{"text":"\nEvery wolf lays an excrement item every 5-10 minutes","color":"gray"},
 			],
 		},
 		**{
-			f"{tier}_cobblestone": {
+			f"{current}_cobblestone": {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 				VANILLA_BLOCK: {"id":"minecraft:deepslate" if i < 4 else "minecraft:obsidian", "apply_facing":False},
 				"lore": [
 					{"text":f"Equivalent to {9**(i+1):,} cobblestones","color":"gray","italic":False},
 				],
 				WIKI_COMPONENT: [
-					{"text":f"{tier.capitalize()} compressed cobblestone.","color":"yellow"},
+					{"text":f"{current.capitalize()} compressed cobblestone.","color":"yellow"},
 					{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
 				],
+				RESULT_OF_CRAFTING: [
+					{"type":"crafting_shapeless","result_count": 1,"category":"misc","ingredients":9*[ingr_repr(f"{prev}_cobblestone", ns) if prev else ingr_repr("minecraft:cobblestone")]},
+				] + ([
+					{"type":"crafting_shapeless","result_count": 9,"category":"misc","ingredients":[ingr_repr(f"{next_t}_cobblestone", ns)]}
+				] if next_t else [])
 			}
-			for i, tier in enumerate([
-				"compressed", "double_compressed", "triple_compressed", "quadruple_compressed",
-				"quintuple_compressed", "sextuple_compressed", "septuple_compressed", "octuple_compressed",
-			])
+			for i, (prev, current, next_t) in enumerate(zip([None] + COBBLESTONE_TIERS[:-1], COBBLESTONE_TIERS, COBBLESTONE_TIERS[1:] + [None], strict=True))
 		},
 		"stardust_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:lapis_block", "apply_facing":False},
 			WIKI_COMPONENT: [
-				{"text":"Enhanced frame made with stardust.","color":"yellow"},
-				{"text":"\nUpgraded version of machine block","color":"gray"},
-				{"text":"\nUsed for advanced machines","color":"gray"},
+				{"text":"Enhanced machine block with stardust.","color":"yellow"},
+				{"text":"\nUsed as a base for most advanced machines","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CMC","SSS"],"ingredients":{"B":ingr_repr("minecraft:blue_glazed_terracotta"),"C":ingr_repr("compacted_stardust_shard", ns),"M":ingr_repr("machine_block", "simplenergy"),"S":ingr_repr("stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CMC","BBB"],"ingredients":{"B":ingr_repr("minecraft:blue_glazed_terracotta"),"C":ingr_repr("compacted_stardust_shard", ns),"M":ingr_repr("machine_block", "simplenergy"),"S":ingr_repr("stardust_block", ns)}},
+			]
 		},
 		"awakened_stardust_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:redstone_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Awakened frame made with stardust.","color":"yellow"},
-				{"text":"\nFurther upgraded version of machine frame","color":"gray"},
+				{"text":"\nFurther upgraded version of the machine block","color":"gray"},
 				{"text":"\nUsed for top-tier machines","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","ASA","BBB"],"ingredients":{"N":ingr_repr("minecraft:nether_wart_block"),"A":ingr_repr("awakened_stardust", ns),"S":ingr_repr("stardust_frame", ns),"B":ingr_repr("awakened_stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","ASA","NNN"],"ingredients":{"N":ingr_repr("minecraft:nether_wart_block"),"A":ingr_repr("awakened_stardust", ns),"S":ingr_repr("stardust_frame", ns),"B":ingr_repr("awakened_stardust_block", ns)}},
+			]
 		},
 		"ultimate_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Ultimate frame made with advanced materials.","color":"yellow"},
-				{"text":"\nCrafted from Ultimate Ingots","color":"gray"},
-				{"text":"\nUsed for ultimate machines","color":"gray"},
+				{"text":"\nFinal upgraded version of the machine block","color":"gray"},
+				{"text":"\nUsed for final-tier machines","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD","UAU","PPP"],"ingredients":{"L":ingr_repr("legendarium_block", ns),"S":ingr_repr("solarium_block", ns),"D":ingr_repr("darkium_block", ns),"U":ingr_repr("ultimate_shard", ns),"A":ingr_repr("awakened_stardust_frame", ns),"P":ingr_repr("minecraft:stripped_pale_oak_wood")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["PPP","UAU","LSD"],"ingredients":{"L":ingr_repr("legendarium_block", ns),"S":ingr_repr("solarium_block", ns),"D":ingr_repr("darkium_block", ns),"U":ingr_repr("ultimate_shard", ns),"A":ingr_repr("awakened_stardust_frame", ns),"P":ingr_repr("minecraft:stripped_pale_oak_wood")}},
+			]
 		},
 		"mirror": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Reflective surface for advanced optics.","color":"yellow"},
-				{"text":"\nUsed in energy systems and machines","color":"gray"},
-				{"text":"\nCrafted from stardust materials","color":"gray"},
+				{"text":"\nUsed for upgrading solar panels","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" G ","GQG"," G "],"ingredients":{"G":ingr_repr("minecraft:black_stained_glass"),"Q":ingr_repr("minecraft:quartz_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" G ","GQG"," G "],"ingredients":{"G":ingr_repr("minecraft:tinted_glass"),"Q":ingr_repr("minecraft:quartz_block")}},
+			]
 		},
 		"stardust_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Photovoltaic cell made from stardust.","color":"yellow"},
 				{"text":"\nUsed to convert sunlight into energy","color":"gray"},
-				{"text":"\nCrafted from advanced materials","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","MMM"," I "],"ingredients":{"F":ingr_repr("stardust_fragment", ns),"M":ingr_repr("mirror", ns),"I":ingr_repr("stardust_ingot", ns)}},
+			]
 		},
 		"awakened_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Awakened photovoltaic cell made from stardust.","color":"yellow"},
 				{"text":"\nUsed to convert sunlight into energy more efficiently","color":"gray"},
-				{"text":"\nCrafted from advanced materials","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","SSS","FFF"],"ingredients":{"F":ingr_repr("awakened_stardust", ns),"S":ingr_repr("stardust_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FSF","FSF","FSF"],"ingredients":{"F":ingr_repr("awakened_stardust", ns),"S":ingr_repr("stardust_photovoltaic_cell", ns)}},
+			]
 		},
 		"legendarium_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Legendarium photovoltaic cell made from stardust.","color":"yellow"},
-				{"text":"\nUsed to convert sunlight into energy with legendary efficiency","color":"gray"},
-				{"text":"\nCrafted from advanced materials","color":"gray"},
+				{"text":"Legendarium photovoltaic cell made from legendary energy.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("legendarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("legendarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+			]
 		},
 		"solarium_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Solarium photovoltaic cell made from stardust.","color":"yellow"},
-				{"text":"\nUsed to convert sunlight into energy with solarium efficiency","color":"gray"},
-				{"text":"\nCrafted from advanced materials","color":"gray"},
+				{"text":"Solarium photovoltaic cell made from solar energy.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("solarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("solarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+			]
 		},
 		"darkium_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Darkium photovoltaic cell made from stardust.","color":"yellow"},
-				{"text":"\nUsed to convert sunlight into energy with darkium efficiency","color":"gray"},
-				{"text":"\nCrafted from advanced materials","color":"gray"},
+				{"text":"Darkium photovoltaic cell made from dark energy.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("darkium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("darkium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+			]
 		},
 		"ultimate_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
@@ -437,14 +492,20 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy with ultimate efficiency","color":"gray"},
 				{"text":"\nCrafted from ultimate materials","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD"," U "],"ingredients":{"L":ingr_repr("legendarium_photovoltaic_cell", ns),"S":ingr_repr("solarium_photovoltaic_cell", ns),"D":ingr_repr("darkium_photovoltaic_cell", ns),"U":ingr_repr("ultimate_shard", ns)}},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("legendarium_photovoltaic_cell", ns),ingr_repr("solarium_photovoltaic_cell", ns),ingr_repr("darkium_photovoltaic_cell", ns),ingr_repr("ultimate_shard", ns)]},
+			]
 		},
 		"empty_module": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
-				{"text":"Empty module for advanced machinery.","color":"yellow"},
+				{"text":"Empty module for quarry's upgrade.","color":"yellow"},
 				{"text":"\nCan be filled with various materials","color":"gray"},
-				{"text":"\nUsed in crafting and upgrades","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:map")] + [ingr_repr("simplunium_ingot", "simplenergy")]},
+			]
 		},
 
 		# Energy Systems - Cables
@@ -1065,7 +1126,7 @@ def main_additions() -> None:
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MISC,
 				VANILLA_BLOCK: {"id":"minecraft:deepslate", "apply_facing":False},
 				"item_name": {"text":f"Cobblestone Miner Lv.{i+1}"},
-				"rarity": "rare" if i < 4 else "epic",
+				"rarity": "rare" if i < 5 else "epic",
 				"lore": [
 					{"text":"Only mines cobblestone directly below","color":"white","italic":False},
 					{"text":f"[x{9*(5**i):,} per minute]","color":"gray","italic":False},
@@ -1073,11 +1134,11 @@ def main_additions() -> None:
 				WIKI_COMPONENT: [
 					{"text":f"Cobblestone Miner Lv.{i+1}","color":"yellow"},
 					{"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"},
-					{"text":f"\nProduction rate is {9*(5**i):,} cobblestone per minute","color":"gray"},
+					{"text":f"\nProduction rate is {9*(4**i):,} cobblestone per minute","color":"gray"},
 					{"text":"\nNo energy required","color":"gray"},
 				],
 			}
-			for i in range(5)
+			for i in range(8)
 		},
 		"stoupegg": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
@@ -1159,6 +1220,10 @@ def main_additions() -> None:
 				{"text":"\nEach module increases fortune by 1, up to a maximum of 5","color":"gray"},
 				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EDE","DMD","EDE"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DED","EME","DED"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module", ns)}},
+			]
 		},
 		"silk_touch_module": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
@@ -1170,6 +1235,10 @@ def main_additions() -> None:
 				{"text":"Module that enables silk touch enchantment for compatible machines.","color":"yellow"},
 				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:iron_ore")] + [ingr_repr("empty_module", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:deepslate_iron_ore")] + [ingr_repr("empty_module", ns)]},
+			]
 		}
 	}
 
@@ -1183,10 +1252,10 @@ def main_additions() -> None:
 		"id": "minecraft:written_book", "category": MISC,
 		RESULT_OF_CRAFTING: [
 			# Put a book and a steel ingot in the crafting grid to get the manual
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("minecraft:book"), ingr_repr("stardust_fragment", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[ingr_repr("minecraft:book"), ingr_repr("stardust_fragment", ns)]},
 
 			# Put the manual in the crafting grid to get the manual back (update the manual)
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients": [ingr_repr("manual", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[ingr_repr("manual", ns)]},
 		],
 		WIKI_COMPONENT: [
 			{"text":"Complete guide to Stardust Fragment technology.","color":"yellow"},

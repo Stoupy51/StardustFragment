@@ -5,17 +5,17 @@
 #
 
 tag @s add stardust.placer
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_core"} run function stardust:custom_blocks/stardust_core/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_block"} run function stardust:custom_blocks/stardust_block/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_ore"} run function stardust:custom_blocks/stardust_ore/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:deepslate_stardust_ore"} run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:nether_stardust_ore"} run function stardust:custom_blocks/nether_stardust_ore/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:ender_stardust_ore"} run function stardust:custom_blocks/ender_stardust_ore/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_block"} run function stardust:custom_blocks/awakened_stardust_block/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_ore"} run function stardust:custom_blocks/awakened_stardust_ore/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendarium_block"} run function stardust:custom_blocks/legendarium_block/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium_block"} run function stardust:custom_blocks/solarium_block/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_block"} run function stardust:custom_blocks/darkium_block/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_ore"} run function stardust:custom_blocks/stardust_ore/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:deepslate_stardust_ore"} run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:nether_stardust_ore"} run function stardust:custom_blocks/nether_stardust_ore/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:ender_stardust_ore"} run function stardust:custom_blocks/ender_stardust_ore/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_block"} run function stardust:custom_blocks/stardust_block/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_core"} run function stardust:custom_blocks/stardust_core/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:compressed_cobblestone"} run function stardust:custom_blocks/compressed_cobblestone/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:double_compressed_cobblestone"} run function stardust:custom_blocks/double_compressed_cobblestone/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:triple_compressed_cobblestone"} run function stardust:custom_blocks/triple_compressed_cobblestone/place_main
@@ -59,5 +59,8 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblest
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv3"} run function stardust:custom_blocks/cobblestone_miner_lv3/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv4"} run function stardust:custom_blocks/cobblestone_miner_lv4/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv5"} run function stardust:custom_blocks/cobblestone_miner_lv5/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv6"} run function stardust:custom_blocks/cobblestone_miner_lv6/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv7"} run function stardust:custom_blocks/cobblestone_miner_lv7/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv8"} run function stardust:custom_blocks/cobblestone_miner_lv8/place_main
 tag @s remove stardust.placer
 

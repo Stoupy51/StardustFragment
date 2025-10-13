@@ -15,4 +15,7 @@ execute if score #total_cobblestone_miner_lv2 stardust.data matches 1.. if entit
 execute if score #total_cobblestone_miner_lv3 stardust.data matches 1.. if entity @s[tag=stardust.cobblestone_miner_lv3] run function stardust:custom_blocks/cobblestone_miner_lv3/destroy
 execute if score #total_cobblestone_miner_lv4 stardust.data matches 1.. if entity @s[tag=stardust.cobblestone_miner_lv4] run function stardust:custom_blocks/cobblestone_miner_lv4/destroy
 execute if score #total_cobblestone_miner_lv5 stardust.data matches 1.. if entity @s[tag=stardust.cobblestone_miner_lv5] run function stardust:custom_blocks/cobblestone_miner_lv5/destroy
+execute if score #total_cobblestone_miner_lv6 stardust.data matches 1.. if entity @s[tag=stardust.cobblestone_miner_lv6] run function stardust:custom_blocks/cobblestone_miner_lv6/destroy
+execute if score #total_cobblestone_miner_lv7 stardust.data matches 1.. if entity @s[tag=stardust.cobblestone_miner_lv7] run function stardust:custom_blocks/cobblestone_miner_lv7/destroy
+execute if score #total_cobblestone_miner_lv8 stardust.data matches 1.. if entity @s[tag=stardust.cobblestone_miner_lv8] run function stardust:custom_blocks/cobblestone_miner_lv8/destroy
 

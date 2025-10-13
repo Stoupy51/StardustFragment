@@ -13,7 +13,7 @@
 								"minecraft:item_name": {
 									"translate": "stardust.dog_excrement",
 									"italic": false,
-									"color": "#582900"
+									"color": "#693100"
 								},
 								"minecraft:item_model": "stardust:dog_excrement",
 								"minecraft:lore": [

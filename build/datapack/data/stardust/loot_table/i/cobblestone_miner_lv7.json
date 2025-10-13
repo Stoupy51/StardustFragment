@@ -1,0 +1,61 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": {
+									"translate": "stardust.cobblestone_miner_lv_7"
+								},
+								"minecraft:rarity": "epic",
+								"minecraft:lore": [
+									{
+										"translate": "stardust.only_mines_cobblestone_directly_below",
+										"color": "white",
+										"italic": false
+									},
+									{
+										"translate": "stardust.x140625_per_minute",
+										"color": "gray",
+										"italic": false
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:cobblestone_miner_lv7",
+								"minecraft:custom_data": {
+									"stardust": {
+										"cobblestone_miner_lv7": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv7","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

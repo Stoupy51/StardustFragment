@@ -13,7 +13,7 @@
 								"minecraft:item_name": {
 									"translate": "stardust.cobblestone_miner_lv_5"
 								},
-								"minecraft:rarity": "epic",
+								"minecraft:rarity": "rare",
 								"minecraft:lore": [
 									{
 										"translate": "stardust.only_mines_cobblestone_directly_below",

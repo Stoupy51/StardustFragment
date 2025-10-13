@@ -1,15 +1,13 @@
 {
-	"type": "minecraft:crafting_shaped",
+	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
-	"pattern": [
-		" G ",
-		"GQG",
-		" G "
+	"ingredients": [
+		"minecraft:tinted_glass",
+		"minecraft:tinted_glass",
+		"minecraft:tinted_glass",
+		"minecraft:tinted_glass",
+		"minecraft:quartz_block"
 	],
-	"key": {
-		"G": "minecraft:tinted_glass",
-		"Q": "minecraft:quartz_block"
-	},
 	"result": {
 		"id": "minecraft:command_block",
 		"count": 1,

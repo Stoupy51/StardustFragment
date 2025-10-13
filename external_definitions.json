@@ -10,5 +10,11 @@
 		"item_name": {"text": "Simplunium Ingot"},
 		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
 		"custom_data": {"simplenergy": {"simplunium_ingot": true}}
+	},
+	"simplenergy:elite_cable": {
+		"id": "minecraft:command_block",
+		"item_name": {"text": "Elite Cable"},
+		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
+		"custom_data": {"simplenergy": {"elite_cable": true}}
 	}
 }

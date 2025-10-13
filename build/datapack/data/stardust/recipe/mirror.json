@@ -1,15 +1,13 @@
 {
-	"type": "minecraft:crafting_shaped",
+	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
-	"pattern": [
-		" G ",
-		"GQG",
-		" G "
+	"ingredients": [
+		"minecraft:black_stained_glass",
+		"minecraft:black_stained_glass",
+		"minecraft:black_stained_glass",
+		"minecraft:black_stained_glass",
+		"minecraft:quartz_block"
 	],
-	"key": {
-		"G": "minecraft:black_stained_glass",
-		"Q": "minecraft:quartz_block"
-	},
 	"result": {
 		"id": "minecraft:command_block",
 		"count": 1,

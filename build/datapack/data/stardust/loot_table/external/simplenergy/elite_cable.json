@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": {
+									"translate": "stardust.elite_cable"
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.simplenergy",
+										"italic": true,
+										"color": "blue"
+									}
+								],
+								"minecraft:custom_data": {
+									"simplenergy": {
+										"elite_cable": true
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

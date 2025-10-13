@@ -427,8 +427,8 @@ def main_additions() -> None:
 				{"text":"\nUsed for upgrading solar panels","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" G ","GQG"," G "],"ingredients":{"G":ingr_repr("minecraft:black_stained_glass"),"Q":ingr_repr("minecraft:quartz_block")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" G ","GQG"," G "],"ingredients":{"G":ingr_repr("minecraft:tinted_glass"),"Q":ingr_repr("minecraft:quartz_block")}},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:black_stained_glass")] + [ingr_repr("minecraft:quartz_block")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:tinted_glass")] + [ingr_repr("minecraft:quartz_block")]},
 			]
 		},
 		"stardust_photovoltaic_cell": {
@@ -520,6 +520,10 @@ def main_additions() -> None:
 				{"text":"\nTransfers up to 480 kW","color":"gray"},
 				{"text":"\nConnects generators to machines and batteries","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SGS","GCG","SGS"],"ingredients":{"S":ingr_repr("stardust_block", ns),"G":ingr_repr("minecraft:gold_block"),"C":ingr_repr("elite_cable", "simplenergy")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GSG","SCS","GSG"],"ingredients":{"S":ingr_repr("stardust_block", ns),"G":ingr_repr("minecraft:gold_block"),"C":ingr_repr("elite_cable", "simplenergy")}},
+			]
 		},
 		"awakened_stardust_cable": {
 			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY, "custom_data": {"energy": {"transfer":960}},
@@ -532,6 +536,10 @@ def main_additions() -> None:
 				{"text":"\nTransfers up to 960 kW","color":"gray"},
 				{"text":"\nUpgraded version of stardust cable","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BRB","RCR","BRB"],"ingredients":{"B":ingr_repr("awakened_stardust_block", ns),"R":ingr_repr("minecraft:redstone_block"),"C":ingr_repr("stardust_cable", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RBR","BCB","RBR"],"ingredients":{"B":ingr_repr("awakened_stardust_block", ns),"R":ingr_repr("minecraft:redstone_block"),"C":ingr_repr("stardust_cable", ns)}},
+			]
 		},
 		"ultimate_cable": {
 			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY, "custom_data": {"energy": {"transfer":1920}},
@@ -544,6 +552,13 @@ def main_additions() -> None:
 				{"text":"\nTransfers up to 1920 kW","color":"gray"},
 				{"text":"\nUpgraded version of awakened stardust cable","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+					ingr_repr("compacted_stardust_shard", ns),ingr_repr("legendarium_ingot", ns),ingr_repr("compacted_stardust_shard", ns),
+					ingr_repr("solarium_ingot", ns),ingr_repr("awakened_stardust_cable", ns),ingr_repr("darkium_block", ns),
+					ingr_repr("compacted_stardust_shard", ns),ingr_repr("stardust_core", ns),ingr_repr("compacted_stardust_shard", ns),
+				]},
+			]
 		},
 
 		# Energy Systems - Batteries

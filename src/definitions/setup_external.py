@@ -25,6 +25,7 @@ def beet_default(ctx: Context) -> None:
 	Mem.definitions.update({
 		"simplenergy:machine_block": {"id": CUSTOM_BLOCK_VANILLA},
 		"simplenergy:simplunium_ingot": {"id": CUSTOM_ITEM_VANILLA},
+		"simplenergy:elite_cable": {"id": CUSTOM_ITEM_VANILLA},
 	})
 
 	# External items config

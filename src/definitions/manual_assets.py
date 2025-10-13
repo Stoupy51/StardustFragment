@@ -3,13 +3,13 @@
 import os
 import shutil
 
-from stewbeet.core import *
+from stewbeet.core import Mem
 from stouputils import super_copy
 
 
 def manual_assets_main() -> None:
 	ASSETS_FOLDER: str = "./assets"
-	manual_cache: str = Mem.ctx.meta.stewbeet.manual.cache_path
+	manual_cache: str = Mem.ctx.meta.stewbeet.manual.cache_path # type: ignore
 
 	# Copy simplenergy folder
 	simplenergy_source = "../SimplEnergy/manual_cache/items/simplenergy"

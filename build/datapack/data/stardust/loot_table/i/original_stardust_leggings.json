@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:netherite_leggings",
+					"name": "minecraft:diamond_leggings",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -19,28 +19,21 @@
 										"original_stardust_leggings": true
 									}
 								},
-								"minecraft:max_damage": 1279,
+								"minecraft:max_damage": 1485,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 9.5,
+										"amount": 9.0,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor.legs"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 4.5,
+										"amount": 3.3,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor_toughness.legs"
-									},
-									{
-										"type": "knockback_resistance",
-										"amount": 0.1,
-										"operation": "add_value",
-										"slot": "legs",
-										"id": "stardust:knockback_resistance.legs"
 									}
 								],
 								"minecraft:item_model": "stardust:original_stardust_leggings",

@@ -1,6 +1,0 @@
-{
-	"parent": "minecraft:item/diamond_sword",
-	"textures": {
-		"layer0": "stardust:item/reinforced_stardust_sword"
-	}
-}

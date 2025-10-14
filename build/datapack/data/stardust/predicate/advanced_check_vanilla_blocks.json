@@ -8,6 +8,7 @@
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_deepslate\"]}","location": {"block": {"blocks": "minecraft:deepslate"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_diamond_block\"]}","location": {"block": {"blocks": "minecraft:diamond_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_emerald_block\"]}","location": {"block": {"blocks": "minecraft:emerald_block"}}}},
+		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_furnace\"]}","location": {"block": {"blocks": "minecraft:furnace"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_glass\"]}","location": {"block": {"blocks": "minecraft:glass"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_lapis_block\"]}","location": {"block": {"blocks": "minecraft:lapis_block"}}}},
 		{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_moss_carpet\"]}","location": {"block": {"blocks": "minecraft:moss_carpet"}}}},

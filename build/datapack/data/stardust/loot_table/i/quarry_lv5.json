@@ -16,6 +16,7 @@
 										"max_storage": 180000
 									},
 									"stardust": {
+										"quarry": {"block_per_second": 16},
 										"quarry_lv5": true
 									},
 									"smithed": {
@@ -28,6 +29,11 @@
 									"color": "white"
 								},
 								"minecraft:lore": [
+									{
+										"translate": "stardust.speed_16_block_s",
+										"italic": false,
+										"color": "gray"
+									},
 									{
 										"translate": "stardust.power_usage_625_kw",
 										"italic": false,

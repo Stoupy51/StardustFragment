@@ -27,6 +27,8 @@ def beet_default(ctx: Context) -> None:
 		"simplenergy:simplunium_ingot": {"id": CUSTOM_ITEM_VANILLA},
 		"simplenergy:machine_block": {"id": CUSTOM_BLOCK_VANILLA},
 
+		"simplenergy:furnace_generator": {"id": CUSTOM_BLOCK_VANILLA},
+		"simplenergy:redstone_generator": {"id": CUSTOM_BLOCK_VANILLA},
 		"simplenergy:solar_panel": {"id": CUSTOM_BLOCK_VANILLA},
 
 		"simplenergy:elite_battery": {"id": CUSTOM_BLOCK_VANILLA},

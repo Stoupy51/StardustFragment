@@ -1,5 +1,5 @@
 {
-	"parent": "minecraft:item/netherite_leggings",
+	"parent": "minecraft:item/diamond_leggings",
 	"textures": {
 		"layer0": "stardust:item/original_stardust_leggings"
 	}

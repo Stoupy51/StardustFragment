@@ -19,18 +19,18 @@
 										"damaged_stardust_leggings": true
 									}
 								},
-								"minecraft:max_damage": 618,
+								"minecraft:max_damage": 742,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 6.5,
+										"amount": 7.0,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor.legs"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2.5,
+										"amount": 3.0,
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:armor_toughness.legs"

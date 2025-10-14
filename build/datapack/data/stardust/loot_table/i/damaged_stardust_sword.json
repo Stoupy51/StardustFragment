@@ -19,11 +19,11 @@
 										"damaged_stardust_sword": true
 									}
 								},
-								"minecraft:max_damage": 1951,
+								"minecraft:max_damage": 2341,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 7,
+										"amount": 8,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"

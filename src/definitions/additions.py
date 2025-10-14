@@ -10,7 +10,9 @@ from stewbeet import (
 	GROWING_SEED,
 	NO_SILK_TOUCH_DROP,
 	OVERRIDE_MODEL,
+	PULVERIZING,
 	RESULT_OF_CRAFTING,
+	USED_FOR_CRAFTING,
 	VANILLA_BLOCK,
 	VANILLA_BLOCK_FOR_ORES,
 	WIKI_COMPONENT,
@@ -30,7 +32,6 @@ SNIPER_BULLETS_WIKI: list[TextComponent] = [
 	{"text":"\n- Gold nugget: +7 damage","color":"gray"},
 	{"text":"\n- Stardust Essence: +10 damage","color":"gray"},
 	{"text":"\n- Awakened Stardust: +20 damage","color":"gray"},
-	{"text":"\n- Ultimate bullet: +35 damage","color":"gray"},
 ]
 COBBLESTONE_TIERS: list[str] = [
 	"compressed", "double_compressed", "triple_compressed", "quadruple_compressed",
@@ -43,6 +44,56 @@ def main_additions() -> None:
 	MISC: str = "miscellaneous"
 	EQUIPMENT: str = "equipment"
 	ns: str = Mem.ctx.project_id
+
+	# Prepare some recipes
+	QUARRY_CRAFTING_RECIPES: dict[str, list[JsonDict]] = {
+		"quarry_lv1": [
+			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+				ingr_repr("minecraft:barrel"),ingr_repr("minecraft:crafter"),ingr_repr("minecraft:barrel"),
+				ingr_repr("minecraft:observer"),ingr_repr("minecraft:amethyst_shard"),ingr_repr("minecraft:observer"),
+				ingr_repr("minecraft:diamond_pickaxe"),ingr_repr("minecraft:diamond_axe"),ingr_repr("minecraft:diamond_shovel"),
+			]},
+		],
+		"quarry_lv2": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["WWW","EQE","BBB"],"ingredients":{"W":ingr_repr("minecraft:warped_fungus"),"E":ingr_repr("stardust_essence", ns),"Q":ingr_repr("quarry_lv1", ns),"B":ingr_repr("triple_compressed_cobblestone", ns)}},
+		],
+		"quarry_lv3": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","SQS","TTT"],"ingredients":{"D":ingr_repr("dragon_pearl", ns),"S":ingr_repr("compacted_stardust_shard", ns),"Q":ingr_repr("quarry_lv2", ns),"T":ingr_repr("quadruple_compressed_cobblestone", ns)}},
+		],
+		"quarry_lv4": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","NQN","BBB"],"ingredients":{"E":ingr_repr("ender_dragon_pearl", ns),"N":ingr_repr("minecraft:netherite_ingot"),"Q":ingr_repr("quarry_lv3", ns),"B":ingr_repr("quintuple_compressed_cobblestone", ns)}},
+		],
+		"quarry_lv5": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","UQU","BBB"],"ingredients":{"N":ingr_repr("minecraft:netherite_block"),"U":ingr_repr("ultimate_shard", ns),"Q":ingr_repr("quarry_lv4", ns),"B":ingr_repr("sextuple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","UQU","NNN"],"ingredients":{"N":ingr_repr("minecraft:netherite_block"),"U":ingr_repr("ultimate_shard", ns),"Q":ingr_repr("quarry_lv4", ns),"B":ingr_repr("sextuple_compressed_cobblestone", ns)}},
+		],
+	}
+	PORTAL_CRAFTING_RECIPES: dict[str, list[JsonDict]] = {
+		"cavern_portal": [
+			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("compressed_cobblestone", ns)] + [ingr_repr("stardust_fragment", ns)]},
+		],
+		"celestial_portal": [
+			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+				ingr_repr("minecraft:iron_block"),ingr_repr("minecraft:phantom_membrane"),ingr_repr("minecraft:iron_block"),
+				ingr_repr("minecraft:phantom_membrane"),ingr_repr("stardust_fragment", ns),ingr_repr("minecraft:phantom_membrane"),
+				ingr_repr("minecraft:iron_block"),ingr_repr("minecraft:phantom_membrane"),ingr_repr("minecraft:iron_block"),
+			]},
+		],
+		"stardust_portal": [
+			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+				ingr_repr("minecraft:blue_concrete"),ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:blue_concrete"),
+				ingr_repr("compacted_stardust_shard", ns),ingr_repr("celestial_portal", ns),ingr_repr("compacted_stardust_shard", ns),
+				ingr_repr("minecraft:blue_concrete"),ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:blue_concrete"),
+			]},
+		],
+		"stardust_dungeon_portal": [
+			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+				ingr_repr("awakened_stardust_block", ns),ingr_repr("awakened_stardust_ore", ns),ingr_repr("awakened_stardust_block", ns),
+				ingr_repr("awakened_stardust_ore", ns),ingr_repr("stardust_portal", ns),ingr_repr("awakened_stardust_ore", ns),
+				ingr_repr("awakened_stardust_block", ns),ingr_repr("awakened_stardust_ore", ns),ingr_repr("awakened_stardust_block", ns),
+			]},
+		],
+	}
 
 	# Give Additional data for every item
 	additions: dict[str, JsonDict] = {
@@ -363,6 +414,9 @@ def main_additions() -> None:
 				{"text":"\nUsed for comedic purposes and boss summoning","color":"gray"},
 				{"text":"\nEvery wolf lays an excrement item every 5-10 minutes","color":"gray"},
 			],
+			USED_FOR_CRAFTING: [
+				{"type":PULVERIZING,"result_count":{"type":"minecraft:uniform","min":4,"max":6},"category":"misc","ingredient":ingr_repr("dog_excrement", ns),"result":ingr_repr("minecraft:bone_meal")},
+			]
 		},
 		**{
 			f"{current}_cobblestone": {
@@ -556,7 +610,7 @@ def main_additions() -> None:
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
 					ingr_repr("compacted_stardust_shard", ns),ingr_repr("legendarium_ingot", ns),ingr_repr("compacted_stardust_shard", ns),
-					ingr_repr("solarium_ingot", ns),ingr_repr("awakened_stardust_cable", ns),ingr_repr("darkium_block", ns),
+					ingr_repr("solarium_ingot", ns),ingr_repr("awakened_stardust_cable", ns),ingr_repr("darkium_ingot", ns),
 					ingr_repr("compacted_stardust_shard", ns),ingr_repr("stardust_core", ns),ingr_repr("compacted_stardust_shard", ns),
 				]},
 			]
@@ -695,23 +749,31 @@ def main_additions() -> None:
 		**{
 			f"quarry_lv{i+1}": {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-				"custom_data": {"energy": {"usage":usage, "max_storage":storage}},
+				"custom_data": {"energy": {"usage":usage, "max_storage":storage}, ns: {"quarry": {"block_per_second":block_per_second}}},
 				VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
 				"item_name": {"text":f"Quarry Lv.{i+1}","italic":False,"color":"white"},
+				"lore": [
+					{"text":f"[Speed: {block_per_second} block/s]","italic":False,"color":"gray"},
+				],
 				WIKI_COMPONENT: [
 					{"text":f"Level {i+1} quarry for automated mining.","color":"yellow"},
+					{"text":f"\nMines {block_per_second} blocks per second","color":"gray"},
 					{"text":f"\nConsumes {usage} kW of power","color":"gray"},
 					{"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"},
-					{"text":"\nMines blocks in a configured area","color":"gray"},
+					{"text":"\nOnly mines blocks in a configured area","color":"gray"},
 				],
+				RESULT_OF_CRAFTING: QUARRY_CRAFTING_RECIPES[f"quarry_lv{i+1}"],
 			}
-			for i, (usage, storage) in enumerate([(125, 20000), (250, 60000), (375, 100000), (500, 140000), (625, 180000)])
+			for i, (usage, storage, block_per_second) in enumerate([(125, 20000, 1), (250, 60000, 3), (375, 100000, 5), (500, 140000, 8), (625, 180000, 16)])
 		},
 		"quarry_creative": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-			"custom_data": {"energy": {"usage":0, "max_storage":1}},
+			"custom_data": {"energy": {"usage":0, "max_storage":1}, ns: {"quarry": {"block_per_second":1000}}},
 			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
 			"item_name": {"text":"Creative Quarry","italic":False,"color":"white"},
+			"lore": [
+				{"text":"[Speed: 1000 block/s]","italic":False,"color":"gray"},
+			],
 			"enchantment_glint_override": True,
 			WIKI_COMPONENT: [
 				{"text":"Creative quarry with unlimited power.","color":"yellow"},
@@ -735,8 +797,9 @@ def main_additions() -> None:
 					{"text":f"Portal to {dimension}.","color":"yellow"},
 					{"text":f"\n{description}","color":"gray"},
 					{"text":f"\nConsumes {usage} kW of power","color":"gray"},
-					{"text":f"\nEnergy buffer: {storage//1000 if storage >= 1000 else storage} {'MJ' if storage >= 1000 else 'kJ'}","color":"gray"},
+					{"text":f"\nEnergy buffer of {storage//1000 if storage >= 1000 else storage} {'MJ' if storage >= 1000 else 'kJ'}","color":"gray"},
 				],
+				RESULT_OF_CRAFTING: PORTAL_CRAFTING_RECIPES[portal_name],
 			}
 			for portal_name, display_name, color, description, dimension, usage, storage in [
 				("cavern_portal", "Cavern Portal", "dark_gray", "This portal allows access to a world full of caverns!", "the Cavern dimension", 20, 800),
@@ -777,6 +840,13 @@ def main_additions() -> None:
 				{"text":"\nConsumes 500 kW of power","color":"gray"},
 				{"text":"\nEnergy buffer: 24 MJ","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+					ingr_repr("ultimate_shard", ns),ingr_repr("ultimate_shard", ns),ingr_repr("ultimate_shard", ns),
+					ingr_repr("ultimate_frame", ns),ingr_repr("stardust_dungeon_portal", ns),ingr_repr("ultimate_frame", ns),
+					ingr_repr("minecraft:crying_obsidian"),ingr_repr("minecraft:crying_obsidian"),ingr_repr("minecraft:crying_obsidian"),
+				]},
+			]
 		},
 
 		# Other Machines
@@ -793,6 +863,10 @@ def main_additions() -> None:
 				{"text":"\nAccelerates growth in 10-block radius","color":"gray"},
 				{"text":"\nOperates once per minute when powered","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","DSD","FFF"],"ingredients":{"E":ingr_repr("stardust_essence", ns),"D":ingr_repr("dog_excrement", ns),"S":ingr_repr("diamond_seed", ns),"F":ingr_repr("stardust_frame", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","DSD","EEE"],"ingredients":{"E":ingr_repr("stardust_essence", ns),"D":ingr_repr("dog_excrement", ns),"S":ingr_repr("diamond_seed", ns),"F":ingr_repr("stardust_frame", ns)}},
+			]
 		},
 		"mob_grinder": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
@@ -801,53 +875,67 @@ def main_additions() -> None:
 			"item_name": {"text":"Mob Grinder","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Automated mob killing machine.","color":"yellow"},
-				{"text":"\nKills mobs in a large area around it","color":"gray"},
+				{"text":"\nKills mobs in a large area in front of it","color":"gray"},
 				{"text":"\nConsumes 100 kW of power","color":"gray"},
-				{"text":"\nCollects drops automatically","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DSD","FFF"],"ingredients":{"A":ingr_repr("awakened_stardust_block", ns),"D":ingr_repr("ender_dragon_pearl", ns),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","DSD","AAA"],"ingredients":{"A":ingr_repr("awakened_stardust_block", ns),"D":ingr_repr("ender_dragon_pearl", ns),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame", ns)}},
+			]
 		},
 
 		# Generators
 		"nether_star_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":1500, "max_storage":30000}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
 			"item_name": {"text":"Nether Star Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"High-power generator using nether stars.","color":"yellow"},
 				{"text":"\nGenerates 1500 kW when supplied with nether stars","color":"gray"},
 				{"text":"\nEnergy buffer: 30 MJ","color":"gray"},
-				{"text":"\nConsumes nether stars from inventory","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["MMM","NRN","BBB"],"ingredients":{"M":ingr_repr("machine_block", "simplenergy"),"N":ingr_repr("minecraft:nether_star"),"R":ingr_repr("redstone_generator", "simplenergy"),"B":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","NRN","MMM"],"ingredients":{"M":ingr_repr("machine_block", "simplenergy"),"N":ingr_repr("minecraft:nether_star"),"R":ingr_repr("redstone_generator", "simplenergy"),"B":ingr_repr("minecraft:iron_block")}},
+			]
 		},
 		"advanced_furnace_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":20, "max_storage":1600}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
 			"item_name": {"text":"Advanced Furnace Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced furnace generator.","color":"yellow"},
 				{"text":"\nGenerates 20 kW when supplied with fuel","color":"gray"},
 				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
-				{"text":"\nMore efficient than basic furnace generators","color":"gray"},
+				{"text":"\nMore efficient than basic furnace generator","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["MMM","GFG","BBB"],"ingredients":{"M":ingr_repr("machine_block", "simplenergy"),"G":ingr_repr("minecraft:glass"),"F":ingr_repr("furnace_generator", "simplenergy"),"B":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","GFG","MMM"],"ingredients":{"M":ingr_repr("machine_block", "simplenergy"),"G":ingr_repr("minecraft:glass"),"F":ingr_repr("furnace_generator", "simplenergy"),"B":ingr_repr("minecraft:iron_block")}},
+			]
 		},
 		"stardust_furnace_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":40, "max_storage":1600}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
 			"item_name": {"text":"Stardust Furnace Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Stardust-enhanced furnace generator.","color":"yellow"},
 				{"text":"\nGenerates 40 kW when supplied with fuel","color":"gray"},
 				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
-				{"text":"\nHigher efficiency than advanced generators","color":"gray"},
+				{"text":"\nHigher efficiency than advanced generator","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CFC","BBB"],"ingredients":{"S":ingr_repr("stardust_frame", ns),"C":ingr_repr("compacted_stardust_shard", ns),"F":ingr_repr("advanced_furnace_generator", ns),"B":ingr_repr("stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CFC","SSS"],"ingredients":{"S":ingr_repr("stardust_frame", ns),"C":ingr_repr("compacted_stardust_shard", ns),"F":ingr_repr("advanced_furnace_generator", ns),"B":ingr_repr("stardust_block", ns)}},
+			]
 		},
 		"awakened_furnace_generator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":80, "max_storage":1600}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
 			"item_name": {"text":"Awakened Furnace Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Top-tier furnace generator with awakened stardust.","color":"yellow"},
@@ -855,6 +943,10 @@ def main_additions() -> None:
 				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
 				{"text":"\nMaximum efficiency furnace generator","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DFD","BBB"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"D":ingr_repr("ender_dragon_pearl", ns),"F":ingr_repr("stardust_furnace_generator", ns),"B":ingr_repr("awakened_stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","DFD","AAA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"D":ingr_repr("ender_dragon_pearl", ns),"F":ingr_repr("stardust_furnace_generator", ns),"B":ingr_repr("awakened_stardust_block", ns)}},
+			]
 		},
 
 		# Equipments
@@ -869,7 +961,10 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Elytra crafted from ultimate materials.","color":"yellow"},
 				{"text":"\nHigher durability (x8) than regular elytra","color":"gray"},
-				{"text":"\nProvides armor (10), toughness (4), and knockback resistance (0.1) when worn","color":"gray"},
+				{"text":"\n\nWhen on Chest:","color":"gray"},
+				{"text":"\n+10 Armor","color":"blue"},
+				{"text":"\n+4 Armor Toughness","color":"blue"},
+				{"text":"\n+1 Knockback Resistance","color":"blue"},
 			],
 		},
 		"stardust_bow": {
@@ -877,9 +972,13 @@ def main_additions() -> None:
 			"max_damage": 768,	# x2 the durability of regular bow (384)
 			WIKI_COMPONENT: [
 				{"text":"Bow crafted from stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x2) and power (x1.5) than regular bows","color":"gray"},
+				{"text":"\nHigher durability (x2) and power (x1.5) than regular bows","color":"gray"},	# TODO: Implement power increase
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},	# TODO: Implement this behavior
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" CS","C S"," CS"],"ingredients":{"C":ingr_repr("compacted_stardust_shard", ns),"S":ingr_repr("minecraft:string")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SC ","S C","SC "],"ingredients":{"C":ingr_repr("compacted_stardust_shard", ns),"S":ingr_repr("minecraft:string")}},
+			]
 		},
 		"awakened_stardust_bow": {
 			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
@@ -889,6 +988,10 @@ def main_additions() -> None:
 				{"text":"\nHigher durability (x4) and power (x2) than regular bows","color":"gray"},
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ASA","SBS","ASA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_bow", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SAS","ABA","SAS"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_bow", ns)}},
+			]
 		},
 		"ultimate_bow": {
 			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
@@ -908,6 +1011,13 @@ def main_additions() -> None:
 				{"text":"\nCooldown: 1.00s","color":"gray"},
 				*SNIPER_BULLETS_WIKI,
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+					ingr_repr("dragon_pearl", ns),ingr_repr("dragon_pearl", ns),ingr_repr("compacted_stardust_shard", ns),
+					ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:diamond_spear"),ingr_repr("compacted_stardust_shard", ns),
+					ingr_repr("compacted_stardust_shard", ns),ingr_repr("dragon_pearl", ns),ingr_repr("dragon_pearl", ns)
+				]},
+			]
 		},
 		"awakened_stardust_sniper": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
@@ -918,6 +1028,10 @@ def main_additions() -> None:
 				{"text":"\nCooldown: 0.75s","color":"gray"},
 				*SNIPER_BULLETS_WIKI,
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ASA","SBS","ASA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_sniper", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SAS","ABA","SAS"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_sniper", ns)}},
+			]
 		},
 		"ultimate_sniper": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
@@ -929,14 +1043,6 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 		},
-		"ultimate_bullet": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			WIKI_COMPONENT: [
-				{"text":"Best ammunition for snipers.","color":"yellow"},
-				{"text":"\nCrafted from ultimate materials","color":"gray"},
-				{"text":"\n+35 damage when shooting","color":"gray"},
-			],
-		},
 		**{
 			f"{artifact}_artifact_lv{i+1 if i < 3 else 'max'}": {
 				"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
@@ -944,13 +1050,18 @@ def main_additions() -> None:
 				"rarity": "epic" if i == 3 else "rare",
 				"lore": [
 					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
+					{"text":f"[+{level}% {lore}]","color":"gray","italic":False},
 				],
 				"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
 				WIKI_COMPONENT: [
 					{"text":f"Lv.{i+1 if i < 3 else 'Max'} {artifact} Artifact","color":"yellow"},
 					{"text":f"\nHold in any hand to get the {artifact} effect","color":"gray"},
 					{"text":f"\n[+{level}% {lore}]","color":"gray"},
+					*([] if i > 0 else [{"text":"\n\nCan be obtained from Lucky Artifact Bags only","color":"gray"}]),
 				],
+				RESULT_OF_CRAFTING: [
+					{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":2*[ingr_repr(f"{artifact}_artifact_lv{i}", ns)]},
+				] if i > 0 else []
 			}
 			for artifact, lore, attribute, levels in (
 				("health", "Health Points", "max_health", (10, 20, 30, 50)),
@@ -971,6 +1082,9 @@ def main_additions() -> None:
 				{"text":"\nCan contain Health, Damage, or Speed Artifacts","color":"gray"},
 				{"text":"\nThis can be found in various structures","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:leather")] + [ingr_repr("ultimate_shard", ns)]},
+			]
 		},
 		"item_magnet": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
@@ -983,6 +1097,9 @@ def main_additions() -> None:
 				{"text":"\nHold in offhand to attract items within a 4 blocks radius","color":"gray"},
 				{"text":"\nUseful for collecting dropped items","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["U U","A A","AAA"],"ingredients":{"U":ingr_repr("ultimate_shard", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
+			]
 		},
 		"home_travel_staff": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
@@ -993,11 +1110,21 @@ def main_additions() -> None:
 				{"text":"\nRight-click to teleport to your bed or world spawn","color":"gray"},
 				{"text":"\nHas 64 uses before breaking","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["D","S"],"ingredients":{"D":ingr_repr("dragon_pearl", ns),"S":ingr_repr("minecraft:stick")}},
+			]
 		},
 		"wormhole_potion": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
 			"consumable": {"consume_seconds": 1024, "animation": "drink", "has_consume_particles": False},
 			"max_stack_size": 16,
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+					ingr_repr("minecraft:cod"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:tropical_fish"),
+					ingr_repr("minecraft:pufferfish"),ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:pufferfish"),
+					ingr_repr("minecraft:tropical_fish"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:cod"),
+				]},
+			]
 		},
 		"stardust_apple": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
@@ -1007,7 +1134,10 @@ def main_additions() -> None:
 					{"amplifier": 2, "duration": 100, "id": "minecraft:regeneration", "show_icon": True},	# Regeneration III for 5 seconds
 					{"amplifier": 1, "duration": 2400, "id": "minecraft:absorption", "show_icon": True}		# Absorption II for 2 minutes
 				]}]
-			}
+			},
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("stardust_fragment", ns)] + [ingr_repr("minecraft:golden_apple")]},
+			]
 		},
 		"life_crystal": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,

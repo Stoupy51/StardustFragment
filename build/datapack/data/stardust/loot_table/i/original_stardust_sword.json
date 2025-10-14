@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:netherite_sword",
+					"name": "minecraft:diamond_sword",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -23,7 +23,7 @@
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 16,
+										"amount": 14,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"

@@ -19,18 +19,18 @@
 										"damaged_stardust_boots": true
 									}
 								},
-								"minecraft:max_damage": 536,
+								"minecraft:max_damage": 643,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 3.5,
+										"amount": 4.0,
 										"operation": "add_value",
 										"slot": "feet",
 										"id": "stardust:armor.feet"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2.5,
+										"amount": 3.0,
 										"operation": "add_value",
 										"slot": "feet",
 										"id": "stardust:armor_toughness.feet"

@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:netherite_axe",
+					"name": "minecraft:diamond_axe",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -23,7 +23,7 @@
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 18,
+										"amount": 16,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"

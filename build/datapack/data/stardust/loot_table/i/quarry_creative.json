@@ -16,6 +16,7 @@
 										"max_storage": 1
 									},
 									"stardust": {
+										"quarry": {"block_per_second": 1000},
 										"quarry_creative": true
 									},
 									"smithed": {
@@ -27,8 +28,12 @@
 									"italic": false,
 									"color": "white"
 								},
-								"minecraft:enchantment_glint_override": true,
 								"minecraft:lore": [
+									{
+										"translate": "stardust.speed_1000_block_s",
+										"italic": false,
+										"color": "gray"
+									},
 									{
 										"translate": "stardust.power_usage_0_kw",
 										"italic": false,
@@ -45,6 +50,7 @@
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
 								],
+								"minecraft:enchantment_glint_override": true,
 								"minecraft:item_model": "stardust:quarry_creative",
 								"minecraft:container": [
 									{

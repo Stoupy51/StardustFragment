@@ -19,18 +19,18 @@
 										"damaged_stardust_helmet": true
 									}
 								},
-								"minecraft:max_damage": 453,
+								"minecraft:max_damage": 544,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 3.5,
+										"amount": 4.0,
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:armor.head"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 2.5,
+										"amount": 3.0,
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:armor_toughness.head"

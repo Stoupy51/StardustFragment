@@ -1,0 +1,35 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": {
+									"translate": "stardust.redstone_generator"
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.simplenergy",
+										"italic": true,
+										"color": "blue"
+									}
+								],
+								"minecraft:custom_data": {
+									"simplenergy": {
+										"redstone_generator": true
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

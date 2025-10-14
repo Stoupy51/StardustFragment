@@ -1,9 +1,9 @@
 
 #> stardust:custom_blocks/nether_star_generator/replace_item
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:furnace"}},distance=..1]
 #
-# @within	stardust:custom_blocks/nether_star_generator/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..1] ]
+# @within	stardust:custom_blocks/nether_star_generator/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:furnace"}},distance=..1] ]
 #
 
 # Replace the item with the custom one

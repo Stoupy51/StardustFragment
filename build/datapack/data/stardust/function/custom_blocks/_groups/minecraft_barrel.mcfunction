@@ -18,8 +18,4 @@ execute if score #total_stardust_portal stardust.data matches 1.. if entity @s[t
 execute if score #total_stardust_dungeon_portal stardust.data matches 1.. if entity @s[tag=stardust.stardust_dungeon_portal] run function stardust:custom_blocks/stardust_dungeon_portal/destroy
 execute if score #total_ultimate_portal stardust.data matches 1.. if entity @s[tag=stardust.ultimate_portal] run function stardust:custom_blocks/ultimate_portal/destroy
 execute if score #total_mob_grinder stardust.data matches 1.. if entity @s[tag=stardust.mob_grinder] run function stardust:custom_blocks/mob_grinder/destroy
-execute if score #total_nether_star_generator stardust.data matches 1.. if entity @s[tag=stardust.nether_star_generator] run function stardust:custom_blocks/nether_star_generator/destroy
-execute if score #total_advanced_furnace_generator stardust.data matches 1.. if entity @s[tag=stardust.advanced_furnace_generator] run function stardust:custom_blocks/advanced_furnace_generator/destroy
-execute if score #total_stardust_furnace_generator stardust.data matches 1.. if entity @s[tag=stardust.stardust_furnace_generator] run function stardust:custom_blocks/stardust_furnace_generator/destroy
-execute if score #total_awakened_furnace_generator stardust.data matches 1.. if entity @s[tag=stardust.awakened_furnace_generator] run function stardust:custom_blocks/awakened_furnace_generator/destroy
 

@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:netherite_pickaxe",
+					"name": "minecraft:diamond_pickaxe",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -23,7 +23,7 @@
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "attack_damage",
-										"amount": 14,
+										"amount": 12,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_damage"

@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:netherite_helmet",
+					"name": "minecraft:diamond_helmet",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -19,28 +19,21 @@
 										"original_stardust_helmet": true
 									}
 								},
-								"minecraft:max_damage": 938,
+								"minecraft:max_damage": 1089,
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",
-										"amount": 6.5,
+										"amount": 6.0,
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:armor.head"
 									},
 									{
 										"type": "armor_toughness",
-										"amount": 4.5,
+										"amount": 3.3,
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:armor_toughness.head"
-									},
-									{
-										"type": "knockback_resistance",
-										"amount": 0.1,
-										"operation": "add_value",
-										"slot": "head",
-										"id": "stardust:knockback_resistance.head"
 									}
 								],
 								"minecraft:item_model": "stardust:original_stardust_helmet",

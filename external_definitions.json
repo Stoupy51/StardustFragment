@@ -17,6 +17,18 @@
 		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
 		"custom_data": {"simplenergy": {"machine_block": true}}
 	},
+	"simplenergy:furnace_generator": {
+		"id": "minecraft:furnace",
+		"item_name": {"text": "Furnace Generator"},
+		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
+		"custom_data": {"simplenergy": {"furnace_generator": true}}
+	},
+	"simplenergy:redstone_generator": {
+		"id": "minecraft:furnace",
+		"item_name": {"text": "Redstone Generator"},
+		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
+		"custom_data": {"simplenergy": {"redstone_generator": true}}
+	},
 	"simplenergy:solar_panel": {
 		"id": "minecraft:furnace",
 		"item_name": {"text": "Solar Panel"},

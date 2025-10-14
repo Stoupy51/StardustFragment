@@ -13,7 +13,7 @@
 								"minecraft:custom_data": {
 									"energy": {
 										"storage": 0,
-										"max_storage": 1000000
+										"max_storage": 10000000
 									},
 									"stardust": {
 										"ultimate_battery": true
@@ -28,7 +28,7 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_storage_1000_mj",
+										"translate": "stardust.energy_storage_10_gj",
 										"italic": false,
 										"color": "gray"
 									},

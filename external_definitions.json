@@ -1,15 +1,33 @@
 {
-	"simplenergy:machine_block": {
+	"simplenergy:simplunium_block": {
 		"id": "minecraft:furnace",
-		"item_name": {"text": "Machine Block"},
+		"item_name": {"text": "Simplunium Block"},
 		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"machine_block": true}}
+		"custom_data": {"simplenergy": {"simplunium_block": true}}
 	},
 	"simplenergy:simplunium_ingot": {
 		"id": "minecraft:command_block",
 		"item_name": {"text": "Simplunium Ingot"},
 		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
 		"custom_data": {"simplenergy": {"simplunium_ingot": true}}
+	},
+	"simplenergy:machine_block": {
+		"id": "minecraft:furnace",
+		"item_name": {"text": "Machine Block"},
+		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
+		"custom_data": {"simplenergy": {"machine_block": true}}
+	},
+	"simplenergy:solar_panel": {
+		"id": "minecraft:furnace",
+		"item_name": {"text": "Solar Panel"},
+		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
+		"custom_data": {"simplenergy": {"solar_panel": true}}
+	},
+	"simplenergy:elite_battery": {
+		"id": "minecraft:furnace",
+		"item_name": {"text": "Elite Battery"},
+		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
+		"custom_data": {"simplenergy": {"elite_battery": true}}
 	},
 	"simplenergy:elite_cable": {
 		"id": "minecraft:command_block",

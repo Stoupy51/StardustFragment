@@ -23,8 +23,13 @@ def beet_default(ctx: Context) -> None:
 
 	## Incomplete item definition
 	Mem.definitions.update({
-		"simplenergy:machine_block": {"id": CUSTOM_BLOCK_VANILLA},
+		"simplenergy:simplunium_block": {"id": CUSTOM_BLOCK_VANILLA},
 		"simplenergy:simplunium_ingot": {"id": CUSTOM_ITEM_VANILLA},
+		"simplenergy:machine_block": {"id": CUSTOM_BLOCK_VANILLA},
+
+		"simplenergy:solar_panel": {"id": CUSTOM_BLOCK_VANILLA},
+
+		"simplenergy:elite_battery": {"id": CUSTOM_BLOCK_VANILLA},
 		"simplenergy:elite_cable": {"id": CUSTOM_ITEM_VANILLA},
 	})
 

@@ -19,6 +19,7 @@ from stewbeet import (
 	TextComponent,
 	ingr_repr,
 )
+from stouputils.collections import unique_list
 from stouputils.print import info
 
 # Constants
@@ -569,6 +570,9 @@ def main_additions() -> None:
 				{"text":"Large-capacity energy storage device.","color":"yellow"},
 				{"text":"\nStores up to 200 MJ of energy","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","CBC","SSS"],"ingredients":{"E":ingr_repr("stardust_essence", ns),"C":ingr_repr("compacted_stardust_shard", ns),"B":ingr_repr("elite_battery", "simplenergy"),"S":ingr_repr("stardust_block", ns)}},
+			]
 		},
 		"awakened_stardust_battery": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":500000}},
@@ -577,15 +581,23 @@ def main_additions() -> None:
 				{"text":"Enhanced energy storage with awakened stardust.","color":"yellow"},
 				{"text":"\nStores up to 500 MJ of energy","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","SBS","AAA"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("awakened_stardust", ns),"B":ingr_repr("stardust_battery", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","SBS","RRR"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("awakened_stardust", ns),"B":ingr_repr("stardust_battery", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
+			]
 		},
 		"ultimate_battery": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":1000000}},
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":10000000}},
 			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
 			"item_name": {"text":"Ultimate Battery","color":"dark_red"},
 			WIKI_COMPONENT: [
 				{"text":"Ultimate energy storage device.","color":"yellow"},
-				{"text":"\nStores up to 1000 MJ of energy","color":"gray"},
+				{"text":"\nStores up to 10 GJ of energy","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","FBF","CCC"],"ingredients":{"S":ingr_repr("ultimate_shard", ns),"F":ingr_repr("ultimate_frame", ns),"B":ingr_repr("awakened_stardust_battery", ns),"C":ingr_repr("stardust_core", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","FBF","SSS"],"ingredients":{"S":ingr_repr("ultimate_shard", ns),"F":ingr_repr("ultimate_frame", ns),"B":ingr_repr("awakened_stardust_battery", ns),"C":ingr_repr("stardust_core", ns)}},
+			]
 		},
 
 		# Energy Systems - Solar Panels
@@ -598,6 +610,9 @@ def main_additions() -> None:
 				{"text":"\nGenerates 8 kW during daylight","color":"gray"},
 				{"text":"\nRequires direct sunlight","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("stardust_photovoltaic_cell", ns),"E":ingr_repr("stardust_essence", ns),"P":ingr_repr("solar_panel", "simplenergy"),"B":ingr_repr("minecraft:lapis_block")}},
+			]
 		},
 		"awakened_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":16, "max_storage":2400}},
@@ -608,6 +623,9 @@ def main_additions() -> None:
 				{"text":"\nDouble the power of basic solar panels","color":"gray"},
 				{"text":"\nGenerates 16 kW during daylight","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","APA","BBB"],"ingredients":{"C":ingr_repr("awakened_photovoltaic_cell", ns),"A":ingr_repr("awakened_stardust_block", ns),"P":ingr_repr("stardust_solar_panel", ns),"B":ingr_repr("minecraft:iron_block")}},
+			]
 		},
 		"legendarium_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage":4800}},
@@ -618,6 +636,9 @@ def main_additions() -> None:
 				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
 				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("legendarium_photovoltaic_cell", ns),"E":ingr_repr("legendarium_ingot", ns),"P":ingr_repr("awakened_solar_panel", ns),"B":ingr_repr("minecraft:calcite")}},
+			]
 		},
 		"solarium_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage":4800}},
@@ -628,6 +649,9 @@ def main_additions() -> None:
 				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
 				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("solarium_photovoltaic_cell", ns),"E":ingr_repr("solarium_ingot", ns),"P":ingr_repr("awakened_solar_panel", ns),"B":ingr_repr("minecraft:calcite")}},
+			]
 		},
 		"darkium_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":32, "max_storage":4800}},
@@ -638,6 +662,9 @@ def main_additions() -> None:
 				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
 				{"text":"\nGenerates 32 kW during nighttime instead of daylight","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("darkium_photovoltaic_cell", ns),"E":ingr_repr("darkium_ingot", ns),"P":ingr_repr("awakened_solar_panel", ns),"B":ingr_repr("simplunium_block", "simplenergy")}},
+			]
 		},
 		"ultimate_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":128, "max_storage":20000}},
@@ -647,6 +674,21 @@ def main_additions() -> None:
 				{"text":"Ultimate solar panel combining all three elements.","color":"yellow"},
 				{"text":"\nGenerates 128 kW during daylight only","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: unique_list([
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","SPS","XYZ"],"ingredients":{
+					"C":ingr_repr("ultimate_photovoltaic_cell", ns),
+					"S":ingr_repr("ultimate_shard", ns),
+					"P":ingr_repr(f"{panel}_solar_panel", ns),
+					"X":ingr_repr(f"{X}_block", ns),
+					"Y":ingr_repr("stardust_core", ns),
+					"Z":ingr_repr(f"{Z}_block", ns)
+				}}
+				for elements in [("legendarium", "solarium", "darkium"), ("darkium", "legendarium", "solarium"), ("solarium", "darkium", "legendarium")]
+				for panel in elements
+				for X in elements
+				for Z in elements
+				if panel != X and panel != Z and X != Z
+			], method="str")
 		},
 
 		# Quarries

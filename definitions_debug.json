@@ -267,7 +267,7 @@
 		"category": "materials",
 		"item_name": {"text": "Dog Excrement","italic": false,"color": "#693100"},
 		"wiki_components": [{"text": "A smelly piece of dog excrement.","color": "#693100"},{"text": "\nUsed for comedic purposes and boss summoning","color": "gray"},{"text": "\nEvery wolf lays an excrement item every 5-10 minutes","color": "gray"}],
-		"used_for_crafting": [{"type": "simplenergy_pulverizing","result_count": {"type": "minecraft:uniform","min": 4,"max": 6},"category": "misc","result": {"item": "minecraft:bone_meal"}}],
+		"used_for_crafting": [{"type": "simplenergy_pulverizing","result_count": {"type": "minecraft:uniform","min": 4,"max": 6},"category": "misc","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},"result": {"item": "minecraft:bone_meal"}}],
 		"item_model": "stardust:dog_excrement",
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"dog_excrement": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}

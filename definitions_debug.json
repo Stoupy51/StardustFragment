@@ -1429,6 +1429,7 @@
 		"vanilla_block": {"id": "minecraft:glass","apply_facing": "entity"},
 		"no_silk_touch_drop": {"id": "life_crystal","count": 1},
 		"wiki_components": [{"text": "Decorative block made from life crystals.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nCan be broken to retrieve a life crystal","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"item": "minecraft:glass"},{"components": {"minecraft:custom_data": {"stardust": {"life_crystal": true}}}}]}],
 		"item_model": "stardust:life_crystal_block",
 		"item_name": {"text": "Life Crystal Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],

@@ -90,7 +90,7 @@ meta:
         # The name can be whatever you want, it's just used in messages
         load_dependencies:
             simplenergy:
-                version: [2, 0, 8]
+                version: [2, 0, 13]
                 name: "SimplEnergy"
                 url: "https://modrinth.com/datapack/simplenergy"
         # Configuration for in-game manual

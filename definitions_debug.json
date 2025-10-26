@@ -255,7 +255,7 @@
 	"ultimate_shard": {
 		"id": "minecraft:command_block",
 		"category": "materials",
-		"wiki_components": [{"text": "The ultimate refined material.","color": "yellow"},{"text": "\nSmelted from Ultimate Fragments","color": "gray"},{"text": "\nUsed for ultimate equipment","color": "gray"}],
+		"wiki_components": [{"text": "The ultimate refined material.","color": "yellow"},{"text": "\nMain component for ultimate crafting","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:popped_chorus_fruit"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},{"item": "minecraft:echo_shard"},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}},{"item": "minecraft:resin_brick"},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}}},{"item": "minecraft:turtle_scute"}]}],
 		"item_model": "stardust:ultimate_shard",
 		"item_name": {"text": "Ultimate Shard"},
@@ -1442,6 +1442,7 @@
 		"staged_seed": {"texture_basename": "diamond","seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","rolls": {"type": "minecraft:uniform","min": 0,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-2 diamonds when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:diamond"}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:diamond"}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:diamond"}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:diamond"}]}],
 		"item_model": "stardust:diamond_seed",
 		"item_name": {"text": "Diamond Seed"},
 		"custom_data": {"stardust": {"diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1453,6 +1454,7 @@
 		"staged_seed": {"texture_basename": "advanced_diamond","seconds": 1200,"planted_on": "stone","loots": [{"id": "minecraft:diamond","rolls": {"type": "minecraft:uniform","min": 0,"max": 24},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on stone.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows diamonds.","color": "yellow"},{"text": "\nCan only be planted on stone blocks","color": "gray"},{"text": "\nGrows fully after 20 minutes","color": "gray"},{"text": "\nYields 0-24 diamonds when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"item": "minecraft:diamond"},{"components": {"minecraft:custom_data": {"stardust": {"diamond_seed": true}}}}]}],
 		"item_model": "stardust:advanced_diamond_seed",
 		"item_name": {"text": "Advanced Diamond Seed"},
 		"custom_data": {"stardust": {"advanced_diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1464,6 +1466,7 @@
 		"staged_seed": {"texture_basename": "stardust","seconds": 480,"planted_on": "diamond_block","loots": [{"id": "stardust_fragment","rolls": {"type": "minecraft:uniform","min": 3,"max": 9},"fortune": {"extra": 0,"probability": 0.5}}]},
 		"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows stardust fragments.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 8 minutes","color": "gray"},{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+50% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"item": "minecraft:wheat_seeds"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"item": "minecraft:pumpkin_seeds"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"item": "minecraft:melon_seeds"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"item": "minecraft:beetroot_seeds"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}}]}],
 		"item_model": "stardust:stardust_seed",
 		"item_name": {"text": "Stardust Seed"},
 		"custom_data": {"stardust": {"stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1475,6 +1478,7 @@
 		"staged_seed": {"texture_basename": "advanced_stardust","seconds": 960,"planted_on": "diamond_block","loots": [{"id": "stardust_ingot","rolls": {"type": "minecraft:uniform","min": 1,"max": 4},"fortune": {"extra": 0,"probability": 0.3}}]},
 		"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows stardust ingots.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 16 minutes","color": "gray"},{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"},{"text": "\nFortune effect applies (+30% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_seed": true}}}}]}],
 		"item_model": "stardust:advanced_stardust_seed",
 		"item_name": {"text": "Advanced Stardust Seed"},
 		"custom_data": {"stardust": {"advanced_stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1486,6 +1490,7 @@
 		"staged_seed": {"texture_basename": "elite_stardust","seconds": 1920,"planted_on": "diamond_block","loots": [{"id": "stardust_essence","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.2}}]},
 		"lore": [{"text": "Can only be planted on diamond block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows stardust essences.","color": "yellow"},{"text": "\nCan only be planted on diamond blocks","color": "gray"},{"text": "\nGrows fully after 32 minutes","color": "gray"},{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"},{"text": "\nFortune effect applies (+20% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"advanced_stardust_seed": true}}}}]}],
 		"item_model": "stardust:elite_stardust_seed",
 		"item_name": {"text": "Elite Stardust Seed"},
 		"custom_data": {"stardust": {"elite_stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1497,6 +1502,7 @@
 		"staged_seed": {"texture_basename": "legendarium","seconds": 3840,"planted_on": "emerald_block","loots": [{"id": "legendarium_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on emerald block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows legendarium.","color": "yellow"},{"text": "\nCan only be planted on emerald blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 legendarium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:emerald"},{"item": "minecraft:emerald"},{"item": "minecraft:emerald"},{"item": "minecraft:emerald"},{"item": "minecraft:feather"},{"item": "minecraft:feather"},{"item": "minecraft:feather"},{"item": "minecraft:feather"},{"components": {"minecraft:custom_data": {"stardust": {"elite_stardust_seed": true}}}}]}],
 		"item_model": "stardust:legendarium_seed",
 		"item_name": {"text": "Legendarium Seed"},
 		"custom_data": {"stardust": {"legendarium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1508,6 +1514,7 @@
 		"staged_seed": {"texture_basename": "solarium","seconds": 3840,"planted_on": "magma_block","loots": [{"id": "solarium_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on magma block.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows solarium.","color": "yellow"},{"text": "\nCan only be planted on magma blocks","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 solarium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:magma_cream"},{"item": "minecraft:magma_cream"},{"item": "minecraft:magma_cream"},{"item": "minecraft:magma_cream"},{"item": "minecraft:blaze_powder"},{"item": "minecraft:blaze_powder"},{"item": "minecraft:blaze_powder"},{"item": "minecraft:blaze_powder"},{"components": {"minecraft:custom_data": {"stardust": {"elite_stardust_seed": true}}}}]}],
 		"item_model": "stardust:solarium_seed",
 		"item_name": {"text": "Solarium Seed"},
 		"custom_data": {"stardust": {"solarium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1519,6 +1526,7 @@
 		"staged_seed": {"texture_basename": "darkium","seconds": 3840,"planted_on": "obsidian","loots": [{"id": "darkium_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.1}}]},
 		"lore": [{"text": "Can only be planted on obsidian.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Magical seed that grows darkium.","color": "yellow"},{"text": "\nCan only be planted on obsidian","color": "gray"},{"text": "\nGrows fully after 64 minutes","color": "gray"},{"text": "\nYields 1-2 darkium fragments when harvested","color": "gray"},{"text": "\nFortune effect applies (+10% per level)","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:ink_sac"},{"item": "minecraft:ink_sac"},{"item": "minecraft:ink_sac"},{"item": "minecraft:ink_sac"},{"item": "minecraft:wither_rose"},{"item": "minecraft:wither_rose"},{"item": "minecraft:wither_rose"},{"item": "minecraft:wither_rose"},{"components": {"minecraft:custom_data": {"stardust": {"elite_stardust_seed": true}}}}]}],
 		"item_model": "stardust:darkium_seed",
 		"item_name": {"text": "Darkium Seed"},
 		"custom_data": {"stardust": {"darkium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
@@ -1531,6 +1539,7 @@
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x9 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.1","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 9 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:coal"},"P": {"item": "minecraft:wooden_pickaxe"},"M": {"item": "minecraft:redstone_block"},"B": {"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:charcoal"},"P": {"item": "minecraft:wooden_pickaxe"},"M": {"item": "minecraft:redstone_block"},"B": {"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv1",
 		"custom_data": {"stardust": {"cobblestone_miner_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1542,6 +1551,7 @@
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x45 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.2","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 36 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:flint"},"P": {"item": "minecraft:stone_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv1": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv2",
 		"custom_data": {"stardust": {"cobblestone_miner_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1553,6 +1563,7 @@
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x225 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.3","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 144 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:copper_block"},"P": {"item": "minecraft:copper_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv2": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv3",
 		"custom_data": {"stardust": {"cobblestone_miner_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1564,6 +1575,7 @@
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x1,125 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.4","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 576 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:iron_block"},"P": {"item": "minecraft:iron_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv3": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv4",
 		"custom_data": {"stardust": {"cobblestone_miner_lv4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1575,6 +1587,7 @@
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x5,625 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.5","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 2,304 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:gold_block"},"P": {"item": "minecraft:golden_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv4": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv5",
 		"custom_data": {"stardust": {"cobblestone_miner_lv5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1586,6 +1599,7 @@
 		"rarity": "epic",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x28,125 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.6","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 9,216 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:diamond_block"},"P": {"item": "minecraft:diamond_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv5": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv6",
 		"custom_data": {"stardust": {"cobblestone_miner_lv6": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1597,6 +1611,7 @@
 		"rarity": "epic",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x140,625 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.7","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 36,864 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:netherite_block"},"P": {"item": "minecraft:netherite_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv6": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv7",
 		"custom_data": {"stardust": {"cobblestone_miner_lv7": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1608,6 +1623,7 @@
 		"rarity": "epic",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x703,125 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Cobblestone Miner Lv.8","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 147,456 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}}},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv7": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv8",
 		"custom_data": {"stardust": {"cobblestone_miner_lv8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1619,6 +1635,7 @@
 		"rarity": "epic",
 		"lore": [{"text": "Summoner of the StoupArmy mini-boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Mystical egg that summons the StoupArmy mini-boss.","color": "yellow"},{"text": "\nUpon defeat, it drops valuable early-game resources","color": "gray"},{"text": "\nUse with caution, the improved wolves are strong","color": "gray"},{"text": "\nand will automatically target nearby players","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"item": "minecraft:wolf_armor"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}}]}],
 		"item_model": "stardust:stoupegg",
 		"custom_data": {"stardust": {"stoupegg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1630,6 +1647,7 @@
 		"rarity": "epic",
 		"lore": [{"text": "Summoner of the Stardust Pillar boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Mystical creature that summons the Stardust Pillar boss.","color": "yellow"},{"text": "\nUpon defeat, it drops valuable mid-game resources","color": "gray"},{"text": "\nalong with a Stardust Dungeon Key","color": "gray"},{"text": "\n\nInspired by Terraria's Stardust Pillar,","color": "gray"},{"text": "\nthe shield around the boss will be lowered after 50 enemies are killed near it","color": "gray"},{"text": "\n(+15 kills required per player in the area, capped at 150)","color": "gray"},{"text": "\nThen, the pillar will start to move like a normal wither","color": "gray"},{"text": "\nwith more health and damage while still summoning mobs","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:nether_star"}]}],
 		"item_model": "stardust:stardust_pillar",
 		"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
@@ -1648,6 +1666,7 @@
 		"category": "miscellaneous",
 		"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "white"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DD","QQ","QQ"],"ingredients": {"D": {"item": "minecraft:diamond"},"Q": {"item": "minecraft:quartz"}}}],
 		"item_model": "stardust:quarry_configurator",
 		"item_name": {"text": "Quarry Configurator"},
 		"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}

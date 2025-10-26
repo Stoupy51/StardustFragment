@@ -94,6 +94,33 @@ def main_additions() -> None:
 			]},
 		],
 	}
+	MINERS_CRAFTING_RECIPES: dict[str, list[JsonDict]] = {
+		"cobblestone_miner_lv1": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:coal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:charcoal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv2": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:flint"),"P":ingr_repr("minecraft:stone_pickaxe"),"M":ingr_repr("cobblestone_miner_lv1", ns),"B":ingr_repr("compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv3": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:copper_block"),"P":ingr_repr("minecraft:copper_pickaxe"),"M":ingr_repr("cobblestone_miner_lv2", ns),"B":ingr_repr("double_compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv4": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:iron_block"),"P":ingr_repr("minecraft:iron_pickaxe"),"M":ingr_repr("cobblestone_miner_lv3", ns),"B":ingr_repr("double_compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv5": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:gold_block"),"P":ingr_repr("minecraft:golden_pickaxe"),"M":ingr_repr("cobblestone_miner_lv4", ns),"B":ingr_repr("triple_compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv6": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:diamond_block"),"P":ingr_repr("minecraft:diamond_pickaxe"),"M":ingr_repr("cobblestone_miner_lv5", ns),"B":ingr_repr("triple_compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv7": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:netherite_block"),"P":ingr_repr("minecraft:netherite_pickaxe"),"M":ingr_repr("cobblestone_miner_lv6", ns),"B":ingr_repr("quadruple_compressed_cobblestone", ns)}},
+		],
+		"cobblestone_miner_lv8": [
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("stardust_core", ns),"P":ingr_repr("original_stardust_pickaxe", ns),"M":ingr_repr("cobblestone_miner_lv7", ns),"B":ingr_repr("quadruple_compressed_cobblestone", ns)}},
+		],
+	}
 
 	# Give Additional data for every item
 	additions: dict[str, JsonDict] = {
@@ -1190,6 +1217,12 @@ def main_additions() -> None:
 				{"text":"\nYields 0-2 diamonds when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("minecraft:diamond")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("minecraft:diamond")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("minecraft:diamond")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("minecraft:diamond")]},
+			]
 		},
 		"advanced_diamond_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1207,6 +1240,9 @@ def main_additions() -> None:
 				{"text":"\nYields 0-24 diamonds when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:diamond")] + [ingr_repr("diamond_seed", ns)]},
+			]
 		},
 		"stardust_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1224,6 +1260,12 @@ def main_additions() -> None:
 				{"text":"\nYields 3-9 stardust fragments when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+50% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("stardust_fragment", ns)]},
+			]
 		},
 		"advanced_stardust_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1241,6 +1283,9 @@ def main_additions() -> None:
 				{"text":"\nYields 1-4 stardust ingots when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+30% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("stardust_fragment", ns)] + [ingr_repr("stardust_seed", ns)]},
+			]
 		},
 		"elite_stardust_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1258,6 +1303,9 @@ def main_additions() -> None:
 				{"text":"\nYields 1-2 stardust essences when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+20% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("stardust_ingot", ns)] + [ingr_repr("advanced_stardust_seed", ns)]},
+			]
 		},
 		"legendarium_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1275,6 +1323,9 @@ def main_additions() -> None:
 				{"text":"\nYields 1-2 legendarium fragments when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:emerald")] + 4*[ingr_repr("minecraft:feather")] + [ingr_repr("elite_stardust_seed", ns)]},
+			]
 		},
 		"solarium_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1292,6 +1343,9 @@ def main_additions() -> None:
 				{"text":"\nYields 1-2 solarium fragments when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:magma_cream")] + 4*[ingr_repr("minecraft:blaze_powder")] + [ingr_repr("elite_stardust_seed", ns)]},
+			]
 		},
 		"darkium_seed": {
 			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
@@ -1309,6 +1363,9 @@ def main_additions() -> None:
 				{"text":"\nYields 1-2 darkium fragments when harvested","color":"gray"},
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:ink_sac")] + 4*[ingr_repr("minecraft:wither_rose")] + [ingr_repr("elite_stardust_seed", ns)]},
+			]
 		},
 		**{
 			f"cobblestone_miner_lv{i+1}": {
@@ -1326,6 +1383,7 @@ def main_additions() -> None:
 					{"text":f"\nProduction rate is {9*(4**i):,} cobblestone per minute","color":"gray"},
 					{"text":"\nNo energy required","color":"gray"},
 				],
+				RESULT_OF_CRAFTING: MINERS_CRAFTING_RECIPES[f"cobblestone_miner_lv{i+1}"],
 			}
 			for i in range(8)
 		},
@@ -1343,6 +1401,13 @@ def main_additions() -> None:
 				{"text":"\nUse with caution, the improved wolves are strong","color":"gray"},
 				{"text":"\nand will automatically target nearby players","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+					ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),
+					ingr_repr("stardust_fragment", ns),ingr_repr("minecraft:wolf_armor", ns),ingr_repr("stardust_fragment", ns),
+					ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),
+				]},
+			]
 		},
 		"stardust_pillar": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
@@ -1362,6 +1427,9 @@ def main_additions() -> None:
 				{"text":"\nThen, the pillar will start to move like a normal wither","color":"gray"},
 				{"text":"\nwith more health and damage while still summoning mobs","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:breeze_rod")] + 4*[ingr_repr("compacted_stardust_shard", ns)] + [ingr_repr("minecraft:nether_star", ns)]},
+			]
 		},
 		"stardust_dungeon_key": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
@@ -1396,6 +1464,9 @@ def main_additions() -> None:
 				{"text":" the quarry you want to apply the region configuration","color":"gray"},
 				{"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DD","QQ","QQ"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"Q":ingr_repr("minecraft:quartz")}},
+			]
 		},
 		"fortune_module": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,

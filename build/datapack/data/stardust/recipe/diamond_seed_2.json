@@ -1,0 +1,66 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:pumpkin_seeds",
+		"minecraft:diamond"
+	],
+	"result": {
+		"id": "minecraft:item_frame",
+		"count": 1,
+		"components": {
+			"minecraft:lore": [
+				{
+					"translate": "stardust.can_only_be_planted_on_stone",
+					"italic": false,
+					"color": "gray"
+				},
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "stardust:icons"
+					},
+					{
+						"translate": "stardustfragment",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:item_model": "stardust:diamond_seed",
+			"minecraft:item_name": {
+				"translate": "stardust.diamond_seed"
+			},
+			"minecraft:custom_data": {
+				"stardust": {
+					"diamond_seed": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			},
+			"minecraft:entity_data": {
+				"id": "minecraft:item_frame",
+				"Tags": [
+					"stardust.new",
+					"stardust.diamond_seed"
+				],
+				"Invisible": true,
+				"Silent": true
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"pattern": [
+		"DD",
+		"QQ",
+		"QQ"
+	],
+	"key": {
+		"D": "minecraft:diamond",
+		"Q": "minecraft:quartz"
+	},
+	"result": {
+		"id": "minecraft:command_block",
+		"count": 1,
+		"components": {
+			"minecraft:lore": [
+				[
+					{
+						"keybind": "key.use",
+						"italic": false,
+						"color": "white"
+					},
+					{
+						"translate": "stardust.to_set_1st_coordinates",
+						"color": "gray"
+					}
+				],
+				[
+					{
+						"keybind": "key.sneak",
+						"italic": false,
+						"color": "white"
+					},
+					{
+						"text": " + ",
+						"color": "gray"
+					},
+					{
+						"keybind": "key.use"
+					},
+					{
+						"translate": "stardust.to_set_2nd_coordinates",
+						"color": "gray"
+					}
+				],
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "stardust:icons"
+					},
+					{
+						"translate": "stardustfragment",
+						"italic": true,
+						"color": "blue"
+					}
+				]
+			],
+			"minecraft:item_model": "stardust:quarry_configurator",
+			"minecraft:item_name": {
+				"translate": "stardust.quarry_configurator"
+			},
+			"minecraft:custom_data": {
+				"stardust": {
+					"quarry_configurator": true
+				},
+				"smithed": {
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			}
+		}
+	}
+}

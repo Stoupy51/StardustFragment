@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.quarry_lv5",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_72"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (72)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_74"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (74)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_72"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (72)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_74"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (74)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$葎$葎$葎","hover_event": {"action": "show_item","id": "minecraft:netherite_block","components": {}}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:netherite_block","components": {}}},
+				"  \n\"",
+				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				{"text": "$肙","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.quarry_lv_4","italic": false,"color": "white"},"lore": [{"translate": "stardust.speed_8_block_s","italic": false,"color": "gray"},{"translate": "stardust.power_usage_500_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_140_mj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_72"}},
+				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"\"\"",
+				{"text": "$$肛","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.quarry_lv_5","italic": false,"color": "white"},"lore": [{"translate": "stardust.speed_16_block_s","italic": false,"color": "gray"},{"translate": "stardust.power_usage_625_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_180_mj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.quarry_lv_4","italic": false,"color": "white"},"lore": [{"translate": "stardust.speed_8_block_s","italic": false,"color": "gray"},{"translate": "stardust.power_usage_500_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_140_mj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_72"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.quarry_lv_5","italic": false,"color": "white"},"lore": [{"translate": "stardust.speed_16_block_s","italic": false,"color": "gray"},{"translate": "stardust.power_usage_625_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_180_mj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "$聟$聟$聟","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_531441_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.sextuple_compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_43"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_531441_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.sextuple_compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_43"}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.level_5_quarry_for_automated_mining","color": "yellow"},{"translate": "stardust.mines_16_blocks_per_second","color": "gray"},{"translate": "stardust.consumes_625_kw_of_power","color": "gray"},{"text": "\nEnergy buffer: 180 MJ","color": "gray"},{"translate": "stardust.only_mines_blocks_in_a_configured_area","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$葎"},{"text": "$葎"},{"text": "$葎"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$肙"},{"text": "$聑"},"\"\"",{"text": "$$肛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聟"},{"text": "$聟"},{"text": "$聟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.netherite_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv4","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.sextuple_compressed_cobblestone","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聟"},{"text": "$聟"},{"text": "$聟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$肙"},{"text": "$聑"},"\"\"",{"text": "$$肛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$葎"},{"text": "$葎"},{"text": "$葎"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.netherite_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv4","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.sextuple_compressed_cobblestone","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.level_5_quarry_for_automated_mining","color": "yellow"},{"translate": "stardust.mines_16_blocks_per_second","color": "gray"},{"translate": "stardust.consumes_625_kw_of_power","color": "gray"},{"text": "\nEnergy buffer: 180 MJ","color": "gray"},{"translate": "stardust.only_mines_blocks_in_a_configured_area","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$葎"},{"text": "$葎"},{"text": "$葎"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$肙"},{"text": "$聑"},"\"\"",{"text": "$$肛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聟"},{"text": "$聟"},{"text": "$聟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.netherite_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv4","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.sextuple_compressed_cobblestone","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聟"},{"text": "$聟"},{"text": "$聟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$肙"},{"text": "$聑"},"\"\"",{"text": "$$肛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$葎"},{"text": "$葎"},{"text": "$葎"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.netherite_block","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv4","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.sextuple_compressed_cobblestone","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.triple_compressed_cobblestone",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (39)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (41)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_39"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (39)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (41)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$5\n\"",
+				{"text": "$聛","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_6561_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.quadruple_compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"}},
+				"U$  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_6561_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.quadruple_compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"}},
+				"U$U$",
+				{"text": "$$蒄","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_729_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.triple_compressed_cobblestone"}}}},
+				"#$\n\"U$U$U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_729_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.triple_compressed_cobblestone"}}}},
+				"#$\n\n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.triple_compressed_compressed_cobblestone","color": "yellow"},{"translate": "stardust.equals_to_729_cobblestones","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聗"},{"text": "$聗"},{"text": "$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聗"},{"text": "$聗"},{"text": "$聗"},"\"\"",{"text": "$$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聗"},{"text": "$聗"},{"text": "$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x9 ","color": "gray"},{"translate": "stardust.double_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_39"}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聛"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$蒄"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quadruple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"}},
+				{"text": "蒌##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聙"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$葸"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.triple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_39"}},
+				{"text": "蒏\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\"\"",{"text": "$$聛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x9 ","color": "gray"},{"translate": "stardust.triple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.triple_compressed_compressed_cobblestone","color": "yellow"},{"translate": "stardust.equals_to_729_cobblestones","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聗"},{"text": "$聗"},{"text": "$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聗"},{"text": "$聗"},{"text": "$聗"},"\"\"",{"text": "$$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聗"},{"text": "$聗"},{"text": "$聗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x9 ","color": "gray"},{"translate": "stardust.double_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_39"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聛"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$蒄"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quadruple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聙"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$葸"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.triple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_39"}},
+				{"text": "0\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\"\"",{"text": "$$聛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x9 ","color": "gray"},{"translate": "stardust.triple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_41"}},
+				{"text": "蒕##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$臘"},{"text": "$臘"},{"text": "$臘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耥"},{"text": "$肓"},{"text": "$耥"},"\"\"",{"text": "$$肕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聙"},{"text": "$聙"},{"text": "$聙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.warped_fungus","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust_essence","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv1","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.triple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_70"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

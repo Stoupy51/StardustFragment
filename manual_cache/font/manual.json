@@ -549,6 +549,7 @@
 		{"type": "bitmap","file": "stardust:font/furnace.png","ascent": -3,"height": 58,"chars": ["G"]},
 		{"type": "bitmap","file": "stardust:font/stonecutting.png","ascent": -3,"height": 58,"chars": ["H"]},
 		{"type": "bitmap","file": "stardust:font/pulverizing.png","ascent": -3,"height": 58,"chars": ["I"]},
-		{"type": "bitmap","file": "stardust:font/mining.png","ascent": -3,"height": 58,"chars": ["P"]}
+		{"type": "bitmap","file": "stardust:font/mining.png","ascent": -3,"height": 58,"chars": ["P"]},
+		{"type": "bitmap","file": "stardust:font/book.png","ascent": 25,"height": 300,"chars": ["V"]}
 	]
 }

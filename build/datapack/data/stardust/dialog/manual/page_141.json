@@ -1,0 +1,59 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.item_magnet",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_140"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.140"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_142"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.142"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_140"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.140"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_142"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.142"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"U$",
+				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"  \n\"",
+				{"text": "$耵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				"U$",
+				{"text": "$耵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				"\"\"",
+				{"text": "$$脣","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.hold_in_offhand_to_attract_items","color": "gray","italic": false},{"translate": "stardust.within_a_4_blocks_radius","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.item_magnet"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				"U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.hold_in_offhand_to_attract_items","color": "gray","italic": false},{"translate": "stardust.within_a_4_blocks_radius","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.item_magnet"}}}},
+				"#$\n\"",
+				{"text": "$耵$耵$耵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magnet_that_attracts_nearby_items","color": "yellow"},{"translate": "stardust.hold_in_offhand_to_attract_items_within_a_4_blocks_radius","color": "gray"},{"translate": "stardust.useful_for_collecting_dropped_items","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聑"},"U$",{"text": "$聑"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$耵"},"U$",{"text": "$耵"},"\"\"",{"text": "$$脣"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耵"},{"text": "$耵"},{"text": "$耵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x5 ","color": "gray"},{"translate": "stardust.awakened_stardust_block","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magnet_that_attracts_nearby_items","color": "yellow"},{"translate": "stardust.hold_in_offhand_to_attract_items_within_a_4_blocks_radius","color": "gray"},{"translate": "stardust.useful_for_collecting_dropped_items","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聑"},"U$",{"text": "$聑"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$耵"},"U$",{"text": "$耵"},"\"\"",{"text": "$$脣"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耵"},{"text": "$耵"},{"text": "$耵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x5 ","color": "gray"},{"translate": "stardust.awakened_stardust_block","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

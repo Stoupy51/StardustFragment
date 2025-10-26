@@ -1,0 +1,51 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.category_browser",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (2)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_4"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (4)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (2)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_4"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (4)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"အ\n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.materials_1","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_4"}},
+				{"text": "$聓","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.materials_2","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_5"}},
+				{"text": "$聻","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "stardust.energy_1","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_6"}},
+				{"text": "$肭","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.energy_2","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_7"}},
+				{"text": "$肵","hover_event": {"action": "show_item","id": "diamond_helmet","components": {"item_name": {"translate": "stardust.equipment_1","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_8"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.materials_1","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_4"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.materials_2","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_5"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "player_head","components": {"item_name": {"translate": "stardust.energy_1","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_6"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.energy_2","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_7"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "diamond_helmet","components": {"item_name": {"translate": "stardust.equipment_1","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_8"}},
+				"#\n\"",
+				{"text": "$胧","hover_event": {"action": "show_item","id": "netherite_sword","components": {"item_name": {"translate": "stardust.equipment_2","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_9"}},
+				{"text": "$脙","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.equipment_3","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "$脯","hover_event": {"action": "show_item","id": "item_frame","components": {"item_name": {"translate": "stardust.miscellaneous","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
+				"!!#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "netherite_sword","components": {"item_name": {"translate": "stardust.equipment_2","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_9"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.equipment_3","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "item_frame","components": {"item_name": {"translate": "stardust.miscellaneous","color": "white"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
+				"!!#\n",
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

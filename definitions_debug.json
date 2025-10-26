@@ -1677,10 +1677,10 @@
 	"manual": {
 		"id": "minecraft:written_book",
 		"category": "miscellaneous",
+		"item_name": "Stardust Manual",
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"group": "manual","category": "miscellaneous","ingredients": [{"item": "minecraft:book"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"group": "manual","category": "miscellaneous","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"manual": true}}}}]}],
 		"wiki_components": [{"text": "Complete guide to Stardust Fragment technology.","color": "yellow"},{"text": "\nContains all recipes and information","color": "gray"},{"text": "\nYour comprehensive reference manual","color": "gray"}],
 		"item_model": "stardust:manual",
-		"item_name": {"text": "Manual"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"manual": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}

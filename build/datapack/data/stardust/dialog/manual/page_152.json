@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.legendarium_seed",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_151"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.151"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_153"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.153"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_151"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.151"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_153"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.153"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"Ⴗ\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_emerald_block","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.legendarium_seed"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_152"}},
+				{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_legendarium","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_emerald_blocks","color": "gray"},{"translate": "stardust.grows_fully_after_64_minutes","color": "gray"},{"translate": "stardust.yields_1_2_legendarium_fragments_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_10_per_level","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

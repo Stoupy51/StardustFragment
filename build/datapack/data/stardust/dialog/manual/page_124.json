@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.ultimate_bow",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_123"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.123"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_125"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.125"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_123"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.123"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_125"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.125"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"ႛ\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "bow","components": {"max_damage": 3072,"item_name": {"translate": "stardust.ultimate_bow"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_124"}},
+				{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.bow_crafted_from_ultimate_stardust_materials","color": "yellow"},{"translate": "stardust.higher_durability_x8_and_power_x4_than_regular_bows","color": "gray"},{"translate": "stardust.shooting_while_sneaking_makes_no_gravity_arrows","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

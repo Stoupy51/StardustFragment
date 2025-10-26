@@ -1,0 +1,65 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.dragon_pearl",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_33"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (33)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_35"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (35)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_33"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (33)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_35"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (35)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$菩$菩$菩","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				"  \n\"",
+				{"text": "$菩","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				{"text": "$菨","hover_event": {"action": "show_item","id": "minecraft:ender_pearl","components": {}}},
+				{"text": "$菩","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				"\"\"",
+				{"text": "$$聍","hover_event": {"action": "show_item","id": "ender_pearl","components": {"item_name": {"translate": "stardust.dragon_pearl","italic": false,"color": "dark_purple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:ender_pearl","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "ender_pearl","components": {"item_name": {"translate": "stardust.dragon_pearl","italic": false,"color": "dark_purple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "$菩$菩$菩","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:dragon_breath","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.upgraded_ender_pearl_variant","color": "yellow"},{"translate": "stardust.throws_x1_5_farther_than_regular_ender_pearls","color": "gray"},{"translate": "stardust.cooldown_is_0_5_seconds_instead_of_1_second","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$菩"},{"text": "$菩"},{"text": "$菩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$菩"},{"text": "$菨"},{"text": "$菩"},"\"\"",{"text": "$$聍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$菩"},{"text": "$菩"},{"text": "$菩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.ender_pearl","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.dragon_breath","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聏"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$聍"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.ender_dragon_pearl","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_35"}},
+				{"text": "菲##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$菨"},{"text": "$菨"},{"text": "$菨"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$菨"},{"text": "$聍"},{"text": "$菨"},"\"\"",{"text": "$$聏"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$菨"},{"text": "$菨"},{"text": "$菨"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.ender_pearl","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_35"}},
+				{"text": "菸\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聍"},{"text": "$聍"},{"text": "$聍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$肕"},{"text": "$耩"},"\"\"",{"text": "$$肗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聛"},{"text": "$聛"},{"text": "$聛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv2","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.quadruple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_71"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.upgraded_ender_pearl_variant","color": "yellow"},{"translate": "stardust.throws_x1_5_farther_than_regular_ender_pearls","color": "gray"},{"translate": "stardust.cooldown_is_0_5_seconds_instead_of_1_second","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$菩"},{"text": "$菩"},{"text": "$菩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$菩"},{"text": "$菨"},{"text": "$菩"},"\"\"",{"text": "$$聍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$菩"},{"text": "$菩"},{"text": "$菩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.ender_pearl","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.dragon_breath","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聏"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$聍"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.ender_dragon_pearl","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_35"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$菨"},{"text": "$菨"},{"text": "$菨"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$菨"},{"text": "$聍"},{"text": "$菨"},"\"\"",{"text": "$$聏"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$菨"},{"text": "$菨"},{"text": "$菨"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.ender_pearl","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_35"}},
+				{"text": "0\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聍"},{"text": "$聍"},{"text": "$聍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$肕"},{"text": "$耩"},"\"\"",{"text": "$$肗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聛"},{"text": "$聛"},{"text": "$聛"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.quarry_lv2","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.quadruple_compressed_cobblestone","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_71"}},
+				{"text": "菽##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聍"},{"text": "$聍"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$艍"},{"text": "$耩"},"\"\"",{"text": "$$脃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$聍"},{"text": "$聍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.diamond_spear","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_125"}},
+				{"text": "萁\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聍"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$脥"},"\n","\"",{"text": "$萀"},"U$U$",{"text": "U$"},"\n","\"",{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.stick","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_142"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聍"},{"text": "$聍"},{"text": "$耩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$艍"},{"text": "$耩"},"\"\"",{"text": "$$脃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$聍"},{"text": "$聍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.diamond_spear","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_125"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聍"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$脥"},"\n","\"",{"text": "$萀"},"U$U$",{"text": "U$"},"\n","\"",{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.stick","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_142"}},
+				"\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

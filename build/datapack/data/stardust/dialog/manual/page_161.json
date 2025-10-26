@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.cobblestone_miner_lv7",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_160"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.160"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_162"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.162"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_160"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.160"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_162"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.162"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"Ⴠ\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.cobblestone_miner_lv_7"},"lore": [{"translate": "stardust.only_mines_cobblestone_directly_below","color": "white","italic": false},{"translate": "stardust.x140625_per_minute","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_161"}},
+				{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.cobblestone_miner_lv_7","color": "yellow"},{"translate": "stardust.every_minute_it_will_break_the_cobblestone_directly_below_it","color": "gray"},{"translate": "stardust.production_rate_is_36864_cobblestone_per_minute","color": "gray"},{"translate": "stardust.no_energy_required","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.ultimate_battery",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_61"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (61)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_63"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (63)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_61"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (61)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_63"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (63)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$聑$聑$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				"  \n\"",
+				{"text": "$聩","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.ultimate_frame"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_48"}},
+				{"text": "$肃","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.energy_storage_500_mj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.awakened_stardust_battery"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_61"}},
+				{"text": "$聩","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.ultimate_frame"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_48"}},
+				"\"\"",
+				{"text": "$$肅","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.ultimate_battery","color": "dark_red"},"lore": [{"translate": "stardust.energy_storage_10_gj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.ultimate_frame"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_48"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.energy_storage_500_mj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.awakened_stardust_battery"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_61"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.ultimate_frame"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_48"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.ultimate_battery","color": "dark_red"},"lore": [{"translate": "stardust.energy_storage_10_gj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "$耧$耧$耧","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust_core"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust_core"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.ultimate_energy_storage_device","color": "yellow"},{"translate": "stardust.stores_up_to_10_gj_of_energy","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聑"},{"text": "$聑"},{"text": "$聑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聩"},{"text": "$肃"},{"text": "$聩"},"\"\"",{"text": "$$肅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耧"},{"text": "$耧"},{"text": "$耧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_frame","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.awakened_stardust_battery","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust_core","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耧"},{"text": "$耧"},{"text": "$耧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聩"},{"text": "$肃"},{"text": "$聩"},"\"\"",{"text": "$$肅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$聑"},{"text": "$聑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_frame","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.awakened_stardust_battery","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust_core","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.ultimate_energy_storage_device","color": "yellow"},{"translate": "stardust.stores_up_to_10_gj_of_energy","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聑"},{"text": "$聑"},{"text": "$聑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聩"},{"text": "$肃"},{"text": "$聩"},"\"\"",{"text": "$$肅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耧"},{"text": "$耧"},{"text": "$耧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_frame","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.awakened_stardust_battery","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust_core","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耧"},{"text": "$耧"},{"text": "$耧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聩"},{"text": "$肃"},{"text": "$聩"},"\"\"",{"text": "$$肅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$聑"},{"text": "$聑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_frame","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.awakened_stardust_battery","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust_core","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

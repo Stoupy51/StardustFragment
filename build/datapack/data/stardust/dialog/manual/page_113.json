@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.solarium_axe",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_112"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.112"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_114"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.114"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_112"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.112"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_114"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.114"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"႐\n",
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_axe","components": {"max_damage": 7805,"item_name": {"translate": "stardust.solarium_axe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_113"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

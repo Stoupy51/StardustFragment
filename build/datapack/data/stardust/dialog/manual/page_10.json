@@ -1,0 +1,59 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.equipment_3",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_9"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (9)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (11)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_9"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (9)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (11)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"ဩ\n\"",
+				{"text": "$脙","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_1"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_136"}},
+				{"text": "$脛","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_2"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_137"}},
+				{"text": "$脝","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_3"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_138"}},
+				{"text": "$脟","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_max"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_139"}},
+				{"text": "$脡","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.lucky_artifact_bag"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_140"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_1"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_136"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_2"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_137"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_3"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_138"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_max"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_139"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.lucky_artifact_bag"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_140"}},
+				"#\n\"",
+				{"text": "$脣","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.item_magnet"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_141"}},
+				{"text": "$脥","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.home_travel_staff"},"max_damage": 64}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_142"}},
+				{"text": "$脧","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.wormhole_potion"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_143"}},
+				{"text": "$脩","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust_apple"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_144"}},
+				{"text": "$脫","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.life_crystal"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_145"}},
+				"#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.item_magnet"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_141"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.home_travel_staff"},"max_damage": 64}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_142"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.wormhole_potion"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_143"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust_apple"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_144"}},
+				{"text": "!","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.life_crystal"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_145"}},
+				"#\n\"",
+				{"text": "$脭","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.life_crystal_block"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_146"}},
+				"!!!!#\n\"",
+				{"text": "!","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.life_crystal_block"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_146"}},
+				"!!!!#\n",
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

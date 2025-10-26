@@ -1,0 +1,55 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.cavern_portal",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_74"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (74)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_76"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (76)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_74"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (74)"}]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_76"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (76)"}]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$聕$聕$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\"",
+				{"text": "$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"\"\"",
+				{"text": "$$肟","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.cavern_portal","italic": false,"color": "dark_gray"},"lore": [{"translate": "stardust.this_portal_allows_access_to_a_world_full_of_caverns","italic": false,"color": "white"},{"translate": "stardust.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.cavern_portal","italic": false,"color": "dark_gray"},"lore": [{"translate": "stardust.this_portal_allows_access_to_a_world_full_of_caverns","italic": false,"color": "white"},{"translate": "stardust.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"#$\n\"",
+				{"text": "$聕$聕$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.compressed_cobblestone"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"},{"text": "\nThis portal allows access to a world full of caverns!","color": "gray"},{"translate": "stardust.consumes_20_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_of_800_kj","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$耡"},{"text": "$聕"},"\"\"",{"text": "$$肟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"},{"text": "\nThis portal allows access to a world full of caverns!","color": "gray"},{"translate": "stardust.consumes_20_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_of_800_kj","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$耡"},{"text": "$聕"},"\"\"",{"text": "$$肟"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 150
+		}
+	]
+}

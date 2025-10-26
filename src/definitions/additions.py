@@ -395,8 +395,7 @@ def main_additions() -> None:
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"The ultimate refined material.","color":"yellow"},
-				{"text":"\nSmelted from Ultimate Fragments","color":"gray"},
-				{"text":"\nUsed for ultimate equipment","color":"gray"},
+				{"text":"\nMain component for ultimate crafting","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[

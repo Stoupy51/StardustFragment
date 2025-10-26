@@ -105,6 +105,16 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"ender_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"awakened_stardust": {
+		"id": "minecraft:command_block",
+		"category": "materials",
+		"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
+		"wiki_components": [{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained through mining or some special mobs","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}]}],
+		"item_model": "stardust:awakened_stardust",
+		"item_name": {"text": "Awakened Stardust"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
+	},
 	"awakened_stardust_block": {
 		"id": "minecraft:furnace",
 		"category": "materials",
@@ -127,14 +137,24 @@
 		"item_name": {"text": "Awakened Stardust Ore"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
-	"awakened_stardust": {
+	"legendarium_fragment": {
 		"id": "minecraft:command_block",
 		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
-		"wiki_components": [{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained through mining or some special mobs","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}]}],
-		"item_model": "stardust:awakened_stardust",
-		"item_name": {"text": "Awakened Stardust"},
+		"custom_data": {"smithed": {"dict": {"fragment": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_fragment": true}},
+		"wiki_components": [{"text": "Legendary material fragment with wind power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through legendarium seeds","color": "gray"},{"text": "\nUsed for legendarium-tier equipment","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}}]}],
+		"item_model": "stardust:legendarium_fragment",
+		"item_name": {"text": "Legendarium Fragment"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
+	},
+	"legendarium_ingot": {
+		"id": "minecraft:command_block",
+		"category": "materials",
+		"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_ingot": true}},
+		"wiki_components": [{"text": "Refined legendary material with wind power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for legendarium-tier equipment","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}}]}],
+		"item_model": "stardust:legendarium_ingot",
+		"item_name": {"text": "Legendarium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"legendarium_block": {
@@ -148,24 +168,24 @@
 		"item_name": {"text": "Legendarium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
-	"legendarium_ingot": {
+	"solarium_fragment": {
 		"id": "minecraft:command_block",
 		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_ingot": true}},
-		"wiki_components": [{"text": "Refined legendary material with wind power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for legendarium-tier equipment","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}}]}],
-		"item_model": "stardust:legendarium_ingot",
-		"item_name": {"text": "Legendarium Ingot"},
+		"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},
+		"wiki_components": [{"text": "Solarium material fragment with fire power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through solarium seeds","color": "gray"},{"text": "\nUsed for solarium-tier equipment","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}}]}],
+		"item_model": "stardust:solarium_fragment",
+		"item_name": {"text": "Solarium Fragment"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
-	"legendarium_fragment": {
+	"solarium_ingot": {
 		"id": "minecraft:command_block",
 		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"fragment": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_fragment": true}},
-		"wiki_components": [{"text": "Legendary material fragment with wind power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through legendarium seeds","color": "gray"},{"text": "\nUsed for legendarium-tier equipment","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}}]}],
-		"item_model": "stardust:legendarium_fragment",
-		"item_name": {"text": "Legendarium Fragment"},
+		"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},
+		"wiki_components": [{"text": "Refined solarium material with fire power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for solarium-tier equipment","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}}]}],
+		"item_model": "stardust:solarium_ingot",
+		"item_name": {"text": "Solarium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"solarium_block": {
@@ -179,35 +199,14 @@
 		"item_name": {"text": "Solarium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
-	"solarium_ingot": {
+	"darkium_fragment": {
 		"id": "minecraft:command_block",
 		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},
-		"wiki_components": [{"text": "Refined solarium material with fire power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for solarium-tier equipment","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}}]},{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}}]}],
-		"item_model": "stardust:solarium_ingot",
-		"item_name": {"text": "Solarium Ingot"},
-		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-	},
-	"solarium_fragment": {
-		"id": "minecraft:command_block",
-		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},
-		"wiki_components": [{"text": "Solarium material fragment with fire power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through solarium seeds","color": "gray"},{"text": "\nUsed for solarium-tier equipment","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}}]}],
-		"item_model": "stardust:solarium_fragment",
-		"item_name": {"text": "Solarium Fragment"},
-		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-	},
-	"darkium_block": {
-		"id": "minecraft:furnace",
-		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"block": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_block": true}},
-		"vanilla_block": {"id": "minecraft:netherite_block","apply_facing": false},
-		"wiki_components": [{"text": "Compressed darkium storage block.","color": "yellow"},{"text": "\nCrafted from 9 Darkium Ingots","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}]}],
-		"item_model": "stardust:darkium_block",
-		"item_name": {"text": "Darkium Block"},
+		"custom_data": {"smithed": {"dict": {"fragment": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_fragment": true}},
+		"wiki_components": [{"text": "Darkium material fragment with darkness power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through darkium seeds","color": "gray"},{"text": "\nUsed for darkium-tier equipment","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}]}],
+		"item_model": "stardust:darkium_fragment",
+		"item_name": {"text": "Darkium Fragment"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"darkium_ingot": {
@@ -220,14 +219,15 @@
 		"item_name": {"text": "Darkium Ingot"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
-	"darkium_fragment": {
-		"id": "minecraft:command_block",
+	"darkium_block": {
+		"id": "minecraft:furnace",
 		"category": "materials",
-		"custom_data": {"smithed": {"dict": {"fragment": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_fragment": true}},
-		"wiki_components": [{"text": "Darkium material fragment with darkness power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through darkium seeds","color": "gray"},{"text": "\nUsed for darkium-tier equipment","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 8,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}]}],
-		"item_model": "stardust:darkium_fragment",
-		"item_name": {"text": "Darkium Fragment"},
+		"custom_data": {"smithed": {"dict": {"block": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_block": true}},
+		"vanilla_block": {"id": "minecraft:netherite_block","apply_facing": false},
+		"wiki_components": [{"text": "Compressed darkium storage block.","color": "yellow"},{"text": "\nCrafted from 9 Darkium Ingots","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}]}],
+		"item_model": "stardust:darkium_block",
+		"item_name": {"text": "Darkium Block"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 	},
 	"dragon_pearl": {

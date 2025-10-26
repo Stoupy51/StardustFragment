@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.life_crystal_block",
+		"translate": "stardust.advanced_diamond_seed",
 		"underlined": true
 	},
 	"body": [
@@ -22,24 +22,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$@\n\n\n\"",
-				{"text": "$脭","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.life_crystal_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
-				"\"\"\"\"#U$",
-				{"text": "$$袩","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.right_click_to_permanently_increase","italic": false,"color": "gray"},{"translate": "stardust.your_max_health_by_1_0_5_heart","italic": false,"color": "gray"},{"translate": "stardust.max_20_uses_10_hearts","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.life_crystal"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_145"}},
-				"#$\n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.life_crystal_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
-				"\"\"\"\"#U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.right_click_to_permanently_increase","italic": false,"color": "gray"},{"translate": "stardust.your_max_health_by_1_0_5_heart","italic": false,"color": "gray"},{"translate": "stardust.max_20_uses_10_hearts","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.life_crystal"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_145"}},
-				"#$\n\n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.decorative_block_made_from_life_crystals","color": "yellow"},{"translate": "stardust.found_in_underground_caves_in_the_overworld","color": "gray"},{"translate": "stardust.can_be_broken_to_retrieve_a_life_crystal","color": "gray"}]}},
-				{"text": "袶##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"P\n","\n\n","\"",{"text": "$脭"},"\"\"\"\"#U$",{"text": "$$袩"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "stardust.mining","color": "yellow"},{"translate": "stardust.mine","color": "gray"},{"translate": "stardust.life_crystal_block","color": "gray"},{"translate": "stardust.drops_x1","color": "gray"},{"translate": "stardust.life_crystal","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_145"}},
-				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$螳"},{"text": "$螳"},{"text": "$螳"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$螳"},{"text": "$脫"},{"text": "$螳"},"\"\"",{"text": "$$脭"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$螳"},{"text": "$螳"},{"text": "$螳"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.life_crystal","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.decorative_block_made_from_life_crystals","color": "yellow"},{"translate": "stardust.found_in_underground_caves_in_the_overworld","color": "gray"},{"translate": "stardust.can_be_broken_to_retrieve_a_life_crystal","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"P\n","\n\n","\"",{"text": "$脭"},"\"\"\"\"#U$",{"text": "$$袩"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "stardust.mining","color": "yellow"},{"translate": "stardust.mine","color": "gray"},{"translate": "stardust.life_crystal_block","color": "gray"},{"translate": "stardust.drops_x1","color": "gray"},{"translate": "stardust.life_crystal","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_145"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$螳"},{"text": "$螳"},{"text": "$螳"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$螳"},{"text": "$脫"},{"text": "$螳"},"\"\"",{"text": "$$脭"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$螳"},{"text": "$螳"},{"text": "$螳"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.glass","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.life_crystal","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n"
+				"Ⴑ\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_stone","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:advanced_diamond_seed","item_name": {"translate": "stardust.advanced_diamond_seed"},"custom_data": {"stardust": {"advanced_diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.advanced_diamond_seed"],"Invisible": true,"Silent": true}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_146"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_diamonds","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_stone_blocks","color": "gray"},{"translate": "stardust.grows_fully_after_20_minutes","color": "gray"},{"translate": "stardust.yields_0_24_diamonds_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_10_per_level","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

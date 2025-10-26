@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.legendarium_pickaxe",
+		"translate": "stardust.solarium_helmet",
 		"underlined": true
 	},
 	"body": [
@@ -23,10 +23,10 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႈ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_pickaxe","components": {"max_damage": 7024,"item_name": {"translate": "stardust.legendarium_pickaxe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_105"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_helmet","components": {"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_helmet": true}},"max_damage": 1564,"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"}],"item_model": "stardust:solarium_helmet","item_name": {"translate": "stardust.solarium_helmet"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_105"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

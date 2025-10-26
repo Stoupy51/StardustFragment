@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.home_travel_staff",
+		"translate": "stardust_apple",
 		"underlined": true
 	},
 	"body": [
@@ -22,25 +22,31 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$5\n\"",
-				{"text": "$聍","hover_event": {"action": "show_item","id": "ender_pearl","components": {"item_name": {"translate": "stardust.dragon_pearl","italic": false,"color": "dark_purple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_34"}},
-				"U$  \n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "ender_pearl","components": {"item_name": {"translate": "stardust.dragon_pearl","italic": false,"color": "dark_purple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_34"}},
-				"U$U$",
-				{"text": "$$脥","hover_event": {"action": "show_item","id": "command_block","components": {"max_damage": 64,"item_name": {"translate": "stardust.home_travel_staff"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				"\"$6\n\"",
+				{"text": "$耡$耡$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				"  \n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "$腿","hover_event": {"action": "show_item","id": "minecraft:golden_apple","components": {}}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				"\"\"",
+				{"text": "$$脩","hover_event": {"action": "show_item","id": "command_block","components": {"food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},"item_model": "stardust:stardust_apple","item_name": {"translate": "stardust_apple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
 				"#$\n\"",
-				{"text": "$萀","hover_event": {"action": "show_item","id": "minecraft:stick","components": {}}},
-				"U$U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"max_damage": 64,"item_name": {"translate": "stardust.home_travel_staff"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:golden_apple","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},"item_model": "stardust:stardust_apple","item_name": {"translate": "stardust_apple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
 				"#$\n\"",
-				{"text": "U$\n\n","hover_event": {"action": "show_item","id": "minecraft:stick","components": {}}},
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.staff_that_teleports_you_to_your_spawn_point","color": "yellow"},{"translate": "stardust.right_click_to_teleport_to_your_bed_or_world_spawn","color": "gray"},{"translate": "stardust.has_64_uses_before_breaking","color": "gray"}]}},
-				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聍"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$脥"},"\n","\"",{"text": "$萀"},"U$U$",{"text": "U$"},"\n","\"",{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.stick","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.staff_that_teleports_you_to_your_spawn_point","color": "yellow"},{"translate": "stardust.right_click_to_teleport_to_your_bed_or_world_spawn","color": "gray"},{"translate": "stardust.has_64_uses_before_breaking","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$聍"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$脥"},"\n","\"",{"text": "$萀"},"U$U$",{"text": "U$"},"\n","\"",{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.dragon_pearl","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.stick","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "$耡$耡$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				"  \n\n",
+				{"text": "2\n0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$腿"},{"text": "$耡"},"\"\"",{"text": "$$脩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.golden_apple","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

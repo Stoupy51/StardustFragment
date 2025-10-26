@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.legendarium_chestplate",
+		"translate": "stardust.legendarium_boots",
 		"underlined": true
 	},
 	"body": [
@@ -23,10 +23,10 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႄ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_chestplate","components": {"max_damage": 2047,"item_name": {"translate": "stardust.legendarium_chestplate"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_101"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_boots","components": {"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_boots": true}},"max_damage": 1663,"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "stardust:knockback_resistance.feet"}],"item_model": "stardust:legendarium_boots","item_name": {"translate": "stardust.legendarium_boots"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_101"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

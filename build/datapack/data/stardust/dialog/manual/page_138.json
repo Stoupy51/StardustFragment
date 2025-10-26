@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.speed_artifact_lv3",
+		"translate": "stardust.lucky_artifact_bag",
 		"underlined": true
 	},
 	"body": [
@@ -22,24 +22,34 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$5\n\"",
-				{"text": "$脛$脛","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_2"},"lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect","color": "gray","italic": false},{"translate": "stardust.15_base_speed","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_137"}},
+				"\"$6\n\"",
+				{"text": "$葚$葚$葚","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
 				"  \n\"",
-				{"text": "U$U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_2"},"lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect","color": "gray","italic": false},{"translate": "stardust.15_base_speed","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_137"}},
-				"U$",
-				{"text": "$$脝","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_3"},"lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect","color": "gray","italic": false},{"translate": "stardust.20_base_speed","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
-				"#$\n\"U$U$U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_3"},"lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect","color": "gray","italic": false},{"translate": "stardust.20_base_speed","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}}},
-				"#$\n\n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_3_speed_artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+20% Base Speed]","color": "gray"}]}},
-				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脛"},{"text": "$脛"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脝"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.speed_artifact_lv2","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_137"}},
-				{"text": "袀\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脝"},{"text": "$脝"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.speed_artifact_lv3","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_139"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_3_speed_artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+20% Base Speed]","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脛"},{"text": "$脛"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脝"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.speed_artifact_lv2","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_137"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脝"},{"text": "$脝"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.speed_artifact_lv3","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_139"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				"  \n\"",
+				{"text": "$葚","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:ultimate_shard","item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"ultimate_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_34"}},
+				{"text": "$葚","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				"\"\"",
+				{"text": "$$脡","hover_event": {"action": "show_item","id": "command_block","components": {"consumable": {"consume_seconds": 1024,"has_consume_particles": false},"lore": [{"translate": "stardust.right_click_to_open_and_receive_a_random_artifact","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:lucky_artifact_bag","item_name": {"translate": "stardust.lucky_artifact_bag"},"custom_data": {"stardust": {"lucky_artifact_bag": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:ultimate_shard","item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"ultimate_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_34"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"consumable": {"consume_seconds": 1024,"has_consume_particles": false},"lore": [{"translate": "stardust.right_click_to_open_and_receive_a_random_artifact","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:lucky_artifact_bag","item_name": {"translate": "stardust.lucky_artifact_bag"},"custom_data": {"stardust": {"lucky_artifact_bag": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$葚$葚$葚","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				"  \n\"",
+				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:leather","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.a_mysterious_bag_containing_a_random_artifact","color": "yellow"},{"text": "\nRight-click to open and receive a random artifact","color": "gray"},{"translate": "stardust.can_contain_health_damage_or_speed_artifacts","color": "gray"},{"translate": "stardust.this_can_be_found_in_various_structures","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$葚"},{"text": "$葚"},{"text": "$葚"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$葚"},{"text": "$聑"},{"text": "$葚"},"\"\"",{"text": "$$脡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$葚"},{"text": "$葚"},{"text": "$葚"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.leather","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.a_mysterious_bag_containing_a_random_artifact","color": "yellow"},{"text": "\nRight-click to open and receive a random artifact","color": "gray"},{"translate": "stardust.can_contain_health_damage_or_speed_artifacts","color": "gray"},{"translate": "stardust.this_can_be_found_in_various_structures","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$葚"},{"text": "$葚"},{"text": "$葚"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$葚"},{"text": "$聑"},{"text": "$葚"},"\"\"",{"text": "$$脡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$葚"},{"text": "$葚"},{"text": "$葚"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.leather","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

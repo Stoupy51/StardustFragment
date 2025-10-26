@@ -24,9 +24,9 @@
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				{"text": "ဠ\n\n\n\n\n\n","font": "stardust:manual","color": "white"},
 				[{"text": "","font": "minecraft:default","color": "black"},{"translate": "stardust.the_following_manual_will_guide_you_through_everything_about_sta","color": "#505050"}],
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.solarium_boots",
+		"translate": "stardust.solarium_pickaxe",
 		"underlined": true
 	},
 	"body": [
@@ -23,10 +23,10 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႍ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_boots","components": {"max_damage": 1848,"item_name": {"translate": "stardust.solarium_boots"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_110"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_pickaxe","components": {"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_pickaxe": true}},"max_damage": 7805,"attribute_modifiers": [{"type": "attack_damage","amount": 20,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 3.0,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],"item_model": "stardust:solarium_pickaxe","item_name": {"translate": "stardust.solarium_pickaxe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_110"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

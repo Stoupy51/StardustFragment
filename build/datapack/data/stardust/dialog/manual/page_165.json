@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust_dungeon_key",
+		"translate": "stardust.fortune_module",
 		"underlined": true
 	},
 	"body": [
@@ -22,12 +22,44 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"Ⴤ\n",
-				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.one_time_use_key_for_the_stardust_dungeon","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust_dungeon_key"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_165"}},
-				{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.key_that_allows_access_to_the_stardust_dungeon","color": "yellow"},{"translate": "stardust.obtained_by_defeating_the_stardust_pillar_boss","color": "gray"},{"translate": "stardust.once_used_the_key_will_be_consumed","color": "gray"},{"translate": "stardust.inside_the_dungeon_face_challenging_enemies_and_traps","color": "gray"},{"translate": "stardust.to_earn_valuable_rewards","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\"$6\n\"",
+				{"text": "$藴","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				{"text": "$藵","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "$藴","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				"  \n\"",
+				{"text": "$藵","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "$聹","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:empty_module","item_name": {"translate": "stardust.empty_module"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"empty_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_54"}},
+				{"text": "$藵","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				"\"\"",
+				{"text": "$$腗","hover_event": {"action": "show_item","id": "command_block","components": {"max_stack_size": 5,"lore": [{"translate": "stardust.increases_fortune_level_of_the_quarry","italic": false,"color": "gray"},{"translate": "stardust.by_1_max_5","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:fortune_module","item_name": {"translate": "stardust.fortune_module"},"custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:empty_module","item_name": {"translate": "stardust.empty_module"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"empty_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_54"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"max_stack_size": 5,"lore": [{"translate": "stardust.increases_fortune_level_of_the_quarry","italic": false,"color": "gray"},{"translate": "stardust.by_1_max_5","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:fortune_module","item_name": {"translate": "stardust.fortune_module"},"custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$藴","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				{"text": "$藵","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "$藴","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:emerald","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.module_that_increases_the_fortune_level_of_compatible_machines","color": "yellow"},{"translate": "stardust.each_module_increases_fortune_by_1_up_to_a_maximum_of_5","color": "gray"},{"translate": "stardust.put_the_module_in_the_dedicated_slot_of_the_quarry","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$藴"},{"text": "$藵"},{"text": "$藴"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$藵"},{"text": "$聹"},{"text": "$藵"},"\"\"",{"text": "$$腗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$藴"},{"text": "$藵"},{"text": "$藴"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.emerald","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.empty_module","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$藵"},{"text": "$藴"},{"text": "$藵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$藴"},{"text": "$聹"},{"text": "$藴"},"\"\"",{"text": "$$腗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$藵"},{"text": "$藴"},{"text": "$藵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.emerald","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.empty_module","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.module_that_increases_the_fortune_level_of_compatible_machines","color": "yellow"},{"translate": "stardust.each_module_increases_fortune_by_1_up_to_a_maximum_of_5","color": "gray"},{"translate": "stardust.put_the_module_in_the_dedicated_slot_of_the_quarry","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$藴"},{"text": "$藵"},{"text": "$藴"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$藵"},{"text": "$聹"},{"text": "$藵"},"\"\"",{"text": "$$腗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$藴"},{"text": "$藵"},{"text": "$藴"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.emerald","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.empty_module","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$藵"},{"text": "$藴"},{"text": "$藵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$藴"},{"text": "$聹"},{"text": "$藴"},"\"\"",{"text": "$$腗"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$藵"},{"text": "$藴"},{"text": "$藵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.emerald","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.empty_module","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

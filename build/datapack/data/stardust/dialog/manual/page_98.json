@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.original_stardust_pickaxe",
+		"translate": "stardust.legendarium_helmet",
 		"underlined": true
 	},
 	"body": [
@@ -23,10 +23,10 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႁ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "diamond_pickaxe","components": {"max_damage": 4683,"item_name": {"translate": "stardust.original_stardust_pickaxe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_98"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_helmet","components": {"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_helmet": true}},"max_damage": 1407,"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"}],"item_model": "stardust:legendarium_helmet","item_name": {"translate": "stardust.legendarium_helmet"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_98"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

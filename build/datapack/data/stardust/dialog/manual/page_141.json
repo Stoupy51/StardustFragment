@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.item_magnet",
+		"translate": "stardust.wormhole_potion",
 		"underlined": true
 	},
 	"body": [
@@ -23,37 +23,38 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"\"$6\n\"",
-				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
-				"U$",
-				{"text": "$聑","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				{"text": "$艐","hover_event": {"action": "show_item","id": "minecraft:cod","components": {}}},
+				{"text": "$艑","hover_event": {"action": "show_item","id": "minecraft:salmon","components": {}}},
+				{"text": "$艒","hover_event": {"action": "show_item","id": "minecraft:tropical_fish","components": {}}},
 				"  \n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
-				"U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.ultimate_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_36"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:cod","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:salmon","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:tropical_fish","components": {}}},
 				"  \n\"",
-				{"text": "$耵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
-				"U$",
-				{"text": "$耵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				{"text": "$艓","hover_event": {"action": "show_item","id": "minecraft:pufferfish","components": {}}},
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_14"}},
+				{"text": "$艓","hover_event": {"action": "show_item","id": "minecraft:pufferfish","components": {}}},
 				"\"\"",
-				{"text": "$$脣","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.hold_in_offhand_to_attract_items","color": "gray","italic": false},{"translate": "stardust.within_a_4_blocks_radius","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.item_magnet"}}}},
+				{"text": "$$脧","hover_event": {"action": "show_item","id": "command_block","components": {"consumable": {"consume_seconds": 1024,"animation": "drink","has_consume_particles": false},"max_stack_size": 16,"item_model": "stardust:wormhole_potion","item_name": {"translate": "stardust.wormhole_potion"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"wormhole_potion": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
 				"#$\n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
-				"U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:pufferfish","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_14"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:pufferfish","components": {}}},
 				"\"\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [{"translate": "stardust.hold_in_offhand_to_attract_items","color": "gray","italic": false},{"translate": "stardust.within_a_4_blocks_radius","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.item_magnet"}}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"consumable": {"consume_seconds": 1024,"animation": "drink","has_consume_particles": false},"max_stack_size": 16,"item_model": "stardust:wormhole_potion","item_name": {"translate": "stardust.wormhole_potion"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"wormhole_potion": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
 				"#$\n\"",
-				{"text": "$耵$耵$耵","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				{"text": "$艒","hover_event": {"action": "show_item","id": "minecraft:tropical_fish","components": {}}},
+				{"text": "$艑","hover_event": {"action": "show_item","id": "minecraft:salmon","components": {}}},
+				{"text": "$艐","hover_event": {"action": "show_item","id": "minecraft:cod","components": {}}},
 				"  \n\"",
-				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.awakened_stardust_block"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_22"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:tropical_fish","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:salmon","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:cod","components": {}}},
 				"  \n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magnet_that_attracts_nearby_items","color": "yellow"},{"translate": "stardust.hold_in_offhand_to_attract_items_within_a_4_blocks_radius","color": "gray"},{"translate": "stardust.useful_for_collecting_dropped_items","color": "gray"}]}},
-				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聑"},"U$",{"text": "$聑"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$耵"},"U$",{"text": "$耵"},"\"\"",{"text": "$$脣"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耵"},{"text": "$耵"},{"text": "$耵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x5 ","color": "gray"},{"translate": "stardust.awakened_stardust_block","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magnet_that_attracts_nearby_items","color": "yellow"},{"translate": "stardust.hold_in_offhand_to_attract_items_within_a_4_blocks_radius","color": "gray"},{"translate": "stardust.useful_for_collecting_dropped_items","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聑"},"U$",{"text": "$聑"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\n","\"",{"text": "$耵"},"U$",{"text": "$耵"},"\"\"",{"text": "$$脣"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耵"},{"text": "$耵"},{"text": "$耵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x5 ","color": "gray"},{"translate": "stardust.awakened_stardust_block","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "2\n0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$艐"},{"text": "$艑"},{"text": "$艒"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$艓"},{"text": "$耩"},{"text": "$艓"},"\"\"",{"text": "$$脧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艒"},{"text": "$艑"},{"text": "$艐"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.cod","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.salmon","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.tropical_fish","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.pufferfish","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

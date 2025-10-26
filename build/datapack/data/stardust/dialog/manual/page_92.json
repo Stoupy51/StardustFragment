@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.damaged_stardust_axe",
+		"translate": "stardust.original_stardust_chestplate",
 		"underlined": true
 	},
 	"body": [
@@ -23,10 +23,10 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ၻ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "diamond_axe","components": {"max_damage": 2341,"item_name": {"translate": "stardust.damaged_stardust_axe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_92"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "diamond_chestplate","components": {"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_chestplate": true}},"max_damage": 1584,"attribute_modifiers": [{"type": "armor","amount": 11.0,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 3.3,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"}],"item_model": "stardust:original_stardust_chestplate","item_name": {"translate": "stardust.original_stardust_chestplate"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_92"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

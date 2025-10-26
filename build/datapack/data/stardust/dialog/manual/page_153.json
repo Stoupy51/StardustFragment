@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.solarium_seed",
+		"translate": "stardust.cobblestone_miner_lv1",
 		"underlined": true
 	},
 	"body": [
@@ -23,11 +23,11 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"Ⴘ\n",
-				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_magma_block","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_name": {"translate": "stardust.solarium_seed"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_153"}},
-				{"text": "1\n0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_solarium","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_magma_blocks","color": "gray"},{"translate": "stardust.grows_fully_after_64_minutes","color": "gray"},{"translate": "stardust.yields_1_2_solarium_fragments_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_10_per_level","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "furnace","components": {"item_name": {"translate": "stardust.cobblestone_miner_lv_1"},"rarity": "rare","lore": [{"translate": "stardust.only_mines_cobblestone_directly_below","color": "white","italic": false},{"translate": "stardust.x9_per_minute","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:cobblestone_miner_lv1","custom_data": {"stardust": {"cobblestone_miner_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv1","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_153"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.cobblestone_miner_lv_1","color": "yellow"},{"translate": "stardust.every_minute_it_will_break_the_cobblestone_directly_below_it","color": "gray"},{"translate": "stardust.production_rate_is_9_cobblestone_per_minute","color": "gray"},{"translate": "stardust.no_energy_required","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
-			"width": 150
+			"width": 140
 		}
 	]
 }

@@ -117,4 +117,6 @@ meta:
             max_rows_per_page: 5
             # Text component used for the manual's first page
             first_page_text: [{"text":"The following manual will guide you through everything about Stardust Fragment, try to keep it always with you.", "color": "#505050"}]
+            # Use dialog system instead of a book (dialogs requires server restart to take effect)
+            use_dialog: 1 # 0 = no, 1 = yes, 2 = yes and no book
 

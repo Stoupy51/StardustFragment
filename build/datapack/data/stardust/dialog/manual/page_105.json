@@ -9,12 +9,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_104"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.104"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_104"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (104)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_106"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.106"}]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_104"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.104"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_106"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (106)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_104"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (104)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_106"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.106"}]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_106"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (106)"]}}
 			],
 			"width": 400
 		},
@@ -23,8 +23,9 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႈ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_helmet","components": {"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_helmet": true}},"max_damage": 1564,"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"}],"item_model": "stardust:solarium_helmet","item_name": {"translate": "stardust.solarium_helmet"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_105"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "netherite_helmet","components": {"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_helmet": true}},"max_damage": 1564,"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"}],"item_model": "stardust:solarium_helmet","item_name": {"translate": "stardust.solarium_helmet"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_105"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.solarium_equipment","color": "yellow"},{"translate": "stardust.compared_to_regular_netherite_equipment","color": "gray"},{"translate": "stardust.durability_has_been_increased_by_x3_8","color": "gray"},{"translate": "stardust.armor_points_has_been_increased_by_6_0","color": "gray"},{"translate": "stardust.9_0_points","color": "white"},{"translate": "stardust.armor_toughness_has_been_increased_by_1_8","color": "gray"},{"translate": "stardust.4_8_points","color": "white"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

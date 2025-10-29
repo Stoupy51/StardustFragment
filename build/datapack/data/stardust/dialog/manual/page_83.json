@@ -9,12 +9,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (82)"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (82)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_84"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (84)"}]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"text": " (82)"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_84"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (84)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (82)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_84"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"text": " (84)"}]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_84"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (84)"]}}
 			],
 			"width": 400
 		},

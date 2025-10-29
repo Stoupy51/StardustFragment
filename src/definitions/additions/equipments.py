@@ -1,9 +1,9 @@
 
 # ruff: noqa: E501
 # Imports
-from typing import cast
 
 from stewbeet import (
+	AWAKENED_FORGE,
 	CATEGORY,
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
@@ -20,7 +20,7 @@ from stewbeet import (
 )
 from stouputils.print import info
 
-from .common import DAMAGED_STARDUST_DURABILITY, DIAMOND_PICKAXE, ORES_CONFIGS, ORIGINAL_DURABILITY, EquipmentsConfig, NETHERITE_PICKAXE
+from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
 
 # Constants
 SNIPER_BULLETS_WIKI: list[TextComponent] = [
@@ -32,6 +32,43 @@ SNIPER_BULLETS_WIKI: list[TextComponent] = [
 	{"text":"\n- Awakened Stardust: +20 damage","color":"gray"},
 ]
 
+
+# Utility Functions
+def get_attribute_wiki(key: str, equipment_config: EquipmentsConfig | None) -> list[TextComponent]:
+	""" Generate wiki components for a given equipment based on its attribute modifiers.
+
+	Args:
+		key (str): The key of the equipment in Mem.definitions (e.g. "original_stardust_sword").
+		given_attributes (dict[str, float]): The attributes provided by the equipment.
+	"""
+	if equipment_config is None:
+		return []
+	given_attributes: dict[str, float] = equipment_config.attributes
+	attribute_modifiers: list[JsonDict] = Mem.definitions[key].get("attribute_modifiers", [])
+
+	# Prepare base wiki component
+	durability_increase: float = equipment_config.pickaxe_durability / VanillaEquipments.PICKAXE.value[equipment_config.equivalent_to]["durability"]
+	wiki: list[TextComponent] = [
+		{"text":f"\nCompared to regular {equipment_config.equivalent_to.name.lower()} equipment:","color":"gray"},
+		{"text":f"\n- Durability has been increased by x{durability_increase:.1f}","color":"gray"},
+	]
+
+	# Add attribute modifiers info
+	if any(am["type"] == "armor" for am in attribute_modifiers):
+		attribute_value: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "armor")
+		wiki.extend([{"text":f"\n- Armor points has been increased by {given_attributes["armor"]:.1f} ","color":"gray"},{"text":f"({attribute_value:.1f} points)","color":"white"}])
+	if any(am["type"] == "armor_toughness" for am in attribute_modifiers):
+		attribute_value: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "armor_toughness")
+		wiki.extend([{"text":f"\n- Armor Toughness has been increased by {given_attributes["armor_toughness"]:.1f} ","color":"gray"},{"text":f"({attribute_value:.1f} points)","color":"white"}])
+	if any(am["type"] == "attack_damage" for am in attribute_modifiers):
+		attack_increase: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "attack_damage")
+		wiki.extend([{"text":f"\n- Attack Damage has been increased by {given_attributes["attack_damage"]+1:.1f} ","color":"gray"},{"text":f"({attack_increase:.1f} points)","color":"white"}])
+	if any(am["type"] == "mining_efficiency" for am in attribute_modifiers):
+		wiki.append({"text":f"\n- Mining Efficiency has been increased by {given_attributes["mining_efficiency"]:.1f}","color":"gray"})
+	return wiki
+
+
+# Main Function
 def main_additions() -> None:
 	EQUIPMENT: str = "equipment"
 	ns: str = Mem.ctx.project_id
@@ -66,8 +103,8 @@ def main_additions() -> None:
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},	# TODO: Implement this behavior
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":[" CS","C S"," CS"],"ingredients":{"C":ingr_repr("compacted_stardust_shard", ns),"S":ingr_repr("minecraft:string")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SC ","S C","SC "],"ingredients":{"C":ingr_repr("compacted_stardust_shard", ns),"S":ingr_repr("minecraft:string")}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":[" CS","C S"," CS"],"ingredients":{"C":ingr_repr("compacted_stardust_shard", ns),"S":ingr_repr("minecraft:string")}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["SC ","S C","SC "],"ingredients":{"C":ingr_repr("compacted_stardust_shard", ns),"S":ingr_repr("minecraft:string")}},
 			]
 		},
 		"awakened_stardust_bow": {
@@ -79,8 +116,8 @@ def main_additions() -> None:
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ASA","SBS","ASA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_bow", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SAS","ABA","SAS"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_bow", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["ASA","SBS","ASA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_bow", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["SAS","ABA","SAS"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_bow", ns)}},
 			]
 		},
 		"ultimate_bow": {
@@ -102,7 +139,7 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
 					ingr_repr("dragon_pearl", ns),ingr_repr("dragon_pearl", ns),ingr_repr("compacted_stardust_shard", ns),
 					ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:diamond_spear"),ingr_repr("compacted_stardust_shard", ns),
 					ingr_repr("compacted_stardust_shard", ns),ingr_repr("dragon_pearl", ns),ingr_repr("dragon_pearl", ns)
@@ -119,8 +156,8 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["ASA","SBS","ASA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_sniper", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SAS","ABA","SAS"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_sniper", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["ASA","SBS","ASA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_sniper", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["SAS","ABA","SAS"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"S":ingr_repr("sextuple_compressed_cobblestone", ns),"B":ingr_repr("stardust_sniper", ns)}},
 			]
 		},
 		"ultimate_sniper": {
@@ -150,7 +187,7 @@ def main_additions() -> None:
 					*([] if i > 0 else [{"text":"\n\nCan be obtained from Lucky Artifact Bags only","color":"gray"}]),
 				],
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":2*[ingr_repr(f"{artifact}_artifact_lv{i}", ns)]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(f"{artifact}_artifact_lv{i}", ns)]},
 				] if i > 0 else []
 			}
 			for artifact, lore, attribute, levels in (
@@ -173,7 +210,7 @@ def main_additions() -> None:
 				{"text":"\nThis can be found in various structures","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:leather")] + [ingr_repr("ultimate_shard", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[ingr_repr("minecraft:leather")] + [ingr_repr("ultimate_shard", ns)]},
 			]
 		},
 		"item_magnet": {
@@ -188,7 +225,7 @@ def main_additions() -> None:
 				{"text":"\nUseful for collecting dropped items","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["U U","A A","AAA"],"ingredients":{"U":ingr_repr("ultimate_shard", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["U U","A A","AAA"],"ingredients":{"U":ingr_repr("ultimate_shard", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
 			]
 		},
 		"home_travel_staff": {
@@ -201,7 +238,7 @@ def main_additions() -> None:
 				{"text":"\nHas 64 uses before breaking","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["D","S"],"ingredients":{"D":ingr_repr("dragon_pearl", ns),"S":ingr_repr("minecraft:stick")}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["D","S"],"ingredients":{"D":ingr_repr("dragon_pearl", ns),"S":ingr_repr("minecraft:stick")}},
 			]
 		},
 		"wormhole_potion": {
@@ -209,7 +246,7 @@ def main_additions() -> None:
 			"consumable": {"consume_seconds": 1024, "animation": "drink", "has_consume_particles": False},
 			"max_stack_size": 16,
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
 					ingr_repr("minecraft:cod"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:tropical_fish"),
 					ingr_repr("minecraft:pufferfish"),ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:pufferfish"),
 					ingr_repr("minecraft:tropical_fish"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:cod"),
@@ -226,7 +263,7 @@ def main_additions() -> None:
 				]}]
 			},
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("stardust_fragment", ns)] + [ingr_repr("minecraft:golden_apple")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[ingr_repr("stardust_fragment", ns)] + [ingr_repr("minecraft:golden_apple")]},
 			]
 		},
 		"life_crystal": {
@@ -260,42 +297,26 @@ def main_additions() -> None:
 			],
 			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"all":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"name":"crystal","from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#all"},"east":{"uv":[0,0,16,16],"texture":"#all"},"south":{"uv":[0,0,16,16],"texture":"#all"},"west":{"uv":[0,0,16,16],"texture":"#all"},"up":{"uv":[0,0,16,16],"texture":"#all"},"down":{"uv":[0,0,16,16],"texture":"#all"}}}]},
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:glass")] + [ingr_repr("life_crystal", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[ingr_repr("minecraft:glass")] + [ingr_repr("life_crystal", ns)]},
 			]
 		},
 	}
 
 	# Damaged Stardust Equipments
-	damaged_attributes: dict[str, float] = cast(EquipmentsConfig, ORES_CONFIGS["damaged_stardust!"]).attributes
 	for equipment_type in SLOTS.keys():
 		key: str = f"damaged_stardust_{equipment_type}"
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:black_glazed_terracotta")] + 4*[ingr_repr("stardust_block", ns)] + [ingr_repr(f"minecraft:diamond_{equipment_type}", ns)]},
-					{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:nether_wart_block")] + 4*[ingr_repr("stardust_block", ns)] + [ingr_repr(f"minecraft:diamond_{equipment_type}", ns)]},
-					{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:blackstone")] + 4*[ingr_repr("stardust_block", ns)] + [ingr_repr(f"minecraft:diamond_{equipment_type}", ns)]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("minecraft:black_glazed_terracotta")] + 4*[ingr_repr("stardust_block", ns)] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("minecraft:nether_wart_block")] + 4*[ingr_repr("stardust_block", ns)] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("minecraft:blackstone")] + 4*[ingr_repr("stardust_block", ns)] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]},
 				],
 				WIKI_COMPONENT: [
 					{"text":"Poorly crafted stardust equipment.","color":"yellow"},
-					{"text":"\nCompared to regular diamond equipment:","color":"gray"},
-					{"text":f"\n- Durability has been increased by x{DAMAGED_STARDUST_DURABILITY/DIAMOND_PICKAXE:.1f}","color":"gray"},
+					*get_attribute_wiki(key, ORES_CONFIGS["damaged_stardust!"])
 				]
 			}
-
-			# Add more info to WIKI_COMPONENT
-			attribute_modifiers: list[JsonDict] = Mem.definitions[key].get("attribute_modifiers", [])
-			if any(am["type"] == "armor" for am in attribute_modifiers):
-				attribute_value: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "armor")
-				additions[key][WIKI_COMPONENT].extend([{"text":f"\n- Armor points has been increased by {damaged_attributes["armor"]:.1f} ","color":"gray"},{"text":f"({attribute_value:.1f} points)","color":"white"}])
-			if any(am["type"] == "armor_toughness" for am in attribute_modifiers):
-				attribute_value: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "armor_toughness")
-				additions[key][WIKI_COMPONENT].extend([{"text":f"\n- Armor Toughness has been increased by {damaged_attributes["armor_toughness"]:.1f} ","color":"gray"},{"text":f"({attribute_value:.1f} points)","color":"white"}])
-			if any(am["type"] == "attack_damage" for am in attribute_modifiers):
-				attack_increase: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "attack_damage")
-				additions[key][WIKI_COMPONENT].extend([{"text":f"\n- Attack Damage has been increased by {damaged_attributes["attack_damage"]+1:.1f} ","color":"gray"},{"text":f"({attack_increase:.1f} points)","color":"white"}])
-			if any(am["type"] == "mining_efficiency" for am in attribute_modifiers):
-				additions[key][WIKI_COMPONENT].append({"text":f"\n- Mining Efficiency has been increased by {damaged_attributes["mining_efficiency"]:.1f}","color":"gray"})
 
 	# Original stardust equipments
 	for equipment_type in SLOTS.keys():
@@ -303,28 +324,82 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("stardust_core", ns)] + 4*[ingr_repr("compacted_stardust_shard", ns)] + [ingr_repr(f"damaged_stardust_{equipment_type}", ns)]},
 				],
 				WIKI_COMPONENT: [
 					{"text":"Original stardust equipment.","color":"yellow"},
-					{"text":"\nCompared to regular netherite equipment:","color":"gray"},
-					{"text":f"\n- Durability has been increased by x{ORIGINAL_DURABILITY/NETHERITE_PICKAXE:.1f}","color":"gray"},
+					*get_attribute_wiki(key, ORES_CONFIGS["original_stardust!"])
 				]
 			}
 
-			# Add more info to WIKI_COMPONENT
-			attribute_modifiers: list[JsonDict] = Mem.definitions[key].get("attribute_modifiers", [])
-			if any(am["type"] == "armor" for am in attribute_modifiers):
-				attribute_value: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "armor")
-				additions[key][WIKI_COMPONENT].extend([{"text":f"\n- Armor points has been increased by {damaged_attributes["armor"]:.1f} ","color":"gray"},{"text":f"({attribute_value:.1f} points)","color":"white"}])
-			if any(am["type"] == "armor_toughness" for am in attribute_modifiers):
-				attribute_value: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "armor_toughness")
-				additions[key][WIKI_COMPONENT].extend([{"text":f"\n- Armor Toughness has been increased by {damaged_attributes["armor_toughness"]:.1f} ","color":"gray"},{"text":f"({attribute_value:.1f} points)","color":"white"}])
-			if any(am["type"] == "attack_damage" for am in attribute_modifiers):
-				attack_increase: float = next(am["amount"] for am in attribute_modifiers if am["type"] == "attack_damage")
-				additions[key][WIKI_COMPONENT].extend([{"text":f"\n- Attack Damage has been increased by {damaged_attributes["attack_damage"]+1:.1f} ","color":"gray"},{"text":f"({attack_increase:.1f} points)","color":"white"}])
-			if any(am["type"] == "mining_efficiency" for am in attribute_modifiers):
-				additions[key][WIKI_COMPONENT].append({"text":f"\n- Mining Efficiency has been increased by {damaged_attributes["mining_efficiency"]:.1f}","color":"gray"})
-	# TODO: refactor above into a function (get_attribute_wiki(...))
+	# Legendarium equipments
+	for equipment_type in SLOTS.keys():
+		key: str = f"legendarium_{equipment_type}"
+		if key in Mem.definitions:
+			additions[key] = {
+				RESULT_OF_CRAFTING: [
+					{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+						ingr_repr(f"original_stardust_{equipment_type}", ns, count=1),
+						ingr_repr("legendarium_block", ns, count=4),
+						ingr_repr("minecraft:wind_charge", count=64),
+						ingr_repr("minecraft:feather", count=128),
+						ingr_repr("ender_dragon_pearl", ns, count=6),
+						ingr_repr("awakened_stardust_block", ns, count=8),
+						ingr_repr("compacted_stardust_shard", ns, count=12),
+						ingr_repr("sextuple_compressed_cobblestone", ns, count=1)
+					]},
+				],
+				WIKI_COMPONENT: [
+					{"text":"Legendarium equipment.","color":"yellow"},
+					*get_attribute_wiki(key, ORES_CONFIGS["legendarium_ingot"])
+				]
+			}
+
+	# Solarium equipments
+	for equipment_type in SLOTS.keys():
+		key: str = f"solarium_{equipment_type}"
+		if key in Mem.definitions:
+			additions[key] = {
+				RESULT_OF_CRAFTING: [
+					{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+						ingr_repr(f"original_stardust_{equipment_type}", ns, count=1),
+						ingr_repr("solarium_block", ns, count=4),
+						ingr_repr("minecraft:orange_candle", count=64),
+						ingr_repr("minecraft:blaze_powder", count=128),
+						ingr_repr("ender_dragon_pearl", ns, count=6),
+						ingr_repr("awakened_stardust_block", ns, count=8),
+						ingr_repr("compacted_stardust_shard", ns, count=12),
+						ingr_repr("sextuple_compressed_cobblestone", ns, count=1)
+					]},
+				],
+				WIKI_COMPONENT: [
+					{"text":"Solarium equipment.","color":"yellow"},
+					*get_attribute_wiki(key, ORES_CONFIGS["solarium_ingot"])
+				]
+			}
+
+	# Darkium equipments
+	for equipment_type in SLOTS.keys():
+		key: str = f"darkium_{equipment_type}"
+		if key in Mem.definitions:
+			additions[key] = {
+				RESULT_OF_CRAFTING: [
+					{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+						ingr_repr(f"original_stardust_{equipment_type}", ns, count=1),
+						ingr_repr("darkium_block", ns, count=4),
+						ingr_repr("minecraft:respawn_anchor", count=64),
+						ingr_repr("minecraft:ink_sac", count=128),
+						ingr_repr("ender_dragon_pearl", ns, count=6),
+						ingr_repr("awakened_stardust_block", ns, count=8),
+						ingr_repr("compacted_stardust_shard", ns, count=12),
+						ingr_repr("sextuple_compressed_cobblestone", ns, count=1)
+					]},
+				],
+				WIKI_COMPONENT: [
+					{"text":"Darkium equipment.","color":"yellow"},
+					*get_attribute_wiki(key, ORES_CONFIGS["darkium_ingot"])
+				]
+			}
 
 	# Update the definitions with new data
 	for k, v in additions.items():

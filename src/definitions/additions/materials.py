@@ -248,7 +248,7 @@ def main_additions() -> None:
 			VANILLA_BLOCK: {"id":"minecraft:emerald_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed legendarium storage block.","color":"yellow"},
-				{"text":"\nCrafted from 9 Legendarium Ingots","color":"gray"},
+				{"text":"\nCrafted from 8Legendarium Ingots","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)] + 8*[ingr_repr("legendarium_ingot", ns)]},
@@ -283,7 +283,7 @@ def main_additions() -> None:
 			VANILLA_BLOCK: {"id":"minecraft:waxed_copper_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed solarium storage block.","color":"yellow"},
-				{"text":"\nCrafted from 9 Solarium Ingots","color":"gray"},
+				{"text":"\nCrafted from 8Solarium Ingots","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)] + 8*[ingr_repr("solarium_ingot", ns)]},
@@ -318,7 +318,7 @@ def main_additions() -> None:
 			VANILLA_BLOCK: {"id":"minecraft:netherite_block", "apply_facing":False},
 			WIKI_COMPONENT: [
 				{"text":"Compressed darkium storage block.","color":"yellow"},
-				{"text":"\nCrafted from 9 Darkium Ingots","color":"gray"},
+				{"text":"\nCrafted from 8Darkium Ingots","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)] + 8*[ingr_repr("darkium_ingot", ns)]},

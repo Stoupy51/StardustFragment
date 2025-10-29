@@ -9,12 +9,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_163"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.163"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_163"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (163)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_165"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.165"}]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_163"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.163"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_165"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (165)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_163"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (163)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_165"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.165"}]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_165"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (165)"]}}
 			],
 			"width": 400
 		},
@@ -23,11 +23,11 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"\"$6\n\"",
-				{"text": "$虬$虬","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
+				{"text": "$蚲$蚲","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
 				"U$  \n\"",
 				{"text": "U$U$","hover_event": {"action": "show_item","id": "minecraft:diamond","components": {}}},
 				"U$  \n\"",
-				{"text": "$語$語","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
+				{"text": "$謸$謸","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
 				"U$\"\"",
 				{"text": "$$腕","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"translate": "stardust.to_set_1st_coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"translate": "stardust.to_set_2nd_coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:quarry_configurator","item_name": {"translate": "stardust.quarry_configurator"},"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
 				"#$\n\"",
@@ -35,14 +35,14 @@
 				"U$\"\"",
 				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"translate": "stardust.to_set_1st_coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"translate": "stardust.to_set_2nd_coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:quarry_configurator","item_name": {"translate": "stardust.quarry_configurator"},"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
 				"#$\n\"",
-				{"text": "$語$語","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
+				{"text": "$謸$謸","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
 				"U$  \n\"",
 				{"text": "U$U$","hover_event": {"action": "show_item","id": "minecraft:quartz","components": {}}},
 				"U$  \n\n",
 				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.configurator_for_setting_up_quarries","color": "yellow"},{"keybind": "key.use","color": "white"},{"translate": "stardust.to_set_the_first_corner_of_the_quarry_area","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"translate": "stardust.to_set_the_opposite_corner_of_the_quarry_area","color": "gray"},{"translate": "stardust.finally_just","color": "gray"},{"keybind": "key.use","color": "white"},{"translate": "stardust.the_quarry_you_want_to_apply_the_region_configuration","color": "gray"},{"translate": "stardust.or_put_the_configurator_inside_the_quarry_on_the_dedicated_slot","color": "gray"}]}},
-				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$虬"},{"text": "$虬"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$語"},{"text": "$語"},"U$\"\"",{"text": "$$腕"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$語"},{"text": "$語"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.quartz","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$蚲"},{"text": "$蚲"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$謸"},{"text": "$謸"},"U$\"\"",{"text": "$$腕"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$謸"},{"text": "$謸"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.quartz","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.configurator_for_setting_up_quarries","color": "yellow"},{"keybind": "key.use","color": "white"},{"translate": "stardust.to_set_the_first_corner_of_the_quarry_area","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"translate": "stardust.to_set_the_opposite_corner_of_the_quarry_area","color": "gray"},{"translate": "stardust.finally_just","color": "gray"},{"keybind": "key.use","color": "white"},{"translate": "stardust.the_quarry_you_want_to_apply_the_region_configuration","color": "gray"},{"translate": "stardust.or_put_the_configurator_inside_the_quarry_on_the_dedicated_slot","color": "gray"}]}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$虬"},{"text": "$虬"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$語"},{"text": "$語"},"U$\"\"",{"text": "$$腕"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$語"},{"text": "$語"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.quartz","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$蚲"},{"text": "$蚲"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$謸"},{"text": "$謸"},"U$\"\"",{"text": "$$腕"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$\"\"",{"text": "U$"},"\n","\"",{"text": "$謸"},{"text": "$謸"},"\n","\"",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.diamond","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.quartz","color": "gray"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

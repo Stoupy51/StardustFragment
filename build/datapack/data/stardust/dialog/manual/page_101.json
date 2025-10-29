@@ -9,12 +9,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_100"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.100"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_100"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (100)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_102"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.102"}]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_100"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.100"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_102"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (102)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_100"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (100)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_102"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.102"}]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_102"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (102)"]}}
 			],
 			"width": 400
 		},
@@ -23,8 +23,9 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႄ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_boots","components": {"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_boots": true}},"max_damage": 1663,"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "stardust:knockback_resistance.feet"}],"item_model": "stardust:legendarium_boots","item_name": {"translate": "stardust.legendarium_boots"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_101"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "netherite_boots","components": {"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_boots": true}},"max_damage": 1663,"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "stardust:knockback_resistance.feet"}],"item_model": "stardust:legendarium_boots","item_name": {"translate": "stardust.legendarium_boots"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_101"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.legendarium_equipment","color": "yellow"},{"translate": "stardust.compared_to_regular_netherite_equipment","color": "gray"},{"translate": "stardust.durability_has_been_increased_by_x3_5","color": "gray"},{"translate": "stardust.armor_points_has_been_increased_by_5_5","color": "gray"},{"translate": "stardust.8_5_points","color": "white"},{"translate": "stardust.armor_toughness_has_been_increased_by_1_6","color": "gray"},{"translate": "stardust.4_6_points","color": "white"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

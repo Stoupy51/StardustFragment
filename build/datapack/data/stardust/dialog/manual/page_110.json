@@ -9,12 +9,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_109"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.109"}]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_109"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (109)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_111"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.111"}]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_109"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"},{"translate": "stardust.109"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_111"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (111)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_109"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (109)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_111"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"},{"translate": "stardust.111"}]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_111"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (111)"]}}
 			],
 			"width": 400
 		},
@@ -23,8 +23,9 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"ႍ\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "netherite_pickaxe","components": {"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_pickaxe": true}},"max_damage": 7805,"attribute_modifiers": [{"type": "attack_damage","amount": 20,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 3.0,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],"item_model": "stardust:solarium_pickaxe","item_name": {"translate": "stardust.solarium_pickaxe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_110"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "netherite_pickaxe","components": {"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_pickaxe": true}},"max_damage": 7805,"attribute_modifiers": [{"type": "attack_damage","amount": 20,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 3.0,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],"item_model": "stardust:solarium_pickaxe","item_name": {"translate": "stardust.solarium_pickaxe"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_110"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.solarium_equipment","color": "yellow"},{"translate": "stardust.compared_to_regular_netherite_equipment","color": "gray"},{"translate": "stardust.durability_has_been_increased_by_x3_8","color": "gray"},{"translate": "stardust.attack_damage_has_been_increased_by_16_0","color": "gray"},{"translate": "stardust.20_0_points","color": "white"},{"translate": "stardust.mining_efficiency_has_been_increased_by_3_0","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

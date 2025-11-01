@@ -345,7 +345,7 @@ def main_additions() -> None:
 						ingr_repr("minecraft:feather", count=128),
 						ingr_repr("ender_dragon_pearl", ns, count=6),
 						ingr_repr("awakened_stardust_block", ns, count=8),
-						ingr_repr("compacted_stardust_shard", ns, count=12),
+						ingr_repr("legendarium_ingot", ns, count=12),
 						ingr_repr("sextuple_compressed_cobblestone", ns, count=1)
 					]},
 				],
@@ -368,7 +368,7 @@ def main_additions() -> None:
 						ingr_repr("minecraft:blaze_powder", count=128),
 						ingr_repr("ender_dragon_pearl", ns, count=6),
 						ingr_repr("awakened_stardust_block", ns, count=8),
-						ingr_repr("compacted_stardust_shard", ns, count=12),
+						ingr_repr("solarium_ingot", ns, count=12),
 						ingr_repr("sextuple_compressed_cobblestone", ns, count=1)
 					]},
 				],
@@ -391,8 +391,8 @@ def main_additions() -> None:
 						ingr_repr("minecraft:ink_sac", count=128),
 						ingr_repr("ender_dragon_pearl", ns, count=6),
 						ingr_repr("awakened_stardust_block", ns, count=8),
-						ingr_repr("compacted_stardust_shard", ns, count=12),
-						ingr_repr("sextuple_compressed_cobblestone", ns, count=1)
+						ingr_repr("darkium_ingot", ns, count=12),
+						ingr_repr("sextuple_compressed_cobblestone", ns, count=1),
 					]},
 				],
 				WIKI_COMPONENT: [

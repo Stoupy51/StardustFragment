@@ -1,7 +1,8 @@
 
 #> stardust:custom_blocks/get_rotation
 #
-# @within	stardust:custom_blocks/nether_star_generator/place_main
+# @within	stardust:custom_blocks/mob_grinder/place_main
+#			stardust:custom_blocks/nether_star_generator/place_main
 #			stardust:custom_blocks/advanced_furnace_generator/place_main
 #			stardust:custom_blocks/stardust_furnace_generator/place_main
 #			stardust:custom_blocks/awakened_stardust_furnace_generator/place_main

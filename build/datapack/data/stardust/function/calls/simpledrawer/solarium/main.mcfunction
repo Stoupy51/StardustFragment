@@ -9,7 +9,7 @@
 scoreboard players set #success_material simpledrawer.io 1
 
 # Set the convert counts
-scoreboard players set #ingot_in_block simpledrawer.io 8
+scoreboard players set #ingot_in_block simpledrawer.io 9
 scoreboard players set #nugget_in_ingot simpledrawer.io 9
 
 # Set the material data

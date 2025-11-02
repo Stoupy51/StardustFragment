@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/nether_star_generator_front",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.nether_star_generator",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/nether_star_generator_front"
-		}
-	],
+	"title": {
+		"translate": "stardust.nether_star_generator",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

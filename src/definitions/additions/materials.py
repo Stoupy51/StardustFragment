@@ -97,7 +97,7 @@ def main_additions() -> None:
 				{"type":"blasting","result_count":2,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("stardust_ore", ns)},
 				{"type":"smelting","result_count":4,"category":"misc","experience":0.8,"cookingtime":200,"ingredient":ingr_repr("deepslate_stardust_ore", ns)},
 				{"type":"blasting","result_count":4,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("deepslate_stardust_ore", ns)},
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("stardust_ingot", ns)},
 			]
 		},
 		"stardust_ingot": {
@@ -113,8 +113,8 @@ def main_additions() -> None:
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:iron_ingot")] + 8*[ingr_repr("stardust_fragment", ns)]},
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:copper_ingot")] + 8*[ingr_repr("stardust_fragment", ns)]},
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:gold_ingot")] + 8*[ingr_repr("stardust_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("stardust_essence", ns)]},
 				{"type":"crafting_shapeless","result_count":9,"category":"misc","ingredients":[ingr_repr("stardust_block", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("stardust_essence", ns)},
 			]
 		},
 		"stardust_block": {
@@ -141,7 +141,7 @@ def main_additions() -> None:
 				{"type":"blasting","result_count":1,"category":"misc","experience":0.8,"cookingtime":100,"ingredient":ingr_repr("ender_stardust_ore", ns)},
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:blaze_powder")] + 8*[ingr_repr("stardust_ingot", ns)]},
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:wind_charge")] + 8*[ingr_repr("stardust_ingot", ns)]},
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("stardust_core", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("stardust_core", ns)},
 			]
 		},
 		"stardust_core": {
@@ -176,7 +176,7 @@ def main_additions() -> None:
 				{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("awakened_stardust_block", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("awakened_stardust_block", ns)},
 			]
 		},
 		"awakened_stardust_block": {
@@ -202,7 +202,7 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("minecraft:ender_pearl")] + 8*[ingr_repr("minecraft:dragon_breath")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("ender_dragon_pearl", ns)]},
+				{"type":PULVERIZING,"result_count":1,"ingredient":ingr_repr("ender_dragon_pearl", ns)},
 			]
 		},
 		"ender_dragon_pearl": {
@@ -228,7 +228,7 @@ def main_additions() -> None:
 				{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("legendarium_ingot", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("legendarium_ingot", ns)},
 			]
 		},
 		"legendarium_ingot": {
@@ -240,7 +240,7 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)] + 8*[ingr_repr("legendarium_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("legendarium_block", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("legendarium_block", ns)},
 			]
 		},
 		"legendarium_block": {
@@ -263,7 +263,7 @@ def main_additions() -> None:
 				{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("solarium_ingot", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("solarium_ingot", ns)},
 			]
 		},
 		"solarium_ingot": {
@@ -275,7 +275,7 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)] + 8*[ingr_repr("solarium_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("solarium_block", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("solarium_block", ns)},
 			]
 		},
 		"solarium_block": {
@@ -298,7 +298,7 @@ def main_additions() -> None:
 				{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("darkium_ingot", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("darkium_ingot", ns)},
 			]
 		},
 		"darkium_ingot": {
@@ -310,7 +310,7 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("stardust_ingot", ns)] + 8*[ingr_repr("darkium_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":8,"category":"misc","ingredients":[ingr_repr("darkium_block", ns)]},
+				{"type":PULVERIZING,"result_count":8,"ingredient":ingr_repr("darkium_block", ns)},
 			]
 		},
 		"darkium_block": {
@@ -347,7 +347,7 @@ def main_additions() -> None:
 				{"text":"\nEvery wolf lays an excrement item every 5-10 minutes","color":"gray"},
 			],
 			USED_FOR_CRAFTING: [
-				{"type":PULVERIZING,"result_count":{"type":"minecraft:uniform","min":4,"max":6},"category":"misc","ingredient":ingr_repr("dog_excrement", ns),"result":ingr_repr("minecraft:bone_meal")},
+				{"type":PULVERIZING,"result_count":{"type":"minecraft:uniform","min":4,"max":6},"result":ingr_repr("minecraft:bone_meal")},
 			]
 		},
 		**{

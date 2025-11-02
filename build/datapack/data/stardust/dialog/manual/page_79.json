@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/growth_accelerator_bottom",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.growth_accelerator",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/growth_accelerator_bottom"
-		}
-	],
+	"title": {
+		"translate": "stardust.growth_accelerator",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/mob_grinder_front",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.mob_grinder",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/mob_grinder_front"
-		}
-	],
+	"title": {
+		"translate": "stardust.mob_grinder",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

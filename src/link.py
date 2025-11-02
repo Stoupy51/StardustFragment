@@ -1,7 +1,7 @@
 
 # Imports
+from beet import Context
 from stewbeet.contrib.simplenergy import (
-	Context,
 	GuiTranslation,
 	Mem,
 	energy_cables_models,
@@ -32,20 +32,17 @@ def beet_default(ctx: Context) -> None:
 	# Setup GUI in resource packs
 	gui: dict[str, str] = setup_gui_in_resource_packs(
 		{
-			# "electric_brewing_stand": GuiTranslation.brewing_stand,
-			# "electric_furnace": GuiTranslation.furnace_bottom,
-			# "electric_smelter": GuiTranslation.furnace_bottom,
-			# "furnace_generator": GuiTranslation.furnace_top,
-			# "redstone_generator": GuiTranslation.furnace_bottom,
-			# "pulverizer": GuiTranslation.barrel_bottom_right,
-		}
+			"advanced_furnace_generator": GuiTranslation.furnace_top,
+			"nether_star_generator": GuiTranslation.furnace_bottom,
+			"quarry": GuiTranslation.barrel_bottom_right,
+		} # pyright: ignore[reportArgumentType]
 	)
 
 	# Setup machines
 	setup_machines(gui)
 
 	# Setup rotatable tags
-	#setup_wrench(["furnace_generator", "electric_furnace", "electric_smelter", "pulverizer"])
+	setup_wrench(blocks="auto")
 
 	# Keep energy for batteries
 	keep_energy_for_batteries([x for x in Mem.definitions if x.endswith("_battery")])

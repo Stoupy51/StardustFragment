@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/quarry_lv1_bottom",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.quarry_lv1",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/quarry_lv1_bottom"
-		}
-	],
+	"title": {
+		"translate": "stardust.quarry_lv1",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

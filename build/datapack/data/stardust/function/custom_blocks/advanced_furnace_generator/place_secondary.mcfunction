@@ -37,3 +37,6 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Make the block rotatable by wrench
+tag @s add simplenergy.rotatable
+

@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/stardust_battery_bottom",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust_battery",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/stardust_battery_bottom"
-		}
-	],
+	"title": {
+		"translate": "stardust_battery",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

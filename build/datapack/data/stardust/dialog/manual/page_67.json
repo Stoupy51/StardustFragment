@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/ultimate_solar_panel_side",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.ultimate_solar_panel",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/ultimate_solar_panel_side"
-		}
-	],
+	"title": {
+		"translate": "stardust.ultimate_solar_panel",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

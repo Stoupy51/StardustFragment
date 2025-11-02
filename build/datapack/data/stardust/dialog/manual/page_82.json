@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/advanced_furnace_generator_front",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.advanced_furnace_generator",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/advanced_furnace_generator_front"
-		}
-	],
+	"title": {
+		"translate": "stardust.advanced_furnace_generator",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

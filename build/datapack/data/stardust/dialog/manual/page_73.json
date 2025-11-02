@@ -1,25 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/quarry_creative_bottom",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			]
-		},
-		" ",
-		{
-			"translate": "stardust.quarry_creative",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/quarry_creative_bottom"
-		}
-	],
+	"title": {
+		"translate": "stardust.quarry_creative",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

@@ -2,6 +2,34 @@
 #> stardust:custom_blocks/ender_stardust_ore/place_main
 #
 # @within	stardust:custom_blocks/place
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~-0.4 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~-0.4 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~-0.4 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~0.0 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~0.0 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~0.0 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~0.4 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~0.4 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~-0.4 ~0.4 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~-0.4 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~-0.4 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~-0.4 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~0.0 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~0.0 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~0.0 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~0.4 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~0.4 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.0 ~0.4 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~-0.4 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~-0.4 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~-0.4 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~0.0 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~0.0 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~0.0 ~0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~0.4 ~-0.4 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~0.4 ~0.0 ]
+#			stardust:calls/smart_ore_generation/veins/ender_stardust_ore [ at @s & positioned ~0.4 ~0.4 ~0.4 ]
 #
 
 tag @s add stardust.placer

@@ -172,9 +172,9 @@ loot spawn ~ ~ ~ loot stardust:i/heat_generator
 loot spawn ~ ~ ~ loot stardust:i/wind_turbine
 loot spawn ~ ~ ~ loot stardust:i/advanced_furnace_generator
 loot spawn ~ ~ ~ loot stardust:i/stardust_furnace_generator
-loot spawn ~ ~ ~ loot stardust:i/awakened_furnace_generator
+loot spawn ~ ~ ~ loot stardust:i/awakened_stardust_furnace_generator
 loot spawn ~ ~ ~ loot stardust:i/stardust_solar_panel
-loot spawn ~ ~ ~ loot stardust:i/awakened_solar_panel
+loot spawn ~ ~ ~ loot stardust:i/awakened_stardust_solar_panel
 loot spawn ~ ~ ~ loot stardust:i/legendarium_solar_panel
 loot spawn ~ ~ ~ loot stardust:i/solarium_solar_panel
 loot spawn ~ ~ ~ loot stardust:i/darkium_solar_panel

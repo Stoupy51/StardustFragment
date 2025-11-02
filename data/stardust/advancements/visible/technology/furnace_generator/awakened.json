@@ -24,7 +24,7 @@
 				"items": [
 					{
 						"tag": "stardust:items",
-						"nbt": "{stardust:{awakened_furnace_generator:1b}}"
+						"nbt": "{stardust:{awakened_stardust_furnace_generator:1b}}"
 					}
 				]
 			}

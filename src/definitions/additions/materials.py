@@ -428,7 +428,7 @@ def main_additions() -> None:
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","MMM"," I "],"ingredients":{"F":ingr_repr("stardust_fragment", ns),"M":ingr_repr("mirror", ns),"I":ingr_repr("stardust_ingot", ns)}},
 			]
 		},
-		"awakened_photovoltaic_cell": {
+		"awakened_stardust_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
 			WIKI_COMPONENT: [
 				{"text":"Awakened photovoltaic cell made from stardust.","color":"yellow"},
@@ -446,8 +446,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("legendarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("legendarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("legendarium_ingot", ns),"A":ingr_repr("awakened_stardust_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("legendarium_ingot", ns),"A":ingr_repr("awakened_stardust_photovoltaic_cell", ns)}},
 			]
 		},
 		"solarium_photovoltaic_cell": {
@@ -457,8 +457,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("solarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("solarium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("solarium_ingot", ns),"A":ingr_repr("awakened_stardust_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("solarium_ingot", ns),"A":ingr_repr("awakened_stardust_photovoltaic_cell", ns)}},
 			]
 		},
 		"darkium_photovoltaic_cell": {
@@ -468,8 +468,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("darkium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("darkium_ingot", ns),"A":ingr_repr("awakened_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("darkium_ingot", ns),"A":ingr_repr("awakened_stardust_photovoltaic_cell", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("darkium_ingot", ns),"A":ingr_repr("awakened_stardust_photovoltaic_cell", ns)}},
 			]
 		},
 		"ultimate_photovoltaic_cell": {

@@ -67,7 +67,7 @@
 		{ "predicate": { "custom_model_data": 2013324 }, "model": "stardust:others/machines/wind_turbine" },
 		{ "predicate": { "custom_model_data": 2013325 }, "model": "stardust:others/machines/advanced_furnace_generator_off" },
 		{ "predicate": { "custom_model_data": 2013327 }, "model": "stardust:others/machines/stardust_furnace_generator_off" },
-		{ "predicate": { "custom_model_data": 2013329 }, "model": "stardust:others/machines/awakened_furnace_generator_off" },
+		{ "predicate": { "custom_model_data": 2013329 }, "model": "stardust:others/machines/awakened_stardust_furnace_generator_off" },
 		{ "predicate": { "custom_model_data": 2013336 }, "model": "stardust:others/machines/stardust_battery" },
 		{ "predicate": { "custom_model_data": 2013337 }, "model": "stardust:others/machines/awakened_stardust_battery" },
 		{ "predicate": { "custom_model_data": 2013338 }, "model": "stardust:others/machines/ultimate_battery" },

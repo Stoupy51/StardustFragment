@@ -43,7 +43,7 @@ scoreboard players add #total_stardust_seed stardust.data 0
 scoreboard players add #total_advanced_diamond_seed stardust.data 0
 scoreboard players add #total_diamond_seed stardust.data 0
 scoreboard players add #total_life_crystal_block stardust.data 0
-scoreboard players add #total_awakened_furnace_generator stardust.data 0
+scoreboard players add #total_awakened_stardust_furnace_generator stardust.data 0
 scoreboard players add #total_stardust_furnace_generator stardust.data 0
 scoreboard players add #total_advanced_furnace_generator stardust.data 0
 scoreboard players add #total_nether_star_generator stardust.data 0
@@ -64,7 +64,7 @@ scoreboard players add #total_ultimate_solar_panel stardust.data 0
 scoreboard players add #total_darkium_solar_panel stardust.data 0
 scoreboard players add #total_solarium_solar_panel stardust.data 0
 scoreboard players add #total_legendarium_solar_panel stardust.data 0
-scoreboard players add #total_awakened_solar_panel stardust.data 0
+scoreboard players add #total_awakened_stardust_solar_panel stardust.data 0
 scoreboard players add #total_stardust_solar_panel stardust.data 0
 scoreboard players add #total_ultimate_battery stardust.data 0
 scoreboard players add #total_awakened_stardust_battery stardust.data 0
@@ -123,7 +123,7 @@ tellraw @s [{"translate": "stardust.total_stardust_battery","color":"gold"},{"sc
 tellraw @s [{"translate": "stardust.total_awakened_stardust_battery","color":"gold"},{"score":{"name":"#total_awakened_stardust_battery","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_ultimate_battery","color":"gold"},{"score":{"name":"#total_ultimate_battery","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_stardust_solar_panel","color":"gold"},{"score":{"name":"#total_stardust_solar_panel","objective":"stardust.data"},"color":"yellow"}]
-tellraw @s [{"translate": "stardust.total_awakened_solar_panel","color":"gold"},{"score":{"name":"#total_awakened_solar_panel","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_awakened_stardust_solar_panel","color":"gold"},{"score":{"name":"#total_awakened_stardust_solar_panel","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_legendarium_solar_panel","color":"gold"},{"score":{"name":"#total_legendarium_solar_panel","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_solarium_solar_panel","color":"gold"},{"score":{"name":"#total_solarium_solar_panel","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_darkium_solar_panel","color":"gold"},{"score":{"name":"#total_darkium_solar_panel","objective":"stardust.data"},"color":"yellow"}]
@@ -144,7 +144,7 @@ tellraw @s [{"translate": "stardust.total_mob_grinder","color":"gold"},{"score":
 tellraw @s [{"translate": "stardust.total_nether_star_generator","color":"gold"},{"score":{"name":"#total_nether_star_generator","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_advanced_furnace_generator","color":"gold"},{"score":{"name":"#total_advanced_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_stardust_furnace_generator","color":"gold"},{"score":{"name":"#total_stardust_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
-tellraw @s [{"translate": "stardust.total_awakened_furnace_generator","color":"gold"},{"score":{"name":"#total_awakened_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [{"translate": "stardust.total_awakened_stardust_furnace_generator","color":"gold"},{"score":{"name":"#total_awakened_stardust_furnace_generator","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_life_crystal_block","color":"gold"},{"score":{"name":"#total_life_crystal_block","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_diamond_seed","color":"gold"},{"score":{"name":"#total_diamond_seed","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_advanced_diamond_seed","color":"gold"},{"score":{"name":"#total_advanced_diamond_seed","objective":"stardust.data"},"color":"yellow"}]

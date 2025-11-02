@@ -229,7 +229,7 @@ def main_additions() -> None:
 				"rarity": "rare" if i < 5 else "epic",
 				"lore": [
 					{"text":"Only mines cobblestone directly below","color":"white","italic":False},
-					{"text":f"[x{9*(5**i):,} per minute]","color":"gray","italic":False},
+					{"text":f"[x{9*(4**i):,} per minute]","color":"gray","italic":False},
 				],
 				WIKI_COMPONENT: [
 					{"text":f"Cobblestone Miner Lv.{i+1}","color":"yellow"},

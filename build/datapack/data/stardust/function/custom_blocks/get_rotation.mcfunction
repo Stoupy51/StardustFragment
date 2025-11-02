@@ -4,7 +4,7 @@
 # @within	stardust:custom_blocks/nether_star_generator/place_main
 #			stardust:custom_blocks/advanced_furnace_generator/place_main
 #			stardust:custom_blocks/stardust_furnace_generator/place_main
-#			stardust:custom_blocks/awakened_furnace_generator/place_main
+#			stardust:custom_blocks/awakened_stardust_furnace_generator/place_main
 #			stardust:custom_blocks/life_crystal_block/place_main
 #
 

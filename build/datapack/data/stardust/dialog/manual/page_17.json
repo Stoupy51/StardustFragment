@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.deepslate_stardust_ore",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "stardust:item/stardust_ore",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "stardust_ore",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/stardust_ore"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",
@@ -23,20 +39,20 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"\"$@\n\n\n\"",
-				{"text": "$耯","hover_event": {"action": "show_item","id": "furnace","components": {"item_model": "stardust:deepslate_stardust_ore","item_name": {"translate": "stardust.deepslate_stardust_ore"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"deepslate_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:deepslate_stardust_ore","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}}},
+				{"text": "$耭","hover_event": {"action": "show_item","id": "furnace","components": {"item_model": "stardust:stardust_ore","item_name": {"translate": "stardust_ore"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_ore","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}}},
 				"\"\"\"\"#U$",
-				{"text": "$$腝","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "$$腢","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
 				"#$\n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_model": "stardust:deepslate_stardust_ore","item_name": {"translate": "stardust.deepslate_stardust_ore"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"deepslate_stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:deepslate_stardust_ore","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"item_model": "stardust:stardust_ore","item_name": {"translate": "stardust_ore"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_ore": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_ore","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}}},
 				"\"\"\"\"#U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
 				"#$\n\n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.deepslate_variant_of_stardust_ore","color": "yellow"},{"translate": "stardust.found_in_deepslate_layers_below_y0","color": "gray"},{"translate": "stardust.drops_between_2_and_6_stardust_fragments_when_mined","color": "gray"}]}},
-				{"text": "茛##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"P\n","\n\n","\"",{"text": "$耯"},"\"\"\"\"#U$",{"text": "$$腝"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "stardust.mining","color": "yellow"},{"translate": "stardust.mine","color": "gray"},{"translate": "stardust.deepslate_stardust_ore","color": "gray"},{"translate": "stardust.drops_x2_6","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
-				{"text": "茞\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"G\n","\"",{"text": "$耯"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$腧"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "stardust.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.deepslate_stardust_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.deepslate_variant_of_stardust_ore","color": "yellow"},{"translate": "stardust.found_in_deepslate_layers_below_y0","color": "gray"},{"translate": "stardust.drops_between_2_and_6_stardust_fragments_when_mined","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"P\n","\n\n","\"",{"text": "$耯"},"\"\"\"\"#U$",{"text": "$$腝"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "stardust.mining","color": "yellow"},{"translate": "stardust.mine","color": "gray"},{"translate": "stardust.deepslate_stardust_ore","color": "gray"},{"translate": "stardust.drops_x2_6","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"G\n","\"",{"text": "$耯"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$腧"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "stardust.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.deepslate_stardust_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_10"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.primary_ore_for_the_datapack","color": "yellow"},{"translate": "stardust.found_in_the_overworld_between_y0_and_y50","color": "gray"},{"translate": "stardust.deepslate_variant_generates_below_y0","color": "gray"},{"translate": "stardust.drops_between_1_and_4_stardust_fragments_when_mined","color": "gray"}]}},
+				{"text": "茩##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"P\n","\n\n","\"",{"text": "$耭"},"\"\"\"\"#U$",{"text": "$$腢"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "stardust.mining","color": "yellow"},{"translate": "stardust.mine","color": "gray"},{"translate": "stardust_ore","color": "gray"},{"translate": "stardust.drops_x1_4","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
+				{"text": "茬\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"G\n","\"",{"text": "$耭"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$腥"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "stardust.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.primary_ore_for_the_datapack","color": "yellow"},{"translate": "stardust.found_in_the_overworld_between_y0_and_y50","color": "gray"},{"translate": "stardust.deepslate_variant_generates_below_y0","color": "gray"},{"translate": "stardust.drops_between_1_and_4_stardust_fragments_when_mined","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"P\n","\n\n","\"",{"text": "$耭"},"\"\"\"\"#U$",{"text": "$$腢"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],{"translate": "stardust.mining","color": "yellow"},{"translate": "stardust.mine","color": "gray"},{"translate": "stardust_ore","color": "gray"},{"translate": "stardust.drops_x1_4","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"G\n","\"",{"text": "$耭"},"\n","\"",{"text": "U$"},"\n","\"\"\"\"U$U$",{"text": "$$腥"},"\n","\"\"\"\"U$U$",{"text": "U$"},"\n","\n\n"],{"translate": "stardust.smelting","color": "yellow"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_ore","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_11"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

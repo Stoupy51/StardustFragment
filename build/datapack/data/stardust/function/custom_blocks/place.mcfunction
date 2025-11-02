@@ -31,7 +31,7 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_battery"} run function stardust:custom_blocks/awakened_stardust_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:ultimate_battery"} run function stardust:custom_blocks/ultimate_battery/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_solar_panel"} run function stardust:custom_blocks/stardust_solar_panel/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_solar_panel"} run function stardust:custom_blocks/awakened_solar_panel/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_solar_panel"} run function stardust:custom_blocks/awakened_stardust_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendarium_solar_panel"} run function stardust:custom_blocks/legendarium_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium_solar_panel"} run function stardust:custom_blocks/solarium_solar_panel/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_solar_panel"} run function stardust:custom_blocks/darkium_solar_panel/place_main
@@ -52,7 +52,7 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:mob_grin
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:nether_star_generator"} run function stardust:custom_blocks/nether_star_generator/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:advanced_furnace_generator"} run function stardust:custom_blocks/advanced_furnace_generator/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_furnace_generator"} run function stardust:custom_blocks/stardust_furnace_generator/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_furnace_generator"} run function stardust:custom_blocks/awakened_furnace_generator/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_furnace_generator"} run function stardust:custom_blocks/awakened_stardust_furnace_generator/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:life_crystal_block"} run function stardust:custom_blocks/life_crystal_block/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv1"} run function stardust:custom_blocks/cobblestone_miner_lv1/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv2"} run function stardust:custom_blocks/cobblestone_miner_lv2/place_main

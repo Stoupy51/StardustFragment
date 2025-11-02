@@ -86,7 +86,7 @@ def main_additions() -> None:
 				{"type":"knockback_resistance","amount": 0.1,"operation":"add_value","slot":"chest","id":"stardust:knockback_resistance.chest"}
 			],
 			WIKI_COMPONENT: [
-				{"text":"Elytra crafted from ultimate materials.","color":"yellow"},
+				{"text":"Elytra dropped by the Ultimate Boss.","color":"yellow"},
 				{"text":"\nHigher durability (x8) than regular elytra","color":"gray"},
 				{"text":"\n\nWhen on Chest:","color":"gray"},
 				{"text":"\n+10 Armor","color":"blue"},
@@ -128,6 +128,19 @@ def main_additions() -> None:
 				{"text":"\nHigher durability (x8) and power (x4) than regular bows","color":"gray"},
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
+			RESULT_OF_CRAFTING: [
+				{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+					ingr_repr("awakened_stardust_bow", ns, count=1),
+					ingr_repr("compacted_stardust_shard", ns, count=64),
+					ingr_repr("minecraft:dragon_egg", count=2),
+					ingr_repr("minecraft:echo_shard", count=32),
+					ingr_repr("minecraft:emerald_block", count=128),
+					ingr_repr("minecraft:amethyst_block", count=64),
+					ingr_repr("minecraft:heavy_core", count=1),
+					ingr_repr("awakened_stardust_block", ns, count=16),
+					ingr_repr("septuple_compressed_cobblestone", ns, count=1),
+				]},
+			],
 		},
 		"stardust_sniper": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
@@ -168,6 +181,19 @@ def main_additions() -> None:
 				{"text":"\nBase damage: 24","color":"gray"},
 				{"text":"\nCooldown: 0.50s","color":"gray"},
 				*SNIPER_BULLETS_WIKI,
+			],
+			RESULT_OF_CRAFTING: [
+				{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+					ingr_repr("awakened_stardust_sniper", ns, count=1),
+					ingr_repr("compacted_stardust_shard", ns, count=64),
+					ingr_repr("minecraft:dragon_egg", count=2),
+					ingr_repr("minecraft:echo_shard", count=32),
+					ingr_repr("minecraft:emerald_block", count=128),
+					ingr_repr("minecraft:amethyst_block", count=64),
+					ingr_repr("minecraft:heavy_core", count=1),
+					ingr_repr("awakened_stardust_block", ns, count=16),
+					ingr_repr("septuple_compressed_cobblestone", ns, count=1),
+				]},
 			],
 		},
 		**{

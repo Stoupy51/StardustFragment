@@ -1,9 +1,25 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.speed_artifact_lv1",
-		"underlined": true
-	},
+	"title": [
+		{
+			"sprite": "stardust:item/damage_artifact_lvmax",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		" ",
+		{
+			"translate": "stardust.damage_artifact_lvmax",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/damage_artifact_lvmax"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",
@@ -22,12 +38,19 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"Ⴅ\n",
-				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.speed_artifact_lv_1"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect","color": "gray","italic": false},{"translate": "stardust.10_base_speed","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "movement_speed","amount": 0.1,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],"item_model": "stardust:speed_artifact_lv1","custom_data": {"stardust": {"speed_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_134"}},
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_1_speed_artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+10% Base Speed]","color": "gray"},{"translate": "stardust.can_be_obtained_from_lucky_artifact_bags_only","color": "gray"}]}},
-				{"text": "遆\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脙"},{"text": "$脙"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脛"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.speed_artifact_lv_1","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_135"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_1_speed_artifact","color": "yellow"},{"text": "\nHold in any hand to get the speed effect","color": "gray"},{"text": "\n[+10% Base Speed]","color": "gray"},{"translate": "stardust.can_be_obtained_from_lucky_artifact_bags_only","color": "gray"}]}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脙"},{"text": "$脙"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脛"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.speed_artifact_lv_1","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_135"}},
+				"\"$5\n\"",
+				{"text": "$脕$脕","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.damage_artifact_lv_3"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect","color": "gray","italic": false},{"translate": "stardust.30_damage","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "attack_damage","amount": 0.3,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],"item_model": "stardust:damage_artifact_lv3","custom_data": {"stardust": {"damage_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_133"}},
+				"  \n\"",
+				{"text": "U$U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.damage_artifact_lv_3"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect","color": "gray","italic": false},{"translate": "stardust.30_damage","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "attack_damage","amount": 0.3,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],"item_model": "stardust:damage_artifact_lv3","custom_data": {"stardust": {"damage_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_133"}},
+				"U$",
+				{"text": "$$脗","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.damage_artifact_lv_max"},"rarity": "epic","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect","color": "gray","italic": false},{"translate": "stardust.50_damage","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "attack_damage","amount": 0.5,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],"item_model": "stardust:damage_artifact_lvmax","custom_data": {"stardust": {"damage_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"U$U$U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.damage_artifact_lv_max"},"rarity": "epic","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect","color": "gray","italic": false},{"translate": "stardust.50_damage","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "attack_damage","amount": 0.5,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],"item_model": "stardust:damage_artifact_lvmax","custom_data": {"stardust": {"damage_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_max_damage_artifact","color": "yellow"},{"text": "\nHold in any hand to get the damage effect","color": "gray"},{"text": "\n[+50% Damage]","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脕"},{"text": "$脕"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脗"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.damage_artifact_lv_3","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_133"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_max_damage_artifact","color": "yellow"},{"text": "\nHold in any hand to get the damage effect","color": "gray"},{"text": "\n[+50% Damage]","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脕"},{"text": "$脕"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脗"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.damage_artifact_lv_3","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_133"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

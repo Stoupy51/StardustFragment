@@ -2,7 +2,7 @@
 function stardust:place/block_tags
 item replace entity @s container.0 with deepslate{CustomModelData:2013332}
 tag @s add simplenergy.balancing
-tag @s add stardust.awakened_solar_panel
+tag @s add stardust.awakened_stardust_solar_panel
 tag @s add stardust.solar_panel
 tag @s add stardust.destroy_daylight_detector
 tag @s add energy.send

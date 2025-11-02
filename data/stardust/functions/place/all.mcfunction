@@ -60,9 +60,9 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:heat_gen
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:wind_turbine"} run function stardust:place/wind_turbine/
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:advanced_furnace_generator"} run function stardust:place/advanced_furnace_generator/
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_furnace_generator"} run function stardust:place/stardust_furnace_generator/
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_furnace_generator"} run function stardust:place/awakened_furnace_generator/
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_furnace_generator"} run function stardust:place/awakened_stardust_furnace_generator/
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_solar_panel"} run function stardust:place/stardust_solar_panel/
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_solar_panel"} run function stardust:place/awakened_solar_panel/
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:awakened_stardust_solar_panel"} run function stardust:place/awakened_stardust_solar_panel/
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:legendarium_solar_panel"} run function stardust:place/legendarium_solar_panel/
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:solarium_solar_panel"} run function stardust:place/solarium_solar_panel/
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:darkium_solar_panel"} run function stardust:place/darkium_solar_panel/

@@ -1,6 +1,8 @@
 
 # ruff: noqa: E501
 # Imports
+from typing import cast
+
 from stewbeet import (
 	CATEGORY,
 	CUSTOM_BLOCK_ALTERNATIVE,
@@ -17,12 +19,16 @@ from stewbeet import (
 from stouputils.print import info
 
 
+# Constants
+def miners_formula(i: int) -> int:
+	return 9*(4**i)
+
 def main_additions() -> None:
 	MISC: str = "miscellaneous"
 	ns: str = Mem.ctx.project_id
 
 	# Prepare some recipes
-	MINERS_CRAFTING_RECIPES: dict[str, list[JsonDict]] = {
+	MINERS_CRAFTING_RECIPES = cast(dict[str, list[JsonDict]], {
 		"cobblestone_miner_lv1": [
 			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:coal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone", ns)}},
 			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:charcoal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone", ns)}},
@@ -48,7 +54,7 @@ def main_additions() -> None:
 		"cobblestone_miner_lv8": [
 			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("stardust_core", ns),"P":ingr_repr("original_stardust_pickaxe", ns),"M":ingr_repr("cobblestone_miner_lv7", ns),"B":ingr_repr("quadruple_compressed_cobblestone", ns)}},
 		],
-	}
+	})
 
 
 	# Give Additional data for every item
@@ -229,17 +235,17 @@ def main_additions() -> None:
 				"rarity": "rare" if i < 5 else "epic",
 				"lore": [
 					{"text":"Only mines cobblestone directly below","color":"white","italic":False},
-					{"text":f"[x{9*(4**i):,} per minute]","color":"gray","italic":False},
+					{"text":f"[x{per_minute:,} per minute]","color":"gray","italic":False},
 				],
 				WIKI_COMPONENT: [
 					{"text":f"Cobblestone Miner Lv.{i+1}","color":"yellow"},
 					{"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"},
-					{"text":f"\nProduction rate is {9*(4**i):,} cobblestone per minute","color":"gray"},
+					{"text":f"\nProduction rate is {per_minute:,} cobblestone per minute","color":"gray"},
 					{"text":"\nNo energy required","color":"gray"},
 				],
 				RESULT_OF_CRAFTING: MINERS_CRAFTING_RECIPES[f"cobblestone_miner_lv{i+1}"],
 			}
-			for i in range(8)
+			for i in range(8) for per_minute in [miners_formula(i)]
 		},
 		"stoupegg": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,

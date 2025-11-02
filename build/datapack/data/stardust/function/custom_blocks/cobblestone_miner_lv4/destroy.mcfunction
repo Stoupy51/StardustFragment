@@ -17,3 +17,6 @@ scoreboard players remove #total_cobblestone_miner_lv4 stardust.data 1
 # Kill the custom block entity
 kill @s
 
+# Decrease the number of entities with minute tag
+scoreboard players remove #minute_entities stardust.data 1
+

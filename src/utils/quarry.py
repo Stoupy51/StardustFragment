@@ -1,18 +1,20 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import *
+from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function
 
 
 # Setup pulverizer work and visuals
-def pulverizer(gui: dict[str, str]) -> None:
+def quarry(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
-	GUI_DATA: str = 'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
-	GUI_DATA_TOOLTIP: str = 'custom_data={"common_signals":{"temp":true}}'
+	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
+	GUI_DATA_TOOLTIP: str = r'custom_data={"common_signals":{"temp":true}}'
 	PULVERIZER_SLOTS: int = 8
 	PULVERIZER_TIME: int = 200
-	energy: dict = Mem.definitions["pulverizer"]["custom_data"]["energy"]
+	return
+	energy: JsonDict = Mem.definitions["pulverizer"]["custom_data"]["energy"]
 
+	# TODO: replace this pulverizer code by the quarry's one
 
 	## Passive parts
 	# Tick function

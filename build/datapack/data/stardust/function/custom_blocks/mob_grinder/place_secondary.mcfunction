@@ -13,7 +13,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.mob_grinder
-tag @s add stardust.vanilla.minecraft_barrel
+tag @s add stardust.vanilla.minecraft_redstone_block
 
 # Add a custom name
 data merge entity @s {"CustomName": {"translate": "stardust.mob_grinder","italic": false,"color": "white"}}
@@ -37,6 +37,7 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
-# Make the block rotatable by wrench
-tag @s add simplenergy.rotatable
+# Add tag for loop every second
+tag @s add stardust.second
+scoreboard players add #second_entities stardust.data 1
 

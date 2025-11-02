@@ -14,4 +14,12 @@ execute if entity @s[tag=stardust.elite_stardust_seed] run function stardust:cus
 execute if entity @s[tag=stardust.legendarium_seed] run function stardust:custom_blocks/legendarium_seed/minute
 execute if entity @s[tag=stardust.solarium_seed] run function stardust:custom_blocks/solarium_seed/minute
 execute if entity @s[tag=stardust.darkium_seed] run function stardust:custom_blocks/darkium_seed/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv1] run function stardust:custom_blocks/cobblestone_miner_lv1/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv2] run function stardust:custom_blocks/cobblestone_miner_lv2/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv3] run function stardust:custom_blocks/cobblestone_miner_lv3/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv4] run function stardust:custom_blocks/cobblestone_miner_lv4/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv5] run function stardust:custom_blocks/cobblestone_miner_lv5/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv6] run function stardust:custom_blocks/cobblestone_miner_lv6/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv7] run function stardust:custom_blocks/cobblestone_miner_lv7/minute
+execute if entity @s[tag=stardust.cobblestone_miner_lv8] run function stardust:custom_blocks/cobblestone_miner_lv8/minute
 

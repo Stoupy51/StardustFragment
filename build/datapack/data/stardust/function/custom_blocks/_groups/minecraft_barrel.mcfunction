@@ -17,5 +17,4 @@ execute if score #total_celestial_portal stardust.data matches 1.. if entity @s[
 execute if score #total_stardust_portal stardust.data matches 1.. if entity @s[tag=stardust.stardust_portal] run function stardust:custom_blocks/stardust_portal/destroy
 execute if score #total_stardust_dungeon_portal stardust.data matches 1.. if entity @s[tag=stardust.stardust_dungeon_portal] run function stardust:custom_blocks/stardust_dungeon_portal/destroy
 execute if score #total_ultimate_portal stardust.data matches 1.. if entity @s[tag=stardust.ultimate_portal] run function stardust:custom_blocks/ultimate_portal/destroy
-execute if score #total_mob_grinder stardust.data matches 1.. if entity @s[tag=stardust.mob_grinder] run function stardust:custom_blocks/mob_grinder/destroy
 

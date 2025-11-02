@@ -20,3 +20,6 @@ scoreboard players remove #total_awakened_stardust_furnace_generator stardust.da
 # Kill the custom block entity
 kill @s
 
+# Decrease the number of entities with second tag
+scoreboard players remove #second_entities stardust.data 1
+

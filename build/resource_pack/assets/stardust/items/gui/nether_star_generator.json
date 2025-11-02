@@ -1,7 +1,7 @@
 {
 	"model": {
 		"type": "minecraft:model",
-		"model": "stardust:item/gui/nether_star_generator_off"
+		"model": "stardust:item/gui/nether_star_generator"
 	},
 	"oversized_in_gui": true
 }

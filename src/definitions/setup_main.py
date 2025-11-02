@@ -1,7 +1,6 @@
 
 # Imports
 from stewbeet import (
-	RESULT_OF_CRAFTING,
 	Context,
 	JsonDict,
 	Mem,
@@ -45,11 +44,6 @@ def beet_default(ctx: Context) -> None:
 
 	# Sort by category (material in first position)
 	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", ""))))
-
-	# TODO: remove
-	for k, v in Mem.definitions.items():
-		if not v.get(RESULT_OF_CRAFTING):
-			print(f"Definition '{k}' is missing 'result_of_crafting' tag.")
 
 	# Final adjustments
 	add_energy_lore_to_definitions()

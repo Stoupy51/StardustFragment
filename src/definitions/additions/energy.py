@@ -382,7 +382,7 @@ def main_additions() -> None:
 		"mob_grinder": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":True},
 			"item_name": {"text":"Mob Grinder","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Automated mob killing machine.","color":"yellow"},

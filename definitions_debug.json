@@ -741,7 +741,7 @@
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 100,"max_storage": 15000},"stardust": {"mob_grinder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"vanilla_block": {"id": "minecraft:barrel","apply_facing": true},
+		"vanilla_block": {"id": "minecraft:redstone_block","apply_facing": "entity"},
 		"item_name": {"text": "Mob Grinder","italic": false,"color": "white"},
 		"wiki_components": [{"text": "Automated mob killing machine.","color": "yellow"},{"text": "\nKills mobs in a large area in front of it","color": "gray"},{"text": "\nConsumes 100 kW of power","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["AAA","DSD","FFF"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"S": {"item": "minecraft:wither_skeleton_skull"},"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["FFF","DSD","AAA"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"S": {"item": "minecraft:wither_skeleton_skull"},"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}}}}],
@@ -754,7 +754,7 @@
 		"custom_data": {"energy": {"generation": 1500,"max_storage": 30000},"stardust": {"nether_star_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
 		"item_name": {"text": "Nether Star Generator","italic": false,"color": "white"},
-		"wiki_components": [{"text": "High-power generator using nether stars.","color": "yellow"},{"text": "\nGenerates 1500 kW when supplied with nether stars","color": "gray"},{"text": "\nEnergy buffer: 30 MJ","color": "gray"}],
+		"wiki_components": [{"text": "High-power generator using nether stars.","color": "yellow"},{"text": "\nGenerates 1500 kW when supplied with nether stars","color": "gray"},{"text": "\nOne nether star provides 15 minutes of fuel","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["MMM","NRN","BBB"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"N": {"item": "minecraft:nether_star"},"R": {"components": {"minecraft:custom_data": {"simplenergy": {"redstone_generator": true}}}},"B": {"item": "minecraft:iron_block"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","NRN","MMM"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"N": {"item": "minecraft:nether_star"},"R": {"components": {"minecraft:custom_data": {"simplenergy": {"redstone_generator": true}}}},"B": {"item": "minecraft:iron_block"}}}],
 		"lore": [{"text": "[Energy Generation: 1500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 30 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"item_model": "stardust:nether_star_generator"

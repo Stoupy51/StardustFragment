@@ -382,7 +382,7 @@ def main_additions() -> None:
 		"mob_grinder": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":True},
+			VANILLA_BLOCK: {"id":"minecraft:redstone_block", "apply_facing":"entity"},
 			"item_name": {"text":"Mob Grinder","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Automated mob killing machine.","color":"yellow"},
@@ -404,7 +404,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"High-power generator using nether stars.","color":"yellow"},
 				{"text":"\nGenerates 1500 kW when supplied with nether stars","color":"gray"},
-				{"text":"\nEnergy buffer: 30 MJ","color":"gray"},
+				{"text":"\nOne nether star provides 15 minutes of fuel","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["MMM","NRN","BBB"],"ingredients":{"M":ingr_repr("machine_block", "simplenergy"),"N":ingr_repr("minecraft:nether_star"),"R":ingr_repr("redstone_generator", "simplenergy"),"B":ingr_repr("minecraft:iron_block")}},

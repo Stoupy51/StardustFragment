@@ -4,6 +4,8 @@
 # @within	stardust:v3.5.0/load/valid_dependencies
 #
 
+# Awakened Forge timer
+scoreboard objectives add stardust.forge_timer dummy
 # Opening manual detection
 scoreboard objectives add stardust.open_manual minecraft.used:minecraft.written_book
 

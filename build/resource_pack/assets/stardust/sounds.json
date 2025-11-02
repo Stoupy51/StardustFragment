@@ -1,0 +1,26 @@
+{
+	"awakened_forge_crafting": {
+		"subtitle": "Awakened Forge Crafting",
+		"sounds": ["stardust:awakened_forge_crafting"]
+	},
+	"awakened_stardust_sniper_shot": {
+		"subtitle": "Awakened Stardust Sniper Shot",
+		"sounds": ["stardust:awakened_stardust_sniper_shot"]
+	},
+	"nether_star_generator": {
+		"subtitle": "Nether Star Generator",
+		"sounds": ["stardust:nether_star_generator"]
+	},
+	"stardust_sniper_shot": {
+		"subtitle": "Stardust Sniper Shot",
+		"sounds": ["stardust:stardust_sniper_shot"]
+	},
+	"ultimate_sniper_shot": {
+		"subtitle": "Ultimate Sniper Shot",
+		"sounds": ["stardust:ultimate_sniper_shot"]
+	},
+	"wormhole_potion": {
+		"subtitle": "Wormhole Potion",
+		"sounds": ["stardust:wormhole_potion"]
+	}
+}

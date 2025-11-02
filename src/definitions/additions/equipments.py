@@ -129,12 +129,12 @@ def main_additions() -> None:
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("awakened_stardust_bow", ns, count=1),
 					ingr_repr("compacted_stardust_shard", ns, count=64),
 					ingr_repr("minecraft:dragon_egg", count=2),
 					ingr_repr("minecraft:echo_shard", count=32),
-					ingr_repr("minecraft:emerald_block", count=128),
+					ingr_repr("minecraft:emerald_block", count=96),
 					ingr_repr("minecraft:amethyst_block", count=64),
 					ingr_repr("minecraft:heavy_core", count=1),
 					ingr_repr("awakened_stardust_block", ns, count=16),
@@ -183,12 +183,12 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("awakened_stardust_sniper", ns, count=1),
 					ingr_repr("compacted_stardust_shard", ns, count=64),
 					ingr_repr("minecraft:dragon_egg", count=2),
 					ingr_repr("minecraft:echo_shard", count=32),
-					ingr_repr("minecraft:emerald_block", count=128),
+					ingr_repr("minecraft:emerald_block", count=96),
 					ingr_repr("minecraft:amethyst_block", count=64),
 					ingr_repr("minecraft:heavy_core", count=1),
 					ingr_repr("awakened_stardust_block", ns, count=16),
@@ -364,11 +364,11 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
-					{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+					{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,1,0],scale:2}", "result_count": 1, "ingredients": [
 						ingr_repr(f"original_stardust_{equipment_type}", ns, count=1),
 						ingr_repr("legendarium_block", ns, count=4),
 						ingr_repr("minecraft:wind_charge", count=64),
-						ingr_repr("minecraft:feather", count=128),
+						ingr_repr("minecraft:feather", count=96),
 						ingr_repr("ender_dragon_pearl", ns, count=6),
 						ingr_repr("awakened_stardust_block", ns, count=8),
 						ingr_repr("legendarium_ingot", ns, count=12),
@@ -387,11 +387,11 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
-					{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+					{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0.5,0],scale:2}", "result_count": 1, "ingredients": [
 						ingr_repr(f"original_stardust_{equipment_type}", ns, count=1),
 						ingr_repr("solarium_block", ns, count=4),
 						ingr_repr("minecraft:orange_candle", count=64),
-						ingr_repr("minecraft:blaze_powder", count=128),
+						ingr_repr("minecraft:blaze_powder", count=96),
 						ingr_repr("ender_dragon_pearl", ns, count=6),
 						ingr_repr("awakened_stardust_block", ns, count=8),
 						ingr_repr("solarium_ingot", ns, count=12),
@@ -410,11 +410,11 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
-					{"type": AWAKENED_FORGE, "result_count": 1, "ingredients": [
+					{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,0,0],scale:2}", "result_count": 1, "ingredients": [
 						ingr_repr(f"original_stardust_{equipment_type}", ns, count=1),
 						ingr_repr("darkium_block", ns, count=4),
 						ingr_repr("minecraft:respawn_anchor", count=64),
-						ingr_repr("minecraft:ink_sac", count=128),
+						ingr_repr("minecraft:ink_sac", count=96),
 						ingr_repr("ender_dragon_pearl", ns, count=6),
 						ingr_repr("awakened_stardust_block", ns, count=8),
 						ingr_repr("darkium_ingot", ns, count=12),

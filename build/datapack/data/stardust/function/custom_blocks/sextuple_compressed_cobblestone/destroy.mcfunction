@@ -1,7 +1,7 @@
 
 #> stardust:custom_blocks/sextuple_compressed_cobblestone/destroy
 #
-# @executed	as @e[type=item_display,tag=...,predicate=!stardust:check_vanilla_blocks] & at @s
+# @executed	as @e[type=#stardust:custom_blocks,tag=...,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
 #
 # @within	stardust:custom_blocks/_groups/minecraft_obsidian
 #

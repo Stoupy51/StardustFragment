@@ -17,3 +17,6 @@ execute if score #total_growing_seeds stardust.data matches 1.. as @e[type=#star
 execute as @e[tag=stardust.can_balance,scores={energy.storage=20..}] at @s[tag=!stardust.balanced] run function stardust:balancing/main
 tag @e[tag=stardust.balanced] remove stardust.balanced
 
+# Custom blocks second_5 functions
+execute if score #second_5_entities stardust.data matches 1.. as @e[tag=stardust.second_5] at @s run function stardust:custom_blocks/second_5
+

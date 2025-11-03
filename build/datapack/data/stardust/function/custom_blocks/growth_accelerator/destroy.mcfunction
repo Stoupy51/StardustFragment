@@ -20,3 +20,6 @@ scoreboard players remove #total_growth_accelerator stardust.data 1
 # Kill the custom block entity
 kill @s
 
+# Decrease the number of entities with second_5 tag
+scoreboard players remove #second_5_entities stardust.data 1
+

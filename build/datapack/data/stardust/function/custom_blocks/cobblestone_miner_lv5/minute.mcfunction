@@ -1,7 +1,7 @@
 
 #> stardust:custom_blocks/cobblestone_miner_lv5/minute
 #
-# @executed	at @s
+# @executed	positioned ~-10 ~-10 ~-10 & as @e[tag=stardust.growing_seed,dx=20,dy=20,dz=20]
 #
 # @within	stardust:custom_blocks/minute
 #

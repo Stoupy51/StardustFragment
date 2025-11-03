@@ -1,9 +1,10 @@
 
 #> stardust:custom_blocks/minute
 #
-# @executed	at @s
+# @executed	positioned ~-10 ~-10 ~-10 & as @e[tag=stardust.growing_seed,dx=20,dy=20,dz=20]
 #
-# @within	stardust:v3.5.0/minute [ at @s ]
+# @within	stardust:calls/stardust/growth_accelerator [ positioned ~-10 ~-10 ~-10 & as @e[tag=stardust.growing_seed,dx=20,dy=20,dz=20] ]
+#			stardust:v3.5.0/minute [ at @s ]
 #
 
 execute if entity @s[tag=stardust.diamond_seed] run function stardust:custom_blocks/diamond_seed/minute

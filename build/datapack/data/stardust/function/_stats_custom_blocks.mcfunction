@@ -5,6 +5,7 @@
 #
 
 scoreboard players add #minute_entities stardust.data 0
+scoreboard players add #second_5_entities stardust.data 0
 scoreboard players add #second_entities stardust.data 0
 scoreboard players add #total_growing_seeds stardust.data 0
 scoreboard players add #total_custom_blocks stardust.data 0
@@ -183,5 +184,6 @@ tellraw @s [{"translate": "stardust.vanilla_minecraft_waxed_copper_block","color
 tellraw @s [{"translate": "stardust.total_custom_blocks","color":"dark_aqua"},{"score":{"name":"#total_custom_blocks","objective":"stardust.data"},"color":"aqua"}]
 tellraw @s [{"translate": "stardust.total_growing_seeds","color":"dark_aqua"},{"score":{"name":"#total_growing_seeds","objective":"stardust.data"},"color":"aqua"}]
 tellraw @s [{"translate": "stardust.second_tag_function","color":"green"},{"score":{"name":"#second_entities","objective":"stardust.data"},"color":"dark_green"}]
+tellraw @s [{"translate": "stardust.second_5_tag_function","color":"green"},{"score":{"name":"#second_5_entities","objective":"stardust.data"},"color":"dark_green"}]
 tellraw @s [{"translate": "stardust.minute_tag_function","color":"green"},{"score":{"name":"#minute_entities","objective":"stardust.data"},"color":"dark_green"}]
 

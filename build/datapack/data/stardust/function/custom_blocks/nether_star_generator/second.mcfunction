@@ -6,6 +6,13 @@
 # @within	stardust:custom_blocks/second
 #
 
+# Prevent the furnace from really cooking
+data modify block ~ ~ ~ cooking_total_time set value -200s
+data modify block ~ ~ ~ cooking_time_spent set value 0s
+
+# Stop if full energy
+execute if score @s energy.storage >= @s energy.max_storage run return run function stardust:custom_blocks/nether_star_generator/stop
+
 # Consume nether stars for fuel
 execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:nether_star"}],lit_time_remaining:0s} run function stardust:custom_blocks/nether_star_generator/consume_nether_star
 
@@ -20,8 +27,4 @@ execute if score #burn_time stardust.data matches 1.. run data modify entity @s 
 execute if score #burn_time stardust.data matches 1.. run scoreboard players add @s energy.storage 1500
 execute if score #burn_time stardust.data matches 1.. run playsound stardust:nether_star_generator block @a[distance=..12] ~ ~ ~ 0.25
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
-
-# Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200s
-data modify block ~ ~ ~ cooking_time_spent set value 0s
 

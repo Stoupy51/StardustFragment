@@ -1,13 +1,13 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function, LootTable
 from beet import EntityTypeTag
+from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, LootTable, Mem, set_json_encoder, write_function
+from stouputils.io import get_root_path, super_json_load
 
-from .quarry import quarry
 from ..definitions.additions.materials import COBBLESTONE_TIERS
 from ..definitions.additions.miscellaneous import miners_formula
-from stouputils.io import super_json_load, get_root_path
+from .quarry import quarry
 
 
 # Setup machines work and visuals
@@ -50,6 +50,12 @@ execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:nether_star"}}],lit
 """
 		# Write the second function for the generator
 		content: str = f"""
+# Prevent the furnace from really cooking
+data modify block ~ ~ ~ cooking_total_time set value -200s
+data modify block ~ ~ ~ cooking_time_spent set value 0s
+
+# Stop if full energy
+execute if score @s energy.storage >= @s energy.max_storage run return run function {ns}:custom_blocks/{gen}/stop
 {nether_star_generator}
 
 # Update the gui to default
@@ -63,12 +69,12 @@ execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item
 execute if score #burn_time {ns}.data matches 1.. run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score #burn_time {ns}.data matches 1.. run playsound {ns}:{gen} block @a[distance=..12] ~ ~ ~ 0.25
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
-
-# Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200s
-data modify block ~ ~ ~ cooking_time_spent set value 0s
 """
 		write_function(f"{ns}:custom_blocks/{gen}/second", content)
+		write_function(f"{ns}:custom_blocks/{gen}/stop", f"""
+item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{GUI_DATA}]
+data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
+""")
 
 		if gen == "nether_star_generator":
 			for item, fuel in (("nether_star", 18000),):	# 15 minutes
@@ -139,7 +145,7 @@ loot spawn ~ ~-1 ~ loot {ns}:cobblestone_miner/lv{lvl}
 			]
 		}), max_level=-1)
 
-	# Mob Grinder # TODO: update mob grinder entity types
+	# Mob Grinder
 	energy: JsonDict = Mem.definitions["mob_grinder"]["custom_data"]["energy"]
 	default_model: str = Mem.definitions["mob_grinder"]["item_model"]
 	working_model: str = default_model + "_on"
@@ -160,7 +166,73 @@ execute positioned ^ ^ ^3 run kill @e[type=#{ns}:mob_grinder,tag=!global.ignore,
 
 
 	# Growth Accelerator
-	# TODO
+	energy: JsonDict = Mem.definitions["growth_accelerator"]["custom_data"]["energy"]
+	write_function(f"{ns}:custom_blocks/growth_accelerator/second_5", f"""
+# Consume 5 times kW energy
+execute unless score @s energy.storage matches {energy["usage"] * 5}.. run return 0
+scoreboard players remove @s energy.storage {energy["usage"] * 5}
+
+# Timer to 1 minute, stop function if not yet reached
+scoreboard players add @s {ns}.data 5
+execute if score @s {ns}.data matches ..59 run return run title @a[distance=..5] actionbar [{{"score":{{"objective":"{ns}.data","name":"@s"}},"color":"aqua"}},{{"text":"/","color":"yellow"}},"60",{{"text":"s before activation","color":"yellow"}}]
+scoreboard players reset @s {ns}.data
+
+# Audio-visual effects when reaching 1 minute
+playsound minecraft:block.beacon.activate block @a[distance=..50]
+particle minecraft:happy_villager ~ ~ ~ 5 5 5 1 125 normal @a[distance=..50]
+
+# Accelerate growth in a 10x10 area
+scoreboard players set #count_y {ns}.data 21
+execute positioned ~10 ~10 ~10 run function {ns}:custom_blocks/growth_accelerator/layer_y
+scoreboard players reset #count_x
+scoreboard players reset #count_y
+scoreboard players reset #count_z
+
+# Launch a signal for data packs that want their custom seed to be compatible.
+function #{ns}:calls/growth_accelerator
+""")
+	write_function(f"{ns}:custom_blocks/growth_accelerator/layer_y", f"""
+# Loop through X axis
+scoreboard players set #count_x {ns}.data 21
+function {ns}:custom_blocks/growth_accelerator/layer_x
+
+# Continue to next Y layer
+scoreboard players remove #count_y {ns}.data 1
+execute if score #count_y {ns}.data matches 1.. positioned ~ ~-1 ~ run function {ns}:custom_blocks/growth_accelerator/layer_y
+""")
+	write_function(f"{ns}:custom_blocks/growth_accelerator/layer_x", f"""
+# Loop through Z axis
+scoreboard players set #count_z {ns}.data 21
+function {ns}:custom_blocks/growth_accelerator/layer_z
+
+# Continue to next X column
+scoreboard players remove #count_x {ns}.data 1
+execute if score #count_x {ns}.data matches 1.. positioned ~-1 ~ ~ run function {ns}:custom_blocks/growth_accelerator/layer_x
+""")
+	all_crops: list[tuple[str, int]] = [
+		("wheat", 7), ("carrots", 7), ("potatoes", 7), ("nether_wart", 3), ("beetroots", 3), ("melon_stem", 7),
+		("pumpkin_stem", 7), ("sweet_berry_bush", 3), ("cave_vines", 25), ("cave_vines_plant", 25)
+	]
+	write_function(f"{ns}:custom_blocks/growth_accelerator/layer_z", f"""
+
+# Loop through all crops
+{"\n".join(f'execute if block ~ ~ ~ {block} run return run function {ns}:custom_blocks/growth_accelerator/blocks/{block}' for block, _ in all_crops)}
+
+# Continue to next Z row
+scoreboard players remove #count_z {ns}.data 1
+execute if score #count_z {ns}.data matches 1.. positioned ~ ~ ~-1 run function {ns}:custom_blocks/growth_accelerator/layer_z
+""")
+	for block, max_age in all_crops:
+		content: str = ""
+		for i in range(max_age + 1, 0, -1):
+			content += f"execute if block ~ ~ ~ {block}[age={i - 1}] run return " + (f"run setblock ~ ~ ~ {block}[age={i}] strict\n" if i <= max_age else "0\n")
+		write_function(f"{ns}:custom_blocks/growth_accelerator/blocks/{block}", content)
+	write_function(f"{ns}:calls/stardust/growth_accelerator", f"""
+# Boost stardust seed by +10 minutes
+scoreboard players set #boost_growth_time {ns}.data 600
+execute positioned ~-10 ~-10 ~-10 as @e[tag={ns}.growing_seed,dx=20,dy=20,dz=20] run function {ns}:custom_blocks/minute
+scoreboard players reset #boost_growth_time {ns}.data
+""", tags=["stardust:calls/growth_accelerator"])
 
 	# Portals
 	# TODO

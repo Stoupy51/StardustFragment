@@ -31,3 +31,19 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Set quarry speed, and default coordinates
+scoreboard players set @s stardust.quarry_speed 1000
+execute store result score @s stardust.quarry_x1 run data get entity @s Pos[0]
+execute store result score @s stardust.quarry_y1 run data get entity @s Pos[1]
+execute store result score @s stardust.quarry_z1 run data get entity @s Pos[2]
+execute store result score @s stardust.quarry_x2 run data get entity @s Pos[0]
+execute store result score @s stardust.quarry_y2 run data get entity @s Pos[1]
+execute store result score @s stardust.quarry_z2 run data get entity @s Pos[2]
+scoreboard players add @s stardust.quarry_y1 3
+scoreboard players add @s stardust.quarry_y2 6
+tag @s add stardust.quarry
+
+# Add tag for loop every second
+tag @s add stardust.second
+scoreboard players add #second_entities stardust.data 1
+

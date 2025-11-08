@@ -22,4 +22,5 @@ execute if entity @s[tag=stardust.quarry_lv2] run function stardust:custom_block
 execute if entity @s[tag=stardust.quarry_lv3] run function stardust:custom_blocks/quarry_lv3/second
 execute if entity @s[tag=stardust.quarry_lv4] run function stardust:custom_blocks/quarry_lv4/second
 execute if entity @s[tag=stardust.quarry_lv5] run function stardust:custom_blocks/quarry_lv5/second
+execute if entity @s[tag=stardust.quarry_creative] run function stardust:custom_blocks/quarry_creative/second
 

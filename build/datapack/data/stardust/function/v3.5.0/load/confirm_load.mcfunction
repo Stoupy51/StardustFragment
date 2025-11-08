@@ -4,10 +4,32 @@
 # @within	stardust:v3.5.0/load/valid_dependencies
 #
 
-# Awakened Forge timer
-scoreboard objectives add stardust.forge_timer dummy
+# Right click detection
+scoreboard objectives add stardust.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
+
+# Quarry scoreboards
+scoreboard objectives add stardust.quarry_x dummy
+scoreboard objectives add stardust.quarry_y dummy
+scoreboard objectives add stardust.quarry_z dummy
+scoreboard objectives add stardust.quarry_x1 dummy
+scoreboard objectives add stardust.quarry_x2 dummy
+scoreboard objectives add stardust.quarry_y1 dummy
+scoreboard objectives add stardust.quarry_y2 dummy
+scoreboard objectives add stardust.quarry_z1 dummy
+scoreboard objectives add stardust.quarry_z2 dummy
+scoreboard objectives add stardust.quarry_status dummy
+scoreboard objectives add stardust.quarry_speed dummy
+scoreboard objectives add stardust.quarry_size dummy
+
+# Create objectives for growing seeds
+scoreboard objectives add stardust.growth_time dummy
+scoreboard objectives add stardust.growth_stage dummy
+
 # Opening manual detection
 scoreboard objectives add stardust.open_manual minecraft.used:minecraft.written_book
+
+# Awakened Forge timer
+scoreboard objectives add stardust.forge_timer dummy
 
 # Register the manual to the universal manual
 execute unless data storage stewbeet:main universal_manual run data modify storage stewbeet:main universal_manual set value []
@@ -177,12 +199,8 @@ data modify storage stardust:items all.cobblestone_miner_lv8 set value {"id": "m
 data modify storage stardust:items all.stoupegg set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "stardust:stoupegg","minecraft:consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:stoupegg_consuming"}},"minecraft:item_name": {"translate": "stardust.stoupegg"},"minecraft:rarity": "epic","minecraft:lore": [{"translate": "stardust.summoner_of_the_stouparmy_mini_boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:custom_data": {"stardust": {"stoupegg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage stardust:items all.stardust_pillar set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "stardust:stardust_pillar","minecraft:consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:pillar_consuming"}},"minecraft:item_name": {"translate": "stardust_pillar"},"minecraft:rarity": "epic","minecraft:lore": [{"translate": "stardust.summoner_of_the_stardust_pillar_boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage stardust:items all.stardust_dungeon_key set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "stardust:stardust_dungeon_key","minecraft:rarity": "epic","minecraft:lore": [{"translate": "stardust.one_time_use_key_for_the_stardust_dungeon","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:item_name": {"translate": "stardust_dungeon_key"},"minecraft:custom_data": {"stardust": {"stardust_dungeon_key": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
-data modify storage stardust:items all.quarry_configurator set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "stardust:quarry_configurator","minecraft:lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"translate": "stardust.to_set_1st_coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"translate": "stardust.to_set_2nd_coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:item_name": {"translate": "stardust.quarry_configurator"},"minecraft:custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
+data modify storage stardust:items all.quarry_configurator set value {"id": "minecraft:warped_fungus_on_a_stick","count": 1,"components": {"minecraft:item_model": "stardust:quarry_configurator","minecraft:lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"translate": "stardust.to_set_1st_coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"translate": "stardust.to_set_2nd_coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:item_name": {"translate": "stardust.quarry_configurator"},"minecraft:custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage stardust:items all.fortune_module set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "stardust:fortune_module","minecraft:max_stack_size": 5,"minecraft:lore": [{"translate": "stardust.increases_fortune_level_of_the_quarry","italic": false,"color": "gray"},{"translate": "stardust.by_1_max_5","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:item_name": {"translate": "stardust.fortune_module"},"minecraft:custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage stardust:items all.silk_touch_module set value {"id": "minecraft:command_block","count": 1,"components": {"minecraft:item_model": "stardust:silk_touch_module","minecraft:max_stack_size": 1,"minecraft:lore": [{"translate": "stardust.enables_silk_touch_enchantment_for_the_quarry","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:item_name": {"translate": "stardust.silk_touch_module"},"minecraft:custom_data": {"stardust": {"silk_touch_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
 data modify storage stardust:items all.manual set value {"id": "minecraft:written_book","count": 1,"components": {"minecraft:item_model": "stardust:manual","minecraft:item_name": "Stardust Manual","minecraft:enchantment_glint_override": false,"minecraft:max_stack_size": 16,"minecraft:lore": [{"translate": "stardust.by_stoupy51","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"minecraft:custom_data": {"stardust": {"manual": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}
-
-# Create objectives for growing seeds
-scoreboard objectives add stardust.growth_time dummy
-scoreboard objectives add stardust.growth_stage dummy
 

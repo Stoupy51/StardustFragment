@@ -11,7 +11,7 @@
 		"Q": "minecraft:quartz"
 	},
 	"result": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:warped_fungus_on_a_stick",
 		"count": 1,
 		"components": {
 			"minecraft:lore": [

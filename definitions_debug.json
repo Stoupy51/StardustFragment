@@ -1755,7 +1755,7 @@
 		"custom_data": {"stardust": {"stardust_dungeon_key": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"quarry_configurator": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "miscellaneous",
 		"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "white"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}],

@@ -20,3 +20,6 @@ scoreboard players remove #total_quarry_creative stardust.data 1
 # Kill the custom block entity
 kill @s
 
+# Decrease the number of entities with second tag
+scoreboard players remove #second_entities stardust.data 1
+

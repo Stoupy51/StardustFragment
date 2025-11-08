@@ -1,7 +1,10 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, Mem, set_json_encoder, write_function
+import json
+from beet import Predicate
+from beet.core.utils import JsonDict, TextComponent
+from stewbeet.core import CUSTOM_ITEM_VANILLA, Mem, set_json_encoder, write_function, write_load_file
 
 
 # Setup quarry work and visuals
@@ -18,18 +21,181 @@ def quarry(gui: dict[str, str]) -> None:
 	module_placeholder_gui_slot: int = 24
 	info_gui_slot: int = 23
 
-	# For each quarry lvl, call the general quarry second loop
-	for item in Mem.definitions:
-		if item.startswith("quarry_lv"):
-			write_function(f"{ns}:custom_blocks/{item}/second", f"function {ns}:quarry/second")
+	# Prepare info gui lore
+	info_gui_lore: list[TextComponent] = [
+		[{"text":"Energy Stored: ","color":"aqua","italic":False},{"score":{"name":"@s","objective":"energy.storage"},"color":"yellow"},{"text":"/"},{"score":{"name":"@s","objective":"energy.max_storage"},"color":"yellow"}],
+		[{"text":"Quarry Status: ","color":"aqua","italic":False},{"nbt":"quarry_status","storage":f"{ns}:temp","interpret":True}],
+		[{"text":"Quarry Speed: ","color":"aqua","italic":False},{"score":{"name":"@s","objective":f"{ns}.quarry_speed"},"color":"yellow"},{"text":" blocks/s"}],
+		[{"text":"Selected Area: ","color":"aqua","italic":False},{"score":{"name":"@s","objective":f"{ns}.quarry_size"},"color":"yellow"},{"text":" blocks"}],
+		[{"text":"- X: ","color":"dark_red","italic":False},{"score":{"name":"@s","objective":f"{ns}.quarry_x1"}},{"text":" to "},{"score":{"name":"@s","objective":f"{ns}.quarry_x2"}}],
+		[{"text":"- Y: ","color":"green","italic":False},{"score":{"name":"@s","objective":f"{ns}.quarry_y1"}},{"text":" to "},{"score":{"name":"@s","objective":f"{ns}.quarry_y2"}}],
+		[{"text":"- Z: ","color":"blue","italic":False},{"score":{"name":"@s","objective":f"{ns}.quarry_z1"}},{"text":" to "},{"score":{"name":"@s","objective":f"{ns}.quarry_z2"}}],
+	]
 
+	# Create scoreboard objectives
+	write_load_file(f"""
+# Quarry scoreboards
+scoreboard objectives add {ns}.quarry_x dummy
+scoreboard objectives add {ns}.quarry_y dummy
+scoreboard objectives add {ns}.quarry_z dummy
+scoreboard objectives add {ns}.quarry_x1 dummy
+scoreboard objectives add {ns}.quarry_x2 dummy
+scoreboard objectives add {ns}.quarry_y1 dummy
+scoreboard objectives add {ns}.quarry_y2 dummy
+scoreboard objectives add {ns}.quarry_z1 dummy
+scoreboard objectives add {ns}.quarry_z2 dummy
+scoreboard objectives add {ns}.quarry_status dummy
+scoreboard objectives add {ns}.quarry_speed dummy
+scoreboard objectives add {ns}.quarry_size dummy
+""", prepend=True)
+
+	# For each quarry lvl, call the general quarry second loop, and add data when placing
+	for item, data in Mem.definitions.items():
+		if item.startswith("quarry_lv") or item == "quarry_creative":
+			bps: int = data["custom_data"][ns]["quarry"]["block_per_second"]
+			write_function(f"{ns}:custom_blocks/{item}/second", f"function {ns}:quarry/second")
+			write_function(f"{ns}:custom_blocks/{item}/place_secondary", f"""
+# Set quarry speed, and default coordinates
+scoreboard players set @s {ns}.quarry_speed {bps}
+execute store result score @s {ns}.quarry_x1 run data get entity @s Pos[0]
+execute store result score @s {ns}.quarry_y1 run data get entity @s Pos[1]
+execute store result score @s {ns}.quarry_z1 run data get entity @s Pos[2]
+execute store result score @s {ns}.quarry_x2 run data get entity @s Pos[0]
+execute store result score @s {ns}.quarry_y2 run data get entity @s Pos[1]
+execute store result score @s {ns}.quarry_z2 run data get entity @s Pos[2]
+scoreboard players add @s {ns}.quarry_y1 3
+scoreboard players add @s {ns}.quarry_y2 6
+tag @s add {ns}.quarry
+""")
+
+	## Quarry configurator
+	# Be smart and reuse the right click detection from manual
+	write_function(f"{ns}:advancements/right_click", f"""
+# If holding a quarry configurator, handle it
+execute if items entity @s weapon.* *[custom_data~{{{ns}:{{quarry_configurator:true}}}}] run function {ns}:quarry/configurator/right_click
+""")
+	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
+	write_function(f"{ns}:quarry/configurator/right_click", f"""
+# Retrieve current configuration
+execute store result score #config_x1 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_x1
+execute store result score #config_y1 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_y1
+execute store result score #config_z1 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_z1
+execute store result score #config_x2 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_x2
+execute store result score #config_y2 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_y2
+execute store result score #config_z2 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_z2
+
+# Remember if the player is sneaking
+execute store success score #is_sneaking {ns}.data if predicate {ns}:is_sneaking
+
+# Raycast to the block being looked at
+tag @s add {ns}.temp
+function #bs.view:at_aimed_block {{run:"function {ns}:quarry/configurator/at_aimed_block",with:{{}}}}
+
+# Update player's item with new configuration
+execute summon item_display run function {ns}:quarry/configurator/update_custom_data
+tag @s remove {ns}.temp
+""")
+	write_function(f"{ns}:quarry/configurator/at_aimed_block", f"""
+# If targeted a quarry, update its configuration and stop particles
+execute as @e[tag={ns}.quarry,dx=0,dy=0,dz=0] run return run function {ns}:quarry/configurator/apply_to_quarry
+
+# Particles and sound
+particle firework ~.5 ~.5 ~.5 0.5 0.5 0.5 0.01 100
+playsound block.note_block.bell ambient @s
+
+# If sneaking, set 2nd coordinates, else set 1st coordinates
+execute unless score #is_sneaking {ns}.data matches 1 store result score #config_x1 {ns}.data run data get storage bs:lambda raycast.targeted_block[0]
+execute unless score #is_sneaking {ns}.data matches 1 store result score #config_y1 {ns}.data run data get storage bs:lambda raycast.targeted_block[1]
+execute unless score #is_sneaking {ns}.data matches 1 store result score #config_z1 {ns}.data run data get storage bs:lambda raycast.targeted_block[2]
+execute if score #is_sneaking {ns}.data matches 1 store result score #config_x2 {ns}.data run data get storage bs:lambda raycast.targeted_block[0]
+execute if score #is_sneaking {ns}.data matches 1 store result score #config_y2 {ns}.data run data get storage bs:lambda raycast.targeted_block[1]
+execute if score #is_sneaking {ns}.data matches 1 store result score #config_z2 {ns}.data run data get storage bs:lambda raycast.targeted_block[2]
+
+# Update message
+execute unless score #is_sneaking {ns}.data matches 1 run tellraw @s [{{"text":"First coordinates set to: ","color":"green"}},{{"score":{{"name":"#config_x1","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_y1","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_z1","objective":"{ns}.data"}},"color":"dark_green"}}]
+execute if score #is_sneaking {ns}.data matches 1 run tellraw @s [{{"text":"Second coordinates set to: ","color":"green"}},{{"score":{{"name":"#config_x2","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_y2","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_z2","objective":"{ns}.data"}},"color":"dark_green"}}]
+""")
+	write_function(f"{ns}:quarry/configurator/apply_to_quarry", f"""
+# Update quarry scores
+scoreboard players operation @s {ns}.quarry_x1 = #config_x1 {ns}.data
+scoreboard players operation @s {ns}.quarry_y1 = #config_y1 {ns}.data
+scoreboard players operation @s {ns}.quarry_z1 = #config_z1 {ns}.data
+scoreboard players operation @s {ns}.quarry_x2 = #config_x2 {ns}.data
+scoreboard players operation @s {ns}.quarry_y2 = #config_y2 {ns}.data
+scoreboard players operation @s {ns}.quarry_z2 = #config_z2 {ns}.data
+
+# Tellraw message
+tellraw @p[tag={ns}.temp] [{{"text":"Quarry configuration updated.","color":"green"}}]
+playsound block.note_block.pling ambient @p[tag={ns}.temp]
+""")
+	write_function(f"{ns}:quarry/configurator/update_custom_data", f"""
+# Copy item, update it, and send it back
+item replace entity @s contents from entity @p[tag={ns}.temp] weapon.mainhand
+execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_x1 int 1 run scoreboard players get #config_x1 {ns}.data
+execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_y1 int 1 run scoreboard players get #config_y1 {ns}.data
+execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_z1 int 1 run scoreboard players get #config_z1 {ns}.data
+execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_x2 int 1 run scoreboard players get #config_x2 {ns}.data
+execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_y2 int 1 run scoreboard players get #config_y2 {ns}.data
+execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_z2 int 1 run scoreboard players get #config_z2 {ns}.data
+item replace entity @p[tag={ns}.temp] weapon.mainhand from entity @s contents
+kill @s
+""")
+
+	## Quarry functions
 	# Second loop
 	write_function(f"{ns}:quarry/second", f"""
+# Prevent items in unexpected slots
+# TODO
+
 # Update gui
 item replace block ~ ~ ~ container.{main_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[main_gui]}",{GUI_DATA}]
-execute unless items block ~ ~ ~ container.{config_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{config_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_configurator",item_name="Configurator Placeholder",lore=[{{"text":"Place a configured Quarry Configurator here","color":"gray","italic":false}},{{"text":"to apply its settings to the quarry","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
-execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{module_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_module",item_name="Module Placeover",lore=[{{"text":"Place a quarry module here","color":"gray","italic":false}},{{"text":"to apply its effects to the quarry","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
-execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name="Quarry Info",lore=[{{"text":"TODO","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
+execute unless items block ~ ~ ~ container.{config_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{config_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_configurator",item_name={{"text":"Configurator Placeholder"}},lore=[{{"text":"Place a configured Quarry Configurator here","color":"gray","italic":false}},{{"text":"to apply its settings to the quarry","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
+execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{module_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_module",item_name={{"text":"Module Placeholder"}},lore=[{{"text":"Place a quarry module here","color":"gray","italic":false}},{{"text":"to apply its effects to the quarry","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
+execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name={{"text":"Quarry Information"}},lore=[{{"text":"TODO","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
+
+# If player nearby, update information
+execute if entity @p[distance=..5] run function {ns}:quarry/update_info
+""")
+
+	# Update information function
+	write_function(f"{ns}:quarry/update_info", f"""
+# If quarry configurator, apply its settings
+# TODO
+
+# Compute quarry size
+function {ns}:quarry/update_size
+
+# Set quarry status
+data modify storage {ns}:temp quarry_status set value {{"text":"Idle","color":"red"}}
+execute if score @s {ns}.quarry_status matches 1 run data modify storage {ns}:temp quarry_status set value {{"text":"Working","color":"green"}}
+execute if score @s {ns}.quarry_status matches 2 run data modify storage {ns}:temp quarry_status set value {{"text":"Paused","color":"yellow"}}
+
+# Update info gui
+item modify block ~ ~ ~ container.{info_gui_slot} {{"function":"minecraft:set_lore","entity":"this","lore":{json.dumps(info_gui_lore)},"mode":"replace_all"}}
+""")
+	write_function(f"{ns}:quarry/update_size", f"""
+# Reset quarry size
+scoreboard players set @s {ns}.quarry_size 0
+
+# Length, Width, Depth
+scoreboard players operation #rX {ns}.data = @s {ns}.quarry_x1
+scoreboard players operation #rX {ns}.data -= @s {ns}.quarry_x2
+scoreboard players operation #rY {ns}.data = @s {ns}.quarry_y1
+scoreboard players operation #rY {ns}.data -= @s {ns}.quarry_y2
+scoreboard players operation #rZ {ns}.data = @s {ns}.quarry_z1
+scoreboard players operation #rZ {ns}.data -= @s {ns}.quarry_z2
+
+# Avoid multiply by 0
+execute if score #rX {ns}.data matches 0 run scoreboard players set #rX {ns}.data 1
+execute if score #rY {ns}.data matches 0 run scoreboard players set #rY {ns}.data 1
+execute if score #rZ {ns}.data matches 0 run scoreboard players set #rZ {ns}.data 1
+
+# Calculating Size
+scoreboard players set #-1 {ns}.data -1
+scoreboard players operation @s {ns}.quarry_size = #rX {ns}.data
+scoreboard players operation @s {ns}.quarry_size *= #rY {ns}.data
+scoreboard players operation @s {ns}.quarry_size *= #rZ {ns}.data
+execute if score @s {ns}.quarry_size matches ..-1 run scoreboard players operation @s {ns}.quarry_size *= #-1 {ns}.data
 """)
 
 	return

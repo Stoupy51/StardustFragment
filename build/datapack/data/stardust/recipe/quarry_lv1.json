@@ -36,8 +36,7 @@
 			},
 			"minecraft:item_name": {
 				"translate": "stardust.quarry_lv_1",
-				"italic": false,
-				"color": "white"
+				"italic": false
 			},
 			"minecraft:lore": [
 				{

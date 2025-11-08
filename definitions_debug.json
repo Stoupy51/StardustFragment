@@ -473,6 +473,27 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"empty_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"quarry_placeholder_configurator": {
+		"id": "minecraft:command_block",
+		"item_model": "stardust:quarry_placeholder_configurator",
+		"item_name": {"text": "Quarry Placeholder Configurator"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"quarry_placeholder_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quarry_placeholder_module": {
+		"id": "minecraft:command_block",
+		"item_model": "stardust:quarry_placeholder_module",
+		"item_name": {"text": "Quarry Placeholder Module"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"quarry_placeholder_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quarry_information": {
+		"id": "minecraft:command_block",
+		"item_model": "stardust:quarry_information",
+		"item_name": {"text": "Quarry Information"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"quarry_information": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"stardust_cable": {
 		"id": "minecraft:player_head",
 		"category": "energy",
@@ -610,7 +631,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 125,"max_storage": 20000},"stardust": {"quarry": {"block_per_second": 1},"quarry_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
-		"item_name": {"text": "Quarry Lv.1","italic": false,"color": "white"},
+		"item_name": {"text": "Quarry Lv.1","italic": false},
 		"lore": [{"text": "[Speed: 1 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 125 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 20 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Level 1 quarry for automated mining.","color": "yellow"},{"text": "\nMines 1 blocks per second","color": "gray"},{"text": "\nConsumes 125 kW of power","color": "gray"},{"text": "\nEnergy buffer: 20 MJ","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:barrel"},{"item": "minecraft:crafter"},{"item": "minecraft:barrel"},{"item": "minecraft:observer"},{"item": "minecraft:amethyst_shard"},{"item": "minecraft:observer"},{"item": "minecraft:diamond_pickaxe"},{"item": "minecraft:diamond_axe"},{"item": "minecraft:diamond_shovel"}]}],
@@ -621,7 +642,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 250,"max_storage": 60000},"stardust": {"quarry": {"block_per_second": 3},"quarry_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
-		"item_name": {"text": "Quarry Lv.2","italic": false,"color": "white"},
+		"item_name": {"text": "Quarry Lv.2","italic": false},
 		"lore": [{"text": "[Speed: 3 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 250 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 60 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Level 2 quarry for automated mining.","color": "yellow"},{"text": "\nMines 3 blocks per second","color": "gray"},{"text": "\nConsumes 250 kW of power","color": "gray"},{"text": "\nEnergy buffer: 60 MJ","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["WWW","EQE","BBB"],"ingredients": {"W": {"item": "minecraft:warped_fungus"},"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv1": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}}],
@@ -632,7 +653,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 375,"max_storage": 100000},"stardust": {"quarry": {"block_per_second": 5},"quarry_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
-		"item_name": {"text": "Quarry Lv.3","italic": false,"color": "white"},
+		"item_name": {"text": "Quarry Lv.3","italic": false},
 		"lore": [{"text": "[Speed: 5 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 375 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 100 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Level 3 quarry for automated mining.","color": "yellow"},{"text": "\nMines 5 blocks per second","color": "gray"},{"text": "\nConsumes 375 kW of power","color": "gray"},{"text": "\nEnergy buffer: 100 MJ","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DDD","SQS","BRB"],"ingredients": {"D": {"components": {"minecraft:custom_data": {"stardust": {"dragon_pearl": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv2": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},"R": {"item": "minecraft:respawn_anchor"}}}],
@@ -643,7 +664,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 500,"max_storage": 140000},"stardust": {"quarry": {"block_per_second": 8},"quarry_lv4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
-		"item_name": {"text": "Quarry Lv.4","italic": false,"color": "white"},
+		"item_name": {"text": "Quarry Lv.4","italic": false},
 		"lore": [{"text": "[Speed: 8 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 140 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Level 4 quarry for automated mining.","color": "yellow"},{"text": "\nMines 8 blocks per second","color": "gray"},{"text": "\nConsumes 500 kW of power","color": "gray"},{"text": "\nEnergy buffer: 140 MJ","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["EEE","NQN","BBB"],"ingredients": {"E": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"N": {"item": "minecraft:netherite_ingot"},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv3": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}}}}],
@@ -654,7 +675,7 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 625,"max_storage": 180000},"stardust": {"quarry": {"block_per_second": 16},"quarry_lv5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
-		"item_name": {"text": "Quarry Lv.5","italic": false,"color": "white"},
+		"item_name": {"text": "Quarry Lv.5","italic": false},
 		"lore": [{"text": "[Speed: 16 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 625 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 180 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Level 5 quarry for automated mining.","color": "yellow"},{"text": "\nMines 16 blocks per second","color": "gray"},{"text": "\nConsumes 625 kW of power","color": "gray"},{"text": "\nEnergy buffer: 180 MJ","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["NNN","UQU","BBB"],"ingredients": {"N": {"item": "minecraft:netherite_block"},"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv4": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","UQU","NNN"],"ingredients": {"N": {"item": "minecraft:netherite_block"},"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv4": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}}}}],

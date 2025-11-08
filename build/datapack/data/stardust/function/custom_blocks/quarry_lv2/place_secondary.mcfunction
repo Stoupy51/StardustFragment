@@ -16,7 +16,7 @@ tag @s add stardust.quarry_lv2
 tag @s add stardust.vanilla.minecraft_barrel
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.quarry_lv_2","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": {"translate": "stardust.quarry_lv_2","italic": false}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:quarry_lv2"]
@@ -30,4 +30,8 @@ scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
+
+# Add tag for loop every second
+tag @s add stardust.second
+scoreboard players add #second_entities stardust.data 1
 

@@ -6,7 +6,7 @@
 
 tag @s add stardust.placer
 setblock ~ ~ ~ air
-setblock ~ ~ ~ minecraft:barrel{"CustomName": {"translate": "stardust.quarry_lv_1","italic": false,"color": "white"}}
+setblock ~ ~ ~ minecraft:barrel{"CustomName": {"translate": "stardust.quarry_lv_1","italic": false}}
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/quarry_lv1/place_secondary
 tag @s remove stardust.placer
 

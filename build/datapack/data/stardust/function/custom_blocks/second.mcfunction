@@ -17,4 +17,9 @@ execute if entity @s[tag=stardust.advanced_furnace_generator] run function stard
 execute if entity @s[tag=stardust.stardust_furnace_generator] run function stardust:custom_blocks/stardust_furnace_generator/second
 execute if entity @s[tag=stardust.awakened_stardust_furnace_generator] run function stardust:custom_blocks/awakened_stardust_furnace_generator/second
 execute if entity @s[tag=stardust.mob_grinder] run function stardust:custom_blocks/mob_grinder/second
+execute if entity @s[tag=stardust.quarry_lv1] run function stardust:custom_blocks/quarry_lv1/second
+execute if entity @s[tag=stardust.quarry_lv2] run function stardust:custom_blocks/quarry_lv2/second
+execute if entity @s[tag=stardust.quarry_lv3] run function stardust:custom_blocks/quarry_lv3/second
+execute if entity @s[tag=stardust.quarry_lv4] run function stardust:custom_blocks/quarry_lv4/second
+execute if entity @s[tag=stardust.quarry_lv5] run function stardust:custom_blocks/quarry_lv5/second
 

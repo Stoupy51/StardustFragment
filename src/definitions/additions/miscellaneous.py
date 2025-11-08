@@ -9,6 +9,7 @@ from stewbeet import (
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
 	GROWING_SEED,
+	OVERRIDE_MODEL,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
 	WIKI_COMPONENT,
@@ -306,11 +307,12 @@ def main_additions() -> None:
 			],
 		},
 		"quarry_configurator": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC,
 			"lore": [
 				[{"keybind":"key.use","italic":False,"color":"white"},{"text":" to set 1st coordinates","color":"gray"}],
 				[{"keybind":"key.sneak","italic":False,"color":"white"},{"text":" + ","color":"gray"},{"keybind":"key.use"},{"text":" to set 2nd coordinates","color":"gray"}],
 			],
+			OVERRIDE_MODEL: {"parent":"minecraft:item/generated"},
 			WIKI_COMPONENT: [
 				{"text":"Configurator for setting up quarries.\n","color":"yellow"},
 				{"keybind":"key.use","color":"white"},
@@ -326,7 +328,7 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DD","QQ","QQ"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"Q":ingr_repr("minecraft:quartz")}},
-			]
+			],
 		},
 		"fortune_module": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,

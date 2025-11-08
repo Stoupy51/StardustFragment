@@ -59,5 +59,5 @@ def beet_default(ctx: Context) -> None:
 	setup_custom_ore_generation()
 
 	# Setup additional things
-	#setup_remaining()
+	setup_remaining()
 

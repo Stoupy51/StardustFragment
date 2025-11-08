@@ -262,7 +262,7 @@ def main_additions() -> None:
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 				"custom_data": {"energy": {"usage":usage, "max_storage":storage}, ns: {"quarry": {"block_per_second":block_per_second}}},
 				VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
-				"item_name": {"text":f"Quarry Lv.{i+1}","italic":False,"color":"white"},
+				"item_name": {"text":f"Quarry Lv.{i+1}","italic":False},
 				"lore": [
 					{"text":f"[Speed: {block_per_second} block/s]","italic":False,"color":"gray"},
 				],

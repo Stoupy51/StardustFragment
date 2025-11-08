@@ -2,7 +2,7 @@
 # ruff: noqa: E501
 # Imports
 from beet import EntityTypeTag
-from stewbeet.core import CUSTOM_ITEM_VANILLA, JsonDict, LootTable, Mem, set_json_encoder, write_function
+from stewbeet.core import JsonDict, LootTable, Mem, set_json_encoder, write_function
 from stouputils.io import get_root_path, super_json_load
 
 from ..definitions.additions.materials import COBBLESTONE_TIERS
@@ -189,7 +189,7 @@ scoreboard players reset #count_y
 scoreboard players reset #count_z
 
 # Launch a signal for data packs that want their custom seed to be compatible.
-function #{ns}:calls/growth_accelerator
+function #stardust:calls/growth_accelerator
 """)
 	write_function(f"{ns}:custom_blocks/growth_accelerator/layer_y", f"""
 # Loop through X axis
@@ -211,7 +211,7 @@ execute if score #count_x {ns}.data matches 1.. positioned ~-1 ~ ~ run function 
 """)
 	all_crops: list[tuple[str, int]] = [
 		("wheat", 7), ("carrots", 7), ("potatoes", 7), ("nether_wart", 3), ("beetroots", 3), ("melon_stem", 7),
-		("pumpkin_stem", 7), ("sweet_berry_bush", 3), ("cave_vines", 25), ("cave_vines_plant", 25)
+		("pumpkin_stem", 7), ("sweet_berry_bush", 3), ("cave_vines", 25), ("cave_vines_plant", 1)
 	]
 	write_function(f"{ns}:custom_blocks/growth_accelerator/layer_z", f"""
 
@@ -224,20 +224,19 @@ execute if score #count_z {ns}.data matches 1.. positioned ~ ~ ~-1 run function 
 """)
 	for block, max_age in all_crops:
 		content: str = ""
-		for i in range(max_age + 1, 0, -1):
-			content += f"execute if block ~ ~ ~ {block}[age={i - 1}] run return " + (f"run setblock ~ ~ ~ {block}[age={i}] strict\n" if i <= max_age else "0\n")
+		if block == "cave_vines_plant":
+			content += "execute if block ~ ~ ~ cave_vines_plant[berries=false] run return run setblock ~ ~ ~ cave_vines_plant[berries=true] strict\n"
+		else:
+			for i in range(max_age + 1, 0, -1):
+				content += f"execute if block ~ ~ ~ {block}[age={i - 1}] run return " + (f"run setblock ~ ~ ~ {block}[age={i}] strict\n" if i <= max_age else "0\n")
 		write_function(f"{ns}:custom_blocks/growth_accelerator/blocks/{block}", content)
 	write_function(f"{ns}:calls/stardust/growth_accelerator", f"""
-# Boost stardust seed by +10 minutes
+# Boost stardust seed by +10 minutes (60s * 10)
 scoreboard players set #boost_growth_time {ns}.data 600
 execute positioned ~-10 ~-10 ~-10 as @e[tag={ns}.growing_seed,dx=20,dy=20,dz=20] run function {ns}:custom_blocks/minute
 scoreboard players reset #boost_growth_time {ns}.data
 """, tags=["stardust:calls/growth_accelerator"])
 
-	# Portals
-	# TODO
-
 	# Quarry
-	# TODO
 	quarry(gui)
 

@@ -6,9 +6,7 @@ from stewbeet.contrib.simplenergy import (
 	Mem,
 	energy_cables_models,
 	insert_lib_calls,
-	item_cables_models,
 	keep_energy_for_batteries,
-	servo_mechanisms_models,
 	setup_energy_balancing,
 	setup_gui_in_resource_packs,
 	setup_wrench,
@@ -16,6 +14,7 @@ from stewbeet.contrib.simplenergy import (
 
 from .utils.advancements import add_visible_advancements
 from .utils.custom_ore_generation import setup_custom_ore_generation
+from .utils.dimensions import setup_dimensions
 from .utils.machines import setup_machines
 from .utils.remaining import setup_remaining
 
@@ -40,6 +39,9 @@ def beet_default(ctx: Context) -> None:
 
 	# Setup machines
 	setup_machines(gui)
+
+	# Setup portals and dimensions
+	setup_dimensions()
 
 	# Setup rotatable tags
 	setup_wrench(blocks="auto")

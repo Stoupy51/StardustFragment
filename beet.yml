@@ -22,12 +22,12 @@ require:
 # Takes a nested pack config, see PackConfig() documentation
 data_pack:
     name: "datapack"
-    load: ["merge/datapack"]
+    load: ["src"]
 
 # Takes a nested pack config, see PackConfig() documentation
 resource_pack:
     name: resource_pack
-    load: ["merge/resource_pack"]
+    load: ["src"]
 
 # A list of strings or dicts representing "plugins".
 # - These plugins will execute after the pack is loaded

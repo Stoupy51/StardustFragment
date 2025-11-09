@@ -15,7 +15,7 @@ def quarry(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
 	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 	GUI_DATA_TOOLTIP: str = r'custom_data={"common_signals":{"temp":true}}'
-	QUARRY_SLOTS: list[int] = list(range(9, 23)) # Slots 9 to 22 inclusive
+	QUARRY_SLOTS: list[int] = [*range(9, 23), 26] # Slots 9 to 22 inclusive and gui slot
 	main_gui: str = "gui/quarry.png"
 	main_gui_slot: int = 26
 	config_placeholder_gui_slot: int = 25

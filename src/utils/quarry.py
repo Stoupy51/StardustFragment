@@ -2,24 +2,28 @@
 # ruff: noqa: E501
 # Imports
 import json
+
 from beet import Predicate
 from beet.core.utils import JsonDict, TextComponent
-from stewbeet.core import CUSTOM_ITEM_VANILLA, Mem, set_json_encoder, write_function, write_load_file, Conventions
+from stewbeet.core import CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encoder, write_function, write_load_file
 
 
 # Setup quarry work and visuals
 def quarry(gui: dict[str, str]) -> None:
+
+	## Constants
 	ns: str = Mem.ctx.project_id
 	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 	GUI_DATA_TOOLTIP: str = r'custom_data={"common_signals":{"temp":true}}'
-	QUARRY_SLOTS: int = 8
-	all_gui: list[str] = [x for x in gui if "quarry_" in x]
-	print(all_gui)
+	QUARRY_SLOTS: list[int] = list(range(9, 23)) # Slots 9 to 22 inclusive
 	main_gui: str = "gui/quarry.png"
 	main_gui_slot: int = 26
 	config_placeholder_gui_slot: int = 25
 	module_placeholder_gui_slot: int = 24
 	info_gui_slot: int = 23
+	stop_gui_slot: int = 21
+	pause_gui_slot: int = 20
+	start_gui_slot: int = 19
 
 	# Prepare info gui lore
 	selected_area_lore: list[TextComponent] = [
@@ -41,9 +45,9 @@ def quarry(gui: dict[str, str]) -> None:
 	# Create scoreboard objectives and teams
 	write_load_file(f"""
 # Quarry scoreboards & teams
-scoreboard objectives add {ns}.quarry_x dummy
-scoreboard objectives add {ns}.quarry_y dummy
-scoreboard objectives add {ns}.quarry_z dummy
+scoreboard objectives add {ns}.quarry_curr_x dummy
+scoreboard objectives add {ns}.quarry_curr_y dummy
+scoreboard objectives add {ns}.quarry_curr_z dummy
 scoreboard objectives add {ns}.quarry_x1 dummy
 scoreboard objectives add {ns}.quarry_x2 dummy
 scoreboard objectives add {ns}.quarry_y1 dummy
@@ -155,9 +159,11 @@ kill @s
 
 	## Quarry functions
 	# Second loop
+	slots: str = "\n".join(f"function {ns}:quarry/gui/passive_slot {{\"slot\":{i}}}" for i in QUARRY_SLOTS)
 	write_function(f"{ns}:quarry/second", f"""
 # Prevent items in unexpected slots
-# TODO
+data modify storage {ns}:temp Items set from block ~ ~ ~ Items
+{slots}
 
 # Update gui
 item replace block ~ ~ ~ container.{main_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[main_gui]}",{GUI_DATA}]
@@ -166,7 +172,31 @@ execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run i
 execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name={{"text":"Quarry Information"}},lore=[{{"text":"TODO","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
 
 # If player nearby, update information
-execute if entity @p[distance=..5] run function {ns}:quarry/update_info
+execute if entity @p[distance=..3] run function {ns}:quarry/update_info
+
+# Work if enough energy and slots available
+execute if score @s energy.storage >= @s {ns}.energy_rate unless data storage {ns}:temp Items[26] run function {ns}:quarry/work
+""")
+	# Set the item gui
+	write_function(f"{ns}:quarry/gui/passive_slot", f"""
+# Get the item
+$data modify storage {ns}:temp intruder set from storage {ns}:temp Items[{{Slot:$(slot)b}}]
+
+# If item is not a GUI, launch function to handle it
+$execute if data storage {ns}:temp intruder unless data storage {ns}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {ns}:quarry/gui/handle_item {{"slot":$(slot)}}
+
+# Set item gui
+$scoreboard players set #slot {ns}.data $(slot)
+$execute unless score #slot {ns}.data matches {start_gui_slot}..{stop_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA}]
+$execute if score #slot {ns}.data matches {start_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA_TOOLTIP},item_name={{"text":"Start","color":"green"}}]
+$execute if score #slot {ns}.data matches {pause_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA_TOOLTIP},item_name={{"text":"Pause / Resume","color":"yellow"}}]
+$execute if score #slot {ns}.data matches {stop_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA_TOOLTIP},item_name={{"text":"Stop","color":"red"}}]
+""")
+
+	# Handle intruder item on gui
+	write_function(f"{ns}:quarry/gui/handle_item", f"""
+summon item ~ ~ ~ {{Item:{{id:"minecraft:stone",count:1b,components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}
+data modify entity @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}] Item set from storage {ns}:temp intruder
 """)
 
 	# Update information function
@@ -181,7 +211,7 @@ function {ns}:quarry/display/main
 function {ns}:quarry/update_size
 
 # Clear temp items
-clear @a[distance=..5] *[minecraft:custom_data={{"common_signals":{{"temp":true}}}}]
+clear @a[distance=..3] *[minecraft:custom_data={{"common_signals":{{"temp":true}}}}]
 
 # Set quarry status
 data modify storage {ns}:temp quarry_status set value {{"text":"Idle","color":"red"}}
@@ -202,9 +232,6 @@ execute store result score @s {ns}.quarry_y2 run data get storage {ns}:temp conf
 execute store result score @s {ns}.quarry_z2 run data get storage {ns}:temp config.quarry_z2
 """)
 	write_function(f"{ns}:quarry/update_size", f"""
-# Reset quarry size
-scoreboard players set @s {ns}.quarry_size 0
-
 # Length, Width, Depth
 scoreboard players operation #rX {ns}.data = @s {ns}.quarry_x1
 scoreboard players operation #rX {ns}.data -= @s {ns}.quarry_x2
@@ -226,6 +253,7 @@ scoreboard players operation @s {ns}.quarry_size *= #rZ {ns}.data
 execute if score @s {ns}.quarry_size matches ..-1 run scoreboard players operation @s {ns}.quarry_size *= #-1 {ns}.data
 """)
 
+	## Display functions
 	# Display main function
 	write_function(f"{ns}:quarry/display/main", f"""
 # Get coordinates
@@ -239,7 +267,7 @@ scoreboard players operation #config_z2 {ns}.data = @s {ns}.quarry_z2
 # Summon shulkers
 execute summon marker run function {ns}:quarry/display/summon_shulkers
 """)
-	tags: list[str] = [f"{ns}.quarry_displaying", *Conventions.ENTITY_TAGS_NO_KILL]
+	tags: str = json.dumps([f"{ns}.quarry_displaying", *Conventions.ENTITY_TAGS_NO_KILL])
 	write_function(f"{ns}:quarry/display/summon_shulkers", f"""
 # First shulker (red)
 execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x1 {ns}.data
@@ -275,6 +303,12 @@ scoreboard players add @s {ns}.data 1
 execute if score @s {ns}.data matches ..1 run scoreboard players add #shulkers_remaining {ns}.data 1
 execute if score @s {ns}.data matches 2.. run tp @s 0 -10000 0
 execute if score @s {ns}.data matches 2.. run kill @s
+""")
+
+	## Working parts
+	# Quarry work function
+	write_function(f"{ns}:quarry/work", f"""
+# TODO: Implement quarry working logic
 """)
 
 	return

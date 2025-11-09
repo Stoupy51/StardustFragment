@@ -4,7 +4,7 @@
 import json
 from beet import Predicate
 from beet.core.utils import JsonDict, TextComponent
-from stewbeet.core import CUSTOM_ITEM_VANILLA, Mem, set_json_encoder, write_function, write_load_file
+from stewbeet.core import CUSTOM_ITEM_VANILLA, Mem, set_json_encoder, write_function, write_load_file, Conventions
 
 
 # Setup quarry work and visuals
@@ -22,6 +22,12 @@ def quarry(gui: dict[str, str]) -> None:
 	info_gui_slot: int = 23
 
 	# Prepare info gui lore
+	selected_area_lore: list[TextComponent] = [
+		[{"text":"Selected Area: ","color":"aqua","italic":False}],
+		[{"text":"- X: ","color":"dark_red","italic":False},{"score":{"name":"#config_x1","objective":f"{ns}.data"}},{"text":" to "},{"score":{"name":"#config_x2","objective":f"{ns}.data"}}],
+		[{"text":"- Y: ","color":"green","italic":False},{"score":{"name":"#config_y1","objective":f"{ns}.data"}},{"text":" to "},{"score":{"name":"#config_y2","objective":f"{ns}.data"}}],
+		[{"text":"- Z: ","color":"blue","italic":False},{"score":{"name":"#config_z1","objective":f"{ns}.data"}},{"text":" to "},{"score":{"name":"#config_z2","objective":f"{ns}.data"}}],
+	]
 	info_gui_lore: list[TextComponent] = [
 		[{"text":"Energy Stored: ","color":"aqua","italic":False},{"score":{"name":"@s","objective":"energy.storage"},"color":"yellow"},{"text":"/"},{"score":{"name":"@s","objective":"energy.max_storage"},"color":"yellow"}],
 		[{"text":"Quarry Status: ","color":"aqua","italic":False},{"nbt":"quarry_status","storage":f"{ns}:temp","interpret":True}],
@@ -32,9 +38,9 @@ def quarry(gui: dict[str, str]) -> None:
 		[{"text":"- Z: ","color":"blue","italic":False},{"score":{"name":"@s","objective":f"{ns}.quarry_z1"}},{"text":" to "},{"score":{"name":"@s","objective":f"{ns}.quarry_z2"}}],
 	]
 
-	# Create scoreboard objectives
+	# Create scoreboard objectives and teams
 	write_load_file(f"""
-# Quarry scoreboards
+# Quarry scoreboards & teams
 scoreboard objectives add {ns}.quarry_x dummy
 scoreboard objectives add {ns}.quarry_y dummy
 scoreboard objectives add {ns}.quarry_z dummy
@@ -47,6 +53,10 @@ scoreboard objectives add {ns}.quarry_z2 dummy
 scoreboard objectives add {ns}.quarry_status dummy
 scoreboard objectives add {ns}.quarry_speed dummy
 scoreboard objectives add {ns}.quarry_size dummy
+team add {ns}.red
+team add {ns}.blue
+team modify {ns}.red color red
+team modify {ns}.blue color blue
 """, prepend=True)
 
 	# For each quarry lvl, call the general quarry second loop, and add data when placing
@@ -128,6 +138,7 @@ scoreboard players operation @s {ns}.quarry_z2 = #config_z2 {ns}.data
 tellraw @p[tag={ns}.temp] [{{"text":"Quarry configuration updated.","color":"green"}}]
 playsound block.note_block.pling ambient @p[tag={ns}.temp]
 """)
+	advanced_lore: list[TextComponent] = [*Mem.definitions["quarry_configurator"]["lore"], "", *selected_area_lore]
 	write_function(f"{ns}:quarry/configurator/update_custom_data", f"""
 # Copy item, update it, and send it back
 item replace entity @s contents from entity @p[tag={ns}.temp] weapon.mainhand
@@ -137,6 +148,7 @@ execute store result entity @s item.components."minecraft:custom_data".{ns}.quar
 execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_x2 int 1 run scoreboard players get #config_x2 {ns}.data
 execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_y2 int 1 run scoreboard players get #config_y2 {ns}.data
 execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_z2 int 1 run scoreboard players get #config_z2 {ns}.data
+item modify entity @s contents {{"function":"minecraft:set_lore","entity":"this","lore":{json.dumps(advanced_lore)},"mode":"replace_all"}}
 item replace entity @p[tag={ns}.temp] weapon.mainhand from entity @s contents
 kill @s
 """)
@@ -160,10 +172,16 @@ execute if entity @p[distance=..5] run function {ns}:quarry/update_info
 	# Update information function
 	write_function(f"{ns}:quarry/update_info", f"""
 # If quarry configurator, apply its settings
-# TODO
+execute if items block ~ ~ ~ container.{config_placeholder_gui_slot} *[custom_data~{{{ns}:{{quarry_configurator:true}}}}] run function {ns}:quarry/configurator/apply_from_placeholder
+
+# Display first and last coordinates
+function {ns}:quarry/display/main
 
 # Compute quarry size
 function {ns}:quarry/update_size
+
+# Clear temp items
+clear @a[distance=..5] *[minecraft:custom_data={{"common_signals":{{"temp":true}}}}]
 
 # Set quarry status
 data modify storage {ns}:temp quarry_status set value {{"text":"Idle","color":"red"}}
@@ -172,6 +190,16 @@ execute if score @s {ns}.quarry_status matches 2 run data modify storage {ns}:te
 
 # Update info gui
 item modify block ~ ~ ~ container.{info_gui_slot} {{"function":"minecraft:set_lore","entity":"this","lore":{json.dumps(info_gui_lore)},"mode":"replace_all"}}
+""")
+	write_function(f"{ns}:quarry/configurator/apply_from_placeholder", f"""
+# Retrieve configuration from placeholder
+data modify storage {ns}:temp config set from block ~ ~ ~ Items[{{Slot:{config_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}
+execute store result score @s {ns}.quarry_x1 run data get storage {ns}:temp config.quarry_x1
+execute store result score @s {ns}.quarry_y1 run data get storage {ns}:temp config.quarry_y1
+execute store result score @s {ns}.quarry_z1 run data get storage {ns}:temp config.quarry_z1
+execute store result score @s {ns}.quarry_x2 run data get storage {ns}:temp config.quarry_x2
+execute store result score @s {ns}.quarry_y2 run data get storage {ns}:temp config.quarry_y2
+execute store result score @s {ns}.quarry_z2 run data get storage {ns}:temp config.quarry_z2
 """)
 	write_function(f"{ns}:quarry/update_size", f"""
 # Reset quarry size
@@ -196,6 +224,57 @@ scoreboard players operation @s {ns}.quarry_size = #rX {ns}.data
 scoreboard players operation @s {ns}.quarry_size *= #rY {ns}.data
 scoreboard players operation @s {ns}.quarry_size *= #rZ {ns}.data
 execute if score @s {ns}.quarry_size matches ..-1 run scoreboard players operation @s {ns}.quarry_size *= #-1 {ns}.data
+""")
+
+	# Display main function
+	write_function(f"{ns}:quarry/display/main", f"""
+# Get coordinates
+scoreboard players operation #config_x1 {ns}.data = @s {ns}.quarry_x1
+scoreboard players operation #config_y1 {ns}.data = @s {ns}.quarry_y1
+scoreboard players operation #config_z1 {ns}.data = @s {ns}.quarry_z1
+scoreboard players operation #config_x2 {ns}.data = @s {ns}.quarry_x2
+scoreboard players operation #config_y2 {ns}.data = @s {ns}.quarry_y2
+scoreboard players operation #config_z2 {ns}.data = @s {ns}.quarry_z2
+
+# Summon shulkers
+execute summon marker run function {ns}:quarry/display/summon_shulkers
+""")
+	tags: list[str] = [f"{ns}.quarry_displaying", *Conventions.ENTITY_TAGS_NO_KILL]
+	write_function(f"{ns}:quarry/display/summon_shulkers", f"""
+# First shulker (red)
+execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x1 {ns}.data
+execute store result entity @s Pos[1] double 1 run scoreboard players get #config_y1 {ns}.data
+execute store result entity @s Pos[2] double 1 run scoreboard players get #config_z1 {ns}.data
+execute at @s positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:14b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b,Team:"{ns}.red"}}
+
+# Second shulker (blue)
+execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x2 {ns}.data
+execute store result entity @s Pos[1] double 1 run scoreboard players get #config_y2 {ns}.data
+execute store result entity @s Pos[2] double 1 run scoreboard players get #config_z2 {ns}.data
+execute at @s positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:3b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b,Team:"{ns}.blue"}}
+
+# Schedule loop to kill them after some time
+schedule function {ns}:quarry/display/kill_shulkers 10t append
+
+# Kill marker
+kill @s
+""")
+	write_function(f"{ns}:quarry/display/kill_shulkers", f"""
+# Increment score of all shulkers, and kill them if score >= 2 seconds
+scoreboard players set #shulkers_remaining {ns}.data 0
+execute as @e[tag={ns}.quarry_displaying] run function {ns}:quarry/display/shulkers_loop
+
+# Reschedule if any shulker remains
+execute if score #shulkers_remaining {ns}.data matches 1.. run schedule function {ns}:quarry/display/kill_shulkers 1s replace
+""")
+	write_function(f"{ns}:quarry/display/shulkers_loop", f"""
+# Increment score
+scoreboard players add @s {ns}.data 1
+
+# Kill shulker
+execute if score @s {ns}.data matches ..1 run scoreboard players add #shulkers_remaining {ns}.data 1
+execute if score @s {ns}.data matches 2.. run tp @s 0 -10000 0
+execute if score @s {ns}.data matches 2.. run kill @s
 """)
 
 	return

@@ -6,6 +6,9 @@
 # @within	stardust:custom_blocks/_groups/minecraft_barrel
 #
 
+# ItemIO compatibility
+function #itemio:calls/container/destroy
+
 # Datapack Energy
 function energy:v1/api/break_machine
 

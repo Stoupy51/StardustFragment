@@ -4,7 +4,7 @@
 import json
 
 from beet import Predicate
-from beet.core.utils import JsonDict, TextComponent
+from beet.core.utils import TextComponent
 from stewbeet.core import CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encoder, write_function, write_load_file
 
 
@@ -67,8 +67,22 @@ team modify {ns}.blue color blue
 	for item, data in Mem.definitions.items():
 		if item.startswith("quarry_lv") or item == "quarry_creative":
 			bps: int = data["custom_data"][ns]["quarry"]["block_per_second"]
+
+			# ItemIO compatibility
+			base: str = 'data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig'
+			itemio_content: str = f"""
+# ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+{base} set value []
+"""
+			for i in range(9):
+				itemio_content += f'{base} append value {{"Slot":{i},"mode":"both","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}}}\n'
+			itemio_content += "function #itemio:calls/container/init\n"
+			write_function(f"{ns}:custom_blocks/{item}/destroy", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend=True)
 			write_function(f"{ns}:custom_blocks/{item}/second", f"function {ns}:quarry/second")
-			write_function(f"{ns}:custom_blocks/{item}/place_secondary", f"""
+			write_function(f"{ns}:custom_blocks/{item}/place_secondary", f"""{itemio_content}
+
 # Set quarry speed, and default coordinates
 scoreboard players set @s {ns}.quarry_speed {bps}
 execute store result score @s {ns}.quarry_x1 run data get entity @s Pos[0]
@@ -172,10 +186,10 @@ execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run i
 execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name={{"text":"Quarry Information"}},lore=[{{"text":"TODO","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
 
 # If player nearby, update information
-execute if entity @p[distance=..3] run function {ns}:quarry/update_info
+execute if entity @p[distance=..6] run function {ns}:quarry/update_info
 
 # Work if enough energy and slots available
-execute if score @s energy.storage >= @s {ns}.energy_rate unless data storage {ns}:temp Items[26] run function {ns}:quarry/work
+execute if score @s {ns}.quarry_status matches 1 if score @s energy.storage >= @s {ns}.energy_rate unless data storage {ns}:temp Items[26] run function {ns}:quarry/work
 """)
 	# Set the item gui
 	write_function(f"{ns}:quarry/gui/passive_slot", f"""
@@ -204,6 +218,9 @@ data modify entity @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data
 # If quarry configurator, apply its settings
 execute if items block ~ ~ ~ container.{config_placeholder_gui_slot} *[custom_data~{{{ns}:{{quarry_configurator:true}}}}] run function {ns}:quarry/configurator/apply_from_placeholder
 
+# Check if buttons pressed
+function {ns}:quarry/gui/check_buttons
+
 # Display first and last coordinates
 function {ns}:quarry/display/main
 
@@ -211,7 +228,7 @@ function {ns}:quarry/display/main
 function {ns}:quarry/update_size
 
 # Clear temp items
-clear @a[distance=..3] *[minecraft:custom_data={{"common_signals":{{"temp":true}}}}]
+clear @a[distance=..6] *[minecraft:custom_data={{"common_signals":{{"temp":true}}}}]
 
 # Set quarry status
 data modify storage {ns}:temp quarry_status set value {{"text":"Idle","color":"red"}}
@@ -282,7 +299,7 @@ execute store result entity @s Pos[2] double 1 run scoreboard players get #confi
 execute at @s positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:3b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b,Team:"{ns}.blue"}}
 
 # Schedule loop to kill them after some time
-schedule function {ns}:quarry/display/kill_shulkers 10t append
+schedule function {ns}:quarry/display/kill_shulkers 1t append
 
 # Kill marker
 kill @s
@@ -305,223 +322,178 @@ execute if score @s {ns}.data matches 2.. run tp @s 0 -10000 0
 execute if score @s {ns}.data matches 2.. run kill @s
 """)
 
+	# Check buttons
+	write_function(f"{ns}:quarry/gui/check_buttons", f"""
+# Start button
+execute unless score @s {ns}.quarry_status matches 1.. unless data storage {ns}:temp Items[{{Slot:{start_gui_slot}b}}] run return run function {ns}:quarry/start
+execute unless score @s {ns}.quarry_status matches 2 unless data storage {ns}:temp Items[{{Slot:{start_gui_slot}b}}] run return run scoreboard players set @s {ns}.quarry_status 1
+
+# Pause button
+execute if score @s {ns}.quarry_status matches 1 unless data storage {ns}:temp Items[{{Slot:{pause_gui_slot}b}}] run return run scoreboard players set @s {ns}.quarry_status 2
+execute if score @s {ns}.quarry_status matches 2 unless data storage {ns}:temp Items[{{Slot:{pause_gui_slot}b}}] run return run scoreboard players set @s {ns}.quarry_status 1
+
+# Stop button
+execute if score @s {ns}.quarry_status matches 1.. unless data storage {ns}:temp Items[{{Slot:{stop_gui_slot}b}}] run return run scoreboard players set @s {ns}.quarry_status 0
+""")
+	write_function(f"{ns}:quarry/start", f"""
+# Initialize current coordinates, and set status to working
+scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
+scoreboard players operation @s {ns}.quarry_curr_y = @s {ns}.quarry_y1
+scoreboard players operation @s {ns}.quarry_curr_z = @s {ns}.quarry_z1
+scoreboard players set @s {ns}.quarry_status 1
+""")
+
 	## Working parts
 	# Quarry work function
 	write_function(f"{ns}:quarry/work", f"""
-# TODO: Implement quarry working logic
+## Check if the selected region is valid (Less than 500 million blocks)
+#execute if score @s {ns}.quarry_size matches 500000001.. run tellraw @a[distance=..5] {{"text":"Stardust Fragment Error: Quarry region size cannot be larger than 500 million blocks.","color":"red"}}
+#execute if score @s {ns}.quarry_size matches 500000001.. run return run scoreboard players set @s {ns}.quarry_status 0
+
+# Get module data
+scoreboard players set #fortune_level {ns}.data 0
+scoreboard players set #silk_touch_level {ns}.data 0
+execute store result score #fortune_level {ns}.data if data storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.fortune_module run data get storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].count
+execute store success score #silk_touch_level {ns}.data if data storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.silk_touch_module
+
+# Consume energy
+scoreboard players operation @s energy.storage -= @s {ns}.energy_rate
+
+# Compute how many block-checks the quarry should attempt.
+# A "quarry_multiplier" > 1 reduces the impact of empty space so air blocks don't
+# slow the quarry as much (default multiplier = 25). Setting multiplier = 1
+# treats air and solid blocks equally.
+scoreboard players set #quarry_multiplier {ns}.data 25
+scoreboard players operation #blocks_to_break {ns}.data = @s {ns}.quarry_speed
+scoreboard players operation #blocks_to_break {ns}.data *= #quarry_multiplier {ns}.data
+
+# Start loop to break blocks
+function {ns}:quarry/working/loop
+
+# Kill temporary shulkers displaying current position
+schedule function {ns}:quarry/display/kill_shulkers 1t append
 """)
+	# Quarry working loop
+	write_function(f"{ns}:quarry/working/loop", f"""
+# Break at position
+scoreboard players operation #quarry_x {ns}.data = @s {ns}.quarry_curr_x
+scoreboard players operation #quarry_y {ns}.data = @s {ns}.quarry_curr_y
+scoreboard players operation #quarry_z {ns}.data = @s {ns}.quarry_curr_z
+execute summon marker run function {ns}:quarry/working/break_at_position
+function {ns}:quarry/working/update_coordinates
 
-	return
-
-	## Passive parts
-	# Loop function
-	content: str = f"""
-# Copy slots to storage
-data modify storage {ns}:temp slots set value [{{}},{','.join(['{"blocked":true}'] * (QUARRY_SLOTS - 1))}]
-data modify storage {ns}:temp slots set from entity @s item.components."minecraft:custom_data".{ns}.quarry_slots
-data modify storage {ns}:temp Items set from block ~ ~ ~ Items
-
-# Launch work function if enough power
-scoreboard players set #working {ns}.data 0
-execute if score @s energy.storage matches {energy["usage"]}.. run function {ns}:custom_blocks/quarry/work
-
-# Update gui for each slot
-function {ns}:custom_blocks/quarry/gui_for_each_slot
-
-# Playsound if working
-execute if score #working {ns}.data matches 1.. if score #second {ns}.data matches 0 run playsound {ns}:quarry block @a[distance=..12] ~ ~ ~ 0.25
-
-# Save slots to entity
-data modify entity @s item.components."minecraft:custom_data".{ns}.quarry_slots set from storage {ns}:temp slots
-
-"""
-	write_function(f"{ns}:custom_blocks/quarry/second", content)
-
-	# Gui for each slot
-	slots: str = "\n".join(f"function {ns}:custom_blocks/quarry/gui_passive_slot {{\"index\":{i},\"slot\":{i+9}}}" for i in range(QUARRY_SLOTS))
-	write_function(f"{ns}:custom_blocks/quarry/gui_for_each_slot", f"""
-# For each slot, execute function to update gui
-{slots}
+# Continue loop if blocks remain to break
+execute if score #blocks_to_break {ns}.data matches 1.. run function {ns}:quarry/working/loop
 """)
+	# Break at current position
+	write_function(f"{ns}:quarry/working/break_at_position", f"""
+# Get block at position
+execute store result entity @s Pos[0] double 1 run scoreboard players get #quarry_x {ns}.data
+execute store result entity @s Pos[1] double 1 run scoreboard players get #quarry_y {ns}.data
+execute store result entity @s Pos[2] double 1 run scoreboard players get #quarry_z {ns}.data
 
-	# Set the item gui (blocked if not unlocked, progression otherwise)
-	blocked_model: str = gui["gui/progress_blocked.png"]
-	progressions_cmd: list[str] = [x for x in gui if "progress_unblocked_" in x]
-	write_function(f"{ns}:custom_blocks/quarry/gui_passive_slot", f"""
-# Get slot and progression, and the item
-scoreboard players set #progression {ns}.data 0
-$data modify storage {ns}:temp slot set from storage {ns}:temp slots[$(index)]
-execute store result score #progression {ns}.data run data get storage {ns}:temp slot.progression
-$data modify storage {ns}:temp intruder set from storage {ns}:temp Items[{{Slot:$(slot)b}}]
+# If a player is nearby or it's last block, summon a shulker for visualization
+execute at @s store success score #player_nearby {ns}.data if entity @p[distance=..25]
+execute if score #blocks_to_break {ns}.data <= #quarry_multiplier {ns}.data at @s unless block ~ ~ ~ #minecraft:air run scoreboard players set #player_nearby {ns}.data 1
+execute if score #blocks_to_break {ns}.data matches 1 run scoreboard players set #player_nearby {ns}.data 1
+execute if score #player_nearby {ns}.data matches 1 at @s run function {ns}:quarry/display/current_position
 
-# If item is not a GUI, launch function to handle it
-$execute unless data storage {ns}:temp intruder.components."minecraft:custom_data".common_signals.temp run function {ns}:custom_blocks/quarry/handle_item_on_gui {{"index":$(index),"slot":$(slot)}}
+# Mine block
+function {ns}:quarry/working/mine_block
 
-# Set item gui (blocked if not unlocked, progression otherwise)
-$execute if data storage {ns}:temp slot.blocked run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{blocked_model}",{GUI_DATA_TOOLTIP},item_name={{"text":"Blocked","italic":false}},lore=[{{"text":"Place a Slot Unlocker to unlock","color":"gray","italic":false}}]]
-$execute unless data storage {ns}:temp slot.blocked run function {ns}:custom_blocks/quarry/gui_progression {{"index":$(index),"slot":$(slot)}}
-""")
-
-	# Gui progression function
-	progressions_gui: list[str] = []
-	nb_gui = len(progressions_cmd)
-	nb_gui_2 = nb_gui - 2	# nb_gui-2 because we don't count the 0 and last
-	previous_max: int = 0
-	for i, progression in enumerate(progressions_cmd):
-		if i == 0:
-			progressions_gui.append(f"""$execute if score #progression {ns}.data matches ..0 run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{gui[progression]}",{GUI_DATA}]""")
-		elif i == (nb_gui - 1):
-			progressions_gui.append(f"""$execute if score #progression {ns}.data matches {previous_max + 1}.. run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{gui[progression]}",{GUI_DATA}]""")
-		else:
-			gui_min: int = previous_max + 1
-			previous_max = (i * QUARRY_TIME // nb_gui_2) - 1
-			progressions_gui.append(f"""$execute if score #progression {ns}.data matches {gui_min}..{previous_max} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="{gui[progression]}",{GUI_DATA}]""")
-	write_function(f"{ns}:custom_blocks/quarry/gui_progression", "\n".join(progressions_gui))
-
-
-	# Handle intruder item on gui
-	write_function(f"{ns}:custom_blocks/quarry/handle_item_on_gui", f"""
-# If slot is locked and it's not a Slot Unlocker, drop the item
-scoreboard players set #drop_item {ns}.data 0
-execute unless data storage {ns}:temp slot.blocked run scoreboard players set #drop_item {ns}.data 1
-execute if score #drop_item {ns}.data matches 0 unless data storage {ns}:temp intruder.components."minecraft:custom_data".{ns}.slot_unlocker run scoreboard players set #drop_item {ns}.data 1
-execute if score #drop_item {ns}.data matches 1 run summon item ~ ~ ~ {{Item:{{id:"minecraft:stone",count:1b,components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}
-execute if score #drop_item {ns}.data matches 1 run data modify entity @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}] Item set from storage {ns}:temp intruder
-
-# If slot is locked and item didn't drop, unlock the slot, playsound, and drop the item with count decreased by 1
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked run playsound block.anvil.destroy block @a[distance=..12]
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked run clear @a *[minecraft:custom_data={{"common_signals":{{"temp":true}}}}]
-$execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked run data remove storage {ns}:temp slots[$(index)].blocked
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked store result score #count {ns}.data run data get storage {ns}:temp intruder.count
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked run scoreboard players remove #count {ns}.data 1
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked if score #count {ns}.data matches 1.. store result storage {ns}:temp intruder.count byte 1 run scoreboard players get #count {ns}.data
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked if score #count {ns}.data matches 1.. run summon item ~ ~ ~ {{Item:{{id:"minecraft:stone",count:1b,components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}
-execute if score #drop_item {ns}.data matches 0 if data storage {ns}:temp slot.blocked if score #count {ns}.data matches 1.. run data modify entity @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{"temp":true}}}}}}}}] Item set from storage {ns}:temp intruder
-""")
-
-
-	## Work parts
-	# Work function
-	for_each_slots: str = "\n".join(f"""execute unless data storage {ns}:temp slots[{i}].blocked run function {ns}:custom_blocks/quarry/gui_active_slot {{"index":{i},"slot":{i+9},"result":{i+9*2}}}""" for i in range(QUARRY_SLOTS))
-	write_function(f"{ns}:custom_blocks/quarry/work", f"""
-# Monitor if any slot is working
-{for_each_slots}
-
-# Consume energy if any slot is working
-execute if score #working {ns}.data matches 1.. run scoreboard players remove @s energy.storage {energy["usage"] // 20}
-""")
-
-	# Reset progress function
-	write_function(f"{ns}:custom_blocks/quarry/reset_progress", f"""
-scoreboard players set #progression {ns}.data 0
-$data modify storage {ns}:temp slots[$(index)].progression set value 0
-$function {ns}:custom_blocks/quarry/gui_progression {{"index":$(index),"slot":$(slot)}}
-return fail
-""")
-
-	# Gui for each active slot
-	write_function(f"{ns}:custom_blocks/quarry/gui_active_slot", f"""
-# Get progression
-scoreboard players set #progression {ns}.data 0
-$execute store result score #progression {ns}.data run data get storage {ns}:temp slots[$(index)].progression
-
-# Isolate ingredient and try to get result
-scoreboard players set #found {ns}.data 0
-data modify storage {ns}:main quarry.input set value {{}}
-data modify storage {ns}:main quarry.output set value {{}}
-$data modify storage {ns}:main quarry.input set from storage {ns}:temp Items[{{Slot:$(index)b}}]
-$execute unless data storage {ns}:main quarry.input run return run function {ns}:custom_blocks/quarry/reset_progress {{"index":$(index),"slot":$(slot)}}
-execute summon item_display run function {ns}:custom_blocks/quarry/get_quarry_recipe
-
-# If no recipe found, stop
-$execute if score #found {ns}.data matches 0 run return run function {ns}:custom_blocks/quarry/reset_progress {{"index":$(index),"slot":$(slot)}}
-
-# Else, if output do not match current output slot, stop
-scoreboard players set #output_occupied {ns}.data 0
-$execute if data storage {ns}:temp Items[{{Slot:$(result)b}}] run scoreboard players set #output_occupied {ns}.data 1
-execute if score #output_occupied {ns}.data matches 1 run scoreboard players set #is_not_same_output {ns}.data 0
-$execute if score #output_occupied {ns}.data matches 1 run data modify storage {ns}:temp copy set from storage {ns}:temp Items[{{Slot:$(result)b}}]
-execute if score #output_occupied {ns}.data matches 1 store success score #is_not_same_output {ns}.data run data modify storage {ns}:temp copy.id set from storage {ns}:main quarry.output.id
-execute if score #output_occupied {ns}.data matches 1 if score #is_not_same_output {ns}.data matches 0 store success score #is_not_same_output {ns}.data run data modify storage {ns}:temp copy.components set from storage {ns}:main quarry.output.components
-$execute if score #output_occupied {ns}.data matches 1 if score #is_not_same_output {ns}.data matches 1 run return run function simplenergy:custom_blocks/quarry/reset_progress {{"index":$(index),"slot":$(slot)}}
-
-# Progress the slot
-scoreboard players add #progression {ns}.data 1
-$execute if score #progression {ns}.data matches ..{QUARRY_TIME - 1} store result storage {ns}:temp slots[$(index)].progression int 1 run scoreboard players get #progression {ns}.data
-scoreboard players add #working {ns}.data 1
-
-# Calculate the output count
-execute store result score #count {ns}.data run data get storage {ns}:temp copy.count
-execute store result score #to_add {ns}.data run data get storage {ns}:main quarry.output.count
-scoreboard players operation #count {ns}.data += #to_add {ns}.data
-$execute if score #output_occupied {ns}.data matches 1 run function {ns}:custom_blocks/quarry/get_max_stack_size {{"result":$(result)}}
-$execute if score #output_occupied {ns}.data matches 1 if score #count {ns}.data > #max_stack_size {ns}.data run return run function simplenergy:custom_blocks/quarry/reset_progress {{"index":$(index),"slot":$(slot)}}
-
-# Add the item to the result slot if progression is done
-execute if score #progression {ns}.data matches ..{QUARRY_TIME - 1} run return 1
-$execute if score #output_occupied {ns}.data matches 1 store result block ~ ~ ~ Items[{{Slot:$(result)b}}].count int 1 run scoreboard players get #count {ns}.data
-$execute if score #output_occupied {ns}.data matches 0 run data modify storage {ns}:main quarry.output.Slot set value $(result)b
-execute if score #output_occupied {ns}.data matches 0 run data modify block ~ ~ ~ Items append from storage {ns}:main quarry.output
-
-# Reset progression and remove 1 count to ingredient
-$function simplenergy:custom_blocks/quarry/reset_progress {{"index":$(index),"slot":$(slot)}}
-execute store result score #count {ns}.data run data get storage {ns}:main quarry.input.count
-scoreboard players remove #count {ns}.data 1
-$execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{Slot:$(index)b}}].count int 1 run scoreboard players get #count {ns}.data
-$execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:$(index)b}}]
-""")
-
-	# Get quarry recipe function
-	write_function(f"{ns}:custom_blocks/quarry/get_quarry_recipe", f"""
-# Get the recipe
-function #{ns}:calls/quarry_recipes
-
-# Place in storage the given output (if any)
-execute if score #found {ns}.data matches 1 run data modify storage {ns}:main quarry.output set from entity @s item
-
-# Kill temporary entity
+# Clear marker
 kill @s
 """)
-
-	# Get max stack size function
-	content: str = ""
-	numbers: list[int] = [64, 16, 1, 99]
-	numbers += [i for i in range(1, 100) if i not in numbers]
-	for i in numbers:
-		content += f"$execute if items entity @s container.$(result) *[minecraft:max_stack_size={i}] run return {i}\n"
-	write_function(f"{ns}:custom_blocks/quarry/get_max_stack_size", content)
-
-	# Keep track of unlocked slots when destroying and placing
-	write_function(f"{ns}:custom_blocks/quarry/destroy", f"""# Copy slots to storage
-data remove storage {ns}:temp slots
-data modify storage {ns}:temp slots set from entity @s item.components."minecraft:custom_data".{ns}.quarry_slots
-\n""", prepend = True)
-	write_function(f"{ns}:custom_blocks/quarry/replace_item", f"""
-# Save slots to the item components
-execute if data storage {ns}:temp slots run data modify entity @s Item.components."minecraft:custom_data".{ns}.quarry_slots set from storage {ns}:temp slots
-execute if data storage {ns}:temp slots run data modify entity @s Item.components."minecraft:lore" prepend value {{"text":"Unlocked slots saved.","color":"dark_gray","italic":false}}
+	write_function(f"{ns}:quarry/display/current_position", f"""
+# Summon shulker and schedule loop to kill them after some time
+execute positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:0b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b}}
 """)
-	write_function(f"{ns}:custom_blocks/quarry/place_secondary", f"""
-# Copy slots to the item components
-data modify entity @s item.components."minecraft:custom_data".{ns}.quarry_slots set from entity @p[tag={ns}.placer] SelectedItem.components."minecraft:custom_data".{ns}.quarry_slots
+	# Mine block function
+	write_function(f"{ns}:quarry/working/mine_block", f"""
+# If block is air, skip (remove one block to check), else continue and remove quarry_multiplier blocks to check
+execute at @s if block ~ ~ ~ #minecraft:air run return run scoreboard players remove #blocks_to_break {ns}.data 1
+scoreboard players operation #blocks_to_break {ns}.data -= #quarry_multiplier {ns}.data
+
+# Destroy mechanization custom blocks
+execute at @s align xyz as @e[tag=mechanization,dx=0,dy=0,dz=0,limit=1] at @s run function #mechanization:wrench_break
+
+# Check if block is a container with items or not
+execute at @s store success score #is_container {ns}.data if block ~ ~ ~ #itemio:container
+execute if score #is_container {ns}.data matches 0 if score #fortune_level {ns}.data matches 0 if score #silk_touch_level {ns}.data matches 0 run scoreboard players set #is_container {ns}.data 1
+
+# Mining the block at the current position
+execute if score #is_container {ns}.data matches 0 if score #fortune_level {ns}.data matches 1 at @s run loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={{fortune:1}}]
+execute if score #is_container {ns}.data matches 0 if score #fortune_level {ns}.data matches 2 at @s run loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={{fortune:2}}]
+execute if score #is_container {ns}.data matches 0 if score #fortune_level {ns}.data matches 3 at @s run loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={{fortune:3}}]
+execute if score #is_container {ns}.data matches 0 if score #fortune_level {ns}.data matches 4 at @s run loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={{fortune:4}}]
+execute if score #is_container {ns}.data matches 0 if score #fortune_level {ns}.data matches 5.. at @s run loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={{fortune:5}}]
+execute if score #is_container {ns}.data matches 0 if score #silk_touch_level {ns}.data matches 1 at @s run loot spawn ~ ~ ~ mine ~ ~ ~ netherite_pickaxe[enchantments={{silk_touch:1}}]
+execute if score #is_container {ns}.data matches 0 at @s run clone ~ ~ ~ ~ ~ ~ -30000000 51 1610
+execute if score #is_container {ns}.data matches 0 at @s run setblock ~ ~ ~ minecraft:air
+execute if score #is_container {ns}.data matches 1 at @s run setblock ~ ~ ~ minecraft:air destroy
+
+# Destroy some custom blocks
+execute at @s align xyz run function #common_signals:calls/destroyed_block
+
+# Pickup items
+execute at @s run kill @e[type=experience_orb,distance=..2,{Conventions.AVOID_ENTITY_TAGS}]
+execute at @s run tag @e[type=item,dx=0,dy=0,dz=0,{Conventions.AVOID_ENTITY_TAGS}] add {ns}.quarry_item
+execute as @e[tag={ns}.quarry_item] run function {ns}:quarry/working/pickup_item
+
+# Destroy the block in a special way if not container
+execute if score #is_container {ns}.data matches 0 at @s run clone -30000000 51 1610 -30000000 51 1610 ~ ~ ~
+execute if score #is_container {ns}.data matches 0 at @s run setblock ~ ~ ~ air destroy
+execute if score #is_container {ns}.data matches 0 at @s run kill @e[type=item,dx=0,dy=0,dz=0,{Conventions.AVOID_ENTITY_TAGS}]
+""")
+	# Pickup item function
+	write_function(f"{ns}:quarry/working/pickup_item", f"""
+# Try to insert in container
+data modify storage itemio:io input set from entity @s Item
+data modify storage itemio:io input_side set value "wireless"
+function #itemio:calls/input
+
+# If inserted, remove count or kill item
+execute if score #success_input itemio.io matches 1 store result score #output_count {ns}.data run data get storage itemio:io output.count
+execute if score #success_input itemio.io matches 1 if score #output_count {ns}.data matches 0 run kill @s
+execute if score #success_input itemio.io matches 1 if score #output_count {ns}.data matches 1.. store result entity @s Item.count int 1 run scoreboard players get #output_count {ns}.data
+execute if score #success_input itemio.io matches 1 if score #output_count {ns}.data matches 1.. run scoreboard players set #success_input itemio.io 0
+
+# If not fully inserted, drop item at quarry position and stop working
+execute if score #success_input itemio.io matches 0 run tp @s ~ ~ ~
+execute if score #success_input itemio.io matches 0 run scoreboard players set #blocks_to_break {ns}.data 0
+
+# Remove quarry item tag
+tag @s remove {ns}.quarry_item
 """)
 
+	# Update coordinates function
+	write_function(f"{ns}:quarry/working/update_coordinates", f"""
+# Move in X direction first
+execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 run scoreboard players add @s {ns}.quarry_curr_x 1
+execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 run scoreboard players remove @s {ns}.quarry_curr_x 1
 
-	# ItemIO compatibility
-	base: str = 'data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig'
-	content: str = f"""
-# ItemIO compatibility
-tag @s add itemio.container
-tag @s add itemio.container.hopper
-{base} set value []
-"""
-	for i in range(QUARRY_SLOTS):
-		content += f'{base} append value {{"Slot":{i},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}\n'
-	for i in range(QUARRY_SLOTS):
-		content += f'{base} append value {{"Slot":{i+2*9},"mode":"output","allowed_side":{{"bottom":true}}}}\n'
-	content += "function #itemio:calls/container/init\n"
-	write_function(f"{ns}:custom_blocks/quarry/place_secondary", content)
-	write_function(f"{ns}:custom_blocks/quarry/destroy", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend = True)
+# If passed X limit, reset X and move in Z direction
+execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 run scoreboard players add @s {ns}.quarry_curr_z 1
+execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 run scoreboard players remove @s {ns}.quarry_curr_z 1
+execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 run scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
+execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 run scoreboard players add @s {ns}.quarry_curr_z 1
+execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 run scoreboard players remove @s {ns}.quarry_curr_z 1
+execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 run scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
+
+# If passed Z limit, reset Z and move in Y direction
+execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 run scoreboard players add @s {ns}.quarry_curr_y 1
+execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 run scoreboard players remove @s {ns}.quarry_curr_y 1
+execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 run scoreboard players operation @s {ns}.quarry_curr_z = @s {ns}.quarry_z1
+execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 run scoreboard players add @s {ns}.quarry_curr_y 1
+execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 run scoreboard players remove @s {ns}.quarry_curr_y 1
+execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 run scoreboard players operation @s {ns}.quarry_curr_z = @s {ns}.quarry_z1
+
+# If passed Y limit, stop quarry
+execute if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y > @s {ns}.quarry_y2 run scoreboard players set #blocks_to_break {ns}.data 0
+execute if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y > @s {ns}.quarry_y2 run return run scoreboard players set @s {ns}.quarry_status 0
+execute if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y < @s {ns}.quarry_y2 run scoreboard players set #blocks_to_break {ns}.data 0
+execute if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y < @s {ns}.quarry_y2 run return run scoreboard players set @s {ns}.quarry_status 0
+""")
 
 	return
 

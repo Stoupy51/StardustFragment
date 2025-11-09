@@ -13,5 +13,5 @@ execute store result score #item_count stardust.data run data get entity @s Item
 execute store success score #is_silk_touch stardust.data if data entity @s Item.components."minecraft:custom_data".common_signals.silk_touch
 
 # Try to destroy the block
-execute as @e[tag=stardust.custom_block,dx=0,dy=0,dz=0] at @s run function stardust:custom_blocks/destroy
+function stardust:calls/common_signals/custom_block_destroy
 

@@ -19,7 +19,7 @@ execute store result entity @s Pos[2] double 1 run scoreboard players get #confi
 execute at @s positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {Tags:["stardust.quarry_displaying", "smithed.entity", "global.ignore", "smithed.strict", "global.ignore.kill"],DeathLootTable:"none",AttachFace:0,Color:3b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b,Team:"stardust.blue"}
 
 # Schedule loop to kill them after some time
-schedule function stardust:quarry/display/kill_shulkers 10t append
+schedule function stardust:quarry/display/kill_shulkers 1t append
 
 # Kill marker
 kill @s

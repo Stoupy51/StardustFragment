@@ -32,6 +32,21 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# ItemIO compatibility
+tag @s add itemio.container
+tag @s add itemio.container.hopper
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":4,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":8,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+function #itemio:calls/container/init
+
 # Set quarry speed, and default coordinates
 scoreboard players set @s stardust.quarry_speed 3
 execute store result score @s stardust.quarry_x1 run data get entity @s Pos[0]

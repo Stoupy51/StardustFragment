@@ -38,5 +38,5 @@ execute unless items block ~ ~ ~ container.23 * run item replace block ~ ~ ~ con
 execute if entity @p[distance=..3] run function stardust:quarry/update_info
 
 # Work if enough energy and slots available
-execute if score @s energy.storage >= @s stardust.energy_rate unless data storage stardust:temp Items[26] run function stardust:quarry/work
+execute if score @s stardust.quarry_status matches 1 if score @s energy.storage >= @s stardust.energy_rate unless data storage stardust:temp Items[26] run function stardust:quarry/work
 

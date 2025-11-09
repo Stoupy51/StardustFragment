@@ -6,7 +6,7 @@
 # @within	stardust:v3.5.0/second [ as @e[type=#stardust:custom_blocks,tag=...,predicate=!stardust:advanced_check_vanilla_blocks] & at @s ]
 #			stardust:v3.5.0/tick_2 [ as @e[type=item_display,tag=...,predicate=!stardust:check_vanilla_blocks] & at @s ]
 #			stardust:v3.5.0/second_5 [ as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s ]
-#			stardust:calls/common_signals/on_ore_destroyed [ as @e[tag=stardust.custom_block,dx=0,dy=0,dz=0] & at @s ]
+#			stardust:calls/common_signals/custom_block_destroy [ as @e[tag=stardust.custom_block,dx=0,dy=0,dz=0] & at @s ]
 #			stardust:calls/mechanization/wrench_break
 #
 

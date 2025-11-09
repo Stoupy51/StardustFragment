@@ -16,7 +16,7 @@ function stardust:quarry/display/main
 function stardust:quarry/update_size
 
 # Clear temp items
-clear @a[distance=..5] *[minecraft:custom_data={"common_signals":{"temp":true}}]
+clear @a[distance=..3] *[minecraft:custom_data={"common_signals":{"temp":true}}]
 
 # Set quarry status
 data modify storage stardust:temp quarry_status set value {"translate": "stardust.idle","color":"red"}

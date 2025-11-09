@@ -6,9 +6,6 @@
 # @within	stardust:quarry/update_info
 #
 
-# Reset quarry size
-scoreboard players set @s stardust.quarry_size 0
-
 # Length, Width, Depth
 scoreboard players operation #rX stardust.data = @s stardust.quarry_x1
 scoreboard players operation #rX stardust.data -= @s stardust.quarry_x2

@@ -25,6 +25,7 @@ data modify entity @s brightness set value {block:15,sky:15}
 
 # Energy part
 tag @s add energy.send
+scoreboard players set @s stardust.energy_rate 16
 scoreboard players set @s energy.max_storage 2400
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 scoreboard players add @s energy.storage 0

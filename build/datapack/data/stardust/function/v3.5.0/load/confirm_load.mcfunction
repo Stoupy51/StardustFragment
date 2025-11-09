@@ -8,9 +8,9 @@
 scoreboard objectives add stardust.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 
 # Quarry scoreboards & teams
-scoreboard objectives add stardust.quarry_x dummy
-scoreboard objectives add stardust.quarry_y dummy
-scoreboard objectives add stardust.quarry_z dummy
+scoreboard objectives add stardust.quarry_curr_x dummy
+scoreboard objectives add stardust.quarry_curr_y dummy
+scoreboard objectives add stardust.quarry_curr_z dummy
 scoreboard objectives add stardust.quarry_x1 dummy
 scoreboard objectives add stardust.quarry_x2 dummy
 scoreboard objectives add stardust.quarry_y1 dummy
@@ -24,6 +24,9 @@ team add stardust.red
 team add stardust.blue
 team modify stardust.red color red
 team modify stardust.blue color blue
+
+# Score for energy usage or generation
+scoreboard objectives add stardust.energy_rate dummy
 
 # Create objectives for growing seeds
 scoreboard objectives add stardust.growth_time dummy

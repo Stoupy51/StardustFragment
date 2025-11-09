@@ -7,7 +7,7 @@
 # Right click detection
 scoreboard objectives add stardust.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 
-# Quarry scoreboards
+# Quarry scoreboards & teams
 scoreboard objectives add stardust.quarry_x dummy
 scoreboard objectives add stardust.quarry_y dummy
 scoreboard objectives add stardust.quarry_z dummy
@@ -20,6 +20,10 @@ scoreboard objectives add stardust.quarry_z2 dummy
 scoreboard objectives add stardust.quarry_status dummy
 scoreboard objectives add stardust.quarry_speed dummy
 scoreboard objectives add stardust.quarry_size dummy
+team add stardust.red
+team add stardust.blue
+team modify stardust.red color red
+team modify stardust.blue color blue
 
 # Create objectives for growing seeds
 scoreboard objectives add stardust.growth_time dummy

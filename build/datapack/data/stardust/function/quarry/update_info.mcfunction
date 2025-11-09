@@ -7,10 +7,16 @@
 #
 
 # If quarry configurator, apply its settings
-# TODO
+execute if items block ~ ~ ~ container.25 *[custom_data~{stardust:{quarry_configurator:true}}] run function stardust:quarry/configurator/apply_from_placeholder
+
+# Display first and last coordinates
+function stardust:quarry/display/main
 
 # Compute quarry size
 function stardust:quarry/update_size
+
+# Clear temp items
+clear @a[distance=..5] *[minecraft:custom_data={"common_signals":{"temp":true}}]
 
 # Set quarry status
 data modify storage stardust:temp quarry_status set value {"translate": "stardust.idle","color":"red"}

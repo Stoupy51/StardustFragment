@@ -17,6 +17,7 @@
 #			stardust:quarry/second {"slot":20}
 #			stardust:quarry/second {"slot":21}
 #			stardust:quarry/second {"slot":22}
+#			stardust:quarry/second {"slot":26}
 #
 
 # Get the item

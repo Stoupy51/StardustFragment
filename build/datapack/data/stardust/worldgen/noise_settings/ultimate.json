@@ -1,0 +1,66 @@
+{
+	"sea_level": 0,
+	"disable_mob_generation": true,
+	"aquifers_enabled": false,
+	"ore_veins_enabled": false,
+	"legacy_random_source": true,
+	"default_block": {
+		"Name": "minecraft:crying_obsidian"
+	},
+	"default_fluid": {
+		"Name": "minecraft:air"
+	},
+	"noise": {
+		"min_y": 0,
+		"height": 128,
+		"size_horizontal": 2,
+		"size_vertical": 1
+	},
+	"noise_router": {
+		"barrier": 0,
+		"fluid_level_floodedness": 0,
+		"fluid_level_spread": 0,
+		"lava": 0,
+		"temperature": 1,
+		"vegetation": 0,
+		"continents": 0,
+		"erosion": 0,
+		"depth": 0,
+		"ridges": 0,
+		"preliminary_surface_level": "minecraft:end/base_3d_noise",
+		"final_density": {
+			"type": "minecraft:squeeze",
+			"argument": {
+				"type": "minecraft:mul",
+				"argument1": 0.64,
+				"argument2": {
+					"type": "minecraft:interpolated",
+					"argument": {
+						"type": "minecraft:blend_density",
+						"argument": "minecraft:end/sloped_cheese"
+					}
+				}
+			}
+		},
+		"vein_toggle": 0,
+		"vein_ridged": 0,
+		"vein_gap": 0
+	},
+	"spawn_target": [
+		{
+			"temperature": 0,
+			"humidity": 0,
+			"continentalness": 0,
+			"erosion": 0,
+			"weirdness": 0,
+			"depth": 0,
+			"offset": 0
+		}
+	],
+	"surface_rule": {
+		"type": "minecraft:block",
+		"result_state": {
+			"Name": "minecraft:crying_obsidian"
+		}
+	}
+}

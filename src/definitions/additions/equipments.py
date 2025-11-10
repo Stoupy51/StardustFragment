@@ -312,7 +312,7 @@ def main_additions() -> None:
 				{"text":"\nMaximum of 20 uses (+10 hearts)","color":"gray"},
 			],
 		},
-		"life_crystal_block": {
+		"life_crystal_block": {	# TODO: Add world generation of this block in caves
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: EQUIPMENT,
 			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":"entity"},
 			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},

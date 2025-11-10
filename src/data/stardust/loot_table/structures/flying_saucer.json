@@ -1,0 +1,81 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 4,
+				"max": 8
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 70,
+					"name": "minecraft:lapis_lazuli",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 1,
+								"max": 4
+							},
+							"add": false
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:diamond"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 20,
+					"value": "stardust:i/lucky_artifact_bag"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 100,
+					"value": "stardust:i/stardust_ingot",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"min": 1,
+								"max": 8
+							},
+							"add": false
+						}
+					]
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 10,
+					"value": "stardust:i/stardust_block"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 10,
+					"value": "stardust:random_seed",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 10,
+					"value": "stardust:i/stardust_apple"
+				}
+			]
+		}
+	]
+}

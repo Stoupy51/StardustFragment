@@ -1,0 +1,38 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "stardust:i/stardust_fragment",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:uniform",
+								"min": 0,
+								"max": 15
+							}
+						},
+						{
+							"function": "minecraft:enchanted_count_increase",
+							"count": {
+								"min": 0,
+								"max": 15
+							},
+							"enchantment": "minecraft:looting"
+						}
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:killed_by_player"
+				}
+			]
+		}
+	]
+}

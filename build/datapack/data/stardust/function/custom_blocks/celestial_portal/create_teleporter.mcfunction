@@ -17,6 +17,7 @@ setblock ~3 ~-1 ~-3 minecraft:air
 setblock ~-3 ~-1 ~3 minecraft:air
 setblock ~3 ~-1 ~3 minecraft:air
 setblock ~ ~-4 ~ minecraft:glowstone strict
+setblock ~ ~-1 ~ minecraft:bedrock strict
 
 # Place the celestial portal
 scoreboard players set #infinite_energy stardust.data 1

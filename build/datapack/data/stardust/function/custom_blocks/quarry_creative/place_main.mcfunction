@@ -5,7 +5,7 @@
 #
 
 tag @s add stardust.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:barrel{"CustomName": {"translate": "stardust.creative_quarry","italic": false,"color": "white"}}
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/quarry_creative/place_secondary
 tag @s remove stardust.placer

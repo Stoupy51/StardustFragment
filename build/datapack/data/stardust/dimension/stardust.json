@@ -4,8 +4,10 @@
 		"type": "minecraft:noise",
 		"settings": "stardust:stardust",
 		"biome_source": {
-			"type": "minecraft:multi_noise",
-			"preset": "minecraft:overworld"
+			"type": "minecraft:checkerboard",
+			"biomes": [
+				"stardust:cosmic"
+			]
 		}
 	}
 }

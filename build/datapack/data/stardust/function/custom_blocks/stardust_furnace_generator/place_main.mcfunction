@@ -6,7 +6,7 @@
 
 tag @s add stardust.placer
 function stardust:custom_blocks/get_rotation
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 execute if score #rotation stardust.data matches 1 run setblock ~ ~ ~ minecraft:furnace[facing=north]{"CustomName": {"translate": "stardust_furnace_generator","italic": false,"color": "white"}}
 execute if score #rotation stardust.data matches 2 run setblock ~ ~ ~ minecraft:furnace[facing=east]{"CustomName": {"translate": "stardust_furnace_generator","italic": false,"color": "white"}}
 execute if score #rotation stardust.data matches 3 run setblock ~ ~ ~ minecraft:furnace[facing=south]{"CustomName": {"translate": "stardust_furnace_generator","italic": false,"color": "white"}}

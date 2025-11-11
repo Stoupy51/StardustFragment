@@ -5,7 +5,7 @@
 #
 
 tag @s add stardust.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:lapis_block
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/stardust_frame/place_secondary
 tag @s remove stardust.placer

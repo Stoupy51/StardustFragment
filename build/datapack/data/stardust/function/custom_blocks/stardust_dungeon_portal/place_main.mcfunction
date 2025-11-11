@@ -6,7 +6,7 @@
 #
 
 tag @s add stardust.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:red_nether_bricks
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/stardust_dungeon_portal/place_secondary
 tag @s remove stardust.placer

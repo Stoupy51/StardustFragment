@@ -5,7 +5,7 @@
 #
 
 tag @s add stardust.placer
-setblock ~ ~ ~ air
+setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:waxed_copper_block
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/solarium_block/place_secondary
 tag @s remove stardust.placer

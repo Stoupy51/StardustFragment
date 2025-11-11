@@ -4,6 +4,9 @@
 # @within	???
 #
 
+# If area isn't loaded, stop here
+execute unless loaded ~ ~ ~ run return run scoreboard players set @s stardust.teleported 0
+
 # Teleport the player
 tp @s ~ ~1 ~
 

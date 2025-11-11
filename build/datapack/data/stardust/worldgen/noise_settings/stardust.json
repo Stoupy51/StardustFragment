@@ -10,11 +10,11 @@
 		}
 	},
 	"disable_mob_generation": false,
-	"legacy_random_source": true,
+	"legacy_random_source": false,
 	"noise": {
-		"height": 256,
-		"min_y": 0,
-		"size_horizontal": 2,
+		"height": 96,
+		"min_y": 32,
+		"size_horizontal": 1,
 		"size_vertical": 1
 	},
 	"noise_router": {
@@ -61,7 +61,7 @@
 											"argument2": {
 												"type": "minecraft:add",
 												"argument1": 23.15,
-												"argument2": "minecraft:end/base_3d_noise"
+												"argument2": "minecraft:overworld/base_3d_noise"
 											}
 										}
 									}

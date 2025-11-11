@@ -381,10 +381,6 @@ def main_additions() -> None:
 		],
 	}
 
-	# GUI Items
-	for item in ("quarry_placeholder_configurator", "quarry_placeholder_module", "quarry_information"):
-		additions[item] = {"id": CUSTOM_ITEM_VANILLA}
-
 	# Update the definitions with new data
 	for k, v in additions.items():
 		if k in Mem.definitions:

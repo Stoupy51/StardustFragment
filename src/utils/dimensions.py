@@ -70,6 +70,8 @@ execute if score #success {ns}.data matches 1 run scoreboard players set #{dimen
 execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"Stardust Fragment Error: The {name} couldn't be load. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
 """)
 
+	# TODO: Adventure mode in Stardust Dungeon.
+
 	## Connect dimensions between them
 	# Functions to check if some datapacks are installed
 	for pack, objective in [("expansion", "exp.const"), ("bracken", "bp.var")]:

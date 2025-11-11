@@ -17,6 +17,7 @@ from .additions.energy import main_additions as main_additions_energy
 from .additions.equipments import main_additions as main_additions_equipments
 from .additions.materials import main_additions as main_additions_materials
 from .additions.miscellaneous import main_additions as main_additions_miscellaneous
+from .additions.non_playable import main_additions as main_additions_non_playable
 from .manual_assets import manual_assets_main
 
 
@@ -44,6 +45,9 @@ def beet_default(ctx: Context) -> None:
 
 	# Sort by category (material in first position)
 	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", ""))))
+
+	# Add final miscellaneous additions
+	main_additions_non_playable()
 
 	# Final adjustments
 	add_energy_lore_to_definitions()

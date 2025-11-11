@@ -13,8 +13,8 @@ from stewbeet.contrib.simplenergy import (
 )
 
 from .utils.advancements import add_visible_advancements
-from .utils.custom_ore_generation import setup_custom_ore_generation
 from .utils.custom_mobs import setup_custom_mobs
+from .utils.custom_ore_generation import setup_custom_ore_generation
 from .utils.dimensions import setup_dimensions
 from .utils.machines import setup_machines
 from .utils.portals import setup_portals

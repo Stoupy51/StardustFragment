@@ -7,6 +7,9 @@
 # Reset timer
 scoreboard players set #second stardust.data 0
 
+# Global counter for various features
+scoreboard players add #global_second stardust.data 1
+
 # Awakened Forge recipes
 execute as @e[type=item,predicate=stardust:awakened_forge_input] at @s run function stardust:forge/second
 

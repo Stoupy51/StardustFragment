@@ -32,3 +32,7 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Add tag for loop every second
+tag @s add stardust.second
+scoreboard players add #second_entities stardust.data 1
+

@@ -14,3 +14,6 @@ execute if score #second stardust.data matches 20.. run function stardust:v3.5.0
 execute if score #second_5 stardust.data matches 90.. run function stardust:v3.5.0/second_5
 execute if score #minute stardust.data matches 1200.. run function stardust:v3.5.0/minute
 
+# Global counter for various features
+scoreboard players add #global_tick stardust.data 1
+

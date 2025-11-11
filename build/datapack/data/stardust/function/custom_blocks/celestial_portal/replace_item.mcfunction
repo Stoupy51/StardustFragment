@@ -1,9 +1,9 @@
 
 #> stardust:custom_blocks/celestial_portal/replace_item
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..1]
 #
-# @within	stardust:custom_blocks/celestial_portal/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..1] ]
+# @within	stardust:custom_blocks/celestial_portal/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..1] ]
 #
 
 # Replace the item with the custom one

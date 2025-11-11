@@ -23,4 +23,9 @@ execute if entity @s[tag=stardust.quarry_lv3] run function stardust:custom_block
 execute if entity @s[tag=stardust.quarry_lv4] run function stardust:custom_blocks/quarry_lv4/second
 execute if entity @s[tag=stardust.quarry_lv5] run function stardust:custom_blocks/quarry_lv5/second
 execute if entity @s[tag=stardust.quarry_creative] run function stardust:custom_blocks/quarry_creative/second
+execute if entity @s[tag=stardust.cavern_portal] run function stardust:custom_blocks/cavern_portal/second
+execute if entity @s[tag=stardust.celestial_portal] run function stardust:custom_blocks/celestial_portal/second
+execute if entity @s[tag=stardust.stardust_portal] run function stardust:custom_blocks/stardust_portal/second
+execute if entity @s[tag=stardust.stardust_dungeon_portal] run function stardust:custom_blocks/stardust_dungeon_portal/second
+execute if entity @s[tag=stardust.ultimate_portal] run function stardust:custom_blocks/ultimate_portal/second
 

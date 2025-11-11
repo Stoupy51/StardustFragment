@@ -38,3 +38,9 @@ advancement revoke @s only {ns}:right_click
 scoreboard players set @s {ns}.right_click 0
 """, prepend=True)
 
+	# Global counter
+	write_tick_file(f"\n# Global counter for various features\nscoreboard players add #global_tick {ns}.data 1\n", prepend=True)
+	write_versioned_function("second", f"\n# Global counter for various features\nscoreboard players add #global_second {ns}.data 1\n", prepend=True)
+
+	# TODO: pearls, always dragon egg on death, travel staff, snipers, Dog Excrements, etc.
+

@@ -13,7 +13,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.stardust_portal
-tag @s add stardust.vanilla.minecraft_barrel
+tag @s add stardust.vanilla.minecraft_lapis_block
 
 # Add a custom name
 data merge entity @s {"CustomName": {"translate": "stardust_portal","italic": false,"color": "blue"}}
@@ -31,4 +31,8 @@ scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
+
+# Add tag for loop every second
+tag @s add stardust.second
+scoreboard players add #second_entities stardust.data 1
 

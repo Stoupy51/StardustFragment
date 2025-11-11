@@ -7,6 +7,15 @@
 # Right click detection
 scoreboard objectives add stardust.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 
+# Make sure dimensions are built
+execute unless score #dungeon_built stardust.data matches 1 in stardust:dungeon run forceload add -19 -150 179 52
+execute unless score #ultimate_built stardust.data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
+schedule function stardust:dimensions/load 2s
+
+# Track teleportation through portals
+scoreboard objectives add stardust.teleportation dummy
+scoreboard objectives add stardust.teleported dummy
+
 # Quarry scoreboards & teams
 scoreboard objectives add stardust.quarry_curr_x dummy
 scoreboard objectives add stardust.quarry_curr_y dummy

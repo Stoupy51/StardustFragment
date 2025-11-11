@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"1": "block/emerald_block",
+		"1": "stardust:atlas/emerald_block",
 		"2": "stardust:item/seeds/legendarium_stage_0",
-		"particle": "block/emerald_block"
+		"particle": "stardust:atlas/emerald_block"
 	},
 	"elements": [
 		{

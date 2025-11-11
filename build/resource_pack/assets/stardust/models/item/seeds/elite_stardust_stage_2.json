@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"1": "block/diamond_block",
+		"1": "stardust:atlas/diamond_block",
 		"2": "stardust:item/seeds/elite_stardust_stage_2",
-		"particle": "block/diamond_block"
+		"particle": "stardust:atlas/diamond_block"
 	},
 	"elements": [
 		{

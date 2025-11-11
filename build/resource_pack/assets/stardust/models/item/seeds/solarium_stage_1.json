@@ -1,8 +1,8 @@
 {
 	"textures": {
-		"1": "block/magma",
+		"1": "stardust:atlas/magma",
 		"2": "stardust:item/seeds/solarium_stage_1",
-		"particle": "block/magma"
+		"particle": "stardust:atlas/magma"
 	},
 	"elements": [
 		{

@@ -1,9 +1,9 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "minecraft:block/glass",
+		"all": "stardust:atlas/glass",
 		"down": "stardust:item/life_crystal_block",
-		"particle": "minecraft:block/glass"
+		"particle": "stardust:atlas/glass"
 	},
 	"elements": [
 		{

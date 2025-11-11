@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "stardust:item/cobblestone_miner_lv5",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/cobblestone_miner_lv5"
+			"sprite": "stardust:item/cobblestone_miner_lv5",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

@@ -3,7 +3,8 @@
 # Imports
 import os
 
-from stewbeet.core import Mem, write_function, write_load_file
+from beet import Predicate
+from stewbeet.core import Conventions, JsonDict, Mem, set_json_encoder, write_function, write_load_file, write_versioned_function
 from stouputils.io import relative_path
 
 
@@ -67,5 +68,72 @@ scoreboard players set #success {ns}.data 1
 forceload remove {min_x} {min_z} {max_x} {max_z}
 execute if score #success {ns}.data matches 1 run scoreboard players set #{dimension}_built {ns}.data 1
 execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"Stardust Fragment Error: The {name} couldn't be load. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
+""")
+
+	## Connect dimensions between them
+	# Functions to check if some datapacks are installed
+	for pack, objective in [("expansion", "exp.const"), ("bracken", "bp.var")]:
+		write_function(f"{ns}:dimensions/is_{pack}_installed", f"""
+# Check if the {pack} is installed
+execute unless score #stoupy51 {objective} matches 1 run return 1
+return fail
+""")
+
+	# Predicate to check if entity is outside dimensions and needs teleportation
+	has_brain: JsonDict = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"nbt":"{Brain:{}}"}}
+	outside_range: JsonDict = {"condition":"minecraft:inverted","term":{"condition":"minecraft:location_check","predicate":{"position":{"y":{"min":-32,"max":500}}}}}
+	in_my_dimensions: JsonDict = {"condition":"minecraft:any_of","terms":[
+		{"condition":"minecraft:location_check","predicate":{"dimension":"minecraft:overworld","position":{"y":{"min":500}}}},
+		*[{"condition":"minecraft:location_check","predicate":{"dimension":f"stardust:{dim}"}} for dim in ["celestial", "stardust", "dungeon", "ultimate"]],
+	]}
+	predicate: JsonDict = {"condition":"minecraft:all_of","terms":[has_brain, outside_range, in_my_dimensions]}
+	Mem.ctx.data[ns].predicates["transitions/outside"] = set_json_encoder(Predicate(predicate), max_level=4)
+
+	# Predicates for transition up and down
+	Mem.ctx.data[ns].predicates["transitions/up"] = set_json_encoder(Predicate({"condition":"minecraft:location_check","predicate":{"position":{"y":{"min":500}}}}))
+	Mem.ctx.data[ns].predicates["transitions/down"] = set_json_encoder(Predicate({"condition":"minecraft:location_check","predicate":{"position":{"y":{"max":-32}}}}))
+
+	# Every second, check for entities outside dimensions
+	write_versioned_function("second", f"""
+# Dimension transitions for entities
+execute as @e[{Conventions.AVOID_ENTITY_TAGS_NO_KILL},predicate=stardust:transitions/outside] at @s run function {ns}:dimensions/transitions/check
+""")
+	write_function(f"{ns}:dimensions/transitions/check", f"""
+# If player and transition is up, run upward transition
+execute if entity @s[type=player] if predicate stardust:transitions/up run return run function {ns}:dimensions/transitions/upward
+
+# Else, if transition is down, run downward transition
+execute if predicate stardust:transitions/down run function {ns}:dimensions/transitions/downward
+""")
+
+	# Upward transition function
+	write_function(f"{ns}:dimensions/transitions/upward", f"""
+# If dimension is overworld, and expansion or bracken pack is installed, stop here (to avoid conflicts)
+execute if dimension minecraft:overworld if function stardust:dimensions/is_expansion_installed run return fail
+execute if dimension minecraft:overworld if function stardust:dimensions/is_bracken_installed run return fail
+
+# If player is in overworld, teleport to celestial dimension
+execute if dimension minecraft:overworld in {ns}:celestial run return run tp @s ~ 16 ~
+
+# If player is in celestial, teleport to stardust dimension
+execute if dimension {ns}:celestial in {ns}:stardust run return run tp @s ~ 16 ~
+""")
+
+	# Downward transition function
+	write_function(f"{ns}:dimensions/transitions/downward", f"""
+# Bracken pack compatibility: If dimension is celestial, teleport to pax
+execute if function {ns}:dimensions/is_bracken_installed if dimension {ns}:celestial in bracken:pax run tp @s ~ 575 ~
+
+# If dimension is ultimate, teleport to stardust dimension
+execute if dimension {ns}:ultimate in {ns}:stardust run return run tp @s ~ 480 ~
+
+# If dimension is stardust, teleport to celestial dimension
+execute if dimension {ns}:stardust in {ns}:celestial run return run tp @s ~ 480 ~
+
+# If dimension is celestial, teleport to overworld
+execute if dimension {ns}:celestial in minecraft:overworld run return run tp @s ~ 480 ~
+
+# If dimension is dungeon, teleport back to home
+execute if dimension {ns}:dungeon run return run function {ns}:dimensions/teleport_home
 """)
 

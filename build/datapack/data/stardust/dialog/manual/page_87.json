@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "stardust:item/damaged_stardust_leggings",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/damaged_stardust_leggings"
+			"sprite": "stardust:item/damaged_stardust_leggings",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

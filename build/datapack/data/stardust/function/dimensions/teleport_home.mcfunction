@@ -8,6 +8,7 @@
 #			stardust:custom_blocks/stardust_portal/find_teleporter
 #			stardust:custom_blocks/stardust_dungeon_portal/find_teleporter
 #			stardust:custom_blocks/ultimate_portal/find_teleporter
+#			stardust:dimensions/transitions/downward
 #
 
 # If no respawn nbt, teleport to world spawn

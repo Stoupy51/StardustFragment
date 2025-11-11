@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "stardust:item/damage_artifact_lvmax",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/damage_artifact_lvmax"
+			"sprite": "stardust:item/damage_artifact_lvmax",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

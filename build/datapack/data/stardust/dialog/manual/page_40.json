@@ -3,6 +3,7 @@
 	"title": [
 		{
 			"sprite": "stardust:item/quadruple_compressed_cobblestone",
+			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
@@ -17,7 +18,14 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/quadruple_compressed_cobblestone"
+			"sprite": "stardust:item/quadruple_compressed_cobblestone",
+			"atlas": "minecraft:items",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			]
 		}
 	],
 	"body": [

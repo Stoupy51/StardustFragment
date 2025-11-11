@@ -2,7 +2,7 @@
 	"type": "minecraft:notice",
 	"title": [
 		{
-			"sprite": "stardust:item/health_artifact_lv2",
+			"sprite": "stardust:item/health_artifact_lv1",
 			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
@@ -13,12 +13,12 @@
 		},
 		" ",
 		{
-			"translate": "stardust.health_artifact_lv2",
+			"translate": "stardust.health_artifact_lv1",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/health_artifact_lv2",
+			"sprite": "stardust:item/health_artifact_lv1",
 			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
@@ -46,21 +46,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$5\n\"",
-				{"text": "$脉$脉","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.health_artifact_lv_1"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_health_effect","color": "gray","italic": false},{"translate": "stardust.10_health_points","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "max_health","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],"item_model": "stardust:health_artifact_lv1","custom_data": {"stardust": {"health_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_127"}},
-				"  \n\"",
-				{"text": "U$U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.health_artifact_lv_1"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_health_effect","color": "gray","italic": false},{"translate": "stardust.10_health_points","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "max_health","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],"item_model": "stardust:health_artifact_lv1","custom_data": {"stardust": {"health_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_127"}},
-				"U$",
-				{"text": "$$脋","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.health_artifact_lv_2"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_health_effect","color": "gray","italic": false},{"translate": "stardust.20_health_points","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "max_health","amount": 0.2,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],"item_model": "stardust:health_artifact_lv2","custom_data": {"stardust": {"health_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\"U$U$U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.health_artifact_lv_2"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_health_effect","color": "gray","italic": false},{"translate": "stardust.20_health_points","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "max_health","amount": 0.2,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],"item_model": "stardust:health_artifact_lv2","custom_data": {"stardust": {"health_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_2_health_artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+20% Health Points]","color": "gray"}]}},
-				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脉"},{"text": "$脉"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脋"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.health_artifact_lv_1","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_127"}},
-				{"text": "邟\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脋"},{"text": "$脋"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脍"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.health_artifact_lv_2","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_129"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_2_health_artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+20% Health Points]","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脉"},{"text": "$脉"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脋"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.health_artifact_lv_1","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_127"}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脋"},{"text": "$脋"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脍"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.health_artifact_lv_2","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_129"}},
+				"႞\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.health_artifact_lv_1"},"rarity": "rare","lore": [{"translate": "stardust.hold_in_any_hand_to_get_the_health_effect","color": "gray","italic": false},{"translate": "stardust.10_health_points","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"attribute_modifiers": [{"type": "max_health","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],"item_model": "stardust:health_artifact_lv1","custom_data": {"stardust": {"health_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_128"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_1_health_artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+10% Health Points]","color": "gray"},{"translate": "stardust.can_be_obtained_from_lucky_artifact_bags_only","color": "gray"}]}},
+				{"text": "邨\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脉"},{"text": "$脉"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脋"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.health_artifact_lv_1","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_129"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.lv_1_health_artifact","color": "yellow"},{"text": "\nHold in any hand to get the health effect","color": "gray"},{"text": "\n[+10% Health Points]","color": "gray"},{"translate": "stardust.can_be_obtained_from_lucky_artifact_bags_only","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$脉"},{"text": "$脉"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$脋"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.health_artifact_lv_1","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_129"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

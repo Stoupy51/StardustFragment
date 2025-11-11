@@ -2,7 +2,7 @@
 	"type": "minecraft:notice",
 	"title": [
 		{
-			"sprite": "stardust:item/stardust_bow",
+			"sprite": "stardust:item/ultimate_elytra",
 			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
@@ -13,12 +13,12 @@
 		},
 		" ",
 		{
-			"translate": "stardust_bow",
+			"translate": "stardust.ultimate_elytra",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/stardust_bow",
+			"sprite": "stardust:item/ultimate_elytra",
 			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
@@ -46,40 +46,10 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$6\n\"U$",
-				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
-				{"text": "$芦","hover_event": {"action": "show_item","id": "minecraft:string","components": {}}},
-				"  \n\"U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
-				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:string","components": {}}},
-				"  \n\"",
-				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
-				"U$",
-				{"text": "$芦","hover_event": {"action": "show_item","id": "minecraft:string","components": {}}},
-				"\"\"",
-				{"text": "$$能","hover_event": {"action": "show_item","id": "bow","components": {"max_damage": 768,"item_model": "stardust:stardust_bow","item_name": {"translate": "stardust_bow"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
-				"U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:string","components": {}}},
-				"\"\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "bow","components": {"max_damage": 768,"item_model": "stardust:stardust_bow","item_name": {"translate": "stardust_bow"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\"U$",
-				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
-				{"text": "$芦","hover_event": {"action": "show_item","id": "minecraft:string","components": {}}},
-				"  \n\"U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_15"}},
-				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:string","components": {}}},
-				"  \n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.bow_crafted_from_stardust_materials","color": "yellow"},{"translate": "stardust.higher_durability_x2_and_power_x1_5_than_regular_bows","color": "gray"},{"translate": "stardust.shooting_while_sneaking_makes_no_gravity_arrows","color": "gray"}]}},
-				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"","U$",{"text": "$耩"},{"text": "$芦"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},"U$",{"text": "$芦"},"\"\"",{"text": "$$能"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$耩"},{"text": "$芦"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.string","color": "gray"}]}},
-				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$芦"},{"text": "$耩"},"U$","\n","\"",{"text": "U$"},{"text": "U$"},"U$","\n","\"",{"text": "$芦"},"U$",{"text": "$耩"},"\"\"",{"text": "$$能"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$芦"},{"text": "$耩"},"U$","\n","\"",{"text": "U$"},{"text": "U$"},"U$","\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.string","color": "gray"}]}},
-				{"text": "週\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聧"},{"text": "$聟"},{"text": "$聧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聟"},{"text": "$能"},{"text": "$聟"},"\"\"",{"text": "$$胿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聧"},{"text": "$聟"},{"text": "$聧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.awakened_stardust_frame","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.sextuple_compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_bow","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_122"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.bow_crafted_from_stardust_materials","color": "yellow"},{"translate": "stardust.higher_durability_x2_and_power_x1_5_than_regular_bows","color": "gray"},{"translate": "stardust.shooting_while_sneaking_makes_no_gravity_arrows","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"","U$",{"text": "$耩"},{"text": "$芦"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},"U$",{"text": "$芦"},"\"\"",{"text": "$$能"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"","U$",{"text": "$耩"},{"text": "$芦"},"\n","\"","U$",{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.string","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$芦"},{"text": "$耩"},"U$","\n","\"",{"text": "U$"},{"text": "U$"},"U$","\n","\"",{"text": "$芦"},"U$",{"text": "$耩"},"\"\"",{"text": "$$能"},"\n","\"",{"text": "U$"},"U$",{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$芦"},{"text": "$耩"},"U$","\n","\"",{"text": "U$"},{"text": "U$"},"U$","\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.string","color": "gray"}]}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聧"},{"text": "$聟"},{"text": "$聧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聟"},{"text": "$能"},{"text": "$聟"},"\"\"",{"text": "$$胿"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聧"},{"text": "$聟"},{"text": "$聧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.awakened_stardust_frame","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.sextuple_compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_bow","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_122"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"႗\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "elytra","components": {"max_damage": 3456,"attribute_modifiers": [{"type": "armor","amount": 10,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 4,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "stardust:knockback_resistance.chest"}],"item_model": "stardust:ultimate_elytra","item_name": {"translate": "stardust.ultimate_elytra"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"ultimate_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_121"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.elytra_dropped_by_the_ultimate_boss","color": "yellow"},{"translate": "stardust.higher_durability_x8_than_regular_elytra","color": "gray"},{"translate": "stardust.when_on_chest","color": "gray"},{"translate": "stardust.10_armor","color": "blue"},{"translate": "stardust.4_armor_toughness","color": "blue"},{"translate": "stardust.1_knockback_resistance","color": "blue"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

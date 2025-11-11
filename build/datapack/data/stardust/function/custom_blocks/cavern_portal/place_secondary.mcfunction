@@ -32,6 +32,10 @@ scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
 
+# Make the block have infinite energy if applicable
+execute if score #infinite_energy stardust.data matches 1 run tag @s add stardust.infinite_energy
+scoreboard players reset #infinite_energy stardust.data
+
 # Add tag for loop every second
 tag @s add stardust.second
 scoreboard players add #second_entities stardust.data 1

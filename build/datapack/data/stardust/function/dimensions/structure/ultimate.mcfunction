@@ -34,9 +34,9 @@ execute if score #success stardust.data matches 1 store success score #success s
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:ultimate_part_23_48_27 23 48 27
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:ultimate_part_23_96_-21 23 96 -21
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:ultimate_part_23_96_-69 23 96 -69
-forceload remove -73 -69 71 75
 
 # Mark dimension as built if successful
+forceload remove -73 -69 71 75
 execute if score #success stardust.data matches 1 run scoreboard players set #ultimate_built stardust.data 1
 execute if score #success stardust.data matches 0 run tellraw @a {"translate": "stardust_fragment_error_the_ultimate_dimension_couldnt_be_load_s","color":"red"}
 

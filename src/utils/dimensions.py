@@ -3,8 +3,8 @@
 # Imports
 import os
 
-from stewbeet.core import JsonDict, LootTable, Mem, set_json_encoder, write_function, write_load_file
-from stouputils.io import get_root_path, relative_path, super_json_load
+from stewbeet.core import Mem, write_function, write_load_file
+from stouputils.io import relative_path
 
 
 # Setup dimensions
@@ -44,6 +44,16 @@ execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run fu
 		("dungeon", "Stardust Dungeon", dungeon_min_x, dungeon_min_z, dungeon_max_x, dungeon_max_z, place_dungeon_parts),
 		("ultimate", "Ultimate Dimension", ultimate_min_x, ultimate_min_z, ultimate_max_x, ultimate_max_z, place_ultimate_parts),
 	]:
+		if dimension == "dungeon":
+			place_dungeon_portal: str = f"""
+# Place the stardust dungeon portal
+scoreboard players set #infinite_energy {ns}.data 1
+execute positioned -9 66 3 run function {ns}:custom_blocks/stardust_dungeon_portal/place_main
+"""
+		else:
+			place_dungeon_portal: str = ""
+
+		# Place structure function
 		write_function(f"{ns}:dimensions/structure/{dimension}", f"""
 # Kill entities in the {name} before loading
 kill @e[type=!player,x={min_x},y=-60,z={min_z},dx={max_x - min_x},dy=300,dz={max_z - min_z}]
@@ -52,9 +62,9 @@ kill @e[type=!player,x={min_x},y=-60,z={min_z},dx={max_x - min_x},dy=300,dz={max
 # Load structure parts (stop on failure)
 scoreboard players set #success {ns}.data 1
 {"\n".join(f'execute if score #success {ns}.data matches 1 store success score #success {ns}.data run place template {ns}:{part} {pos}' for part, pos in place_parts)}
-forceload remove {min_x} {min_z} {max_x} {max_z}
-
+{place_dungeon_portal}
 # Mark dimension as built if successful
+forceload remove {min_x} {min_z} {max_x} {max_z}
 execute if score #success {ns}.data matches 1 run scoreboard players set #{dimension}_built {ns}.data 1
 execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"Stardust Fragment Error: The {name} couldn't be load. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
 """)

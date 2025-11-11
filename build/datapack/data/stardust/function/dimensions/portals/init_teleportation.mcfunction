@@ -10,8 +10,8 @@
 scoreboard players reset @s stardust.teleported
 scoreboard players set @s stardust.teleportation 5
 scoreboard players operation @s stardust.teleportation += #global_second stardust.data
+scoreboard players set #teleporting stardust.data 1
 
 # Portal sound
 playsound minecraft:block.portal.trigger ambient @s ~ ~ ~ 0.5
-say Initialized teleportation for @s
 

@@ -2,6 +2,7 @@
 #> stardust:custom_blocks/stardust_dungeon_portal/place_main
 #
 # @within	stardust:custom_blocks/place
+#			stardust:dimensions/structure/dungeon [ positioned -9 66 3 ]
 #
 
 tag @s add stardust.placer

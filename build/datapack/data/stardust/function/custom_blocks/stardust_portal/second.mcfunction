@@ -11,8 +11,11 @@ execute if score @s[tag=!stardust.infinite_energy] energy.storage < @s stardust.
 scoreboard players operation @s[tag=!stardust.infinite_energy] energy.storage -= @s stardust.energy_rate
 
 # Particles
-particle dust{color:[0,0,1],scale:1} ~ ~2 ~ 0.25 1 0.25 0.05 5
+particle dust{color:[0,0,1],scale:1} ~ ~2 ~ 0.25 1 0.25 0.05 15
 
 # If there is a player standing on the portal, handle it
+scoreboard players set #teleporting stardust.data 0
 execute positioned ~ ~1 ~ as @a[distance=..1] at @s run function stardust:dimensions/portals/handle_player {"portal":"stardust_portal"}
+execute if score #teleporting stardust.data matches 1 if dimension minecraft:overworld in stardust:stardust run forceload add ~-50 ~-50 ~50 ~50
+execute if score #teleporting stardust.data matches 1 if dimension stardust:stardust in minecraft:overworld run forceload add ~-50 ~-50 ~50 ~50
 

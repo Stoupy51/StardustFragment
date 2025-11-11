@@ -364,7 +364,8 @@ def main_additions() -> None:
 				RESULT_OF_CRAFTING: [
 					{"type":"crafting_shapeless","result_count": 1,"category":"misc","ingredients":9*[ingr_repr(f"{prev}_cobblestone", ns) if prev else ingr_repr("minecraft:cobblestone")]},
 				] + ([
-					{"type":"crafting_shapeless","result_count": 9,"category":"misc","ingredients":[ingr_repr(f"{next_t}_cobblestone", ns)]}
+					{"type":"crafting_shapeless","result_count": 9,"category":"misc","ingredients":[ingr_repr(f"{next_t}_cobblestone", ns)]},
+					{"type":PULVERIZING,"result_count": 9,"ingredient":ingr_repr(f"{next_t}_cobblestone", ns)},
 				] if next_t else [])
 			}
 			for i, (prev, current, next_t) in enumerate(zip([None] + COBBLESTONE_TIERS[:-1], COBBLESTONE_TIERS, COBBLESTONE_TIERS[1:] + [None], strict=True))

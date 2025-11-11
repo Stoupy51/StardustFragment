@@ -308,7 +308,7 @@ def main_additions() -> None:
 			portal_name: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 				"custom_data": {"energy": {"usage":usage, "max_storage":storage}},
-				VANILLA_BLOCK: {"id":PORTALS_BLOCK[portal_name], "apply_facing":False},
+				VANILLA_BLOCK: {"id": PORTALS_BLOCK[portal_name], "apply_facing":False},
 				"item_name": {"text":display_name,"italic":False,"color":color},
 				"lore": [
 					{"text":description,"italic":False,"color":"white"},
@@ -334,7 +334,7 @@ def main_additions() -> None:
 		"ultimate_portal": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"usage":500, "max_storage":24000}},
-			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
+			VANILLA_BLOCK: {"id": PORTALS_BLOCK["ultimate_portal"], "apply_facing":False},
 			"item_name": [
 				{"text":"U","italic":False,"color":"dark_purple","bold":True},
 				{"text":"l","color":"blue"},

@@ -16,6 +16,9 @@ schedule function stardust:dimensions/load 2s
 scoreboard objectives add stardust.teleportation dummy
 scoreboard objectives add stardust.teleported dummy
 
+# Get world spawn position and dimension
+execute summon marker run function stardust:utils/get_world_spawn_from_marker
+
 # Quarry scoreboards & teams
 scoreboard objectives add stardust.quarry_curr_x dummy
 scoreboard objectives add stardust.quarry_curr_y dummy

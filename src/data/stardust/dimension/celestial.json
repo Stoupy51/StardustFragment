@@ -2,7 +2,7 @@
 	"type": "minecraft:overworld",
 	"generator": {
 		"type": "minecraft:noise",
-		"settings": "minecraft:floating_islands",
+		"settings": "stardust:celestial",
 		"biome_source": {
 			"type": "minecraft:multi_noise",
 			"preset": "minecraft:overworld"

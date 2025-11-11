@@ -2,6 +2,7 @@
 #> stardust:custom_blocks/celestial_portal/place_main
 #
 # @within	stardust:custom_blocks/place
+#			stardust:custom_blocks/celestial_portal/create_teleporter [ positioned ~ ~-1 ~ ]
 #
 
 tag @s add stardust.placer

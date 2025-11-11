@@ -24,9 +24,13 @@ execute if score #success stardust.data matches 1 store success score #success s
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_57_123_4 57 123 4
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_63_143_-77 63 143 -77
 execute if score #success stardust.data matches 1 store success score #success stardust.data run place template stardust:dungeon_part_72_68_-150 72 68 -150
-forceload remove -19 -150 179 52
+
+# Place the stardust dungeon portal
+scoreboard players set #infinite_energy stardust.data 1
+execute positioned -9 66 3 run function stardust:custom_blocks/stardust_dungeon_portal/place_main
 
 # Mark dimension as built if successful
+forceload remove -19 -150 179 52
 execute if score #success stardust.data matches 1 run scoreboard players set #dungeon_built stardust.data 1
 execute if score #success stardust.data matches 0 run tellraw @a {"translate": "stardust_fragment_error_the_stardust_dungeon_couldnt_be_load_som","color":"red"}
 

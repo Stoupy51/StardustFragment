@@ -13,7 +13,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.ultimate_portal
-tag @s add stardust.vanilla.minecraft_barrel
+tag @s add stardust.vanilla.minecraft_crying_obsidian
 
 # Add a custom name
 data merge entity @s {"CustomName": [{"text": "U","italic": false,"color": "dark_purple","bold": true},{"text": "l","color": "blue"},{"text": "t","color": "dark_aqua"},{"text": "i","color": "aqua"},{"text": "m","color": "green"},{"text": "a","color": "yellow"},{"text": "t","color": "gold"},{"text": "e","color": "dark_red"},{"text": " P","color": "dark_purple"},{"text": "o","color": "blue"},{"text": "r","color": "dark_aqua"},{"text": "t","color": "aqua"},{"text": "a","color": "green"},{"text": "l","color": "yellow"}]}
@@ -31,6 +31,10 @@ scoreboard players operation @s energy.transfer_rate = @s energy.max_storage
 scoreboard players add @s energy.storage 0
 scoreboard players add @s energy.change_rate 0
 function energy:v1/api/init_machine
+
+# Make the block have infinite energy if applicable
+execute if score #infinite_energy stardust.data matches 1 run tag @s add stardust.infinite_energy
+scoreboard players reset #infinite_energy stardust.data
 
 # Add tag for loop every second
 tag @s add stardust.second

@@ -60,7 +60,7 @@
 											},
 											"argument2": {
 												"type": "minecraft:add",
-												"argument1": 23.3333,
+												"argument1": 23.15,
 												"argument2": "minecraft:end/base_3d_noise"
 											}
 										}

@@ -12,5 +12,4 @@ execute if score #total_quarry_lv3 stardust.data matches 1.. if entity @s[tag=st
 execute if score #total_quarry_lv4 stardust.data matches 1.. if entity @s[tag=stardust.quarry_lv4] run function stardust:custom_blocks/quarry_lv4/destroy
 execute if score #total_quarry_lv5 stardust.data matches 1.. if entity @s[tag=stardust.quarry_lv5] run function stardust:custom_blocks/quarry_lv5/destroy
 execute if score #total_quarry_creative stardust.data matches 1.. if entity @s[tag=stardust.quarry_creative] run function stardust:custom_blocks/quarry_creative/destroy
-execute if score #total_ultimate_portal stardust.data matches 1.. if entity @s[tag=stardust.ultimate_portal] run function stardust:custom_blocks/ultimate_portal/destroy
 

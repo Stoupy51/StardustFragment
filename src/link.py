@@ -16,6 +16,7 @@ from .utils.advancements import add_visible_advancements
 from .utils.custom_ore_generation import setup_custom_ore_generation
 from .utils.dimensions import setup_dimensions
 from .utils.machines import setup_machines
+from .utils.portals import setup_portals
 from .utils.remaining import setup_remaining
 
 
@@ -41,6 +42,7 @@ def beet_default(ctx: Context) -> None:
 	setup_machines(gui)
 
 	# Setup portals and dimensions
+	setup_portals()
 	setup_dimensions()
 
 	# Setup rotatable tags

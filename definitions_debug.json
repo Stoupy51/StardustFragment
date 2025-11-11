@@ -473,27 +473,6 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"empty_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
-	"quarry_placeholder_configurator": {
-		"id": "minecraft:command_block",
-		"item_model": "stardust:quarry_placeholder_configurator",
-		"item_name": {"text": "Quarry Placeholder Configurator"},
-		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"custom_data": {"stardust": {"quarry_placeholder_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"quarry_placeholder_module": {
-		"id": "minecraft:command_block",
-		"item_model": "stardust:quarry_placeholder_module",
-		"item_name": {"text": "Quarry Placeholder Module"},
-		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"custom_data": {"stardust": {"quarry_placeholder_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"quarry_information": {
-		"id": "minecraft:command_block",
-		"item_model": "stardust:quarry_information",
-		"item_name": {"text": "Quarry Information"},
-		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"custom_data": {"stardust": {"quarry_information": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
 	"stardust_cable": {
 		"id": "minecraft:player_head",
 		"category": "energy",
@@ -1795,5 +1774,34 @@
 		"item_model": "stardust:manual",
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"manual": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_soldier": {
+		"id": "minecraft:command_block",
+		"category": "mobs",
+		"item_model": "stardust:stardust_soldier",
+		"item_name": {"text": "Stardust Soldier"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_soldier": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quarry_placeholder_configurator": {
+		"id": "minecraft:command_block",
+		"item_model": "stardust:quarry_placeholder_configurator",
+		"item_name": {"text": "Quarry Placeholder Configurator"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"quarry_placeholder_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quarry_placeholder_module": {
+		"id": "minecraft:command_block",
+		"item_model": "stardust:quarry_placeholder_module",
+		"item_name": {"text": "Quarry Placeholder Module"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"quarry_placeholder_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"quarry_information": {
+		"id": "minecraft:command_block",
+		"item_model": "stardust:quarry_information",
+		"item_name": {"text": "Quarry Information"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"quarry_information": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}
 }

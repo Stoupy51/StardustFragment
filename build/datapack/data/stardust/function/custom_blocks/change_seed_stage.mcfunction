@@ -28,6 +28,9 @@
 #			stardust:custom_blocks/darkium_seed/update_seed_model {stage:1, model:"stardust:seeds/darkium_stage_1"}
 #			stardust:custom_blocks/darkium_seed/update_seed_model {stage:2, model:"stardust:seeds/darkium_stage_2"}
 #
+# @args		stage (int)
+#			model (string)
+#
 
 # Update the growth stage score
 $scoreboard players set @s stardust.growth_stage $(stage)

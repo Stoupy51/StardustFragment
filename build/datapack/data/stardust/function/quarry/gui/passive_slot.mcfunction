@@ -19,6 +19,8 @@
 #			stardust:quarry/second {"slot":22}
 #			stardust:quarry/second {"slot":26}
 #
+# @args		slot (int)
+#
 
 # Get the item
 $data modify storage stardust:temp intruder set from storage stardust:temp Items[{Slot:$(slot)b}]

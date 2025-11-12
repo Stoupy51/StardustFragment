@@ -12,6 +12,8 @@
 #			stardust:custom_blocks/destroy_growing_seeds {item:"solarium_seed"}
 #			stardust:custom_blocks/destroy_growing_seeds {item:"darkium_seed"}
 #
+# @args		item (string)
+#
 
 # Break the block we're at and call the destroy function
 execute if entity @s[type=item_frame] run summon item ~ ~ ~ {Item:{id:"minecraft:item_frame",count:1,components:{"minecraft:custom_data":{"stardust":{"item_frame_destroy":true}}}}}

@@ -9,6 +9,8 @@
 #			stardust:custom_blocks/stardust_dungeon_portal/second {"portal":"stardust_dungeon_portal"} [ as @a[distance=..1] & at @s ]
 #			stardust:custom_blocks/ultimate_portal/second {"portal":"ultimate_portal"} [ as @a[distance=..1] & at @s ]
 #
+# @args		portal (string)
+#
 
 # If player's teleportation is < global_second, set it to global_second + 5
 execute unless score @s stardust.teleportation >= #global_second stardust.data run function stardust:dimensions/portals/init_teleportation

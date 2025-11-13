@@ -270,16 +270,16 @@ def main_additions() -> None:
 				]},
 			]
 		},
-		"stardust_pillar": {
+		"starlight_infuser": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
-			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:pillar_consuming"}},
+			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:startlight_infuser_consuming"}},	# TODO: Sound
 			"item_name": {"text":"Stardust Pillar"},
 			"rarity": "epic",
 			"lore": [
 				{"text":"Summoner of the Stardust Pillar boss","italic":False,"color":"white"},
 			],
 			WIKI_COMPONENT: [
-				{"text":"Mystical creature that summons the Stardust Pillar boss.","color":"yellow"},
+				{"text":"Mystical summoner of the Stardust Pillar boss.","color":"yellow"},
 				{"text":"\nUpon defeat, it drops valuable mid-game resources","color":"gray"},
 				{"text":"\nalong with a Stardust Dungeon Key","color":"gray"},
 				{"text":"\n\nInspired by Terraria's Stardust Pillar,","color":"gray"},

@@ -173,7 +173,10 @@
 		"stardust:manual/page_167",
 		"stardust:manual/page_168",
 		"stardust:manual/page_169",
-		"stardust:manual/page_170"
+		"stardust:manual/page_170",
+		"stardust:manual/page_171",
+		"stardust:manual/page_172",
+		"stardust:manual/page_173"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

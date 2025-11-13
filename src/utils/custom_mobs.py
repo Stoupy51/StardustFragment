@@ -58,25 +58,31 @@ execute if entity @s[type=minecraft:bat] run return run function {ns}:mobs/stard
 		("stardust_soldier", "minecraft:skeleton"),
 		("stardust_evoker", "minecraft:evoker"),
 		("stardust_bat", "minecraft:bat"),
+		("stardust_pillar", "minecraft:vex"),
 	]:
 		write_function(f"{ns}:mobs/{name}/summon", f"""
 execute summon {vanilla_mob} run function {ns}:mobs/{name}/convert
 """)
-	# Stardust soldier conversion
-	write_function(f"{ns}:mobs/stardust_soldier/convert", f"""
+	# Stardust soldier/evoker/bat conversion
+	for stardust_mob in ["stardust_soldier", "stardust_evoker", "stardust_bat"]:
+		name: str = stardust_mob.replace("_", " ").title()
+		patrol_leader: str = ""
+		if stardust_mob == "stardust_evoker":
+			patrol_leader = "\n# Remove Evoker default's nbt\ndata merge entity @s {PatrolLeader:false,Patrolling:false,CanJoinRaid:false}"
+		write_function(f"{ns}:mobs/{stardust_mob}/convert", f"""
 # Make invisible, reset nbt, set custom name and tags
 effect give @s invisibility infinite 255 true
 
 # Add tags
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
-tag @s add {ns}.stardust_soldier
+tag @s add {ns}.{stardust_mob}
 tag @s add {ns}.mob_entity
 
 # Set attributes (x2 health, x3 damage, x1.25 speed)
 attribute @s minecraft:max_health modifier add {ns}:health_scale 1 add_multiplied_base
 attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 2 add_multiplied_base
 attribute @s minecraft:movement_speed modifier add {ns}:speed_scale 0.25 add_multiplied_base
-data modify entity @s Health set value 100.0f
+data modify entity @s Health set value 2048.0f
 
 # No equipment and set loot table
 item replace entity @s weapon.mainhand with stone[item_model="minecraft:air",{COMMON_SIGNAL}]
@@ -84,19 +90,51 @@ item replace entity @s armor.head with air
 item replace entity @s armor.chest with air
 item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
-data modify entity @s DeathLootTable set value "{ns}:entities/stardust_dimension"
+data modify entity @s DeathLootTable set value "{ns}:entities/{'stardust_dimension' if stardust_mob != 'stardust_bat' else 'stardust_bat'}"
 
-# Set custom name
-data modify entity @s CustomName set value {{"text":"Stardust Soldier","color":"aqua"}}
+# Set custom name and other properties
+data modify entity @s CustomName set value {{"text":"{name}","color":"aqua"}}
+data modify entity @s CanPickUpLoot set value false
 
 # Create visual model
 execute store result score #base_scale {ns}.data run attribute @s minecraft:scale base get 1000
 tag @s add {ns}.new_mob
-execute summon item_display run function {ns}:mobs/create_model {{"entity":"stardust_soldier"}}
+execute summon item_display run function {ns}:mobs/create_model {{"entity":"{stardust_mob}"}}
+tag @s remove {ns}.new_mob
+{patrol_leader}
+""")
+
+	# Stardust Pillar
+	write_function(f"{ns}:mobs/stardust_pillar/convert", f"""
+# Make invisible, reset nbt, set custom name and tags
+effect give @s invisibility infinite 255 true
+
+# Add tags
+{"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
+tag @s add {ns}.stardust_pillar
+tag @s add {ns}.mob_entity
+
+# No equipment or loot table
+item replace entity @s weapon.mainhand with stone[item_model="minecraft:air",{COMMON_SIGNAL}]
+data modify entity @s DeathLootTable set value "none"
+
+# Set attributes (500 health, x2 damage, 5x scale)
+attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 2 add_multiplied_base
+attribute @s minecraft:max_health base set 500
+attribute @s minecraft:scale base set 5.0
+data modify entity @s Health set value 2048.0f
+
+# Set custom name and other properties
+data modify entity @s CustomName set value {{"text":"Stardust Pillar","color":"aqua"}}
+data modify entity @s PersistenceRequired set value true
+data modify entity @s Silent set value true
+
+# Create visual model
+execute store result score #base_scale {ns}.data run attribute @s minecraft:scale base get 500
+tag @s add {ns}.new_mob
+execute summon item_display run function {ns}:mobs/create_model {{"entity":"stardust_pillar"}}
 tag @s remove {ns}.new_mob
 """)
-	# TODO: Stardust Evoker
-	# TODO: Stardust Bat
 
 	# Create model function
 	write_function(f"{ns}:mobs/create_model", f"""
@@ -107,14 +145,17 @@ tag @s add {ns}.mob_model
 # Ride the mob
 ride @s mount @n[tag={ns}.new_mob]
 
+# Set item display properties
+$item replace entity @s contents with stone[item_model="{ns}:$(entity)"]
+
 # Scale and position (based on mob's base scale)
 execute store result entity @s transformation.scale[0] double 0.001 run scoreboard players get #base_scale {ns}.data
 execute store result entity @s transformation.scale[1] double 0.001 run scoreboard players get #base_scale {ns}.data
 execute store result entity @s transformation.scale[2] double 0.001 run scoreboard players get #base_scale {ns}.data
 execute store result entity @s transformation.translation[1] double -0.0015 run scoreboard players get #base_scale {ns}.data
 
-# Set item display properties
-$item replace entity @s contents with stone[item_model="{ns}:$(entity)"]
+# If stardust pillar, adjust Y position for model
+execute if data entity @s item.components{{"minecraft:item_model":"{ns}:stardust_pillar"}} store result entity @s transformation.translation[1] double -0.0012 run scoreboard players get #base_scale {ns}.data
 
 # Smooth movement
 data modify entity @s teleport_duration set value 2
@@ -234,4 +275,9 @@ function {ns}:mobs/ticking
 # If still ticking, reschedule
 execute if score #mobs_loop_ticking {ns}.data matches 1.. run schedule function {ns}:mobs/fast_ticking 1t replace
 """)
+
+	# TODO: Stardust bat summon lightning effect on players nearby
+	# Be careful with #mobs_loop_ticking
+
+	# TODO: Stardust Pillar's looping behavior (shoot mobs at players nearby)
 

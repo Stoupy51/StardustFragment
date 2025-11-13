@@ -1714,7 +1714,7 @@
 	"starlight_infuser": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",
-		"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:startlight_infuser_consuming"}},
+		"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:starlight_infuser_consuming"}},
 		"item_name": {"text": "Stardust Pillar"},
 		"rarity": "epic",
 		"lore": [{"text": "Summoner of the Stardust Pillar boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],

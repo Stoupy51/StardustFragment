@@ -20,7 +20,7 @@ tag @s add stardust.mob_entity
 attribute @s minecraft:max_health modifier add stardust:health_scale 1 add_multiplied_base
 attribute @s minecraft:attack_damage modifier add stardust:damage_scale 2 add_multiplied_base
 attribute @s minecraft:movement_speed modifier add stardust:speed_scale 0.25 add_multiplied_base
-data modify entity @s Health set value 100.0f
+data modify entity @s Health set value 2048.0f
 
 # No equipment and set loot table
 item replace entity @s weapon.mainhand with stone[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}}]
@@ -30,8 +30,9 @@ item replace entity @s armor.legs with air
 item replace entity @s armor.feet with air
 data modify entity @s DeathLootTable set value "stardust:entities/stardust_dimension"
 
-# Set custom name
+# Set custom name and other properties
 data modify entity @s CustomName set value {"translate": "stardust_soldier","color":"aqua"}
+data modify entity @s CanPickUpLoot set value false
 
 # Create visual model
 execute store result score #base_scale stardust.data run attribute @s minecraft:scale base get 1000

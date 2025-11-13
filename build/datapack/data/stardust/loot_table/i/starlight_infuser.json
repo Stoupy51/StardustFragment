@@ -14,7 +14,7 @@
 									"animation": "bow",
 									"has_consume_particles": false,
 									"sound": {
-										"sound_id": "stardust:startlight_infuser_consuming"
+										"sound_id": "stardust:starlight_infuser_consuming"
 									}
 								},
 								"minecraft:item_name": {

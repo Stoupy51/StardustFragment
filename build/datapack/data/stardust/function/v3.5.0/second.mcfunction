@@ -22,6 +22,9 @@ execute as @e[tag=!smithed.entity,tag=!global.ignore,tag=!smithed.strict,tag=!gl
 # Check for vanilla mobs in dimensions to convert to custom mobs
 execute as @e[type=#stardust:mob_grinder,tag=!stardust.dim_checked] at @s run function stardust:mobs/check_dimension
 
+# Loop through custom mobs displays entities (Skip if already ticking in a scheduled function)
+execute unless score #mobs_loop_ticking stardust.data matches 1.. run function stardust:mobs/ticking
+
 # Custom blocks second functions
 execute if score #second_entities stardust.data matches 1.. as @e[tag=stardust.second] at @s run function stardust:custom_blocks/second
 

@@ -3,11 +3,11 @@
 #
 # @executed	as the player & at current position
 #
-# @within	advancement stardust:open_manual
+# @within	advancement stardust:technical/open_manual
 #
 
 # Revoke advancement and reset score
-advancement revoke @s only stardust:open_manual
+advancement revoke @s only stardust:technical/open_manual
 scoreboard players set @s stardust.open_manual 0
 
 # Show manual dialog if holding the manual

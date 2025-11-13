@@ -13,7 +13,7 @@ def setup_remaining() -> None:
 
 	# Right click detection
 	write_load_file(f"\n# Right click detection\nscoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\n", prepend=True)
-	Mem.ctx.data[ns].advancements["right_click"] = set_json_encoder(Advancement({
+	Mem.ctx.data[ns].advancements["technical/right_click"] = set_json_encoder(Advancement({
 		"criteria": {
 			"requirement": {
 				"trigger": "minecraft:tick",
@@ -34,7 +34,7 @@ def setup_remaining() -> None:
 	}), max_level=-1)
 	write_function(f"{ns}:advancements/right_click", f"""
 # Revoke advancement and reset score
-advancement revoke @s only {ns}:right_click
+advancement revoke @s only {ns}:technical/right_click
 scoreboard players set @s {ns}.right_click 0
 """, prepend=True)
 

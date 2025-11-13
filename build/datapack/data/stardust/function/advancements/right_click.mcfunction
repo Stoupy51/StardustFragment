@@ -3,11 +3,11 @@
 #
 # @executed	as the player & at current position
 #
-# @within	advancement stardust:right_click
+# @within	advancement stardust:technical/right_click
 #
 
 # Revoke advancement and reset score
-advancement revoke @s only stardust:right_click
+advancement revoke @s only stardust:technical/right_click
 scoreboard players set @s stardust.right_click 0
 
 # If holding a quarry configurator, handle it

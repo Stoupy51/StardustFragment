@@ -2,8 +2,20 @@
 	"pack": {
 		"pack_format": 69,
 		"description": "StardustFragment [3.5.0] by Stoupy51",
-		"min_format": [69,0],
-		"max_format": [1000,0]
+		"min_format": [
+			69,
+			0
+		],
+		"max_format": [
+			1000,
+			0
+		]
 	},
-	"id": "stardust"
+	"id": "stardust",
+	"overlays": {
+		"entries": [
+			{"directory": "before_format_73","formats": [0,72],"min_format": 0,"max_format": 72},
+			{"directory": "format_73_plus","formats": [73,1000],"min_format": 73,"max_format": 1000}
+		]
+	}
 }

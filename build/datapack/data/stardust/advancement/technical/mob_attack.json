@@ -1,0 +1,17 @@
+{
+	"criteria": {
+		"requirements": {
+			"trigger": "minecraft:entity_hurt_player",
+			"conditions": {
+				"damage": {
+					"source_entity": {
+						"nbt": "{Tags:[\"stardust.mob_entity\"]}"
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:advancements/enable_mob_ticking"
+	}
+}

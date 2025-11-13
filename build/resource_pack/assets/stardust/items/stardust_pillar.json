@@ -1,6 +1,12 @@
 {
 	"model": {
 		"type": "minecraft:model",
-		"model": "stardust:item/stardust_pillar"
+		"model": "stardust:item/stardust_pillar",
+		"tints": [
+			{
+				"type": "minecraft:dye",
+				"default": [1.0,1.0,1.0]
+			}
+		]
 	}
 }

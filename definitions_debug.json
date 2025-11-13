@@ -1711,17 +1711,17 @@
 		"item_model": "stardust:stoupegg",
 		"custom_data": {"stardust": {"stoupegg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
-	"stardust_pillar": {
+	"starlight_infuser": {
 		"id": "minecraft:command_block",
 		"category": "miscellaneous",
-		"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:pillar_consuming"}},
+		"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:startlight_infuser_consuming"}},
 		"item_name": {"text": "Stardust Pillar"},
 		"rarity": "epic",
 		"lore": [{"text": "Summoner of the Stardust Pillar boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Mystical creature that summons the Stardust Pillar boss.","color": "yellow"},{"text": "\nUpon defeat, it drops valuable mid-game resources","color": "gray"},{"text": "\nalong with a Stardust Dungeon Key","color": "gray"},{"text": "\n\nInspired by Terraria's Stardust Pillar,","color": "gray"},{"text": "\nthe shield around the boss will be lowered after 50 enemies are killed near it","color": "gray"},{"text": "\n(+15 kills required per player in the area, capped at 150)","color": "gray"},{"text": "\nThen, the pillar will start to move like a normal wither","color": "gray"},{"text": "\nwith more health and damage while still summoning mobs","color": "gray"}],
+		"wiki_components": [{"text": "Mystical summoner of the Stardust Pillar boss.","color": "yellow"},{"text": "\nUpon defeat, it drops valuable mid-game resources","color": "gray"},{"text": "\nalong with a Stardust Dungeon Key","color": "gray"},{"text": "\n\nInspired by Terraria's Stardust Pillar,","color": "gray"},{"text": "\nthe shield around the boss will be lowered after 50 enemies are killed near it","color": "gray"},{"text": "\n(+15 kills required per player in the area, capped at 150)","color": "gray"},{"text": "\nThen, the pillar will start to move like a normal wither","color": "gray"},{"text": "\nwith more health and damage while still summoning mobs","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:nether_star"}]}],
-		"item_model": "stardust:stardust_pillar",
-		"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+		"item_model": "stardust:starlight_infuser",
+		"custom_data": {"stardust": {"starlight_infuser": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stardust_dungeon_key": {
 		"id": "minecraft:command_block",
@@ -1782,6 +1782,30 @@
 		"item_name": {"text": "Stardust Soldier"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"stardust_soldier": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_evoker": {
+		"id": "minecraft:command_block",
+		"category": "mobs",
+		"item_model": "stardust:stardust_evoker",
+		"item_name": {"text": "Stardust Evoker"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_evoker": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_bat": {
+		"id": "minecraft:command_block",
+		"category": "mobs",
+		"item_model": "stardust:stardust_bat",
+		"item_name": {"text": "Stardust Bat"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_bat": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"stardust_pillar": {
+		"id": "minecraft:command_block",
+		"category": "mobs",
+		"item_model": "stardust:stardust_pillar",
+		"item_name": {"text": "Stardust Pillar"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"quarry_placeholder_configurator": {
 		"id": "minecraft:command_block",

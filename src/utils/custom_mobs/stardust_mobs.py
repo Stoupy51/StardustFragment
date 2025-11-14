@@ -45,12 +45,13 @@ effect give @s invisibility infinite 255 true
 # Add tags
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
 tag @s add {ns}.{stardust_mob}
+tag @s add {ns}.stardust_mob
 tag @s add {ns}.mob_entity
 
 # Set attributes (x2 health, x3 damage, x1.25 speed)
 attribute @s minecraft:max_health modifier add {ns}:health_scale 1 add_multiplied_base
 attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 2 add_multiplied_base
-attribute @s minecraft:movement_speed modifier add {ns}:speed_scale 0.25 add_multiplied_base
+attribute @s[type=!minecraft:evoker] minecraft:movement_speed modifier add {ns}:speed_scale 0.25 add_multiplied_base
 data modify entity @s Health set value 2048.0f
 
 # No equipment and set loot table

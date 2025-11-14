@@ -7,8 +7,15 @@
 # Right click detection
 scoreboard objectives add stardust.right_click minecraft.used:minecraft.warped_fungus_on_a_stick
 
-# Scoreboard for mob hurt time tracking
+# Stardust Pillar bossbar
+bossbar add stardust:stardust_pillar [{"text": "S", "color": "#198534", "italic": false}, {"text": "t", "color": "#198537"}, {"text": "a", "color": "#19863b"}, {"text": "r", "color": "#1a873e"}, {"text": "d", "color": "#1a8842"}, {"text": "u", "color": "#1a8945"}, {"text": "s", "color": "#1b8949"}, {"text": "t", "color": "#1b8a4c"}, {"text": " ", "color": "#1b8b50"}, {"text": "P", "color": "#1c8c54"}, {"text": "i", "color": "#1c8d57"}, {"text": "l", "color": "#1d8d5b"}, {"text": "l", "color": "#1d8e5e"}, {"text": "a", "color": "#1d8f62"}, {"text": "r", "color": "#1e9065"}, {"text": " ", "color": "#1e9169"}, {"text": "(", "color": "#1e916d"}, {"text": "A", "color": "#1f9270"}, {"text": "c", "color": "#1f9374"}, {"text": "t", "color": "#1f9477"}, {"text": "i", "color": "#20957b"}, {"text": "v", "color": "#20957e"}, {"text": "e", "color": "#219682"}, {"text": " ", "color": "#219786"}, {"text": "S", "color": "#219889"}, {"text": "h", "color": "#22998d"}, {"text": "i", "color": "#229990"}, {"text": "e", "color": "#229a94"}, {"text": "l", "color": "#239b97"}, {"text": "d", "color": "#239c9b"}, {"text": ")", "color": "#249d9f"}]
+bossbar set stardust:stardust_pillar style notched_10
+bossbar set stardust:stardust_pillar color blue
+bossbar set stardust:stardust_pillar max 500
+
+# Scoreboards for custom mobs
 scoreboard objectives add stardust.hurt_time dummy
+scoreboard objectives add stardust.spawn_delay dummy
 
 # Make sure dimensions are built
 execute unless score #dungeon_built stardust.data matches 1 in stardust:dungeon run forceload add -19 -150 179 52

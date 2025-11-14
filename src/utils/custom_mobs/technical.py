@@ -10,16 +10,18 @@ from stewbeet.core import Conventions, Mem, set_json_encoder, write_function, wr
 def main() -> None:
 	ns: str = Mem.ctx.project_id
 	textures_folder: str = Mem.ctx.meta["stewbeet"]["textures_folder"]
+	all_mobs: list[str] = [os.path.splitext(mob)[0] for mob in os.listdir(f"{textures_folder}/mobs")]
 
 	# Add tints to existing mob models
-	for mob in os.listdir(f"{textures_folder}/mobs"):
-		mob_name: str = os.path.splitext(mob)[0]
-		if Mem.ctx.assets[ns].item_models.get(mob_name) is not None:
-			Mem.ctx.assets[ns].item_models[mob_name].data["model"]["tints"] = [{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]
+	for mob in all_mobs:
+		if Mem.ctx.assets[ns].item_models.get(mob) is not None:
+			Mem.ctx.assets[ns].item_models[mob].data["model"]["tints"] = [{"type":"minecraft:dye","default":[1.0,1.0,1.0]}]
 
-	# New scoreboard for hurt time
+	# New scoreboards
 	write_load_file(f"""
-# Scoreboard for mob hurt time tracking\nscoreboard objectives add {ns}.hurt_time dummy
+# Scoreboards for custom mobs
+scoreboard objectives add {ns}.hurt_time dummy
+scoreboard objectives add {ns}.spawn_delay dummy
 """, prepend=True)
 
 	# Check for new mobs in the dimensions
@@ -187,5 +189,47 @@ function {ns}:mobs/ticking
 
 # If still ticking, reschedule
 execute if score #mobs_loop_ticking {ns}.data matches 1.. run schedule function {ns}:mobs/fast_ticking 1t replace
+""")
+
+	## Delay convert functions for each mob (Spawn animation)
+	write_function(f"{ns}:mobs/delay/convert", f"""
+# Convert now
+$function {ns}:mobs/$(entity)/convert
+
+# Remove entity AI and set it Invulnerable during animation
+data modify entity @s NoAI set value true
+data modify entity @s Invulnerable set value true
+
+# Tag as delayed entity
+tag @s add {ns}.delayed_convert
+
+# Make the entity ascend for 32 ticks (1.6 seconds)
+scoreboard players operation @s {ns}.spawn_delay = #global_tick {ns}.data
+scoreboard players add @s {ns}.spawn_delay 32
+
+# Schedule end delay convert check
+schedule function {ns}:mobs/delay/schedule 1t append
+""")
+	# Schedule delay convert check function
+	write_function(f"{ns}:mobs/delay/schedule", f"""
+# Check if delay is over
+scoreboard players set #remaining_delays {ns}.data 0
+execute as @e[tag={ns}.delayed_convert] at @s run function {ns}:mobs/delay/tick
+
+# If still delays remaining, reschedule
+execute if score #remaining_delays {ns}.data matches 1.. run schedule function {ns}:mobs/delay/schedule 1t replace
+""")
+	# Schedule delay convert check function
+	write_function(f"{ns}:mobs/delay/tick", f"""
+# Teleport entity upwards (2.0 blocks / 32 = 0.0625 per tick)
+tp @s ~ ~0.0625 ~
+
+# Check if delay is over
+execute if score #global_tick {ns}.data >= @s {ns}.spawn_delay run data modify entity @s NoAI set value false
+execute if score #global_tick {ns}.data >= @s {ns}.spawn_delay run data modify entity @s Invulnerable set value false
+execute if score #global_tick {ns}.data >= @s {ns}.spawn_delay run return run tag @s remove {ns}.delayed_convert
+
+# Else, mark as remaining
+scoreboard players add #remaining_delays {ns}.data 1
 """)
 

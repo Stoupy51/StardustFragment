@@ -2,7 +2,7 @@
 #> stardust:v3.5.0/load/valid_dependencies
 #
 # @within	stardust:v3.5.0/load/secondary
-#			stardust:v3.5.0/load/valid_dependencies 1t replace
+#			stardust:v3.5.0/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
@@ -34,6 +34,9 @@ execute if score #dependency_error stardust.data matches 1 if score #smart_ore_g
 execute if score #dependency_error stardust.data matches 1 unless score #itemio.major load.status matches 1.. run tellraw @a {"translate": "stardust.itemio_v1_4_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}
 execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 unless score #itemio.minor load.status matches 4.. run tellraw @a {"translate": "stardust.itemio_v1_4_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}
 execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 if score #itemio.minor load.status matches 4 unless score #itemio.patch load.status matches 1.. run tellraw @a {"translate": "stardust.itemio_v1_4_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}
+execute if score #dependency_error stardust.data matches 1 unless score $bs.move.major load.status matches 3.. run tellraw @a {"translate": "stardust.bookshelf_move_v3_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
+execute if score #dependency_error stardust.data matches 1 if score $bs.move.major load.status matches 3 unless score $bs.move.minor load.status matches 1.. run tellraw @a {"translate": "stardust.bookshelf_move_v3_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
+execute if score #dependency_error stardust.data matches 1 if score $bs.move.major load.status matches 3 if score $bs.move.minor load.status matches 1 unless score $bs.move.patch load.status matches 1.. run tellraw @a {"translate": "stardust.bookshelf_move_v3_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
 execute if score #dependency_error stardust.data matches 1 unless score $bs.view.major load.status matches 3.. run tellraw @a {"translate": "stardust.bookshelf_view_v3_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
 execute if score #dependency_error stardust.data matches 1 if score $bs.view.major load.status matches 3 unless score $bs.view.minor load.status matches 1.. run tellraw @a {"translate": "stardust.bookshelf_view_v3_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}
 execute if score #dependency_error stardust.data matches 1 if score $bs.view.major load.status matches 3 if score $bs.view.minor load.status matches 1 unless score $bs.view.patch load.status matches 1.. run tellraw @a {"translate": "stardust.bookshelf_view_v3_1_1","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}

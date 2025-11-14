@@ -1,11 +1,9 @@
 
 #> stardust:quarry/display/kill_shulkers
 #
-# @executed	as @e[tag=stardust.second] & at @s
-#
-# @within	stardust:quarry/display/summon_shulkers 1t append
-#			stardust:quarry/display/kill_shulkers 1s replace
-#			stardust:quarry/work 1t append
+# @within	stardust:quarry/display/summon_shulkers 1t append [ scheduled ]
+#			stardust:quarry/display/kill_shulkers 1s replace [ scheduled ]
+#			stardust:quarry/work 1t append [ scheduled ]
 #
 
 # Increment score of all shulkers, and kill them if score >= 2 seconds

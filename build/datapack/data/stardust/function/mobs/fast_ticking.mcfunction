@@ -1,10 +1,8 @@
 
 #> stardust:mobs/fast_ticking
 #
-# @executed	as the player & at current position
-#
-# @within	stardust:advancements/enable_mob_ticking 1t append
-#			stardust:mobs/fast_ticking 1t replace
+# @within	stardust:advancements/enable_mob_ticking 1t append [ scheduled ]
+#			stardust:mobs/fast_ticking 1t replace [ scheduled ]
 #
 
 # Decrease ticking timer & Tick mob displays

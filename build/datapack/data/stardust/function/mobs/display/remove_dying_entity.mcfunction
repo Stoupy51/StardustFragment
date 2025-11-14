@@ -1,10 +1,8 @@
 
 #> stardust:mobs/display/remove_dying_entity
 #
-# @executed	as @e[type=item_display,tag=...] & at @s
-#
-# @within	stardust:mobs/display/start_dying 1t append
-#			stardust:mobs/display/remove_dying_entity 1t replace
+# @within	stardust:mobs/display/start_dying 1t append [ scheduled ]
+#			stardust:mobs/display/remove_dying_entity 1t replace [ scheduled ]
 #
 
 # Try to kill displays

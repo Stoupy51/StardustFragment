@@ -14,12 +14,13 @@ effect give @s invisibility infinite 255 true
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.stardust_bat
+tag @s add stardust.stardust_mob
 tag @s add stardust.mob_entity
 
 # Set attributes (x2 health, x3 damage, x1.25 speed)
 attribute @s minecraft:max_health modifier add stardust:health_scale 1 add_multiplied_base
 attribute @s minecraft:attack_damage modifier add stardust:damage_scale 2 add_multiplied_base
-attribute @s minecraft:movement_speed modifier add stardust:speed_scale 0.25 add_multiplied_base
+attribute @s[type=!minecraft:evoker] minecraft:movement_speed modifier add stardust:speed_scale 0.25 add_multiplied_base
 data modify entity @s Health set value 2048.0f
 
 # No equipment and set loot table

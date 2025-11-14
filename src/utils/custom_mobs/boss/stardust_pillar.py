@@ -118,8 +118,9 @@ execute store result bossbar {ns}:stardust_pillar value run scoreboard players g
 
 	# Remove shield function
 	write_function(f"{ns}:mobs/stardust_pillar/remove_shield", f"""
-# Remove NoAI to allow movement
+# Remove NoAI to allow movement, and clear resistance effect
 data modify entity @s NoAI set value false
+effect clear @s minecraft:resistance
 
 # Update bossbar text
 bossbar set {ns}:stardust_pillar name {BOSSBAR_NO_SHIELD_TEXT}

@@ -17,7 +17,6 @@ from stewbeet import (
 	Mem,
 	ingr_repr,
 )
-from stouputils.print import info
 
 
 # Constants
@@ -387,7 +386,4 @@ def main_additions() -> None:
 			Mem.definitions[k].update(v)
 		else:
 			Mem.definitions[k] = v
-
-	# Log success message
-	info("Applied StardustFragment item additions successfully!")
 

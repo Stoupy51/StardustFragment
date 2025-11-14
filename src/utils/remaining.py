@@ -42,5 +42,18 @@ scoreboard players set @s {ns}.right_click 0
 	write_tick_file(f"\n# Global counter for various features\nscoreboard players add #global_tick {ns}.data 1\n", prepend=True)
 	write_versioned_function("second", f"\n# Global counter for various features\nscoreboard players add #global_second {ns}.data 1\n", prepend=True)
 
+	# Enchantment for ticking mobs
+	# Mem.ctx.data[ns].enchantments["ticking"] = set_json_encoder(Enchantment({
+	# 	"description": "DEVELOPMENT ONLY: Ticking entity enchantment",
+	# 	"supported_items": "minecraft:stone",
+	# 	"weight": 1,
+	# 	"max_level": 1,
+	# 	"min_cost": {"base": 0,"per_level_above_first": 0},
+	# 	"max_cost": {"base": 0,"per_level_above_first": 0},
+	# 	"anvil_cost": 0,
+	# 	"slots": ["any"],
+	# 	"effects": {"minecraft:tick": [{"effect": {"type": "minecraft:run_function","function": f"{ns}:utils/enchant_tick"}}]}
+	# }), max_level=-1)
+
 	# TODO: pearls, always dragon egg on death, travel staff, snipers, Dog Excrements, etc.
 

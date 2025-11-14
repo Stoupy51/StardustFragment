@@ -1,9 +1,9 @@
 
-#> stardust:mobs/start_dying_display
+#> stardust:mobs/display/start_dying
 #
 # @executed	as @e[type=item_display,tag=...] & at @s
 #
-# @within	stardust:mobs/loop_display
+# @within	stardust:mobs/loop/display
 #
 
 # Tag as dying model to avoid looping
@@ -22,5 +22,5 @@ data modify entity @s teleport_duration set value 20
 
 # Schedule removal after 20 ticks
 scoreboard players set @s stardust.data 20
-schedule function stardust:mobs/remove_dying_display 1t append
+schedule function stardust:mobs/display/remove_dying_entity 1t append
 

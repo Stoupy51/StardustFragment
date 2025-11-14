@@ -18,7 +18,6 @@ from stewbeet import (
 	TextComponent,
 	ingr_repr,
 )
-from stouputils.print import info
 
 from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
 
@@ -433,7 +432,4 @@ def main_additions() -> None:
 			Mem.definitions[k].update(v)
 		else:
 			Mem.definitions[k] = v
-
-	# Log success message
-	info("Applied StardustFragment equipments additions successfully!")
 

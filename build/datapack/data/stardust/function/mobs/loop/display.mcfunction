@@ -1,9 +1,9 @@
 
-#> stardust:mobs/loop_display
+#> stardust:mobs/loop/display
 #
 # @executed	as @e[type=item_display,tag=...] & at @s
 #
-# @within	stardust:mobs/ticking [ as @e[type=item_display,tag=...] & at @s ]
+# @within	stardust:mobs/loop/main
 #
 
 # Get mob's data
@@ -13,7 +13,7 @@ execute on vehicle run data modify storage stardust:temp entity_data set from en
 # Check if mob entity is still alive (hp >= 0), if not start dying display and stop here
 scoreboard players set #mob_health stardust.data 0
 execute on vehicle store result score #mob_health stardust.data run data get storage stardust:temp entity_data.Health 1000
-execute if score #mob_health stardust.data matches ..0 run return run function stardust:mobs/start_dying_display
+execute if score #mob_health stardust.data matches ..0 run return run function stardust:mobs/display/start_dying
 
 # Apply rotation (only yaw)
 data modify entity @s Rotation[0] set from storage stardust:temp entity_data.Rotation[0]

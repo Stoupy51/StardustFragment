@@ -16,6 +16,7 @@ tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add smithed.strict
 tag @s add global.ignore.kill
+$tag @s add stardust.$(entity)
 tag @s add stardust.mob_model
 
 # Ride the mob

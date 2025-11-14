@@ -9,7 +9,6 @@ from stewbeet import (
 	JsonDict,
 	Mem,
 )
-from stouputils.print import info
 
 
 def main_additions() -> None:
@@ -46,7 +45,4 @@ def main_additions() -> None:
 			Mem.definitions[k].update(v)
 		else:
 			Mem.definitions[k] = v
-
-	# Log success message
-	info("Applied StardustFragment item additions successfully!")
 

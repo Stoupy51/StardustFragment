@@ -1,9 +1,9 @@
 
-#> stardust:mobs/try_kill_display
+#> stardust:mobs/display/try_kill
 #
 # @executed	as @e[type=item_display,tag=stardust.dying_model]
 #
-# @within	stardust:mobs/remove_dying_display [ as @e[type=item_display,tag=stardust.dying_model] ]
+# @within	stardust:mobs/display/remove_dying_entity [ as @e[type=item_display,tag=stardust.dying_model] ]
 #
 
 # Decrease timer

@@ -19,9 +19,12 @@ def main() -> None:
 
 	# New scoreboards
 	write_load_file(f"""
-# Scoreboards for custom mobs
+# Scoreboards for custom mobs and team
 scoreboard objectives add {ns}.hurt_time dummy
 scoreboard objectives add {ns}.spawn_delay dummy
+team add {ns}.mob {{"text":"Stardust Mob","color":"aqua"}}
+team modify {ns}.mob collisionRule always
+team modify {ns}.mob friendlyFire false
 """, prepend=True)
 
 	# Check for new mobs in the dimensions

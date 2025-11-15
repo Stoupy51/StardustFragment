@@ -42,11 +42,12 @@ execute summon {vanilla_mob} run function {ns}:mobs/{name}/convert
 # Make invisible, reset nbt, set custom name and tags
 effect give @s invisibility infinite 255 true
 
-# Add tags
+# Add tags & join team
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
 tag @s add {ns}.{stardust_mob}
 tag @s add {ns}.stardust_mob
 tag @s add {ns}.mob_entity
+team join {ns}.mob @s
 
 # Set attributes (x2 health, x3 damage, x1.25 speed)
 attribute @s minecraft:max_health modifier add {ns}:health_scale 1 add_multiplied_base

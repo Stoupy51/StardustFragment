@@ -7,11 +7,12 @@
 # Make invisible, reset nbt, set custom name and tags
 effect give @s invisibility infinite 255 true
 
-# Add tags
+# Add tags & join team
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.stardust_pillar
 tag @s add stardust.mob_entity
+team join stardust.mob @s
 
 # Mark as new mob for setup
 tag @s add stardust.new_mob

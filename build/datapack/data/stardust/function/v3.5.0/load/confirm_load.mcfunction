@@ -13,9 +13,12 @@ bossbar set stardust:stardust_pillar style notched_10
 bossbar set stardust:stardust_pillar color blue
 bossbar set stardust:stardust_pillar max 500
 
-# Scoreboards for custom mobs
+# Scoreboards for custom mobs and team
 scoreboard objectives add stardust.hurt_time dummy
 scoreboard objectives add stardust.spawn_delay dummy
+team add stardust.mob {"translate": "stardust_mob","color":"aqua"}
+team modify stardust.mob collisionRule always
+team modify stardust.mob friendlyFire false
 
 # Make sure dimensions are built
 execute unless score #dungeon_built stardust.data matches 1 in stardust:dungeon run forceload add -19 -150 179 52

@@ -10,12 +10,13 @@
 # Make invisible, reset nbt, set custom name and tags
 effect give @s invisibility infinite 255 true
 
-# Add tags
+# Add tags & join team
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.stardust_soldier
 tag @s add stardust.stardust_mob
 tag @s add stardust.mob_entity
+team join stardust.mob @s
 
 # Set attributes (x2 health, x3 damage, x1.25 speed)
 attribute @s minecraft:max_health modifier add stardust:health_scale 1 add_multiplied_base

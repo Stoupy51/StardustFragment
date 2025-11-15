@@ -1,6 +1,6 @@
 
 # Imports
-from beet import Predicate
+from beet import LootTable, Predicate
 from stewbeet.core import Conventions, Mem, set_json_encoder, write_function
 
 
@@ -28,9 +28,8 @@ execute if entity @s[type=minecraft:bat] run return run function {ns}:mobs/stard
 		("stardust_bat", "minecraft:bat"),
 		("stardust_pillar", "minecraft:vex"),
 	]:
-		write_function(f"{ns}:mobs/{name}/summon", f"""
-execute summon {vanilla_mob} run function {ns}:mobs/{name}/convert
-""")
+		write_function(f"{ns}:mobs/{name}/summon", f"execute summon {vanilla_mob} run function {ns}:mobs/{name}/convert")
+
 	# Stardust soldier/evoker/bat conversion
 	for stardust_mob in ["stardust_soldier", "stardust_evoker", "stardust_bat"]:
 		name: str = stardust_mob.replace("_", " ").title()
@@ -82,4 +81,82 @@ tag @s remove {ns}.new_mob
 # Every second, 10% chance to summon lightning at nearest player within 10 blocks
 execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creative,distance=..10] run summon minecraft:lightning_bolt
 """)
+
+	# Loot tables
+	Mem.ctx.data[ns].loot_tables["entities/stardust_dimension"] = set_json_encoder(LootTable({
+		"type": "minecraft:entity",
+		"pools": [
+			{
+				"rolls": 1,
+				"bonus_rolls": 0,
+				"entries": [
+					{
+						"weight": 9,
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stardust_ingot",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": {
+									"min": 1,
+									"max": 8
+								}
+							}
+						]
+					},
+					{
+						"weight": 1,
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stardust_essence"
+					}
+				]
+			}
+		]
+	}), max_level=-1)
+	Mem.ctx.data[ns].loot_tables["entities/stardust_bat"] = set_json_encoder(LootTable({
+		"type": "minecraft:entity",
+		"pools": [
+			{
+				"rolls": 1,
+				"bonus_rolls": 0,
+				"entries": [
+					{
+						"type": "minecraft:item",
+						"weight": 10,
+						"name": "minecraft:netherite_scrap",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": {
+									"type": "minecraft:uniform",
+									"min": 1,
+									"max": 2
+								}
+							}
+						]
+					},
+					{
+						"weight": 9,
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stardust_ingot",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": {
+									"min": 1,
+									"max": 8
+								}
+							}
+						]
+					},
+					{
+						"weight": 1,
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stardust_essence"
+					}
+				]
+			}
+		]
+	}
+	), max_level=-1)
 

@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/lucky_artifact_bag",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.lucky_artifact_bag",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/lucky_artifact_bag",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

@@ -6,8 +6,8 @@
 # @within	stardust:mobs/delay/schedule [ as @e[tag=stardust.delayed_convert] & at @s ]
 #
 
-# Teleport entity upwards (2.0 blocks / 32 = 0.0625 per tick)
-tp @s ~ ~0.0625 ~
+# Teleport entity upwards (2.0 blocks / 50 = 0.04 per tick)
+tp @s ~ ~0.04 ~
 
 # Check if delay is over
 execute if score #global_tick stardust.data >= @s stardust.spawn_delay run data modify entity @s NoAI set value false

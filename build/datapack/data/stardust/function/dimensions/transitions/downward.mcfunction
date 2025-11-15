@@ -19,5 +19,5 @@ execute if dimension stardust:stardust in stardust:celestial run return run tp @
 execute if dimension stardust:celestial in minecraft:overworld run return run tp @s ~ 480 ~
 
 # If dimension is dungeon, teleport back to home
-execute if dimension stardust:dungeon run return run function stardust:dimensions/teleport_home
+execute if dimension stardust:dungeon if entity @s[type=player] run return run function stardust:dimensions/teleport_home
 

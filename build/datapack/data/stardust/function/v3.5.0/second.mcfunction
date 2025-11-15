@@ -19,6 +19,9 @@ execute if score #total_custom_blocks stardust.data matches 1.. as @e[type=#star
 # Dimension transitions for entities
 execute as @e[tag=!smithed.entity,tag=!global.ignore,tag=!smithed.strict,tag=!global.ignore.kill,predicate=stardust:transitions/outside] at @s run function stardust:dimensions/transitions/check
 
+# Stardust dungeon loop
+execute if score #players_in_dungeon stardust.data matches 1.. in stardust:dungeon run function stardust:dimensions/dungeon/second
+
 # Check for vanilla mobs in dimensions to convert to custom mobs
 execute as @e[type=#stardust:mob_grinder,tag=!stardust.dim_checked] at @s run function stardust:mobs/check_dimension
 

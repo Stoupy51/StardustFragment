@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/ender_stardust_ore",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.ender_stardust_ore",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/ender_stardust_ore",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

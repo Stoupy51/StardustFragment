@@ -1,9 +1,9 @@
 {
 	"pack": {
-		"pack_format": 69,
+		"pack_format": 74,
 		"description": "StardustFragment [3.5.0] by Stoupy51",
 		"min_format": [
-			69,
+			74,
 			0
 		],
 		"max_format": [

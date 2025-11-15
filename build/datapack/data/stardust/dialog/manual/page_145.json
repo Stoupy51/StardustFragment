@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/life_crystal",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.life_crystal",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/life_crystal",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

@@ -16,8 +16,7 @@
 								"type": "minecraft:uniform",
 								"min": 1,
 								"max": 2
-							},
-							"add": false
+							}
 						}
 					]
 				},
@@ -31,8 +30,7 @@
 							"count": {
 								"min": 1,
 								"max": 8
-							},
-							"add": false
+							}
 						}
 					]
 				},

@@ -1,7 +1,7 @@
 
 #> stardust:mobs/delay/schedule
 #
-# @within	stardust:mobs/delay/convert 1t append [ scheduled ]
+# @within	stardust:mobs/delay/spawn 1t append [ scheduled ]
 #			stardust:mobs/delay/schedule 1t replace [ scheduled ]
 #
 

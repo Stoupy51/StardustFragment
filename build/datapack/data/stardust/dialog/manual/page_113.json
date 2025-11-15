@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/solarium_axe",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.solarium_axe",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/solarium_axe",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

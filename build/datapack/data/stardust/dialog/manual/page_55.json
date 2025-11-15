@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/ultimate_photovoltaic_cell",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.ultimate_photovoltaic_cell",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/ultimate_photovoltaic_cell",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

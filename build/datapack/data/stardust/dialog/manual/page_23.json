@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/awakened_stardust_block",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.awakened_stardust_block",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/awakened_stardust_block",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

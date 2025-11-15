@@ -13,8 +13,7 @@
 							"count": {
 								"min": 24,
 								"max": 42
-							},
-							"add": false
+							}
 						}
 					]
 				}
@@ -26,17 +25,30 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "stardust:i/stardust_essence",
+					"value": "stardust:i/stardust_core",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": {
-								"min": 24,
-								"max": 42
-							},
-							"add": false
+								"min": 2,
+								"max": 8
+							}
 						}
 					]
+				}
+			]
+		},
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 16,
+				"max": 24
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "stardust:random_seed"
 				}
 			]
 		}

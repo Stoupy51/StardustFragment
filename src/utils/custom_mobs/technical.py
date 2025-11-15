@@ -70,7 +70,7 @@ execute store result entity @s transformation.scale[1] double 0.001 run scoreboa
 execute store result entity @s transformation.scale[2] double 0.001 run scoreboard players get #base_scale {ns}.data
 execute store result entity @s transformation.translation[1] double -0.0015 run scoreboard players get #base_scale {ns}.data
 
-# If stardust pillar, adjust Y position for model
+# If Stardust Pillar, adjust Y position for model
 execute if data entity @s item.components{{"minecraft:item_model":"{ns}:stardust_pillar"}} store result entity @s transformation.translation[1] double -0.0012 run scoreboard players get #base_scale {ns}.data
 
 # Smooth movement
@@ -199,6 +199,13 @@ execute if score #mobs_loop_ticking {ns}.data matches 1.. run schedule function 
 # Convert now
 $function {ns}:mobs/$(entity)/convert
 
+# Delay spawn
+function {ns}:mobs/delay/spawn
+
+# Incompatibility with RandomMobSizes (due to how it modifies entity size on summon)
+tag @s add random_mob_sizes.checked
+""")
+	write_function(f"{ns}:mobs/delay/spawn", f"""
 # Remove entity AI and set it Invulnerable during animation
 data modify entity @s NoAI set value true
 data modify entity @s Invulnerable set value true
@@ -206,9 +213,9 @@ data modify entity @s Invulnerable set value true
 # Tag as delayed entity
 tag @s add {ns}.delayed_convert
 
-# Make the entity ascend for 32 ticks (1.6 seconds)
+# Make the entity ascend for 50 ticks (2.5 seconds)
 scoreboard players operation @s {ns}.spawn_delay = #global_tick {ns}.data
-scoreboard players add @s {ns}.spawn_delay 32
+scoreboard players add @s {ns}.spawn_delay 50
 
 # Schedule end delay convert check
 schedule function {ns}:mobs/delay/schedule 1t append
@@ -224,8 +231,8 @@ execute if score #remaining_delays {ns}.data matches 1.. run schedule function {
 """)
 	# Schedule delay convert check function
 	write_function(f"{ns}:mobs/delay/tick", f"""
-# Teleport entity upwards (2.0 blocks / 32 = 0.0625 per tick)
-tp @s ~ ~0.0625 ~
+# Teleport entity upwards (2.0 blocks / 50 = 0.04 per tick)
+tp @s ~ ~0.04 ~
 
 # Check if delay is over
 execute if score #global_tick {ns}.data >= @s {ns}.spawn_delay run data modify entity @s NoAI set value false

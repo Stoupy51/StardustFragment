@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/dragon_pearl",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.dragon_pearl",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/dragon_pearl",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

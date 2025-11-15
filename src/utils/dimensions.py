@@ -3,7 +3,7 @@
 # Imports
 import os
 
-from beet import Predicate
+from beet import Advancement, Predicate
 from stewbeet.core import Conventions, JsonDict, Mem, set_json_encoder, write_function, write_load_file, write_versioned_function
 from stouputils.io import relative_path
 
@@ -136,6 +136,89 @@ execute if dimension {ns}:stardust in {ns}:celestial run return run tp @s ~ 480 
 execute if dimension {ns}:celestial in minecraft:overworld run return run tp @s ~ 480 ~
 
 # If dimension is dungeon, teleport back to home
-execute if dimension {ns}:dungeon run return run function {ns}:dimensions/teleport_home
+execute if dimension {ns}:dungeon if entity @s[type=player] run return run function {ns}:dimensions/teleport_home
+""")
+
+	## Prevent gamemode survival in Stardust Dungeon
+	# Change dimension advancement
+	Mem.ctx.data[ns].advancements["technical/changed_dimension"] = set_json_encoder(Advancement({
+		"criteria": {"requirements": {"trigger": "minecraft:changed_dimension"}},
+		"rewards": {"function": f"{ns}:advancements/changed_dimension"}
+	}), max_level=-1)
+	write_function(f"{ns}:advancements/changed_dimension", f"""
+# Revoke advancement
+advancement revoke @s only {ns}:technical/changed_dimension
+
+# If in stardust:dungeon, and in survival mode, and no is_in_dungeon tag, move to adventure mode
+execute if dimension {ns}:dungeon if entity @s[gamemode=survival,tag=!{ns}.is_in_dungeon] run function {ns}:dimensions/dungeon/enter_dimension
+
+# Do the opposite
+execute unless dimension {ns}:dungeon if entity @s[tag={ns}.is_in_dungeon] run function {ns}:dimensions/dungeon/exit_dimension
+""")
+
+	# Enter dimension function
+	write_function(f"{ns}:dimensions/dungeon/enter_dimension", f"""
+# Add is_in_dungeon tag and change to adventure mode
+tag @s add {ns}.is_in_dungeon
+gamemode adventure @s[gamemode=survival]
+
+# Increment score of players in dungeon
+scoreboard players add #players_in_dungeon {ns}.data 1
+""")
+
+	# Exit dimension function
+	write_function(f"{ns}:dimensions/dungeon/exit_dimension", f"""
+# Remove is_in_dungeon tag and change to survival mode
+tag @s remove {ns}.is_in_dungeon
+gamemode survival @s[gamemode=adventure]
+
+# Remove bossbar just in case (always false selector)
+bossbar set {ns}:stardust_guardian players @s[tag={ns}.players_do_not_have_this_tag]
+
+# Decrement score of players in dungeon
+scoreboard players remove #players_in_dungeon {ns}.data 1
+""")
+
+	# Loop in dungeon (to remove unexpected mobs, and enter portal)
+	write_versioned_function("second", f"""
+# Stardust dungeon loop
+execute if score #players_in_dungeon {ns}.data matches 1.. in {ns}:dungeon run function {ns}:dimensions/dungeon/second
+""")
+	write_function(f"{ns}:dimensions/dungeon/second", f"""
+# Kill unwanted entities in the dungeon
+tp @e[type=minecraft:ghast,y=0,{Conventions.AVOID_NO_KILL}] 0 -10000 0
+tp @e[type=minecraft:enderman,y=0,{Conventions.AVOID_NO_KILL}] 0 -10000 0
+
+# Teleport players holding keys
+execute as @a[x=-2.5,y=67,z=-2.5,dx=0,dz=0,distance=..0.5] if items entity @s weapon.* *[custom_data~{{{ns}:{{stardust_dungeon_key:true}}}}] at @s run function stardust:dimensions/dungeon/first_island
+
+# Teleport players to the right location when entering lava portals
+tp @a[x=105,y=92,z=-130,distance=..4,gamemode=!spectator] 144 119.2 -79 -8 0
+tp @a[x=147,y=115,z=-48,distance=..4,gamemode=!spectator] 142 129.2 -27 45 0
+tp @a[x=110,y=131,z=-13,distance=..4,gamemode=!spectator] 87 144.2 28 115 -10
+
+# Last lava portal: Summon the boss and teleport players to the right location
+execute as @a[x=64,y=148,z=23,distance=..4,gamemode=!spectator] at @s run function stardust:dimensions/dungeon/final_island
+""")
+	write_function(f"{ns}:dimensions/dungeon/first_island", f"""
+# Clear one key from player
+clear @s *[custom_data~{{{ns}:{{stardust_dungeon_key:true}}}}] 1
+
+# Teleport in the air with slow falling
+effect give @s slow_falling 5
+tp @s 6 100 -11
+
+# Playsound
+playsound entity.player.levelup ambient @s 6 98 -11
+
+# Grant advancement
+advancement grant @s only {ns}:visible/adventure/enter_stardust_dungeon
+""")
+	write_function(f"{ns}:dimensions/dungeon/final_island", f"""
+# Teleport to boss area
+tp @s 81.0 169.2 -51.0
+
+# If no Stardust Guardian, summon one
+execute unless entity @e[tag={ns}.stardust_guardian,distance=..200] positioned 68.0 169.69 -31 run function {ns}:mobs/stardust_guardian/summon
 """)
 

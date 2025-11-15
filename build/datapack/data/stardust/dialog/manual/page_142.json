@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/home_travel_staff",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.home_travel_staff",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/home_travel_staff",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

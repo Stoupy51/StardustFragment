@@ -162,6 +162,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_evoker"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_bat"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_pillar"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_guardian"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_configurator"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_module"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_information"}]}

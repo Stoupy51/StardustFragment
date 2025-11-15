@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/celestial_portal",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.celestial_portal",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/celestial_portal",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

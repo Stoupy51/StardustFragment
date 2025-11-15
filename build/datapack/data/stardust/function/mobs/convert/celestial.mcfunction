@@ -12,6 +12,7 @@ attribute @s minecraft:attack_damage modifier add stardust:damage_scale 0.5 add_
 attribute @s minecraft:movement_speed modifier add stardust:speed_scale 0.1 add_multiplied_base
 data modify entity @s Health set value 2048.0f
 
-# Set loot table
+# Set loot table & tags
 data modify entity @s DeathLootTable set value "stardust:entities/celestial_dimension"
+tag @s add smithed.entity
 

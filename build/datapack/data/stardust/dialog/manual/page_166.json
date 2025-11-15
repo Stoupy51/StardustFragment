@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/quarry_configurator",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.quarry_configurator",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/quarry_configurator",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

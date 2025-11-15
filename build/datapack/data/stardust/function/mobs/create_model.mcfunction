@@ -7,6 +7,7 @@
 #			stardust:mobs/stardust_evoker/convert {"entity":"stardust_evoker"}
 #			stardust:mobs/stardust_bat/convert {"entity":"stardust_bat"}
 #			stardust:mobs/stardust_pillar/convert {"entity":"stardust_pillar"}
+#			stardust:mobs/stardust_guardian/convert {"entity":"stardust_guardian"}
 #
 # @args		entity (string)
 #
@@ -31,7 +32,7 @@ execute store result entity @s transformation.scale[1] double 0.001 run scoreboa
 execute store result entity @s transformation.scale[2] double 0.001 run scoreboard players get #base_scale stardust.data
 execute store result entity @s transformation.translation[1] double -0.0015 run scoreboard players get #base_scale stardust.data
 
-# If stardust pillar, adjust Y position for model
+# If Stardust Pillar, adjust Y position for model
 execute if data entity @s item.components{"minecraft:item_model":"stardust:stardust_pillar"} store result entity @s transformation.translation[1] double -0.0012 run scoreboard players get #base_scale stardust.data
 
 # Smooth movement

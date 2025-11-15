@@ -15,8 +15,7 @@
 							"count": {
 								"min": 1,
 								"max": 8
-							},
-							"add": false
+							}
 						}
 					]
 				},

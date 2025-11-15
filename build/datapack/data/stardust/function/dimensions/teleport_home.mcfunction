@@ -11,6 +11,9 @@
 #			stardust:dimensions/transitions/downward
 #
 
+# Slow falling effect to avoid fall damage
+effect give @s minecraft:slow_falling 3 255 true
+
 # If no respawn nbt, teleport to world spawn
 execute unless data entity @s respawn run return run function stardust:dimensions/teleport_to with storage stardust:main world_spawn
 

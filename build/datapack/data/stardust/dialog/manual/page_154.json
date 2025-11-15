@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/darkium_seed",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.darkium_seed",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/darkium_seed",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

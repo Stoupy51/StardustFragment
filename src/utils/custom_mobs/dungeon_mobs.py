@@ -16,8 +16,12 @@ attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 3 add_multip
 attribute @s minecraft:movement_speed modifier add {ns}:speed_scale 0.35 add_multiplied_base
 data modify entity @s Health set value 2048.0f
 
-# Set loot table
+# Set loot table & tags
 data modify entity @s DeathLootTable set value "{ns}:entities/dungeon_dimension"
+tag @s add smithed.entity
+
+# Join mob team
+team join {ns}.mob @s
 """)
 
 	# Loot table

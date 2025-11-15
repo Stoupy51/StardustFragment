@@ -3,23 +3,23 @@
 	"title": [
 		{
 			"sprite": "stardust:item/starlight_infuser",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"translate": "stardust.starlight_infuser",
-			"underlined": true
+			"underlined": true,
+			"atlas": "minecraft:items"
 		},
 		" ",
 		{
 			"sprite": "stardust:item/starlight_infuser",
-			"atlas": "minecraft:items",
 			"shadow_color": [
 				0,
 				0,

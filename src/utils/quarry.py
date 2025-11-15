@@ -11,6 +11,7 @@ from stewbeet.core import CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encode
 # Setup quarry work and visuals
 def quarry(gui: dict[str, str]) -> None:
 
+	## TODO: Replace shulker by block display
 	## TODO: FORCELOAD
 	## Constants
 	ns: str = Mem.ctx.project_id

@@ -24,3 +24,6 @@ data modify entity @s teleport_duration set value 20
 scoreboard players set @s stardust.data 20
 schedule function stardust:mobs/display/remove_dying_entity 1t append
 
+# If stardust pillar, run death function
+execute if entity @s[tag=stardust.stardust_pillar] run function stardust:mobs/stardust_pillar/death
+

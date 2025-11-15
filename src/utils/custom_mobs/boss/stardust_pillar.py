@@ -5,6 +5,8 @@ import json
 from stewbeet import JsonDict
 from stewbeet.core import Conventions, Mem, create_gradient_text, write_function, write_load_file
 
+from ...common import STARFRAG_TEXT
+
 
 # Setup boss mob: Stardust Pillar
 def main() -> None:
@@ -189,6 +191,27 @@ execute store result storage {ns}:temp bound_pos[2] int 1 run data get storage {
 data modify entity @s bound_pos set from storage {ns}:temp bound_pos
 """)
 
-	# TODO: Death function
+	# Death function
+	write_function(f"{ns}:mobs/display/start_dying", f"""
+# If stardust pillar, run death function
+execute if entity @s[tag={ns}.stardust_pillar] run function {ns}:mobs/stardust_pillar/death
+""")
+	write_function(f"{ns}:mobs/stardust_pillar/death", f"""
+# Remove bossbar (from all players)
+bossbar set {ns}:stardust_pillar players @s
 
+# Reward nearby players with 2 stardust dungeon keys,
+loot give @a[distance=..96] loot {ns}:i/stardust_dungeon_key
+loot give @a[distance=..96] loot {ns}:i/stardust_dungeon_key
+loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
+loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
+loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
+loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
+give @a[distance=..96] diamond_block 16
+give @a[distance=..96] gold_block 16
+
+# Tellraw and playsound	# TODO: Add sound
+tellraw @a[distance=..96] ["",{STARFRAG_TEXT},{{"text":" The Stardust Pillar has been defeated!","color":"aqua","bold":true}}]
+playsound minecraft:entity.wither.death hostile @a[distance=..96]
+""")
 

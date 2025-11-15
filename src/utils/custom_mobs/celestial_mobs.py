@@ -16,8 +16,9 @@ attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 0.5 add_mult
 attribute @s minecraft:movement_speed modifier add {ns}:speed_scale 0.1 add_multiplied_base
 data modify entity @s Health set value 2048.0f
 
-# Set loot table
+# Set loot table & tags
 data modify entity @s DeathLootTable set value "{ns}:entities/celestial_dimension"
+tag @s add smithed.entity
 """)
 
 	# Loot table

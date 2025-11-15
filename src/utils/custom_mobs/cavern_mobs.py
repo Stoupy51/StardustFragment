@@ -13,8 +13,9 @@ def main() -> None:
 # Set attributes (x0.75 scale)
 attribute @s minecraft:scale modifier add {ns}:scale 0.75 add_multiplied_base
 
-# Set loot table
+# Set loot table & tags
 data modify entity @s DeathLootTable set value "{ns}:entities/cavern_dimension"
+tag @s add smithed.entity
 """)
 
 	# Loot table

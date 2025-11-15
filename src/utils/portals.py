@@ -124,6 +124,9 @@ kill @s
 
 	# Common functions
 	write_function(f"{ns}:dimensions/teleport_home", f"""
+# Slow falling effect to avoid fall damage
+effect give @s minecraft:slow_falling 3 255 true
+
 # If no respawn nbt, teleport to world spawn
 execute unless data entity @s respawn run return run function {ns}:dimensions/teleport_to with storage {ns}:main world_spawn
 

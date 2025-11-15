@@ -1,5 +1,6 @@
 
 # Imports
+from .boss.stardust_guardian import main as stardust_guardian_main
 from .boss.stardust_pillar import main as stardust_pillar_main
 from .cavern_mobs import main as cavern_mobs_main
 from .celestial_mobs import main as celestial_mobs_main
@@ -14,18 +15,17 @@ def setup_custom_mobs() -> None:
 	# Setup technical features
     technical_main()
 
-    # Setup Cavern dimension mobs
+    # Cavern dimension
     cavern_mobs_main()
 
-    # Setup Celestial dimension mobs
+    # Celestial dimension
     celestial_mobs_main()
 
-	# Setup Stardust dimension mobs
+    # Stardust dimension
     stardust_mobs_main()
-
-	# Setup Stardust Pillar boss mob
     stardust_pillar_main()
 
-    # Setup Dungeon dimension mobs
+    # Dungeon dimension
     dungeon_mobs_main()
+    stardust_guardian_main()
 

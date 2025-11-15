@@ -2,8 +2,7 @@
 # Imports
 import json
 
-from stewbeet import JsonDict
-from stewbeet.core import Conventions, Mem, create_gradient_text, write_function, write_load_file
+from stewbeet import Conventions, JsonDict, LootTable, Mem, create_gradient_text, set_json_encoder, write_function, write_load_file
 
 from ...common import STARFRAG_TEXT
 
@@ -107,11 +106,11 @@ execute if score #temp {ns}.data matches 0 if score #mob_count {ns}.data < #max_
 
 # If lost half health, remove NoAI and remove shield (resistance effect)
 execute store result score #health {ns}.data run data get entity @s Health
-execute if score #health {ns}.data matches 251.. run effect give @s minecraft:resistance 5 4 true
-execute if score #health {ns}.data matches ..250 if data entity @s {{NoAI:true}} run function {ns}:mobs/stardust_pillar/remove_shield
+execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run effect give @s minecraft:resistance 5 4 true
+execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} if data entity @s {{NoAI:true}} run function {ns}:mobs/stardust_pillar/remove_shield
 
 # Launch towards nearest player if shield is down
-execute if score #health {ns}.data matches ..250 if entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] run function {ns}:mobs/stardust_pillar/launch_towards_player
+execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} if entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] run function {ns}:mobs/stardust_pillar/launch_towards_player
 
 # Set bossbar for nearby players & update value
 bossbar set {ns}:stardust_pillar visible true
@@ -152,7 +151,7 @@ execute positioned ^2 ^ ^-0.7 run function {ns}:mobs/stardust_pillar/summon_mob
 execute positioned ^-2 ^ ^-0.7 run function {ns}:mobs/stardust_pillar/summon_mob
 
 # Decrease health by 5 if shield is still active
-execute if score #health {ns}.data matches 251.. run function {ns}:mobs/stardust_pillar/deal_shield_damage
+execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run function {ns}:mobs/stardust_pillar/deal_shield_damage
 """)
 	write_function(f"{ns}:mobs/stardust_pillar/summon_mob", f"""
 # Particles
@@ -160,9 +159,9 @@ particle minecraft:soul_fire_flame ~ ~ ~ 0.5 0.5 0.5 0.05 25
 
 # Summon a random stardust mob
 execute store result score #random {ns}.data run random value 1..15
-execute if score #random {ns}.data matches 1 positioned ~ ~-2 ~ summon bat run return run function {ns}:mobs/delay/convert {{"entity":"stardust_bat"}}
-execute if score #random {ns}.data matches 2..5 positioned ~ ~-2 ~ summon evoker run return run function {ns}:mobs/delay/convert {{"entity":"stardust_evoker"}}
-execute if score #random {ns}.data matches 6.. positioned ~ ~-2 ~ summon skeleton run return run function {ns}:mobs/delay/convert {{"entity":"stardust_soldier"}}
+execute if score #random {ns}.data matches 1 positioned ~ ~-2 ~ summon minecraft:bat run return run function {ns}:mobs/delay/convert {{"entity":"stardust_bat"}}
+execute if score #random {ns}.data matches 2..5 positioned ~ ~-2 ~ summon minecraft:evoker run return run function {ns}:mobs/delay/convert {{"entity":"stardust_evoker"}}
+execute if score #random {ns}.data matches 6.. positioned ~ ~-2 ~ summon minecraft:skeleton run return run function {ns}:mobs/delay/convert {{"entity":"stardust_soldier"}}
 """)
 
 	# Deal shield damage function
@@ -194,25 +193,97 @@ data modify entity @s bound_pos set from storage {ns}:temp bound_pos
 
 	# Death function
 	write_function(f"{ns}:mobs/display/start_dying", f"""
-# If stardust pillar, run death function
+# If Stardust Pillar, run death function
 execute if entity @s[tag={ns}.stardust_pillar] run function {ns}:mobs/stardust_pillar/death
 """)
 	write_function(f"{ns}:mobs/stardust_pillar/death", f"""
 # Remove bossbar (from all players)
 bossbar set {ns}:stardust_pillar players @s
 
-# Reward nearby players with 2 stardust dungeon keys,
-loot give @a[distance=..96] loot {ns}:i/stardust_dungeon_key
-loot give @a[distance=..96] loot {ns}:i/stardust_dungeon_key
-loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
-loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
-loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
-loot give @a[distance=..96] loot {ns}:i/compacted_stardust_shard
-give @a[distance=..96] diamond_block 16
-give @a[distance=..96] gold_block 16
+# Reward nearby players
+loot give @a[distance=..96] loot {ns}:entities/stardust_pillar
 
 # Tellraw and playsound	# TODO: Add sound
-tellraw @a[distance=..96] ["",{STARFRAG_TEXT},{{"text":" The Stardust Pillar has been defeated!","color":"white"}}]
+tellraw @a[distance=..96] ["",{STARFRAG_TEXT},{{"text":" The "}},{BOSSBAR_NO_SHIELD_TEXT},{{"text":" has been defeated!"}}]
 playsound minecraft:entity.wither.death hostile @a[distance=..96]
 """)
+
+	# Loot table
+	Mem.ctx.data[ns].loot_tables["entities/stardust_pillar"] = set_json_encoder(LootTable({
+		"type": "minecraft:entity",
+		"pools": [
+			{
+				"rolls": 1,
+				"entries": [
+					{
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stardust_dungeon_key",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": 2
+							}
+						]
+					}
+				]
+			},
+			{
+				"rolls": 1,
+				"bonus_rolls": 0,
+				"entries": [
+					{
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/compacted_stardust_shard",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": {
+									"min": 2,
+									"max": 4
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"rolls": 1,
+				"bonus_rolls": 0,
+				"entries": [
+					{
+						"type": "minecraft:item",
+						"name": "minecraft:diamond_block",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": {
+									"min": 12,
+									"max": 20
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"rolls": 1,
+				"bonus_rolls": 0,
+				"entries": [
+					{
+						"type": "minecraft:item",
+						"name": "minecraft:gold_block",
+						"functions": [
+							{
+								"function": "minecraft:set_count",
+								"count": {
+									"min": 12,
+									"max": 20
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}), max_level=-1)
 

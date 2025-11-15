@@ -1807,6 +1807,14 @@
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"stardust_guardian": {
+		"id": "minecraft:command_block",
+		"category": "mobs",
+		"item_model": "stardust:stardust_guardian",
+		"item_name": {"text": "Stardust Guardian"},
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"stardust_guardian": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"quarry_placeholder_configurator": {
 		"id": "minecraft:command_block",
 		"item_model": "stardust:quarry_placeholder_configurator",

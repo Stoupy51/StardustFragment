@@ -32,10 +32,11 @@ bossbar set {ns}:stardust_pillar max {PILLAR_MAX_HEALTH}
 # Make invisible, reset nbt, set custom name and tags
 effect give @s invisibility infinite 255 true
 
-# Add tags
+# Add tags & join team
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
 tag @s add {ns}.stardust_pillar
 tag @s add {ns}.mob_entity
+team join {ns}.mob @s
 
 # Mark as new mob for setup
 tag @s add {ns}.new_mob
@@ -211,7 +212,7 @@ give @a[distance=..96] diamond_block 16
 give @a[distance=..96] gold_block 16
 
 # Tellraw and playsound	# TODO: Add sound
-tellraw @a[distance=..96] ["",{STARFRAG_TEXT},{{"text":" The Stardust Pillar has been defeated!","color":"aqua","bold":true}}]
+tellraw @a[distance=..96] ["",{STARFRAG_TEXT},{{"text":" The Stardust Pillar has been defeated!","color":"white"}}]
 playsound minecraft:entity.wither.death hostile @a[distance=..96]
 """)
 

@@ -12,6 +12,7 @@ from stewbeet import (
 	JsonDict,
 	Mem,
 	ingr_repr,
+	rainbow_gradient_text,
 )
 from stouputils.collections import unique_list
 
@@ -117,6 +118,7 @@ def main_additions() -> None:
 		},
 		"ultimate_cable": {
 			"id": CUSTOM_BLOCK_HEAD, CATEGORY: ENERGY, "custom_data": {"energy": {"transfer":1920}},
+			"item_name": rainbow_gradient_text("Ultimate Cable"),
 			"profile": {
 				"id": [-709098200,1001541428,-2043264882,-430220135],
 				"properties":[{"name":"textures", "value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ4NGE3OGU4YTY5YjZhYWUwNmQ3ZTI2OWM3NWJjZjkxM2U4ZWY3ZDU1Y2Q3ZjY2MjZiZTZjOWIwZjQ2OGQ5MyJ9fX0="}],
@@ -162,7 +164,7 @@ def main_additions() -> None:
 		"ultimate_battery": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"storage":0, "max_storage":10000000}},
 			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
-			"item_name": {"text":"Ultimate Battery","color":"dark_red"},
+			"item_name": rainbow_gradient_text("Ultimate Battery"),
 			WIKI_COMPONENT: [
 				{"text":"Ultimate energy storage device.","color":"yellow"},
 				{"text":"\nStores up to 10 GJ of energy","color":"gray"},
@@ -242,6 +244,7 @@ def main_additions() -> None:
 		"ultimate_solar_panel": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"generation":128, "max_storage":20000}},
 			VANILLA_BLOCK: {"id":"minecraft:daylight_detector", "apply_facing":False},
+			"item_name": rainbow_gradient_text("Ultimate Solar Panel"),
 			OVERRIDE_MODEL: {"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/ultimate_solar_panel_side", "top": f"{ns}:item/ultimate_solar_panel_top"}},
 			WIKI_COMPONENT: [
 				{"text":"Ultimate solar panel combining all three elements.","color":"yellow"},
@@ -334,22 +337,7 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"usage":500, "max_storage":24000}},
 			VANILLA_BLOCK: {"id": PORTALS_BLOCK["ultimate_portal"], "apply_facing":False},
-			"item_name": [
-				{"text":"U","italic":False,"color":"dark_purple","bold":True},
-				{"text":"l","color":"blue"},
-				{"text":"t","color":"dark_aqua"},
-				{"text":"i","color":"aqua"},
-				{"text":"m","color":"green"},
-				{"text":"a","color":"yellow"},
-				{"text":"t","color":"gold"},
-				{"text":"e","color":"dark_red"},
-				{"text":" P","color":"dark_purple"},
-				{"text":"o","color":"blue"},
-				{"text":"r","color":"dark_aqua"},
-				{"text":"t","color":"aqua"},
-				{"text":"a","color":"green"},
-				{"text":"l","color":"yellow"}
-			],
+			"item_name": rainbow_gradient_text("Ultimate Portal"),
 			"lore": [
 				{"text":"This portal allows access to the dimension of the Ultimate Boss!","italic":False,"color":"white"},
 			],

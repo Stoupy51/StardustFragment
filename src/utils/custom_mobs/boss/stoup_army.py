@@ -13,7 +13,6 @@ from stewbeet import (
 	set_json_encoder,
 	write_function,
 	write_load_file,
-	write_versioned_function,
 )
 
 from ...common import STARFRAG_TEXT
@@ -30,14 +29,12 @@ def main() -> None:
 	write_load_file(f"""
 # Stoup Army bossbar
 bossbar add {ns}:stoup_army {BOSSBAR_TEXT}
+bossbar set {ns}:stoup_army name {BOSSBAR_TEXT}
 bossbar set {ns}:stoup_army style notched_6
 bossbar set {ns}:stoup_army color white
 bossbar set {ns}:stoup_army max {STOUPY_MAX_HEALTH}
 """, prepend=True)
-	write_versioned_function("minute", f"""
-# Remove bossbar
-bossbar set {ns}:stoup_army players
-""")
+	write_function(f"{ns}:mobs/remove_bossbars", f"bossbar set {ns}:stoup_army players")
 
 	# Consume StoupEgg item to summon Stoup Army
 	Mem.ctx.data[ns].advancements["technical/consume_stoupegg"] = set_json_encoder(Advancement({

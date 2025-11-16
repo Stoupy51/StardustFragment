@@ -17,6 +17,7 @@ from stewbeet import (
 	Mem,
 	TextComponent,
 	ingr_repr,
+	rainbow_gradient_text,
 )
 
 from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
@@ -78,6 +79,7 @@ def main_additions() -> None:
 		# Equipments
 		"ultimate_elytra": {
 			"id": "minecraft:elytra", CATEGORY: EQUIPMENT,
+			"item_name": rainbow_gradient_text("Ultimate Elytra"),
 			"max_damage": 3456,	# x8 the durability of regular elytra (432)
 			"attribute_modifiers": [
 				{"type":"armor","amount": 10,"operation":"add_value","slot":"chest","id":"stardust:armor.chest"},
@@ -121,6 +123,7 @@ def main_additions() -> None:
 		},
 		"ultimate_bow": {
 			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
+			"item_name": rainbow_gradient_text("Ultimate Bow"),
 			"max_damage": 3072,	# x8 the durability of regular bow (384)
 			WIKI_COMPONENT: [
 				{"text":"Bow crafted from ultimate stardust materials.","color":"yellow"},
@@ -174,6 +177,7 @@ def main_additions() -> None:
 		},
 		"ultimate_sniper": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			"item_name": rainbow_gradient_text("Ultimate Sniper"),
 			"max_damage": 2688,
 			WIKI_COMPONENT: [
 				{"text":"Sniper crafted from ultimate stardust materials.","color":"yellow"},

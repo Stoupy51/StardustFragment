@@ -16,7 +16,7 @@ tag @s add stardust.ultimate_solar_panel
 tag @s add stardust.vanilla.minecraft_daylight_detector
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.ultimate_solar_panel"}}
+data merge entity @s {"CustomName": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff4c00"},{"text": "t","color": "#ff9900"},{"text": "i","color": "#ffe500"},{"text": "m","color": "#ccff00"},{"text": "a","color": "#7fff00"},{"text": "t","color": "#32ff00"},{"text": "e","color": "#00ff19"},{"text": " ","color": "#00ff65"},{"text": "S","color": "#00ffb2"},{"text": "o","color": "#00ffff"},{"text": "l","color": "#00b2ff"},{"text": "a","color": "#0065ff"},{"text": "r","color": "#0019ff"},{"text": " ","color": "#3200ff"},{"text": "P","color": "#7f00ff"},{"text": "a","color": "#cb00ff"},{"text": "n","color": "#ff00e5"},{"text": "e","color": "#ff0098"},{"text": "l","color": "#ff004c"}]}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:ultimate_solar_panel"]

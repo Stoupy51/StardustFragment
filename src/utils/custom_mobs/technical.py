@@ -26,6 +26,10 @@ team add {ns}.mob {{"text":"Stardust Mob","color":"aqua"}}
 team modify {ns}.mob collisionRule always
 team modify {ns}.mob friendlyFire false
 """, prepend=True)
+	write_versioned_function("minute", f"""
+# Remove bossbars
+function {ns}:mobs/remove_bossbars
+""")
 
 	# Check for new mobs in the dimensions
 	write_versioned_function("second", f"""

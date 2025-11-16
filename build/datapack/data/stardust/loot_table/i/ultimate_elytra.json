@@ -10,6 +10,69 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:item_name": [
+									{
+										"text": "U",
+										"color": "#ff0000",
+										"italic": false
+									},
+									{
+										"text": "l",
+										"color": "#ff6600"
+									},
+									{
+										"text": "t",
+										"color": "#ffcc00"
+									},
+									{
+										"text": "i",
+										"color": "#ccff00"
+									},
+									{
+										"text": "m",
+										"color": "#65ff00"
+									},
+									{
+										"text": "a",
+										"color": "#00ff00"
+									},
+									{
+										"text": "t",
+										"color": "#00ff65"
+									},
+									{
+										"text": "e",
+										"color": "#00ffcb"
+									},
+									{
+										"text": " ",
+										"color": "#00cbff"
+									},
+									{
+										"text": "E",
+										"color": "#0065ff"
+									},
+									{
+										"text": "l",
+										"color": "#0000ff"
+									},
+									{
+										"text": "y",
+										"color": "#6600ff"
+									},
+									{
+										"text": "t",
+										"color": "#cb00ff"
+									},
+									{
+										"text": "r",
+										"color": "#ff00cb"
+									},
+									{
+										"text": "a",
+										"color": "#ff0066"
+									}
+								],
 								"minecraft:max_damage": 3456,
 								"minecraft:attribute_modifiers": [
 									{
@@ -35,9 +98,6 @@
 									}
 								],
 								"minecraft:item_model": "stardust:ultimate_elytra",
-								"minecraft:item_name": {
-									"translate": "stardust.ultimate_elytra"
-								},
 								"minecraft:lore": [
 									[
 										"",

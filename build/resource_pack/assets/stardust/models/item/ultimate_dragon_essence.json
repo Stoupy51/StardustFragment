@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/lingering_potion",
+	"textures": {
+		"layer0": "stardust:item/ultimate_dragon_essence"
+	}
+}

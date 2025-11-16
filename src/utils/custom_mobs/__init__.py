@@ -3,6 +3,7 @@
 from .boss.stardust_guardian import main as stardust_guardian_main
 from .boss.stardust_pillar import main as stardust_pillar_main
 from .boss.stoup_army import main as stoup_army_main
+from .boss.ultimate_dragon import main as ultimate_dragon_main
 from .cavern_mobs import main as cavern_mobs_main
 from .celestial_mobs import main as celestial_mobs_main
 from .dungeon_mobs import main as dungeon_mobs_main
@@ -32,4 +33,7 @@ def setup_custom_mobs() -> None:
     # Dungeon dimension
     dungeon_mobs_main()
     stardust_guardian_main()
+
+    # Ultimate dimension
+    ultimate_dragon_main()
 

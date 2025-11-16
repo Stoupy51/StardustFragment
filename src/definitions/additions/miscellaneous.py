@@ -16,6 +16,7 @@ from stewbeet import (
 	JsonDict,
 	Mem,
 	ingr_repr,
+	rainbow_gradient_text,
 )
 
 
@@ -302,6 +303,27 @@ def main_additions() -> None:
 				{"text":"\nOnce used, the key will be consumed","color":"gray"},
 				{"text":"\nInside the dungeon, face challenging enemies and traps","color":"gray"},
 				{"text":"\nto earn valuable rewards","color":"gray"},
+			],
+		},
+		"ultimate_dragon_essence": {
+			"id": "minecraft:lingering_potion", CATEGORY: MISC,
+			"custom_name": rainbow_gradient_text("Ultimate Dragon Essence"),	# Lingering Potion bypass item_name
+			"potion_contents": {
+				"custom_effects":[{"id":"minecraft:unluck","amplifier":4,"duration":100,"show_particles":True,"show_icon":False}]
+			},
+			#"tooltip_display": {"hidden_components":["potion_contents"]},
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:dragon_egg")] + 4*[ingr_repr("ultimate_shard", ns)] + [ingr_repr("minecraft:lingering_potion")]},
+			],
+			"lore": [
+				{"text":"One-time use summoner of the Ultimate Dragon.","italic":False,"color":"gray"},
+				{"text":"Needs to be thrown in the Ultimate dimension.","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Powerful essence that summons the Ultimate Dragon.","color":"yellow"},
+				{"text":"\nUse by throwing it in the Ultimate Dimension","color":"gray"},
+				{"text":"\nIt won't do anything except explode.","color":"gray"},	# TODO: Advancement when doing so
+				{"text":"\nThis boss is the final challenge.","color":"gray"},
 			],
 		},
 		"quarry_configurator": {

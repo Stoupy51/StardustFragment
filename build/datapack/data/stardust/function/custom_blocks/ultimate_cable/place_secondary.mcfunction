@@ -16,7 +16,7 @@ tag @s add stardust.ultimate_cable
 tag @s add stardust.vanilla.minecraft_player_head
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.ultimate_cable"}}
+data merge entity @s {"CustomName": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff6d00"},{"text": "t","color": "#ffda00"},{"text": "i","color": "#b6ff00"},{"text": "m","color": "#48ff00"},{"text": "a","color": "#00ff24"},{"text": "t","color": "#00ff91"},{"text": "e","color": "#00ffff"},{"text": " ","color": "#0091ff"},{"text": "C","color": "#0024ff"},{"text": "a","color": "#4800ff"},{"text": "b","color": "#b600ff"},{"text": "l","color": "#ff00da"},{"text": "e","color": "#ff006d"}]}
 
 # Modify item display entity to match the custom block
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]

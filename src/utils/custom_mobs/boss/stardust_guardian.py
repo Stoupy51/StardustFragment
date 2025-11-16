@@ -13,7 +13,6 @@ from stewbeet import (
 	set_json_encoder,
 	write_function,
 	write_load_file,
-	write_versioned_function,
 )
 
 from ...common import STARFRAG_TEXT
@@ -30,14 +29,12 @@ def main() -> None:
 	write_load_file(f"""
 # Stardust Guardian bossbar
 bossbar add {ns}:stardust_guardian {BOSSBAR_TEXT}
+bossbar set {ns}:stardust_guardian name {BOSSBAR_TEXT}
 bossbar set {ns}:stardust_guardian style notched_12
 bossbar set {ns}:stardust_guardian color red
 bossbar set {ns}:stardust_guardian max {GUARDIAN_MAX_HEALTH}
 """, prepend=True)
-	write_versioned_function("minute", f"""
-# Remove bossbar
-bossbar set {ns}:stardust_guardian players
-""")
+	write_function(f"{ns}:mobs/remove_bossbars", f"bossbar set {ns}:stardust_guardian players")
 
 	# Stardust Guardian conversion
 	write_function(f"{ns}:mobs/stardust_guardian/summon", f"execute summon minecraft:skeleton run function {ns}:mobs/stardust_guardian/convert")

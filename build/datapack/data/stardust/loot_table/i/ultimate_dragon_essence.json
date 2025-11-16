@@ -1,0 +1,149 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:lingering_potion",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_name": [
+									{
+										"text": "U",
+										"color": "#ff0000",
+										"italic": false
+									},
+									{
+										"text": "l",
+										"color": "#ff4200"
+									},
+									{
+										"text": "t",
+										"color": "#ff8500"
+									},
+									{
+										"text": "i",
+										"color": "#ffc700"
+									},
+									{
+										"text": "m",
+										"color": "#f3ff00"
+									},
+									{
+										"text": "a",
+										"color": "#b1ff00"
+									},
+									{
+										"text": "t",
+										"color": "#6eff00"
+									},
+									{
+										"text": "e",
+										"color": "#2cff00"
+									},
+									{
+										"text": " ",
+										"color": "#00ff16"
+									},
+									{
+										"text": "D",
+										"color": "#00ff58"
+									},
+									{
+										"text": "r",
+										"color": "#00ff9b"
+									},
+									{
+										"text": "a",
+										"color": "#00ffdd"
+									},
+									{
+										"text": "g",
+										"color": "#00ddff"
+									},
+									{
+										"text": "o",
+										"color": "#009bff"
+									},
+									{
+										"text": "n",
+										"color": "#0058ff"
+									},
+									{
+										"text": " ",
+										"color": "#0016ff"
+									},
+									{
+										"text": "E",
+										"color": "#2c00ff"
+									},
+									{
+										"text": "s",
+										"color": "#6e00ff"
+									},
+									{
+										"text": "s",
+										"color": "#b100ff"
+									},
+									{
+										"text": "e",
+										"color": "#f300ff"
+									},
+									{
+										"text": "n",
+										"color": "#ff00c7"
+									},
+									{
+										"text": "c",
+										"color": "#ff0085"
+									},
+									{
+										"text": "e",
+										"color": "#ff0042"
+									}
+								],
+								"minecraft:potion_contents": {
+									"custom_effects": [
+										{"id": "minecraft:unluck","amplifier": 4,"duration": 100,"show_particles": true,"show_icon": false}
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.one_time_use_summoner_of_the_ultimate_dragon",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.needs_to_be_thrown_in_the_ultimate_dimension",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:ultimate_dragon_essence",
+								"minecraft:item_name": {
+									"translate": "stardust.ultimate_dragon_essence"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"ultimate_dragon_essence": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

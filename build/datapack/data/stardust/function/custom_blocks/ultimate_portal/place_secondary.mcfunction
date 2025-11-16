@@ -16,7 +16,7 @@ tag @s add stardust.ultimate_portal
 tag @s add stardust.vanilla.minecraft_crying_obsidian
 
 # Add a custom name
-data merge entity @s {"CustomName": [{"text": "U","italic": false,"color": "dark_purple","bold": true},{"text": "l","color": "blue"},{"text": "t","color": "dark_aqua"},{"text": "i","color": "aqua"},{"text": "m","color": "green"},{"text": "a","color": "yellow"},{"text": "t","color": "gold"},{"text": "e","color": "dark_red"},{"text": " P","color": "dark_purple"},{"text": "o","color": "blue"},{"text": "r","color": "dark_aqua"},{"text": "t","color": "aqua"},{"text": "a","color": "green"},{"text": "l","color": "yellow"}]}
+data merge entity @s {"CustomName": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff6600"},{"text": "t","color": "#ffcc00"},{"text": "i","color": "#ccff00"},{"text": "m","color": "#65ff00"},{"text": "a","color": "#00ff00"},{"text": "t","color": "#00ff65"},{"text": "e","color": "#00ffcb"},{"text": " ","color": "#00cbff"},{"text": "P","color": "#0065ff"},{"text": "o","color": "#0000ff"},{"text": "r","color": "#6600ff"},{"text": "t","color": "#cb00ff"},{"text": "a","color": "#ff00cb"},{"text": "l","color": "#ff0066"}]}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:ultimate_portal"]

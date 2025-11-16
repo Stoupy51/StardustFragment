@@ -10,11 +10,59 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:item_name": [
+									{
+										"text": "U",
+										"color": "#ff0000",
+										"italic": false
+									},
+									{
+										"text": "l",
+										"color": "#ff7f00"
+									},
+									{
+										"text": "t",
+										"color": "#ffff00"
+									},
+									{
+										"text": "i",
+										"color": "#7fff00"
+									},
+									{
+										"text": "m",
+										"color": "#00ff00"
+									},
+									{
+										"text": "a",
+										"color": "#00ff7f"
+									},
+									{
+										"text": "t",
+										"color": "#00ffff"
+									},
+									{
+										"text": "e",
+										"color": "#007fff"
+									},
+									{
+										"text": " ",
+										"color": "#0000ff"
+									},
+									{
+										"text": "B",
+										"color": "#7f00ff"
+									},
+									{
+										"text": "o",
+										"color": "#ff00ff"
+									},
+									{
+										"text": "w",
+										"color": "#ff007f"
+									}
+								],
 								"minecraft:max_damage": 3072,
 								"minecraft:item_model": "stardust:ultimate_bow",
-								"minecraft:item_name": {
-									"translate": "stardust.ultimate_bow"
-								},
 								"minecraft:lore": [
 									[
 										"",

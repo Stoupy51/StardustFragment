@@ -25,61 +25,64 @@
 								"minecraft:item_name": [
 									{
 										"text": "U",
-										"italic": false,
-										"color": "dark_purple",
-										"bold": true
+										"color": "#ff0000",
+										"italic": false
 									},
 									{
 										"text": "l",
-										"color": "blue"
+										"color": "#ff6600"
 									},
 									{
 										"text": "t",
-										"color": "dark_aqua"
+										"color": "#ffcc00"
 									},
 									{
 										"text": "i",
-										"color": "aqua"
+										"color": "#ccff00"
 									},
 									{
 										"text": "m",
-										"color": "green"
+										"color": "#65ff00"
 									},
 									{
 										"text": "a",
-										"color": "yellow"
+										"color": "#00ff00"
 									},
 									{
 										"text": "t",
-										"color": "gold"
+										"color": "#00ff65"
 									},
 									{
 										"text": "e",
-										"color": "dark_red"
+										"color": "#00ffcb"
 									},
 									{
-										"text": " P",
-										"color": "dark_purple"
+										"text": " ",
+										"color": "#00cbff"
+									},
+									{
+										"text": "P",
+										"color": "#0065ff"
 									},
 									{
 										"text": "o",
-										"color": "blue"
+										"color": "#0000ff"
 									},
 									{
 										"text": "r",
-										"color": "dark_aqua"
+										"color": "#6600ff"
 									},
 									{
 										"text": "t",
-										"color": "aqua"
+										"color": "#cb00ff"
 									},
 									{
 										"text": "a",
-										"color": "green"
+										"color": "#ff00cb"
 									},
 									{
 										"text": "l",
-										"color": "yellow"
+										"color": "#ff0066"
 									}
 								],
 								"minecraft:lore": [

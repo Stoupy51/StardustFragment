@@ -15,6 +15,7 @@ from stewbeet import (
 	JsonDict,
 	Mem,
 	ingr_repr,
+	rainbow_gradient_text,
 )
 
 # Constants
@@ -325,6 +326,7 @@ def main_additions() -> None:
 		},
 		"ultimate_shard": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
+			"item_name": rainbow_gradient_text("Ultimate Shard"),
 			WIKI_COMPONENT: [
 				{"text":"The ultimate refined material.","color":"yellow"},
 				{"text":"\nMain component for ultimate crafting","color":"gray"},
@@ -397,6 +399,7 @@ def main_additions() -> None:
 		"ultimate_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
 			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
+			"item_name": rainbow_gradient_text("Ultimate Frame"),
 			WIKI_COMPONENT: [
 				{"text":"Ultimate frame made with advanced materials.","color":"yellow"},
 				{"text":"\nFinal upgraded version of the machine block","color":"gray"},
@@ -474,6 +477,7 @@ def main_additions() -> None:
 		},
 		"ultimate_photovoltaic_cell": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
+			"item_name": rainbow_gradient_text("Ultimate Photovoltaic Cell"),
 			WIKI_COMPONENT: [
 				{"text":"Ultimate photovoltaic cell made from stardust.","color":"yellow"},
 				{"text":"\nUsed to convert sunlight into energy with ultimate efficiency","color":"gray"},

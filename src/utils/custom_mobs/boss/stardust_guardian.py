@@ -3,14 +3,24 @@
 import json
 import math
 
-from stewbeet import Conventions, JsonDict, LootTable, Mem, create_gradient_text, set_json_encoder, write_function, write_load_file
+from stewbeet import (
+	COMMON_SIGNAL,
+	Conventions,
+	JsonDict,
+	LootTable,
+	Mem,
+	create_gradient_text,
+	set_json_encoder,
+	write_function,
+	write_load_file,
+	write_versioned_function,
+)
 
 from ...common import STARFRAG_TEXT
 
 
 # Setup boss mob: Stardust Guardian
 def main() -> None:
-	COMMON_SIGNAL: str = r'custom_data={"common_signals":{"temp":true}}'
 	GUARDIAN_MAX_HEALTH: int = 1024
 	BOSSBAR_LIST: list[JsonDict] = create_gradient_text("Stardust Guardian", "8B0000", "b50666")
 	BOSSBAR_TEXT: str = json.dumps(BOSSBAR_LIST)
@@ -24,6 +34,10 @@ bossbar set {ns}:stardust_guardian style notched_12
 bossbar set {ns}:stardust_guardian color red
 bossbar set {ns}:stardust_guardian max {GUARDIAN_MAX_HEALTH}
 """, prepend=True)
+	write_versioned_function("minute", f"""
+# Remove bossbar
+bossbar set {ns}:stardust_guardian players
+""")
 
 	# Stardust Guardian conversion
 	write_function(f"{ns}:mobs/stardust_guardian/summon", f"execute summon minecraft:skeleton run function {ns}:mobs/stardust_guardian/convert")
@@ -140,7 +154,7 @@ execute if entity @s[tag={ns}.stardust_guardian] run function {ns}:mobs/stardust
 """)
 	write_function(f"{ns}:mobs/stardust_guardian/death", f"""
 # Remove bossbar (from all players)
-bossbar set {ns}:stardust_guardian players @s
+bossbar set {ns}:stardust_guardian players
 
 # Reward nearby players
 loot give @a[distance=..50] loot {ns}:entities/stardust_guardian

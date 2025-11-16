@@ -2,6 +2,7 @@
 # Imports
 from .boss.stardust_guardian import main as stardust_guardian_main
 from .boss.stardust_pillar import main as stardust_pillar_main
+from .boss.stoup_army import main as stoup_army_main
 from .cavern_mobs import main as cavern_mobs_main
 from .celestial_mobs import main as celestial_mobs_main
 from .dungeon_mobs import main as dungeon_mobs_main
@@ -14,6 +15,9 @@ def setup_custom_mobs() -> None:
 
 	# Setup technical features
     technical_main()
+
+    # Setup Stoup Army boss
+    stoup_army_main()
 
     # Cavern dimension
     cavern_mobs_main()

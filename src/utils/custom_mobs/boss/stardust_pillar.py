@@ -2,14 +2,25 @@
 # Imports
 import json
 
-from stewbeet import Conventions, JsonDict, LootTable, Mem, create_gradient_text, set_json_encoder, write_function, write_load_file
+from stewbeet import (
+	COMMON_SIGNAL,
+	Advancement,
+	Conventions,
+	JsonDict,
+	LootTable,
+	Mem,
+	create_gradient_text,
+	set_json_encoder,
+	write_function,
+	write_load_file,
+	write_versioned_function,
+)
 
 from ...common import STARFRAG_TEXT
 
 
 # Setup boss mob: Stardust Pillar
 def main() -> None:
-	COMMON_SIGNAL: str = r'custom_data={"common_signals":{"temp":true}}'
 	PILLAR_MAX_HEALTH: int = 500
 	ACTIVE_LIST: list[JsonDict] = create_gradient_text("Stardust Pillar (Active Shield)", "198534", "249d9f")
 	NO_SHIELD_LIST: list[JsonDict] = ACTIVE_LIST[:len("Stardust Pillar")]	# Shorten to just the name
@@ -25,6 +36,41 @@ bossbar set {ns}:stardust_pillar style notched_10
 bossbar set {ns}:stardust_pillar color blue
 bossbar set {ns}:stardust_pillar max {PILLAR_MAX_HEALTH}
 """, prepend=True)
+	write_versioned_function("minute", f"""
+# Remove bossbar
+bossbar set {ns}:stardust_pillar players
+""")
+
+	# Consume Starlight Infuser item to summon Stardust Pillar
+	Mem.ctx.data[ns].advancements["technical/consume_starlight_infuser"] = set_json_encoder(Advancement({
+		"criteria": {
+			"requirements": {
+				"trigger": "minecraft:consume_item",
+				"conditions": {
+					"item": {
+						"predicates": {
+							"minecraft:custom_data": {ns: {"starlight_infuser": True}}
+						}
+					}
+				}
+			}
+		},
+		"rewards": {
+			"function": f"{ns}:advancements/consume_starlight_infuser"
+		}
+	}), max_level=-1)
+	write_function(f"{ns}:advancements/consume_starlight_infuser", f"""
+# Revoke advancement
+advancement revoke @s only {ns}:technical/consume_starlight_infuser
+
+# Tellraw, playsound, and particles
+tellraw @a[distance=..128] ["",{STARFRAG_TEXT},{{"text":" A "}},{BOSSBAR_NO_SHIELD_TEXT},{{"text":" has been summoned!"}}]
+execute as @a[distance=..128] at @s run playsound minecraft:entity.wither.spawn ambient @s
+particle minecraft:sculk_soul ~ ~ ~ 0.5 0.5 0.5 0.5 500
+
+# Summon Stardust Pillar at world surface + 15
+execute positioned over world_surface positioned ~ ~15 ~ run function {ns}:mobs/stardust_pillar/summon
+""")
 
 	# Stardust Pillar conversion
 	write_function(f"{ns}:mobs/stardust_pillar/convert", f"""
@@ -198,7 +244,7 @@ execute if entity @s[tag={ns}.stardust_pillar] run function {ns}:mobs/stardust_p
 """)
 	write_function(f"{ns}:mobs/stardust_pillar/death", f"""
 # Remove bossbar (from all players)
-bossbar set {ns}:stardust_pillar players @s
+bossbar set {ns}:stardust_pillar players
 
 # Reward nearby players
 loot give @a[distance=..96] loot {ns}:entities/stardust_pillar

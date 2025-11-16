@@ -2,7 +2,7 @@
 # ruff: noqa: E501
 # Imports
 from beet import EntityTypeTag
-from stewbeet.core import JsonDict, LootTable, Mem, set_json_encoder, write_function
+from stewbeet.core import COMMON_SIGNAL_HIDDEN, JsonDict, LootTable, Mem, set_json_encoder, write_function
 from stouputils.io import get_root_path, super_json_load
 
 from ..definitions.additions.materials import COBBLESTONE_TIERS
@@ -13,7 +13,6 @@ from .quarry import quarry
 # Setup machines work and visuals
 def setup_machines(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
-	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
 
 	# Solar panels
 	for solar_panel in [x for x in Mem.definitions if x.endswith("_solar_panel")]:
@@ -60,9 +59,9 @@ execute if score @s energy.storage >= @s energy.max_storage run return run funct
 
 # Update the gui to default
 execute store result score #burn_time {ns}.data run data get block ~ ~ ~ lit_time_remaining
-execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 0 run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{COMMON_SIGNAL_HIDDEN}]
 execute if score #burn_time {ns}.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
-execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{working_gui}",{GUI_DATA}]
+execute if score #burn_time {ns}.data matches 1.. run item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{working_gui}",{COMMON_SIGNAL_HIDDEN}]
 execute if score #burn_time {ns}.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
 # Update the gui & produce Energy while working
@@ -72,7 +71,7 @@ execute if score @s energy.storage > @s energy.max_storage run scoreboard player
 """
 		write_function(f"{ns}:custom_blocks/{gen}/second", content)
 		write_function(f"{ns}:custom_blocks/{gen}/stop", f"""
-item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{GUI_DATA}]
+item replace block ~ ~ ~ container.{gui_slot} with cobblestone[item_model="{default_gui}",{COMMON_SIGNAL_HIDDEN}]
 data modify entity @s item.components."minecraft:item_model" set value "{default_model}"
 """)
 

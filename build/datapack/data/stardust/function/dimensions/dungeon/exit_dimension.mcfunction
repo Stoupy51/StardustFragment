@@ -10,8 +10,8 @@
 tag @s remove stardust.is_in_dungeon
 gamemode survival @s[gamemode=adventure]
 
-# Remove bossbar just in case (always false selector)
-bossbar set stardust:stardust_guardian players @s[tag=stardust.players_do_not_have_this_tag]
+# Remove bossbar just in case
+bossbar set stardust:stardust_guardian players
 
 # Decrement score of players in dungeon
 scoreboard players remove #players_in_dungeon stardust.data 1

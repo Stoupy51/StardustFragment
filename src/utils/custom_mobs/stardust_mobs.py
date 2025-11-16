@@ -1,12 +1,11 @@
 
 # Imports
 from beet import LootTable, Predicate
-from stewbeet.core import Conventions, Mem, set_json_encoder, write_function
+from stewbeet.core import COMMON_SIGNAL, Conventions, Mem, set_json_encoder, write_function
 
 
 # Setup custom mobs for the Stardust dimension
 def main() -> None:
-	COMMON_SIGNAL: str = r'custom_data={"common_signals":{"temp":true}}'
 	ns: str = Mem.ctx.project_id
 
 	## Stardust dimension

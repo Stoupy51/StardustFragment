@@ -5,7 +5,7 @@ import json
 
 from beet import Predicate
 from beet.core.utils import TextComponent
-from stewbeet.core import CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encoder, write_function, write_load_file
+from stewbeet.core import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encoder, write_function, write_load_file
 
 
 # Setup quarry work and visuals
@@ -15,8 +15,6 @@ def quarry(gui: dict[str, str]) -> None:
 	## TODO: FORCELOAD
 	## Constants
 	ns: str = Mem.ctx.project_id
-	GUI_DATA: str = r'tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}'
-	GUI_DATA_TOOLTIP: str = r'custom_data={"common_signals":{"temp":true}}'
 	QUARRY_SLOTS: list[int] = [*range(9, 23), 26] # Slots 9 to 22 inclusive and gui slot
 	main_gui: str = "gui/quarry.png"
 	main_gui_slot: int = 26
@@ -182,10 +180,10 @@ data modify storage {ns}:temp Items set from block ~ ~ ~ Items
 {slots}
 
 # Update gui
-item replace block ~ ~ ~ container.{main_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[main_gui]}",{GUI_DATA}]
-execute unless items block ~ ~ ~ container.{config_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{config_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_configurator",item_name={{"text":"Configurator Placeholder"}},lore=[{{"text":"Place a configured Quarry Configurator here","color":"gray","italic":false}},{{"text":"to apply its settings to the quarry","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
-execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{module_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_module",item_name={{"text":"Module Placeholder"}},lore=[{{"text":"Place a quarry module here","color":"gray","italic":false}},{{"text":"to apply its effects to the quarry","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
-execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name={{"text":"Quarry Information"}},lore=[{{"text":"TODO","color":"gray","italic":false}}],{GUI_DATA_TOOLTIP}]
+item replace block ~ ~ ~ container.{main_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[main_gui]}",{COMMON_SIGNAL_HIDDEN}]
+execute unless items block ~ ~ ~ container.{config_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{config_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_configurator",item_name={{"text":"Configurator Placeholder"}},lore=[{{"text":"Place a configured Quarry Configurator here","color":"gray","italic":false}},{{"text":"to apply its settings to the quarry","color":"gray","italic":false}}],{COMMON_SIGNAL}]
+execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{module_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_module",item_name={{"text":"Module Placeholder"}},lore=[{{"text":"Place a quarry module here","color":"gray","italic":false}},{{"text":"to apply its effects to the quarry","color":"gray","italic":false}}],{COMMON_SIGNAL}]
+execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name={{"text":"Quarry Information"}},lore=[{{"text":"TODO","color":"gray","italic":false}}],{COMMON_SIGNAL}]
 
 # If player nearby, update information
 execute if entity @p[distance=..6] run function {ns}:quarry/update_info
@@ -203,10 +201,10 @@ $execute if data storage {ns}:temp intruder unless data storage {ns}:temp intrud
 
 # Set item gui
 $scoreboard players set #slot {ns}.data $(slot)
-$execute unless score #slot {ns}.data matches {start_gui_slot}..{stop_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA}]
-$execute if score #slot {ns}.data matches {start_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA_TOOLTIP},item_name={{"text":"Start","color":"green"}}]
-$execute if score #slot {ns}.data matches {pause_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA_TOOLTIP},item_name={{"text":"Pause / Resume","color":"yellow"}}]
-$execute if score #slot {ns}.data matches {stop_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{GUI_DATA_TOOLTIP},item_name={{"text":"Stop","color":"red"}}]
+$execute unless score #slot {ns}.data matches {start_gui_slot}..{stop_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{COMMON_SIGNAL_HIDDEN}]
+$execute if score #slot {ns}.data matches {start_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{COMMON_SIGNAL},item_name={{"text":"Start","color":"green"}}]
+$execute if score #slot {ns}.data matches {pause_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{COMMON_SIGNAL},item_name={{"text":"Pause / Resume","color":"yellow"}}]
+$execute if score #slot {ns}.data matches {stop_gui_slot} run item replace block ~ ~ ~ container.$(slot) with {CUSTOM_ITEM_VANILLA}[item_model="minecraft:air",{COMMON_SIGNAL},item_name={{"text":"Stop","color":"red"}}]
 """)
 
 	# Handle intruder item on gui

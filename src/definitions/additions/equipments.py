@@ -297,7 +297,7 @@ def main_additions() -> None:
 				"consume_seconds": 0.8,
 				"animation": "toot_horn",
 				"has_consume_particles": False,
-				"sound": {"sound_id": f"{ns}:life_crystal", "range": 3}
+				"sound": {"sound_id": f"{ns}:life_crystal", "range": 3}	# TODO: Add consuming logic to increase max health
 			},
 			"lore": [
 				{"text":"Right-click to permanently increase","italic":False,"color":"gray"},

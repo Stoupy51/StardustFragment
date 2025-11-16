@@ -172,8 +172,8 @@ scoreboard players add #players_in_dungeon {ns}.data 1
 tag @s remove {ns}.is_in_dungeon
 gamemode survival @s[gamemode=adventure]
 
-# Remove bossbar just in case (always false selector)
-bossbar set {ns}:stardust_guardian players @s[tag={ns}.players_do_not_have_this_tag]
+# Remove bossbar just in case
+bossbar set {ns}:stardust_guardian players
 
 # Decrement score of players in dungeon
 scoreboard players remove #players_in_dungeon {ns}.data 1

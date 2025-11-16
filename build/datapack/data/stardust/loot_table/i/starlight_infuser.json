@@ -17,9 +17,6 @@
 										"sound_id": "stardust:starlight_infuser_consuming"
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "stardust_pillar"
-								},
 								"minecraft:rarity": "epic",
 								"minecraft:lore": [
 									{
@@ -34,6 +31,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:starlight_infuser",
+								"minecraft:item_name": {
+									"translate": "stardust.starlight_infuser"
+								},
 								"minecraft:custom_data": {
 									"stardust": {
 										"starlight_infuser": true

@@ -32,3 +32,6 @@ execute if score @s stardust.hurt_time matches 0 run data remove entity @s item.
 # Decrease mob hurt time scoreboard (to track when to remove hurt model)
 execute if score @s stardust.hurt_time matches 0.. run scoreboard players remove @s stardust.hurt_time 1
 
+# If Stoupy, and hurt, summon ally wolf
+execute if entity @s[tag=stardust.stoupy] if score @s stardust.hurt_time matches 1 run function stardust:mobs/stoupy/summon_wave
+

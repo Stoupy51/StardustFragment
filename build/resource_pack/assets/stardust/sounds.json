@@ -19,6 +19,10 @@
 		"subtitle": "Ultimate Sniper Shot",
 		"sounds": ["stardust:ultimate_sniper_shot"]
 	},
+	"wolf_howl": {
+		"subtitle": "Wolf Howl",
+		"sounds": ["stardust:wolf_howl_1","stardust:wolf_howl_2"]
+	},
 	"wormhole_potion": {
 		"subtitle": "Wormhole Potion",
 		"sounds": ["stardust:wormhole_potion"]

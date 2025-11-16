@@ -7,7 +7,7 @@
 #
 
 # Remove bossbar (from all players)
-bossbar set stardust:stardust_pillar players @s
+bossbar set stardust:stardust_pillar players
 
 # Reward nearby players
 loot give @a[distance=..96] loot stardust:entities/stardust_pillar

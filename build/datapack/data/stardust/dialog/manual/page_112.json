@@ -14,8 +14,7 @@
 		" ",
 		{
 			"translate": "stardust.solarium_pickaxe",
-			"underlined": true,
-			"atlas": "minecraft:items"
+			"underlined": true
 		},
 		" ",
 		{
@@ -25,7 +24,8 @@
 				0,
 				0,
 				0
-			]
+			],
+			"atlas": "minecraft:items"
 		}
 	],
 	"body": [

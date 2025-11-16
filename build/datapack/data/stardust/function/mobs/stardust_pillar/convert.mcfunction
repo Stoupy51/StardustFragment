@@ -1,6 +1,8 @@
 
 #> stardust:mobs/stardust_pillar/convert
 #
+# @executed	positioned over world_surface positioned
+#
 # @within	stardust:mobs/stardust_pillar/summon
 #
 

@@ -18,9 +18,9 @@ execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:nether_star"}],lit_ti
 
 # Update the gui to default
 execute store result score #burn_time stardust.data run data get block ~ ~ ~ lit_time_remaining
-execute if score #burn_time stardust.data matches 0 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="stardust:gui/nether_star_generator",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score #burn_time stardust.data matches 0 run item replace block ~ ~ ~ container.1 with cobblestone[item_model="stardust:gui/nether_star_generator",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 execute if score #burn_time stardust.data matches 0 run data modify entity @s item.components."minecraft:item_model" set value "stardust:nether_star_generator"
-execute if score #burn_time stardust.data matches 1.. run item replace block ~ ~ ~ container.1 with cobblestone[item_model="stardust:gui/nether_star_generator_on",tooltip_display={"hide_tooltip": true},custom_data={"common_signals":{"temp":true}}]
+execute if score #burn_time stardust.data matches 1.. run item replace block ~ ~ ~ container.1 with cobblestone[item_model="stardust:gui/nether_star_generator_on",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 execute if score #burn_time stardust.data matches 1.. run data modify entity @s item.components."minecraft:item_model" set value "stardust:nether_star_generator_on"
 
 # Update the gui & produce Energy while working

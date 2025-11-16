@@ -13,8 +13,8 @@
 							"function": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
-								"min": 0,
-								"max": 56
+								"min": 12,
+								"max": 24
 							}
 						}
 					]
@@ -41,18 +41,16 @@
 								"max": 8
 							}
 						}
-					],
-					"conditions": [
-						{
-							"condition": "minecraft:random_chance",
-							"chance": 0.5
-						}
 					]
 				}
 			],
 			"conditions": [
 				{
 					"condition": "minecraft:killed_by_player"
+				},
+				{
+					"condition": "minecraft:random_chance",
+					"chance": 0.5
 				}
 			]
 		},
@@ -71,18 +69,16 @@
 								"max": 16
 							}
 						}
-					],
-					"conditions": [
-						{
-							"condition": "minecraft:random_chance",
-							"chance": 0.25
-						}
 					]
 				}
 			],
 			"conditions": [
 				{
 					"condition": "minecraft:killed_by_player"
+				},
+				{
+					"condition": "minecraft:random_chance",
+					"chance": 0.25
 				}
 			]
 		}

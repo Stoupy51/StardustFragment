@@ -35,10 +35,10 @@
 				{"text": "V   ","font": "stardust:manual","color": "white"},
 				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_172"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (172)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_173"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (173)"]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_174"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (174)"]}},
 				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_172"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (172)"]}},
 				" ",
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_173"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (173)"]}}
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_174"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (174)"]}}
 			],
 			"width": 400
 		},

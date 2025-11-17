@@ -9,6 +9,8 @@
 #			stardust:mobs/stardust_bat/convert {"entity":"stardust_bat"}
 #			stardust:mobs/stardust_pillar/convert {"entity":"stardust_pillar"}
 #			stardust:mobs/stardust_guardian/convert {"entity":"stardust_guardian"}
+#			stardust:mobs/ultimate_dragon/convert {"entity":"ultimate_dragon"}
+#			stardust:mobs/ultimate_slave/convert {"entity":"ultimate_slave"}
 #
 # @args		entity (string)
 #

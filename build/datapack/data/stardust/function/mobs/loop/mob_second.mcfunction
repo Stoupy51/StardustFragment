@@ -10,4 +10,5 @@ execute if entity @s[tag=stardust.stoupy] run return run function stardust:mobs/
 execute if entity @s[tag=stardust.stardust_bat] run return run function stardust:mobs/stardust_bat/second
 execute if entity @s[tag=stardust.stardust_pillar] run return run function stardust:mobs/stardust_pillar/second
 execute if entity @s[tag=stardust.stardust_guardian] run return run function stardust:mobs/stardust_guardian/second
+execute if entity @s[tag=stardust.ultimate_dragon] run return run function stardust:mobs/ultimate_dragon/second
 

@@ -17,5 +17,10 @@ particle minecraft:dragon_breath ~ ~ ~ 10 10 10 0.5 5000
 particle minecraft:explosion_emitter ~ ~ ~ 4 4 4 0.0 10
 
 # Summon Ultimate Dragon at world surface
-#execute positioned over world_surface run function stardust:mobs/ultimate_dragon/summon
+function stardust:mobs/ultimate_dragon/summon
+
+# Summon 3 slaves
+execute positioned ~10 ~ ~ run function stardust:mobs/ultimate_slave/summon
+execute positioned ~ ~ ~7 run function stardust:mobs/ultimate_slave/summon
+execute positioned ~ ~ ~-7 run function stardust:mobs/ultimate_slave/summon
 

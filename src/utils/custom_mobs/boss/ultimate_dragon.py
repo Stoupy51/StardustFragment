@@ -23,6 +23,7 @@ from ...common import STARFRAG_TEXT
 def main() -> None:
 	SPAWN_ANIMATION_DURATION: int = 160  # Ticks
 	DRAGON_MAX_HEALTH: int = 2048
+	ULTIMATE_SLAVE_MAX_HEALTH: int = 1024
 	BOSSBAR_LIST: list[JsonDict] = rainbow_gradient_text("Ultimate Dragon")
 	BOSSBAR_TEXT: str = json.dumps(BOSSBAR_LIST)
 	ns: str = Mem.ctx.project_id
@@ -170,35 +171,31 @@ particle minecraft:dragon_breath ~ ~ ~ 10 10 10 0.5 5000
 particle minecraft:explosion_emitter ~ ~ ~ 4 4 4 0.0 10
 
 # Summon Ultimate Dragon at world surface
-#execute positioned over world_surface run function {ns}:mobs/ultimate_dragon/summon
+function {ns}:mobs/ultimate_dragon/summon
+
+# Summon 3 slaves
+execute positioned ~10 ~ ~ run function {ns}:mobs/ultimate_slave/summon
+execute positioned ~ ~ ~7 run function {ns}:mobs/ultimate_slave/summon
+execute positioned ~ ~ ~-7 run function {ns}:mobs/ultimate_slave/summon
 """)
-	return
 
 	# Ultimate Dragon conversion
 	write_function(f"{ns}:mobs/ultimate_dragon/summon", f"execute summon minecraft:ender_dragon run function {ns}:mobs/ultimate_dragon/convert")
 	write_function(f"{ns}:mobs/ultimate_dragon/convert", f"""
-# Modify wolf type
-data modify entity @s variant set value "minecraft:woods"
-
 # Add tags & join team
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
 tag @s add {ns}.ultimate_dragon
 tag @s add {ns}.mob_entity
-tag @s add {ns}.update_health
 team join {ns}.mob @s
 
 # Mark as new mob for setup
 tag @s add {ns}.new_mob
 
-# Wolf armor and loot table
-item replace entity @s armor.feet with minecraft:stone[equippable={{"slot":"feet"}},attribute_modifiers=[{{"type":"minecraft:max_health","amount":{DRAGON_MAX_HEALTH},"id":"{ns}:armor.body","operation":"add_value","slot":"feet"}}],{COMMON_SIGNAL}]
-data modify entity @s DeathLootTable set value "{ns}:entities/ultimate_dragon"
-
-# Set attributes (x2 damage, 0.9x scale, 10 knockback resistance)
-attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 1 add_multiplied_base
-attribute @s minecraft:scale base set 0.9
-attribute @s minecraft:knockback_resistance base set 10.0
-effect give @s minecraft:regeneration 5 255 true
+# Set attributes ({DRAGON_MAX_HEALTH} health, x4 damage, 80% resistance)
+attribute @s minecraft:max_health base set {DRAGON_MAX_HEALTH}
+attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 3 add_multiplied_base
+effect give @s minecraft:resistance infinite 3 true
+data modify entity @s Health set value 4096.0f
 
 # Set custom name and other properties
 data modify entity @s CustomName set value {{"text":"Ultimate Dragon","color":"white"}}
@@ -214,7 +211,36 @@ bossbar set {ns}:ultimate_dragon value {DRAGON_MAX_HEALTH}
 
 # Remove new_mob tag after setup
 tag @s remove {ns}.new_mob
-""")  # noqa: E501
+""")
+
+	# Slave summon function
+	write_function(f"{ns}:mobs/ultimate_slave/summon", f"execute summon minecraft:ender_dragon run function {ns}:mobs/ultimate_slave/convert")
+	write_function(f"{ns}:mobs/ultimate_slave/convert", f"""
+# Add tags & join team
+{"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
+tag @s add {ns}.ultimate_slave
+tag @s add {ns}.mob_entity
+team join {ns}.mob @s
+
+# Mark as new mob for setup
+tag @s add {ns}.new_mob
+
+# Set attributes ({ULTIMATE_SLAVE_MAX_HEALTH} health, x4 damage)
+attribute @s minecraft:max_health base set {ULTIMATE_SLAVE_MAX_HEALTH}
+attribute @s minecraft:attack_damage modifier add {ns}:damage_scale 3 add_multiplied_base
+data modify entity @s Health set value 4096.0f
+
+# Set custom name and other properties
+data modify entity @s CustomName set value {{"text":"Ultimate Slave","color":"white"}}
+data modify entity @s PersistenceRequired set value true
+
+# Create visual model
+scoreboard players set #base_scale {ns}.data 0
+execute summon item_display run function {ns}:mobs/create_model {{"entity":"ultimate_slave"}}
+
+# Remove new_mob tag after setup
+tag @s remove {ns}.new_mob
+""")
 
 	# Mob looping behavior
 	write_function(f"{ns}:mobs/loop/mob_second", f"execute if entity @s[tag={ns}.ultimate_dragon] run return run function {ns}:mobs/ultimate_dragon/second")
@@ -222,17 +248,6 @@ tag @s remove {ns}.new_mob
 	# Ultimate Dragon's looping behavior
 	write_function(f"{ns}:mobs/ultimate_dragon/second",
 f"""
-# If update health, set health to max
-execute if entity @s[tag={ns}.update_health] run data modify entity @s Health set value {DRAGON_MAX_HEALTH}
-tag @s remove {ns}.update_health
-
-# High step height and jump boost to prevent getting stuck
-attribute @s minecraft:step_height base set 16.0
-effect give @s minecraft:jump_boost 10 4 true
-
-# Always on world surface
-execute positioned over world_surface run tp @s ~ ~ ~
-
 # Particles
 particle enchant ~ ~ ~ 2 2 2 0 10
 
@@ -245,6 +260,7 @@ execute store result bossbar {ns}:ultimate_dragon value run data get entity @s H
 data modify entity @s Glowing set value false
 execute unless entity @a[gamemode=!spectator,distance=..15] run data modify entity @s Glowing set value true
 """)
+	return
 
 	# Each time Ultimate Dragon is hurt, summon a wolf wave
 	write_function(f"{ns}:mobs/loop/display", f"""

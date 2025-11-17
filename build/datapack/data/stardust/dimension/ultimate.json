@@ -3,7 +3,7 @@
 	"generator": {
 		"type": "minecraft:flat",
 		"settings": {
-			"biome": "minecraft:the_end",
+			"biome": "stardust:emptiness",
 			"layers": [
 				{
 					"block": "minecraft:air",

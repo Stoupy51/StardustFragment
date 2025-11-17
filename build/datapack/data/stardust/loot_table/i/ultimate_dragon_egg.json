@@ -1,0 +1,115 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": [
+									{
+										"text": "U",
+										"color": "#ff0000",
+										"italic": false
+									},
+									{
+										"text": "l",
+										"color": "#ff5000"
+									},
+									{
+										"text": "t",
+										"color": "#ffa100"
+									},
+									{
+										"text": "i",
+										"color": "#fff100"
+									},
+									{
+										"text": "m",
+										"color": "#bbff00"
+									},
+									{
+										"text": "a",
+										"color": "#6bff00"
+									},
+									{
+										"text": "t",
+										"color": "#1aff00"
+									},
+									{
+										"text": "e",
+										"color": "#00ff35"
+									},
+									{
+										"text": " ",
+										"color": "#00ff86"
+									},
+									{
+										"text": "D",
+										"color": "#00ffd6"
+									},
+									{
+										"text": "r",
+										"color": "#00d6ff"
+									},
+									{
+										"text": "a",
+										"color": "#0086ff"
+									},
+									{
+										"text": "g",
+										"color": "#0035ff"
+									},
+									{
+										"text": "o",
+										"color": "#1a00ff"
+									},
+									{
+										"text": "n",
+										"color": "#6b00ff"
+									},
+									{
+										"text": " ",
+										"color": "#bb00ff"
+									},
+									{
+										"text": "E",
+										"color": "#ff00f1"
+									},
+									{
+										"text": "g",
+										"color": "#ff00a1"
+									},
+									{
+										"text": "g",
+										"color": "#ff0050"
+									}
+								],
+								"minecraft:item_model": "stardust:ultimate_dragon_egg",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"ultimate_dragon_egg": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

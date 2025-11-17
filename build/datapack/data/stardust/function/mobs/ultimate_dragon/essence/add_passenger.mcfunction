@@ -9,6 +9,12 @@
 # Ride the lingering potion
 ride @s mount @n[tag=stardust.temp]
 
+# Set transformation properties
+data modify entity @s transformation.scale set value [0.0d,0.0d,0.0d]
+data modify entity @s transformation.translation[1] set value -15.0d
+data modify entity @s interpolation_duration set value 160
+data modify entity @s teleport_duration set value 0
+
 # Add tags
 tag @s add smithed.entity
 tag @s add global.ignore

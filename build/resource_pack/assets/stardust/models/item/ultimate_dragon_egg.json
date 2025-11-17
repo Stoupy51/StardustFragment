@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/dragon_egg",
+	"textures": {
+		"all": "stardust:item/ultimate_dragon_egg"
+	}
+}

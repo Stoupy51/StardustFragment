@@ -1,0 +1,21 @@
+{
+	"temperature": 0.5,
+	"downfall": 0.5,
+	"has_precipitation": false,
+	"effects": {
+		"water_color": 0
+	},
+	"spawners": {
+		"monster": [
+			{
+				"type": "minecraft:end_crystal",
+				"maxCount": 1,
+				"minCount": 1,
+				"weight": 1
+			}
+		]
+	},
+	"spawn_costs": {},
+	"carvers": [],
+	"features": []
+}

@@ -1,9 +1,9 @@
 
 #> stardust:mobs/ultimate_dragon/essence/check_single_landing
 #
-# @executed	as @e[type=minecraft:lingering_potion,tag=stardust.check_ultimate_dragon_essence]
+# @executed	as @e[tag=stardust.check_ultimate_dragon_essence] & at @s
 #
-# @within	stardust:mobs/ultimate_dragon/essence/check_landing [ as @e[type=minecraft:lingering_potion,tag=stardust.check_ultimate_dragon_essence] ]
+# @within	stardust:mobs/ultimate_dragon/essence/check_landing [ as @e[tag=stardust.check_ultimate_dragon_essence] & at @s ]
 #
 
 # If vehicle is not gone, still flying (return)

@@ -21,6 +21,7 @@ from ...common import STARFRAG_TEXT
 
 # Setup boss mob: Ultimate Dragon
 def main() -> None:
+	SPAWN_ANIMATION_DURATION: int = 160  # Ticks
 	DRAGON_MAX_HEALTH: int = 2048
 	BOSSBAR_LIST: list[JsonDict] = rainbow_gradient_text("Ultimate Dragon")
 	BOSSBAR_TEXT: str = json.dumps(BOSSBAR_LIST)
@@ -85,6 +86,12 @@ schedule function {ns}:mobs/ultimate_dragon/essence/check_landing 1t append
 # Ride the lingering potion
 ride @s mount @n[tag={ns}.temp]
 
+# Set transformation properties
+data modify entity @s transformation.scale set value [0.0d,0.0d,0.0d]
+data modify entity @s transformation.translation[1] set value -15.0d
+data modify entity @s interpolation_duration set value {SPAWN_ANIMATION_DURATION}
+data modify entity @s teleport_duration set value 0
+
 # Add tags
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS_NO_KILL])}
 tag @s add {ns}.check_ultimate_dragon_essence
@@ -94,7 +101,7 @@ tag @s add {ns}.check_ultimate_dragon_essence
 	write_function(f"{ns}:mobs/ultimate_dragon/essence/check_landing", f"""
 # Check if lingering potion has landed (no vehicle)
 scoreboard players set #remaining_potions {ns}.data 0
-execute as @e[type=minecraft:lingering_potion,tag={ns}.check_ultimate_dragon_essence] run function {ns}:mobs/ultimate_dragon/essence/check_single_landing
+execute as @e[tag={ns}.check_ultimate_dragon_essence] at @s run function {ns}:mobs/ultimate_dragon/essence/check_single_landing
 
 # If any remaining potions, reschedule check
 execute if score #remaining_potions {ns}.data matches 1.. run schedule function {ns}:mobs/ultimate_dragon/essence/check_landing 1t replace
@@ -106,18 +113,66 @@ execute on vehicle run return run scoreboard players add #remaining_potions {ns}
 # Else, has landed, proceed to next step
 function {ns}:mobs/ultimate_dragon/essence/has_landed
 """)
-	# TODO: Landed behavior (summon Ultimate Dragon or not depending on dimension)
-	return
+	write_function(f"{ns}:mobs/ultimate_dragon/essence/has_landed", f"""
+# Playsound
+playsound minecraft:block.amethyst_block.break ambient @a[distance=..20]
 
-	write_function(f"{ns}:mobs/ultimate_dragon/essence/reached_max_size", f"""
+# If not in ultimate dimension,
+execute unless dimension {ns}:ultimate run return run function {ns}:mobs/ultimate_dragon/essence/not_in_ultimate_dimension
+
+# Switch tags
+tag @s remove {ns}.check_ultimate_dragon_essence
+tag @s add {ns}.ultimate_dragon_essence_landed
+
+# Start animation (ultimate dragon egg growing)
+tp @s ~ ~15 ~
+loot replace entity @s contents loot {ns}:i/ultimate_dragon_egg
+data modify entity @s transformation.scale set value [15.0d,15.0d,15.0d]
+data modify entity @s transformation.translation[1] set value 0.0d
+data modify entity @s start_interpolation set value 0
+
+# Schedule check for max size reached
+scoreboard players set @s {ns}.spawn_delay {SPAWN_ANIMATION_DURATION}
+scoreboard players operation @s {ns}.spawn_delay += #global_tick {ns}.data
+schedule function {ns}:mobs/ultimate_dragon/essence/animation_loop 1t append
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/essence/not_in_ultimate_dimension", f"""
+# Tellraw and advancement	# TODO: Implement this properly
+tellraw @a[distance=..128] ["",{STARFRAG_TEXT},{{"text":" The Ultimate Dragon Essence fizzles out in this dimension..."}}]
+advancement grant @a[distance=..128] only {ns}:visible/adventure/waste_of_essence
+""")
+	# Animation loop to check for max size reached
+	write_function(f"{ns}:mobs/ultimate_dragon/essence/animation_loop", f"""
+# Loop until max size reached
+scoreboard players set #remaining_essences_anim {ns}.data 0
+execute as @e[tag={ns}.ultimate_dragon_essence_landed] at @s run function {ns}:mobs/ultimate_dragon/essence/check_reached_max_size
+
+# If any remaining, reschedule
+execute if score #remaining_essences_anim {ns}.data matches 1.. run schedule function {ns}:mobs/ultimate_dragon/essence/animation_loop 1t replace
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/essence/check_reached_max_size", f"""
+# If not reached max size, return
+execute if score #global_tick {ns}.data < @s {ns}.spawn_delay run return run scoreboard players add #remaining_essences_anim {ns}.data 1
+
+# Else, reached max size, proceed
+function {ns}:mobs/ultimate_dragon/essence/finish_animation
+""")
+
+	write_function(f"{ns}:mobs/ultimate_dragon/essence/finish_animation", f"""
+# Remove entity
+kill @s
+
 # Tellraw, playsound, and particles
 tellraw @a[distance=..128] ["",{STARFRAG_TEXT},{{"text":" An "}},{BOSSBAR_TEXT},{{"text":" has been summoned!"}}]
-execute as @a[distance=..128] at @s run playsound {ns}:wolf_howl ambient @s
-particle minecraft:enchant ~ ~ ~ 0.5 0.5 0.5 0.5 500
+execute as @a[distance=..128] at @s run playsound minecraft:entity.ender_dragon.ambient ambient @s
+execute as @a[distance=..128] at @s run playsound minecraft:entity.dragon_fireball.explode ambient @s
+particle minecraft:dragon_breath ~ ~ ~ 10 10 10 0.5 5000
+particle minecraft:explosion_emitter ~ ~ ~ 4 4 4 0.0 10
 
 # Summon Ultimate Dragon at world surface
 #execute positioned over world_surface run function {ns}:mobs/ultimate_dragon/summon
 """)
+	return
 
 	# Ultimate Dragon conversion
 	write_function(f"{ns}:mobs/ultimate_dragon/summon", f"execute summon minecraft:ender_dragon run function {ns}:mobs/ultimate_dragon/convert")

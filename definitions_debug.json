@@ -1847,5 +1847,12 @@
 		"item_name": {"text": "Quarry Information"},
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"quarry_information": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_dragon_egg": {
+		"id": "minecraft:command_block",
+		"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],
+		"item_model": "stardust:ultimate_dragon_egg",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}
 }

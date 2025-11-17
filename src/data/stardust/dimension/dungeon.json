@@ -3,7 +3,7 @@
 	"generator": {
 		"type": "minecraft:flat",
 		"settings": {
-			"biome": "minecraft:nether_wastes",
+			"biome": "stardust:bloodbath",
 			"lakes": false,
 			"features": false,
 			"layers": [],

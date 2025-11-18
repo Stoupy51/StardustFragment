@@ -13,9 +13,6 @@ execute summon marker run function stardust:utils/get_world_spawn_from_marker
 # Remove bossbars
 function stardust:mobs/remove_bossbars
 
-# Remove bossbar
-bossbar set stardust:ultimate_dragon players
-
 # Custom blocks minute functions
 execute if score #minute_entities stardust.data matches 1.. as @e[tag=stardust.minute] at @s run function stardust:custom_blocks/minute
 

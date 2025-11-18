@@ -10,14 +10,15 @@
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.ultimate_slave
+tag @s add stardust.ultimate_boss
 tag @s add stardust.mob_entity
 team join stardust.mob @s
 
 # Mark as new mob for setup
 tag @s add stardust.new_mob
 
-# Set attributes (1024 health, x4 damage)
-attribute @s minecraft:max_health base set 1024
+# Set attributes (512 health, x4 damage)
+attribute @s minecraft:max_health base set 512
 attribute @s minecraft:attack_damage modifier add stardust:damage_scale 3 add_multiplied_base
 data modify entity @s Health set value 4096.0f
 

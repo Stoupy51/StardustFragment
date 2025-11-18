@@ -24,3 +24,6 @@ execute positioned ~10 ~ ~ run function stardust:mobs/ultimate_slave/summon
 execute positioned ~ ~ ~7 run function stardust:mobs/ultimate_slave/summon
 execute positioned ~ ~ ~-7 run function stardust:mobs/ultimate_slave/summon
 
+# Summon all end crystal
+function stardust:mobs/ultimate_dragon/summon_end_crystals
+

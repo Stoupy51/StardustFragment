@@ -10,14 +10,15 @@
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.ultimate_dragon
+tag @s add stardust.ultimate_boss
 tag @s add stardust.mob_entity
 team join stardust.mob @s
 
 # Mark as new mob for setup
 tag @s add stardust.new_mob
 
-# Set attributes (2048 health, x4 damage, 80% resistance)
-attribute @s minecraft:max_health base set 2048
+# Set attributes (1024 health, x4 damage, 80% resistance)
+attribute @s minecraft:max_health base set 1024
 attribute @s minecraft:attack_damage modifier add stardust:damage_scale 3 add_multiplied_base
 effect give @s minecraft:resistance infinite 3 true
 data modify entity @s Health set value 4096.0f
@@ -32,7 +33,7 @@ execute summon item_display run function stardust:mobs/create_model {"entity":"u
 
 # Setup bossbar
 bossbar set stardust:ultimate_dragon name [{"text": "U", "color": "#ff0000", "italic": false}, {"text": "l", "color": "#ff6600"}, {"text": "t", "color": "#ffcc00"}, {"text": "i", "color": "#ccff00"}, {"text": "m", "color": "#65ff00"}, {"text": "a", "color": "#00ff00"}, {"text": "t", "color": "#00ff65"}, {"text": "e", "color": "#00ffcb"}, {"text": " ", "color": "#00cbff"}, {"text": "D", "color": "#0065ff"}, {"text": "r", "color": "#0000ff"}, {"text": "a", "color": "#6600ff"}, {"text": "g", "color": "#cb00ff"}, {"text": "o", "color": "#ff00cb"}, {"text": "n", "color": "#ff0066"}]
-bossbar set stardust:ultimate_dragon value 2048
+bossbar set stardust:ultimate_dragon value 1024
 
 # Remove new_mob tag after setup
 tag @s remove stardust.new_mob

@@ -35,7 +35,7 @@ bossbar set {ns}:stardust_pillar style notched_10
 bossbar set {ns}:stardust_pillar color blue
 bossbar set {ns}:stardust_pillar max {PILLAR_MAX_HEALTH}
 """, prepend=True)
-	write_function(f"{ns}:mobs/remove_bossbars", f"bossbar set {ns}:stardust_pillar players")
+	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.stardust_pillar] run bossbar set {ns}:stardust_pillar players")
 
 	# Consume Starlight Infuser item to summon Stardust Pillar
 	Mem.ctx.data[ns].advancements["technical/consume_starlight_infuser"] = set_json_encoder(Advancement({

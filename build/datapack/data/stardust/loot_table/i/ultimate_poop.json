@@ -1,0 +1,91 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": [
+									{
+										"text": "U",
+										"color": "#ff0000",
+										"italic": false
+									},
+									{
+										"text": "l",
+										"color": "#ff7500"
+									},
+									{
+										"text": "t",
+										"color": "#ffeb00"
+									},
+									{
+										"text": "i",
+										"color": "#9cff00"
+									},
+									{
+										"text": "m",
+										"color": "#27ff00"
+									},
+									{
+										"text": "a",
+										"color": "#00ff4e"
+									},
+									{
+										"text": "t",
+										"color": "#00ffc4"
+									},
+									{
+										"text": "e",
+										"color": "#00c4ff"
+									},
+									{
+										"text": " ",
+										"color": "#004eff"
+									},
+									{
+										"text": "P",
+										"color": "#2700ff"
+									},
+									{
+										"text": "o",
+										"color": "#9c00ff"
+									},
+									{
+										"text": "o",
+										"color": "#ff00eb"
+									},
+									{
+										"text": "p",
+										"color": "#ff0075"
+									}
+								],
+								"minecraft:item_model": "stardust:ultimate_poop",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"ultimate_poop": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

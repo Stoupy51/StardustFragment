@@ -3,17 +3,16 @@
 import json
 
 from stewbeet import (
-	COMMON_SIGNAL,
 	Advancement,
 	Conventions,
 	JsonDict,
 	LootTable,
 	Mem,
+	Predicate,
 	rainbow_gradient_text,
 	set_json_encoder,
 	write_function,
 	write_load_file,
-	write_versioned_function,
 )
 
 from ...common import STARFRAG_TEXT
@@ -22,26 +21,26 @@ from ...common import STARFRAG_TEXT
 # Setup boss mob: Ultimate Dragon
 def main() -> None:
 	SPAWN_ANIMATION_DURATION: int = 160  # Ticks
-	DRAGON_MAX_HEALTH: int = 2048
-	ULTIMATE_SLAVE_MAX_HEALTH: int = 1024
+	DRAGON_MAX_HEALTH: int = 1024
+	ULTIMATE_SLAVE_MAX_HEALTH: int = 512
+	ATTACK_COOLDOWN: int = 200
 	BOSSBAR_LIST: list[JsonDict] = rainbow_gradient_text("Ultimate Dragon")
 	BOSSBAR_TEXT: str = json.dumps(BOSSBAR_LIST)
 	ns: str = Mem.ctx.project_id
 
 	# Load function
 	write_load_file(f"""
-# Ultimate Dragon bossbar & objective for throwing lingering potions
+# Ultimate Dragon bossbar & objectives
 scoreboard objectives add {ns}.lingering_potion minecraft.used:minecraft.lingering_potion
+scoreboard objectives add {ns}.chosen_attack dummy
+scoreboard objectives add {ns}.attack_cooldown dummy
 bossbar add {ns}:ultimate_dragon {BOSSBAR_TEXT}
 bossbar set {ns}:ultimate_dragon name {BOSSBAR_TEXT}
 bossbar set {ns}:ultimate_dragon style notched_20
 bossbar set {ns}:ultimate_dragon color yellow
 bossbar set {ns}:ultimate_dragon max {DRAGON_MAX_HEALTH}
 """, prepend=True)
-	write_versioned_function("minute", f"""
-# Remove bossbar
-bossbar set {ns}:ultimate_dragon players
-""")
+	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.dragon] run bossbar set {ns}:ultimate_dragon players")
 
 	# Consume Ultimate Dragon Essence to summon Ultimate Dragon
 	Mem.ctx.data[ns].advancements["technical/used_lingering_potion"] = set_json_encoder(Advancement({
@@ -159,6 +158,16 @@ execute if score #global_tick {ns}.data < @s {ns}.spawn_delay run return run sco
 function {ns}:mobs/ultimate_dragon/essence/finish_animation
 """)
 
+	# End crystals to summon
+	write_function(f"{ns}:mobs/ultimate_dragon/summon_end_crystals", "\n".join([
+		f"execute in {ns}:ultimate run summon minecraft:end_crystal {coords}"
+		for coords in [
+			"12 76 -40", "33 103 -25", "42 88 0", "33 97 24", "12 82 39",
+			"-13 79 39", "-34 94 24", "-42 91 -1", "-34 100 -25", "-13 85 -40"
+		]
+	]))
+
+	# Finish animation and summon Ultimate Dragon
 	write_function(f"{ns}:mobs/ultimate_dragon/essence/finish_animation", f"""
 # Remove entity
 kill @s
@@ -177,6 +186,9 @@ function {ns}:mobs/ultimate_dragon/summon
 execute positioned ~10 ~ ~ run function {ns}:mobs/ultimate_slave/summon
 execute positioned ~ ~ ~7 run function {ns}:mobs/ultimate_slave/summon
 execute positioned ~ ~ ~-7 run function {ns}:mobs/ultimate_slave/summon
+
+# Summon all end crystal
+function {ns}:mobs/ultimate_dragon/summon_end_crystals
 """)
 
 	# Ultimate Dragon conversion
@@ -185,6 +197,7 @@ execute positioned ~ ~ ~-7 run function {ns}:mobs/ultimate_slave/summon
 # Add tags & join team
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
 tag @s add {ns}.ultimate_dragon
+tag @s add {ns}.ultimate_boss
 tag @s add {ns}.mob_entity
 team join {ns}.mob @s
 
@@ -219,6 +232,7 @@ tag @s remove {ns}.new_mob
 # Add tags & join team
 {"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS])}
 tag @s add {ns}.ultimate_slave
+tag @s add {ns}.ultimate_boss
 tag @s add {ns}.mob_entity
 team join {ns}.mob @s
 
@@ -246,20 +260,136 @@ tag @s remove {ns}.new_mob
 	write_function(f"{ns}:mobs/loop/mob_second", f"execute if entity @s[tag={ns}.ultimate_dragon] run return run function {ns}:mobs/ultimate_dragon/second")
 
 	# Ultimate Dragon's looping behavior
+	Mem.ctx.data[ns].predicates["random/0.2"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance":0.2}))
 	write_function(f"{ns}:mobs/ultimate_dragon/second",
 f"""
-# Particles
-particle enchant ~ ~ ~ 2 2 2 0 10
+# Launch tick function
+scoreboard players set #ultimate_dragon_tick {ns}.data 20
+schedule function {ns}:mobs/ultimate_dragon/schedule_tick 1t append
 
-# Set bossbar for nearby players & update value
+# Set bossbar for nearby players
 bossbar set {ns}:ultimate_dragon visible true
 bossbar set {ns}:ultimate_dragon players @a[distance=..200]
-execute store result bossbar {ns}:ultimate_dragon value run data get entity @s Health
+
+# Prevents dead dragons from disappearing & applying phase 0 to all slave dragons
+execute as @e[tag={ns}.mob_entity,tag={ns}.dead_slave] run data modify entity @s Health set value {ULTIMATE_SLAVE_MAX_HEALTH}
+execute as @e[tag={ns}.mob_entity,tag={ns}.ultimate_slave] run data modify entity @s DragonPhase set value 0
+
+# Prevents dragons from flying too high (Y=150)
+execute as @e[tag={ns}.ultimate_boss] at @s if entity @s[y=150,dy=800] run data modify entity @s Motion[1] set value -2.00d
 
 # Glowing only if no players nearby
 data modify entity @s Glowing set value false
 execute unless entity @a[gamemode=!spectator,distance=..15] run data modify entity @s Glowing set value true
+
+# Every second, 20% chance to choose a random attack
+execute as @e[tag={ns}.ultimate_boss,predicate={ns}:random/0.2] unless score @s {ns}.attack_cooldown matches -{ATTACK_COOLDOWN}.. at @s run function {ns}:mobs/ultimate_dragon/common/choose_attack
 """)
+	write_function(f"{ns}:mobs/ultimate_dragon/schedule_tick", f"""
+# Decrease tick counter and run tick function
+scoreboard players remove #ultimate_dragon_tick {ns}.data 1
+execute as @n[tag={ns}.mob_entity,tag={ns}.ultimate_dragon] at @s run function {ns}:mobs/ultimate_dragon/tick
+
+# Reschedule next tick if not zero
+execute if score #ultimate_dragon_tick {ns}.data matches 1.. run schedule function {ns}:mobs/ultimate_dragon/schedule_tick 1t replace
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/tick", f"""
+# Update bossbar value
+execute store result bossbar {ns}:ultimate_dragon value run data get entity @s Health
+
+# Particles to dead slaves to indicate they are dead
+execute at @e[tag={ns}.mob_entity,tag={ns}.dead_slave] run particle minecraft:soul ~ ~ ~ 5 5 5 0.05 100 force @a[distance=..200]
+
+# Handle attack cooldown
+execute as @e[tag={ns}.ultimate_boss,scores={{{ns}.attack_cooldown=-{ATTACK_COOLDOWN}..}}] at @s run function {ns}:mobs/ultimate_dragon/common/handle_attack_cooldown
+
+# Check if poops are destroyed
+execute as @e[type=item_display,tag={ns}.ultimate_poop] at @s run function {ns}:mobs/ultimate_dragon/poop/check_destroy
+""")
+
+	# Choose attack function
+	write_function(f"{ns}:mobs/ultimate_dragon/common/choose_attack", f"""
+# Choose a random attack and run function
+execute store result score @s {ns}.chosen_attack run random value 1..2
+execute if score @s {ns}.chosen_attack matches 1 run return run function {ns}:mobs/ultimate_dragon/ultimate_poop/choose
+execute if score @s {ns}.chosen_attack matches 2 run return run function {ns}:mobs/ultimate_dragon/fireball_burst/choose
+""")
+
+	# Handle attack cooldown
+	write_function(f"{ns}:mobs/ultimate_dragon/common/handle_attack_cooldown", f"""
+# Decrease attack cooldown by 1 and stop when it reaches 0
+scoreboard players remove @s {ns}.attack_cooldown 1
+execute if score @s {ns}.attack_cooldown matches ..0 run return 1
+
+# Only action for poop attack is particles
+execute if score @s {ns}.chosen_attack matches 1 run return run particle dust{{color:[0.59,0.29,0],scale:4}} ~ ~ ~ 0 0 0 0.05 1 force @a[distance=..200]
+
+# Fireball Burst attack
+execute if score @s {ns}.chosen_attack matches 2 run function {ns}:mobs/ultimate_dragon/fireball_burst/launch
+""")
+
+	## Poop attack functions
+	# Ultimate Poop attack
+	write_function(f"{ns}:mobs/ultimate_dragon/ultimate_poop/choose", f"""
+# Poop particles for 2 seconds
+scoreboard players set @s {ns}.attack_cooldown 40
+
+# 20% chance of summoning an ultimate poop directly
+execute if predicate {ns}:random/0.2 summon item_display run function {ns}:mobs/ultimate_dragon/poop/on_new_poop
+""")
+
+	# On new poop summoned
+	write_function(f"{ns}:mobs/ultimate_dragon/poop/on_new_poop", f"""
+# Add tags
+{"\n".join([f"tag @s add {tag}" for tag in Conventions.ENTITY_TAGS_NO_KILL])}
+tag @s add {ns}.ultimate_poop
+
+# Set item display properties
+data modify entity @s Glowing set value true
+data modify entity @s transformation.scale set value [1.5d,1.5d,1.5d]
+loot replace entity @s contents loot {ns}:i/ultimate_poop
+""")
+
+	# Check if poops are destroyed
+	write_function(f"{ns}:mobs/ultimate_dragon/poop/check_destroy", f"""
+# If item_display has existed for more than 300 ticks (15 seconds), kill it
+scoreboard players add @s {ns}.data 1
+execute if score @s {ns}.data matches 250 run data merge entity @s {{transformation:{{scale:[0.0d,0.0d,0.0d]}},interpolation_duration:20,start_interpolation:0}}
+execute if score @s {ns}.data matches 300.. run return run kill @s
+
+# If a player or an arrow is within 1 block, the poop is destroyed
+scoreboard players set #success {ns}.data 0
+execute as @a[gamemode=!spectator,distance=..2] at @s run function {ns}:mobs/ultimate_dragon/poop/destroy
+execute as @e[type=arrow,distance=..2] at @s run function {ns}:mobs/ultimate_dragon/poop/destroy
+execute if score #success {ns}.data matches 1.. run kill @s
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/poop/destroy", f"""
+# Mark success
+scoreboard players set #success {ns}.data 1
+
+# Playsound for the player who destroyed the poop
+execute if entity @s[type=player] run playsound minecraft:entity.ender_dragon.hurt hostile @s
+execute if entity @s[type=player] run playsound minecraft:block.honey_block.break ambient @s
+execute if entity @s[type=arrow] on origin at @s run playsound minecraft:entity.ender_dragon.hurt hostile @s
+execute if entity @s[type=arrow] on origin at @s run playsound minecraft:block.honey_block.break ambient @s
+execute if entity @s[type=arrow] run kill @s
+
+# Remove health percentage from all dragons
+execute as @e[tag={ns}.ultimate_boss] at @s run function {ns}:mobs/ultimate_dragon/poop/remove_health_percentage
+""")
+
+	# Remove health percentage
+	write_function(f"{ns}:mobs/ultimate_dragon/poop/remove_health_percentage", f"""
+# Remove 1% of total health (only if above 0 health)
+execute store result score #to_remove {ns}.data run attribute @s minecraft:max_health get 10
+execute store result score #current_health {ns}.data run data get entity @s Health 1000
+scoreboard players operation #current_health {ns}.data -= #to_remove {ns}.data
+execute if score #current_health {ns}.data matches 1.. store result entity @s Health float 0.001 run scoreboard players get #current_health {ns}.data
+
+# Particles
+particle block{{block_state:"redstone_wire"}} ~ ~ ~ 3 3 3 0 1000 force @a[distance=..200]
+""")
+
 	return
 
 	# Each time Ultimate Dragon is hurt, summon a wolf wave

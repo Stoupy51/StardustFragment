@@ -34,7 +34,7 @@ bossbar set {ns}:stoup_army style notched_6
 bossbar set {ns}:stoup_army color white
 bossbar set {ns}:stoup_army max {STOUPY_MAX_HEALTH}
 """, prepend=True)
-	write_function(f"{ns}:mobs/remove_bossbars", f"bossbar set {ns}:stoup_army players")
+	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.stoupy] run bossbar set {ns}:stoup_army players")
 
 	# Consume StoupEgg item to summon Stoup Army
 	Mem.ctx.data[ns].advancements["technical/consume_stoupegg"] = set_json_encoder(Advancement({

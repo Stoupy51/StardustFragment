@@ -34,7 +34,7 @@ bossbar set {ns}:stardust_guardian style notched_12
 bossbar set {ns}:stardust_guardian color red
 bossbar set {ns}:stardust_guardian max {GUARDIAN_MAX_HEALTH}
 """, prepend=True)
-	write_function(f"{ns}:mobs/remove_bossbars", f"bossbar set {ns}:stardust_guardian players")
+	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.stardust_guardian] run bossbar set {ns}:stardust_guardian players")
 
 	# Stardust Guardian conversion
 	write_function(f"{ns}:mobs/stardust_guardian/summon", f"execute summon minecraft:skeleton run function {ns}:mobs/stardust_guardian/convert")

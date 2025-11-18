@@ -1854,5 +1854,12 @@
 		"item_model": "stardust:ultimate_dragon_egg",
 		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"ultimate_poop": {
+		"id": "minecraft:command_block",
+		"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff7500"},{"text": "t","color": "#ffeb00"},{"text": "i","color": "#9cff00"},{"text": "m","color": "#27ff00"},{"text": "a","color": "#00ff4e"},{"text": "t","color": "#00ffc4"},{"text": "e","color": "#00c4ff"},{"text": " ","color": "#004eff"},{"text": "P","color": "#2700ff"},{"text": "o","color": "#9c00ff"},{"text": "o","color": "#ff00eb"},{"text": "p","color": "#ff0075"}],
+		"item_model": "stardust:ultimate_poop",
+		"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"custom_data": {"stardust": {"ultimate_poop": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	}
 }

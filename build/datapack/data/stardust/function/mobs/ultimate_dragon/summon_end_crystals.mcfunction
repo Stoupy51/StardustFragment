@@ -4,6 +4,7 @@
 # @executed	as @e[tag=stardust.ultimate_dragon_essence_landed] & at @s
 #
 # @within	stardust:mobs/ultimate_dragon/essence/finish_animation
+#			stardust:mobs/ultimate_slave/damage_ultimate_dragon
 #
 
 execute in stardust:ultimate run summon minecraft:end_crystal 12 76 -40

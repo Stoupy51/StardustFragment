@@ -216,13 +216,7 @@ execute store result entity @s Health float 1.0 run scoreboard players get #heal
 	# Launch towards nearest player function
 	write_function(f"{ns}:mobs/stardust_pillar/launch_towards_player", f"""
 # Compute motion towards nearest player
-scoreboard players set @s bs.vel.x 0
-scoreboard players set @s bs.vel.y 0
-scoreboard players set @s bs.vel.z 500
-execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes run function #bs.move:local_to_canonical
-
-# Apply motion
-function #bs.move:set_motion {{scale:0.001}}
+execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes run function {ns}:utils/compute_motion_towards {{towards:500,scale:0.001}}
 
 # Bound pos
 data modify storage {ns}:temp Pos set from entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] Pos

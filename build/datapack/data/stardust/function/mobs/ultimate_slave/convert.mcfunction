@@ -10,8 +10,8 @@
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.ultimate_slave
-tag @s add stardust.ultimate_boss
 tag @s add stardust.mob_entity
+tag @s add stardust.dragon
 team join stardust.mob @s
 
 # Mark as new mob for setup

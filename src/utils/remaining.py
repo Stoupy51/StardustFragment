@@ -42,6 +42,18 @@ scoreboard players set @s {ns}.right_click 0
 	write_tick_file(f"\n# Global counter for various features\nscoreboard players add #global_tick {ns}.data 1\n", prepend=True)
 	write_versioned_function("second", f"\n# Global counter for various features\nscoreboard players add #global_second {ns}.data 1\n", prepend=True)
 
+	# Compute motion towards
+	write_function(f"{ns}:utils/compute_motion_towards", """
+# Compute motion towards
+scoreboard players set @s bs.vel.x 0
+scoreboard players set @s bs.vel.y 0
+$scoreboard players set @s bs.vel.z $(towards)
+function #bs.move:local_to_canonical
+
+# Apply motion
+$function #bs.move:set_motion {scale:$(scale)}
+""")
+
 	# Enchantment for ticking mobs
 	# Mem.ctx.data[ns].enchantments["ticking"] = set_json_encoder(Enchantment({
 	# 	"description": "DEVELOPMENT ONLY: Ticking entity enchantment",

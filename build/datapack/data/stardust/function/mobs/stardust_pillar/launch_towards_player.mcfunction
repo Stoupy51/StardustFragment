@@ -7,13 +7,7 @@
 #
 
 # Compute motion towards nearest player
-scoreboard players set @s bs.vel.x 0
-scoreboard players set @s bs.vel.y 0
-scoreboard players set @s bs.vel.z 500
-execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes run function #bs.move:local_to_canonical
-
-# Apply motion
-function #bs.move:set_motion {scale:0.001}
+execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes run function stardust:utils/compute_motion_towards {towards:500,scale:0.001}
 
 # Bound pos
 data modify storage stardust:temp Pos set from entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] Pos

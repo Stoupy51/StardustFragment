@@ -10,11 +10,14 @@
 execute store result bossbar stardust:ultimate_dragon value run data get entity @s Health
 
 # Particles to dead slaves to indicate they are dead
-execute at @e[tag=stardust.mob_entity,tag=stardust.dead_slave] run particle minecraft:soul ~ ~ ~ 5 5 5 0.05 100 force @a[distance=..200]
+execute at @e[tag=stardust.mob_entity,tag=stardust.dead_slave] run particle minecraft:soul ~ ~ ~ 5 5 5 0.05 25 force @a[distance=..200]
 
 # Handle attack cooldown
-execute as @e[tag=stardust.ultimate_boss,scores={stardust.attack_cooldown=-200..}] at @s run function stardust:mobs/ultimate_dragon/common/handle_attack_cooldown
+execute as @e[tag=stardust.dragon,scores={stardust.attack_cooldown=-200..}] at @s run function stardust:mobs/ultimate_dragon/common/handle_attack_cooldown
 
 # Check if poops are destroyed
-execute as @e[type=item_display,tag=stardust.ultimate_poop] at @s run function stardust:mobs/ultimate_dragon/poop/check_destroy
+execute as @e[type=item_display,tag=stardust.ultimate_poop] at @s run function stardust:mobs/ultimate_dragon/ultimate_poop/check_destroy
+
+# Homing arrows targetting nearest player
+execute as @e[type=arrow,tag=stardust.homing_arrow] at @s run function stardust:mobs/ultimate_dragon/homing_arrow/tick
 

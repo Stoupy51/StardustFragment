@@ -10,8 +10,8 @@
 tag @s add smithed.entity
 tag @s add global.ignore
 tag @s add stardust.ultimate_dragon
-tag @s add stardust.ultimate_boss
 tag @s add stardust.mob_entity
+tag @s add stardust.dragon
 team join stardust.mob @s
 
 # Mark as new mob for setup
@@ -26,6 +26,7 @@ data modify entity @s Health set value 4096.0f
 # Set custom name and other properties
 data modify entity @s CustomName set value {"translate": "stardust.ultimate_dragon","color":"white"}
 data modify entity @s PersistenceRequired set value true
+data modify entity @s Glowing set value true
 
 # Create visual model
 scoreboard players set #base_scale stardust.data 0

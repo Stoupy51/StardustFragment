@@ -1,9 +1,9 @@
 
 #> stardust:mobs/ultimate_dragon/common/handle_attack_cooldown
 #
-# @executed	as @e[tag=stardust.ultimate_boss,scores={stardust.attack_cooldown=-200..}] & at @s
+# @executed	as @e[tag=stardust.dragon,scores={stardust.attack_cooldown=-200..}] & at @s
 #
-# @within	stardust:mobs/ultimate_dragon/tick [ as @e[tag=stardust.ultimate_boss,scores={stardust.attack_cooldown=-200..}] & at @s ]
+# @within	stardust:mobs/ultimate_dragon/tick [ as @e[tag=stardust.dragon,scores={stardust.attack_cooldown=-200..}] & at @s ]
 #
 
 # Decrease attack cooldown by 1 and stop when it reaches 0

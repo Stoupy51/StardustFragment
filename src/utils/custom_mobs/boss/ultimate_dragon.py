@@ -284,6 +284,10 @@ execute as @e[tag={ns}.dragon] at @s if entity @s[y=150,dy=800] run data modify 
 # Every second, 20% chance to choose a random attack
 execute as @e[tag={ns}.dragon,predicate={ns}:random/0.2] unless score @s {ns}.attack_cooldown matches -{ATTACK_COOLDOWN}.. at @s run function {ns}:mobs/ultimate_dragon/common/choose_attack
 
+# Kill entities alive for too long (5s)
+scoreboard players add @e[tag={ns}.short_lived_entity] {ns}.data 1
+kill @e[tag={ns}.short_lived_entity,scores={{{ns}.data=5..}}]
+
 # Prevent entities to go too far away
 execute in {ns}:ultimate positioned 0 100 0 as @e[distance=256..1000] on vehicle run tp @s 0 100 0
 execute in {ns}:ultimate positioned 0 100 0 run tp @e[distance=256..1000] 0 100 0
@@ -302,6 +306,9 @@ execute store result bossbar {ns}:ultimate_dragon value run data get entity @s H
 
 # Particles to dead slaves to indicate they are dead
 execute at @e[tag={ns}.mob_entity,tag={ns}.dead_slave] run particle minecraft:soul ~ ~ ~ 5 5 5 0.05 25 force @a[distance=..200]
+
+# Replace fire so it doesn't last long
+execute at @a[distance=..200] run fill ~-16 ~-16 ~-16 ~16 ~16 ~16 minecraft:fire[age=15] replace minecraft:fire
 
 # Handle attack cooldown
 execute as @e[tag={ns}.dragon,scores={{{ns}.attack_cooldown=-{ATTACK_COOLDOWN}..}}] at @s run function {ns}:mobs/ultimate_dragon/common/handle_attack_cooldown
@@ -332,7 +339,7 @@ execute if score @s {ns}.attack_cooldown matches ..0 run return 1
 execute if score @s {ns}.chosen_attack matches 1 run return run particle dust{{color:[0.59,0.29,0],scale:4}} ~ ~ ~ 0 0 0 0.05 1 force @a[distance=..200]
 
 # Fireball Burst attack
-execute if score @s {ns}.chosen_attack matches 2 run function {ns}:mobs/ultimate_dragon/fireball_burst/launch
+execute if score @s {ns}.chosen_attack matches 2 run function {ns}:mobs/ultimate_dragon/fireball_burst/tick
 """)
 
 	## Poop attack functions
@@ -399,23 +406,42 @@ particle block{{block_state:"redstone_wire"}} ~ ~ ~ 3 3 3 0 1000 force @a[distan
 
 	## Fireball Burst attack functions
 	write_function(f"{ns}:mobs/ultimate_dragon/fireball_burst/choose", f"""
-# Attack duration of 1.5 seconds
-scoreboard players set @s {ns}.attack_cooldown 30
-
-# Launch fireball burst
-function {ns}:mobs/ultimate_dragon/fireball_burst/launch
+# Attack duration of 1.2 seconds
+scoreboard players set @s {ns}.attack_cooldown 24
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/fireball_burst/tick", f"""
+# Every 3 ticks, launch a fireball
+scoreboard players set #3 {ns}.data 3
+scoreboard players operation #temp {ns}.data = #global_tick {ns}.data
+scoreboard players operation #temp {ns}.data %= #3 {ns}.data
+execute if score #temp {ns}.data matches 0 run function {ns}:mobs/ultimate_dragon/fireball_burst/launch
 """)
 	write_function(f"{ns}:mobs/ultimate_dragon/fireball_burst/launch", f"""
 # Stop if no valid players
 execute unless entity @p[gamemode=!spectator,gamemode=!creative,distance=..200] run return fail
 
 # Fireball towards nearest player
-# TODO: 1/5 chance that it's a dragon breath instead
-# TODO: ExplosionPower higher
-execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..200] eyes positioned ^ ^ ^5 summon minecraft:fireball run function {ns}:utils/compute_motion_towards {{towards:1000,scale:0.001}}
+execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..200] eyes positioned ^ ^ ^5 run function {ns}:mobs/ultimate_dragon/fireball_burst/summon_command
 
 # Playsound for the targetted player
 execute as @p[gamemode=!spectator,gamemode=!creative,distance=..200] at @s run playsound minecraft:entity.ender_dragon.shoot hostile @s
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/fireball_burst/summon_command", f"""
+# 1/20 chance that it's a dragon breath instead
+execute store result score #random {ns}.data run random value 1..20
+execute if score #random {ns}.data matches 1 summon minecraft:dragon_fireball run return run function {ns}:mobs/ultimate_dragon/fireball_burst/on_new_ball
+execute if score #random {ns}.data matches 2.. summon minecraft:fireball run return run function {ns}:mobs/ultimate_dragon/fireball_burst/on_new_ball
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/fireball_burst/on_new_ball", f"""
+# Add tags
+tag @s add {ns}.short_lived_entity
+tag @s add {ns}.fireball_burst
+
+# If classic fireball, set explosion power
+execute if entity @s[type=minecraft:fireball] run data modify entity @s ExplosionPower set value 4
+
+# Set motion towards facing direction, and acceleration
+function {ns}:utils/compute_motion_towards {{towards:1500,scale:0.001}}
 """)
 
 	## Homing arrows functions

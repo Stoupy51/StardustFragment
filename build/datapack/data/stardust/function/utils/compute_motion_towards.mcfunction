@@ -4,7 +4,7 @@
 # @executed	facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes
 #
 # @within	stardust:mobs/stardust_pillar/launch_towards_player {towards:500,scale:0.001} [ facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes ]
-#			stardust:mobs/ultimate_dragon/fireball_burst/launch {towards:1000,scale:0.001} [ facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..200] eyes & positioned ^ ^ ^5 ]
+#			stardust:mobs/ultimate_dragon/fireball_burst/on_new_ball {towards:1500,scale:0.001}
 #
 # @args		towards (int)
 #			scale (double)

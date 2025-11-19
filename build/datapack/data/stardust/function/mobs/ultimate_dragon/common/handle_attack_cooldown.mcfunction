@@ -14,5 +14,5 @@ execute if score @s stardust.attack_cooldown matches ..0 run return 1
 execute if score @s stardust.chosen_attack matches 1 run return run particle dust{color:[0.59,0.29,0],scale:4} ~ ~ ~ 0 0 0 0.05 1 force @a[distance=..200]
 
 # Fireball Burst attack
-execute if score @s stardust.chosen_attack matches 2 run function stardust:mobs/ultimate_dragon/fireball_burst/launch
+execute if score @s stardust.chosen_attack matches 2 run function stardust:mobs/ultimate_dragon/fireball_burst/tick
 

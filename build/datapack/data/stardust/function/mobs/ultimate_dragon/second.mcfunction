@@ -27,6 +27,10 @@ execute as @e[tag=stardust.dragon] at @s if entity @s[y=150,dy=800] run data mod
 # Every second, 20% chance to choose a random attack
 execute as @e[tag=stardust.dragon,predicate=stardust:random/0.2] unless score @s stardust.attack_cooldown matches -200.. at @s run function stardust:mobs/ultimate_dragon/common/choose_attack
 
+# Kill entities alive for too long (5s)
+scoreboard players add @e[tag=stardust.short_lived_entity] stardust.data 1
+kill @e[tag=stardust.short_lived_entity,scores={stardust.data=5..}]
+
 # Prevent entities to go too far away
 execute in stardust:ultimate positioned 0 100 0 as @e[distance=256..1000] on vehicle run tp @s 0 100 0
 execute in stardust:ultimate positioned 0 100 0 run tp @e[distance=256..1000] 0 100 0

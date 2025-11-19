@@ -12,6 +12,9 @@ execute store result bossbar stardust:ultimate_dragon value run data get entity 
 # Particles to dead slaves to indicate they are dead
 execute at @e[tag=stardust.mob_entity,tag=stardust.dead_slave] run particle minecraft:soul ~ ~ ~ 5 5 5 0.05 25 force @a[distance=..200]
 
+# Replace fire so it doesn't last long
+execute at @a[distance=..200] run fill ~-16 ~-16 ~-16 ~16 ~16 ~16 minecraft:fire[age=15] replace minecraft:fire
+
 # Handle attack cooldown
 execute as @e[tag=stardust.dragon,scores={stardust.attack_cooldown=-200..}] at @s run function stardust:mobs/ultimate_dragon/common/handle_attack_cooldown
 

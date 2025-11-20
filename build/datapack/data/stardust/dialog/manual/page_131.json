@@ -1,33 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/health_artifact_lvmax",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.health_artifact_lvmax",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/health_artifact_lvmax",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.health_artifact_lv_max",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

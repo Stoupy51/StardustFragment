@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.quarry_creative",
+		"translate": "stardust.creative_quarry",
 		"underlined": true
 	},
 	"body": [

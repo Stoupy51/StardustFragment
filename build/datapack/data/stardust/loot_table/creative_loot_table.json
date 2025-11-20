@@ -45,6 +45,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/darkium_photovoltaic_cell"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_photovoltaic_cell"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/empty_module"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_dragon_egg"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/awakened_stardust_cable"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_cable"}]},
@@ -151,13 +152,13 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv6"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv7"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/cobblestone_miner_lv8"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_configurator"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/fortune_module"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/silk_touch_module"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stoupegg"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/starlight_infuser"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_dungeon_key"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_dragon_essence"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_configurator"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/fortune_module"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/silk_touch_module"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/manual"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_soldier"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_evoker"}]},
@@ -167,7 +168,6 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_configurator"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_module"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_information"}]},
-		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_dragon_egg"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_poop"}]}
 	]
 }

@@ -1,33 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/manual",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.manual",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/manual",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust_manual",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

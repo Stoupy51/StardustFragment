@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.awakened_stardust_furnace_generator",
+		"translate": "stardust.awakened_furnace_generator",
 		"underlined": true
 	},
 	"body": [

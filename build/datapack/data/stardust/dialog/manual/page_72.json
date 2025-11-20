@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.quarry_lv4",
+		"translate": "stardust.quarry_lv_4",
 		"underlined": true
 	},
 	"body": [

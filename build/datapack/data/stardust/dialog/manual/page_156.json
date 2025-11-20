@@ -1,33 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/cobblestone_miner_lv2",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.cobblestone_miner_lv2",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/cobblestone_miner_lv2",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.cobblestone_miner_lv_2",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

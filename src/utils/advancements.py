@@ -4,15 +4,34 @@
 from typing import Any
 
 import stouputils as stp
-from beet import Advancement, Texture
-from stewbeet.core import *
-from stewbeet.core.utils.io import super_merge_dict
+from stewbeet import Advancement, JsonDict, Mem, Texture, super_merge_dict
+from .common import STARFRAG_LIST
 
+
+# Utility function to convert definition to icon
+def def_to_icon(data: JsonDict | str) -> JsonDict:
+	""" Convert a definition to an advancement icon.
+
+	Args:
+		data (JsonDict | str): Definition data or item name.
+	Returns:
+		JsonDict: Advancement icon, e.g. {"id": "minecraft:stone", "components": {...}}
+	"""
+	if isinstance(data, str):
+		data = Mem.definitions[data]
+	icon: dict[str, Any] = {"id": data["id"]}
+	components_to_copy: list[str] = ["item_model", "profile"]
+	for component in components_to_copy:
+		if data.get(component):
+			if not icon.get("components"):
+				icon["components"] = {}
+			icon["components"][f"minecraft:{component}"] = data[component]
+	return icon
 
 # Add visible advancements to the datapack
 def add_visible_advancements() -> None:
 	ns: str = Mem.ctx.project_id
-	textures_folder: str = Mem.ctx.meta.stewbeet.textures_folder
+	textures_folder: str = Mem.ctx.meta.get("stewbeet", {}).get("textures_folder", "textures")
 
 	# Copy advancement texture
 	source: str = f"{textures_folder}/advancement_background.png"
@@ -20,39 +39,28 @@ def add_visible_advancements() -> None:
 
 	# Advancements list
 	background: str = f"{ns}:block/gui/advancement_background"
-	advancements: dict[str, dict] = {
-		"simplunium_ingot": {"display": {"title": {"text": "SimplEnergy", "color": "gray"}, "description": {"text": "Obtain a Simplunium Ingot", "color": "green"}, "background": background}},
-		"advanced_battery": {"display": {"title": {"text": "More Energy Storage!", "color": "gray"}, "description": {"text": "Upgrade a Simple Battery", "color": "green"}}, "parent": f"{ns}:visible/simple_battery"},
-		"advanced_cable": {"display": {"title": {"text": "Better Cable, Faster Transfer", "color": "gray"}, "description": {"text": "Upgrade a Simple Cable", "color": "green"}}, "parent": f"{ns}:visible/simple_cable"},
-		"cauldron_generator": {"display": {"title": {"text": "The Simplest Generator", "color": "gray"}, "description": {"text": "Craft your first Cauldron Generator", "color": "green"}}, "parent": f"{ns}:visible/simplunium_ingot"},
-		"pulverizer": {"display": {"title": {"text": "Pulverizing", "color": "gray"}, "description": {"text": "Craft your first Pulverizer", "color": "green"}}, "parent": f"{ns}:visible/electric_brewing_stand"},
-		"electric_brewing_stand": {"display": {"title": {"text": "Faster Brewing", "color": "gray"}, "description": {"text": "Obtain an Electric Brewing Stand", "color": "green"}}, "parent": f"{ns}:visible/electric_smelter"},
-		"electric_furnace": {"display": {"title": {"text": "A Better Furnace", "color": "gray"}, "description": {"text": "Craft your first Electric Furnace", "color": "green"}}, "parent": f"{ns}:visible/simplunium_ingot"},
-		"electric_smelter": {"display": {"title": {"text": "A Very Fast Smelter", "color": "gray"}, "description": {"text": "Upgrade an Electric Furnace", "color": "green"}}, "parent": f"{ns}:visible/electric_furnace"},
-		"elite_battery": {"display": {"title": {"text": "More and More Energy Storage!", "color": "gray"}, "description": {"text": "Upgrade an Advanced Battery", "color": "green"}}, "parent": f"{ns}:visible/advanced_battery"},
-		"elite_cable": {"display": {"title": {"text": "More and More Transfer", "color": "gray"}, "description": {"text": "Upgrade an Advanced Cable", "color": "green"}}, "parent": f"{ns}:visible/advanced_cable"},
-		"furnace_generator": {"display": {"title": {"text": "Also named the Coal Generator", "color": "gray"}, "description": {"text": "Craft your first Furnace Generator", "color": "green"}}, "parent": f"{ns}:visible/cauldron_generator"},
-		"multimeter": {"display": {"title": {"text": "Measuring Energy", "color": "gray"}, "description": {"text": "Obtain a Multimeter", "color": "green"}}, "parent": f"{ns}:visible/simplunium_ingot"},
-		"simple_battery": {"display": {"title": {"text": "A Simple Energy Storage", "color": "gray"}, "description": {"text": "Craft your first Simple Battery", "color": "green"}}, "parent": f"{ns}:visible/simplunium_ingot"},
-		"simple_cable": {"display": {"title": {"text": "Energy Needs Cables", "color": "gray"}, "description": {"text": "Get your first Simple Cable", "color": "green"}}, "parent": f"{ns}:visible/multimeter"},
-		"simplunium_pickaxe": {"display": {"title": {"text": "Simplunium Age", "color": "gray"}, "description": {"text": "Craft a Simplunium Pickaxe", "color": "green"}}, "parent": f"{ns}:visible/simplunium_ingot"},
-		"solar_panel": {"display": {"title": {"text": "Use the Sunlight", "color": "gray"}, "description": {"text": "Get your first Solar Panel", "color": "green"}}, "parent": f"{ns}:visible/furnace_generator"},
-		"wrench": {"display": {"title": {"text": "Having the control!", "color": "gray"}, "description": {"text": "Craft a wrench to rotate machines and break cables", "color": "green"}, "hidden": True}, "parent": f"{ns}:visible/simplunium_armor"},
-
-		"simplunium_armor": {
-			"display": { "icon": {"id": Mem.definitions["simplunium_chestplate"]["id"],"components": {
-					"minecraft:item_model": Mem.definitions["simplunium_chestplate"]["item_model"],
-				}},
-				"title": {"text": "Cover Me with Simplunium", "color": "gray"},
-				"description": {"text": "Better than iron armor", "color": "green"},
-				"hidden": True
-			},
-			"criteria": {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {
-				"items": [{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"armor": {"simplunium": True}}}}}
-			}]}}},
-			"parent": f"{ns}:visible/simplunium_pickaxe"
-		},
+	advancements: dict[str, JsonDict] = {
+		"stardust_fragment": {"display": {"title": STARFRAG_LIST, "description": {"text": "What's this little blue thing?", "color": "green"}, "background": background}},
+		"enter_cavern": {"display": {"icon": def_to_icon("cavern_portal"), "title": {"text": "Return to monke", "color": "aqua"}, "description": {"text": "Travel to the Cavern Dimension", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment","criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:cavern"}}}},
+		"enter_celestial": {"display": {"icon": def_to_icon("celestial_portal"), "title": {"text": "Skyblock, isn't it?", "color": "aqua"}, "description": {"text": "Enter the Celestial Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_cavern", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:celestial"}}}},
+		"enter_stardust": {"display": {"icon": def_to_icon("stardust_portal"), "title": {"text": "Everythin's blue", "color": "aqua"}, "description": {"text": "Travel to the Stardust Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_celestial", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:stardust"}}}},
+		"enter_stardust_dungeon_dim": {"display": {"icon": def_to_icon("dungeon_portal"), "title": {"text": "A dimension, a dungeon", "color": "aqua"}, "description": {"text": "Enter the Stardust Dungeon Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:dungeon"}}}},
+		"enter_stardust_dungeon": {"display": {"icon": def_to_icon("stardust_dungeon_key"), "title": {"text": "Entering the dungeon", "color": "aqua"}, "description": {"text": "Use a Stardust Dungeon Key", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust_dungeon_dim", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"enter_ultimate": {"display": {"icon": def_to_icon("ultimate_portal"), "title": {"text": "The Ultimate Dimension", "color": "aqua"}, "description": {"text": "Travel to the Ultimate Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust_dungeon_dim", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:ultimate"}}}},
+		"use_awakened_forge": {"display": {"icon": {"id": "minecraft:dragon_egg"}, "title": {"text": "A new crafting structure", "color": "aqua"}, "description": {"text": "Use the Awakened Forge", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"stoup_army": {"display": {"icon": def_to_icon("stoupegg"), "title": {"text": "Fighting a mini-boss", "color": "aqua"}, "description": {"text": "Fight against your first Stoup Army", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_cavern", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"stardust_guardian": {"display": {"icon": {"id": "minecraft:wither_skeleton_skull"}, "title": {"text": "Making another step", "color": "aqua"}, "description": {"text": "Kill the Stardust Guardian", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust_dungeon", "criteria": {"requirement": {"trigger": "minecraft:player_killed_entity", "conditions": {"entity": [{"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"type": "minecraft:wither_skeleton", "nbt": f"{{DeathLootTable:\"{ns}:entities/stardust_guardian\",Tags:[\"{ns}.stardust_guardian\"]}}"}}]}}}},
+		"stardust_pillar": {"display": {"icon": def_to_icon("starlight_infuser"), "title": {"text": "A Stardust Pillar", "color": "aqua"}, "description": {"text": "Summon the Stardust Pillar", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"summon_ultimate_boss": {"display": {"icon": def_to_icon("ultimate_dragon_essence"), "title": {"text": "A journey to the end", "color": "aqua"}, "description": {"text": "Summon the Ultimate Boss", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_ultimate", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"ultimate_boss": {"display": {"icon": def_to_icon("ultimate_dragon_egg"), "title": {"text": "Stard'End", "color": "aqua"}, "description": {"text": "Defeat the Ultimate Boss", "color": "green"}, "frame": "goal"}, "parent": f"{ns}:visible/adventure/summon_ultimate_boss", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"lucky_artifact_bag": {"display": {"icon": def_to_icon("lucky_artifact_bag"), "title": {"text": "What am I going to take out?", "color": "aqua"}, "description": {"text": "Find a Lucky Artifact Bag", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment", "criteria": {"requirement": {"trigger": "minecraft:inventory_changed", "conditions": {"items": [{"predicates": {"minecraft:custom_data": {ns: {"lucky_artifact_bag": True}}}}]}}}},
+		"falling_celestial": {"display": {"icon": {"id": "minecraft:feather"}, "title": {"text": "Where did I put my bucket?"}, "description": {"text": "Fall from the Celestial dimension", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/enter_celestial", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"falling_stardust": {"display": {"icon": {"id": "minecraft:feather"}, "title": {"text": "I did it wrong"}, "description": {"text": "Fall from the Stardust dimension", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/enter_stardust", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"multiple_ultimate_boss": {"display": {"icon": {"id": "minecraft:dragon_head"}, "title": {"text": "Numbers don't affraid me"}, "description": {"text": "Summon two Ultimate Boss at the same time", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/ultimate_boss", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
+		"ultimate_boss_ez": {"display": {"icon": def_to_icon("ultimate_dragon_egg"), "title": {"text": "Star Fighter"}, "description": {"text": "Defeat the Ultimate Boss\\nby taking less than 10 hearts of damage", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/ultimate_boss", "criteria": {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}},
 	}
+
+	# TODO: enchant dragon egg for ultimate_boss_ez
 
 	# Add default display options
 	display_options: dict[str, bool | str] = {"frame": "task", "show_toast": True, "announce_to_chat": True, "hidden": False}
@@ -64,7 +72,7 @@ def add_visible_advancements() -> None:
 
 	# For each advancement,
 	for item, adv in advancements.items():
-		data: dict = Mem.definitions.get(item, {})
+		data: JsonDict = Mem.definitions.get(item, {})
 		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
 
 		# Set icon

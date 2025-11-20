@@ -28,7 +28,7 @@ def beet_default(ctx: Context) -> None:
 	insert_lib_calls()
 
 	# Add advancements to the datapack
-	#add_visible_advancements()
+	add_visible_advancements()
 
 	# Setup GUI in resource packs
 	gui: dict[str, str] = setup_gui_in_resource_packs(

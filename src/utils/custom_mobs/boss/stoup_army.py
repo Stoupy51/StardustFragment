@@ -63,6 +63,9 @@ tellraw @a[distance=..128] ["",{STARFRAG_TEXT},{{"text":" A "}},{BOSSBAR_TEXT},{
 execute as @a[distance=..128] at @s run playsound {ns}:wolf_howl ambient @s
 particle minecraft:enchant ~ ~ ~ 0.5 0.5 0.5 0.5 500
 
+# Grant visible advancement
+advancement grant @a[distance=..128] only {ns}:visible/adventure/stoup_army
+
 # Summon Stoupy at world surface
 execute positioned over world_surface run function {ns}:mobs/stoupy/summon
 

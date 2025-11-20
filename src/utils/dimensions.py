@@ -32,13 +32,17 @@ def setup_dimensions() -> None:
 	# Call when loading
 	write_load_file(f"""
 # Make sure dimensions are built
+function {ns}:dimensions/ensure_built
+""", prepend=True)
+	write_function(f"{ns}:dimensions/ensure_built", f"""
+# Make sure dimensions are built
 execute unless score #dungeon_built {ns}.data matches 1 in {ns}:dungeon run forceload add {dungeon_min_x} {dungeon_min_z} {dungeon_max_x} {dungeon_max_z}
 execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run forceload add {ultimate_min_x} {ultimate_min_z} {ultimate_max_x} {ultimate_max_z}
 schedule function {ns}:dimensions/load 2s
-""", prepend=True)
+""")
 	write_function(f"{ns}:dimensions/load", f"""
-execute unless score #dungeon_built {ns}.data matches 1 in {ns}:dungeon run function {ns}:dimensions/structure/dungeon
-execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run function {ns}:dimensions/structure/ultimate
+execute unless score #dungeon_built {ns}.data matches 1 in {ns}:dungeon run function {ns}:dimensions/structure/dungeon/start
+execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run function {ns}:dimensions/structure/ultimate/start
 """)
 	## Load dimension structures
 	for dimension, name, min_x, min_z, max_x, max_z, place_parts in [
@@ -49,25 +53,33 @@ execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run fu
 			place_dungeon_portal: str = f"""
 # Place the stardust dungeon portal
 scoreboard players set #infinite_energy {ns}.data 1
-execute positioned -9 66 3 run function {ns}:custom_blocks/stardust_dungeon_portal/place_main
+execute in {ns}:dungeon positioned -9 66 3 run function {ns}:custom_blocks/stardust_dungeon_portal/place_main
 """
 		else:
 			place_dungeon_portal: str = ""
 
-		# Place structure function
-		write_function(f"{ns}:dimensions/structure/{dimension}", f"""
-# Kill entities in the {name} before loading
-kill @e[type=!player,x={min_x},y=-60,z={min_z},dx={max_x - min_x},dy=300,dz={max_z - min_z}]
-kill @e[type=!player,x={min_x},y=-60,z={min_z},dx={max_x - min_x},dy=300,dz={max_z - min_z}]
+		# Asynchronous structure placement
+		for i, (part, pos) in enumerate(place_parts):
+			is_final: bool = (i == len(place_parts) - 1)
+			next_part: str = "final" if is_final else f"part_{i+1}"
+			function_name: str = f"part_{i}" if i > 0 else "start"
+			write_function(f"{ns}:dimensions/structure/{dimension}/{function_name}", f"""
+# Load structure part {part}
+execute store result score #success {ns}.data in {ns}:{dimension} run place template {ns}:{part} {pos}
 
-# Load structure parts (stop on failure)
-scoreboard players set #success {ns}.data 1
-{"\n".join(f'execute if score #success {ns}.data matches 1 store success score #success {ns}.data run place template {ns}:{part} {pos}' for part, pos in place_parts)}
+# If failed, error message
+execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"Stardust Fragment Error: The {name} couldn't be built. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
+
+# Schedule next part if successful
+execute if score #success {ns}.data matches 1 run schedule function {ns}:dimensions/structure/{dimension}/{next_part} 1t
+""")
+
+		# Place structure function
+		write_function(f"{ns}:dimensions/structure/{dimension}/final", f"""
 {place_dungeon_portal}
 # Mark dimension as built if successful
-forceload remove {min_x} {min_z} {max_x} {max_z}
-execute if score #success {ns}.data matches 1 run scoreboard players set #{dimension}_built {ns}.data 1
-execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"Stardust Fragment Error: The {name} couldn't be load. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
+execute in {ns}:{dimension} run forceload remove {min_x} {min_z} {max_x} {max_z}
+scoreboard players set #{dimension}_built {ns}.data 1
 """)
 
 	## Connect dimensions between them

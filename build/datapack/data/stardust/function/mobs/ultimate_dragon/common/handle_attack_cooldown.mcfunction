@@ -16,3 +16,6 @@ execute if score @s stardust.chosen_attack matches 1 run return run particle dus
 # Fireball Burst attack
 execute if score @s stardust.chosen_attack matches 2 run function stardust:mobs/ultimate_dragon/fireball_burst/tick
 
+# Homing Arrows attack
+execute if score @s stardust.chosen_attack matches 3 run function stardust:mobs/ultimate_dragon/homing_arrows/tick
+

@@ -261,6 +261,7 @@ tag @s remove {ns}.new_mob
 	write_function(f"{ns}:mobs/loop/mob_second", f"execute if entity @s[tag={ns}.ultimate_dragon] run return run function {ns}:mobs/ultimate_dragon/second")
 
 	# Ultimate Dragon's looping behavior
+	Mem.ctx.data[ns].predicates["random/0.5"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance":0.5}))
 	Mem.ctx.data[ns].predicates["random/0.2"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance":0.2}))
 	write_function(f"{ns}:mobs/ultimate_dragon/second", f"""
 # Launch tick function
@@ -317,13 +318,13 @@ execute as @e[tag={ns}.dragon,scores={{{ns}.attack_cooldown=-{ATTACK_COOLDOWN}..
 execute as @e[type=item_display,tag={ns}.ultimate_poop] at @s run function {ns}:mobs/ultimate_dragon/ultimate_poop/check_destroy
 
 # Homing arrows targetting nearest player
-execute as @e[type=arrow,tag={ns}.homing_arrow] at @s run function {ns}:mobs/ultimate_dragon/homing_arrow/tick
+execute as @e[type=arrow,tag={ns}.homing_arrow] at @s run function {ns}:mobs/ultimate_dragon/homing_arrows/face_player
 """)
 
 	# Choose attack function
 	write_function(f"{ns}:mobs/ultimate_dragon/common/choose_attack", f"""
 # Choose a random attack and run function
-execute store result score @s {ns}.chosen_attack run random value 1..2
+execute store result score @s {ns}.chosen_attack run random value 1..3
 execute if score @s {ns}.chosen_attack matches 1 run return run function {ns}:mobs/ultimate_dragon/ultimate_poop/choose
 execute if score @s {ns}.chosen_attack matches 2 run return run function {ns}:mobs/ultimate_dragon/fireball_burst/choose
 execute if score @s {ns}.chosen_attack matches 3 run return run function {ns}:mobs/ultimate_dragon/homing_arrows/choose
@@ -340,6 +341,9 @@ execute if score @s {ns}.chosen_attack matches 1 run return run particle dust{{c
 
 # Fireball Burst attack
 execute if score @s {ns}.chosen_attack matches 2 run function {ns}:mobs/ultimate_dragon/fireball_burst/tick
+
+# Homing Arrows attack
+execute if score @s {ns}.chosen_attack matches 3 run function {ns}:mobs/ultimate_dragon/homing_arrows/tick
 """)
 
 	## Poop attack functions
@@ -348,8 +352,8 @@ execute if score @s {ns}.chosen_attack matches 2 run function {ns}:mobs/ultimate
 # Poop particles for 2 seconds
 scoreboard players set @s {ns}.attack_cooldown 40
 
-# 20% chance of summoning an ultimate poop directly
-execute if predicate {ns}:random/0.2 summon item_display run function {ns}:mobs/ultimate_dragon/ultimate_poop/on_new_poop
+# 50% chance of summoning an ultimate poop directly
+execute if predicate {ns}:random/0.5 summon item_display run function {ns}:mobs/ultimate_dragon/ultimate_poop/on_new_poop
 """)
 
 	# On new poop summoned
@@ -445,10 +449,54 @@ function {ns}:utils/compute_motion_towards {{towards:1500,scale:0.001}}
 """)
 
 	## Homing arrows functions
-	# TODO: Homing arrows
-	#
-	# Compute motion towards nearest player
-	#execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes run function {ns}:utils/compute_motion_towards {{towards:500,scale:0.001}}
+	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/choose", f"""
+# Attack duration of 5 seconds
+scoreboard players set @s {ns}.attack_cooldown 100
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/tick", f"""
+# Every 16 ticks, launch all 5 arrows at once
+scoreboard players set #16 {ns}.data 16
+scoreboard players operation #temp {ns}.data = #global_tick {ns}.data
+scoreboard players operation #temp {ns}.data %= #16 {ns}.data
+execute if score #temp {ns}.data matches 0 run function {ns}:mobs/ultimate_dragon/homing_arrows/launch
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/launch", f"""
+# Stop if no valid players
+execute unless entity @p[gamemode=!spectator,gamemode=!creative,distance=..200] run return fail
+
+# Launch 5 arrows with different effects at different positions towards nearest player
+execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..200] eyes positioned ^ ^ ^5 run function {ns}:mobs/ultimate_dragon/homing_arrows/summon_all
+
+# Playsound for the targetted player
+execute as @p[gamemode=!spectator,gamemode=!creative,distance=..200] at @s run playsound minecraft:entity.arrow.shoot hostile @s
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/summon_all", f"""
+# Summon 5 arrows with different effects
+execute positioned ~ ~5 ~ summon minecraft:arrow run function {ns}:mobs/ultimate_dragon/homing_arrows/on_new_arrow {{effect:"slowness"}}
+execute positioned ~5 ~ ~5 summon minecraft:arrow run function {ns}:mobs/ultimate_dragon/homing_arrows/on_new_arrow {{effect:"poison"}}
+execute positioned ~-5 ~ ~5 summon minecraft:arrow run function {ns}:mobs/ultimate_dragon/homing_arrows/on_new_arrow {{effect:"wither"}}
+execute positioned ~5 ~ ~-5 summon minecraft:arrow run function {ns}:mobs/ultimate_dragon/homing_arrows/on_new_arrow {{effect:"darkness"}}
+execute positioned ~-5 ~ ~-5 summon minecraft:arrow run function {ns}:mobs/ultimate_dragon/homing_arrows/on_new_arrow {{effect:"levitation"}}
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/on_new_arrow", f"""
+# Add tags
+tag @s add {ns}.short_lived_entity
+tag @s add {ns}.homing_arrow
+
+# Set arrow damage & pickup (creative only)
+data modify entity @s damage set value 6.0d
+data modify entity @s pickup set value 2b
+
+# Set motion towards facing direction
+function {ns}:utils/compute_motion_towards {{towards:1500,scale:0.001}}
+
+# Add effect to arrow (using macro)
+$data modify entity @s item.components."minecraft:potion_contents".custom_effects set value [{{id:"minecraft:$(effect)",duration:100,amplifier:1}}]
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/face_player", f"""
+# Compute motion towards nearest player
+execute facing entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] eyes run function {ns}:utils/compute_motion_towards {{towards:1000,scale:0.001}}
+""")
 
 	## Ultimate slave killed
 	write_function(f"{ns}:mobs/ultimate_slave/check_health", f"""
@@ -475,51 +523,52 @@ particle soul ~ ~ ~ 10 10 10 0.5 1000 force @a[distance=..200]
 tellraw @a[distance=..200] ["",{STARFRAG_TEXT},{{"text":" One of the Slaves has been defeated! The "}},{BOSSBAR_TEXT},{{"text":" just lost 25% of its Max Health!"}}]
 """)
 
-	return
-
-	# Each time Ultimate Dragon is hurt, summon a wolf wave
-	write_function(f"{ns}:mobs/loop/display", f"""
-# If Ultimate Dragon, and hurt, summon ally wolf
-execute if entity @s[tag={ns}.ultimate_dragon] if score @s {ns}.hurt_time matches 1 run function {ns}:mobs/ultimate_dragon/summon_wave
-""")
-
-	# Summon wave of ally wolves
-	write_function(f"{ns}:mobs/ultimate_dragon/summon_wave", f"""
-# Summon 4 wolves around Ultimate Dragon
-execute positioned ~1 ~ ~ run function {ns}:mobs/ultimate_dragon/summon_mob
-execute positioned ~-1 ~ ~ run function {ns}:mobs/ultimate_dragon/summon_mob
-execute positioned ~ ~ ~1 run function {ns}:mobs/ultimate_dragon/summon_mob
-execute positioned ~ ~ ~-1 run function {ns}:mobs/ultimate_dragon/summon_mob
-""")
-
-	# Summon mob function
-	write_function(f"{ns}:mobs/ultimate_dragon/summon_mob", f"""
-# Particles
-particle minecraft:enchant ~ ~ ~ 0.5 0.5 0.5 0.05 25
-
-# Summon a wolf
-execute positioned ~ ~-2 ~ summon minecraft:wolf run return run function {ns}:mobs/ultimate_dragon/on_new_wolf
-""")
-	write_function(f"{ns}:mobs/ultimate_dragon/on_new_wolf", f"""
-# Delay spawn function
-function {ns}:mobs/delay/spawn
-
-# Set loot table
-data modify entity @s DeathLootTable set value "{ns}:entities/ultimate_dragon"
-""")
-
 	# Death function
 	write_function(f"{ns}:mobs/display/start_dying", f"""
 # If Ultimate Dragon, run death function
 execute if entity @s[tag={ns}.ultimate_dragon] run function {ns}:mobs/ultimate_dragon/death
 """)
 	write_function(f"{ns}:mobs/ultimate_dragon/death", f"""
+# Kill the 3 slaves and all remaining entities
+execute at @n[tag={ns}.mob_entity,tag={ns}.ultimate_slave,limit=3] run playsound minecraft:entity.dragon_fireball.explode hostile @a[distance=..200]
+execute at @n[tag={ns}.mob_entity,tag={ns}.ultimate_slave,limit=3] run particle minecraft:explosion_emitter ~ ~ ~ 1 1 1 0.0 5 force @a[distance=..200]
+kill @n[tag={ns}.mob_entity,tag={ns}.ultimate_slave,limit=3]
+kill @e[tag={ns}.short_lived_entity,distance=..500]
+
+# Die after 10 seconds (for reward)
+scoreboard players set @s {ns}.data 200
+schedule function {ns}:mobs/ultimate_dragon/finish_death_schedule 199t append
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/finish_death_schedule", f"execute at @e[tag={ns}.dying_model,tag={ns}.ultimate_dragon] run function {ns}:mobs/ultimate_dragon/finish_death_at_entity")
+	write_function(f"{ns}:mobs/ultimate_dragon/finish_death_at_entity", f"""
+# Advancement
+advancement grant @a[distance=..200] only {ns}:visible/adventure/ultimate_boss
+execute as @a[distance=..200] unless score @s {ns}.damage_taken_ub matches 200.. run advancement grant @s only {ns}:visible/adventure/ultimate_boss_ez
+scoreboard objectives remove {ns}.damage_taken_ub
+
+# Rewards players
+loot give @a[distance=..200] loot {ns}:entities/ultimate_dragon
+
+# Summon ultimate dragon egg item
+loot spawn ~ ~ ~ loot {ns}:i/ultimate_dragon_egg
+execute as @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{{ns}:{{ultimate_dragon_egg:true}}}}}}}}}}] run function {ns}:mobs/ultimate_dragon/unique_drop
+
 # Remove bossbar (from all players)
 bossbar set {ns}:ultimate_dragon players
 
 # Tellraw and playsound
-tellraw @a[distance=..50] ["",{STARFRAG_TEXT},{{"text":" The "}},{BOSSBAR_TEXT},{{"text":" has been defeated!"}}]
-playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
+tellraw @a ["",{STARFRAG_TEXT},{{"text":" The "}},{BOSSBAR_TEXT},{{"text":" has been defeated! Congratulations!"}}]
+execute as @a at @s run playsound minecraft:ui.toast.challenge_complete ambient @s
+
+# Rebuild the dimension after 20s
+scoreboard players reset #ultimate_built {ns}.data
+schedule function {ns}:dimensions/ensure_built 20s
+""")
+	write_function(f"{ns}:mobs/ultimate_dragon/unique_drop", """
+# Remove motion, add no gravity and glowing
+data modify entity @s Motion set value [0.0d,0.0d,0.0d]
+data modify entity @s NoGravity set value true
+data modify entity @s Glowing set value true
 """)
 
 	# Loot table
@@ -532,119 +581,29 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/triple_compressed_cobblestone",
-						"functions": [
-							{
-								"function": "minecraft:set_count",
-								"count": {
-									"type": "minecraft:uniform",
-									"min": 12,
-									"max": 24
+						"value": f"{ns}:i/{item}",
+						**({
+							"functions": [
+								{
+									"function": "minecraft:set_count",
+									"count": {
+										"type": "minecraft:uniform",
+										"min": 12,
+										"max": 24
+									}
 								}
-							}
-						]
-					}
-				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					}
-				]
-			},
-			{
-				"rolls": 1,
-				"entries": [
-					{
-						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_ingot",
-						"functions": [
-							{
-								"function": "minecraft:set_count",
-								"count": {
-									"type": "minecraft:uniform",
-									"min": 1,
-									"max": 8
-								}
-							}
-						]
-					}
-				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					},
-					{
-						"condition": "minecraft:random_chance",
-						"chance": 0.5
-					}
-				]
-			},
-			{
-				"rolls": 1,
-				"entries": [
-					{
-						"type": "minecraft:item",
-						"name": "minecraft:diamond_block",
-						"functions": [
-							{
-								"function": "minecraft:set_count",
-								"count": {
-									"type": "minecraft:uniform",
-									"min": 1,
-									"max": 16
-								}
-							}
-						]
-					}
-				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					},
-					{
-						"condition": "minecraft:random_chance",
-						"chance": 0.25
+							]
+						}
+						# Only one octuple compressed cobblestone
+						if item != "octuple_compressed_cobblestone" else {})
 					}
 				]
 			}
-		]
-	}), max_level=-1)
-	Mem.ctx.data[ns].loot_tables["entities/ultimate_dragon"] = set_json_encoder(LootTable({
-		"type": "minecraft:entity",
-		"pools": [
-			{
-				"rolls": 1,
-				"bonus_rolls": 0,
-				"entries": [
-					{
-						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_fragment",
-						"functions": [
-							{
-								"function": "minecraft:set_count",
-								"count": {
-									"type": "minecraft:uniform",
-									"min": 0,
-									"max": 15
-								}
-							},
-							{
-								"function": "minecraft:enchanted_count_increase",
-								"count": {
-									"min": 0,
-									"max": 15
-								},
-								"enchantment": "minecraft:looting"
-							}
-						]
-					}
-				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					}
-				]
-			}
+			for item in [
+				"ultimate_shard", "octuple_compressed_cobblestone",
+				"legendarium_block","solarium_block","darkium_block",
+				"ender_dragon_pearl", "stardust_core", "compacted_stardust_shard",
+			]
 		]
 	}), max_level=-1)
 

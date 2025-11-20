@@ -7,7 +7,7 @@
 #
 
 # Choose a random attack and run function
-execute store result score @s stardust.chosen_attack run random value 1..2
+execute store result score @s stardust.chosen_attack run random value 1..3
 execute if score @s stardust.chosen_attack matches 1 run return run function stardust:mobs/ultimate_dragon/ultimate_poop/choose
 execute if score @s stardust.chosen_attack matches 2 run return run function stardust:mobs/ultimate_dragon/fireball_burst/choose
 execute if score @s stardust.chosen_attack matches 3 run return run function stardust:mobs/ultimate_dragon/homing_arrows/choose

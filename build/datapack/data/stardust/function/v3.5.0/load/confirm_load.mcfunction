@@ -45,9 +45,7 @@ team modify stardust.mob collisionRule always
 team modify stardust.mob friendlyFire false
 
 # Make sure dimensions are built
-execute unless score #dungeon_built stardust.data matches 1 in stardust:dungeon run forceload add -19 -150 179 52
-execute unless score #ultimate_built stardust.data matches 1 in stardust:ultimate run forceload add -73 -69 71 75
-schedule function stardust:dimensions/load 2s
+function stardust:dimensions/ensure_built
 
 # Track teleportation through portals
 scoreboard objectives add stardust.teleportation dummy

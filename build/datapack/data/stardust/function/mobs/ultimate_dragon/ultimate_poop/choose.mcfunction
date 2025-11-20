@@ -9,6 +9,6 @@
 # Poop particles for 2 seconds
 scoreboard players set @s stardust.attack_cooldown 40
 
-# 20% chance of summoning an ultimate poop directly
-execute if predicate stardust:random/0.2 summon item_display run function stardust:mobs/ultimate_dragon/ultimate_poop/on_new_poop
+# 50% chance of summoning an ultimate poop directly
+execute if predicate stardust:random/0.5 summon item_display run function stardust:mobs/ultimate_dragon/ultimate_poop/on_new_poop
 

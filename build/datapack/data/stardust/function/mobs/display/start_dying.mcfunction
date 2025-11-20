@@ -33,3 +33,6 @@ execute if entity @s[tag=stardust.stardust_pillar] run function stardust:mobs/st
 # If Stardust Guardian, run death function
 execute if entity @s[tag=stardust.stardust_guardian] run function stardust:mobs/stardust_guardian/death
 
+# If Ultimate Dragon, run death function
+execute if entity @s[tag=stardust.ultimate_dragon] run function stardust:mobs/ultimate_dragon/death
+

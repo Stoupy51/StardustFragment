@@ -22,5 +22,5 @@ execute as @e[tag=stardust.dragon,scores={stardust.attack_cooldown=-200..}] at @
 execute as @e[type=item_display,tag=stardust.ultimate_poop] at @s run function stardust:mobs/ultimate_dragon/ultimate_poop/check_destroy
 
 # Homing arrows targetting nearest player
-execute as @e[type=arrow,tag=stardust.homing_arrow] at @s run function stardust:mobs/ultimate_dragon/homing_arrow/tick
+execute as @e[type=arrow,tag=stardust.homing_arrow] at @s run function stardust:mobs/ultimate_dragon/homing_arrows/face_player
 

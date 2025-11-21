@@ -140,6 +140,9 @@ schedule function {ns}:mobs/ultimate_dragon/essence/animation_loop 1t append
 # Tellraw and advancement	# TODO: Implement this properly
 tellraw @a[distance=..128] ["",{STARFRAG_TEXT},{{"text":" The Ultimate Dragon Essence fizzles out in this dimension..."}}]
 advancement grant @a[distance=..128] only {ns}:visible/adventure/waste_of_essence
+
+# Kill the essence
+kill @s
 """)
 	# Animation loop to check for max size reached
 	write_function(f"{ns}:mobs/ultimate_dragon/essence/animation_loop", f"""

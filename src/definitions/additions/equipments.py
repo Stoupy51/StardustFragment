@@ -31,9 +31,23 @@ SNIPER_BULLETS_WIKI: list[TextComponent] = [
 	{"text":"\n- Stardust Essence: +10 damage","color":"gray"},
 	{"text":"\n- Awakened Stardust: +20 damage","color":"gray"},
 ]
+ARTIFACTS: list[tuple[str, str, str, tuple[int, ...]]] = [
+	("health", "Health Points", "max_health", (10, 20, 30, 50)),
+	("damage", "Damage", "attack_damage", (10, 20, 30, 50)),
+	("speed", "Base Speed", "movement_speed", (10, 15, 20, 25))
+]
 
 
 # Utility Functions
+def artifact_id(artifact: str, i: int, maximum: int = 4) -> str:
+	""" Generate the ID for an artifact based on its type and level.
+
+	Args:
+		artifact (str): The type of the artifact (e.g. "health", "damage", "speed").
+		i (int): The level of the artifact (Starting from 0).
+	"""
+	return f"{artifact}_artifact_lv" + (str(i+1) if i < (maximum - 1) else "max")
+
 def get_attribute_wiki(key: str, equipment_config: EquipmentsConfig | None) -> list[TextComponent]:
 	""" Generate wiki components for a given equipment based on its attribute modifiers.
 
@@ -200,9 +214,9 @@ def main_additions() -> None:
 			],
 		},
 		**{
-			f"{artifact}_artifact_lv{i+1 if i < 3 else 'max'}": {
+			artifact_id(artifact, i): {
 				"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-				"item_name": {"text":f"{artifact.capitalize()} Artifact Lv.{i+1 if i < 3 else 'Max'}"},
+				"item_name": {"text":f"{artifact.title()} Artifact Lv.{i+1 if i < 3 else 'Max'}"},
 				"rarity": "epic" if i == 3 else "rare",
 				"lore": [
 					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
@@ -219,11 +233,7 @@ def main_additions() -> None:
 					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(f"{artifact}_artifact_lv{i}", ns)]},
 				] if i > 0 else []
 			}
-			for artifact, lore, attribute, levels in (
-				("health", "Health Points", "max_health", (10, 20, 30, 50)),
-				("damage", "Damage", "attack_damage", (10, 20, 30, 50)),
-				("speed", "Base Speed", "movement_speed", (10, 15, 20, 25))
-			)
+			for artifact, lore, attribute, levels in ARTIFACTS
 			for i, level in enumerate(levels)
 		},
 		"lucky_artifact_bag": {

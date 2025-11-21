@@ -5,8 +5,8 @@ from typing import Any
 
 from stewbeet import Advancement, JsonDict, Mem, Texture, set_json_encoder, super_merge_dict
 
-from .common import STARFRAG_LIST
 from ..definitions.additions.equipments import ARTIFACTS, artifact_id
+from .common import STARFRAG_LIST
 
 
 # Utility function to convert definition to icon
@@ -46,7 +46,7 @@ def add_visible_advancements() -> None:
 		## Adventure advancements
 		# Artifacts
 		**{
-			f"adventure/artifacts/{artifact_id(artifact, i)}": {"display": {"title": {"text": f"Increasing {name} {roman}", "color": "aqua"}, "description": {"text": f"Get a level {i+1} {artifact.title()} Artifact", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment","criteria": {"requirement": {"trigger": "minecraft:inventory_changed", "conditions": {"items": [{"predicates": {"minecraft:custom_data": {ns: {artifact_id(artifact, i): True}}}}]}}}}
+			f"adventure/artifacts/{artifact_id(artifact, i)}": {"display": {"title": {"text": f"Increasing {name} {roman}", "color": "aqua"}, "description": {"text": f"Get a level {i+1} {artifact.title()} Artifact", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment" if i == 0 else f"{ns}:visible/adventure/artifacts/{artifact_id(artifact, i-1)}"}
 			for artifact, _, attribute, levels in ARTIFACTS
 			for name in (attribute.replace("_", " ").title(),)
 			for i in range(len(levels))
@@ -90,7 +90,8 @@ def add_visible_advancements() -> None:
 
 
 	# For each advancement,
-	for item, adv in advancements.items():
+	for full_path, adv in advancements.items():
+		item: str = full_path.split("/")[-1]
 		data: JsonDict = Mem.definitions.get(item, {})
 		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
 
@@ -113,7 +114,7 @@ def add_visible_advancements() -> None:
 
 		# Set the advancement
 		advancement = super_merge_dict(advancement, adv)
-		Mem.ctx.data[ns].advancements[f"visible/{item}"] = set_json_encoder(Advancement(advancement), max_level = 7)
+		Mem.ctx.data[ns].advancements[f"visible/{full_path}"] = set_json_encoder(Advancement(advancement), max_level = 7)
 
 	return
 

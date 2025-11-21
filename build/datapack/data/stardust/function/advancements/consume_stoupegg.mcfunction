@@ -14,6 +14,9 @@ tellraw @a[distance=..128] ["",[{"text": "[", "color": "dark_aqua"}, [{"text": "
 execute as @a[distance=..128] at @s run playsound stardust:wolf_howl ambient @s
 particle minecraft:enchant ~ ~ ~ 0.5 0.5 0.5 0.5 500
 
+# Grant visible advancement
+advancement grant @a[distance=..128] only stardust:visible/adventure/stoup_army
+
 # Summon Stoupy at world surface
 execute positioned over world_surface run function stardust:mobs/stoupy/summon
 

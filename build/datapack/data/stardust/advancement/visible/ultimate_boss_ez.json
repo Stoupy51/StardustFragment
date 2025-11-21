@@ -1,0 +1,33 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:ultimate_dragon_egg"
+			}
+		},
+		"title": {
+			"translate": "stardust.star_fighter"
+		},
+		"description": {
+			"translate": "stardust.defeat_the_ultimate_bossby_taking_less_than_10_hearts_of_damage",
+			"color": "green"
+		},
+		"frame": "challenge",
+		"hidden": true,
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/ultimate_boss"
+}

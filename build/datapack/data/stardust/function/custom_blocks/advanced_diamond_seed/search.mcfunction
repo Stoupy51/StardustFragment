@@ -14,3 +14,6 @@ tag @s add stardust.to_refund
 execute as @e[type=item_frame,tag=stardust.new,tag=stardust.advanced_diamond_seed] at @s run function stardust:custom_blocks/advanced_diamond_seed/place_check
 tag @s remove stardust.to_refund
 
+# Grant advancement for placing seed
+advancement grant @s only stardust:visible/adventure/seeds/advanced_diamond_seed
+

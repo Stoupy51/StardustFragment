@@ -1,0 +1,34 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:stoupegg"
+			}
+		},
+		"title": {
+			"translate": "stardust.fighting_a_mini_boss",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.fight_against_your_first_stoup_army",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/enter_cavern"
+}

@@ -14,6 +14,9 @@ tellraw @a[distance=..128] ["",[{"text": "[", "color": "dark_aqua"}, [{"text": "
 execute as @a[distance=..128] at @s run playsound minecraft:entity.wither.spawn ambient @s
 particle minecraft:sculk_soul ~ ~ ~ 0.5 0.5 0.5 0.5 500
 
+# Advancement for players in a radius
+advancement grant @a[distance=..128] only stardust:visible/adventure/stardust_pillar
+
 # Summon Stardust Pillar at world surface + 15
 execute positioned over world_surface positioned ~ ~15 ~ run function stardust:mobs/stardust_pillar/summon
 

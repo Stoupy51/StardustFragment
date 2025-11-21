@@ -1,0 +1,36 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:item_model": "stardust:stardust_portal"
+			}
+		},
+		"title": {
+			"translate": "stardust.everythins_blue",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.travel_to_the_stardust_dimension",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:changed_dimension",
+			"conditions": {
+				"to": "stardust:stardust"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/enter_celestial"
+}

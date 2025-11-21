@@ -16,6 +16,11 @@ execute as @a[distance=..128] at @s run playsound minecraft:entity.dragon_fireba
 particle minecraft:dragon_breath ~ ~ ~ 10 10 10 0.5 5000
 particle minecraft:explosion_emitter ~ ~ ~ 4 4 4 0.0 10
 
+# Advancement specific to Ultimate Dragon
+advancement grant @a[distance=..128] only stardust:visible/adventure/summon_ultimate_boss
+execute if entity @e[tag=stardust.ultimate_dragon,distance=..200] run advancement grant @a[distance=..128] only stardust:visible/adventure/multiple_ultimate_boss
+scoreboard objectives add stardust.damage_taken_ub minecraft.custom:damage_taken
+
 # Summon Ultimate Dragon at world surface
 function stardust:mobs/ultimate_dragon/summon
 

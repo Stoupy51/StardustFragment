@@ -13,9 +13,11 @@ execute if function stardust:dimensions/is_bracken_installed if dimension stardu
 execute if dimension stardust:ultimate in stardust:stardust run return run tp @s ~ 480 ~
 
 # If dimension is stardust, teleport to celestial dimension
+execute if dimension stardust:stardust run advancement grant @s only stardust:visible/adventure/falling_stardust
 execute if dimension stardust:stardust in stardust:celestial run return run tp @s ~ 480 ~
 
 # If dimension is celestial, teleport to overworld
+execute if dimension stardust:celestial run advancement grant @s only stardust:visible/adventure/falling_celestial
 execute if dimension stardust:celestial in minecraft:overworld run return run tp @s ~ 480 ~
 
 # If dimension is dungeon, teleport back to home

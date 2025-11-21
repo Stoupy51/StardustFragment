@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:feather"
+		},
+		"title": {
+			"translate": "stardust.where_did_i_put_my_bucket"
+		},
+		"description": {
+			"translate": "stardust.fall_from_the_celestial_dimension",
+			"color": "green"
+		},
+		"frame": "challenge",
+		"hidden": true,
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/enter_celestial"
+}

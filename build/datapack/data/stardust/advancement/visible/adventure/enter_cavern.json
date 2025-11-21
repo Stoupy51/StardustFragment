@@ -1,0 +1,36 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:item_model": "stardust:cavern_portal"
+			}
+		},
+		"title": {
+			"translate": "stardust.return_to_monke",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.travel_to_the_cavern_dimension",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:changed_dimension",
+			"conditions": {
+				"to": "stardust:cavern"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stardust_fragment"
+}

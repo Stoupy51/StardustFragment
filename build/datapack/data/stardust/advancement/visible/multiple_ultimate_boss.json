@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:dragon_head"
+		},
+		"title": {
+			"translate": "stardust.numbers_dont_affraid_me"
+		},
+		"description": {
+			"translate": "stardust.summon_two_ultimate_boss_at_the_same_time",
+			"color": "green"
+		},
+		"frame": "challenge",
+		"hidden": true,
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/ultimate_boss"
+}

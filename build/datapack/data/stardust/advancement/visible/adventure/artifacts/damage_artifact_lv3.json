@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:damage_artifact_lv3"
+			}
+		},
+		"title": {
+			"translate": "stardust.increasing_attack_damage_iii",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.get_a_level_3_damage_artifact",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"damage_artifact_lv3": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/artifacts/damage_artifact_lv2"
+}

@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:speed_artifact_lv1"
+			}
+		},
+		"title": {
+			"translate": "stardust.increasing_movement_speed_i",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.get_a_level_1_speed_artifact",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"speed_artifact_lv1": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stardust_fragment"
+}

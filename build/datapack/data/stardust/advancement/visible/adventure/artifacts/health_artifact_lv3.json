@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:health_artifact_lv3"
+			}
+		},
+		"title": {
+			"translate": "stardust.increasing_max_health_iii",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.get_a_level_3_health_artifact",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"health_artifact_lv3": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/artifacts/health_artifact_lv2"
+}

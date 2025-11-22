@@ -54,13 +54,6 @@ function #bs.move:local_to_canonical
 $function #bs.move:set_motion {scale:$(scale)}
 """)
 
-	# Advancement for each seed placed
-	for seed in [item for item, data in Mem.definitions.items() if GROWING_SEED in data]:
-		write_function(f"{ns}:custom_blocks/{seed}/search", f"""
-# Grant advancement for placing seed
-advancement grant @s only {ns}:visible/adventure/seeds/{seed}
-""")
-
 	# Enchantment for ticking mobs
 	# Mem.ctx.data[ns].enchantments["ticking"] = set_json_encoder(Enchantment({
 	# 	"description": "DEVELOPMENT ONLY: Ticking entity enchantment",
@@ -78,4 +71,6 @@ advancement grant @s only {ns}:visible/adventure/seeds/{seed}
 	#advancement grant @s only stardust:visible/stuff/travel_staff
 	#advancement grant @s only stardust:visible/adventure/shoot/[copper_nugget, iron_nugget, gold_nugget, stardust_essence, awakened_stardust]
 	# stardust:visible/stuff/life_crystal & stardust:visible/stuff/life_crystal_max
+
+	# TODO: animated textures for fully grown seeds
 

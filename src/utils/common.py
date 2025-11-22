@@ -12,4 +12,5 @@ STARFRAG_LIST: list[JsonDict | list[JsonDict]] = [
     {"text":"]","color":"dark_aqua"},
 ]
 STARFRAG_TEXT: str = json.dumps(STARFRAG_LIST)
+ROMAN_NUMERALS: list[str] = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 

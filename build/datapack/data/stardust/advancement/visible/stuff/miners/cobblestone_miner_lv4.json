@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:item_model": "stardust:cobblestone_miner_lv4"
+			}
+		},
+		"title": {
+			"translate": "stardust.rockraiser_iv",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.obtain_a_cobblestone_miner_lv_4",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv4": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/miners/cobblestone_miner_lv3"
+}

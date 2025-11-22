@@ -17,13 +17,26 @@ from stewbeet import (
 	Mem,
 	ingr_repr,
 	rainbow_gradient_text,
+	simple_cache,
 )
 
+from ...utils.common import ROMAN_NUMERALS
 
-# Constants
+
+# Utility functions
+@simple_cache
+def miner_display(i: int) -> tuple[str, str, str]:
+	""" Generate the ID, name, and roman numeral for a cobblestone miner.
+
+	Args:
+		i (int): The level of the miner (Starting from 0).
+	"""
+	return f"cobblestone_miner_lv{i+1}", f"Cobblestone Miner Lv.{i+1}", ROMAN_NUMERALS[i]
+
 def miners_formula(i: int) -> int:
 	return 9*(4**i)
 
+# Main function
 def main_additions() -> None:
 	MISC: str = "miscellaneous"
 	ns: str = Mem.ctx.project_id
@@ -229,22 +242,22 @@ def main_additions() -> None:
 			]
 		},
 		**{
-			f"cobblestone_miner_lv{i+1}": {
+			miner_display(i)[0]: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MISC,
 				VANILLA_BLOCK: {"id":"minecraft:deepslate", "apply_facing":False},
-				"item_name": {"text":f"Cobblestone Miner Lv.{i+1}"},
+				"item_name": {"text": miner_display(i)[1]},
 				"rarity": "rare" if i < 5 else "epic",
 				"lore": [
 					{"text":"Only mines cobblestone directly below","color":"white","italic":False},
 					{"text":f"[x{per_minute:,} per minute]","color":"gray","italic":False},
 				],
 				WIKI_COMPONENT: [
-					{"text":f"Cobblestone Miner Lv.{i+1}","color":"yellow"},
+					{"text": miner_display(i)[1],"color":"yellow"},
 					{"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"},
 					{"text":f"\nProduction rate is {per_minute:,} cobblestone per minute","color":"gray"},
 					{"text":"\nNo energy required","color":"gray"},
 				],
-				RESULT_OF_CRAFTING: MINERS_CRAFTING_RECIPES[f"cobblestone_miner_lv{i+1}"],
+				RESULT_OF_CRAFTING: MINERS_CRAFTING_RECIPES[miner_display(i)[0]],
 			}
 			for i in range(8) for per_minute in [miners_formula(i)]
 		},

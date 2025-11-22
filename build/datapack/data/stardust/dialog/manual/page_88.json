@@ -1,33 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/damaged_stardust_leggings",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.damaged_stardust_leggings",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/damaged_stardust_leggings",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.damaged_stardust_leggings",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

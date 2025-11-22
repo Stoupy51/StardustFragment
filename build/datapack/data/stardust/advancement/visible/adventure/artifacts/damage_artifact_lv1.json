@@ -11,7 +11,7 @@
 			"color": "aqua"
 		},
 		"description": {
-			"translate": "stardust.get_a_level_1_damage_artifact",
+			"translate": "stardust.obtain_a_level_1_damage_artifact",
 			"color": "green"
 		},
 		"frame": "task",

@@ -1,0 +1,41 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:item_model": "stardust:octuple_compressed_cobblestone"
+			}
+		},
+		"title": {
+			"translate": "stardust.43046721"
+		},
+		"description": {
+			"translate": "stardust.obtain_a_octuple_compressed_cobblestone",
+			"color": "green"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"octuple_compressed": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/cobblestone/septuple_compressed"
+}

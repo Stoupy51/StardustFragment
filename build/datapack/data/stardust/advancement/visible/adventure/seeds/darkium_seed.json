@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:item_frame",
+			"components": {
+				"minecraft:item_model": "stardust:darkium_seed"
+			}
+		},
+		"title": {
+			"translate": "stardust.darkness_and_shadow",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.admire_this_darkium_seed_seed",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"darkium_seed": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/seeds/solarium_seed"
+}

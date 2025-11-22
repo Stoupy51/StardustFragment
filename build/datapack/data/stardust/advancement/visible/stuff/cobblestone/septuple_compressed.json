@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:item_model": "stardust:septuple_compressed_cobblestone"
+			}
+		},
+		"title": {
+			"translate": "stardust.compressing_vii",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.obtain_a_septuple_compressed_cobblestone",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"septuple_compressed": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/cobblestone/sextuple_compressed"
+}

@@ -1,0 +1,64 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_axe",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"tools": {"ancient_stardust": true,"axe": true}},
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"ancient_stardust_axe": true
+									}
+								},
+								"minecraft:max_damage": 2341,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 10,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -3.0,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "mining_efficiency",
+										"amount": 1.5,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:mining_efficiency.mainhand"
+									}
+								],
+								"minecraft:item_model": "stardust:ancient_stardust_axe",
+								"minecraft:item_name": {
+									"translate": "stardust.ancient_stardust_axe"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

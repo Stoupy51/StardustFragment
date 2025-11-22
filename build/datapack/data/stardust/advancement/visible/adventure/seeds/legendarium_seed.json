@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:item_frame",
+			"components": {
+				"minecraft:item_model": "stardust:legendarium_seed"
+			}
+		},
+		"title": {
+			"translate": "stardust.nature_and_wind",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.admire_this_legendarium_seed_seed",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"legendarium_seed": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/seeds/elite_stardust_seed"
+}

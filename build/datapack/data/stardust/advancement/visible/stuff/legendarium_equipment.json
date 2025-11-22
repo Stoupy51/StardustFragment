@@ -1,0 +1,47 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:netherite_chestplate",
+			"components": {
+				"minecraft:item_model": "stardust:legendarium_chestplate"
+			}
+		},
+		"title": {
+			"translate": "stardust.taking_a_breath",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.choose_the_legendarium_path",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"legendarium": true}}}}
+						}
+					},
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"tools": {"legendarium": true}}}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/original_stardust_equipment"
+}

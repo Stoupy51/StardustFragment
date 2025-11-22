@@ -156,6 +156,9 @@ bossbar set {ns}:stardust_guardian players
 # Reward nearby players
 loot give @a[distance=..50] loot {ns}:entities/stardust_guardian
 
+# Advancement for players in a radius
+advancement grant @a[distance=..50] only {ns}:visible/adventure/stardust_guardian
+
 # Tellraw and playsound	# TODO: Add sound
 tellraw @a[distance=..50] ["",{STARFRAG_TEXT},{{"text":" The "}},{BOSSBAR_TEXT},{{"text":" has been defeated!"}}]
 playsound minecraft:entity.wither.death hostile @a[distance=..50]

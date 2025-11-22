@@ -18,18 +18,26 @@ from stewbeet import (
 	TextComponent,
 	ingr_repr,
 	rainbow_gradient_text,
+	simple_cache,
 )
 
 from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
+from ...utils.common import ROMAN_NUMERALS
 
 # Constants
+SNIPER_BULLETS: dict[str, int] = {
+	"minecraft:copper_nugget": 3,
+	"minecraft:iron_nugget": 5,
+	"minecraft:gold_nugget": 7,
+	"stardust_essence": 10,
+	"awakened_stardust": 20,
+}
 SNIPER_BULLETS_WIKI: list[TextComponent] = [
 	{"text":"\nPossible bullet types:","color":"gray"},
-	{"text":"\n- Copper nugget: +3 damage","color":"gray"},
-	{"text":"\n- Iron nugget: +5 damage","color":"gray"},
-	{"text":"\n- Gold nugget: +7 damage","color":"gray"},
-	{"text":"\n- Stardust Essence: +10 damage","color":"gray"},
-	{"text":"\n- Awakened Stardust: +20 damage","color":"gray"},
+	*[
+		{"text":f"\n- {name.replace('minecraft:', '').replace('_', ' ').title()}: +{damage} damage","color":"gray"}
+		for name, damage in SNIPER_BULLETS.items()
+	]
 ]
 ARTIFACTS: list[tuple[str, str, str, tuple[int, ...]]] = [
 	("health", "Health Points", "max_health", (10, 20, 30, 50)),
@@ -39,14 +47,16 @@ ARTIFACTS: list[tuple[str, str, str, tuple[int, ...]]] = [
 
 
 # Utility Functions
-def artifact_id(artifact: str, i: int, maximum: int = 4) -> str:
-	""" Generate the ID for an artifact based on its type and level.
+@simple_cache
+def artifact_display(artifact: str, i: int, maximum: int = 4) -> tuple[str, str, str]:
+	""" Generate the ID, name, and roman numeral for an artifact based on its type and level.
 
 	Args:
 		artifact (str): The type of the artifact (e.g. "health", "damage", "speed").
 		i (int): The level of the artifact (Starting from 0).
 	"""
-	return f"{artifact}_artifact_lv" + (str(i+1) if i < (maximum - 1) else "max")
+	item_id = f"{artifact}_artifact_lv" + (str(i+1) if i < (maximum - 1) else "max")
+	return item_id, item_id.replace("_", " ").replace("lv", "Lv.").title(), ROMAN_NUMERALS[i]
 
 def get_attribute_wiki(key: str, equipment_config: EquipmentsConfig | None) -> list[TextComponent]:
 	""" Generate wiki components for a given equipment based on its attribute modifiers.
@@ -214,9 +224,9 @@ def main_additions() -> None:
 			],
 		},
 		**{
-			artifact_id(artifact, i): {
+			artifact_display(artifact, i)[0]: {
 				"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-				"item_name": {"text":f"{artifact.title()} Artifact Lv.{i+1 if i < 3 else 'Max'}"},
+				"item_name": {"text":artifact_display(artifact, i)[1]},
 				"rarity": "epic" if i == 3 else "rare",
 				"lore": [
 					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
@@ -224,13 +234,13 @@ def main_additions() -> None:
 				],
 				"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
 				WIKI_COMPONENT: [
-					{"text":f"Lv.{i+1 if i < 3 else 'Max'} {artifact} Artifact","color":"yellow"},
+					{"text":artifact_display(artifact, i)[1],"color":"yellow"},
 					{"text":f"\nHold in any hand to get the {artifact} effect","color":"gray"},
 					{"text":f"\n[+{level}% {lore}]","color":"gray"},
 					*([] if i > 0 else [{"text":"\n\nCan be obtained from Lucky Artifact Bags only","color":"gray"}]),
 				],
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(f"{artifact}_artifact_lv{i}", ns)]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(artifact_display(artifact, i)[0], ns)]},
 				] if i > 0 else []
 			}
 			for artifact, lore, attribute, levels in ARTIFACTS
@@ -341,9 +351,9 @@ def main_additions() -> None:
 		},
 	}
 
-	# Damaged Stardust Equipments
+	# Ancient Stardust Equipments
 	for equipment_type in SLOTS.keys():
-		key: str = f"damaged_stardust_{equipment_type}"
+		key: str = f"ancient_stardust_{equipment_type}"
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
@@ -353,7 +363,7 @@ def main_additions() -> None:
 				],
 				WIKI_COMPONENT: [
 					{"text":"Poorly crafted stardust equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["damaged_stardust!"])
+					*get_attribute_wiki(key, ORES_CONFIGS["ancient_stardust!"])
 				]
 			}
 
@@ -363,7 +373,7 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			additions[key] = {
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("stardust_core", ns)] + 4*[ingr_repr("compacted_stardust_shard", ns)] + [ingr_repr(f"damaged_stardust_{equipment_type}", ns)]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("stardust_core", ns)] + 4*[ingr_repr("compacted_stardust_shard", ns)] + [ingr_repr(f"ancient_stardust_{equipment_type}", ns)]},
 				],
 				WIKI_COMPONENT: [
 					{"text":"Original stardust equipment.","color":"yellow"},

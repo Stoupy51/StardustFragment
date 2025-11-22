@@ -13,8 +13,22 @@ from stewbeet import (
 	Mem,
 	ingr_repr,
 	rainbow_gradient_text,
+	simple_cache,
 )
 from stouputils.collections import unique_list
+
+from ...utils.common import ROMAN_NUMERALS
+
+
+# Utility functions
+@simple_cache
+def quarry_display(i: int) -> tuple[str, str, str]:
+	""" Generate the ID, name, and roman numeral for a quarry.
+
+	Args:
+		i (int): The level of the quarry (Starting from 0).
+	"""
+	return f"quarry_lv{i+1}", f"Quarry Lv.{i+1}", ROMAN_NUMERALS[i]
 
 
 def main_additions() -> None:
@@ -269,11 +283,11 @@ def main_additions() -> None:
 
 		# Quarries
 		**{
-			f"quarry_lv{i+1}": {
+			quarry_display(i)[0]: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 				"custom_data": {"energy": {"usage":usage, "max_storage":storage}, ns: {"quarry": {"block_per_second":block_per_second}}},
 				VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
-				"item_name": {"text":f"Quarry Lv.{i+1}","italic":False},
+				"item_name": {"text":quarry_display(i)[1],"italic":False},
 				"lore": [
 					{"text":f"[Speed: {block_per_second} block/s]","italic":False,"color":"gray"},
 				],
@@ -284,7 +298,7 @@ def main_additions() -> None:
 					{"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"},
 					{"text":"\nOnly mines blocks in a configured area","color":"gray"},
 				],
-				RESULT_OF_CRAFTING: QUARRY_CRAFTING_RECIPES[f"quarry_lv{i+1}"],
+				RESULT_OF_CRAFTING: QUARRY_CRAFTING_RECIPES[quarry_display(i)[0]],
 			}
 			for i, (usage, storage, block_per_second) in enumerate([(125, 20000, 1), (250, 60000, 3), (375, 100000, 5), (500, 140000, 8), (625, 180000, 16)])
 		},

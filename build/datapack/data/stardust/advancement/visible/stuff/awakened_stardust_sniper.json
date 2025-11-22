@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:warped_fungus_on_a_stick",
+			"components": {
+				"minecraft:item_model": "stardust:awakened_stardust_sniper"
+			}
+		},
+		"title": {
+			"translate": "stardust.trick_shot_ii",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.upgrade_your_stardust_sniper_in_its_awakened_form",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"awakened_stardust_sniper": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/stardust_sniper"
+}

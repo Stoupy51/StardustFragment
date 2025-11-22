@@ -38,5 +38,5 @@
 			"requirement"
 		]
 	],
-	"parent": "stardust:visible/stardust_fragment"
+	"parent": "stardust:visible/root"
 }

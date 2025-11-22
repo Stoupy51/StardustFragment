@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:compacted_stardust_shard"
+			}
+		},
+		"title": {
+			"translate": "stardust.a_costly_stardust_energy",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.obtain_a_compacted_stardust_shard",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/stardust_block"
+}

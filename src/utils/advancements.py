@@ -4,6 +4,7 @@
 from typing import Any
 
 from stewbeet import Advancement, JsonDict, Mem, Texture, set_json_encoder, super_merge_dict
+from stouputils.print import error
 
 from ..definitions.additions.energy import quarry_display
 from ..definitions.additions.equipments import ARTIFACTS, SNIPER_BULLETS, artifact_display
@@ -16,7 +17,7 @@ IMPOSSIBLE_CRITERIA: JsonDict = {"requirement": {"trigger": "minecraft:impossibl
 
 
 # Utility function to convert definition to icon
-def def_to_icon(data: JsonDict | str, enchanted: bool = False) -> JsonDict:
+def def_to_icon(item: JsonDict | str, enchanted: bool = False) -> JsonDict:
 	""" Convert a definition to an advancement icon.
 
 	Args:
@@ -25,10 +26,14 @@ def def_to_icon(data: JsonDict | str, enchanted: bool = False) -> JsonDict:
 	Returns:
 		JsonDict: Advancement icon, e.g. {"id": "minecraft:stone", "components": {...}}
 	"""
-	if isinstance(data, str):
-		if data.startswith("minecraft:"):
-			return {"id": data}
-		data = Mem.definitions[data]
+	if isinstance(item, str):
+		if item.startswith("minecraft:"):
+			return {"id": item}
+		data = Mem.definitions.get(item, {})
+	else:
+		data = item
+	if not data:
+		error(f"Definition for item '{item}' not found during def_to_icon conversion.")
 	icon: dict[str, Any] = {"id": data["id"]}
 	components_to_copy: list[str] = ["item_model", "profile"]
 	for component in components_to_copy:
@@ -66,7 +71,7 @@ def add_visible_advancements() -> None:
 	# Advancements list
 	background: str = f"{ns}:block/gui/advancement_background"
 	advancements: dict[str, JsonDict] = {
-		"stardust_fragment": {"display": {"title": STARFRAG_LIST[1], "description": {"text": "What's this little blue thing?", "color": "green"}, "background": background}},
+		"root": {"display": {"icon": def_to_icon("stardust_fragment"), "title": STARFRAG_LIST[1], "description": {"text": "What's this little blue thing?", "color": "green"}, "background": background}},
 
 		## Adventure advancements
 		# Artifacts
@@ -76,7 +81,7 @@ def add_visible_advancements() -> None:
 			for name in (attribute.replace("_", " ").title(),)
 			for i in range(len(levels))
 			for item, _, roman in (artifact_display(artifact, i),)
-			for parent in (f"{ns}:visible/stardust_fragment" if i == 0 else f"{ns}:visible/adventure/artifacts/{artifact_display(artifact, i-1)[0]}",)
+			for parent in (f"{ns}:visible/adventure/lucky_artifact_bag" if i == 0 else f"{ns}:visible/adventure/artifacts/{artifact_display(artifact, i-1)[0]}",)
 		},
 
 		# Seeds
@@ -84,7 +89,7 @@ def add_visible_advancements() -> None:
 			f"adventure/seeds/{seed_id}": {"display": {"title": {"text": title, "color": "aqua"}, "description": {"text": f"Admire this {name} Seed", "color": "green"}}, "parent": parent}
 			for i, (seed_id, title) in enumerate(SEEDS)
 			for name in (seed_id.replace("_", " ").title(),)
-			for parent in (f"{ns}:visible/stardust_fragment" if i == 0 else f"{ns}:visible/adventure/seeds/{SEEDS[i-1][0]}",)
+			for parent in (f"{ns}:visible/root" if i == 0 else f"{ns}:visible/adventure/seeds/{SEEDS[i-1][0]}",)
 		},
 
 		# Sniper bullets
@@ -98,7 +103,7 @@ def add_visible_advancements() -> None:
 		},
 
 		# No subcategories
-		"adventure/enter_cavern": {"display": {"icon": def_to_icon("cavern_portal"), "title": {"text": "Return to monke", "color": "aqua"}, "description": {"text": "Travel to the Cavern Dimension", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment","criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:cavern"}}}},
+		"adventure/enter_cavern": {"display": {"icon": def_to_icon("cavern_portal"), "title": {"text": "Return to monke", "color": "aqua"}, "description": {"text": "Travel to the Cavern Dimension", "color": "green"}}, "parent": f"{ns}:visible/root","criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:cavern"}}}},
 		"adventure/enter_celestial": {"display": {"icon": def_to_icon("celestial_portal"), "title": {"text": "Skyblock, isn't it?", "color": "aqua"}, "description": {"text": "Enter the Celestial Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_cavern", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:celestial"}}}},
 		"adventure/enter_stardust_dungeon_dim": {"display": {"icon": def_to_icon("stardust_dungeon_portal"), "title": {"text": "A dimension, a dungeon", "color": "aqua"}, "description": {"text": "Enter the Stardust Dungeon Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:dungeon"}}}},
 		"adventure/enter_stardust_dungeon": {"display": {"icon": def_to_icon("stardust_dungeon_key"), "title": {"text": "Entering the dungeon", "color": "aqua"}, "description": {"text": "Use a Stardust Dungeon Key", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust_dungeon_dim", "criteria": IMPOSSIBLE_CRITERIA},
@@ -106,26 +111,26 @@ def add_visible_advancements() -> None:
 		"adventure/enter_ultimate": {"display": {"icon": def_to_icon("ultimate_portal"), "title": {"text": "The Ultimate Dimension", "color": "aqua"}, "description": {"text": "Travel to the Ultimate Dimension", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust_dungeon_dim", "criteria": {"requirement": {"trigger": "minecraft:changed_dimension", "conditions": {"to": f"{ns}:ultimate"}}}},
 		"adventure/falling_celestial": {"display": {"icon": {"id": "minecraft:feather"}, "title": {"text": "Where did I put my bucket?"}, "description": {"text": "Fall from the Celestial dimension", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/enter_celestial", "criteria": IMPOSSIBLE_CRITERIA},
 		"adventure/falling_stardust": {"display": {"icon": {"id": "minecraft:feather"}, "title": {"text": "I did it wrong"}, "description": {"text": "Fall from the Stardust dimension", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/enter_stardust", "criteria": IMPOSSIBLE_CRITERIA},
-		"adventure/lucky_artifact_bag": {"display": {"icon": def_to_icon("lucky_artifact_bag"), "title": {"text": "What am I going to take out?", "color": "aqua"}, "description": {"text": "Find a Lucky Artifact Bag", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment"},
+		"adventure/lucky_artifact_bag": {"display": {"icon": def_to_icon("lucky_artifact_bag"), "title": {"text": "What am I going to take out?", "color": "aqua"}, "description": {"text": "Find a Lucky Artifact Bag", "color": "green"}}, "parent": f"{ns}:visible/root"},
 		"adventure/multiple_ultimate_boss": {"display": {"icon": {"id": "minecraft:dragon_head"}, "title": {"text": "Numbers don't affraid me"}, "description": {"text": "Summon two Ultimate Boss at the same time", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/ultimate_boss", "criteria": IMPOSSIBLE_CRITERIA},
 		"adventure/stardust_guardian": {"display": {"icon": {"id": "minecraft:wither_skeleton_skull"}, "title": {"text": "Making another step", "color": "aqua"}, "description": {"text": "Kill the Stardust Guardian", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust_dungeon", "criteria": IMPOSSIBLE_CRITERIA},
 		"adventure/stardust_pillar": {"display": {"icon": def_to_icon("starlight_infuser"), "title": {"text": "A Stardust Pillar", "color": "aqua"}, "description": {"text": "Summon the Stardust Pillar", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_stardust", "criteria": IMPOSSIBLE_CRITERIA},
 		"adventure/stoup_army": {"display": {"icon": def_to_icon("stoupegg"), "title": {"text": "Fighting a mini-boss", "color": "aqua"}, "description": {"text": "Fight against your first Stoup Army", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_cavern", "criteria": IMPOSSIBLE_CRITERIA},
 		"adventure/summon_ultimate_boss": {"display": {"icon": def_to_icon("ultimate_dragon_essence"), "title": {"text": "A journey to the end", "color": "aqua"}, "description": {"text": "Summon the Ultimate Boss", "color": "green"}}, "parent": f"{ns}:visible/adventure/enter_ultimate", "criteria": IMPOSSIBLE_CRITERIA},
-		"adventure/ultimate_boss_ez": {"display": {"icon": def_to_icon("ultimate_dragon_egg"), "title": {"text": "Star Fighter"}, "description": {"text": "Defeat the Ultimate Boss\\nby taking less than 10 hearts of damage", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/ultimate_boss", "criteria": IMPOSSIBLE_CRITERIA},
-		"adventure/ultimate_boss": {"display": {"icon": def_to_icon("ultimate_dragon_egg", enchanted=True), "title": {"text": "Stard'End", "color": "aqua"}, "description": {"text": "Defeat the Ultimate Boss", "color": "green"}, "frame": "goal"}, "parent": f"{ns}:visible/adventure/summon_ultimate_boss", "criteria": IMPOSSIBLE_CRITERIA},
-		"adventure/use_awakened_forge": {"display": {"icon": {"id": "minecraft:dragon_egg"}, "title": {"text": "A new crafting structure", "color": "aqua"}, "description": {"text": "Use the Awakened Forge", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment", "criteria": IMPOSSIBLE_CRITERIA},
+		"adventure/ultimate_boss_ez": {"display": {"icon": def_to_icon("ultimate_dragon_egg", enchanted=True), "title": {"text": "Star Fighter"}, "description": {"text": "Defeat the Ultimate Boss\\nby taking less than 10 hearts of damage", "color": "green"}, "frame": "challenge", "hidden": True}, "parent": f"{ns}:visible/adventure/ultimate_boss", "criteria": IMPOSSIBLE_CRITERIA},
+		"adventure/ultimate_boss": {"display": {"icon": def_to_icon("ultimate_dragon_egg"), "title": {"text": "Stard'End", "color": "aqua"}, "description": {"text": "Defeat the Ultimate Boss", "color": "green"}, "frame": "goal"}, "parent": f"{ns}:visible/adventure/summon_ultimate_boss", "criteria": IMPOSSIBLE_CRITERIA},
+		"adventure/use_awakened_forge": {"display": {"icon": {"id": "minecraft:dragon_egg"}, "title": {"text": "A new crafting structure", "color": "aqua"}, "description": {"text": "Use the Awakened Forge", "color": "green"}}, "parent": f"{ns}:visible/root", "criteria": IMPOSSIBLE_CRITERIA},
 
 
 
-		## Equipments advancements
+		## Stuff advancements
 		# Compressed cobblestones
 		**{
 			f"stuff/cobblestone/{tier}": {"display": {"icon": def_to_icon(f"{tier}_cobblestone"), "title": {"text": title, "color": "aqua"}, "description": {"text": f"Obtain a {tier.replace('_', ' ').title()} Cobblestone", "color": "green"}, "frame": frame}, "parent": parent}
 			for i, tier in enumerate(COBBLESTONE_TIERS)
 			for title in (f"Compressing {ROMAN_NUMERALS[i]}" if i < (len(COBBLESTONE_TIERS) - 1) else "43,046,721",)
 			for frame in ("task" if i < (len(COBBLESTONE_TIERS) - 1) else "challenge",)
-			for parent in (f"{ns}:visible/stuff/stardust_ingot" if i == 0 else f"{ns}:visible/stuff/cobblestone/{COBBLESTONE_TIERS[i-1]}",)
+			for parent in (f"{ns}:visible/root" if i == 0 else f"{ns}:visible/stuff/cobblestone/{COBBLESTONE_TIERS[i-1]}",)
 		},
 		# Cobblestone Miners
 		**{
@@ -148,21 +153,55 @@ def add_visible_advancements() -> None:
 						{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"armor": {material: True}}}}}},
 						{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"tools": {material: True}}}}}},
 				]}}},
-				"parent": parent
+				"parent": f"{ns}:visible/{parent}"
 			}
-			for materials in ([
-				("ancient_stardust", "I think it was like it", "Upgrade a Diamond equipment into Ancient Stardust"),
-				("original_stardust", "Yup that's it!", "Use the power of a Stardust Core to craft an Original Stardust equipment"),
-				("legendarium", "Taking a breath", "Choose the Legendarium path"),
-				("solarium", "Burning your soul", "Choose the Solarium path"),
-				("darkium", "Be aware of your shadow", "Choose the Darkium path")
-			],)
-			for i, (material, title, desc) in enumerate(materials)
-			for parent in (f"{ns}:visible/stuff/stardust_ingot" if i == 0 else f"{ns}:visible/stuff/{materials[i-1][0]}_equipment",)
+			for material, title, desc, parent in [
+				("ancient_stardust", "I think it was like it", "Upgrade a Diamond equipment into Ancient Stardust", "stuff/stardust_block"),
+				("original_stardust", "Yup that's it!", "Use the power of a Stardust Core to craft an Original Stardust equipment", "stuff/stardust_core"),
+				("legendarium", "Taking a breath", "Choose the Legendarium path", "stuff/legendarium_block"),
+				("solarium", "Burning your soul", "Choose the Solarium path", "stuff/solarium_block"),
+				("darkium", "Be aware of your shadow", "Choose the Darkium path", "stuff/darkium_block")
+			]
 		},
 
-		# Other equipments
-		"stuff/stardust_ingot": {"display": {"title": {"text": "I feel like it's useful", "color": "aqua"}, "description": {"text": "Obtain a Stardust Ingot", "color": "green"}}, "parent": f"{ns}:visible/stardust_fragment"},
+		# Bow & Snipers
+		"stuff/stardust_bow": {"display": {"title": {"text": "Bowing like a pro I", "color": "aqua"}, "description": {"text": "Craft a Stardust Bow", "color": "green"}}, "parent": f"{ns}:visible/adventure/use_awakened_forge"},
+		"stuff/awakened_stardust_bow": {"display": {"title": {"text": "Bowing like a pro II", "color": "aqua"}, "description": {"text": "Upgrade your Stardust Bow in its Awakened form", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_bow"},
+		"stuff/ultimate_bow": {"display": {"title": {"text": "Bowing like a pro III", "color": "aqua"}, "description": {"text": "Awaken the magic of the stars using the Ultimate Bow", "color": "green"}, "frame": "challenge"}, "parent": f"{ns}:visible/stuff/awakened_stardust_bow"},
+		"stuff/stardust_sniper": {"display": {"title": {"text": "Trick Shot I", "color": "aqua"}, "description": {"text": "Craft a Stardust Sniper", "color": "green"}}, "parent": f"{ns}:visible/adventure/use_awakened_forge"},
+		"stuff/awakened_stardust_sniper": {"display": {"title": {"text": "Trick Shot II", "color": "aqua"}, "description": {"text": "Upgrade your Stardust Sniper in its Awakened form", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_sniper"},
+		"stuff/ultimate_sniper": {"display": {"title": {"text": "Trick Shot III", "color": "aqua"}, "description": {"text": "A whisper before the storm of bullets coming from the Ultimate Sniper", "color": "green"}, "frame": "challenge"}, "parent": f"{ns}:visible/stuff/awakened_stardust_sniper"},
+
+		# Remaining equipments
+		"stuff/item_magnet": {"display": {"title": {"text": "I'm Attractive", "color": "aqua"}, "description": {"text": "Obtain an Item Magnet", "color": "green"}}, "parent": f"{ns}:visible/stuff/ultimate_shard"},	# TODO: Add functionnality to the magnet
+		"stuff/home_travel_staff": {"display": {"title": {"text": "I'm Out of There", "color": "aqua"}, "description": {"text": "Use a Travel Staff for the first time", "color": "green"}}, "parent": f"{ns}:visible/stuff/dragon_pearl"},
+		"stuff/wormhole_potion": {"display": {"title": {"text": "Where are you my friend", "color": "aqua"}, "description": {"text": "Use a Wormhole Potion for the first time", "color": "green"}}, "parent": f"{ns}:visible/stuff/compacted_stardust_shard"},
+		"stuff/stardust_apple": {"display": {"title": {"text": "Cosmic Apple", "color": "aqua"}, "description": {"text": "Obtain a Stardust Apple", "color": "green"}}, "parent": f"{ns}:visible/root"},
+		"stuff/life_crystal": {"display": {"title": {"text": "Increasing Health", "color": "aqua"}, "description": {"text": "Eat your first Life Crystal", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_apple", "criteria": IMPOSSIBLE_CRITERIA},
+		"stuff/life_crystal_max": {"display": {"icon": def_to_icon("life_crystal", enchanted=True), "title": {"text": "Two Health Bars!", "color": "aqua"}, "description": {"text": "Consume your 20th and final Life Crystal", "color": "green"}}, "parent": f"{ns}:visible/stuff/life_crystal", "criteria": IMPOSSIBLE_CRITERIA},
+
+		# Other stuff
+		"stuff/dragon_pearl": {"display": {"title": {"text": "Faster and Farther", "color": "aqua"}, "description": {"text": "Obtain a Dragon Pearl", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_essence"},
+		"stuff/ender_dragon_pearl": {"display": {"title": {"text": "Even Faster and Farther", "color": "aqua"}, "description": {"text": "Obtain an Ender Dragon Pearl", "color": "green"}}, "parent": f"{ns}:visible/stuff/dragon_pearl"},
+		"stuff/stardust_block": {"display": {"title": {"text": "Is that Stardust Diamond?", "color": "aqua"}, "description": {"text": "Obtain a Stardust Block", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_ingot"},
+		"stuff/compacted_stardust_shard": {"display": {"title": {"text": "A costly Stardust Energy", "color": "aqua"}, "description": {"text": "Obtain a Compacted Stardust Shard", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_block"},
+		"stuff/stardust_ingot": {"display": {"title": {"text": "I feel like it's useful", "color": "aqua"}, "description": {"text": "Obtain a Stardust Ingot", "color": "green"}}, "parent": f"{ns}:visible/root"},
+		"stuff/stardust_essence": {"display": {"title": {"text": "Feeling the Power", "color": "aqua"}, "description": {"text": "Obtain a Stardust Essence", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_ingot"},
+		"stuff/stardust_core": {"display": {"title": {"text": "Stardust Technology", "color": "aqua"}, "description": {"text": "Obtain a Stardust Core", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_essence"},
+		"stuff/awakened_stardust_block": {"display": {"title": {"text": "A respectful Block Type", "color": "aqua"}, "description": {"text": "Obtain an Awakened Stardust Block", "color": "green"}}, "parent": f"{ns}:visible/stuff/awakened_stardust"},
+		"stuff/awakened_stardust": {"display": {"title": {"text": "Stardust Evolution", "color": "aqua"}, "description": {"text": "Obtain an Awakened Stardust", "color": "green"}}, "parent": f"{ns}:visible/stuff/stardust_essence"},
+		"stuff/ultimate_shard": {"display": {"title": {"text": "A Burst of Energy", "color": "aqua"}, "description": {"text": "Obtain an Ultimate Shard", "color": "green"}}, "parent": f"{ns}:visible/stuff/compacted_stardust_shard"},
+		**{
+			f"stuff/{material}_{form}": {"display": {"title": {"text": f"{title} {ROMAN_NUMERALS[i]}", "color": "aqua"}, "description": {"text": f"Obtain a {name}", "color": "green"}}, "parent": parent}
+			for material, title in [
+				("legendarium", "Feeling the Breeze"),
+				("solarium", "Feeling the Sun"),
+				("darkium", "Feeling the Shadow")
+			]
+			for i, form in enumerate(("fragment", "ingot", "block"))
+			for name in (f"{material.title()} {form.title()}",)
+			for parent in (f"{ns}:visible/stuff/original_stardust_equipment" if i == 0 else f"{ns}:visible/stuff/{material}_{('fragment' if i == 1 else 'ingot')}",)
+		}
 
 		# Technology advancements
 		# TODO
@@ -179,7 +218,6 @@ def add_visible_advancements() -> None:
 	# For each advancement,
 	for full_path, adv in advancements.items():
 		item: str = full_path.split("/")[-1]
-		data: JsonDict = Mem.definitions.get(item, {})
 		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
 
 		# If challenge, remove color from title
@@ -190,14 +228,7 @@ def add_visible_advancements() -> None:
 
 		# Set icon
 		if not adv.get("display", {}).get("icon"):
-			icon: dict[str, Any] = {"id": data["id"]}
-			components_to_copy: list[str] = ["item_model", "profile"]
-			for component in components_to_copy:
-				if data.get(component):
-					if not icon.get("components"):
-						icon["components"] = {}
-					icon["components"][f"minecraft:{component}"] = data[component]
-			advancement["display"]["icon"] = icon
+			advancement["display"]["icon"] = def_to_icon(item)
 
 		# Set the criteria, if not already set
 		if not adv.get("criteria"):

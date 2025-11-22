@@ -43,5 +43,5 @@
 			"requirement"
 		]
 	],
-	"parent": "stardust:visible/stuff/stardust_ingot"
+	"parent": "stardust:visible/stuff/stardust_block"
 }

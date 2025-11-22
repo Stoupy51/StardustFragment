@@ -44,29 +44,29 @@ def main_additions() -> None:
 	# Prepare some recipes
 	MINERS_CRAFTING_RECIPES = cast(dict[str, list[JsonDict]], {
 		"cobblestone_miner_lv1": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:coal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone", ns)}},
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:charcoal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:coal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone")}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:charcoal"),"P":ingr_repr("minecraft:wooden_pickaxe"),"M":ingr_repr("minecraft:redstone_block"),"B":ingr_repr("compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv2": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:flint"),"P":ingr_repr("minecraft:stone_pickaxe"),"M":ingr_repr("cobblestone_miner_lv1", ns),"B":ingr_repr("compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:flint"),"P":ingr_repr("minecraft:stone_pickaxe"),"M":ingr_repr("cobblestone_miner_lv1"),"B":ingr_repr("compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv3": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:copper_block"),"P":ingr_repr("minecraft:copper_pickaxe"),"M":ingr_repr("cobblestone_miner_lv2", ns),"B":ingr_repr("double_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:copper_block"),"P":ingr_repr("minecraft:copper_pickaxe"),"M":ingr_repr("cobblestone_miner_lv2"),"B":ingr_repr("double_compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv4": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:iron_block"),"P":ingr_repr("minecraft:iron_pickaxe"),"M":ingr_repr("cobblestone_miner_lv3", ns),"B":ingr_repr("double_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:iron_block"),"P":ingr_repr("minecraft:iron_pickaxe"),"M":ingr_repr("cobblestone_miner_lv3"),"B":ingr_repr("double_compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv5": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:gold_block"),"P":ingr_repr("minecraft:golden_pickaxe"),"M":ingr_repr("cobblestone_miner_lv4", ns),"B":ingr_repr("triple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:gold_block"),"P":ingr_repr("minecraft:golden_pickaxe"),"M":ingr_repr("cobblestone_miner_lv4"),"B":ingr_repr("triple_compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv6": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:diamond_block"),"P":ingr_repr("minecraft:diamond_pickaxe"),"M":ingr_repr("cobblestone_miner_lv5", ns),"B":ingr_repr("triple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:diamond_block"),"P":ingr_repr("minecraft:diamond_pickaxe"),"M":ingr_repr("cobblestone_miner_lv5"),"B":ingr_repr("triple_compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv7": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:netherite_block"),"P":ingr_repr("minecraft:netherite_pickaxe"),"M":ingr_repr("cobblestone_miner_lv6", ns),"B":ingr_repr("quadruple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("minecraft:netherite_block"),"P":ingr_repr("minecraft:netherite_pickaxe"),"M":ingr_repr("cobblestone_miner_lv6"),"B":ingr_repr("quadruple_compressed_cobblestone")}},
 		],
 		"cobblestone_miner_lv8": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("stardust_core", ns),"P":ingr_repr("original_stardust_pickaxe", ns),"M":ingr_repr("cobblestone_miner_lv7", ns),"B":ingr_repr("quadruple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":ingr_repr("stardust_core"),"P":ingr_repr("original_stardust_pickaxe"),"M":ingr_repr("cobblestone_miner_lv7"),"B":ingr_repr("quadruple_compressed_cobblestone")}},
 		],
 	})
 
@@ -115,7 +115,7 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:diamond")] + [ingr_repr("diamond_seed", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:diamond")] + [ingr_repr("diamond_seed")]},
 			]
 		},
 		"stardust_seed": {
@@ -135,10 +135,10 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+50% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("stardust_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("stardust_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("stardust_fragment", ns)]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("stardust_fragment", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("stardust_fragment")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("stardust_fragment")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("stardust_fragment")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("stardust_fragment")]},
 			]
 		},
 		"advanced_stardust_seed": {
@@ -158,7 +158,7 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+30% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("stardust_fragment", ns)] + [ingr_repr("stardust_seed", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("stardust_fragment")] + [ingr_repr("stardust_seed")]},
 			]
 		},
 		"elite_stardust_seed": {
@@ -178,7 +178,7 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+20% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("stardust_ingot", ns)] + [ingr_repr("advanced_stardust_seed", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("stardust_ingot")] + [ingr_repr("advanced_stardust_seed")]},
 			]
 		},
 		"legendarium_seed": {
@@ -198,7 +198,7 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:emerald")] + 4*[ingr_repr("minecraft:feather")] + [ingr_repr("elite_stardust_seed", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:emerald")] + 4*[ingr_repr("minecraft:feather")] + [ingr_repr("elite_stardust_seed")]},
 			]
 		},
 		"solarium_seed": {
@@ -218,7 +218,7 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:magma_cream")] + 4*[ingr_repr("minecraft:blaze_powder")] + [ingr_repr("elite_stardust_seed", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:magma_cream")] + 4*[ingr_repr("minecraft:blaze_powder")] + [ingr_repr("elite_stardust_seed")]},
 			]
 		},
 		"darkium_seed": {
@@ -238,7 +238,7 @@ def main_additions() -> None:
 				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:ink_sac")] + 4*[ingr_repr("minecraft:wither_rose")] + [ingr_repr("elite_stardust_seed", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:ink_sac")] + 4*[ingr_repr("minecraft:wither_rose")] + [ingr_repr("elite_stardust_seed")]},
 			]
 		},
 		**{
@@ -298,8 +298,8 @@ def main_additions() -> None:
 				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EDE","DMD","EDE"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DED","EME","DED"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EDE","DMD","EDE"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DED","EME","DED"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module")}},
 			]
 		},
 		"silk_touch_module": {
@@ -313,8 +313,8 @@ def main_additions() -> None:
 				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:iron_ore")] + [ingr_repr("empty_module", ns)]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:deepslate_iron_ore")] + [ingr_repr("empty_module", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:iron_ore")] + [ingr_repr("empty_module")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:deepslate_iron_ore")] + [ingr_repr("empty_module")]},
 			]
 		},
 		"stoupegg": {
@@ -333,9 +333,9 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-					ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),
-					ingr_repr("stardust_fragment", ns),ingr_repr("minecraft:wolf_armor", ns),ingr_repr("stardust_fragment", ns),
-					ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),ingr_repr("dog_excrement", ns),
+					ingr_repr("dog_excrement"),ingr_repr("dog_excrement"),ingr_repr("dog_excrement"),
+					ingr_repr("stardust_fragment"),ingr_repr("minecraft:wolf_armor"),ingr_repr("stardust_fragment"),
+					ingr_repr("dog_excrement"),ingr_repr("dog_excrement"),ingr_repr("dog_excrement"),
 				]},
 			]
 		},
@@ -357,7 +357,7 @@ def main_additions() -> None:
 				{"text":"\nwith more health and damage while still summoning mobs","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:breeze_rod")] + 4*[ingr_repr("compacted_stardust_shard", ns)] + [ingr_repr("minecraft:nether_star", ns)]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:breeze_rod")] + 4*[ingr_repr("compacted_stardust_shard")] + [ingr_repr("minecraft:nether_star")]},
 			]
 		},
 		"stardust_dungeon_key": {
@@ -382,7 +382,7 @@ def main_additions() -> None:
 			},
 			#"tooltip_display": {"hidden_components":["potion_contents"]},
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:dragon_egg")] + 4*[ingr_repr("ultimate_shard", ns)] + [ingr_repr("minecraft:lingering_potion")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:dragon_egg")] + 4*[ingr_repr("ultimate_shard")] + [ingr_repr("minecraft:lingering_potion")]},
 			],
 			"lore": [
 				{"text":"One-time use summoner of the Ultimate Dragon.","italic":False,"color":"gray"},
@@ -412,10 +412,10 @@ def main_additions() -> None:
 		"id": "minecraft:written_book", "category": MISC, "item_name": "Stardust Manual",
 		RESULT_OF_CRAFTING: [
 			# Put a book and a steel ingot in the crafting grid to get the manual
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[ingr_repr("minecraft:book"), ingr_repr("stardust_fragment", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[ingr_repr("minecraft:book"), ingr_repr("stardust_fragment")]},
 
 			# Put the manual in the crafting grid to get the manual back (update the manual)
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[ingr_repr("manual", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[ingr_repr("manual")]},
 		],
 		WIKI_COMPONENT: [
 			{"text":"Complete guide to Stardust Fragment technology.","color":"yellow"},

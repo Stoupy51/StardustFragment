@@ -45,42 +45,42 @@ def main_additions() -> None:
 			]},
 		],
 		"quarry_lv2": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["WWW","EQE","BBB"],"ingredients":{"W":ingr_repr("minecraft:warped_fungus"),"E":ingr_repr("stardust_essence", ns),"Q":ingr_repr("quarry_lv1", ns),"B":ingr_repr("triple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["WWW","EQE","BBB"],"ingredients":{"W":ingr_repr("minecraft:warped_fungus"),"E":ingr_repr("stardust_essence"),"Q":ingr_repr("quarry_lv1"),"B":ingr_repr("triple_compressed_cobblestone")}},
 		],
 		"quarry_lv3": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","SQS","BRB"],"ingredients":{"D":ingr_repr("dragon_pearl", ns),"S":ingr_repr("compacted_stardust_shard", ns),"Q":ingr_repr("quarry_lv2", ns),"B":ingr_repr("quadruple_compressed_cobblestone", ns),'R':ingr_repr("minecraft:respawn_anchor")}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DDD","SQS","BRB"],"ingredients":{"D":ingr_repr("dragon_pearl"),"S":ingr_repr("compacted_stardust_shard"),"Q":ingr_repr("quarry_lv2"),"B":ingr_repr("quadruple_compressed_cobblestone"),'R':ingr_repr("minecraft:respawn_anchor")}},
 		],
 		"quarry_lv4": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","NQN","BBB"],"ingredients":{"E":ingr_repr("ender_dragon_pearl", ns),"N":ingr_repr("minecraft:netherite_ingot"),"Q":ingr_repr("quarry_lv3", ns),"B":ingr_repr("quintuple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","NQN","BBB"],"ingredients":{"E":ingr_repr("ender_dragon_pearl"),"N":ingr_repr("minecraft:netherite_ingot"),"Q":ingr_repr("quarry_lv3"),"B":ingr_repr("quintuple_compressed_cobblestone")}},
 		],
 		"quarry_lv5": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","UQU","BBB"],"ingredients":{"N":ingr_repr("minecraft:netherite_block"),"U":ingr_repr("ultimate_shard", ns),"Q":ingr_repr("quarry_lv4", ns),"B":ingr_repr("sextuple_compressed_cobblestone", ns)}},
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","UQU","NNN"],"ingredients":{"N":ingr_repr("minecraft:netherite_block"),"U":ingr_repr("ultimate_shard", ns),"Q":ingr_repr("quarry_lv4", ns),"B":ingr_repr("sextuple_compressed_cobblestone", ns)}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","UQU","BBB"],"ingredients":{"N":ingr_repr("minecraft:netherite_block"),"U":ingr_repr("ultimate_shard"),"Q":ingr_repr("quarry_lv4"),"B":ingr_repr("sextuple_compressed_cobblestone")}},
+			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","UQU","NNN"],"ingredients":{"N":ingr_repr("minecraft:netherite_block"),"U":ingr_repr("ultimate_shard"),"Q":ingr_repr("quarry_lv4"),"B":ingr_repr("sextuple_compressed_cobblestone")}},
 		],
 	}
 	PORTAL_CRAFTING_RECIPES: dict[str, list[JsonDict]] = {
 		"cavern_portal": [
-			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("compressed_cobblestone", ns)] + [ingr_repr("stardust_fragment", ns)]},
+			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("compressed_cobblestone")] + [ingr_repr("stardust_fragment")]},
 		],
 		"celestial_portal": [
 			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
 				ingr_repr("minecraft:iron_block"),ingr_repr("minecraft:phantom_membrane"),ingr_repr("minecraft:iron_block"),
-				ingr_repr("minecraft:phantom_membrane"),ingr_repr("stardust_fragment", ns),ingr_repr("minecraft:phantom_membrane"),
+				ingr_repr("minecraft:phantom_membrane"),ingr_repr("stardust_fragment"),ingr_repr("minecraft:phantom_membrane"),
 				ingr_repr("minecraft:iron_block"),ingr_repr("minecraft:phantom_membrane"),ingr_repr("minecraft:iron_block"),
 			]},
 		],
 		"stardust_portal": [
 			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-				ingr_repr("minecraft:blue_concrete"),ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:blue_concrete"),
-				ingr_repr("compacted_stardust_shard", ns),ingr_repr("celestial_portal", ns),ingr_repr("compacted_stardust_shard", ns),
-				ingr_repr("minecraft:blue_concrete"),ingr_repr("compacted_stardust_shard", ns),ingr_repr("minecraft:blue_concrete"),
+				ingr_repr("minecraft:blue_concrete"),ingr_repr("compacted_stardust_shard"),ingr_repr("minecraft:blue_concrete"),
+				ingr_repr("compacted_stardust_shard"),ingr_repr("celestial_portal"),ingr_repr("compacted_stardust_shard"),
+				ingr_repr("minecraft:blue_concrete"),ingr_repr("compacted_stardust_shard"),ingr_repr("minecraft:blue_concrete"),
 			]},
 		],
 		"stardust_dungeon_portal": [
 			{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-				ingr_repr("awakened_stardust_block", ns),ingr_repr("awakened_stardust_ore", ns),ingr_repr("awakened_stardust_block", ns),
-				ingr_repr("awakened_stardust_ore", ns),ingr_repr("stardust_portal", ns),ingr_repr("awakened_stardust_ore", ns),
-				ingr_repr("awakened_stardust_block", ns),ingr_repr("awakened_stardust_ore", ns),ingr_repr("awakened_stardust_block", ns),
+				ingr_repr("awakened_stardust_block"),ingr_repr("awakened_stardust_ore"),ingr_repr("awakened_stardust_block"),
+				ingr_repr("awakened_stardust_ore"),ingr_repr("stardust_portal"),ingr_repr("awakened_stardust_ore"),
+				ingr_repr("awakened_stardust_block"),ingr_repr("awakened_stardust_ore"),ingr_repr("awakened_stardust_block"),
 			]},
 		],
 	}
@@ -110,8 +110,8 @@ def main_additions() -> None:
 				{"text":"\nConnects generators to machines and batteries","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SGS","GCG","SGS"],"ingredients":{"S":ingr_repr("stardust_block", ns),"G":ingr_repr("minecraft:gold_block"),"C":ingr_repr("elite_cable", "simplenergy")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GSG","SCS","GSG"],"ingredients":{"S":ingr_repr("stardust_block", ns),"G":ingr_repr("minecraft:gold_block"),"C":ingr_repr("elite_cable", "simplenergy")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SGS","GCG","SGS"],"ingredients":{"S":ingr_repr("stardust_block"),"G":ingr_repr("minecraft:gold_block"),"C":ingr_repr("elite_cable", "simplenergy")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["GSG","SCS","GSG"],"ingredients":{"S":ingr_repr("stardust_block"),"G":ingr_repr("minecraft:gold_block"),"C":ingr_repr("elite_cable", "simplenergy")}},
 			]
 		},
 		"awakened_stardust_cable": {
@@ -126,8 +126,8 @@ def main_additions() -> None:
 				{"text":"\nUpgraded version of stardust cable","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BRB","RCR","BRB"],"ingredients":{"B":ingr_repr("awakened_stardust_block", ns),"R":ingr_repr("minecraft:redstone_block"),"C":ingr_repr("stardust_cable", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RBR","BCB","RBR"],"ingredients":{"B":ingr_repr("awakened_stardust_block", ns),"R":ingr_repr("minecraft:redstone_block"),"C":ingr_repr("stardust_cable", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BRB","RCR","BRB"],"ingredients":{"B":ingr_repr("awakened_stardust_block"),"R":ingr_repr("minecraft:redstone_block"),"C":ingr_repr("stardust_cable")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RBR","BCB","RBR"],"ingredients":{"B":ingr_repr("awakened_stardust_block"),"R":ingr_repr("minecraft:redstone_block"),"C":ingr_repr("stardust_cable")}},
 			]
 		},
 		"ultimate_cable": {
@@ -144,9 +144,9 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-					ingr_repr("compacted_stardust_shard", ns),ingr_repr("legendarium_ingot", ns),ingr_repr("compacted_stardust_shard", ns),
-					ingr_repr("solarium_ingot", ns),ingr_repr("awakened_stardust_cable", ns),ingr_repr("darkium_ingot", ns),
-					ingr_repr("compacted_stardust_shard", ns),ingr_repr("stardust_core", ns),ingr_repr("compacted_stardust_shard", ns),
+					ingr_repr("compacted_stardust_shard"),ingr_repr("legendarium_ingot"),ingr_repr("compacted_stardust_shard"),
+					ingr_repr("solarium_ingot"),ingr_repr("awakened_stardust_cable"),ingr_repr("darkium_ingot"),
+					ingr_repr("compacted_stardust_shard"),ingr_repr("stardust_core"),ingr_repr("compacted_stardust_shard"),
 				]},
 			]
 		},
@@ -160,7 +160,7 @@ def main_additions() -> None:
 				{"text":"\nStores up to 200 MJ of energy","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","CBC","SSS"],"ingredients":{"E":ingr_repr("stardust_essence", ns),"C":ingr_repr("compacted_stardust_shard", ns),"B":ingr_repr("elite_battery", "simplenergy"),"S":ingr_repr("stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","CBC","SSS"],"ingredients":{"E":ingr_repr("stardust_essence"),"C":ingr_repr("compacted_stardust_shard"),"B":ingr_repr("elite_battery", "simplenergy"),"S":ingr_repr("stardust_block")}},
 			]
 		},
 		"awakened_stardust_battery": {
@@ -171,8 +171,8 @@ def main_additions() -> None:
 				{"text":"\nStores up to 500 MJ of energy","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","SBS","AAA"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("awakened_stardust", ns),"B":ingr_repr("stardust_battery", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","SBS","RRR"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("awakened_stardust", ns),"B":ingr_repr("stardust_battery", ns),"A":ingr_repr("awakened_stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["RRR","SBS","AAA"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("awakened_stardust"),"B":ingr_repr("stardust_battery"),"A":ingr_repr("awakened_stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","SBS","RRR"],"ingredients":{"R":ingr_repr("minecraft:redstone_block"),"S":ingr_repr("awakened_stardust"),"B":ingr_repr("stardust_battery"),"A":ingr_repr("awakened_stardust_block")}},
 			]
 		},
 		"ultimate_battery": {
@@ -184,8 +184,8 @@ def main_additions() -> None:
 				{"text":"\nStores up to 10 GJ of energy","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","FBF","CCC"],"ingredients":{"S":ingr_repr("ultimate_shard", ns),"F":ingr_repr("ultimate_frame", ns),"B":ingr_repr("awakened_stardust_battery", ns),"C":ingr_repr("stardust_core", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","FBF","SSS"],"ingredients":{"S":ingr_repr("ultimate_shard", ns),"F":ingr_repr("ultimate_frame", ns),"B":ingr_repr("awakened_stardust_battery", ns),"C":ingr_repr("stardust_core", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","FBF","CCC"],"ingredients":{"S":ingr_repr("ultimate_shard"),"F":ingr_repr("ultimate_frame"),"B":ingr_repr("awakened_stardust_battery"),"C":ingr_repr("stardust_core")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","FBF","SSS"],"ingredients":{"S":ingr_repr("ultimate_shard"),"F":ingr_repr("ultimate_frame"),"B":ingr_repr("awakened_stardust_battery"),"C":ingr_repr("stardust_core")}},
 			]
 		},
 
@@ -200,7 +200,7 @@ def main_additions() -> None:
 				{"text":"\nRequires direct sunlight","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("stardust_photovoltaic_cell", ns),"E":ingr_repr("stardust_essence", ns),"P":ingr_repr("solar_panel", "simplenergy"),"B":ingr_repr("minecraft:lapis_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("stardust_photovoltaic_cell"),"E":ingr_repr("stardust_essence"),"P":ingr_repr("solar_panel", "simplenergy"),"B":ingr_repr("minecraft:lapis_block")}},
 			]
 		},
 		"awakened_stardust_solar_panel": {
@@ -213,7 +213,7 @@ def main_additions() -> None:
 				{"text":"\nGenerates 16 kW during daylight","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","APA","BBB"],"ingredients":{"C":ingr_repr("awakened_stardust_photovoltaic_cell", ns),"A":ingr_repr("awakened_stardust_block", ns),"P":ingr_repr("stardust_solar_panel", ns),"B":ingr_repr("minecraft:iron_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","APA","BBB"],"ingredients":{"C":ingr_repr("awakened_stardust_photovoltaic_cell"),"A":ingr_repr("awakened_stardust_block"),"P":ingr_repr("stardust_solar_panel"),"B":ingr_repr("minecraft:iron_block")}},
 			]
 		},
 		"legendarium_solar_panel": {
@@ -226,7 +226,7 @@ def main_additions() -> None:
 				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("legendarium_photovoltaic_cell", ns),"E":ingr_repr("legendarium_ingot", ns),"P":ingr_repr("awakened_stardust_solar_panel", ns),"B":ingr_repr("minecraft:calcite")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("legendarium_photovoltaic_cell"),"E":ingr_repr("legendarium_ingot"),"P":ingr_repr("awakened_stardust_solar_panel"),"B":ingr_repr("minecraft:calcite")}},
 			]
 		},
 		"solarium_solar_panel": {
@@ -239,7 +239,7 @@ def main_additions() -> None:
 				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("solarium_photovoltaic_cell", ns),"E":ingr_repr("solarium_ingot", ns),"P":ingr_repr("awakened_stardust_solar_panel", ns),"B":ingr_repr("minecraft:calcite")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("solarium_photovoltaic_cell"),"E":ingr_repr("solarium_ingot"),"P":ingr_repr("awakened_stardust_solar_panel"),"B":ingr_repr("minecraft:calcite")}},
 			]
 		},
 		"darkium_solar_panel": {
@@ -252,7 +252,7 @@ def main_additions() -> None:
 				{"text":"\nGenerates 32 kW during nighttime instead of daylight","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("darkium_photovoltaic_cell", ns),"E":ingr_repr("darkium_ingot", ns),"P":ingr_repr("awakened_stardust_solar_panel", ns),"B":ingr_repr("simplunium_block", "simplenergy")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","EPE","BBB"],"ingredients":{"C":ingr_repr("darkium_photovoltaic_cell"),"E":ingr_repr("darkium_ingot"),"P":ingr_repr("awakened_stardust_solar_panel"),"B":ingr_repr("simplunium_block", "simplenergy")}},
 			]
 		},
 		"ultimate_solar_panel": {
@@ -266,12 +266,12 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: unique_list([
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["CCC","SPS","XYZ"],"ingredients":{
-					"C":ingr_repr("ultimate_photovoltaic_cell", ns),
-					"S":ingr_repr("ultimate_shard", ns),
-					"P":ingr_repr(f"{panel}_solar_panel", ns),
-					"X":ingr_repr(f"{X}_block", ns),
-					"Y":ingr_repr("stardust_core", ns),
-					"Z":ingr_repr(f"{Z}_block", ns)
+					"C":ingr_repr("ultimate_photovoltaic_cell"),
+					"S":ingr_repr("ultimate_shard"),
+					"P":ingr_repr(f"{panel}_solar_panel"),
+					"X":ingr_repr(f"{X}_block"),
+					"Y":ingr_repr("stardust_core"),
+					"Z":ingr_repr(f"{Z}_block")
 				}}
 				for elements in [("legendarium", "solarium", "darkium"), ("darkium", "legendarium", "solarium"), ("solarium", "darkium", "legendarium")]
 				for panel in elements
@@ -363,8 +363,8 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-					ingr_repr("ultimate_shard", ns),ingr_repr("ultimate_shard", ns),ingr_repr("ultimate_shard", ns),
-					ingr_repr("ultimate_frame", ns),ingr_repr("stardust_dungeon_portal", ns),ingr_repr("ultimate_frame", ns),
+					ingr_repr("ultimate_shard"),ingr_repr("ultimate_shard"),ingr_repr("ultimate_shard"),
+					ingr_repr("ultimate_frame"),ingr_repr("stardust_dungeon_portal"),ingr_repr("ultimate_frame"),
 					ingr_repr("minecraft:respawn_anchor"),ingr_repr("minecraft:respawn_anchor"),ingr_repr("minecraft:respawn_anchor"),
 				]},
 			]
@@ -385,8 +385,8 @@ def main_additions() -> None:
 				{"text":"\nOperates once per minute when powered","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","DSD","FFF"],"ingredients":{"E":ingr_repr("stardust_essence", ns),"D":ingr_repr("dog_excrement", ns),"S":ingr_repr("diamond_seed", ns),"F":ingr_repr("stardust_frame", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","DSD","EEE"],"ingredients":{"E":ingr_repr("stardust_essence", ns),"D":ingr_repr("dog_excrement", ns),"S":ingr_repr("diamond_seed", ns),"F":ingr_repr("stardust_frame", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","DSD","FFF"],"ingredients":{"E":ingr_repr("stardust_essence"),"D":ingr_repr("dog_excrement"),"S":ingr_repr("diamond_seed"),"F":ingr_repr("stardust_frame")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","DSD","EEE"],"ingredients":{"E":ingr_repr("stardust_essence"),"D":ingr_repr("dog_excrement"),"S":ingr_repr("diamond_seed"),"F":ingr_repr("stardust_frame")}},
 			]
 		},
 		"mob_grinder": {
@@ -400,8 +400,8 @@ def main_additions() -> None:
 				{"text":"\nConsumes 100 kW of power","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DSD","FFF"],"ingredients":{"A":ingr_repr("awakened_stardust_block", ns),"D":ingr_repr("ender_dragon_pearl", ns),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","DSD","AAA"],"ingredients":{"A":ingr_repr("awakened_stardust_block", ns),"D":ingr_repr("ender_dragon_pearl", ns),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DSD","FFF"],"ingredients":{"A":ingr_repr("awakened_stardust_block"),"D":ingr_repr("ender_dragon_pearl"),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","DSD","AAA"],"ingredients":{"A":ingr_repr("awakened_stardust_block"),"D":ingr_repr("ender_dragon_pearl"),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame")}},
 			]
 		},
 
@@ -449,8 +449,8 @@ def main_additions() -> None:
 				{"text":"\nHigher efficiency than advanced generator","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CFC","BBB"],"ingredients":{"S":ingr_repr("stardust_frame", ns),"C":ingr_repr("compacted_stardust_shard", ns),"F":ingr_repr("advanced_furnace_generator", ns),"B":ingr_repr("stardust_block", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CFC","SSS"],"ingredients":{"S":ingr_repr("stardust_frame", ns),"C":ingr_repr("compacted_stardust_shard", ns),"F":ingr_repr("advanced_furnace_generator", ns),"B":ingr_repr("stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CFC","BBB"],"ingredients":{"S":ingr_repr("stardust_frame"),"C":ingr_repr("compacted_stardust_shard"),"F":ingr_repr("advanced_furnace_generator"),"B":ingr_repr("stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CFC","SSS"],"ingredients":{"S":ingr_repr("stardust_frame"),"C":ingr_repr("compacted_stardust_shard"),"F":ingr_repr("advanced_furnace_generator"),"B":ingr_repr("stardust_block")}},
 			]
 		},
 		"awakened_stardust_furnace_generator": {
@@ -465,8 +465,8 @@ def main_additions() -> None:
 				{"text":"\nMaximum efficiency furnace generator","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DFD","BBB"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"D":ingr_repr("ender_dragon_pearl", ns),"F":ingr_repr("stardust_furnace_generator", ns),"B":ingr_repr("awakened_stardust_block", ns)}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","DFD","AAA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame", ns),"D":ingr_repr("ender_dragon_pearl", ns),"F":ingr_repr("stardust_furnace_generator", ns),"B":ingr_repr("awakened_stardust_block", ns)}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DFD","BBB"],"ingredients":{"A":ingr_repr("awakened_stardust_frame"),"D":ingr_repr("ender_dragon_pearl"),"F":ingr_repr("stardust_furnace_generator"),"B":ingr_repr("awakened_stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","DFD","AAA"],"ingredients":{"A":ingr_repr("awakened_stardust_frame"),"D":ingr_repr("ender_dragon_pearl"),"F":ingr_repr("stardust_furnace_generator"),"B":ingr_repr("awakened_stardust_block")}},
 			]
 		},
 	}

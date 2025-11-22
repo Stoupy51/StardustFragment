@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:ender_pearl",
+			"components": {
+				"minecraft:item_model": "stardust:ender_dragon_pearl"
+			}
+		},
+		"title": {
+			"translate": "stardust.even_faster_and_farther",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.obtain_an_ender_dragon_pearl",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/dragon_pearl"
+}

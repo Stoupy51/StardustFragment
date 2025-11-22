@@ -11,11 +11,11 @@ particle smoke ~ ~ ~ 0.4 0.4 0.4 0.2 1000
 
 # Kill ingredients
 kill @s
-kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}, "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:dragon_egg", "count": 2}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:echo_shard", "count": 32}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:emerald_block", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:emerald_block", "count": 32}},distance=..1]
+kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_bow": true}}}, "count": 1}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:amethyst_block", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:heavy_core", "count": 1}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}, "count": 16}},distance=..1]

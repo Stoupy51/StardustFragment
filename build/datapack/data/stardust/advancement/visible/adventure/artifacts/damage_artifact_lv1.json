@@ -38,5 +38,5 @@
 			"requirement"
 		]
 	],
-	"parent": "stardust:visible/stardust_fragment"
+	"parent": "stardust:visible/adventure/lucky_artifact_bag"
 }

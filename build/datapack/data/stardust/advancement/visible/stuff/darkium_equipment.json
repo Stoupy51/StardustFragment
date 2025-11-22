@@ -43,5 +43,5 @@
 			"requirement"
 		]
 	],
-	"parent": "stardust:visible/stuff/solarium_equipment"
+	"parent": "stardust:visible/stuff/darkium_block"
 }

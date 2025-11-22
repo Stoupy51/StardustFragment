@@ -3,8 +3,7 @@
 		"icon": {
 			"id": "minecraft:command_block",
 			"components": {
-				"minecraft:item_model": "stardust:ultimate_dragon_egg",
-				"minecraft:enchantment_glint_override": true
+				"minecraft:item_model": "stardust:ultimate_dragon_egg"
 			}
 		},
 		"title": {

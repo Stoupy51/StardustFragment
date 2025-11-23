@@ -613,6 +613,38 @@
 		"lore": [{"text": "[Energy Generation: 128 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 20 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"item_model": "stardust:ultimate_solar_panel"
 	},
+	"quarry_configurator": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"category": "energy",
+		"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "white"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DD","QQ","QQ"],"ingredients": {"D": {"item": "minecraft:diamond"},"Q": {"item": "minecraft:quartz"}}}],
+		"item_model": "stardust:quarry_configurator",
+		"item_name": {"text": "Quarry Configurator"},
+		"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"fortune_module": {
+		"id": "minecraft:command_block",
+		"category": "energy",
+		"max_stack_size": 5,
+		"lore": [{"text": "Increases fortune level of the quarry","italic": false,"color": "gray"},{"text": "by 1 (max 5)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Module that increases the fortune level of compatible machines.","color": "yellow"},{"text": "\nEach module increases fortune by 1, up to a maximum of 5","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["EDE","DMD","EDE"],"ingredients": {"E": {"item": "minecraft:emerald"},"D": {"item": "minecraft:diamond"},"M": {"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DED","EME","DED"],"ingredients": {"E": {"item": "minecraft:emerald"},"D": {"item": "minecraft:diamond"},"M": {"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}}}],
+		"item_model": "stardust:fortune_module",
+		"item_name": {"text": "Fortune Module"},
+		"custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
+	"silk_touch_module": {
+		"id": "minecraft:command_block",
+		"category": "energy",
+		"max_stack_size": 1,
+		"lore": [{"text": "Enables silk touch enchantment for the quarry","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Module that enables silk touch enchantment for compatible machines.","color": "yellow"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]}],
+		"item_model": "stardust:silk_touch_module",
+		"item_name": {"text": "Silk Touch Module"},
+		"custom_data": {"stardust": {"silk_touch_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"quarry_lv1": {
 		"id": "minecraft:furnace",
 		"category": "energy",
@@ -673,11 +705,11 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry": {"block_per_second": 1000},"quarry_creative": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:barrel","apply_facing": false},
-		"item_name": {"text": "Creative Quarry","italic": false,"color": "white"},
 		"lore": [{"text": "[Speed: 1000 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 0 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"enchantment_glint_override": true,
 		"wiki_components": [{"text": "Creative quarry with unlimited power.","color": "yellow"},{"text": "\nRequires no power to operate","color": "gray"},{"text": "\nEquivalent to a Level 1000 quarry","color": "gray"},{"text": "\nFor creative/testing purposes only","color": "gray"}],
-		"item_model": "stardust:quarry_creative"
+		"item_model": "stardust:quarry_creative",
+		"item_name": {"text": "Quarry Creative"}
 	},
 	"cavern_portal": {
 		"id": "minecraft:furnace",
@@ -739,66 +771,66 @@
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 100,"max_storage": 12000},"stardust": {"growth_accelerator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:diamond_block","apply_facing": false},
-		"item_name": {"text": "Growth Accelerator","italic": false,"color": "green"},
 		"lore": [{"text": "Only growth seeds in a radius","italic": false,"color": "white"},{"text": "of 10 blocks every minute","italic": false,"color": "white"},{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 12 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Accelerates crop and plant growth.","color": "yellow"},{"text": "\nAccelerates growth in 10-block radius","color": "gray"},{"text": "\nOperates once per minute when powered","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["EEE","DSD","FFF"],"ingredients": {"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"diamond_seed": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["FFF","DSD","EEE"],"ingredients": {"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"diamond_seed": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}}}}],
-		"item_model": "stardust:growth_accelerator"
+		"item_model": "stardust:growth_accelerator",
+		"item_name": {"text": "Growth Accelerator"}
 	},
 	"mob_grinder": {
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 100,"max_storage": 15000},"stardust": {"mob_grinder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:redstone_block","apply_facing": "entity"},
-		"item_name": {"text": "Mob Grinder","italic": false,"color": "white"},
 		"wiki_components": [{"text": "Automated mob killing machine.","color": "yellow"},{"text": "\nKills mobs in a large area in front of it","color": "gray"},{"text": "\nConsumes 100 kW of power","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["AAA","DSD","FFF"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"S": {"item": "minecraft:wither_skeleton_skull"},"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["FFF","DSD","AAA"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"S": {"item": "minecraft:wither_skeleton_skull"},"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}}}}],
 		"lore": [{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 15 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"item_model": "stardust:mob_grinder"
+		"item_model": "stardust:mob_grinder",
+		"item_name": {"text": "Mob Grinder"}
 	},
 	"nether_star_generator": {
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 1500,"max_storage": 30000},"stardust": {"nether_star_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
-		"item_name": {"text": "Nether Star Generator","italic": false,"color": "white"},
 		"wiki_components": [{"text": "High-power generator using nether stars.","color": "yellow"},{"text": "\nGenerates 1500 kW when supplied with nether stars","color": "gray"},{"text": "\nOne nether star provides 15 minutes of fuel","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["MMM","NRN","BBB"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"N": {"item": "minecraft:nether_star"},"R": {"components": {"minecraft:custom_data": {"simplenergy": {"redstone_generator": true}}}},"B": {"item": "minecraft:iron_block"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","NRN","MMM"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"N": {"item": "minecraft:nether_star"},"R": {"components": {"minecraft:custom_data": {"simplenergy": {"redstone_generator": true}}}},"B": {"item": "minecraft:iron_block"}}}],
 		"lore": [{"text": "[Energy Generation: 1500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 30 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"item_model": "stardust:nether_star_generator"
+		"item_model": "stardust:nether_star_generator",
+		"item_name": {"text": "Nether Star Generator"}
 	},
 	"advanced_furnace_generator": {
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 20,"max_storage": 1600},"stardust": {"advanced_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
-		"item_name": {"text": "Advanced Furnace Generator","italic": false,"color": "white"},
 		"wiki_components": [{"text": "Enhanced furnace generator.","color": "yellow"},{"text": "\nGenerates 20 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nMore efficient than basic furnace generator","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["MMM","GFG","BBB"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"G": {"item": "minecraft:glass"},"F": {"components": {"minecraft:custom_data": {"simplenergy": {"furnace_generator": true}}}},"B": {"item": "minecraft:iron_block"}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","GFG","MMM"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"G": {"item": "minecraft:glass"},"F": {"components": {"minecraft:custom_data": {"simplenergy": {"furnace_generator": true}}}},"B": {"item": "minecraft:iron_block"}}}],
 		"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"item_model": "stardust:advanced_furnace_generator"
+		"item_model": "stardust:advanced_furnace_generator",
+		"item_name": {"text": "Advanced Furnace Generator"}
 	},
 	"stardust_furnace_generator": {
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 40,"max_storage": 1600},"stardust": {"stardust_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
-		"item_name": {"text": "Stardust Furnace Generator","italic": false,"color": "white"},
 		"wiki_components": [{"text": "Stardust-enhanced furnace generator.","color": "yellow"},{"text": "\nGenerates 40 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nHigher efficiency than advanced generator","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["SSS","CFC","BBB"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}},"C": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"advanced_furnace_generator": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","CFC","SSS"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}},"C": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"advanced_furnace_generator": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}}}],
 		"lore": [{"text": "[Energy Generation: 40 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"item_model": "stardust:stardust_furnace_generator"
+		"item_model": "stardust:stardust_furnace_generator",
+		"item_name": {"text": "Stardust Furnace Generator"}
 	},
 	"awakened_stardust_furnace_generator": {
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"generation": 80,"max_storage": 1600},"stardust": {"awakened_stardust_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"vanilla_block": {"id": "minecraft:furnace","apply_facing": true},
-		"item_name": {"text": "Awakened Furnace Generator","italic": false,"color": "white"},
 		"wiki_components": [{"text": "Top-tier furnace generator with awakened stardust.","color": "yellow"},{"text": "\nGenerates 80 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nMaximum efficiency furnace generator","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["AAA","DFD","BBB"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_furnace_generator": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","DFD","AAA"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_furnace_generator": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}}],
 		"lore": [{"text": "[Energy Generation: 80 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"item_model": "stardust:awakened_stardust_furnace_generator"
+		"item_model": "stardust:awakened_stardust_furnace_generator",
+		"item_name": {"text": "Awakened Stardust Furnace Generator"}
 	},
 	"ancient_stardust_helmet": {
 		"id": "minecraft:diamond_helmet",
@@ -1706,38 +1738,6 @@
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}}},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv7": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}}}],
 		"item_model": "stardust:cobblestone_miner_lv8",
 		"custom_data": {"stardust": {"cobblestone_miner_lv8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"quarry_configurator": {
-		"id": "minecraft:warped_fungus_on_a_stick",
-		"category": "miscellaneous",
-		"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "white"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DD","QQ","QQ"],"ingredients": {"D": {"item": "minecraft:diamond"},"Q": {"item": "minecraft:quartz"}}}],
-		"item_model": "stardust:quarry_configurator",
-		"item_name": {"text": "Quarry Configurator"},
-		"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"fortune_module": {
-		"id": "minecraft:command_block",
-		"category": "miscellaneous",
-		"max_stack_size": 5,
-		"lore": [{"text": "Increases fortune level of the quarry","italic": false,"color": "gray"},{"text": "by 1 (max 5)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Module that increases the fortune level of compatible machines.","color": "yellow"},{"text": "\nEach module increases fortune by 1, up to a maximum of 5","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["EDE","DMD","EDE"],"ingredients": {"E": {"item": "minecraft:emerald"},"D": {"item": "minecraft:diamond"},"M": {"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}}},{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["DED","EME","DED"],"ingredients": {"E": {"item": "minecraft:emerald"},"D": {"item": "minecraft:diamond"},"M": {"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}}}],
-		"item_model": "stardust:fortune_module",
-		"item_name": {"text": "Fortune Module"},
-		"custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-	},
-	"silk_touch_module": {
-		"id": "minecraft:command_block",
-		"category": "miscellaneous",
-		"max_stack_size": 1,
-		"lore": [{"text": "Enables silk touch enchantment for the quarry","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-		"wiki_components": [{"text": "Module that enables silk touch enchantment for compatible machines.","color": "yellow"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
-		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]},{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]}],
-		"item_model": "stardust:silk_touch_module",
-		"item_name": {"text": "Silk Touch Module"},
-		"custom_data": {"stardust": {"silk_touch_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"stoupegg": {
 		"id": "minecraft:command_block",

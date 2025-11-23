@@ -16,7 +16,7 @@ tag @s add stardust.awakened_stardust_furnace_generator
 tag @s add stardust.vanilla.minecraft_furnace
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.awakened_furnace_generator","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": {"translate": "stardust.awakened_stardust_furnace_generator"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:awakened_stardust_furnace_generator"]

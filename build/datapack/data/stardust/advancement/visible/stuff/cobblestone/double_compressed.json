@@ -10,10 +10,15 @@
 			"translate": "stardust.compressing_ii",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_double_compressed_cobblestone",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.double_compressed_cobblestone"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

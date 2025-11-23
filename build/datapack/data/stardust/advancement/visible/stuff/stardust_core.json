@@ -10,10 +10,15 @@
 			"translate": "stardust_technology",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_stardust_core",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust_core"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

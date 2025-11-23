@@ -10,10 +10,15 @@
 			"translate": "stardust.increasing_attack_damage_i",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_level_1_damage_artifact",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.damage_artifact_lv_1"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

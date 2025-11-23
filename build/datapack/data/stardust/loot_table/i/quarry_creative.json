@@ -23,11 +23,6 @@
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "stardust.creative_quarry",
-									"italic": false,
-									"color": "white"
-								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.speed_1000_block_s",
@@ -52,6 +47,9 @@
 								],
 								"minecraft:enchantment_glint_override": true,
 								"minecraft:item_model": "stardust:quarry_creative",
+								"minecraft:item_name": {
+									"translate": "stardust.quarry_creative"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

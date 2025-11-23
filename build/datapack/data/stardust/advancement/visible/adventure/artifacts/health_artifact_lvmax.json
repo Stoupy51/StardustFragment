@@ -10,10 +10,15 @@
 			"translate": "stardust.increasing_max_health_iv",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_level_4_health_artifact",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.health_artifact_lv_max"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

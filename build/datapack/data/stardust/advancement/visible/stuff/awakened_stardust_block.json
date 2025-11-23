@@ -10,10 +10,15 @@
 			"translate": "stardust.a_respectful_block_type",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_an_awakened_stardust_block",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_an",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.awakened_stardust_block"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

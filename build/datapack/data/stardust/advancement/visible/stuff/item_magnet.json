@@ -10,10 +10,15 @@
 			"translate": "stardust.im_attractive",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_an_item_magnet",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_an",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.item_magnet"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

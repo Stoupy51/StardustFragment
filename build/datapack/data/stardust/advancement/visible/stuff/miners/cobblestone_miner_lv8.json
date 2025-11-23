@@ -9,10 +9,15 @@
 		"title": {
 			"translate": "stardust.rockraiser_viii"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_cobblestone_miner_lv_8",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.cobblestone_miner_lv_8"
+			}
+		],
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

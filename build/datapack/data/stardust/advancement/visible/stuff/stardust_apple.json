@@ -10,10 +10,15 @@
 			"translate": "stardust.cosmic_apple",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_stardust_apple",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust_apple"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

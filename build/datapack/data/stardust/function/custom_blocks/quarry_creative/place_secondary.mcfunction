@@ -16,7 +16,7 @@ tag @s add stardust.quarry_creative
 tag @s add stardust.vanilla.minecraft_barrel
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.creative_quarry","italic": false,"color": "white"}}
+data merge entity @s {"CustomName": {"translate": "stardust.quarry_creative"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:quarry_creative"]

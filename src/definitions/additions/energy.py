@@ -5,6 +5,7 @@ from stewbeet import (
 	CATEGORY,
 	CUSTOM_BLOCK_HEAD,
 	CUSTOM_BLOCK_VANILLA,
+	CUSTOM_ITEM_VANILLA,
 	OVERRIDE_MODEL,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
@@ -19,6 +20,14 @@ from stouputils.collections import unique_list
 
 from ...utils.common import ROMAN_NUMERALS
 
+# Constants
+QUARRY_STATS: list[tuple[int, int, int]] = [
+	(125, 20000, 1),
+	(250, 60000, 3),
+	(375, 100000, 5),
+	(500, 140000, 8),
+	(625, 180000, 16)
+]
 
 # Utility functions
 @simple_cache
@@ -282,6 +291,62 @@ def main_additions() -> None:
 		},
 
 		# Quarries
+		"quarry_configurator": {
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: ENERGY,
+			"lore": [
+				[{"keybind":"key.use","italic":False,"color":"white"},{"text":" to set 1st coordinates","color":"gray"}],
+				[{"keybind":"key.sneak","italic":False,"color":"white"},{"text":" + ","color":"gray"},{"keybind":"key.use"},{"text":" to set 2nd coordinates","color":"gray"}],
+			],
+			OVERRIDE_MODEL: {"parent":"minecraft:item/generated"},
+			WIKI_COMPONENT: [
+				{"text":"Configurator for setting up quarries.\n","color":"yellow"},
+				{"keybind":"key.use","color":"white"},
+				{"text":" to set the first corner of the quarry area\n","color":"gray"},
+				{"keybind":"key.sneak","color":"white"},
+				{"text":" + ","color":"gray"},
+				{"keybind":"key.use","color":"white"},
+				{"text":" to set the opposite corner of the quarry area","color":"gray"},
+				{"text":"\nFinally, just ","color":"gray"},
+				{"keybind":"key.use","color":"white"},
+				{"text":" the quarry you want to apply the region configuration","color":"gray"},
+				{"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DD","QQ","QQ"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"Q":ingr_repr("minecraft:quartz")}},
+			],
+		},
+		"fortune_module": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: ENERGY,
+			"max_stack_size": 5,
+			"lore": [
+				{"text":"Increases fortune level of the quarry","italic":False,"color":"gray"},
+				{"text":"by 1 (max 5)","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Module that increases the fortune level of compatible machines.","color":"yellow"},
+				{"text":"\nEach module increases fortune by 1, up to a maximum of 5","color":"gray"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EDE","DMD","EDE"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DED","EME","DED"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module")}},
+			]
+		},
+		"silk_touch_module": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: ENERGY,
+			"max_stack_size": 1,
+			"lore": [
+				{"text":"Enables silk touch enchantment for the quarry","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Module that enables silk touch enchantment for compatible machines.","color":"yellow"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:iron_ore")] + [ingr_repr("empty_module")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:deepslate_iron_ore")] + [ingr_repr("empty_module")]},
+			]
+		},
 		**{
 			quarry_display(i)[0]: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
@@ -300,13 +365,12 @@ def main_additions() -> None:
 				],
 				RESULT_OF_CRAFTING: QUARRY_CRAFTING_RECIPES[quarry_display(i)[0]],
 			}
-			for i, (usage, storage, block_per_second) in enumerate([(125, 20000, 1), (250, 60000, 3), (375, 100000, 5), (500, 140000, 8), (625, 180000, 16)])
+			for i, (usage, storage, block_per_second) in enumerate(QUARRY_STATS)
 		},
 		"quarry_creative": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"usage":0, "max_storage":1}, ns: {"quarry": {"block_per_second":1000}}},
 			VANILLA_BLOCK: {"id":"minecraft:barrel", "apply_facing":False},
-			"item_name": {"text":"Creative Quarry","italic":False,"color":"white"},
 			"lore": [
 				{"text":"[Speed: 1000 block/s]","italic":False,"color":"gray"},
 			],
@@ -374,7 +438,6 @@ def main_additions() -> None:
 		"growth_accelerator": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY, "custom_data": {"energy": {"usage":100, "max_storage":12000}},
 			VANILLA_BLOCK: {"id":"minecraft:diamond_block", "apply_facing":False},
-			"item_name": {"text":"Growth Accelerator","italic":False,"color":"green"},
 			"lore": [
 				{"text":"Only growth seeds in a radius","italic":False,"color":"white"},
 				{"text":"of 10 blocks every minute","italic":False,"color":"white"},
@@ -393,7 +456,6 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
 			VANILLA_BLOCK: {"id":"minecraft:redstone_block", "apply_facing":"entity"},
-			"item_name": {"text":"Mob Grinder","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Automated mob killing machine.","color":"yellow"},
 				{"text":"\nKills mobs in a large area in front of it","color":"gray"},
@@ -410,7 +472,6 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":1500, "max_storage":30000}},
 			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
-			"item_name": {"text":"Nether Star Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"High-power generator using nether stars.","color":"yellow"},
 				{"text":"\nGenerates 1500 kW when supplied with nether stars","color":"gray"},
@@ -425,7 +486,6 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":20, "max_storage":1600}},
 			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
-			"item_name": {"text":"Advanced Furnace Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Enhanced furnace generator.","color":"yellow"},
 				{"text":"\nGenerates 20 kW when supplied with fuel","color":"gray"},
@@ -441,7 +501,6 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":40, "max_storage":1600}},
 			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
-			"item_name": {"text":"Stardust Furnace Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Stardust-enhanced furnace generator.","color":"yellow"},
 				{"text":"\nGenerates 40 kW when supplied with fuel","color":"gray"},
@@ -457,7 +516,6 @@ def main_additions() -> None:
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
 			"custom_data": {"energy": {"generation":80, "max_storage":1600}},
 			VANILLA_BLOCK: {"id":"minecraft:furnace", "apply_facing":True},
-			"item_name": {"text":"Awakened Furnace Generator","italic":False,"color":"white"},
 			WIKI_COMPONENT: [
 				{"text":"Top-tier furnace generator with awakened stardust.","color":"yellow"},
 				{"text":"\nGenerates 80 kW when supplied with fuel","color":"gray"},

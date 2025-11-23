@@ -10,10 +10,15 @@
 			"translate": "stardust.increasing_movement_speed_iv",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_level_4_speed_artifact",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.speed_artifact_lv_max"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -22,11 +22,6 @@
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "stardust.nether_star_generator",
-									"italic": false,
-									"color": "white"
-								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.energy_generation_1500_kw",
@@ -45,6 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:nether_star_generator",
+								"minecraft:item_name": {
+									"translate": "stardust.nether_star_generator"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

@@ -9,10 +9,15 @@
 		"title": {
 			"translate": "stardust.43046721"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_octuple_compressed_cobblestone",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_an",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.octuple_compressed_cobblestone"
+			}
+		],
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true,

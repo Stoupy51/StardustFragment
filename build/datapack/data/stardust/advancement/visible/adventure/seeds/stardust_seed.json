@@ -11,7 +11,7 @@
 			"color": "aqua"
 		},
 		"description": {
-			"translate": "stardust.admire_this_stardust_seed_seed",
+			"translate": "stardust.admire_this_stardust_seed",
 			"color": "green"
 		},
 		"frame": "task",

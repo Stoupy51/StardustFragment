@@ -39,7 +39,6 @@ def miners_formula(i: int) -> int:
 # Main function
 def main_additions() -> None:
 	MISC: str = "miscellaneous"
-	ns: str = Mem.ctx.project_id
 
 	# Prepare some recipes
 	MINERS_CRAFTING_RECIPES = cast(dict[str, list[JsonDict]], {
@@ -260,62 +259,6 @@ def main_additions() -> None:
 				RESULT_OF_CRAFTING: MINERS_CRAFTING_RECIPES[miner_display(i)[0]],
 			}
 			for i in range(8) for per_minute in [miners_formula(i)]
-		},
-		"quarry_configurator": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: MISC,
-			"lore": [
-				[{"keybind":"key.use","italic":False,"color":"white"},{"text":" to set 1st coordinates","color":"gray"}],
-				[{"keybind":"key.sneak","italic":False,"color":"white"},{"text":" + ","color":"gray"},{"keybind":"key.use"},{"text":" to set 2nd coordinates","color":"gray"}],
-			],
-			OVERRIDE_MODEL: {"parent":"minecraft:item/generated"},
-			WIKI_COMPONENT: [
-				{"text":"Configurator for setting up quarries.\n","color":"yellow"},
-				{"keybind":"key.use","color":"white"},
-				{"text":" to set the first corner of the quarry area\n","color":"gray"},
-				{"keybind":"key.sneak","color":"white"},
-				{"text":" + ","color":"gray"},
-				{"keybind":"key.use","color":"white"},
-				{"text":" to set the opposite corner of the quarry area","color":"gray"},
-				{"text":"\nFinally, just ","color":"gray"},
-				{"keybind":"key.use","color":"white"},
-				{"text":" the quarry you want to apply the region configuration","color":"gray"},
-				{"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DD","QQ","QQ"],"ingredients":{"D":ingr_repr("minecraft:diamond"),"Q":ingr_repr("minecraft:quartz")}},
-			],
-		},
-		"fortune_module": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
-			"max_stack_size": 5,
-			"lore": [
-				{"text":"Increases fortune level of the quarry","italic":False,"color":"gray"},
-				{"text":"by 1 (max 5)","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Module that increases the fortune level of compatible machines.","color":"yellow"},
-				{"text":"\nEach module increases fortune by 1, up to a maximum of 5","color":"gray"},
-				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EDE","DMD","EDE"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["DED","EME","DED"],"ingredients":{"E":ingr_repr("minecraft:emerald"),"D":ingr_repr("minecraft:diamond"),"M":ingr_repr("empty_module")}},
-			]
-		},
-		"silk_touch_module": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
-			"max_stack_size": 1,
-			"lore": [
-				{"text":"Enables silk touch enchantment for the quarry","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Module that enables silk touch enchantment for compatible machines.","color":"yellow"},
-				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:iron_ore")] + [ingr_repr("empty_module")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:deepslate_iron_ore")] + [ingr_repr("empty_module")]},
-			]
 		},
 		"stoupegg": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,

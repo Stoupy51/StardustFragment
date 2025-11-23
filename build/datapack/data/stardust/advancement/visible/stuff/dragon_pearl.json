@@ -10,10 +10,17 @@
 			"translate": "stardust.faster_and_farther",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_dragon_pearl",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.dragon_pearl",
+				"italic": false,
+				"color": "dark_purple"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -10,10 +10,15 @@
 			"translate": "stardust.feeling_the_shadow_ii",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_darkium_ingot",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.darkium_ingot"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

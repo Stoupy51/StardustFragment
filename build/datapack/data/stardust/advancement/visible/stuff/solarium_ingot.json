@@ -10,10 +10,15 @@
 			"translate": "stardust.feeling_the_sun_ii",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_solarium_ingot",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.solarium_ingot"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

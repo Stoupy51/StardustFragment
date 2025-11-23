@@ -22,11 +22,6 @@
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "stardust_furnace_generator",
-									"italic": false,
-									"color": "white"
-								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.energy_generation_40_kw",
@@ -45,6 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:stardust_furnace_generator",
+								"minecraft:item_name": {
+									"translate": "stardust_furnace_generator"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

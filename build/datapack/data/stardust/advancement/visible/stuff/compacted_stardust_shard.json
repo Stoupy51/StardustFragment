@@ -7,13 +7,18 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.a_costly_stardust_energy",
+			"translate": "stardust.a_costly_stardust_material",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_compacted_stardust_shard",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.compacted_stardust_shard"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

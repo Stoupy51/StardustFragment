@@ -10,10 +10,15 @@
 			"translate": "stardust.rockraiser_vii",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_cobblestone_miner_lv_7",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.cobblestone_miner_lv_7"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

@@ -22,11 +22,6 @@
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "stardust.mob_grinder",
-									"italic": false,
-									"color": "white"
-								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.power_usage_100_kw",
@@ -45,6 +40,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:mob_grinder",
+								"minecraft:item_name": {
+									"translate": "stardust.mob_grinder"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

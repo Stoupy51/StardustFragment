@@ -22,11 +22,6 @@
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
-								"minecraft:item_name": {
-									"translate": "stardust.growth_accelerator",
-									"italic": false,
-									"color": "green"
-								},
 								"minecraft:lore": [
 									{
 										"translate": "stardust.only_growth_seeds_in_a_radius",
@@ -55,6 +50,9 @@
 									]
 								],
 								"minecraft:item_model": "stardust:growth_accelerator",
+								"minecraft:item_name": {
+									"translate": "stardust.growth_accelerator"
+								},
 								"minecraft:container": [
 									{
 										"slot": 0,

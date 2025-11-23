@@ -10,10 +10,15 @@
 			"translate": "stardust.feeling_the_breeze_i",
 			"color": "aqua"
 		},
-		"description": {
-			"translate": "stardust.obtain_a_legendarium_fragment",
-			"color": "green"
-		},
+		"description": [
+			{
+				"translate": "stardust.obtain_a",
+				"color": "green"
+			},
+			{
+				"translate": "stardust.legendarium_fragment"
+			}
+		],
 		"frame": "task",
 		"show_toast": true,
 		"announce_to_chat": true,

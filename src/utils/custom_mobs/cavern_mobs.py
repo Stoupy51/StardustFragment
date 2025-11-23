@@ -11,7 +11,7 @@ def main() -> None:
 	# Mob conversion function
 	write_function(f"{ns}:mobs/convert/cavern", f"""
 # Set attributes (x0.75 scale)
-attribute @s minecraft:scale modifier add {ns}:scale 0.75 add_multiplied_base
+attribute @s minecraft:scale modifier add {ns}:scale -0.25 add_multiplied_base
 
 # Set loot table & tags
 data modify entity @s DeathLootTable set value "{ns}:entities/cavern_dimension"
@@ -44,17 +44,7 @@ tag @s add smithed.entity
 				"rolls": {
 					"type": "minecraft:uniform",
 					"min": 1,
-					"max": 4
-				}
-			}
-		],
-		"functions": [
-			{
-				"function": "minecraft:set_count",
-				"count": {
-					"type": "minecraft:uniform",
-					"min": 1,
-					"max": 4
+					"max": 2
 				}
 			}
 		]

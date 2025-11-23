@@ -1492,9 +1492,9 @@
 		"custom_data": {"stardust": {"item_magnet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"home_travel_staff": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "equipment",
-		"consumable": {"consume_seconds": 1024,"has_consume_particles": false},
+		"max_stack_size": 1,
 		"max_damage": 64,
 		"wiki_components": [{"text": "Staff that teleports you to your spawn point.","color": "yellow"},{"text": "\nRight-click to teleport to your bed or world spawn","color": "gray"},{"text": "\nHas 64 uses before breaking","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shaped","result_count": 1,"category": "equipment","shape": ["D","S"],"ingredients": {"D": {"components": {"minecraft:custom_data": {"stardust": {"dragon_pearl": true}}}},"S": {"item": "minecraft:stick"}}}],
@@ -1504,9 +1504,8 @@
 		"custom_data": {"stardust": {"home_travel_staff": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"wormhole_potion": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "equipment",
-		"consumable": {"consume_seconds": 1024,"animation": "drink","has_consume_particles": false},
 		"max_stack_size": 16,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:cod"},{"item": "minecraft:salmon"},{"item": "minecraft:tropical_fish"},{"item": "minecraft:pufferfish"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:pufferfish"},{"item": "minecraft:tropical_fish"},{"item": "minecraft:salmon"},{"item": "minecraft:cod"}]}],
 		"item_model": "stardust:wormhole_potion",
@@ -1526,9 +1525,11 @@
 		"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
 	"life_crystal": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:goat_horn",
 		"category": "equipment",
-		"consumable": {"consume_seconds": 0.8,"animation": "toot_horn","has_consume_particles": false,"sound": {"sound_id": "stardust:life_crystal","range": 3}},
+		"instrument": "stardust:life_crystal",
+		"max_stack_size": 64,
+		"tooltip_display": {"hidden_components": ["instrument"]},
 		"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Crystal that increases your maximum health.","color": "yellow"},{"text": "\nFound in underground caves in the overworld","color": "gray"},{"text": "\nRight-click to permanently increase max health by 1 (0.5 heart)","color": "gray"},{"text": "\nMaximum of 20 uses (+10 hearts)","color": "gray"}],
 		"item_model": "stardust:life_crystal",

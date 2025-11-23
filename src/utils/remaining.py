@@ -1,6 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
+import json
 from stewbeet import *  # type: ignore
 from stouputils.io import get_root_path
 
@@ -12,6 +13,10 @@ ROOT: str = get_root_path(__file__)
 # Setup energy balancing
 def setup_remaining() -> None:
 	ns: str = Mem.ctx.project_id
+
+	# Get player head loot table
+	json_content: JsonDict = {"pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:player_head","functions":[{"function":"minecraft:fill_player_head","entity":"this"}]}]}]}
+	Mem.ctx.data[ns].loot_tables["player_head"] = set_json_encoder(LootTable(json_content), max_level=-1)
 
 	# Right click detection
 	write_load_file(f"\n# Right click detection\nscoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\nscoreboard objectives add {ns}.cooldown dummy\n", prepend=True)
@@ -120,7 +125,7 @@ scoreboard objectives add {ns}.travel_z dummy
 """, prepend=True)
 	write_function(f"{ns}:advancements/right_click", f"""
 # If holding a home travel staff, handle it
-execute if items entity @s weapon.* *[custom_data~{{{ns}:{{home_travel_staff:true}}}}] run function {ns}:utils/home_travel_staff/right_click
+execute if items entity @s weapon.mainhand *[custom_data~{{{ns}:{{home_travel_staff:true}}}}] run function {ns}:utils/home_travel_staff/right_click
 """)
 	write_function(f"{ns}:utils/home_travel_staff/right_click", f"""
 # Stop if already clicked recently
@@ -170,6 +175,63 @@ advancement grant @s only {ns}:visible/stuff/home_travel_staff
 function {ns}:dimensions/teleport_home
 """)
 	write_function(f"{ns}:utils/home_travel_staff/fail", """tellraw @s {"text":"[Stardust Fragment] Teleportation cancelled because you moved!","color":"red"}\nplaysound entity.villager.no ambient @s""")
+
+	# Wormhole Potion
+	title: str = json.dumps(item_id_to_text_component("wormhole_potion"))
+	write_function(f"{ns}:advancements/right_click", f"""
+# If holding a wormhole potion, handle it
+execute if items entity @s weapon.* *[custom_data~{{{ns}:{{wormhole_potion:true}}}}] run function {ns}:utils/wormhole_potion/right_click
+""")
+	write_function(f"{ns}:utils/wormhole_potion/right_click", f"""
+# Prepare dialog for which player to teleport to
+data modify storage {ns}:temp dialog set value {{"actions":[],"title":{title}}}
+execute as @a[distance=1..] run function {ns}:utils/wormhole_potion/add_to_actions
+
+# Show dialog
+function {ns}:utils/wormhole_potion/show_dialog with storage {ns}:temp dialog
+""")
+	write_function(f"{ns}:utils/wormhole_potion/add_to_actions", f"""
+# Get player username for macro
+tag @e[type=item] add {ns}.temp
+execute at @s run loot spawn ~ ~ ~ loot {ns}:player_head
+data modify storage {ns}:temp player_name set from entity @e[type=item,tag=!{ns}.temp,limit=1] Item.components."minecraft:profile".name
+kill @e[type=item,tag=!{ns}.temp]
+tag @e[type=item,tag={ns}.temp] remove {ns}.temp
+
+# Prepare action
+data modify storage {ns}:temp element set value {{"label":[],"action":{{}}}}
+data modify storage {ns}:temp element.label append value {{"player":{{"name":""}},"hat":true}}
+data modify storage {ns}:temp element.label[-1].player.name set from storage {ns}:temp player_name
+data modify storage {ns}:temp element.label append value " "
+data modify storage {ns}:temp element.label append from storage {ns}:temp player_name
+data modify storage {ns}:temp element.label append value " "
+data modify storage {ns}:temp element.label append from storage {ns}:temp element.label[0]
+data modify storage {ns}:temp element.action set value {{"type":"minecraft:run_command","command":""}}
+function {ns}:utils/wormhole_potion/set_teleport_command with storage {ns}:temp
+
+# Add action to dialog
+data modify storage {ns}:temp dialog.actions append from storage {ns}:temp element
+""")
+	write_function(f"{ns}:utils/wormhole_potion/set_teleport_command", f"""
+$data modify storage {ns}:temp element.action.command set value 'function {ns}:utils/wormhole_potion/teleport_to {{"name":"$(player_name)"}}'
+""")
+	write_function(f"{ns}:utils/wormhole_potion/show_dialog", r"""
+$dialog show @s {"type":"minecraft:multi_action","columns":3,"exit_action":{"label":{"translate":"gui.back"},"width":200},"title":$(title),"actions":$(actions)}
+""")
+	write_function(f"{ns}:utils/wormhole_potion/teleport_to", f"""
+# Slow falling effect to avoid fall damage
+effect give @s minecraft:slow_falling 3 255 true
+
+# Teleport to selected player
+$tp @s $(name)
+
+# Feedback
+execute at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 1000
+execute at @s run playsound {ns}:wormhole_potion ambient @a[distance=..16]
+
+# Consume one wormhole potion
+clear @s *[custom_data~{{{ns}:{{"wormhole_potion":true}}}}] 1
+""")
 
 	# TODO: pearls, always dragon egg on death, travel staff, snipers, etc.
 	#advancement grant @s only stardust:visible/stuff/travel_staff

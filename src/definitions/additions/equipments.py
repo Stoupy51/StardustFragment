@@ -313,7 +313,7 @@ def main_additions() -> None:
 		"home_travel_staff": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
 			"max_stack_size": 1,
-			"max_damage": 64,	# TODO: Implement usage tracking
+			"max_damage": 64,
 			WIKI_COMPONENT: [
 				{"text":"Staff that teleports you to your spawn point.","color":"yellow"},
 				{"text":"\nRight-click to teleport to your bed or world spawn","color":"gray"},
@@ -323,9 +323,10 @@ def main_additions() -> None:
 				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["D","S"],"ingredients":{"D":ingr_repr("dragon_pearl"),"S":ingr_repr("minecraft:stick")}},
 			]
 		},
-		"wormhole_potion": {	# TODO: Implement this item behavior with dialog
+		"wormhole_potion": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
-			"max_stack_size": 16,
+			#"max_stack_size": 16,
+			#"!max_damage": False,	# TODO: Implement !component behavior
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
 					ingr_repr("minecraft:cod"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:tropical_fish"),

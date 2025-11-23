@@ -1506,7 +1506,6 @@
 	"wormhole_potion": {
 		"id": "minecraft:warped_fungus_on_a_stick",
 		"category": "equipment",
-		"max_stack_size": 16,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:cod"},{"item": "minecraft:salmon"},{"item": "minecraft:tropical_fish"},{"item": "minecraft:pufferfish"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:pufferfish"},{"item": "minecraft:tropical_fish"},{"item": "minecraft:salmon"},{"item": "minecraft:cod"}]}],
 		"item_model": "stardust:wormhole_potion",
 		"item_name": {"text": "Wormhole Potion"},

@@ -311,9 +311,9 @@ def main_additions() -> None:
 			]
 		},
 		"home_travel_staff": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {"consume_seconds": 1024, "has_consume_particles": False},
-			"max_damage": 64,
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			"max_stack_size": 1,
+			"max_damage": 64,	# TODO: Implement usage tracking
 			WIKI_COMPONENT: [
 				{"text":"Staff that teleports you to your spawn point.","color":"yellow"},
 				{"text":"\nRight-click to teleport to your bed or world spawn","color":"gray"},
@@ -323,9 +323,8 @@ def main_additions() -> None:
 				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["D","S"],"ingredients":{"D":ingr_repr("dragon_pearl"),"S":ingr_repr("minecraft:stick")}},
 			]
 		},
-		"wormhole_potion": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {"consume_seconds": 1024, "animation": "drink", "has_consume_particles": False},
+		"wormhole_potion": {	# TODO: Implement this item behavior with dialog
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
 			"max_stack_size": 16,
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
@@ -349,13 +348,10 @@ def main_additions() -> None:
 			]
 		},
 		"life_crystal": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {
-				"consume_seconds": 0.8,
-				"animation": "toot_horn",
-				"has_consume_particles": False,
-				"sound": {"sound_id": f"{ns}:life_crystal", "range": 3}	# TODO: Add consuming logic to increase max health
-			},
+			"id": "minecraft:goat_horn", CATEGORY: EQUIPMENT,
+			"instrument": f"{ns}:life_crystal",
+			"max_stack_size": 64,
+			"tooltip_display": {"hidden_components":["instrument"]},
 			"lore": [
 				{"text":"Right-click to permanently increase","italic":False,"color":"gray"},
 				{"text":"your max health by 1 (0.5 heart)","italic":False,"color":"gray"},
@@ -368,7 +364,7 @@ def main_additions() -> None:
 				{"text":"\nMaximum of 20 uses (+10 hearts)","color":"gray"},
 			],
 		},
-		"life_crystal_block": {	# TODO: Add world generation of this block in caves
+		"life_crystal_block": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: EQUIPMENT,
 			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":"entity"},
 			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},

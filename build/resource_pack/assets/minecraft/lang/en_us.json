@@ -1077,6 +1077,8 @@
 	"stardust_fragment_error_quarry_region_size_cannot_be_larger_than": "Stardust Fragment Error: Quarry region size cannot be larger than 500 million blocks.",
 	"stardust_fragment_error_the_stardust_dungeon_couldnt_be_built_so": "Stardust Fragment Error: The Stardust Dungeon couldn't be built. Something blocked the '/forceload' command in stardust:dungeon",
 	"stardust_fragment_error_the_ultimate_dimension_couldnt_be_built_": "Stardust Fragment Error: The Ultimate Dimension couldn't be built. Something blocked the '/forceload' command in stardust:ultimate",
+	"stardust_fragment_teleportation_cancelled_because_you_moved": "[Stardust Fragment] Teleportation cancelled because you moved!",
+	"stardust_fragment_you_have_already_reached_the_maximum_number_of": "[Stardust Fragment] You have already reached the maximum number of Life Crystals!",
 	"stardust_frame": "Stardust Frame",
 	"stardust_furnace_generator": "Stardust Furnace Generator",
 	"stardust_guardian": "Stardust Guardian",

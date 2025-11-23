@@ -1,14 +1,30 @@
 
 # Imports
-from stewbeet.core import CustomOreGeneration
+from stewbeet.core import CustomOreGeneration, Mem
 from stouputils.print import info
 
 
 # Main function
 def setup_custom_ore_generation():
+	ns: str = Mem.ctx.project_id
 
 	# Custom Ore generation
 	CustomOreGeneration.all_with_config(ore_configs = {
+
+		# Life Crystals
+		"life_crystal_block": [
+			CustomOreGeneration(
+				dimensions = ["minecraft:overworld", "minecraft:nether", "stardust:cavern"],
+				maximum_height = 64,
+				minimum_height = -32,
+				veins_per_region = 1.5,
+				vein_size_logic = 0.0,	# Single block veins
+				provider=["#minecraft:overworld_carver_replaceables", "#minecraft:nether_carver_replaceables"],
+				placer_command=f"positioned ~ ~1 ~ if block ~ ~ ~ #minecraft:air unless block ~ ~-1 ~ lava run function {ns}:custom_blocks/life_crystal_block/place_main"
+			)
+		],
+
+		# Ores
 		"stardust_ore": [
 			CustomOreGeneration(
 				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],

@@ -1,0 +1,10 @@
+{
+	"description": {
+		"translate": "stardust.life_crystal"
+	},
+	"range": 16.0,
+	"sound_event": {
+		"sound_id": "stardust:life_crystal"
+	},
+	"use_duration": 1.0
+}

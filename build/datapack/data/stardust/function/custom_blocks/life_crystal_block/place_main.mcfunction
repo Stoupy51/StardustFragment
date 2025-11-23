@@ -2,6 +2,7 @@
 #> stardust:custom_blocks/life_crystal_block/place_main
 #
 # @within	stardust:custom_blocks/place
+#			stardust:calls/smart_ore_generation/veins/life_crystal_block [ at @s & positioned ~ ~1 ~ ]
 #
 
 tag @s add stardust.placer

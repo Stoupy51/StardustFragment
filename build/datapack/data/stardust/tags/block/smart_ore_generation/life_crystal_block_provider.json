@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"#minecraft:overworld_carver_replaceables",
+		"#minecraft:nether_carver_replaceables"
+	]
+}

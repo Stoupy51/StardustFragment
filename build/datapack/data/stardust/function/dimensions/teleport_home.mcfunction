@@ -9,6 +9,7 @@
 #			stardust:custom_blocks/stardust_dungeon_portal/find_teleporter
 #			stardust:custom_blocks/ultimate_portal/find_teleporter
 #			stardust:dimensions/transitions/downward
+#			stardust:utils/home_travel_staff/check
 #
 
 # Slow falling effect to avoid fall damage

@@ -5,16 +5,11 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:warped_fungus_on_a_stick",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:consumable": {
-									"consume_seconds": 1024,
-									"animation": "drink",
-									"has_consume_particles": false
-								},
 								"minecraft:max_stack_size": 16,
 								"minecraft:item_model": "stardust:wormhole_potion",
 								"minecraft:item_name": {

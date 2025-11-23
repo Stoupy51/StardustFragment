@@ -7,6 +7,10 @@
 		"subtitle": "Awakened Stardust Sniper Shot",
 		"sounds": ["stardust:awakened_stardust_sniper_shot"]
 	},
+	"life_crystal": {
+		"subtitle": "Life Crystal",
+		"sounds": ["stardust:life_crystal"]
+	},
 	"nether_star_generator": {
 		"subtitle": "Nether Star Generator",
 		"sounds": ["stardust:nether_star_generator"]

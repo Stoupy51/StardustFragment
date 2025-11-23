@@ -1,0 +1,21 @@
+{
+	"criteria": {
+		"requirements": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"stardust": {
+								"life_crystal": true
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:advancements/use_life_crystal"
+	}
+}

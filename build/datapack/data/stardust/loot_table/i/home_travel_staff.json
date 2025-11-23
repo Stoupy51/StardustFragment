@@ -5,15 +5,12 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:command_block",
+					"name": "minecraft:warped_fungus_on_a_stick",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:consumable": {
-									"consume_seconds": 1024,
-									"has_consume_particles": false
-								},
+								"minecraft:max_stack_size": 1,
 								"minecraft:max_damage": 64,
 								"minecraft:item_model": "stardust:home_travel_staff",
 								"minecraft:item_name": {

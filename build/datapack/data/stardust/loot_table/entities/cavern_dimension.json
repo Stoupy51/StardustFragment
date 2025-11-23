@@ -52,17 +52,7 @@
 			"rolls": {
 				"type": "minecraft:uniform",
 				"min": 1,
-				"max": 4
-			}
-		}
-	],
-	"functions": [
-		{
-			"function": "minecraft:set_count",
-			"count": {
-				"type": "minecraft:uniform",
-				"min": 1,
-				"max": 4
+				"max": 2
 			}
 		}
 	]

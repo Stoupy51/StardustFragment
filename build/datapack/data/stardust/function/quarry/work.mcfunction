@@ -7,7 +7,7 @@
 #
 
 ## Check if the selected region is valid (Less than 500 million blocks)
-#execute if score @s stardust.quarry_size matches 500000001.. run tellraw @a[distance=..5] {"translate": "stardust_fragment_error_quarry_region_size_cannot_be_larger_than","color":"red"}
+#execute if score @s stardust.quarry_size matches 500000001.. run tellraw @a[distance=..5] {"translate": "stardust_fragment_quarry_region_size_cannot_be_larger_than_500_m","color":"red"}
 #execute if score @s stardust.quarry_size matches 500000001.. run return run scoreboard players set @s stardust.quarry_status 0
 
 # Get module data

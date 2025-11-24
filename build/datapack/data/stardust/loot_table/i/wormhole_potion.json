@@ -10,6 +10,8 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 16,
+								"!minecraft:max_damage": {},
 								"minecraft:item_model": "stardust:wormhole_potion",
 								"minecraft:item_name": {
 									"translate": "stardust.wormhole_potion"

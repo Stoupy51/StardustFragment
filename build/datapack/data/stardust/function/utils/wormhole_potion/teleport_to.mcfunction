@@ -1,7 +1,7 @@
 
 #> stardust:utils/wormhole_potion/teleport_to
 #
-# @executed	as @a[distance=1..]
+# @executed	as @a[tag=!stardust.temp]
 #
 # @within	stardust:utils/wormhole_potion/set_teleport_command {"name":"$(player_name)"}'
 #
@@ -15,7 +15,7 @@ effect give @s minecraft:slow_falling 3 255 true
 $tp @s $(name)
 
 # Feedback
-execute at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 1000
+execute at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 2500
 execute at @s run playsound stardust:wormhole_potion ambient @a[distance=..16]
 
 # Consume one wormhole potion

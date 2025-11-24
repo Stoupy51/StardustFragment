@@ -21,8 +21,8 @@ from stewbeet import (
 	simple_cache,
 )
 
-from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
 from ...utils.common import ROMAN_NUMERALS
+from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
 
 # Constants
 SNIPER_BULLETS: dict[str, int] = {
@@ -325,8 +325,8 @@ def main_additions() -> None:
 		},
 		"wormhole_potion": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
-			#"max_stack_size": 16,
-			#"!max_damage": False,	# TODO: Implement !component behavior
+			"max_stack_size": 16,
+			"!max_damage": {},
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
 					ingr_repr("minecraft:cod"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:tropical_fish"),

@@ -1,9 +1,9 @@
 
 #> stardust:utils/wormhole_potion/add_to_actions
 #
-# @executed	as @a[distance=1..]
+# @executed	as @a[tag=!stardust.temp]
 #
-# @within	stardust:utils/wormhole_potion/right_click [ as @a[distance=1..] ]
+# @within	stardust:utils/wormhole_potion/right_click [ as @a[tag=!stardust.temp] ]
 #
 
 # Get player username for macro

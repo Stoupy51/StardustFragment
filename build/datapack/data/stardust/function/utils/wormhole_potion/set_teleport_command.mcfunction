@@ -1,7 +1,7 @@
 
 #> stardust:utils/wormhole_potion/set_teleport_command
 #
-# @executed	as @a[distance=1..]
+# @executed	as @a[tag=!stardust.temp]
 #
 # @within	stardust:utils/wormhole_potion/add_to_actions with storage stardust:temp
 #

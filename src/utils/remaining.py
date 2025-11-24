@@ -2,10 +2,9 @@
 # ruff: noqa: E501
 # Imports
 import json
+
 from stewbeet import *  # type: ignore
 from stouputils.io import get_root_path
-
-from .common import STARFRAG_TEXT  # type: ignore
 
 # Constants
 ROOT: str = get_root_path(__file__)
@@ -184,8 +183,14 @@ execute if items entity @s weapon.* *[custom_data~{{{ns}:{{wormhole_potion:true}
 """)
 	write_function(f"{ns}:utils/wormhole_potion/right_click", f"""
 # Prepare dialog for which player to teleport to
+tag @s add {ns}.temp
 data modify storage {ns}:temp dialog set value {{"actions":[],"title":{title}}}
-execute as @a[distance=1..] run function {ns}:utils/wormhole_potion/add_to_actions
+execute as @a[tag=!{ns}.temp] run function {ns}:utils/wormhole_potion/add_to_actions
+tag @s remove {ns}.temp
+
+# Message if no other players connected
+execute unless data storage {ns}:temp dialog.actions[1] run playsound minecraft:entity.villager.no ambient @s
+execute unless data storage {ns}:temp dialog.actions[1] run return run tellraw @s {{"text":"[Stardust Fragment] No other players are currently connected to teleport to.","color":"red"}}
 
 # Show dialog
 function {ns}:utils/wormhole_potion/show_dialog with storage {ns}:temp dialog
@@ -226,12 +231,58 @@ effect give @s minecraft:slow_falling 3 255 true
 $tp @s $(name)
 
 # Feedback
-execute at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 1000
+execute at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 2500
 execute at @s run playsound {ns}:wormhole_potion ambient @a[distance=..16]
 
 # Consume one wormhole potion
 clear @s *[custom_data~{{{ns}:{{"wormhole_potion":true}}}}] 1
 """)
+
+	## Dragon & Ender Dragon pearls
+	write_load_file(f"\n# Ender Pearl detection\nscoreboard objectives add {ns}.ender_pearl minecraft.used:minecraft.ender_pearl\n", prepend=True)
+	Mem.ctx.data[ns].advancements["technical/ender_pearl"] = set_json_encoder(Advancement({
+		"criteria": {
+			"requirement": {
+				"trigger": "minecraft:tick",
+				"conditions": {
+					"player": [
+						{
+							"condition": "minecraft:entity_scores",
+							"entity": "this",
+							"scores": {f"{ns}.ender_pearl": {"min": 1}}
+						}
+					]
+				}
+			}
+		},
+		"rewards": {
+			"function": f"{ns}:advancements/ender_pearl"
+		}
+	}), max_level=-1)
+	dragon_data: str = f"""{{{ns}:{{"dragon_pearl":true}}}}"""
+	ender_dragon_data: str = f"""{{{ns}:{{"ender_dragon_pearl":true}}}}"""
+	def line(data: str, scale: int) -> str:
+		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=ender_pearl,tag=!{ns}.motion_applied,nbt={{Item:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/multiply_motion {{scale:{scale}}}"""
+	write_function(f"{ns}:advancements/ender_pearl", f"""
+# Revoke advancement and reset score
+advancement revoke @s only {ns}:technical/ender_pearl
+scoreboard players set @s {ns}.ender_pearl 0
+
+# If Dragon Pearl (Motion x1.5), if Ender Dragon pearl (Motion x2)
+{line(dragon_data, 1500)}
+{line(ender_dragon_data, 2000)}
+""", prepend=True)
+	write_function(f"{ns}:utils/multiply_motion", f"""
+# Can't directly multiply motion (Minecraft bug), so store in scoreboards first
+$execute store result score #motion_x {ns}.data run data get entity @s Motion[0] $(scale)
+$execute store result score #motion_y {ns}.data run data get entity @s Motion[1] $(scale)
+$execute store result score #motion_z {ns}.data run data get entity @s Motion[2] $(scale)
+execute store result entity @s Motion[0] double 0.001 run scoreboard players get #motion_x {ns}.data
+execute store result entity @s Motion[1] double 0.001 run scoreboard players get #motion_y {ns}.data
+execute store result entity @s Motion[2] double 0.001 run scoreboard players get #motion_z {ns}.data
+tag @s add {ns}.motion_applied
+""")
+
 
 	# TODO: pearls, always dragon egg on death, travel staff, snipers, etc.
 	#advancement grant @s only stardust:visible/stuff/travel_staff

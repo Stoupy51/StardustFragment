@@ -68,7 +68,7 @@ execute in {ns}:dungeon positioned -9 66 3 run function {ns}:custom_blocks/stard
 execute store result score #success {ns}.data in {ns}:{dimension} run place template {ns}:{part} {pos}
 
 # If failed, error message
-execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"Stardust Fragment Error: The {name} couldn't be built. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
+execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"[Stardust Fragment] The {name} couldn't be built. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
 
 # Schedule next part if successful
 execute if score #success {ns}.data matches 1 run schedule function {ns}:dimensions/structure/{dimension}/{next_part} 1t

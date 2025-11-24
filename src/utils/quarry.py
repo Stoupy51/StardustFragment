@@ -347,7 +347,7 @@ scoreboard players set @s {ns}.quarry_status 1
 	# Quarry work function
 	write_function(f"{ns}:quarry/work", f"""
 ## Check if the selected region is valid (Less than 500 million blocks)
-#execute if score @s {ns}.quarry_size matches 500000001.. run tellraw @a[distance=..5] {{"text":"Stardust Fragment Error: Quarry region size cannot be larger than 500 million blocks.","color":"red"}}
+#execute if score @s {ns}.quarry_size matches 500000001.. run tellraw @a[distance=..5] {{"text":"[Stardust Fragment] Quarry region size cannot be larger than 500 million blocks.","color":"red"}}
 #execute if score @s {ns}.quarry_size matches 500000001.. run return run scoreboard players set @s {ns}.quarry_status 0
 
 # Get module data

@@ -26,7 +26,6 @@ COBBLESTONE_TIERS: list[str] = [
 
 def main_additions() -> None:
 	MATERIALS: str = "materials"
-	ns: str = Mem.ctx.project_id
 
 	# Give Additional data for every item
 	additions: dict[str, JsonDict] = {
@@ -197,7 +196,7 @@ def main_additions() -> None:
 			"use_cooldown": {"seconds": 0.5},
 			WIKI_COMPONENT: [
 				{"text":"Upgraded ender pearl variant","color":"yellow"},
-				{"text":"\nThrows x1.5 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
+				{"text":"\nThrows x1.5 farther than regular ender pearls","color":"gray"},
 				{"text":"\nCooldown is 0.5 seconds instead of 1 second","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
@@ -211,7 +210,7 @@ def main_additions() -> None:
 			"use_cooldown": {"seconds": 0.25},
 			WIKI_COMPONENT: [
 				{"text":"Upgraded dragon pearl variant","color":"yellow"},
-				{"text":"\nThrows x2 farther than regular ender pearls","color":"gray"},	# TODO: Implement this behavior
+				{"text":"\nThrows x2 farther than regular ender pearls","color":"gray"},
 				{"text":"\nCooldown is 0.25 seconds instead of 1 second","color":"gray"},
 				{"text":"\nUsed in high-tier crafting","color":"gray"},
 			],

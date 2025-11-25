@@ -1,8 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from beet import EntityTypeTag
-from stewbeet.core import COMMON_SIGNAL_HIDDEN, JsonDict, LootTable, Mem, set_json_encoder, write_function
+from stewbeet.core import COMMON_SIGNAL_HIDDEN, JsonDict, LootTable, Mem, set_json_encoder, write_function, write_tag
 from stouputils.io import get_root_path, super_json_load
 
 from ..definitions.additions.materials import COBBLESTONE_TIERS
@@ -161,7 +160,7 @@ execute positioned ^ ^ ^3 as @e[type=#{ns}:mob_grinder,tag=!global.ignore,tag=!g
 execute positioned ^ ^ ^3 run kill @e[type=#{ns}:mob_grinder,tag=!global.ignore,tag=!global.ignore.kill,tag=!{ns}.stardust_pillar,distance=..4]
 """)
 	json_content: JsonDict = super_json_load(get_root_path(__file__) + "/mob_grinder.json")
-	Mem.ctx.data[ns].entity_type_tags["mob_grinder"] = set_json_encoder(EntityTypeTag(json_content))
+	write_tag("mob_grinder", Mem.ctx.data[ns].entity_type_tags, json_content["values"])
 
 
 	# Growth Accelerator

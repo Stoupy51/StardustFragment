@@ -9,7 +9,7 @@ from stouputils.io import get_root_path
 # Constants
 ROOT: str = get_root_path(__file__)
 
-# Setup energy balancing
+# Setup remaining utilities
 def setup_remaining() -> None:
 	ns: str = Mem.ctx.project_id
 
@@ -19,7 +19,7 @@ def setup_remaining() -> None:
 
 	# Right click detection
 	write_load_file(f"\n# Right click detection\nscoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\nscoreboard objectives add {ns}.cooldown dummy\n", prepend=True)
-	Mem.ctx.data[ns].advancements["technical/right_click"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/right_click", {
 		"criteria": {
 			"requirement": {
 				"trigger": "minecraft:tick",
@@ -37,7 +37,7 @@ def setup_remaining() -> None:
 		"rewards": {
 			"function": f"{ns}:advancements/right_click"
 		}
-	}), max_level=-1)
+	})
 	write_function(f"{ns}:advancements/right_click", f"""
 # Revoke advancement and reset score
 advancement revoke @s only {ns}:technical/right_click
@@ -60,6 +60,27 @@ function #bs.move:local_to_canonical
 $function #bs.move:set_motion {scale:$(scale)}
 """)
 
+	# Use durability
+	write_function(f"{ns}:utils/use_durability/main", f"""
+# Compute durability usage (6 digits precision)
+scoreboard players set #1000000 {ns}.data 1000000
+$scoreboard players set #temp_durability {ns}.data -$(amount)
+scoreboard players operation #temp_durability {ns}.data *= #1000000 {ns}.data
+$scoreboard players set #temp_divider {ns}.data $(max_damage)
+scoreboard players operation #temp_durability {ns}.data /= #temp_divider {ns}.data
+execute store result storage {ns}:temp use_durability double 0.000001 run scoreboard players get #temp_durability {ns}.data
+function {ns}:utils/use_durability/item_modifier with storage {ns}:temp
+
+# If item broke, destroy it
+execute store result score #current_damage {ns}.data run data get entity @s SelectedItem.components."minecraft:damage"
+$execute if score #current_damage {ns}.data matches $(max_damage).. anchored eyes run particle item{{item:{{id:"minecraft:stone",components:{{"minecraft:item_model":"$(item_model)"}}}}}} ^ ^ ^0.5 0 0 0 0.1 10
+$execute if score #current_damage {ns}.data matches $(max_damage).. run playsound minecraft:item.shield.break ambient @a[distance=..16]
+$execute if score #current_damage {ns}.data matches $(max_damage).. run item replace entity @s weapon with minecraft:air
+""")
+	write_function(f"{ns}:utils/use_durability/item_modifier", r"""
+$item modify entity @s weapon {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
+""")
+
 	## Life Crystal consuming
 	# Add life crystal instrument
 	Mem.ctx.data[ns].instruments["life_crystal"] = set_json_encoder(Instrument({
@@ -70,7 +91,7 @@ $function #bs.move:set_motion {scale:$(scale)}
 	}))
 	# Detect using life crystal
 	write_load_file(f"\n# Life Crystal tracker\nscoreboard objectives add {ns}.life_crystal dummy\n", prepend=True)
-	Mem.ctx.data[ns].advancements["technical/use_life_crystal"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/use_life_crystal", {
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:using_item",
@@ -78,7 +99,7 @@ $function #bs.move:set_motion {scale:$(scale)}
 			}
 		},
 		"rewards": {"function": f"{ns}:advancements/use_life_crystal"}
-	}), max_level=-1)
+	})
 	write_function(f"{ns}:advancements/use_life_crystal", f"""
 # Revoke advancement
 advancement revoke @s only {ns}:technical/use_life_crystal
@@ -142,11 +163,7 @@ execute store result score @s {ns}.travel_y run data get entity @s Pos[1] 100
 execute store result score @s {ns}.travel_z run data get entity @s Pos[2] 100
 
 # Use 1 durability
-item modify entity @s weapon {{"function": "minecraft:set_damage","damage": {-1 / max_damage},"add": true}}
-execute store result score #current_damage {ns}.data run data get entity @s SelectedItem.components."minecraft:damage"
-execute if score #current_damage {ns}.data matches {max_damage}.. anchored eyes run particle item{{item:{{id:"minecraft:stone",components:{{"minecraft:item_model":"{ns}:home_travel_staff"}}}}}} ^ ^ ^0.5 0 0 0 0.1 10
-execute if score #current_damage {ns}.data matches {max_damage}.. run playsound minecraft:item.shield.break ambient @a[distance=..16]
-execute if score #current_damage {ns}.data matches {max_damage}.. run item replace entity @s weapon with minecraft:air
+function {ns}:utils/use_durability/main {{"amount":1,"max_damage":{max_damage},"item_model":"{ns}:home_travel_staff"}}
 
 # Feedback
 playsound minecraft:block.portal.trigger ambient @s ~ ~ ~ 0.5
@@ -240,7 +257,7 @@ clear @s *[custom_data~{{{ns}:{{"wormhole_potion":true}}}}] 1
 
 	## Dragon & Ender Dragon pearls
 	write_load_file(f"\n# Ender Pearl detection\nscoreboard objectives add {ns}.ender_pearl minecraft.used:minecraft.ender_pearl\n", prepend=True)
-	Mem.ctx.data[ns].advancements["technical/ender_pearl"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/ender_pearl", {
 		"criteria": {
 			"requirement": {
 				"trigger": "minecraft:tick",
@@ -258,7 +275,7 @@ clear @s *[custom_data~{{{ns}:{{"wormhole_potion":true}}}}] 1
 		"rewards": {
 			"function": f"{ns}:advancements/ender_pearl"
 		}
-	}), max_level=-1)
+	})
 	dragon_data: str = f"""{{{ns}:{{"dragon_pearl":true}}}}"""
 	ender_dragon_data: str = f"""{{{ns}:{{"ender_dragon_pearl":true}}}}"""
 	def line_pearl(data: str, scale: int) -> str:
@@ -285,7 +302,7 @@ tag @s add {ns}.motion_applied
 
 	# Bows damage multiplier
 	write_load_file(f"\n# Bow shooting detection\nscoreboard objectives add {ns}.bow_shoot minecraft.used:minecraft.bow\n", prepend=True)
-	Mem.ctx.data[ns].advancements["technical/bow_shoot"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/bow_shoot", {
 		"criteria": {
 			"requirement": {
 				"trigger": "minecraft:tick",
@@ -303,7 +320,7 @@ tag @s add {ns}.motion_applied
 		"rewards": {
 			"function": f"{ns}:advancements/bow_shoot"
 		}
-	}), max_level=-1)
+	})
 	sb_data: str = f"""{{{ns}:{{"stardust_bow":true}}}}"""
 	asb_data: str = f"""{{{ns}:{{"awakened_stardust_bow":true}}}}"""
 	ub_data: str = f"""{{{ns}:{{"ultimate_bow":true}}}}"""
@@ -360,8 +377,4 @@ execute if block ~ ~ ~ bedrock run return run setblock ~ ~1 ~ minecraft:dragon_e
 # Else, move down and repeat until bedrock found or bottom reached
 execute positioned ~ ~-1 ~ run function {ns}:utils/dragon_egg_on_death/place_egg_loop
 """)
-
-	# TODO: snipers, etc.
-	#advancement grant @s only stardust:visible/adventure/shoot/[copper_nugget, iron_nugget, gold_nugget, stardust_essence, awakened_stardust]
-
 

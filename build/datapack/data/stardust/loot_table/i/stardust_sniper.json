@@ -11,6 +11,15 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:max_damage": 672,
+								"minecraft:custom_data": {
+									"stardust": {
+										"sniper": {"damage": 6,"cooldown": 20,"playsound": "stardust:stardust_sniper_shot"},
+										"stardust_sniper": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:item_model": "stardust:stardust_sniper",
 								"minecraft:item_name": {
 									"translate": "stardust_sniper"
@@ -21,15 +30,7 @@
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"stardust": {
-										"stardust_sniper": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

@@ -74,6 +74,15 @@
 									}
 								],
 								"minecraft:max_damage": 2688,
+								"minecraft:custom_data": {
+									"stardust": {
+										"sniper": {"damage": 18,"cooldown": 10,"playsound": "stardust:ultimate_sniper_shot"},
+										"ultimate_sniper": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:item_model": "stardust:ultimate_sniper",
 								"minecraft:lore": [
 									[
@@ -81,15 +90,7 @@
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"stardust": {
-										"ultimate_sniper": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

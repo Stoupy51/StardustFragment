@@ -11,6 +11,15 @@
 							"function": "minecraft:set_components",
 							"components": {
 								"minecraft:max_damage": 1344,
+								"minecraft:custom_data": {
+									"stardust": {
+										"sniper": {"damage": 12,"cooldown": 15,"playsound": "stardust:awakened_stardust_sniper_shot"},
+										"awakened_stardust_sniper": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
 								"minecraft:item_model": "stardust:awakened_stardust_sniper",
 								"minecraft:item_name": {
 									"translate": "stardust.awakened_stardust_sniper"
@@ -21,15 +30,7 @@
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:custom_data": {
-									"stardust": {
-										"awakened_stardust_sniper": true
-									},
-									"smithed": {
-										"ignore": {"functionality": true,"crafting": true}
-									}
-								}
+								]
 							}
 						}
 					]

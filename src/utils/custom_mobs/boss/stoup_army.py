@@ -4,13 +4,13 @@ import json
 
 from stewbeet import (
 	COMMON_SIGNAL,
-	Advancement,
 	Conventions,
 	JsonDict,
 	LootTable,
 	Mem,
 	create_gradient_text,
 	set_json_encoder,
+	write_advancement,
 	write_function,
 	write_load_file,
 )
@@ -37,7 +37,7 @@ bossbar set {ns}:stoup_army max {STOUPY_MAX_HEALTH}
 	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.stoupy] run bossbar set {ns}:stoup_army players")
 
 	# Consume StoupEgg item to summon Stoup Army
-	Mem.ctx.data[ns].advancements["technical/consume_stoupegg"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/consume_stoupegg", {
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:consume_item",
@@ -53,7 +53,7 @@ bossbar set {ns}:stoup_army max {STOUPY_MAX_HEALTH}
 		"rewards": {
 			"function": f"{ns}:advancements/consume_stoupegg"
 		}
-	}), max_level=-1)
+	})
 	write_function(f"{ns}:advancements/consume_stoupegg", f"""
 # Revoke advancement
 advancement revoke @s only {ns}:technical/consume_stoupegg

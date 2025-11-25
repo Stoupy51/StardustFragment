@@ -3,8 +3,8 @@
 # Imports
 import os
 
-from beet import Advancement, Predicate
-from stewbeet.core import Conventions, JsonDict, Mem, set_json_encoder, write_function, write_load_file, write_versioned_function
+from beet import Predicate
+from stewbeet.core import Conventions, JsonDict, Mem, set_json_encoder, write_advancement, write_function, write_load_file, write_versioned_function
 from stouputils.io import relative_path
 
 
@@ -153,10 +153,10 @@ execute if dimension {ns}:dungeon if entity @s[type=player] run return run funct
 
 	## Prevent gamemode survival in Stardust Dungeon
 	# Change dimension advancement
-	Mem.ctx.data[ns].advancements["technical/changed_dimension"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/changed_dimension", {
 		"criteria": {"requirements": {"trigger": "minecraft:changed_dimension"}},
 		"rewards": {"function": f"{ns}:advancements/changed_dimension"}
-	}), max_level=-1)
+	})
 	write_function(f"{ns}:advancements/changed_dimension", f"""
 # Revoke advancement
 advancement revoke @s only {ns}:technical/changed_dimension

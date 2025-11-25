@@ -2,8 +2,7 @@
 # Imports
 import os
 
-from beet import Advancement
-from stewbeet.core import Conventions, Mem, set_json_encoder, write_function, write_load_file, write_versioned_function
+from stewbeet.core import Conventions, Mem, write_advancement, write_function, write_load_file, write_versioned_function
 
 
 # Setup all technical features for custom mobs
@@ -154,7 +153,7 @@ scoreboard players add #remaining_displays {ns}.data 1
 
 	## Enable ticking when a player deals damage to add stardust mob
 	# Detect when player hurts a mob
-	Mem.ctx.data[ns].advancements["technical/mob_hurt"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/mob_hurt", {
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:player_hurt_entity",
@@ -162,10 +161,10 @@ scoreboard players add #remaining_displays {ns}.data 1
 			}
 		},
 		"rewards": {"function": f"{ns}:advancements/enable_mob_ticking"}
-	}), max_level=-1)
+	})
 
 	# Detect when a mob hurts a player
-	Mem.ctx.data[ns].advancements["technical/mob_attack"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/mob_attack", {
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:entity_hurt_player",
@@ -173,7 +172,7 @@ scoreboard players add #remaining_displays {ns}.data 1
 			}
 		},
 		"rewards": {"function": f"{ns}:advancements/enable_mob_ticking"}
-	}), max_level=-1)
+	})
 
 	# Enable mob ticking function
 	write_function(f"{ns}:advancements/enable_mob_ticking", f"""

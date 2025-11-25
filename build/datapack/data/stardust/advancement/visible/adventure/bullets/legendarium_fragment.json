@@ -3,15 +3,15 @@
 		"icon": {
 			"id": "minecraft:command_block",
 			"components": {
-				"minecraft:item_model": "stardust:awakened_stardust"
+				"minecraft:item_model": "stardust:legendarium_fragment"
 			}
 		},
 		"title": {
-			"translate": "stardust.awakened_bullets",
+			"translate": "stardust.legendarium_bullets",
 			"color": "aqua"
 		},
 		"description": {
-			"translate": "stardust.shoot_a_awakened_stardust_bullet_using_a_sniper",
+			"translate": "stardust.shoot_a_legendarium_fragment_bullet_using_a_sniper",
 			"color": "green"
 		},
 		"frame": "task",

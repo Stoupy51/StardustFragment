@@ -4,13 +4,13 @@ import json
 
 from stewbeet import (
 	COMMON_SIGNAL,
-	Advancement,
 	Conventions,
 	JsonDict,
 	LootTable,
 	Mem,
 	create_gradient_text,
 	set_json_encoder,
+	write_advancement,
 	write_function,
 	write_load_file,
 )
@@ -38,23 +38,19 @@ bossbar set {ns}:stardust_pillar max {PILLAR_MAX_HEALTH}
 	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.stardust_pillar] run bossbar set {ns}:stardust_pillar players")
 
 	# Consume Starlight Infuser item to summon Stardust Pillar
-	Mem.ctx.data[ns].advancements["technical/consume_starlight_infuser"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/consume_starlight_infuser", {
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:consume_item",
 				"conditions": {
-					"item": {
-						"predicates": {
-							"minecraft:custom_data": {ns: {"starlight_infuser": True}}
-						}
-					}
+					"item": {"predicates": {"minecraft:custom_data": {ns: {"starlight_infuser": True}}}}
 				}
 			}
 		},
 		"rewards": {
 			"function": f"{ns}:advancements/consume_starlight_infuser"
 		}
-	}), max_level=-1)
+	})
 	write_function(f"{ns}:advancements/consume_starlight_infuser", f"""
 # Revoke advancement
 advancement revoke @s only {ns}:technical/consume_starlight_infuser

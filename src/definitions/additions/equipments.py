@@ -26,11 +26,13 @@ from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
 
 # Constants
 SNIPER_BULLETS: dict[str, int] = {
-	"minecraft:copper_nugget": 3,
-	"minecraft:iron_nugget": 5,
+	"minecraft:copper_nugget": 1,
+	"minecraft:iron_nugget": 4,
 	"minecraft:gold_nugget": 7,
 	"stardust_essence": 10,
-	"awakened_stardust": 20,
+	"legendarium_fragment": 16,
+	"solarium_fragment": 16,
+	"darkium_fragment": 16,
 }
 SNIPER_BULLETS_WIKI: list[TextComponent] = [
 	{"text":"\nPossible bullet types:","color":"gray"},
@@ -189,6 +191,7 @@ def main_additions() -> None:
 		"stardust_sniper": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
 			"max_damage": 672,
+			"custom_data": {ns: {"sniper":{"damage":6, "cooldown":20, "playsound": f"{ns}:stardust_sniper_shot"}}},
 			WIKI_COMPONENT: [
 				{"text":"Sniper crafted from stardust materials.","color":"yellow"},
 				{"text":"\nBase damage: 6","color":"gray"},
@@ -212,6 +215,7 @@ def main_additions() -> None:
 		"awakened_stardust_sniper": {
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
 			"max_damage": 1344,
+			"custom_data": {ns: {"sniper":{"damage":12, "cooldown":15, "playsound": f"{ns}:awakened_stardust_sniper_shot"}}},
 			WIKI_COMPONENT: [
 				{"text":"Sniper crafted from awakened stardust materials.","color":"yellow"},
 				{"text":"\nBase damage: 12","color":"gray"},
@@ -236,6 +240,7 @@ def main_additions() -> None:
 			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
 			"item_name": rainbow_gradient_text("Ultimate Sniper"),
 			"max_damage": 2688,
+			"custom_data": {ns: {"sniper":{"damage":18, "cooldown":10, "playsound": f"{ns}:ultimate_sniper_shot"}}},
 			WIKI_COMPONENT: [
 				{"text":"Sniper crafted from ultimate stardust materials.","color":"yellow"},
 				{"text":"\nBase damage: 18","color":"gray"},

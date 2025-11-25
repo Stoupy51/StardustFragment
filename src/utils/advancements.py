@@ -3,7 +3,7 @@
 # Imports
 from typing import Any
 
-from stewbeet import Advancement, JsonDict, Mem, TextComponent, Texture, item_id_to_name, item_id_to_text_component, set_json_encoder, super_merge_dict, text_component_to_str
+from stewbeet import JsonDict, Mem, TextComponent, Texture, item_id_to_name, item_id_to_text_component, super_merge_dict, text_component_to_str, write_advancement
 from stouputils.print import error
 
 from ..definitions.additions.energy import QUARRY_STATS, quarry_display
@@ -287,7 +287,7 @@ def add_visible_advancements() -> None:
 		advancement = sort_dict(advancement, ["display", "criteria", "requirements", "rewards", "parent"])
 
 		# Set the advancement
-		Mem.ctx.data[ns].advancements[f"visible/{full_path}"] = set_json_encoder(Advancement(advancement), max_level = 7)
+		write_advancement(f"{ns}:visible/{full_path}", advancement, max_level=7)
 
 	return
 

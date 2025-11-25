@@ -1,0 +1,34 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:solarium_fragment"
+			}
+		},
+		"title": {
+			"translate": "stardust.solarium_bullets",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.shoot_a_solarium_fragment_bullet_using_a_sniper",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/bullets/legendarium_fragment"
+}

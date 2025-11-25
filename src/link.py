@@ -19,6 +19,7 @@ from .utils.dimensions import setup_dimensions
 from .utils.machines import setup_machines
 from .utils.portals import setup_portals
 from .utils.remaining import setup_remaining
+from .utils.snipers import setup_snipers
 
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
@@ -61,6 +62,9 @@ def beet_default(ctx: Context) -> None:
 
 	# Setup custom ore generation
 	setup_custom_ore_generation()
+
+	# Setup snipers
+	setup_snipers()
 
 	# Setup additional things
 	setup_remaining()

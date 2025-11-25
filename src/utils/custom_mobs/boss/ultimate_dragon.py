@@ -3,7 +3,6 @@
 import json
 
 from stewbeet import (
-	Advancement,
 	Conventions,
 	JsonDict,
 	LootTable,
@@ -11,6 +10,7 @@ from stewbeet import (
 	Predicate,
 	rainbow_gradient_text,
 	set_json_encoder,
+	write_advancement,
 	write_function,
 	write_load_file,
 )
@@ -43,7 +43,7 @@ bossbar set {ns}:ultimate_dragon max {DRAGON_MAX_HEALTH}
 	write_function(f"{ns}:mobs/remove_bossbars", f"execute unless entity @e[tag={ns}.dragon] run bossbar set {ns}:ultimate_dragon players")
 
 	# Consume Ultimate Dragon Essence to summon Ultimate Dragon
-	Mem.ctx.data[ns].advancements["technical/used_lingering_potion"] = set_json_encoder(Advancement({
+	write_advancement(f"{ns}:technical/used_lingering_potion", {
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:tick",
@@ -61,7 +61,7 @@ bossbar set {ns}:ultimate_dragon max {DRAGON_MAX_HEALTH}
 		"rewards": {
 			"function": f"{ns}:advancements/used_lingering_potion"
 		}
-	}), max_level=-1)
+	})
 	write_function(f"{ns}:advancements/used_lingering_potion", f"""
 # Revoke advancement
 advancement revoke @s only {ns}:technical/used_lingering_potion

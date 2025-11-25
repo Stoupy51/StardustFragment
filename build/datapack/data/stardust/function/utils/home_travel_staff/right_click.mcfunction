@@ -21,11 +21,7 @@ execute store result score @s stardust.travel_y run data get entity @s Pos[1] 10
 execute store result score @s stardust.travel_z run data get entity @s Pos[2] 100
 
 # Use 1 durability
-item modify entity @s weapon {"function": "minecraft:set_damage","damage": -0.015625,"add": true}
-execute store result score #current_damage stardust.data run data get entity @s SelectedItem.components."minecraft:damage"
-execute if score #current_damage stardust.data matches 64.. anchored eyes run particle item{item:{id:"minecraft:stone",components:{"minecraft:item_model":"stardust:home_travel_staff"}}} ^ ^ ^0.5 0 0 0 0.1 10
-execute if score #current_damage stardust.data matches 64.. run playsound minecraft:item.shield.break ambient @a[distance=..16]
-execute if score #current_damage stardust.data matches 64.. run item replace entity @s weapon with minecraft:air
+function stardust:utils/use_durability/main {"amount":1,"max_damage":64,"item_model":"stardust:home_travel_staff"}
 
 # Feedback
 playsound minecraft:block.portal.trigger ambient @s ~ ~ ~ 0.5

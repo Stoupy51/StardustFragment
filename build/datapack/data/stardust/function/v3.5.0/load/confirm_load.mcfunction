@@ -4,6 +4,9 @@
 # @within	stardust:v3.5.0/load/valid_dependencies
 #
 
+# Bow shooting detection
+scoreboard objectives add stardust.bow_shoot minecraft.used:minecraft.bow
+
 # Ender Pearl detection
 scoreboard objectives add stardust.ender_pearl minecraft.used:minecraft.ender_pearl
 

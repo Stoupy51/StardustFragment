@@ -17,6 +17,9 @@ execute if score #total_growing_seeds stardust.data matches 1.. as @e[type=#star
 execute as @e[tag=stardust.can_balance,scores={energy.storage=20..}] at @s[tag=!stardust.balanced] run function stardust:balancing/main
 tag @e[tag=stardust.balanced] remove stardust.balanced
 
+# Always drop dragon egg on death
+execute unless score #dragon_in_end stardust.data matches 1.. in minecraft:the_end if entity @e[type=minecraft:ender_dragon,x=0,y=0,z=0,distance=..320,nbt={Brain:{}}] run function stardust:utils/dragon_egg_on_death/has_dragon
+
 # Custom blocks second_5 functions
 execute if score #second_5_entities stardust.data matches 1.. as @e[tag=stardust.second_5] at @s run function stardust:custom_blocks/second_5
 

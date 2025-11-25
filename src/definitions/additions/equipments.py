@@ -124,7 +124,7 @@ def main_additions() -> None:
 			"max_damage": 768,	# x2 the durability of regular bow (384)
 			WIKI_COMPONENT: [
 				{"text":"Bow crafted from stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x2) and power (x1.5) than regular bows","color":"gray"},	# TODO: Implement power increase
+				{"text":"\nHigher durability (x2) and power (x2) than regular bows","color":"gray"},	# TODO: Implement power increase
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},	# TODO: Implement this behavior
 			],
 			RESULT_OF_CRAFTING: [
@@ -146,7 +146,7 @@ def main_additions() -> None:
 			"max_damage": 1536,	# x4 the durability of regular bow (384)
 			WIKI_COMPONENT: [
 				{"text":"Bow crafted from awakened stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x4) and power (x2) than regular bows","color":"gray"},
+				{"text":"\nHigher durability (x4) and power (x3) than regular bows","color":"gray"},
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
@@ -238,7 +238,7 @@ def main_additions() -> None:
 			"max_damage": 2688,
 			WIKI_COMPONENT: [
 				{"text":"Sniper crafted from ultimate stardust materials.","color":"yellow"},
-				{"text":"\nBase damage: 24","color":"gray"},
+				{"text":"\nBase damage: 18","color":"gray"},
 				{"text":"\nCooldown: 0.50s","color":"gray"},
 				*SNIPER_BULLETS_WIKI,
 			],

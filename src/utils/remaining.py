@@ -261,7 +261,7 @@ clear @s *[custom_data~{{{ns}:{{"wormhole_potion":true}}}}] 1
 	}), max_level=-1)
 	dragon_data: str = f"""{{{ns}:{{"dragon_pearl":true}}}}"""
 	ender_dragon_data: str = f"""{{{ns}:{{"ender_dragon_pearl":true}}}}"""
-	def line(data: str, scale: int) -> str:
+	def line_pearl(data: str, scale: int) -> str:
 		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=ender_pearl,tag=!{ns}.motion_applied,nbt={{Item:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/multiply_motion {{scale:{scale}}}"""
 	write_function(f"{ns}:advancements/ender_pearl", f"""
 # Revoke advancement and reset score
@@ -269,8 +269,8 @@ advancement revoke @s only {ns}:technical/ender_pearl
 scoreboard players set @s {ns}.ender_pearl 0
 
 # If Dragon Pearl (Motion x1.5), if Ender Dragon pearl (Motion x2)
-{line(dragon_data, 1500)}
-{line(ender_dragon_data, 2000)}
+{line_pearl(dragon_data, 1500)}
+{line_pearl(ender_dragon_data, 2000)}
 """, prepend=True)
 	write_function(f"{ns}:utils/multiply_motion", f"""
 # Can't directly multiply motion (Minecraft bug), so store in scoreboards first
@@ -283,9 +283,85 @@ execute store result entity @s Motion[2] double 0.001 run scoreboard players get
 tag @s add {ns}.motion_applied
 """)
 
+	# Bows damage multiplier
+	write_load_file(f"\n# Bow shooting detection\nscoreboard objectives add {ns}.bow_shoot minecraft.used:minecraft.bow\n", prepend=True)
+	Mem.ctx.data[ns].advancements["technical/bow_shoot"] = set_json_encoder(Advancement({
+		"criteria": {
+			"requirement": {
+				"trigger": "minecraft:tick",
+				"conditions": {
+					"player": [
+						{
+							"condition": "minecraft:entity_scores",
+							"entity": "this",
+							"scores": {f"{ns}.bow_shoot": {"min": 1}}
+						}
+					]
+				}
+			}
+		},
+		"rewards": {
+			"function": f"{ns}:advancements/bow_shoot"
+		}
+	}), max_level=-1)
+	sb_data: str = f"""{{{ns}:{{"stardust_bow":true}}}}"""
+	asb_data: str = f"""{{{ns}:{{"awakened_stardust_bow":true}}}}"""
+	ub_data: str = f"""{{{ns}:{{"ultimate_bow":true}}}}"""
+	def line_bow(data: str, scale: float) -> str:
+		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=arrow,tag=!{ns}.damage_multiplied,nbt={{weapon:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/multiply_arrow_power {{scale:{scale}}}"""
+	write_function(f"{ns}:advancements/bow_shoot", f"""
+# Revoke advancement and reset score
+advancement revoke @s only {ns}:technical/bow_shoot
+scoreboard players set @s {ns}.bow_shoot 0
 
-	# TODO: pearls, always dragon egg on death, travel staff, snipers, etc.
-	#advancement grant @s only stardust:visible/stuff/travel_staff
+# If Stardust Bow (x2.0), if Awakened Stardust Bow (x3.0), if Ultimate Bow (x4.0)
+{line_bow(sb_data, 2.0)}
+{line_bow(asb_data, 3.0)}
+{line_bow(ub_data, 4.0)}
+""", prepend=True)
+	write_function(f"{ns}:utils/multiply_arrow_power", f"""
+$execute store result entity @s damage double $(scale) run data get entity @s damage 1.0
+tag @s add {ns}.damage_multiplied
+""")
+
+	# Always dragon egg on death
+	write_versioned_function("second_5", f"""
+# Always drop dragon egg on death
+execute unless score #dragon_in_end {ns}.data matches 1.. in minecraft:the_end if entity @e[type=minecraft:ender_dragon,x=0,y=0,z=0,distance=..320,nbt={{Brain:{{}}}}] run function {ns}:utils/dragon_egg_on_death/has_dragon
+""")
+	write_function(f"{ns}:utils/dragon_egg_on_death/has_dragon", f"""
+# We know there is a dragon, set the flag
+scoreboard players set #dragon_in_end {ns}.data 1
+
+# Start monitoring dragon's death
+schedule function {ns}:utils/dragon_egg_on_death/monitor 1s append
+""")
+	write_function(f"{ns}:utils/dragon_egg_on_death/monitor", f"""
+# Check if dragon is dead
+execute in minecraft:the_end unless entity @e[type=minecraft:ender_dragon,x=0,y=0,z=0,distance=..320,nbt={{Brain:{{}}}}] run function {ns}:utils/dragon_egg_on_death/schedule_place_egg
+
+# Reschedule check
+execute if score #dragon_in_end {ns}.data matches 1.. run schedule function {ns}:utils/dragon_egg_on_death/monitor 1s replace
+""")
+	write_function(f"{ns}:utils/dragon_egg_on_death/schedule_place_egg", f"""
+# Schedule dragon egg drop after 10 seconds (to ensure dragon death sequence is over)
+schedule function {ns}:utils/dragon_egg_on_death/place_egg_start 10s append
+scoreboard players reset #dragon_in_end {ns}.data
+""")
+	write_function(f"{ns}:utils/dragon_egg_on_death/place_egg_start", f"""
+# Drop dragon egg at center of the end
+execute in minecraft:the_end positioned 0 100 0 run function {ns}:utils/dragon_egg_on_death/place_egg_loop
+""")
+	write_function(f"{ns}:utils/dragon_egg_on_death/place_egg_loop", f"""
+# If current block is bedrock, stop and place egg
+execute unless loaded ~ ~ ~ run return fail
+execute if block ~ ~ ~ bedrock run return run setblock ~ ~1 ~ minecraft:dragon_egg
+
+# Else, move down and repeat until bedrock found or bottom reached
+execute positioned ~ ~-1 ~ run function {ns}:utils/dragon_egg_on_death/place_egg_loop
+""")
+
+	# TODO: snipers, etc.
 	#advancement grant @s only stardust:visible/adventure/shoot/[copper_nugget, iron_nugget, gold_nugget, stardust_essence, awakened_stardust]
 
 

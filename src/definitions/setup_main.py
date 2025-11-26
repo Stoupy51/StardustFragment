@@ -1,8 +1,8 @@
 
 # Imports
+import stouputils as stp
 from stewbeet import (
 	Context,
-	JsonDict,
 	Mem,
 	add_energy_lore_to_definitions,
 	add_item_model_component,
@@ -38,13 +38,10 @@ def beet_default(ctx: Context) -> None:
 		"stardust_fragment","stardust_ingot","stardust_ingot","stardust_essence","stardust_core","compacted_stardust_shard",
 		"stardust_block","stardust_ore","deepslate_stardust_ore","nether_stardust_ore","ender_stardust_ore"
 	]
-	ordered: JsonDict = {k: {} for k in reorder_list}
-	for k, v in Mem.definitions.items():
-		ordered[k] = v
-	Mem.definitions = ordered
+	Mem.definitions = stp.sort_dict_keys(Mem.definitions, order=reorder_list)
 
 	# Sort by category (material in first position)
-	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", ""))))
+	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", "z"))))
 
 	# Add final miscellaneous additions
 	main_additions_non_playable()

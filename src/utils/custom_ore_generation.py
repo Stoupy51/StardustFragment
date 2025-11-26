@@ -1,6 +1,6 @@
 
 # Imports
-from stewbeet.core import CustomOreGeneration, Mem
+from stewbeet import CustomOreGeneration, Mem, write_function
 from stouputils.print import info
 
 
@@ -74,4 +74,23 @@ def setup_custom_ore_generation():
 		],
 	})
 	info("All customs ores now generates in the world!")
+
+	# Life Crystal Block position retry if not placed
+	write_function(f"{ns}:calls/smart_ore_generation/veins/life_crystal_block", f"""
+# Try to find a random position below air but not below lava in the region to generate the ore
+scoreboard players set #attempts {ns}.data 50
+function {ns}:calls/smart_ore_generation/veins/retry/life_crystal_block
+
+# Placing Life Crystal Block patch
+execute at @s if block ~ ~ ~ #{ns}:smart_ore_generation/life_crystal_block_provider positioned ~ ~1 ~ if block ~ ~ ~ #minecraft:air unless block ~ ~-1 ~ lava run function {ns}:custom_blocks/life_crystal_block/place_main
+""", overwrite=True)  # noqa: E501
+	write_function(f"{ns}:calls/smart_ore_generation/veins/retry/life_crystal_block", f"""
+# Find a random position in the region and decrease attempts
+scoreboard players remove #attempts {ns}.data 1
+function #smart_ore_generation:v1/slots/random_position
+
+# Retry if not placed and attempts remaining
+execute if score #attempts {ns}.data matches 1.. at @s unless block ~ ~1 ~ air run return run function {ns}:calls/smart_ore_generation/veins/retry/life_crystal_block
+execute if score #attempts {ns}.data matches 1.. at @s if block ~ ~-1 ~ lava run return run function {ns}:calls/smart_ore_generation/veins/retry/life_crystal_block
+""")
 

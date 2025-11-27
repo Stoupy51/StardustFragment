@@ -9,6 +9,7 @@ from stewbeet import (
 	add_item_name_and_lore_if_missing,
 	add_private_custom_data_for_namespace,
 	add_smithed_ignore_vanilla_behaviours_convention,
+	generate_custom_records,
 	generate_everything_about_these_materials,
 )
 
@@ -32,6 +33,7 @@ def beet_default(ctx: Context) -> None:
 	main_additions_energy()
 	main_additions_equipments()
 	main_additions_miscellaneous()
+	generate_custom_records("auto", category="miscellaneous")
 
 	# Reorder some definitions
 	reorder_list: list[str] = [

@@ -126,7 +126,7 @@ def main_additions() -> None:
 			"max_damage": 768,	# x2 the durability of regular bow (384)
 			WIKI_COMPONENT: [
 				{"text":"Bow crafted from stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x2) and power (x2) than regular bows","color":"gray"},	# TODO: Implement power increase
+				{"text":"\nHigher durability (x2) and power (x2) than regular bows","color":"gray"},
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},	# TODO: Implement this behavior
 			],
 			RESULT_OF_CRAFTING: [

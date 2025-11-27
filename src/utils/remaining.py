@@ -331,6 +331,7 @@ tag @s add {ns}.motion_applied
 advancement revoke @s only {ns}:technical/bow_shoot
 scoreboard players set @s {ns}.bow_shoot 0
 
+# TODO: Shooting while sneaking makes no gravity arrows
 # If Stardust Bow (x2.0), if Awakened Stardust Bow (x3.0), if Ultimate Bow (x4.0)
 {line_bow(sb_data, 2.0)}
 {line_bow(asb_data, 3.0)}

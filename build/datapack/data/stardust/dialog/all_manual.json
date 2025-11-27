@@ -178,7 +178,11 @@
 		"stardust:manual/page_172",
 		"stardust:manual/page_173",
 		"stardust:manual/page_174",
-		"stardust:manual/page_175"
+		"stardust:manual/page_175",
+		"stardust:manual/page_176",
+		"stardust:manual/page_177",
+		"stardust:manual/page_178",
+		"stardust:manual/page_179"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

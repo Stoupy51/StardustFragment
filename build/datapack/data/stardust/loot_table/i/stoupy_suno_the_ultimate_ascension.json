@@ -1,0 +1,44 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"stardust": {
+										"stoupy_suno_the_ultimate_ascension": true
+									},
+									"smithed": {
+										"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"}},
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"translate": "stardust.music_disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "stardust:stoupy_suno_the_ultimate_ascension",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "stardust:stoupy_suno_the_ultimate_ascension",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

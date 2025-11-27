@@ -1,4 +1,20 @@
 {
+	"stoupy_suno_cosmic_threat": {
+		"subtitle": "stoupy_suno_cosmic_threat",
+		"sounds": [{"name": "stardust:stoupy_suno_cosmic_threat","stream": true}]
+	},
+	"stoupy_suno_prismatic_devastation": {
+		"subtitle": "stoupy_suno_prismatic_devastation",
+		"sounds": [{"name": "stardust:stoupy_suno_prismatic_devastation","stream": true}]
+	},
+	"stoupy_suno_starfall_menace": {
+		"subtitle": "stoupy_suno_starfall_menace",
+		"sounds": [{"name": "stardust:stoupy_suno_starfall_menace","stream": true}]
+	},
+	"stoupy_suno_the_ultimate_ascension": {
+		"subtitle": "stoupy_suno_the_ultimate_ascension",
+		"sounds": [{"name": "stardust:stoupy_suno_the_ultimate_ascension","stream": true}]
+	},
 	"awakened_forge_crafting": {
 		"subtitle": "Awakened Forge Crafting",
 		"sounds": ["stardust:awakened_forge_crafting"]

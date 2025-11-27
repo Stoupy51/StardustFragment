@@ -1,0 +1,10 @@
+{
+	"comparator_output": 8,
+	"length_in_seconds": 169,
+	"sound_event": {
+		"sound_id": "stardust:stoupy_suno_cosmic_threat"
+	},
+	"description": {
+		"translate": "stardust.stoupy_suno_cosmic_threat"
+	}
+}

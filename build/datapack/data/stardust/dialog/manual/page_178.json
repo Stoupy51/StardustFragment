@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		{
+			"sprite": "stardust:item/stardust_pillar",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust_pillar",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/stardust_pillar",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (177)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (179)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (177)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (179)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"ა\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_pillar","item_name": {"translate": "stardust_pillar"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_178"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","color": "yellow"},{"translate": "stardust.boss_mob_with_active_shield_resistance_v","color": "gray"},{"translate": "stardust.summons_waves_of_5_mobs_every_5_seconds","color": "gray"},{"translate": "stardust.each_wave_summoned_reduces_shield_by_5_hp","color": "gray"},{"translate": "stardust.max_mobs_20_5_per_player_within_96_blocks","color": "gray"},{"translate": "stardust.loses_shield_and_charges_at_players_below_250_hp","color": "gray"},{"translate": "stardust.stats_compared_to_a_vanilla_vex","color": "aqua"},{"translate": "stardust.health","color": "gray"},{"translate": "stardust.500_points","color": "red"},{"translate": "stardust.damage","color": "gray"},{"text": "x3","color": "red"},{"translate": "stardust.scale","color": "gray"},{"text": "x5","color": "green"},{"translate": "stardust.noai","color": "gray"},{"translate": "stardust.true_until_shield_breaks","color": "aqua"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

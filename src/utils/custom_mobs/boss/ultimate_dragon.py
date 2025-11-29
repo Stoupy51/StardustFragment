@@ -19,6 +19,7 @@ from ...common import STARFRAG_TEXT
 
 
 # Setup boss mob: Ultimate Dragon
+# TODO: Add boss music when in range
 def main() -> None:
 	SPAWN_ANIMATION_DURATION: int = 160  # Ticks
 	DRAGON_MAX_HEALTH: int = 1024

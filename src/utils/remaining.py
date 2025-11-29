@@ -321,24 +321,37 @@ tag @s add {ns}.motion_applied
 			"function": f"{ns}:advancements/bow_shoot"
 		}
 	})
+
+	# Create predicate for sneaking
+	Mem.ctx.data[ns].predicates["player/sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
+
 	sb_data: str = f"""{{{ns}:{{"stardust_bow":true}}}}"""
 	asb_data: str = f"""{{{ns}:{{"awakened_stardust_bow":true}}}}"""
 	ub_data: str = f"""{{{ns}:{{"ultimate_bow":true}}}}"""
 	def line_bow(data: str, scale: float) -> str:
-		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=arrow,tag=!{ns}.damage_multiplied,nbt={{weapon:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/multiply_arrow_power {{scale:{scale}}}"""
+		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=arrow,tag=!{ns}.damage_multiplied,nbt={{weapon:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/modify_arrow {{scale:{scale}}}"""
 	write_function(f"{ns}:advancements/bow_shoot", f"""
 # Revoke advancement and reset score
 advancement revoke @s only {ns}:technical/bow_shoot
 scoreboard players set @s {ns}.bow_shoot 0
 
-# TODO: Shooting while sneaking makes no gravity arrows
+# Set sneaking flag if player is sneaking
+scoreboard players set #is_sneaking {ns}.data 0
+execute if predicate {ns}:player/sneaking run scoreboard players set #is_sneaking {ns}.data 1
+
 # If Stardust Bow (x2.0), if Awakened Stardust Bow (x3.0), if Ultimate Bow (x4.0)
 {line_bow(sb_data, 2.0)}
 {line_bow(asb_data, 3.0)}
 {line_bow(ub_data, 4.0)}
 """, prepend=True)
-	write_function(f"{ns}:utils/multiply_arrow_power", f"""
+	write_function(f"{ns}:utils/modify_arrow", f"""
+# Multiply arrow damage
 $execute store result entity @s damage double $(scale) run data get entity @s damage 1.0
+
+# Set NoGravity if sneaking
+execute if score #is_sneaking {ns}.data matches 1 run data modify entity @s NoGravity set value 1b
+
+# Mark as modified
 tag @s add {ns}.damage_multiplied
 """)
 

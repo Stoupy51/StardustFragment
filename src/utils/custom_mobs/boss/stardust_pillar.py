@@ -19,6 +19,7 @@ from ...common import STARFRAG_TEXT
 
 
 # Setup boss mob: Stardust Pillar
+# TODO: Add boss music when in range
 def main() -> None:
 	PILLAR_MAX_HEALTH: int = 500
 	ACTIVE_LIST: list[JsonDict] = create_gradient_text("Stardust Pillar (Active Shield)", "198534", "249d9f")

@@ -14,9 +14,8 @@ from stewbeet import (
 	Mem,
 	ingr_repr,
 	rainbow_gradient_text,
-	simple_cache,
 )
-from stouputils.collections import unique_list
+from stouputils import simple_cache, unique_list
 
 from ...utils.common import ROMAN_NUMERALS
 

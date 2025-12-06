@@ -9,7 +9,7 @@ from stewbeet import (
 	add_item_name_and_lore_if_missing,
 	add_private_custom_data_for_namespace,
 )
-from stouputils import super_json_dump, super_open
+from stouputils import json_dump, super_open
 
 
 # Make all the external item definitions
@@ -45,7 +45,7 @@ def beet_default(ctx: Context) -> None:
 
 	# Debug external definitions
 	with super_open("./external_definitions.json", "w") as f:
-		super_json_dump(Mem.definitions, f)
+		json_dump(Mem.definitions, f)
 
 	# Restore the main definitions
 	Mem.external_definitions = Mem.definitions

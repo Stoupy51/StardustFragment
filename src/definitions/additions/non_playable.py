@@ -16,11 +16,11 @@ from stewbeet import (
 # Constants
 ROOT: str = stp.get_root_path(__file__)
 MOBS_MODELS_PATH: str = f"{ROOT}/mobs"
-STARDUST_BAT_MODEL: JsonDict = stp.super_json_load(f"{MOBS_MODELS_PATH}/stardust_bat.json")
-STARDUST_EVOKER_MODEL: JsonDict = stp.super_json_load(f"{MOBS_MODELS_PATH}/stardust_evoker.json")
-STARDUST_GUARDIAN_MODEL: JsonDict = stp.super_json_load(f"{MOBS_MODELS_PATH}/stardust_guardian.json")
-STARDUST_PILLAR_MODEL: JsonDict = stp.super_json_load(f"{MOBS_MODELS_PATH}/stardust_pillar.json")
-STARDUST_SOLDIER_MODEL: JsonDict = stp.super_json_load(f"{MOBS_MODELS_PATH}/stardust_soldier.json")
+STARDUST_BAT_MODEL: JsonDict = stp.json_load(f"{MOBS_MODELS_PATH}/stardust_bat.json")
+STARDUST_EVOKER_MODEL: JsonDict = stp.json_load(f"{MOBS_MODELS_PATH}/stardust_evoker.json")
+STARDUST_GUARDIAN_MODEL: JsonDict = stp.json_load(f"{MOBS_MODELS_PATH}/stardust_guardian.json")
+STARDUST_PILLAR_MODEL: JsonDict = stp.json_load(f"{MOBS_MODELS_PATH}/stardust_pillar.json")
+STARDUST_SOLDIER_MODEL: JsonDict = stp.json_load(f"{MOBS_MODELS_PATH}/stardust_soldier.json")
 # Main function
 def main_additions() -> None:
 	ns: str = Mem.ctx.project_id

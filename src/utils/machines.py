@@ -1,8 +1,8 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet.core import COMMON_SIGNAL_HIDDEN, JsonDict, LootTable, Mem, set_json_encoder, write_function, write_tag
-from stouputils.io import get_root_path, super_json_load
+from stewbeet import COMMON_SIGNAL_HIDDEN, JsonDict, LootTable, Mem, set_json_encoder, write_function, write_tag
+from stouputils.io import get_root_path, json_load
 
 from ..definitions.additions.materials import COBBLESTONE_TIERS
 from ..definitions.additions.miscellaneous import miners_formula
@@ -159,7 +159,7 @@ scoreboard players remove @s energy.storage {energy["usage"] // 20}
 execute positioned ^ ^ ^3 as @e[type=#{ns}:mob_grinder,tag=!global.ignore,tag=!global.ignore.kill,tag=!{ns}.stardust_pillar,distance=..4] at @s run loot spawn ~ ~ ~ kill @s
 execute positioned ^ ^ ^3 run kill @e[type=#{ns}:mob_grinder,tag=!global.ignore,tag=!global.ignore.kill,tag=!{ns}.stardust_pillar,distance=..4]
 """)
-	json_content: JsonDict = super_json_load(get_root_path(__file__) + "/mob_grinder.json")
+	json_content: JsonDict = json_load(get_root_path(__file__) + "/mob_grinder.json")
 	write_tag("mob_grinder", Mem.ctx.data[ns].entity_type_tags, json_content["values"])
 
 

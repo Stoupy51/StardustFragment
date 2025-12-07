@@ -417,6 +417,7 @@ def main_additions() -> None:
 			}
 
 	# Legendarium equipments
+	# TODO: Armor Effects
 	for equipment_type in SLOTS.keys():
 		key: str = f"legendarium_{equipment_type}"
 		if key in Mem.definitions:
@@ -440,6 +441,7 @@ def main_additions() -> None:
 			}
 
 	# Solarium equipments
+	# TODO: Armor Effects
 	for equipment_type in SLOTS.keys():
 		key: str = f"solarium_{equipment_type}"
 		if key in Mem.definitions:
@@ -463,6 +465,7 @@ def main_additions() -> None:
 			}
 
 	# Darkium equipments
+	# TODO: Armor Effects
 	for equipment_type in SLOTS.keys():
 		key: str = f"darkium_{equipment_type}"
 		if key in Mem.definitions:

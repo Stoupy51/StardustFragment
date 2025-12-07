@@ -19,7 +19,6 @@ from ...common import STARFRAG_TEXT
 
 
 # Setup boss mob: Stardust Pillar
-# TODO: Add boss music when in range
 def main() -> None:
 	PILLAR_MAX_HEALTH: int = 500
 	ACTIVE_LIST: list[JsonDict] = create_gradient_text("Stardust Pillar (Active Shield)", "198534", "249d9f")
@@ -27,6 +26,10 @@ def main() -> None:
 	BOSSBAR_ACTIVE_SHIELD_TEXT: str = json.dumps(ACTIVE_LIST)
 	BOSSBAR_NO_SHIELD_TEXT: str = json.dumps(NO_SHIELD_LIST)
 	ns: str = Mem.ctx.project_id
+
+	# Disc duration
+	COSMIC_THREAT_DURATION: int = Mem.definitions["stoupy_suno_cosmic_threat"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	STARFALL_MENACE_DURATION: int = Mem.definitions["stoupy_suno_starfall_menace"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
 
 	# Load function
 	write_load_file(f"""
@@ -142,7 +145,7 @@ scoreboard players operation #max_mobs {ns}.data += #per_player_mob_limit {ns}.d
 
 # If under the limit, summon a wave of mobs on a random nearby player (every 5 seconds)
 scoreboard players set #modulo_divisor {ns}.data 5
-scoreboard players operation #temp {ns}.data = #global_seconds {ns}.data
+scoreboard players operation #temp {ns}.data = #global_second {ns}.data
 scoreboard players operation #temp {ns}.data %= #modulo_divisor {ns}.data
 execute if score #temp {ns}.data matches 0 if score #mob_count {ns}.data < #max_mobs {ns}.data at @r[gamemode=!spectator,gamemode=!creative,distance=..96] rotated ~ 0 run function {ns}:mobs/stardust_pillar/summon_wave
 
@@ -153,6 +156,9 @@ execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} if data en
 
 # Launch towards nearest player if shield is down
 execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} if entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] run function {ns}:mobs/stardust_pillar/launch_towards_player
+
+# Boss music for nearby players
+execute as @a[distance=..200] unless score @s {ns}.boss_music > #global_second {ns}.data at @s run function {ns}:mobs/stardust_pillar/try_boss_music
 
 # Set bossbar for nearby players & update value
 bossbar set {ns}:stardust_pillar visible true
@@ -239,9 +245,27 @@ bossbar set {ns}:stardust_pillar players
 # Reward nearby players
 loot give @a[distance=..96] loot {ns}:entities/stardust_pillar
 
+# End boss music (unless remaining boss)
+execute unless entity @e[tag=!{ns}.dying_model,tag={ns}.stardust_pillar] as @a[distance=..96] if score @s {ns}.boss_music > #global_second {ns}.data run stopsound @s record
+
 # Tellraw and playsound	# TODO: Add sound
 tellraw @a[distance=..96] ["",{STARFRAG_TEXT},{{"text":" The "}},{BOSSBAR_NO_SHIELD_TEXT},{{"text":" has been defeated!"}}]
 playsound minecraft:entity.wither.death hostile @a[distance=..96]
+""")
+
+	# Try boss music function
+	write_function(f"{ns}:mobs/stardust_pillar/try_boss_music", f"""
+## Choose music based on health
+# Cosmic Threat if shield active
+execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run playsound {ns}:stoupy_suno_cosmic_threat record @s ~ ~ ~ 0.2
+execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run scoreboard players set @s {ns}.boss_music {COSMIC_THREAT_DURATION}
+
+# Starfall Menace if shield down
+execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} run playsound {ns}:stoupy_suno_starfall_menace record @s ~ ~ ~ 0.2
+execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} run scoreboard players set @s {ns}.boss_music {STARFALL_MENACE_DURATION}
+
+# Add global seconds to boss music timer
+scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 """)
 
 	# Loot table

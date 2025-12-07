@@ -13,11 +13,21 @@ DARKIUM_DURABILITY: float = 5.5 * DIAMOND_PICKAXE
 
 ORES_CONFIGS: dict[str, EquipmentsConfig|None] = {
 	"awakened_stardust!":	None,
-	"ancient_stardust!":	EquipmentsConfig(DefaultOre.DIAMOND, DAMAGED_STARDUST_DURABILITY, {"attack_damage": 2, "armor": 1.0, "armor_toughness": 1.0, "mining_efficiency": 1.5}),
-	"original_stardust!":	EquipmentsConfig(DefaultOre.DIAMOND, ORIGINAL_DURABILITY, {"attack_damage": 8, "armor": 3.0, "armor_toughness": 1.3, "mining_efficiency": 2.0}),
-	"legendarium_ingot":	EquipmentsConfig(DefaultOre.NETHERITE, LEGENDARIUM_DURABILITY, {"attack_damage": 13, "armor": 5.5, "armor_toughness": 1.6, "mining_efficiency": 3.0}),
-	"solarium_ingot":		EquipmentsConfig(DefaultOre.NETHERITE, SOLARIUM_DURABILITY, {"attack_damage": 15, "armor": 6.0, "armor_toughness": 1.8, "mining_efficiency": 3.0}),
-	"darkium_ingot":		EquipmentsConfig(DefaultOre.NETHERITE, DARKIUM_DURABILITY, {"attack_damage": 17, "armor": 6.5, "armor_toughness": 2.0, "mining_efficiency": 3.0}),
+	"ancient_stardust!":	EquipmentsConfig(
+        DefaultOre.DIAMOND, DAMAGED_STARDUST_DURABILITY, {"attack_damage": 2, "armor": 1.0, "armor_toughness": 1.0, "mining_efficiency": 1.5}
+    ),
+	"original_stardust!":	EquipmentsConfig(
+        DefaultOre.DIAMOND, ORIGINAL_DURABILITY, {"attack_damage": 8, "armor": 3.0, "armor_toughness": 1.3, "mining_efficiency": 2.0}
+    ),
+	"legendarium_ingot":	EquipmentsConfig(
+        DefaultOre.NETHERITE, LEGENDARIUM_DURABILITY, {"attack_damage": 13, "armor": 5.5, "armor_toughness": 1.6, "mining_efficiency": 3.0, "movement_speed": 0.005}
+    ),
+	"solarium_ingot":		EquipmentsConfig(
+        DefaultOre.NETHERITE, SOLARIUM_DURABILITY, {"attack_damage": 15, "armor": 6.0, "armor_toughness": 1.8, "mining_efficiency": 3.0, "burning_time": -0.25}
+    ),
+	"darkium_ingot":		EquipmentsConfig(
+        DefaultOre.NETHERITE, DARKIUM_DURABILITY, {"attack_damage": 17, "armor": 6.5, "armor_toughness": 2.0, "mining_efficiency": 3.0, "movement_speed": -0.005}
+    ),
 	"ultimate_ingot":		None,
 }
 

@@ -1,33 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		{
-			"sprite": "stardust:item/stardust_soldier",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust_soldier",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/stardust_soldier",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.stoupy_suno_the_ultimate_ascension",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",
@@ -47,9 +23,8 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"Ⴭ\n",
-				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_soldier","item_name": {"translate": "stardust_soldier"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_soldier": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
-				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust_soldier","color": "yellow"},{"translate": "stardust.found_in_the_stardust_dimension","color": "gray"},{"translate": "stardust.can_be_summoned_by_the_stardust_pillar","color": "gray"},{"translate": "stardust.stats_compared_to_a_vanilla_skeleton","color": "aqua"},{"translate": "stardust.health","color": "gray"},{"text": "x2","color": "red"},{"translate": "stardust.damage","color": "gray"},{"text": "x3","color": "red"},{"translate": "stardust.speed","color": "gray"},{"translate": "stardust.x1_25","color": "green"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"}},"ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_the_ultimate_ascension","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_the_ultimate_ascension","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

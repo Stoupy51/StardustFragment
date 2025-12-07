@@ -1,0 +1,45 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_stack_size": 1,
+								"minecraft:lore": [
+									{
+										"translate": "stardust.force_loads_the_chunk_where_the_quarry_is_placed",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										{"translate": "stardustfragment","italic": true,"color": "blue"}
+									]
+								],
+								"minecraft:item_model": "stardust:force_load_module",
+								"minecraft:item_name": {
+									"translate": "stardust.force_load_module"
+								},
+								"minecraft:custom_data": {
+									"stardust": {
+										"force_load_module": true
+									},
+									"smithed": {
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -117,7 +117,7 @@ execute store success score #is_sneaking {ns}.data if predicate {ns}:is_sneaking
 
 # Raycast to the block being looked at
 tag @s add {ns}.temp
-function #bs.view:at_aimed_block {{run:"function {ns}:quarry/configurator/at_aimed_block",with:{{}}}}
+function #bs.view:at_aimed_block {{run:"function {ns}:quarry/configurator/at_aimed_block",with:{{data:{{targeted_block:1b}}}}}}
 
 # Update player's item with new configuration
 execute summon item_display run function {ns}:quarry/configurator/update_custom_data
@@ -132,16 +132,21 @@ particle firework ~.5 ~.5 ~.5 0.5 0.5 0.5 0.01 100
 playsound block.note_block.bell ambient @s
 
 # If sneaking, set 2nd coordinates, else set 1st coordinates
-execute unless score #is_sneaking {ns}.data matches 1 store result score #config_x1 {ns}.data run data get storage bs:lambda raycast.targeted_block[0]
-execute unless score #is_sneaking {ns}.data matches 1 store result score #config_y1 {ns}.data run data get storage bs:lambda raycast.targeted_block[1]
-execute unless score #is_sneaking {ns}.data matches 1 store result score #config_z1 {ns}.data run data get storage bs:lambda raycast.targeted_block[2]
-execute if score #is_sneaking {ns}.data matches 1 store result score #config_x2 {ns}.data run data get storage bs:lambda raycast.targeted_block[0]
-execute if score #is_sneaking {ns}.data matches 1 store result score #config_y2 {ns}.data run data get storage bs:lambda raycast.targeted_block[1]
-execute if score #is_sneaking {ns}.data matches 1 store result score #config_z2 {ns}.data run data get storage bs:lambda raycast.targeted_block[2]
+execute summon marker run function {ns}:quarry/configurator/set_coordinates
 
 # Update message
 execute unless score #is_sneaking {ns}.data matches 1 run tellraw @s [{{"text":"First coordinates set to: ","color":"green"}},{{"score":{{"name":"#config_x1","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_y1","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_z1","objective":"{ns}.data"}},"color":"dark_green"}}]
 execute if score #is_sneaking {ns}.data matches 1 run tellraw @s [{{"text":"Second coordinates set to: ","color":"green"}},{{"score":{{"name":"#config_x2","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_y2","objective":"{ns}.data"}},"color":"dark_green"}},{{"text":", "}},{{"score":{{"name":"#config_z2","objective":"{ns}.data"}},"color":"dark_green"}}]
+""")
+	write_function(f"{ns}:quarry/configurator/set_coordinates", f"""
+# If sneaking, set 2nd coordinates, else set 1st coordinates
+execute unless score #is_sneaking {ns}.data matches 1 store result score #config_x1 {ns}.data run data get entity @s Pos[0]
+execute unless score #is_sneaking {ns}.data matches 1 store result score #config_y1 {ns}.data run data get entity @s Pos[1]
+execute unless score #is_sneaking {ns}.data matches 1 store result score #config_z1 {ns}.data run data get entity @s Pos[2]
+execute if score #is_sneaking {ns}.data matches 1 store result score #config_x2 {ns}.data run data get entity @s Pos[0]
+execute if score #is_sneaking {ns}.data matches 1 store result score #config_y2 {ns}.data run data get entity @s Pos[1]
+execute if score #is_sneaking {ns}.data matches 1 store result score #config_z2 {ns}.data run data get entity @s Pos[2]
+kill @s
 """)
 	write_function(f"{ns}:quarry/configurator/apply_to_quarry", f"""
 # Update quarry scores
@@ -219,7 +224,7 @@ data modify entity @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data
 execute if items block ~ ~ ~ container.{config_placeholder_gui_slot} *[custom_data~{{{ns}:{{quarry_configurator:true}}}}] run function {ns}:quarry/configurator/apply_from_placeholder
 
 # Check if buttons pressed
-function {ns}:quarry/gui/check_buttons
+execute if data storage {ns}:temp Items[0] run function {ns}:quarry/gui/check_buttons
 
 # Display first and last coordinates
 function {ns}:quarry/display/main
@@ -468,31 +473,61 @@ tag @s remove {ns}.quarry_item
 
 	# Update coordinates function
 	write_function(f"{ns}:quarry/working/update_coordinates", f"""
-# Move in X direction first
+# Progress in X direction (calls progress_z when needed)
+function {ns}:quarry/working/progress_x
+""")
+
+	# Progress X function
+	write_function(f"{ns}:quarry/working/progress_x", f"""
+# If x1 == x2 (single column in X), skip to Z progression
+execute if score @s {ns}.quarry_x1 = @s {ns}.quarry_x2 run return run function {ns}:quarry/working/progress_z
+
+# Move in X direction
 execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 run scoreboard players add @s {ns}.quarry_curr_x 1
 execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 run scoreboard players remove @s {ns}.quarry_curr_x 1
 
-# If passed X limit, reset X and move in Z direction
-execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 run scoreboard players add @s {ns}.quarry_curr_z 1
-execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 run scoreboard players remove @s {ns}.quarry_curr_z 1
-execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 run scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
-execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 run scoreboard players add @s {ns}.quarry_curr_z 1
-execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 run scoreboard players remove @s {ns}.quarry_curr_z 1
-execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 run scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
+# Check if passed X limit
+execute if score @s {ns}.quarry_x1 < @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x > @s {ns}.quarry_x2 run return run function {ns}:quarry/working/progress_z
+execute if score @s {ns}.quarry_x1 > @s {ns}.quarry_x2 if score @s {ns}.quarry_curr_x < @s {ns}.quarry_x2 run return run function {ns}:quarry/working/progress_z
+""")
 
-# If passed Z limit, reset Z and move in Y direction
-execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 run scoreboard players add @s {ns}.quarry_curr_y 1
-execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 run scoreboard players remove @s {ns}.quarry_curr_y 1
-execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 run scoreboard players operation @s {ns}.quarry_curr_z = @s {ns}.quarry_z1
-execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 run scoreboard players add @s {ns}.quarry_curr_y 1
-execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 run scoreboard players remove @s {ns}.quarry_curr_y 1
-execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 run scoreboard players operation @s {ns}.quarry_curr_z = @s {ns}.quarry_z1
+	# Progress Z function
+	write_function(f"{ns}:quarry/working/progress_z", f"""
+# Reset X coordinate
+scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
 
-# If passed Y limit, stop quarry
-execute if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y > @s {ns}.quarry_y2 run scoreboard players set #blocks_to_break {ns}.data 0
-execute if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y > @s {ns}.quarry_y2 run return run scoreboard players set @s {ns}.quarry_status 0
-execute if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y < @s {ns}.quarry_y2 run scoreboard players set #blocks_to_break {ns}.data 0
-execute if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y < @s {ns}.quarry_y2 run return run scoreboard players set @s {ns}.quarry_status 0
+# If z1 == z2 (single row in Z), skip to Y progression
+execute if score @s {ns}.quarry_z1 = @s {ns}.quarry_z2 run return run function {ns}:quarry/working/progress_y
+
+# Move in Z direction
+execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 run scoreboard players add @s {ns}.quarry_curr_z 1
+execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 run scoreboard players remove @s {ns}.quarry_curr_z 1
+
+# Check if passed Z limit
+execute if score @s {ns}.quarry_z1 < @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z > @s {ns}.quarry_z2 run return run function {ns}:quarry/working/progress_y
+execute if score @s {ns}.quarry_z1 > @s {ns}.quarry_z2 if score @s {ns}.quarry_curr_z < @s {ns}.quarry_z2 run return run function {ns}:quarry/working/progress_y
+""")
+
+	# Progress Y function
+	write_function(f"{ns}:quarry/working/progress_y", f"""
+# Reset X and Z coordinates
+scoreboard players operation @s {ns}.quarry_curr_x = @s {ns}.quarry_x1
+scoreboard players operation @s {ns}.quarry_curr_z = @s {ns}.quarry_z1
+
+# Move in Y direction
+execute if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 run scoreboard players add @s {ns}.quarry_curr_y 1
+execute if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 run scoreboard players remove @s {ns}.quarry_curr_y 1
+
+# Check if passed Y limit (quarry is finished)
+execute if score @s {ns}.quarry_y1 < @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y > @s {ns}.quarry_y2 run return run function {ns}:quarry/working/progress_stop
+execute if score @s {ns}.quarry_y1 > @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y < @s {ns}.quarry_y2 run return run function {ns}:quarry/working/progress_stop
+
+# Handle single-layer Y case: if y1 == y2 and we've reached y2, we're finished
+execute if score @s {ns}.quarry_y1 = @s {ns}.quarry_y2 if score @s {ns}.quarry_curr_y = @s {ns}.quarry_y2 run return run function {ns}:quarry/working/progress_stop
+""")
+	write_function(f"{ns}:quarry/working/progress_stop", f"""
+scoreboard players set #blocks_to_break {ns}.data 0
+scoreboard players set @s {ns}.quarry_status 0
 """)
 
 	return

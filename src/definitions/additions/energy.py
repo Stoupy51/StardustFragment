@@ -346,6 +346,22 @@ def main_additions() -> None:
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:deepslate_iron_ore")] + [ingr_repr("empty_module")]},
 			]
 		},
+		"force_load_module": {
+			"id": CUSTOM_ITEM_VANILLA, CATEGORY: ENERGY,
+			"max_stack_size": 1,
+			"lore": [
+				{"text":"Force loads the chunk where the quarry is placed","italic":False,"color":"gray"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Module that force loads the chunk for compatible machines.","color":"yellow"},
+				{"text":"\nPrevents the chunk from unloading when no players are nearby","color":"gray"},
+				{"text":"\nMachine continues to operate even in unloaded chunks","color":"gray"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: [
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:respawn_anchor")] + 4*[ingr_repr("minecraft:glowstone")] + [ingr_repr("empty_module")]},
+			]
+		},
 		**{
 			quarry_display(i)[0]: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,

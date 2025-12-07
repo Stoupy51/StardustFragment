@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardust.stoupy_suno_the_ultimate_ascension",
+		"translate": "stardust.stoupy_suno_starfall_menace",
 		"underlined": true
 	},
 	"body": [
@@ -23,7 +23,7 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"჌\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"}},"ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_the_ultimate_ascension","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_the_ultimate_ascension","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_174"}},
+				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"}},"ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_starfall_menace","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_starfall_menace","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_174"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

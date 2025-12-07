@@ -19,7 +19,7 @@ execute store success score #is_sneaking stardust.data if predicate stardust:is_
 
 # Raycast to the block being looked at
 tag @s add stardust.temp
-function #bs.view:at_aimed_block {run:"function stardust:quarry/configurator/at_aimed_block",with:{}}
+function #bs.view:at_aimed_block {run:"function stardust:quarry/configurator/at_aimed_block",with:{data:{targeted_block:1b}}}
 
 # Update player's item with new configuration
 execute summon item_display run function stardust:quarry/configurator/update_custom_data

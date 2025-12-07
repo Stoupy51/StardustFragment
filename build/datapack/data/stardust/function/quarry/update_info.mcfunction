@@ -10,7 +10,7 @@
 execute if items block ~ ~ ~ container.25 *[custom_data~{stardust:{quarry_configurator:true}}] run function stardust:quarry/configurator/apply_from_placeholder
 
 # Check if buttons pressed
-function stardust:quarry/gui/check_buttons
+execute if data storage stardust:temp Items[0] run function stardust:quarry/gui/check_buttons
 
 # Display first and last coordinates
 function stardust:quarry/display/main

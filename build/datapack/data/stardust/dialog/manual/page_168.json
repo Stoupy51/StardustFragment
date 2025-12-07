@@ -2,7 +2,7 @@
 	"type": "minecraft:notice",
 	"title": [
 		{
-			"sprite": "stardust:item/stardust_dungeon_key",
+			"sprite": "stardust:item/starlight_infuser",
 			"shadow_color": [
 				0,
 				0,
@@ -13,12 +13,12 @@
 		},
 		" ",
 		{
-			"translate": "stardust_dungeon_key",
+			"translate": "stardust.starlight_infuser",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/stardust_dungeon_key",
+			"sprite": "stardust:item/starlight_infuser",
 			"shadow_color": [
 				0,
 				0,
@@ -46,10 +46,40 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"჆\n",
-				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"rarity": "epic","lore": [{"translate": "stardust.one_time_use_key_for_the_stardust_dungeon","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:stardust_dungeon_key","item_name": {"translate": "stardust_dungeon_key"},"custom_data": {"stardust": {"stardust_dungeon_key": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_168"}},
-				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.key_that_allows_access_to_the_stardust_dungeon","color": "yellow"},{"translate": "stardust.obtained_by_defeating_the_stardust_pillar_boss","color": "gray"},{"translate": "stardust.once_used_the_key_will_be_consumed","color": "gray"},{"translate": "stardust.inside_the_dungeon_face_challenging_enemies_and_traps","color": "gray"},{"translate": "stardust.to_earn_valuable_rewards","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\"$6\n\"",
+				{"text": "$苮","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				{"text": "$苮","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				"  \n\"",
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				{"text": "$苰","hover_event": {"action": "show_item","id": "minecraft:nether_star","components": {}}},
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				"\"\"",
+				{"text": "$$腙","hover_event": {"action": "show_item","id": "command_block","components": {"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:starlight_infuser_consuming"}},"rarity": "epic","lore": [{"translate": "stardust.summoner_of_the_stardust_pillar_boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:starlight_infuser","item_name": {"translate": "stardust.starlight_infuser"},"custom_data": {"stardust": {"starlight_infuser": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:nether_star","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:starlight_infuser_consuming"}},"rarity": "epic","lore": [{"translate": "stardust.summoner_of_the_stardust_pillar_boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:starlight_infuser","item_name": {"translate": "stardust.starlight_infuser"},"custom_data": {"stardust": {"starlight_infuser": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$苮","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				{"text": "$耩","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				{"text": "$苮","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:breeze_rod","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.mystical_summoner_of_the_stardust_pillar_boss","color": "yellow"},{"translate": "stardust.consume_to_summon_the_stardust_pillar","color": "gray"},{"translate": "stardust.spawns_at_world_surface_above_your_position","color": "gray"},{"translate": "stardust.check_the_mobs_category_for_full_boss_stats_and_behavior","color": "aqua"},{"translate": "stardust.drops_stardust_dungeon_key_mid_game_resources","color": "yellow"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$苮"},{"text": "$耩"},{"text": "$苮"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$苰"},{"text": "$耩"},"\"\"",{"text": "$$腙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$苮"},{"text": "$耩"},{"text": "$苮"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.breeze_rod","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.nether_star","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.mystical_summoner_of_the_stardust_pillar_boss","color": "yellow"},{"translate": "stardust.consume_to_summon_the_stardust_pillar","color": "gray"},{"translate": "stardust.spawns_at_world_surface_above_your_position","color": "gray"},{"translate": "stardust.check_the_mobs_category_for_full_boss_stats_and_behavior","color": "aqua"},{"translate": "stardust.drops_stardust_dungeon_key_mid_game_resources","color": "yellow"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$苮"},{"text": "$耩"},{"text": "$苮"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$苰"},{"text": "$耩"},"\"\"",{"text": "$$腙"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$苮"},{"text": "$耩"},{"text": "$苮"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.breeze_rod","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.nether_star","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

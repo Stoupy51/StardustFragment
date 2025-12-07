@@ -17,8 +17,8 @@ from stewbeet import (
 	Mem,
 	ingr_repr,
 	rainbow_gradient_text,
-	simple_cache,
 )
+from stouputils import simple_cache
 
 from ...utils.common import ROMAN_NUMERALS
 

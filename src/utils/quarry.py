@@ -11,8 +11,6 @@ from stewbeet.core import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANIL
 # Setup quarry work and visuals
 def quarry(gui: dict[str, str]) -> None:
 
-	## TODO: Replace shulker by block display
-	## TODO: FORCELOAD
 	## Constants
 	ns: str = Mem.ctx.project_id
 	QUARRY_SLOTS: list[int] = [*range(9, 22), 26] # Slots 9 to 21 inclusive and gui slot
@@ -201,6 +199,11 @@ execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace bl
 # If player nearby, update information
 execute if entity @p[distance=..6] run function {ns}:quarry/update_info
 
+# Force load handling
+execute unless entity @s[tag={ns}.force_load_quarry] if data storage {ns}:temp Items[{{Slot:{force_load_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.force_load_module run tag @s add {ns}.force_load_quarry
+execute if entity @s[tag={ns}.force_load_quarry] unless data storage {ns}:temp Items[{{Slot:{force_load_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.force_load_module run function {ns}:quarry/stop_force_load
+execute if entity @s[tag={ns}.force_load_quarry] run forceload add ~ ~
+
 # Work if enough energy and slots available
 execute if score @s {ns}.quarry_status matches 1 if score @s energy.storage >= @s {ns}.energy_rate unless data storage {ns}:temp Items[26] run function {ns}:quarry/work
 """)
@@ -303,13 +306,15 @@ execute summon marker run function {ns}:quarry/display/summon_shulkers
 execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x1 {ns}.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #config_y1 {ns}.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #config_z1 {ns}.data
-execute at @s positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:14b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b,Team:"{ns}.red"}}
+execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{Name:"minecraft:red_shulker_box"}},Glowing:1b,Team:"{ns}.red"}}
+execute at @s run team join {ns}.red @e[tag={ns}.quarry_displaying,nbt={{block_state:{{Name:"minecraft:red_shulker_box"}}}},distance=..1]
 
 # Second shulker (blue)
 execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x2 {ns}.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #config_y2 {ns}.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #config_z2 {ns}.data
-execute at @s positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:3b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b,Team:"{ns}.blue"}}
+execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{Name:"minecraft:blue_shulker_box"}},Glowing:1b,Team:"{ns}.blue"}}
+execute at @s run team join {ns}.blue @e[tag={ns}.quarry_displaying,nbt={{block_state:{{Name:"minecraft:blue_shulker_box"}}}},distance=..1]
 
 # Schedule loop to kill them after some time
 schedule function {ns}:quarry/display/kill_shulkers 1t append
@@ -368,8 +373,6 @@ scoreboard players set #fortune_level {ns}.data 0
 scoreboard players set #silk_touch_level {ns}.data 0
 execute store result score #fortune_level {ns}.data if data storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.fortune_module run data get storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].count
 execute store success score #silk_touch_level {ns}.data if data storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.silk_touch_module
-execute unless entity @s[tag={ns}.force_load_quarry] if data storage {ns}:temp Items[{{Slot:{force_load_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.force_load_module run tag @s add {ns}.force_load_quarry
-execute if entity @s[tag={ns}.force_load_quarry] unless data storage {ns}:temp Items[{{Slot:{force_load_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.force_load_module run function {ns}:quarry/stop_force_load
 
 # Consume energy
 scoreboard players operation @s energy.storage -= @s {ns}.energy_rate
@@ -428,7 +431,7 @@ kill @s
 """)
 	write_function(f"{ns}:quarry/display/current_position", f"""
 # Summon shulker and schedule loop to kill them after some time
-execute positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {{Tags:{tags},DeathLootTable:"none",AttachFace:0,Color:0b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b}}
+execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{Name:"minecraft:white_shulker_box"}},Glowing:1b}}
 """)
 	# Mine block function
 	write_function(f"{ns}:quarry/working/mine_block", f"""

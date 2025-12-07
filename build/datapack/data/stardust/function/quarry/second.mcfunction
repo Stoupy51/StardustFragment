@@ -38,6 +38,11 @@ execute unless items block ~ ~ ~ container.22 * run item replace block ~ ~ ~ con
 # If player nearby, update information
 execute if entity @p[distance=..6] run function stardust:quarry/update_info
 
+# Force load handling
+execute unless entity @s[tag=stardust.force_load_quarry] if data storage stardust:temp Items[{Slot:23b}].components."minecraft:custom_data".stardust.force_load_module run tag @s add stardust.force_load_quarry
+execute if entity @s[tag=stardust.force_load_quarry] unless data storage stardust:temp Items[{Slot:23b}].components."minecraft:custom_data".stardust.force_load_module run function stardust:quarry/stop_force_load
+execute if entity @s[tag=stardust.force_load_quarry] run forceload add ~ ~
+
 # Work if enough energy and slots available
 execute if score @s stardust.quarry_status matches 1 if score @s energy.storage >= @s stardust.energy_rate unless data storage stardust:temp Items[26] run function stardust:quarry/work
 

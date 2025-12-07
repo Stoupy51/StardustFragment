@@ -9,7 +9,7 @@
 #			stardust:custom_blocks/quarry_lv4/destroy
 #			stardust:custom_blocks/quarry_lv5/destroy
 #			stardust:custom_blocks/quarry_creative/destroy
-#			stardust:quarry/work
+#			stardust:quarry/second
 #
 
 # If has force load module removed, stop force loading

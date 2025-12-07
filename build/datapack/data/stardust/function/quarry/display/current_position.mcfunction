@@ -7,5 +7,5 @@
 #
 
 # Summon shulker and schedule loop to kill them after some time
-execute positioned ~0.5 ~ ~0.5 run summon shulker ~ ~ ~ {Tags:["stardust.quarry_displaying", "smithed.entity", "global.ignore", "smithed.strict", "global.ignore.kill"],DeathLootTable:"none",AttachFace:0,Color:0b,Invulnerable:1b,NoAI:1b,Silent:1b,Glowing:1b}
+execute at @s run summon block_display ~ ~ ~ {Tags:["stardust.quarry_displaying", "smithed.entity", "global.ignore", "smithed.strict", "global.ignore.kill"],block_state:{Name:"minecraft:white_shulker_box"},Glowing:1b}
 

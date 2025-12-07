@@ -637,6 +637,17 @@
 		"item_name": {"text": "Silk Touch Module"},
 		"custom_data": {"stardust": {"silk_touch_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
 	},
+	"force_load_module": {
+		"id": "minecraft:command_block",
+		"category": "energy",
+		"max_stack_size": 1,
+		"lore": [{"text": "Force loads the chunk where the quarry is placed","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+		"wiki_components": [{"text": "Module that force loads the chunk for compatible machines.","color": "yellow"},{"text": "\nPrevents the chunk from unloading when no players are nearby","color": "gray"},{"text": "\nMachine continues to operate even in unloaded chunks","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}],
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]}],
+		"item_model": "stardust:force_load_module",
+		"item_name": {"text": "Force Load Module"},
+		"custom_data": {"stardust": {"force_load_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+	},
 	"quarry_lv1": {
 		"id": "minecraft:furnace",
 		"category": "energy",

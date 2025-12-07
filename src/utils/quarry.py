@@ -15,15 +15,16 @@ def quarry(gui: dict[str, str]) -> None:
 	## TODO: FORCELOAD
 	## Constants
 	ns: str = Mem.ctx.project_id
-	QUARRY_SLOTS: list[int] = [*range(9, 23), 26] # Slots 9 to 22 inclusive and gui slot
+	QUARRY_SLOTS: list[int] = [*range(9, 22), 26] # Slots 9 to 21 inclusive and gui slot
 	main_gui: str = "gui/quarry.png"
 	main_gui_slot: int = 26
 	config_placeholder_gui_slot: int = 25
 	module_placeholder_gui_slot: int = 24
-	info_gui_slot: int = 23
-	stop_gui_slot: int = 21
-	pause_gui_slot: int = 20
-	start_gui_slot: int = 19
+	force_load_placeholder_gui_slot: int = 23
+	info_gui_slot: int = 22
+	stop_gui_slot: int = 20
+	pause_gui_slot: int = 19
+	start_gui_slot: int = 18
 
 	# Prepare info gui lore
 	selected_area_lore: list[TextComponent] = [
@@ -79,7 +80,13 @@ tag @s add itemio.container.hopper
 			for i in range(9):
 				itemio_content += f'{base} append value {{"Slot":{i},"mode":"both","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}}}\n'
 			itemio_content += "function #itemio:calls/container/init\n"
-			write_function(f"{ns}:custom_blocks/{item}/destroy", "# ItemIO compatibility\nfunction #itemio:calls/container/destroy\n\n", prepend=True)
+			write_function(f"{ns}:custom_blocks/{item}/destroy", f"""
+# ItemIO compatibility
+function #itemio:calls/container/destroy
+
+# If has force load module, stop force loading
+function {ns}:quarry/stop_force_load
+""", prepend=True)
 			write_function(f"{ns}:custom_blocks/{item}/second", f"function {ns}:quarry/second")
 			write_function(f"{ns}:custom_blocks/{item}/place_secondary", f"""{itemio_content}
 
@@ -188,6 +195,7 @@ data modify storage {ns}:temp Items set from block ~ ~ ~ Items
 item replace block ~ ~ ~ container.{main_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{gui[main_gui]}",{COMMON_SIGNAL_HIDDEN}]
 execute unless items block ~ ~ ~ container.{config_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{config_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_configurator",item_name={{"text":"Configurator Placeholder"}},lore=[{{"text":"Place a configured Quarry Configurator here","color":"gray","italic":false}},{{"text":"to apply its settings to the quarry","color":"gray","italic":false}}],{COMMON_SIGNAL}]
 execute unless items block ~ ~ ~ container.{module_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{module_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_module",item_name={{"text":"Module Placeholder"}},lore=[{{"text":"Place a quarry module here","color":"gray","italic":false}},{{"text":"to apply its effects to the quarry","color":"gray","italic":false}}],{COMMON_SIGNAL}]
+execute unless items block ~ ~ ~ container.{force_load_placeholder_gui_slot} * run item replace block ~ ~ ~ container.{force_load_placeholder_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_placeholder_force_load",item_name={{"text":"Forceload Placeholder"}},lore=[{{"text":"Place a force load module here","color":"gray","italic":false}},{{"text":"to apply its effects to the quarry","color":"gray","italic":false}}],{COMMON_SIGNAL}]
 execute unless items block ~ ~ ~ container.{info_gui_slot} * run item replace block ~ ~ ~ container.{info_gui_slot} with {CUSTOM_ITEM_VANILLA}[item_model="{ns}:quarry_information",item_name={{"text":"Quarry Information"}},lore=[{{"text":"TODO","color":"gray","italic":false}}],{COMMON_SIGNAL}]
 
 # If player nearby, update information
@@ -360,6 +368,8 @@ scoreboard players set #fortune_level {ns}.data 0
 scoreboard players set #silk_touch_level {ns}.data 0
 execute store result score #fortune_level {ns}.data if data storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.fortune_module run data get storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].count
 execute store success score #silk_touch_level {ns}.data if data storage {ns}:temp Items[{{Slot:{module_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.silk_touch_module
+execute unless entity @s[tag={ns}.force_load_quarry] if data storage {ns}:temp Items[{{Slot:{force_load_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.force_load_module run tag @s add {ns}.force_load_quarry
+execute if entity @s[tag={ns}.force_load_quarry] unless data storage {ns}:temp Items[{{Slot:{force_load_placeholder_gui_slot}b}}].components."minecraft:custom_data".{ns}.force_load_module run function {ns}:quarry/stop_force_load
 
 # Consume energy
 scoreboard players operation @s energy.storage -= @s {ns}.energy_rate
@@ -377,6 +387,13 @@ function {ns}:quarry/working/loop
 
 # Kill temporary shulkers displaying current position
 schedule function {ns}:quarry/display/kill_shulkers 1t append
+""")
+	write_function(f"{ns}:quarry/stop_force_load", f"""
+# If has force load module removed, stop force loading
+execute if entity @s[tag={ns}.force_load_quarry] run forceload remove ~ ~
+
+# Remove force load tag
+tag @s remove {ns}.force_load_quarry
 """)
 	# Quarry working loop
 	write_function(f"{ns}:quarry/working/loop", f"""

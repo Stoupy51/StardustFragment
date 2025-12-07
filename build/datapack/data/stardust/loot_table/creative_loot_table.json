@@ -172,6 +172,7 @@
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/stardust_guardian"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_configurator"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_module"}]},
+		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_placeholder_force_load"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/quarry_information"}]},
 		{"rolls": 1,"entries": [{"type": "minecraft:loot_table","value": "stardust:i/ultimate_poop"}]}
 	]

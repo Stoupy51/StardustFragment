@@ -9,6 +9,9 @@
 # ItemIO compatibility
 function #itemio:calls/container/destroy
 
+# If has force load module, stop force loading
+function stardust:quarry/stop_force_load
+
 # Datapack Energy
 function energy:v1/api/break_machine
 

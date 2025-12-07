@@ -15,6 +15,8 @@ scoreboard players set #fortune_level stardust.data 0
 scoreboard players set #silk_touch_level stardust.data 0
 execute store result score #fortune_level stardust.data if data storage stardust:temp Items[{Slot:24b}].components."minecraft:custom_data".stardust.fortune_module run data get storage stardust:temp Items[{Slot:24b}].count
 execute store success score #silk_touch_level stardust.data if data storage stardust:temp Items[{Slot:24b}].components."minecraft:custom_data".stardust.silk_touch_module
+execute unless entity @s[tag=stardust.force_load_quarry] if data storage stardust:temp Items[{Slot:23b}].components."minecraft:custom_data".stardust.force_load_module run tag @s add stardust.force_load_quarry
+execute if entity @s[tag=stardust.force_load_quarry] unless data storage stardust:temp Items[{Slot:23b}].components."minecraft:custom_data".stardust.force_load_module run function stardust:quarry/stop_force_load
 
 # Consume energy
 scoreboard players operation @s energy.storage -= @s stardust.energy_rate

@@ -26,14 +26,14 @@ function stardust:quarry/gui/passive_slot {"slot":18}
 function stardust:quarry/gui/passive_slot {"slot":19}
 function stardust:quarry/gui/passive_slot {"slot":20}
 function stardust:quarry/gui/passive_slot {"slot":21}
-function stardust:quarry/gui/passive_slot {"slot":22}
 function stardust:quarry/gui/passive_slot {"slot":26}
 
 # Update gui
 item replace block ~ ~ ~ container.26 with minecraft:command_block[item_model="stardust:gui/quarry",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
 execute unless items block ~ ~ ~ container.25 * run item replace block ~ ~ ~ container.25 with minecraft:command_block[item_model="stardust:quarry_placeholder_configurator",item_name={"translate": "stardust.configurator_placeholder"},lore=[{"translate": "stardust.place_a_configured_quarry_configurator_here","color":"gray","italic":false},{"translate": "stardust.to_apply_its_settings_to_the_quarry","color":"gray","italic":false}],custom_data={"common_signals":{"temp":true}}]
 execute unless items block ~ ~ ~ container.24 * run item replace block ~ ~ ~ container.24 with minecraft:command_block[item_model="stardust:quarry_placeholder_module",item_name={"translate": "stardust.module_placeholder"},lore=[{"translate": "stardust.place_a_quarry_module_here","color":"gray","italic":false},{"translate": "stardust.to_apply_its_effects_to_the_quarry","color":"gray","italic":false}],custom_data={"common_signals":{"temp":true}}]
-execute unless items block ~ ~ ~ container.23 * run item replace block ~ ~ ~ container.23 with minecraft:command_block[item_model="stardust:quarry_information",item_name={"translate": "stardust.quarry_information"},lore=[{"translate": "stardust.todo","color":"gray","italic":false}],custom_data={"common_signals":{"temp":true}}]
+execute unless items block ~ ~ ~ container.23 * run item replace block ~ ~ ~ container.23 with minecraft:command_block[item_model="stardust:quarry_placeholder_force_load",item_name={"translate": "stardust.forceload_placeholder"},lore=[{"translate": "stardust.place_a_force_load_module_here","color":"gray","italic":false},{"translate": "stardust.to_apply_its_effects_to_the_quarry","color":"gray","italic":false}],custom_data={"common_signals":{"temp":true}}]
+execute unless items block ~ ~ ~ container.22 * run item replace block ~ ~ ~ container.22 with minecraft:command_block[item_model="stardust:quarry_information",item_name={"translate": "stardust.quarry_information"},lore=[{"translate": "stardust.todo","color":"gray","italic":false}],custom_data={"common_signals":{"temp":true}}]
 
 # If player nearby, update information
 execute if entity @p[distance=..6] run function stardust:quarry/update_info

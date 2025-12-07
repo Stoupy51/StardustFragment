@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:knockback_resistance.legs"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:burning_time.legs"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_leggings",

@@ -34,6 +34,13 @@
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:burning_time.mainhand"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_sword",

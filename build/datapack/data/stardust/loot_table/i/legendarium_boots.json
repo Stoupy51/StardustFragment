@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "feet",
 										"id": "stardust:knockback_resistance.feet"
+									},
+									{
+										"type": "movement_speed",
+										"amount": 0.005,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "stardust:movement_speed.feet"
 									}
 								],
 								"minecraft:item_model": "stardust:legendarium_boots",

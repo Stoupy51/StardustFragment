@@ -29,7 +29,7 @@ scoreboard players operation #max_mobs stardust.data += #per_player_mob_limit st
 
 # If under the limit, summon a wave of mobs on a random nearby player (every 5 seconds)
 scoreboard players set #modulo_divisor stardust.data 5
-scoreboard players operation #temp stardust.data = #global_seconds stardust.data
+scoreboard players operation #temp stardust.data = #global_second stardust.data
 scoreboard players operation #temp stardust.data %= #modulo_divisor stardust.data
 execute if score #temp stardust.data matches 0 if score #mob_count stardust.data < #max_mobs stardust.data at @r[gamemode=!spectator,gamemode=!creative,distance=..96] rotated ~ 0 run function stardust:mobs/stardust_pillar/summon_wave
 
@@ -40,6 +40,9 @@ execute if score #health stardust.data matches ..250 if data entity @s {NoAI:tru
 
 # Launch towards nearest player if shield is down
 execute if score #health stardust.data matches ..250 if entity @p[gamemode=!spectator,gamemode=!creative,distance=..96] run function stardust:mobs/stardust_pillar/launch_towards_player
+
+# Boss music for nearby players
+execute as @a[distance=..200] unless score @s stardust.boss_music > #global_second stardust.data at @s run function stardust:mobs/stardust_pillar/try_boss_music
 
 # Set bossbar for nearby players & update value
 bossbar set stardust:stardust_pillar visible true

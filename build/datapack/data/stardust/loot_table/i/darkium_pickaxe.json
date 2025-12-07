@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "stardust:mining_efficiency.mainhand"
+									},
+									{
+										"type": "movement_speed",
+										"amount": -0.005,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:movement_speed.mainhand"
 									}
 								],
 								"minecraft:item_model": "stardust:darkium_pickaxe",

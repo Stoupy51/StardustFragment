@@ -15,7 +15,7 @@
 										"stoupy_suno_starfall_menace": true
 									},
 									"smithed": {
-										"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"}},
+										"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"translate": "stardust.stoupy_suno_starfall_menace"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

@@ -14,6 +14,9 @@ scoreboard objectives remove stardust.damage_taken_ub
 # Rewards players
 loot give @a[distance=..200] loot stardust:entities/ultimate_dragon
 
+# End boss music (unless remaining boss)
+execute unless entity @e[tag=!stardust.dying_model,tag=stardust.ultimate_dragon] as @a[distance=..200] if score @s stardust.boss_music > #global_second stardust.data run stopsound @s record
+
 # Summon ultimate dragon egg item
 loot spawn ~ ~ ~ loot stardust:i/ultimate_dragon_egg
 execute as @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{stardust:{ultimate_dragon_egg:true}}}}}] run function stardust:mobs/ultimate_dragon/unique_drop

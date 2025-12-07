@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "chest",
 										"id": "stardust:knockback_resistance.chest"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:burning_time.chest"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_chestplate",

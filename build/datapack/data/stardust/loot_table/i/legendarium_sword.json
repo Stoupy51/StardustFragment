@@ -34,6 +34,13 @@
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "movement_speed",
+										"amount": 0.005,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:movement_speed.mainhand"
 									}
 								],
 								"minecraft:item_model": "stardust:legendarium_sword",

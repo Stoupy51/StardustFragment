@@ -15,7 +15,7 @@
 										"stoupy_suno_prismatic_devastation": true
 									},
 									"smithed": {
-										"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"}},
+										"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_suno_prismatic_devastation"},"description": {"translate": "stardust.stoupy_suno_prismatic_devastation"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

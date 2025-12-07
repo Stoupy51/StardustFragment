@@ -31,6 +31,10 @@ execute as @e[tag=stardust.dragon,predicate=stardust:random/0.2] unless score @s
 scoreboard players add @e[tag=stardust.short_lived_entity] stardust.data 1
 kill @e[tag=stardust.short_lived_entity,scores={stardust.data=5..}]
 
+# Boss music for nearby players
+execute store result score #health stardust.data run data get entity @s Health
+execute as @a[distance=..200] unless score @s stardust.boss_music > #global_second stardust.data at @s run function stardust:mobs/ultimate_dragon/try_boss_music
+
 # Prevent entities to go too far away
 execute in stardust:ultimate positioned 0 100 0 as @e[distance=256..1000] on vehicle run tp @s 0 100 0
 execute in stardust:ultimate positioned 0 100 0 run tp @e[distance=256..1000] 0 100 0

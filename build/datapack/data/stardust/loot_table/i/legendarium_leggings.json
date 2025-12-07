@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "legs",
 										"id": "stardust:knockback_resistance.legs"
+									},
+									{
+										"type": "movement_speed",
+										"amount": 0.005,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:movement_speed.legs"
 									}
 								],
 								"minecraft:item_model": "stardust:legendarium_leggings",

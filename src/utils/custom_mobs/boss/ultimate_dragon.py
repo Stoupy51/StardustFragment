@@ -29,6 +29,10 @@ def main() -> None:
 	BOSSBAR_TEXT: str = json.dumps(BOSSBAR_LIST)
 	ns: str = Mem.ctx.project_id
 
+	# Disc duration
+	PRISMATIC_DEVASTATION: int = Mem.definitions["stoupy_suno_prismatic_devastation"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	THE_ULTIMATE_ASCENSION: int = Mem.definitions["stoupy_suno_the_ultimate_ascension"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+
 	# Load function
 	write_load_file(f"""
 # Ultimate Dragon bossbar & objectives
@@ -298,6 +302,10 @@ execute as @e[tag={ns}.dragon,predicate={ns}:random/0.2] unless score @s {ns}.at
 scoreboard players add @e[tag={ns}.short_lived_entity] {ns}.data 1
 kill @e[tag={ns}.short_lived_entity,scores={{{ns}.data=5..}}]
 
+# Boss music for nearby players
+execute store result score #health {ns}.data run data get entity @s Health
+execute as @a[distance=..200] unless score @s {ns}.boss_music > #global_second {ns}.data at @s run function {ns}:mobs/ultimate_dragon/try_boss_music
+
 # Prevent entities to go too far away
 execute in {ns}:ultimate positioned 0 100 0 as @e[distance=256..1000] on vehicle run tp @s 0 100 0
 execute in {ns}:ultimate positioned 0 100 0 run tp @e[distance=256..1000] 0 100 0
@@ -543,6 +551,10 @@ execute at @n[tag={ns}.mob_entity,tag={ns}.ultimate_slave,limit=3] run playsound
 execute at @n[tag={ns}.mob_entity,tag={ns}.ultimate_slave,limit=3] run particle minecraft:explosion_emitter ~ ~ ~ 1 1 1 0.0 5 force @a[distance=..200]
 kill @n[tag={ns}.mob_entity,tag={ns}.ultimate_slave,limit=3]
 kill @e[tag={ns}.short_lived_entity,distance=..500]
+kill @e[tag={ns}.ultimate_poop,distance=..500]
+kill @e[type=dragon_fireball,distance=..500]
+kill @e[type=end_crystal,distance=..500]
+kill @e[type=fireball,distance=..500]
 
 # Die after 10 seconds (for reward)
 scoreboard players set @s {ns}.data 200
@@ -557,6 +569,9 @@ scoreboard objectives remove {ns}.damage_taken_ub
 
 # Rewards players
 loot give @a[distance=..200] loot {ns}:entities/ultimate_dragon
+
+# End boss music (unless remaining boss)
+execute unless entity @e[tag=!{ns}.dying_model,tag={ns}.ultimate_dragon] as @a[distance=..200] if score @s {ns}.boss_music > #global_second {ns}.data run stopsound @s record
 
 # Summon ultimate dragon egg item
 loot spawn ~ ~ ~ loot {ns}:i/ultimate_dragon_egg
@@ -578,6 +593,21 @@ schedule function {ns}:dimensions/ensure_built 20s
 data modify entity @s Motion set value [0.0d,0.0d,0.0d]
 data modify entity @s NoGravity set value true
 data modify entity @s Glowing set value true
+""")
+
+	# Try boss music function
+	write_function(f"{ns}:mobs/ultimate_dragon/try_boss_music", f"""
+## Choose music based on health
+# Prismatic Devastation more than half health
+execute if score #health {ns}.data matches {DRAGON_MAX_HEALTH // 2 + 1}.. run playsound {ns}:stoupy_suno_prismatic_devastation record @s ~ ~ ~ 0.2
+execute if score #health {ns}.data matches {DRAGON_MAX_HEALTH // 2 + 1}.. run scoreboard players set @s {ns}.boss_music {PRISMATIC_DEVASTATION}
+
+# The Ultimate Ascension at half health or less
+execute if score #health {ns}.data matches ..{DRAGON_MAX_HEALTH // 2} run playsound {ns}:stoupy_suno_the_ultimate_ascension record @s ~ ~ ~ 0.2
+execute if score #health {ns}.data matches ..{DRAGON_MAX_HEALTH // 2} run scoreboard players set @s {ns}.boss_music {THE_ULTIMATE_ASCENSION}
+
+# Add global seconds to boss music timer
+scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 """)
 
 	# Loot table

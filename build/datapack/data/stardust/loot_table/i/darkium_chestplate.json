@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "chest",
 										"id": "stardust:knockback_resistance.chest"
+									},
+									{
+										"type": "movement_speed",
+										"amount": -0.005,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:movement_speed.chest"
 									}
 								],
 								"minecraft:item_model": "stardust:darkium_chestplate",

@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:knockback_resistance.head"
+									},
+									{
+										"type": "movement_speed",
+										"amount": -0.005,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:movement_speed.head"
 									}
 								],
 								"minecraft:item_model": "stardust:darkium_helmet",

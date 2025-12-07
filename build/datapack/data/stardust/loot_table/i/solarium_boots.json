@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "feet",
 										"id": "stardust:knockback_resistance.feet"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "feet",
+										"id": "stardust:burning_time.feet"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_boots",

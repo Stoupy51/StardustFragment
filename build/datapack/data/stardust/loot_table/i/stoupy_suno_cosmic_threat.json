@@ -15,7 +15,7 @@
 										"stoupy_suno_cosmic_threat": true
 									},
 									"smithed": {
-										"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"}},
+										"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_suno_cosmic_threat"},"description": {"translate": "stardust.stoupy_suno_cosmic_threat"}}},
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},

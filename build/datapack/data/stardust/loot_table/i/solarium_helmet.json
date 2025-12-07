@@ -41,6 +41,13 @@
 										"operation": "add_value",
 										"slot": "head",
 										"id": "stardust:knockback_resistance.head"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:burning_time.head"
 									}
 								],
 								"minecraft:item_model": "stardust:solarium_helmet",

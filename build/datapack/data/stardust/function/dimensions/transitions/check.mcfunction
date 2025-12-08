@@ -3,7 +3,7 @@
 #
 # @executed	as @e[tag=!...,predicate=stardust:transitions/outside] & at @s
 #
-# @within	stardust:v3.5.0/second [ as @e[tag=!...,predicate=stardust:transitions/outside] & at @s ]
+# @within	stardust:v4.0.0/second [ as @e[tag=!...,predicate=stardust:transitions/outside] & at @s ]
 #
 
 # If player and transition is up, run upward transition

@@ -1,7 +1,7 @@
 
 #> stardust:dimensions/ensure_built
 #
-# @within	stardust:v3.5.0/load/confirm_load
+# @within	stardust:v4.0.0/load/confirm_load
 #			stardust:mobs/ultimate_dragon/finish_death_at_entity 20s [ scheduled ]
 #
 

@@ -499,6 +499,11 @@ def main_additions() -> None:
 		},
 	}
 
+	# Compressed cobblestone uncraft to base cobblestone
+	additions["compressed_cobblestone"][USED_FOR_CRAFTING] = [
+		{"type":"crafting_shapeless","result_count":9,"category":"misc","result":ingr_repr("minecraft:cobblestone"),"ingredients":[ingr_repr("compressed_cobblestone")]},
+	]
+
 	# Update the definitions with new data
 	for k, v in additions.items():
 		if k in Mem.definitions:

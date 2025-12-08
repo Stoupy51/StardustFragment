@@ -3,7 +3,7 @@
 #
 # @executed	as @e[tag=stardust.can_balance,scores={energy.storage=20..}] & at @s[tag=!stardust.balanced]
 #
-# @within	stardust:v3.5.0/second_5 [ as @e[tag=stardust.can_balance,scores={energy.storage=20..}] & at @s[tag=!stardust.balanced] ]
+# @within	stardust:v4.0.0/second_5 [ as @e[tag=stardust.can_balance,scores={energy.storage=20..}] & at @s[tag=!stardust.balanced] ]
 #
 
 # Stop if already balanced

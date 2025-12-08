@@ -3,7 +3,7 @@
 #
 # @executed	at @s
 #
-# @within	stardust:v3.5.0/second_5 [ at @s ]
+# @within	stardust:v4.0.0/second_5 [ at @s ]
 #
 
 execute if score #total_diamond_seed stardust.data matches 1.. if entity @s[tag=stardust.diamond_seed] unless block ~ ~-1 ~ stone run return run function stardust:custom_blocks/no_block_below {item:"diamond_seed"}

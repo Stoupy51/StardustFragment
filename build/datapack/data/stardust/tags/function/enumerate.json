@@ -1,6 +1,6 @@
 {
 	"values": [
 		"#stardust:dependencies",
-		"stardust:v3.5.0/load/enumerate"
+		"stardust:v4.0.0/load/enumerate"
 	]
 }

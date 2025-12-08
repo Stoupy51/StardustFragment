@@ -1,0 +1,34 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:lingering_potion",
+			"components": {
+				"minecraft:item_model": "stardust:ultimate_dragon_essence",
+				"minecraft:enchantment_glint_override": true
+			}
+		},
+		"title": {
+			"translate": "stardust.not_like_this"
+		},
+		"description": {
+			"translate": "stardust.loose_an_ultimate_dragon_essence_by_not_throwing_it_in_the_ultim",
+			"color": "green"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/enter_ultimate"
+}

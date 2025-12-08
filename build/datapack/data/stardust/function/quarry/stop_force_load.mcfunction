@@ -1,7 +1,7 @@
 
 #> stardust:quarry/stop_force_load
 #
-# @executed	as @e[type=#stardust:custom_blocks,tag=...,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
+# @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
 #
 # @within	stardust:custom_blocks/quarry_lv1/destroy
 #			stardust:custom_blocks/quarry_lv2/destroy

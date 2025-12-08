@@ -20,6 +20,17 @@ def setup_remaining() -> None:
 	# Boss Music
 	write_load_file(f"\n# Boss music timers\nscoreboard objectives add {ns}.boss_music dummy", prepend=True)
 
+	# Inventory Changed
+	write_advancement(f"{ns}:technical/inventory_changed", {
+		"criteria": {"requirement": {"trigger": "minecraft:inventory_changed"}},
+		"rewards": {"function": f"{ns}:advancements/inventory_changed"}
+	})
+	write_function(f"{ns}:advancements/inventory_changed", f"""
+# Revoke advancement
+advancement revoke @s only {ns}:technical/inventory_changed
+""", prepend=True)
+
+
 	# Right click detection
 	write_load_file(f"\n# Right click detection\nscoreboard objectives add {ns}.right_click minecraft.used:minecraft.warped_fungus_on_a_stick\nscoreboard objectives add {ns}.cooldown dummy\n", prepend=True)
 	write_advancement(f"{ns}:technical/right_click", {
@@ -148,7 +159,7 @@ scoreboard objectives add {ns}.travel_z dummy
 """, prepend=True)
 	write_function(f"{ns}:advancements/right_click", f"""
 # If holding a home travel staff, handle it
-execute if items entity @s weapon.mainhand *[custom_data~{{{ns}:{{home_travel_staff:true}}}}] run function {ns}:utils/home_travel_staff/right_click
+execute if items entity @s weapon.* *[custom_data~{{{ns}:{{home_travel_staff:true}}}}] run function {ns}:utils/home_travel_staff/right_click
 """)
 	write_function(f"{ns}:utils/home_travel_staff/right_click", f"""
 # Stop if already clicked recently
@@ -394,4 +405,56 @@ execute if block ~ ~ ~ bedrock run return run setblock ~ ~1 ~ minecraft:dragon_e
 # Else, move down and repeat until bedrock found or bottom reached
 execute positioned ~ ~-1 ~ run function {ns}:utils/dragon_egg_on_death/place_egg_loop
 """)
+
+	# Magnet functionality
+	write_function(f"{ns}:advancements/inventory_changed", f"""
+# If has item magnet, add tag and score
+execute if entity @s[tag={ns}.has_item_magnet] unless items entity @s weapon.offhand *[custom_data~{{{ns}:{{"item_magnet":true}}}}] run function {ns}:utils/magnet/removed
+execute if entity @s[tag=!{ns}.has_item_magnet] if items entity @s weapon.offhand *[custom_data~{{{ns}:{{"item_magnet":true}}}}] run function {ns}:utils/magnet/added
+""", prepend=True)
+	write_function(f"{ns}:utils/magnet/added", f"""
+# Add tag and score
+tag @s add {ns}.has_item_magnet
+scoreboard players add #has_item_magnet {ns}.data 1
+""")
+	write_function(f"{ns}:utils/magnet/removed", f"""
+# Remove tag and score
+tag @s remove {ns}.has_item_magnet
+scoreboard players remove #has_item_magnet {ns}.data 1
+""")
+	write_versioned_function("tick_2", f"""
+# Item Magnet functionality
+execute if score #has_item_magnet {ns}.data matches 1.. at @a[tag={ns}.has_item_magnet] run tp @e[type=item,distance=..4] ~ ~ ~
+""")
+
+	# Lucky Artifact Bag
+	write_function(f"{ns}:advancements/right_click", f"""
+# If holding a lucky artifact bag, handle it
+execute if items entity @s weapon.* *[custom_data~{{{ns}:{{"lucky_artifact_bag":true}}}}] run function {ns}:utils/lucky_artifact_bag
+""")
+	write_function(f"{ns}:utils/lucky_artifact_bag", f"""
+# Give random artifact
+loot give @s loot {ns}:random_artifact
+
+# Playsound and particles
+particle minecraft:happy_villager ~ ~1 ~ 0.5 0.5 0.5 0 20
+playsound minecraft:entity.player.levelup ambient @s ~ ~ ~ 0.5
+
+# Consume one lucky artifact bag
+clear @s *[custom_data~{{{ns}:{{lucky_artifact_bag:true}}}}] 1
+""")
+	Mem.ctx.data[ns].loot_tables["random_artifact"] = set_json_encoder(LootTable({
+		"pools": [{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{"type": "minecraft:loot_table", "weight": 5, "value": "stardust:i/health_artifact_lv1"},
+				{"type": "minecraft:loot_table", "weight": 5, "value": "stardust:i/damage_artifact_lv1"},
+				{"type": "minecraft:loot_table", "weight": 5, "value": "stardust:i/speed_artifact_lv1"},
+				{"type": "minecraft:loot_table", "value": "stardust:i/health_artifact_lv2"},
+				{"type": "minecraft:loot_table", "value": "stardust:i/damage_artifact_lv2"},
+				{"type": "minecraft:loot_table", "value": "stardust:i/speed_artifact_lv2"},
+			]
+		}]
+	}), max_level=4)
 

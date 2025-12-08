@@ -35,6 +35,10 @@
 		"subtitle": "Stardust Sniper Shot",
 		"sounds": ["stardust:stardust_sniper_shot"]
 	},
+	"starlight_infuser_consuming": {
+		"subtitle": "Starlight Infuser Consuming",
+		"sounds": ["stardust:starlight_infuser_consuming"]
+	},
 	"ultimate_sniper_shot": {
 		"subtitle": "Ultimate Sniper Shot",
 		"sounds": ["stardust:ultimate_sniper_shot"]

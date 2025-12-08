@@ -10,6 +10,7 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:max_stack_size": 1,
 								"minecraft:lore": [
 									{
 										"translate": "stardust.hold_in_offhand_to_attract_items",

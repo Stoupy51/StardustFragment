@@ -1,0 +1,16 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"bonus_rolls": 0,
+			"entries": [
+				{"type": "minecraft:loot_table","weight": 5,"value": "stardust:i/health_artifact_lv1"},
+				{"type": "minecraft:loot_table","weight": 5,"value": "stardust:i/damage_artifact_lv1"},
+				{"type": "minecraft:loot_table","weight": 5,"value": "stardust:i/speed_artifact_lv1"},
+				{"type": "minecraft:loot_table","value": "stardust:i/health_artifact_lv2"},
+				{"type": "minecraft:loot_table","value": "stardust:i/damage_artifact_lv2"},
+				{"type": "minecraft:loot_table","value": "stardust:i/speed_artifact_lv2"}
+			]
+		}
+	]
+}

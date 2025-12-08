@@ -7,6 +7,15 @@
 # Reset timer
 scoreboard players set #second_5 stardust.data -10
 
+# Apply Legendarium full armor effect
+effect give @a[tag=stardust.legendarium_full_armor] minecraft:jump_boost 6 2 true
+
+# Apply Solarium full armor effect
+effect give @a[tag=stardust.solarium_full_armor] minecraft:fire_resistance 6 0 true
+
+# Apply Darkium full armor effect
+effect give @a[tag=stardust.darkium_full_armor] minecraft:resistance 6 0 true
+
 # 5 seconds break detection (item display only)
 execute if score #total_custom_blocks stardust.data matches 1.. as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] at @s run function stardust:custom_blocks/destroy
 

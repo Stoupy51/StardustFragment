@@ -292,7 +292,7 @@ def main_additions() -> None:
 		},
 		"starlight_infuser": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
-			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:starlight_infuser_consuming"}},	# TODO: Sound
+			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:starlight_infuser_consuming"}},
 			"rarity": "epic",
 			"lore": [
 				{"text":"Summoner of the Stardust Pillar boss","italic":False,"color":"white"},

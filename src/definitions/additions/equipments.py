@@ -1,7 +1,6 @@
 
 # ruff: noqa: E501
 # Imports
-
 from stewbeet import (
 	AWAKENED_FORGE,
 	CATEGORY,
@@ -18,8 +17,10 @@ from stewbeet import (
 	TextComponent,
 	ingr_repr,
 	rainbow_gradient_text,
-	simple_cache,
+	write_function,
+	write_versioned_function,
 )
+from stouputils import simple_cache
 
 from ...utils.common import ROMAN_NUMERALS
 from .common import ORES_CONFIGS, EquipmentsConfig, VanillaEquipments
@@ -127,7 +128,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Bow crafted from stardust materials.","color":"yellow"},
 				{"text":"\nHigher durability (x2) and power (x2) than regular bows","color":"gray"},
-				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},	# TODO: Implement this behavior
+				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
@@ -278,15 +279,16 @@ def main_additions() -> None:
 					*([] if i > 0 else [{"text":"\n\nCan be obtained from Lucky Artifact Bags only","color":"gray"}]),
 				],
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(artifact_display(artifact, i)[0], ns)]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(artifact_display(artifact, i-1)[0], ns)]},
 				] if i > 0 else []
 			}
 			for artifact, lore, attribute, levels in ARTIFACTS
 			for i, level in enumerate(levels)
 		},
 		"lucky_artifact_bag": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"consumable": {"consume_seconds": 1024, "has_consume_particles": False},
+			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			"max_stack_size": 42,
+			"!max_damage": {},
 			"lore": [
 				{"text":"Right-click to open and receive a random artifact.","italic":False,"color":"gray"},
 			],
@@ -302,6 +304,7 @@ def main_additions() -> None:
 		},
 		"item_magnet": {
 			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+			"max_stack_size": 1,
 			"lore": [
 				{"text":"Hold in offhand to attract items","color":"gray","italic":False},
 				{"text":"within a 4 blocks radius","color":"gray","italic":False},
@@ -417,7 +420,6 @@ def main_additions() -> None:
 			}
 
 	# Legendarium equipments
-	# TODO: Armor Effects
 	for equipment_type in SLOTS.keys():
 		key: str = f"legendarium_{equipment_type}"
 		if key in Mem.definitions:
@@ -436,12 +438,13 @@ def main_additions() -> None:
 				],
 				WIKI_COMPONENT: [
 					{"text":"Legendarium equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["legendarium_ingot"])
+					*get_attribute_wiki(key, ORES_CONFIGS["legendarium_ingot"]),
+					{"text":"\n\nFull Set Bonus:","color":"gray"},
+					{"text":"\n- Jump Boost III","color":"blue"}
 				]
 			}
 
 	# Solarium equipments
-	# TODO: Armor Effects
 	for equipment_type in SLOTS.keys():
 		key: str = f"solarium_{equipment_type}"
 		if key in Mem.definitions:
@@ -460,12 +463,13 @@ def main_additions() -> None:
 				],
 				WIKI_COMPONENT: [
 					{"text":"Solarium equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["solarium_ingot"])
+					*get_attribute_wiki(key, ORES_CONFIGS["solarium_ingot"]),
+					{"text":"\n\nFull Set Bonus:","color":"gray"},
+					{"text":"\n- Fire Resistance","color":"blue"}
 				]
 			}
 
 	# Darkium equipments
-	# TODO: Armor Effects
 	for equipment_type in SLOTS.keys():
 		key: str = f"darkium_{equipment_type}"
 		if key in Mem.definitions:
@@ -484,9 +488,29 @@ def main_additions() -> None:
 				],
 				WIKI_COMPONENT: [
 					{"text":"Darkium equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["darkium_ingot"])
+					*get_attribute_wiki(key, ORES_CONFIGS["darkium_ingot"]),
+					{"text":"\n\nFull Set Bonus:","color":"gray"},
+					{"text":"\n- Resistance","color":"blue"}
 				]
 			}
+
+	# Full armor effects
+	for armor_type, effect, level in [
+		("legendarium", "minecraft:jump_boost", 3),
+		("solarium", "minecraft:fire_resistance", 1),
+		("darkium", "minecraft:resistance", 1),
+	]:
+		write_function(f"{ns}:advancements/inventory_changed", f"""
+# Grant {armor_type.title()} full armor effect
+scoreboard players set #success {ns}.data 0
+execute if items entity @s armor.head *[custom_data~{{{ns}:{{"{armor_type}_helmet":true}}}}] if items entity @s armor.chest *[custom_data~{{{ns}:{{"{armor_type}_chestplate":true}}}}] if items entity @s armor.legs *[custom_data~{{{ns}:{{"{armor_type}_leggings":true}}}}] if items entity @s armor.feet *[custom_data~{{{ns}:{{"{armor_type}_boots":true}}}}] run scoreboard players set #success {ns}.data 1
+execute if score #success {ns}.data matches 1 if entity @s[tag=!{ns}.{armor_type}_full_armor] run tag @s add {ns}.{armor_type}_full_armor
+execute if score #success {ns}.data matches 0 if entity @s[tag={ns}.{armor_type}_full_armor] run tag @s remove {ns}.{armor_type}_full_armor
+""")
+		write_versioned_function("second_5", f"""
+# Apply {armor_type.title()} full armor effect
+effect give @a[tag={ns}.{armor_type}_full_armor] {effect} 6 {level-1} true
+""")
 
 	# Update the definitions with new data
 	for k, v in additions.items():

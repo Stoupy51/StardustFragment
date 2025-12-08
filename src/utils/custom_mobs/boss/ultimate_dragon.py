@@ -19,7 +19,6 @@ from ...common import STARFRAG_TEXT
 
 
 # Setup boss mob: Ultimate Dragon
-# TODO: Add boss music when in range
 def main() -> None:
 	SPAWN_ANIMATION_DURATION: int = 160  # Ticks
 	DRAGON_MAX_HEALTH: int = 1024
@@ -142,9 +141,9 @@ scoreboard players operation @s {ns}.spawn_delay += #global_tick {ns}.data
 schedule function {ns}:mobs/ultimate_dragon/essence/animation_loop 1t append
 """)
 	write_function(f"{ns}:mobs/ultimate_dragon/essence/not_in_ultimate_dimension", f"""
-# Tellraw and advancement	# TODO: Implement this properly
+# Tellraw and advancement
 tellraw @a[distance=..128] ["",{STARFRAG_TEXT},{{"text":" The Ultimate Dragon Essence fizzles out in this dimension..."}}]
-advancement grant @a[distance=..128] only {ns}:visible/adventure/waste_of_essence
+advancement grant @a[distance=..128] only {ns}:visible/adventure/not_like_this
 
 # Kill the essence
 kill @s

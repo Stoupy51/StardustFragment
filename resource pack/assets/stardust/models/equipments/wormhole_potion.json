@@ -1,6 +1,0 @@
-{
-    "parent": "item/warped_fungus_on_a_stick",
-    "textures": {
-        "layer0": "stardust:item/equipments/wormhole_potion"
-    }
-}

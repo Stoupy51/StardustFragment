@@ -1,9 +1,0 @@
-{
-	"condition": "minecraft:location_check",
-	"offsetY": -1,
-	"predicate": {
-		"block": {
-			"tag": "stardust:cobblestones"
-		}
-	}
-}

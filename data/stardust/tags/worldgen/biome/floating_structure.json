@@ -1,7 +1,0 @@
-{
-	"replace": false,
-	"values": [
-		"#minecraft:has_structure/village",
-		"minecraft:the_void"
-	]
-}

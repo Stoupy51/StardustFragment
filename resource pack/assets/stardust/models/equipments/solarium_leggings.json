@@ -1,7 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "stardust:item/equipments/solarium_leggings",
-        "layer1": "stardust:item/equipments/solarium_leggings"
-    }
-}

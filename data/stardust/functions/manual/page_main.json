@@ -1,9 +1,0 @@
-'[
-	"",
-	{"text":"\\uec10","color":"white","font":"stardust:font"}
-]'
-
-
-	{"text":"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\uec01\\uec01","color":"white","font":"simplenergy:font"},
-	{"text":"Stardust Fragment Wiki","underlined":true,"color":"blue","clickEvent":{"action":"open_url","value":"https://energy-datapacks.fandom.com/wiki/"}}
-

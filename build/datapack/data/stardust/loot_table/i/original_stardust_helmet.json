@@ -20,6 +20,10 @@
 									}
 								},
 								"minecraft:max_damage": 1089,
+								"minecraft:equippable": {
+									"slot": "head",
+									"asset_id": "stardust:original_stardust"
+								},
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

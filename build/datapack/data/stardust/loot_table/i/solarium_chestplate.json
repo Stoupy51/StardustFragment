@@ -20,6 +20,10 @@
 									}
 								},
 								"minecraft:max_damage": 2275,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "stardust:solarium"
+								},
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

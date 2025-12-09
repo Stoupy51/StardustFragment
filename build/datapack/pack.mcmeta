@@ -6,10 +6,7 @@
 			94,
 			1
 		],
-		"max_format": [
-			1000,
-			0
-		]
+		"max_format": 94
 	},
 	"id": "stardust"
 }

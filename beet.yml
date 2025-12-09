@@ -64,6 +64,8 @@ pipeline:
 
 # Generic dict which holds extra information usable by plugins
 meta:
+    # List of supported Minecraft versions (used when uploading to Modrinth or Smithed)
+    mc_supports: ["1.21.11", "infinite"]
 
     # StewBeet specific configuration
     stewbeet:

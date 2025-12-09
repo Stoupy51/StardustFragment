@@ -20,6 +20,10 @@
 									}
 								},
 								"minecraft:max_damage": 2033,
+								"minecraft:equippable": {
+									"slot": "feet",
+									"asset_id": "stardust:darkium"
+								},
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

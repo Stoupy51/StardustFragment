@@ -20,6 +20,10 @@
 									}
 								},
 								"minecraft:max_damage": 2047,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "stardust:legendarium"
+								},
 								"minecraft:attribute_modifiers": [
 									{
 										"type": "armor",

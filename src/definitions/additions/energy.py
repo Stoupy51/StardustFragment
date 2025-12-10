@@ -95,7 +95,7 @@ def main_additions() -> None:
 
 	# Portal block mapping
 	PORTALS_BLOCK: dict[str, str] = {
-		"cavern_portal": "minecraft:deepslate",
+		"cavern_portal": "minecraft:cobbled_deepslate",
 		"celestial_portal": "minecraft:iron_block",
 		"stardust_portal": "minecraft:lapis_block",
 		"stardust_dungeon_portal": "minecraft:red_nether_bricks",

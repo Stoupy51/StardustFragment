@@ -243,7 +243,7 @@ def main_additions() -> None:
 		**{
 			miner_display(i)[0]: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MISC,
-				VANILLA_BLOCK: {"id":"minecraft:deepslate", "apply_facing":False},
+				VANILLA_BLOCK: {"id":"minecraft:cobbled_deepslate", "apply_facing":False},
 				"item_name": {"text": miner_display(i)[1]},
 				"rarity": "rare" if i < 5 else "epic",
 				"lore": [

@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
+	"group": "diamond_seed",
 	"ingredients": [
 		"minecraft:beetroot_seeds",
 		"minecraft:beetroot_seeds",

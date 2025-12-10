@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
+	"group": "dragon_pearl",
 	"ingredients": [
 		"minecraft:ender_pearl",
 		"minecraft:dragon_breath",

@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
+	"group": "mirror",
 	"ingredients": [
 		"minecraft:black_stained_glass",
 		"minecraft:black_stained_glass",

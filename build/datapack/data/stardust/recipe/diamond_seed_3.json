@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
+	"group": "diamond_seed",
 	"ingredients": [
 		"minecraft:melon_seeds",
 		"minecraft:melon_seeds",

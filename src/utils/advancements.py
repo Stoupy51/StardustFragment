@@ -88,7 +88,7 @@ def add_visible_advancements() -> None:
 	# Advancements list
 	background: str = f"{ns}:block/gui/advancement_background"
 	advancements: dict[str, JsonDict] = {
-		"root": {"display": {"icon": def_to_icon("stardust_fragment"), "title": STARFRAG_LIST[1], "description": {"text": "What's this little blue thing?", "color": "green"}, "background": background}},
+		"root": {"display": {"icon": def_to_icon("stardust_fragment"), "title": STARFRAG_LIST[1], "description": {"text": "What's this little blue thing?", "color": "green"}, "background": background},"criteria": criteria_item("stardust_fragment")},
 
 		## Adventure advancements
 		# Artifacts

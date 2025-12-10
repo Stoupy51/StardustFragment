@@ -353,7 +353,7 @@ def main_additions() -> None:
 		**{
 			f"{current}_cobblestone": {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-				VANILLA_BLOCK: {"id":"minecraft:deepslate" if i < 4 else "minecraft:obsidian", "apply_facing":False},
+				VANILLA_BLOCK: {"id":"minecraft:cobbled_deepslate" if i < 4 else "minecraft:obsidian", "apply_facing":False},
 				"lore": [
 					{"text":f"Equivalent to {9**(i+1):,} cobblestones","color":"gray","italic":False},
 				],

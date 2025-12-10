@@ -94,7 +94,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": {"stardust": {"root": true}}
+							"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}
 						}
 					}
 				]

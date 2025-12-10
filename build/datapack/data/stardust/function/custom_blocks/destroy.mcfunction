@@ -12,10 +12,10 @@
 
 # Check for missing vanilla blocks
 execute if score #total_vanilla_barrel stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_barrel] unless block ~ ~ ~ minecraft:barrel run return run function stardust:custom_blocks/_groups/minecraft_barrel
+execute if score #total_vanilla_cobbled_deepslate stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_cobbled_deepslate] unless block ~ ~ ~ minecraft:cobbled_deepslate run return run function stardust:custom_blocks/_groups/minecraft_cobbled_deepslate
 execute if score #total_vanilla_crimson_hyphae stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_crimson_hyphae] unless block ~ ~ ~ minecraft:crimson_hyphae run return run function stardust:custom_blocks/_groups/minecraft_crimson_hyphae
 execute if score #total_vanilla_crying_obsidian stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_crying_obsidian] unless block ~ ~ ~ minecraft:crying_obsidian run return run function stardust:custom_blocks/_groups/minecraft_crying_obsidian
 execute if score #total_vanilla_daylight_detector stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_daylight_detector] unless block ~ ~ ~ minecraft:daylight_detector run return run function stardust:custom_blocks/_groups/minecraft_daylight_detector
-execute if score #total_vanilla_deepslate stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_deepslate] unless block ~ ~ ~ minecraft:deepslate run return run function stardust:custom_blocks/_groups/minecraft_deepslate
 execute if score #total_vanilla_diamond_block stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_diamond_block] unless block ~ ~ ~ minecraft:diamond_block run return run function stardust:custom_blocks/_groups/minecraft_diamond_block
 execute if score #total_vanilla_emerald_block stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_emerald_block] unless block ~ ~ ~ minecraft:emerald_block run return run function stardust:custom_blocks/_groups/minecraft_emerald_block
 execute if score #total_vanilla_furnace stardust.data matches 1.. if entity @s[tag=stardust.vanilla.minecraft_furnace] unless block ~ ~ ~ minecraft:furnace run return run function stardust:custom_blocks/_groups/minecraft_furnace

@@ -275,7 +275,7 @@
 	"compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"category": "materials",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"lore": [{"text": "Equivalent to 9 cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Compressed compressed cobblestone.","color": "yellow"},{"text": "\nEquals to 9 cobblestones","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"}]},{"type": "crafting_shapeless","result_count": 9,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}]},{"type": "simplenergy_pulverizing","result_count": 9,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}}],
@@ -287,7 +287,7 @@
 	"double_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"category": "materials",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"lore": [{"text": "Equivalent to 81 cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Double_compressed compressed cobblestone.","color": "yellow"},{"text": "\nEquals to 81 cobblestones","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}]},{"type": "crafting_shapeless","result_count": 9,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}]},{"type": "simplenergy_pulverizing","result_count": 9,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}],
@@ -298,7 +298,7 @@
 	"triple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"category": "materials",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"lore": [{"text": "Equivalent to 729 cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Triple_compressed compressed cobblestone.","color": "yellow"},{"text": "\nEquals to 729 cobblestones","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}]},{"type": "crafting_shapeless","result_count": 9,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}]},{"type": "simplenergy_pulverizing","result_count": 9,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}}],
@@ -309,7 +309,7 @@
 	"quadruple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"category": "materials",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"lore": [{"text": "Equivalent to 6,561 cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Quadruple_compressed compressed cobblestone.","color": "yellow"},{"text": "\nEquals to 6,561 cobblestones","color": "gray"}],
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}]},{"type": "crafting_shapeless","result_count": 9,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}}]},{"type": "simplenergy_pulverizing","result_count": 9,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}}}],
@@ -719,7 +719,7 @@
 		"id": "minecraft:furnace",
 		"category": "energy",
 		"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cavern Portal","italic": false,"color": "dark_gray"},
 		"lore": [{"text": "This portal allows access to a world full of caverns!","italic": false,"color": "white"},{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 		"wiki_components": [{"text": "Portal to the Cavern dimension.","color": "yellow"},{"text": "\nThis portal allows access to a world full of caverns!","color": "gray"},{"text": "\nConsumes 20 kW of power","color": "gray"},{"text": "\nEnergy buffer of 800 kJ","color": "gray"}],
@@ -1674,7 +1674,7 @@
 	"cobblestone_miner_lv1": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.1"},
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x9 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1686,7 +1686,7 @@
 	"cobblestone_miner_lv2": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.2"},
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x36 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1698,7 +1698,7 @@
 	"cobblestone_miner_lv3": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.3"},
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x144 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1710,7 +1710,7 @@
 	"cobblestone_miner_lv4": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.4"},
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x576 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1722,7 +1722,7 @@
 	"cobblestone_miner_lv5": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.5"},
 		"rarity": "rare",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x2,304 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1734,7 +1734,7 @@
 	"cobblestone_miner_lv6": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.6"},
 		"rarity": "epic",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x9,216 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1746,7 +1746,7 @@
 	"cobblestone_miner_lv7": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.7"},
 		"rarity": "epic",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x36,864 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1758,7 +1758,7 @@
 	"cobblestone_miner_lv8": {
 		"id": "minecraft:furnace",
 		"category": "miscellaneous",
-		"vanilla_block": {"id": "minecraft:deepslate","apply_facing": false},
+		"vanilla_block": {"id": "minecraft:cobbled_deepslate","apply_facing": false},
 		"item_name": {"text": "Cobblestone Miner Lv.8"},
 		"rarity": "epic",
 		"lore": [{"text": "Only mines cobblestone directly below","color": "white","italic": false},{"text": "[x147,456 per minute]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],

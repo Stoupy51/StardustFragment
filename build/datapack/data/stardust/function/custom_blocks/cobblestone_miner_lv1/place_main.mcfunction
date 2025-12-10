@@ -6,12 +6,12 @@
 
 tag @s add stardust.placer
 setblock ~ ~ ~ air strict
-setblock ~ ~ ~ minecraft:deepslate
+setblock ~ ~ ~ minecraft:cobbled_deepslate
 execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/cobblestone_miner_lv1/place_secondary
 tag @s remove stardust.placer
 
 # Increment count scores
 scoreboard players add #total_custom_blocks stardust.data 1
-scoreboard players add #total_vanilla_deepslate stardust.data 1
+scoreboard players add #total_vanilla_cobbled_deepslate stardust.data 1
 scoreboard players add #total_cobblestone_miner_lv1 stardust.data 1
 

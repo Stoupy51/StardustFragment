@@ -13,7 +13,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.cobblestone_miner_lv8
-tag @s add stardust.vanilla.minecraft_deepslate
+tag @s add stardust.vanilla.minecraft_cobbled_deepslate
 
 # Add a custom name
 data merge entity @s {"CustomName": {"translate": "stardust.cobblestone_miner_lv_8"}}

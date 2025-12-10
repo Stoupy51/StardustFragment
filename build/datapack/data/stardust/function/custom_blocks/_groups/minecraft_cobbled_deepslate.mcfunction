@@ -1,5 +1,5 @@
 
-#> stardust:custom_blocks/_groups/minecraft_deepslate
+#> stardust:custom_blocks/_groups/minecraft_cobbled_deepslate
 #
 # @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
 #

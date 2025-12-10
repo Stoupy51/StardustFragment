@@ -24,10 +24,10 @@ scoreboard players add #total_vanilla_glass stardust.data 0
 scoreboard players add #total_vanilla_furnace stardust.data 0
 scoreboard players add #total_vanilla_emerald_block stardust.data 0
 scoreboard players add #total_vanilla_diamond_block stardust.data 0
-scoreboard players add #total_vanilla_deepslate stardust.data 0
 scoreboard players add #total_vanilla_daylight_detector stardust.data 0
 scoreboard players add #total_vanilla_crying_obsidian stardust.data 0
 scoreboard players add #total_vanilla_crimson_hyphae stardust.data 0
+scoreboard players add #total_vanilla_cobbled_deepslate stardust.data 0
 scoreboard players add #total_vanilla_barrel stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv8 stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv7 stardust.data 0
@@ -166,10 +166,10 @@ tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv6","color":"gold"}
 tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv7","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv7","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.total_cobblestone_miner_lv8","color":"gold"},{"score":{"name":"#total_cobblestone_miner_lv8","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_barrel","color":"gray"},{"score":{"name":"#total_vanilla_barrel","objective":"stardust.data"},"color":"white"}]
+tellraw @s [{"translate": "stardust.vanilla_minecraft_cobbled_deepslate","color":"gray"},{"score":{"name":"#total_vanilla_cobbled_deepslate","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_crimson_hyphae","color":"gray"},{"score":{"name":"#total_vanilla_crimson_hyphae","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_crying_obsidian","color":"gray"},{"score":{"name":"#total_vanilla_crying_obsidian","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_daylight_detector","color":"gray"},{"score":{"name":"#total_vanilla_daylight_detector","objective":"stardust.data"},"color":"white"}]
-tellraw @s [{"translate": "stardust.vanilla_minecraft_deepslate","color":"gray"},{"score":{"name":"#total_vanilla_deepslate","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_diamond_block","color":"gray"},{"score":{"name":"#total_vanilla_diamond_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_emerald_block","color":"gray"},{"score":{"name":"#total_vanilla_emerald_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [{"translate": "stardust.vanilla_minecraft_furnace","color":"gray"},{"score":{"name":"#total_vanilla_furnace","objective":"stardust.data"},"color":"white"}]

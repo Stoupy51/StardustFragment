@@ -4,7 +4,7 @@
 		"",
 		{"sprite": "stardust:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
 		" ",
-		{"translate": "stardustfragment_manual"},
+		{"translate": "stardustfragment_manual","underlined": true},
 		" ",
 		{"sprite": "stardust:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
 	],

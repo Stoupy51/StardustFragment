@@ -1,8 +1,13 @@
 {
 	"type": "minecraft:dialog_list",
-	"title": {
-		"translate": "stardustfragment_manual"
-	},
+	"title": [
+		"",
+		{"sprite": "stardust:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
+		" ",
+		{"translate": "stardustfragment_manual"},
+		" ",
+		{"sprite": "stardust:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
+	],
 	"dialogs": [
 		"stardust:manual/page_1",
 		"stardust:manual/page_2",

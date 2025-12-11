@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/legendarium_seed",
+			"sprite": "stardust:item/dialog_sprite/legendarium_seed",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/legendarium_seed",
+			"sprite": "stardust:item/dialog_sprite/legendarium_seed",
 			"shadow_color": [
 				0,
 				0,

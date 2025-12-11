@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
 			"sprite": "stardust:item/stardust_ingot",
 			"shadow_color": [

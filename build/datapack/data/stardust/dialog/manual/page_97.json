@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/original_stardust_helmet",
+			"sprite": "stardust:item/dialog_sprite/original_stardust_helmet",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/original_stardust_helmet",
+			"sprite": "stardust:item/dialog_sprite/original_stardust_helmet",
 			"shadow_color": [
 				0,
 				0,

@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/darkium_leggings",
+			"sprite": "stardust:item/dialog_sprite/darkium_leggings",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/darkium_leggings",
+			"sprite": "stardust:item/dialog_sprite/darkium_leggings",
 			"shadow_color": [
 				0,
 				0,

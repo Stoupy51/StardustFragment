@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/lucky_artifact_bag",
+			"sprite": "stardust:item/dialog_sprite/lucky_artifact_bag",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/lucky_artifact_bag",
+			"sprite": "stardust:item/dialog_sprite/lucky_artifact_bag",
 			"shadow_color": [
 				0,
 				0,

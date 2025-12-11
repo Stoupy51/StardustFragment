@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/stardust_evoker",
+			"sprite": "stardust:item/dialog_sprite/stardust_evoker",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/stardust_evoker",
+			"sprite": "stardust:item/dialog_sprite/stardust_evoker",
 			"shadow_color": [
 				0,
 				0,

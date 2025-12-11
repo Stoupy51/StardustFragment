@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/double_compressed_cobblestone",
+			"sprite": "stardust:item/dialog_sprite/double_compressed_cobblestone",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/double_compressed_cobblestone",
+			"sprite": "stardust:item/dialog_sprite/double_compressed_cobblestone",
 			"shadow_color": [
 				0,
 				0,

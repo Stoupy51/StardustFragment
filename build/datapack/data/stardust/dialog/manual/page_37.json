@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/dog_excrement",
+			"sprite": "stardust:item/dialog_sprite/dog_excrement",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/dog_excrement",
+			"sprite": "stardust:item/dialog_sprite/dog_excrement",
 			"shadow_color": [
 				0,
 				0,

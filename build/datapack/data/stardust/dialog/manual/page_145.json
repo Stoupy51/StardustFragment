@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
 			"sprite": "stardust:item/item_magnet",
 			"shadow_color": [

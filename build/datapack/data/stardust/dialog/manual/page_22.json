@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
 			"sprite": "stardust:item/awakened_stardust",
 			"shadow_color": [

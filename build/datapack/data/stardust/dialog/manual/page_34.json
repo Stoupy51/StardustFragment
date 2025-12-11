@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/dragon_pearl",
+			"sprite": "stardust:item/dialog_sprite/dragon_pearl",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/dragon_pearl",
+			"sprite": "stardust:item/dialog_sprite/dragon_pearl",
 			"shadow_color": [
 				0,
 				0,

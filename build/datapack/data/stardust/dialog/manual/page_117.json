@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
 			"sprite": "stardust:item/solarium_axe",
 			"shadow_color": [

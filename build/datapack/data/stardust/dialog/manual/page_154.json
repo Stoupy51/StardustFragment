@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/advanced_stardust_seed",
+			"sprite": "stardust:item/dialog_sprite/advanced_stardust_seed",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/advanced_stardust_seed",
+			"sprite": "stardust:item/dialog_sprite/advanced_stardust_seed",
 			"shadow_color": [
 				0,
 				0,

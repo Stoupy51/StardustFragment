@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/force_load_module",
+			"sprite": "stardust:item/dialog_sprite/force_load_module",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/force_load_module",
+			"sprite": "stardust:item/dialog_sprite/force_load_module",
 			"shadow_color": [
 				0,
 				0,

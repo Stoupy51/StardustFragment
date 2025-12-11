@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/deepslate_stardust_ore",
+			"sprite": "stardust:item/dialog_sprite/deepslate_stardust_ore",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/deepslate_stardust_ore",
+			"sprite": "stardust:item/dialog_sprite/deepslate_stardust_ore",
 			"shadow_color": [
 				0,
 				0,

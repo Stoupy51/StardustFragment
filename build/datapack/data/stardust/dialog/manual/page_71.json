@@ -1,8 +1,9 @@
 {
 	"type": "minecraft:notice",
 	"title": [
+		"",
 		{
-			"sprite": "stardust:item/silk_touch_module",
+			"sprite": "stardust:item/dialog_sprite/silk_touch_module",
 			"shadow_color": [
 				0,
 				0,
@@ -18,7 +19,7 @@
 		},
 		" ",
 		{
-			"sprite": "stardust:item/silk_touch_module",
+			"sprite": "stardust:item/dialog_sprite/silk_touch_module",
 			"shadow_color": [
 				0,
 				0,

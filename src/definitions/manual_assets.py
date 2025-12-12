@@ -13,6 +13,8 @@ def manual_assets_main() -> None:
 
 	# Copy simplenergy folder
 	simplenergy_source = "../SimplEnergy/manual_cache/items/simplenergy"
+	if not os.path.exists(simplenergy_source):
+		os.system("git clone https://github.com/Stoupy51/SimplEnergy.git ../SimplEnergy")
 	simplenergy_dest = f"{ASSETS_FOLDER}/simplenergy"
 
 	# Copy from SimplEnergy to local assets folder

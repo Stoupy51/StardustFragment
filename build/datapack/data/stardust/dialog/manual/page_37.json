@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/dialog_sprite/dog_excrement",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.dog_excrement",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/dialog_sprite/dog_excrement",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.dog_excrement",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

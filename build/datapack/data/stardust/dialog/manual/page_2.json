@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/dialog_sprite/heavy_workbench",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.heavy_workbench",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/dialog_sprite/heavy_workbench",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.heavy_workbench",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

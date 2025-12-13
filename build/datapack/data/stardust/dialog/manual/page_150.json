@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/dialog_sprite/life_crystal_block",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.life_crystal_block",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/dialog_sprite/life_crystal_block",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.life_crystal_block",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

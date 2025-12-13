@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/stardust_ingot",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust_ingot",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/stardust_ingot",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust_ingot",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

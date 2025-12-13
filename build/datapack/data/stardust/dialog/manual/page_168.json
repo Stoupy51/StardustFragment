@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/dialog_sprite/starlight_infuser",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.starlight_infuser",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/dialog_sprite/starlight_infuser",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.starlight_infuser",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

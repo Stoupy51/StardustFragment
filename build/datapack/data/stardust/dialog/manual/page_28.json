@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/dialog_sprite/solarium_fragment",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.solarium_fragment",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/dialog_sprite/solarium_fragment",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.solarium_fragment",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

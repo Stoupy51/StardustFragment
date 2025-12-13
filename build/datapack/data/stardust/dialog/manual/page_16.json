@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/compacted_stardust_shard",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.compacted_stardust_shard",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/compacted_stardust_shard",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.compacted_stardust_shard",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/stoupy_suno_the_ultimate_ascension",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.stoupy_suno_the_ultimate_ascension",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/stoupy_suno_the_ultimate_ascension",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.stoupy_suno_the_ultimate_ascension",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

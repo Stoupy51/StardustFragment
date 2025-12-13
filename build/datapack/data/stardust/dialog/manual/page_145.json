@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/item_magnet",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.item_magnet",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/item_magnet",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.item_magnet",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

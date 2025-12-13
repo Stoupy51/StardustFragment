@@ -37,7 +37,7 @@
 									},
 									{
 										"type": "mining_efficiency",
-										"amount": 2.0,
+										"amount": 20,
 										"operation": "add_value",
 										"slot": "mainhand",
 										"id": "stardust:mining_efficiency.mainhand"

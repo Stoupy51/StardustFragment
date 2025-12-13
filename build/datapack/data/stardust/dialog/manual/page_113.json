@@ -1,34 +1,9 @@
 {
 	"type": "minecraft:notice",
-	"title": [
-		"",
-		{
-			"sprite": "stardust:item/solarium_leggings",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		},
-		" ",
-		{
-			"translate": "stardust.solarium_leggings",
-			"underlined": true
-		},
-		" ",
-		{
-			"sprite": "stardust:item/solarium_leggings",
-			"shadow_color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"atlas": "minecraft:items"
-		}
-	],
+	"title": {
+		"translate": "stardust.solarium_leggings",
+		"underlined": true
+	},
 	"body": [
 		{
 			"type": "minecraft:plain_message",

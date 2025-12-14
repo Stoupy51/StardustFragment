@@ -143,7 +143,7 @@ def add_visible_advancements() -> None:
 		## Stuff advancements
 		# Compressed cobblestones
 		**{
-			f"stuff/cobblestone/{tier}": {"display": {"icon": def_to_icon(f"{tier}_cobblestone"), "title": {"text": title, "color": "aqua"}, "description": default_description(f"{tier}_cobblestone"), "frame": frame}, "parent": parent}
+			f"stuff/cobblestone/{tier}": {"display": {"icon": def_to_icon(f"{tier}_cobblestone"), "title": {"text": title, "color": "aqua"}, "description": default_description(f"{tier}_cobblestone"), "frame": frame}, "parent": parent, "criteria": criteria_item(f"{tier}_cobblestone")}
 			for i, tier in enumerate(COBBLESTONE_TIERS)
 			for title in (f"Compressing {ROMAN_NUMERALS[i]}" if i < (len(COBBLESTONE_TIERS) - 1) else "43,046,721",)
 			for frame in ("task" if i < (len(COBBLESTONE_TIERS) - 1) else "challenge",)
@@ -165,11 +165,15 @@ def add_visible_advancements() -> None:
 					"title": {"text": title, "color": "aqua"},
 					"description": {"text": desc, "color": "green"},
 				},
-				"criteria": {"requirement": {"trigger": "minecraft:inventory_changed","conditions": {
-					"items": [
-						{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"armor": {material: True}}}}}},
-						{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"tools": {material: True}}}}}},
-				]}}},
+				"criteria": {
+					"has_armor": {"trigger": "minecraft:inventory_changed","conditions": {
+						"items": [{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"armor": {material: True}}}}}}]
+					}},
+					"has_tools": {"trigger": "minecraft:inventory_changed","conditions": {
+						"items": [{"predicates": {"minecraft:custom_data": {"smithed": {"dict": {"tools": {material: True}}}}}}]
+					}}
+				},
+				"requirements": [["has_armor", "has_tools"]],
 				"parent": f"{ns}:visible/{parent}"
 			}
 			for material, title, desc, parent in [
@@ -262,7 +266,7 @@ def add_visible_advancements() -> None:
 	# For each advancement,
 	for full_path, adv in advancements.items():
 		item: str = full_path.split("/")[-1]
-		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": [["requirement"]]}
+		advancement: dict[str, Any] = {"display":{}, "criteria": {}, "requirements": []}
 
 		# If challenge, remove color from title
 		if adv.get("display", {}).get("frame") == "challenge":
@@ -281,6 +285,10 @@ def add_visible_advancements() -> None:
 		# Set the criteria, if not already set
 		if not adv.get("criteria"):
 			advancement["criteria"] = criteria_item(item)
+
+		# Set the requirements, if not already set
+		if not adv.get("requirements"):
+			advancement["requirements"] = [["requirement"]]
 
 		# Merge the advancement with specific order
 		advancement = super_merge_dict(advancement, adv)

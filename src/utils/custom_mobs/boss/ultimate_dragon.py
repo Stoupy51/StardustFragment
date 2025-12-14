@@ -613,35 +613,51 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 	Mem.ctx.data[ns].loot_tables["entities/ultimate_dragon"] = set_json_encoder(LootTable({
 		"type": "minecraft:entity",
 		"pools": [
+			*[
+				{
+					"rolls": 1,
+					"bonus_rolls": 0,
+					"entries": [
+						{
+							"type": "minecraft:loot_table",
+							"value": f"{ns}:i/{item}",
+							**({
+								"functions": [
+									{
+										"function": "minecraft:set_count",
+										"count": {
+											"type": "minecraft:uniform",
+											"min": 12,
+											"max": 24
+										}
+									}
+								]
+							}
+							# Only one octuple compressed cobblestone
+							if item != "octuple_compressed_cobblestone" else {})
+						}
+					]
+				}
+				for item in [
+					"ultimate_shard", "octuple_compressed_cobblestone",
+					"legendarium_block","solarium_block","darkium_block",
+					"ender_dragon_pearl", "stardust_core", "compacted_stardust_shard",
+				]
+			],
 			{
 				"rolls": 1,
 				"bonus_rolls": 0,
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/{item}",
-						**({
-							"functions": [
-								{
-									"function": "minecraft:set_count",
-									"count": {
-										"type": "minecraft:uniform",
-										"min": 12,
-										"max": 24
-									}
-								}
-							]
-						}
-						# Only one octuple compressed cobblestone
-						if item != "octuple_compressed_cobblestone" else {})
+						"value": f"{ns}:i/stoupy_suno_prismatic_devastation"
+					},
+					{
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stoupy_suno_the_ultimate_ascension"
 					}
 				]
 			}
-			for item in [
-				"ultimate_shard", "octuple_compressed_cobblestone",
-				"legendarium_block","solarium_block","darkium_block",
-				"ender_dragon_pearl", "stardust_core", "compacted_stardust_shard",
-			]
 		]
 	}), max_level=-1)
 

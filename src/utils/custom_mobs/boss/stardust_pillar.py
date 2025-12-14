@@ -343,6 +343,20 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 						]
 					}
 				]
+			},
+			{
+				"rolls": 1,
+				"bonus_rolls": 0,
+				"entries": [
+					{
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stoupy_suno_cosmic_threat"
+					},
+					{
+						"type": "minecraft:loot_table",
+						"value": f"{ns}:i/stoupy_suno_starfall_menace"
+					}
+				]
 			}
 		]
 	}), max_level=-1)

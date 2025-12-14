@@ -399,32 +399,82 @@ def main_additions() -> None:
 		},
 
 		# Portals
-		**{
-			portal_name: {
-				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
-				"custom_data": {"energy": {"usage":usage, "max_storage":storage}},
-				VANILLA_BLOCK: {"id": PORTALS_BLOCK[portal_name], "apply_facing":False},
-				"item_name": {"text":display_name,"italic":False,"color":color},
-				"lore": [
-					{"text":description,"italic":False,"color":"white"},
-				],
-				WIKI_COMPONENT: [
-					{"text":f"Portal to {dimension}.","color":"yellow"},
-					{"text":f"\n{description}","color":"gray"},
-					{"text":f"\nConsumes {usage} kW of power","color":"gray"},
-					{"text":f"\nEnergy buffer of {storage//1000 if storage >= 1000 else storage} {'MJ' if storage >= 1000 else 'kJ'}","color":"gray"},
-				],
-				RESULT_OF_CRAFTING: PORTAL_CRAFTING_RECIPES[portal_name],
-			}
-			for portal_name, display_name, color, description, dimension, usage, storage in [
-				("cavern_portal", "Cavern Portal", "dark_gray", "This portal allows access to a world full of caverns!", "the Cavern dimension", 20, 800),
-				("celestial_portal", "Celestial Portal", "gray", "This portal allows access to a dimension filled with floating islands", "the Celestial dimension", 20, 800),
-				("stardust_portal", "Stardust Portal", "blue", "This portal allows access to the Stardust dimension with lots of powerful mobs!", "the Stardust dimension", 100, 6000),
-				("stardust_dungeon_portal", "Stardust Dungeon Portal", "red", "This portal allows access to the dimension of the Stardust Dungeon!", "the Stardust Dungeon", 200, 12000),
-				# ("legendarium_portal", "Legendarium Portal", "red", "This portal provides access to LEGENDARIUM's dimension", "the Legendarium dimension", 250, 18000),
-				# ("solarium_portal", "Solarium Portal", "red", "This portal provides access to SOLARIUM's dimension", "the Solarium dimension", 250, 18000),
-				# ("darkium_portal", "Darkium Portal", "red", "This portal provides access to DARKIUM's dimension", "the Darkium dimension", 250, 18000),
-			]
+		"cavern_portal": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":20, "max_storage":800}},
+			VANILLA_BLOCK: {"id": PORTALS_BLOCK["cavern_portal"], "apply_facing":False},
+			"item_name": {"text":"Cavern Portal","italic":False,"color":"dark_gray"},
+			"lore": [
+				{"text":"This portal allows access to a world full of caverns!","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Portal to the Cavern dimension.","color":"yellow"},
+				{"text":"\nA world full of underground caverns and caves","color":"gray"},
+				{"text":"\n\nMobs: All vanilla mobs (scaled to 0.75x size)","color":"white"},
+				{"text":"\nLoot: Ores, minerals, gems (Coal, Copper, Iron, Gold, Lapis, Redstone, Emerald, Diamond)","color":"white"},
+				{"text":"\n\nConsumes 20 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 800 kJ","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: PORTAL_CRAFTING_RECIPES["cavern_portal"],
+		},
+		"celestial_portal": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":20, "max_storage":800}},
+			VANILLA_BLOCK: {"id": PORTALS_BLOCK["celestial_portal"], "apply_facing":False},
+			"item_name": {"text":"Celestial Portal","italic":False,"color":"gray"},
+			"lore": [
+				{"text":"This portal allows access to a dimension filled with floating islands","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Portal to the Celestial dimension.","color":"yellow"},
+				{"text":"\nA dimension filled with floating islands in the sky","color":"gray"},
+				{"text":"\n\nMobs: All vanilla mobs (1.5x health, 1.5x damage, 1.1x speed)","color":"white"},
+				{"text":"\nLoot: Iron Ingots, Stardust Fragments, Simplunium Ingots","color":"white"},
+				{"text":"\nTransitions: Fall down to return to Overworld, go up to Stardust dimension","color":"aqua"},
+				{"text":"\n\nConsumes 20 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 800 kJ","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: PORTAL_CRAFTING_RECIPES["celestial_portal"],
+		},
+		"stardust_portal": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":100, "max_storage":6000}},
+			VANILLA_BLOCK: {"id": PORTALS_BLOCK["stardust_portal"], "apply_facing":False},
+			"item_name": {"text":"Stardust Portal","italic":False,"color":"blue"},
+			"lore": [
+				{"text":"This portal allows access to the Stardust dimension with lots of powerful mobs!","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Portal to the Stardust dimension.","color":"yellow"},
+				{"text":"\nA dangerous dimension with powerful Stardust-corrupted mobs","color":"gray"},
+				{"text":"\n\nMobs: Stardust Soldier, Stardust Evoker, Stardust Bat","color":"white"},
+				{"text":"\n  - Stardust Soldier/Evoker: 2x health, 3x damage, 1.25x speed","color":"gray"},
+				{"text":"\n  - Stardust Bat: Summons lightning at nearby players (10% chance/second)","color":"gray"},
+				{"text":"\nLoot: Stardust Ingots, Stardust Essence, Netherite Scraps","color":"white"},
+				{"text":"\nTransitions: Fall down to Celestial dimension, go up for Ultimate dimension","color":"aqua"},
+				{"text":"\n\nConsumes 100 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 6 MJ","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: PORTAL_CRAFTING_RECIPES["stardust_portal"],
+		},
+		"stardust_dungeon_portal": {
+			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
+			"custom_data": {"energy": {"usage":200, "max_storage":12000}},
+			VANILLA_BLOCK: {"id": PORTALS_BLOCK["stardust_dungeon_portal"], "apply_facing":False},
+			"item_name": {"text":"Stardust Dungeon Portal","italic":False,"color":"red"},
+			"lore": [
+				{"text":"This portal allows access to the dimension of the Stardust Dungeon!","italic":False,"color":"white"},
+			],
+			WIKI_COMPONENT: [
+				{"text":"Portal to the Stardust Dungeon.","color":"yellow"},
+				{"text":"\nA pre-built dungeon dimension with extreme challenges","color":"gray"},
+				{"text":"\n\nMobs: All vanilla mobs (3x health, 4x damage, 1.35x speed)","color":"white"},
+				{"text":"\nLoot: Awakened Stardust, Stardust Essence","color":"white"},
+				{"text":"\nWarning: Extremely dangerous! Prepare well before entering","color":"red"},
+				{"text":"\n\nConsumes 200 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 12 MJ","color":"gray"},
+			],
+			RESULT_OF_CRAFTING: PORTAL_CRAFTING_RECIPES["stardust_dungeon_portal"],
 		},
 		"ultimate_portal": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: ENERGY,
@@ -435,9 +485,15 @@ def main_additions() -> None:
 				{"text":"This portal allows access to the dimension of the Ultimate Boss!","italic":False,"color":"white"},
 			],
 			WIKI_COMPONENT: [
-				{"text":"Portal to the Ultimate Boss dimension.","color":"yellow"},
-				{"text":"\nAccess to the most challenging content","color":"gray"},
-				{"text":"\nConsumes 500 kW of power","color":"gray"},
+				{"text":"Portal to the Ultimate dimension.","color":"yellow"},
+				{"text":"\nThe ultimate challenge - home of the Ultimate Dragon boss","color":"gray"},
+				{"text":"\n\nBoss: Ultimate Dragon (1024 HP)","color":"white"},
+				{"text":"\n  - Spawned by consuming Ultimate Dragon Essence","color":"gray"},
+				{"text":"\n  - Multiple powerful attacks and mechanics","color":"gray"},
+				{"text":"\n  - Summons Ultimate Slaves (512 HP each)","color":"gray"},
+				{"text":"\nTransitions: Fall down to return to Stardust dimension","color":"aqua"},
+				{"text":"\nWarning: This is the hardest content in the datapack!","color":"red"},
+				{"text":"\n\nConsumes 500 kW of power","color":"gray"},
 				{"text":"\nEnergy buffer: 24 MJ","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
@@ -461,6 +517,11 @@ def main_additions() -> None:
 				{"text":"Accelerates crop and plant growth.","color":"yellow"},
 				{"text":"\nAccelerates growth in 10-block radius","color":"gray"},
 				{"text":"\nOperates once per minute when powered","color":"gray"},
+				{"text":"\n\nEffects:","color":"aqua"},
+				{"text":"\n➤ Vanilla crops: +1 growth stage","color":"white"},
+				{"text":"\n➤ Custom growing seeds: +10 minutes of growth time","color":"white"},
+				{"text":"\n\nConsumes 100 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 12 MJ","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["EEE","DSD","FFF"],"ingredients":{"E":ingr_repr("stardust_essence"),"D":ingr_repr("dog_excrement"),"S":ingr_repr("diamond_seed"),"F":ingr_repr("stardust_frame")}},

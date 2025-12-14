@@ -47,6 +47,9 @@ def main_additions() -> None:
 				{"text":"\n➤ Health: ","color":"gray"}, {"text":"x2","color":"red"},
 				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x3","color":"red"},
 				{"text":"\n➤ Speed: ","color":"gray"}, {"text":"x1.25","color":"green"},
+				{"text":"\n\nLoot:","color":"gold"},
+				{"text":"\n➤ 1-8 Stardust Ingots (90% chance)","color":"white"},
+				{"text":"\n➤ 1 Stardust Essence (10% chance)","color":"white"},
 			],
 		},
 		"stardust_evoker": {
@@ -60,6 +63,9 @@ def main_additions() -> None:
 				{"text":"\n➤ Health: ","color":"gray"}, {"text":"x2","color":"red"},
 				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x3","color":"red"},
 				{"text":"\n➤ Speed: ","color":"gray"}, {"text":"x1.25","color":"green"},
+				{"text":"\n\nLoot:","color":"gold"},
+				{"text":"\n➤ 1-8 Stardust Ingots (90% chance)","color":"white"},
+				{"text":"\n➤ 1 Stardust Essence (10% chance)","color":"white"},
 			],
 		},
 		"stardust_bat": {
@@ -74,6 +80,10 @@ def main_additions() -> None:
 				{"text":"\n➤ Health: ","color":"gray"}, {"text":"x2","color":"red"},
 				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x3","color":"red"},
 				{"text":"\n➤ Speed: ","color":"gray"}, {"text":"x1.25","color":"green"},
+				{"text":"\n\nLoot:","color":"gold"},
+				{"text":"\n➤ 1-2 Netherite Scraps (50% chance)","color":"white"},
+				{"text":"\n➤ 1-8 Stardust Ingots (45% chance)","color":"white"},
+				{"text":"\n➤ 1 Stardust Essence (5% chance)","color":"white"},
 			],
 		},
 		"stardust_pillar": {
@@ -91,6 +101,11 @@ def main_additions() -> None:
 				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x3","color":"red"},
 				{"text":"\n➤ Scale: ","color":"gray"}, {"text":"x5","color":"green"},
 				{"text":"\n➤ NoAI: ","color":"gray"}, {"text":"true (until shield breaks)","color":"aqua"},
+				{"text":"\n\nLoot:","color":"gold"},
+				{"text":"\n➤ 2 Stardust Dungeon Keys","color":"white"},
+				{"text":"\n➤ 2-4 Compacted Stardust Shards","color":"white"},
+				{"text":"\n➤ 12-20 Diamond Blocks","color":"white"},
+				{"text":"\n➤ 12-20 Gold Blocks","color":"white"},
 			],
 		},
 		"stardust_guardian": {
@@ -107,6 +122,10 @@ def main_additions() -> None:
 				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x3","color":"red"},
 				{"text":"\n➤ Scale: ","color":"gray"}, {"text":"x1.5","color":"green"},
 				{"text":"\n➤ Knockback Resistance: ","color":"gray"}, {"text":"10","color":"aqua"},
+				{"text":"\n\nLoot:","color":"gold"},
+				{"text":"\n➤ 24-42 Awakened Stardust Blocks","color":"white"},
+				{"text":"\n➤ 2-8 Stardust Cores","color":"white"},
+				{"text":"\n➤ 16-24 Random Seeds","color":"white"},
 			],
 		},
 

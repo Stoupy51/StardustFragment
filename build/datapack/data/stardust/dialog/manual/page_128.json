@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.ultimate_bow",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/ultimate_bow",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.ultimate_bow",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/ultimate_bow",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

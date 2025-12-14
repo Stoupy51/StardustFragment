@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust_portal",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_portal",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust_portal",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_portal",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",
@@ -51,10 +76,10 @@
 				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:compacted_stardust_shard","item_name": {"translate": "stardust.compacted_stardust_shard"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_16"}},
 				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:blue_concrete","components": {}}},
 				"  \n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_stardust_dimension","color": "yellow"},{"text": "\nThis portal allows access to the Stardust dimension with lots of powerful mobs!","color": "gray"},{"translate": "stardust.consumes_100_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_of_6_mj","color": "gray"}]}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_stardust_dimension","color": "yellow"},{"translate": "stardust.a_dangerous_dimension_with_powerful_stardust_corrupted_mobs","color": "gray"},{"translate": "stardust.mobs_stardust_soldier_stardust_evoker_stardust_bat","color": "white"},{"translate": "stardust_soldier_evoker_2x_health_3x_damage_1_25x_speed","color": "gray"},{"translate": "stardust_bat_summons_lightning_at_nearby_players_10_chance_secon","color": "gray"},{"translate": "stardust.loot_stardust_ingots_stardust_essence_netherite_scraps","color": "white"},{"translate": "stardust.transitions_fall_down_to_celestial_dimension_go_up_for_ultimate_","color": "aqua"},{"translate": "stardust.consumes_100_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_6_mj","color": "gray"}]}},
 				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$芍"},{"text": "$耩"},{"text": "$芍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$肩"},{"text": "$耩"},"\"\"",{"text": "$$肫"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$芍"},{"text": "$耩"},{"text": "$芍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.blue_concrete","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.celestial_portal","color": "gray"}]}},
 				{"text": "贽\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耷"},{"text": "$耹"},{"text": "$耷"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耹"},{"text": "$肫"},{"text": "$耹"},"\"\"",{"text": "$$肭"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耷"},{"text": "$耹"},{"text": "$耷"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.awakened_stardust_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.awakened_stardust_ore","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_portal","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_stardust_dimension","color": "yellow"},{"text": "\nThis portal allows access to the Stardust dimension with lots of powerful mobs!","color": "gray"},{"translate": "stardust.consumes_100_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_of_6_mj","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_stardust_dimension","color": "yellow"},{"translate": "stardust.a_dangerous_dimension_with_powerful_stardust_corrupted_mobs","color": "gray"},{"translate": "stardust.mobs_stardust_soldier_stardust_evoker_stardust_bat","color": "white"},{"translate": "stardust_soldier_evoker_2x_health_3x_damage_1_25x_speed","color": "gray"},{"translate": "stardust_bat_summons_lightning_at_nearby_players_10_chance_secon","color": "gray"},{"translate": "stardust.loot_stardust_ingots_stardust_essence_netherite_scraps","color": "white"},{"translate": "stardust.transitions_fall_down_to_celestial_dimension_go_up_for_ultimate_","color": "aqua"},{"translate": "stardust.consumes_100_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_6_mj","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$芍"},{"text": "$耩"},{"text": "$芍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耩"},{"text": "$肩"},{"text": "$耩"},"\"\"",{"text": "$$肫"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$芍"},{"text": "$耩"},{"text": "$芍"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.blue_concrete","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.celestial_portal","color": "gray"}]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耷"},{"text": "$耹"},{"text": "$耷"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耹"},{"text": "$肫"},{"text": "$耹"},"\"\"",{"text": "$$肭"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耷"},{"text": "$耹"},{"text": "$耷"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.awakened_stardust_block","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.awakened_stardust_ore","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_portal","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"

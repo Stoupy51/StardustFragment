@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.deepslate_stardust_ore",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/deepslate_stardust_ore",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.deepslate_stardust_ore",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/deepslate_stardust_ore",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

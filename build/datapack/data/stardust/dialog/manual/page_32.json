@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.darkium_ingot",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/darkium_ingot",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.darkium_ingot",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/darkium_ingot",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

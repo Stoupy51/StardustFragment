@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.solarium_chestplate",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/solarium_chestplate",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.solarium_chestplate",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/solarium_chestplate",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",

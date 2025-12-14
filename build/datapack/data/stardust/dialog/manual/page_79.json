@@ -1,9 +1,34 @@
 {
 	"type": "minecraft:notice",
-	"title": {
-		"translate": "stardust.cavern_portal",
-		"underlined": true
-	},
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/cavern_portal",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.cavern_portal",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/cavern_portal",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
 	"body": [
 		{
 			"type": "minecraft:plain_message",
@@ -43,9 +68,9 @@
 				"  \n\"",
 				{"translate": "stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"translate": "stardustfragment","italic": true,"color": "blue"}]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:compressed_cobblestone","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
 				"  \n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"},{"text": "\nThis portal allows access to a world full of caverns!","color": "gray"},{"translate": "stardust.consumes_20_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_of_800_kj","color": "gray"}]}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"},{"translate": "stardust.a_world_full_of_underground_caverns_and_caves","color": "gray"},{"translate": "stardust.mobs_all_vanilla_mobs_scaled_to_0_75x_size","color": "white"},{"translate": "stardust.loot_ores_minerals_gems_coal_copper_iron_gold_lapis_redstone_eme","color": "white"},{"translate": "stardust.consumes_20_kw_of_power","color": "gray"},{"text": "\nEnergy buffer: 800 kJ","color": "gray"}]}},
 				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$耡"},{"text": "$聕"},"\"\"",{"text": "$$肧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"},{"text": "\nThis portal allows access to a world full of caverns!","color": "gray"},{"translate": "stardust.consumes_20_kw_of_power","color": "gray"},{"translate": "stardust.energy_buffer_of_800_kj","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"},{"translate": "stardust.a_world_full_of_underground_caverns_and_caves","color": "gray"},{"translate": "stardust.mobs_all_vanilla_mobs_scaled_to_0_75x_size","color": "white"},{"translate": "stardust.loot_ores_minerals_gems_coal_copper_iron_gold_lapis_redstone_eme","color": "white"},{"translate": "stardust.consumes_20_kw_of_power","color": "gray"},{"text": "\nEnergy buffer: 800 kJ","color": "gray"}]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$耡"},{"text": "$聕"},"\"\"",{"text": "$$肧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],

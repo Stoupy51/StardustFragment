@@ -30,7 +30,7 @@
 				"items": [
 					{
 						"predicates": {
-							"minecraft:custom_data": {"stardust": {"octuple_compressed": true}}
+							"minecraft:custom_data": {"stardust": {"octuple_compressed_cobblestone": true}}
 						}
 					}
 				]

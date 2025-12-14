@@ -20,7 +20,7 @@
 		"hidden": false
 	},
 	"criteria": {
-		"requirement": {
+		"has_armor": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
@@ -28,7 +28,14 @@
 						"predicates": {
 							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"darkium": true}}}}
 						}
-					},
+					}
+				]
+			}
+		},
+		"has_tools": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
 					{
 						"predicates": {
 							"minecraft:custom_data": {"smithed": {"dict": {"tools": {"darkium": true}}}}
@@ -40,7 +47,8 @@
 	},
 	"requirements": [
 		[
-			"requirement"
+			"has_armor",
+			"has_tools"
 		]
 	],
 	"parent": "stardust:visible/stuff/darkium_block"

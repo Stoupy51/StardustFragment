@@ -374,9 +374,9 @@ def main_additions() -> None:
 				WIKI_COMPONENT: [
 					{"text":f"Level {i+1} quarry for automated mining.","color":"yellow"},
 					{"text":f"\nMines {block_per_second} blocks per second","color":"gray"},
-					{"text":f"\nConsumes {usage} kW of power","color":"gray"},
-					{"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"},
 					{"text":"\nOnly mines blocks in a configured area","color":"gray"},
+					{"text":f"\n\nConsumes {usage} kW of power","color":"gray"},
+					{"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"},
 				],
 				RESULT_OF_CRAFTING: QUARRY_CRAFTING_RECIPES[quarry_display(i)[0]],
 			}
@@ -535,7 +535,7 @@ def main_additions() -> None:
 			WIKI_COMPONENT: [
 				{"text":"Automated mob killing machine.","color":"yellow"},
 				{"text":"\nKills mobs in a large area in front of it","color":"gray"},
-				{"text":"\nConsumes 100 kW of power","color":"gray"},
+				{"text":"\n\nConsumes 100 kW of power","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["AAA","DSD","FFF"],"ingredients":{"A":ingr_repr("awakened_stardust_block"),"D":ingr_repr("ender_dragon_pearl"),"S":ingr_repr("minecraft:wither_skeleton_skull"),"F":ingr_repr("awakened_stardust_frame")}},

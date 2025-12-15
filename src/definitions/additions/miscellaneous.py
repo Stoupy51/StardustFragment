@@ -102,7 +102,7 @@ def main_additions() -> None:
 			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
 			GROWING_SEED: {"texture_basename":"advanced_diamond","seconds":1200,"planted_on":"stone","loots":[
 				{"id":"minecraft:diamond","rolls":{"type":"minecraft:uniform","min":0,"max":24},"fortune":{"extra":0,"probability":0.1}}
-			]},
+			]},	# TODO: Add GROWING SEED to the manual (both this and the results)
 			"lore": [
 				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
 			],

@@ -4,11 +4,12 @@
 # @executed	as the player & at current position
 #
 # @within	stardust:utils/snipers/right_click with storage stardust:temp input
-#			stardust:utils/home_travel_staff/right_click {"amount":1,"max_damage":64,"item_model":"stardust:home_travel_staff"}
+#			stardust:utils/home_travel_staff/right_click with storage stardust:temp
 #
 # @args		amount (int)
 #			max_damage (int)
 #			item_model (string)
+#			slot (unknown)
 #
 
 # Compute durability usage (6 digits precision)
@@ -18,11 +19,12 @@ scoreboard players operation #temp_durability stardust.data *= #1000000 stardust
 $scoreboard players set #temp_divider stardust.data $(max_damage)
 scoreboard players operation #temp_durability stardust.data /= #temp_divider stardust.data
 execute store result storage stardust:temp use_durability double 0.000001 run scoreboard players get #temp_durability stardust.data
+$data modify storage stardust:temp slot set value "$(slot)"
 function stardust:utils/use_durability/item_modifier with storage stardust:temp
 
 # If item broke, destroy it
 execute store result score #current_damage stardust.data run data get entity @s SelectedItem.components."minecraft:damage"
 $execute if score #current_damage stardust.data matches $(max_damage).. anchored eyes run particle item{item:{id:"minecraft:stone",components:{"minecraft:item_model":"$(item_model)"}}} ^ ^ ^0.5 0 0 0 0.1 10
 $execute if score #current_damage stardust.data matches $(max_damage).. run playsound minecraft:item.shield.break ambient @a[distance=..16]
-$execute if score #current_damage stardust.data matches $(max_damage).. run item replace entity @s weapon with minecraft:air
+$execute if score #current_damage stardust.data matches $(max_damage).. run item replace entity @s $(slot) with minecraft:air
 

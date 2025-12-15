@@ -5,8 +5,9 @@
 #
 # @within	stardust:utils/use_durability/main with storage stardust:temp
 #
-# @args		use_durability (unknown)
+# @args		slot (unknown)
+#			use_durability (unknown)
 #
 
-$item modify entity @s weapon {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
+$item modify entity @s $(slot) {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
 

@@ -83,16 +83,17 @@ scoreboard players operation #temp_durability {ns}.data *= #1000000 {ns}.data
 $scoreboard players set #temp_divider {ns}.data $(max_damage)
 scoreboard players operation #temp_durability {ns}.data /= #temp_divider {ns}.data
 execute store result storage {ns}:temp use_durability double 0.000001 run scoreboard players get #temp_durability {ns}.data
+$data modify storage {ns}:temp slot set value "$(slot)"
 function {ns}:utils/use_durability/item_modifier with storage {ns}:temp
 
 # If item broke, destroy it
 execute store result score #current_damage {ns}.data run data get entity @s SelectedItem.components."minecraft:damage"
 $execute if score #current_damage {ns}.data matches $(max_damage).. anchored eyes run particle item{{item:{{id:"minecraft:stone",components:{{"minecraft:item_model":"$(item_model)"}}}}}} ^ ^ ^0.5 0 0 0 0.1 10
 $execute if score #current_damage {ns}.data matches $(max_damage).. run playsound minecraft:item.shield.break ambient @a[distance=..16]
-$execute if score #current_damage {ns}.data matches $(max_damage).. run item replace entity @s weapon with minecraft:air
+$execute if score #current_damage {ns}.data matches $(max_damage).. run item replace entity @s $(slot) with minecraft:air
 """)
 	write_function(f"{ns}:utils/use_durability/item_modifier", r"""
-$item modify entity @s weapon {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
+$item modify entity @s $(slot) {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
 """)
 
 	## Life Crystal consuming
@@ -165,6 +166,10 @@ execute if items entity @s weapon.* *[custom_data~{{{ns}:{{home_travel_staff:tru
 # Stop if already clicked recently
 execute if score @s {ns}.travel_staff_cooldown > #global_tick {ns}.data run return fail
 
+# Mainhand or offhand?
+data modify storage {ns}:temp slot set value "weapon.mainhand"
+execute unless items entity @s weapon.mainhand *[custom_data~{{{ns}:{{home_travel_staff:true}}}}] run data modify storage {ns}:temp slot set value "weapon.offhand"
+
 # Time to teleport (100 ticks)
 scoreboard players operation @s {ns}.travel_staff_cooldown = #global_tick {ns}.data
 scoreboard players add @s {ns}.travel_staff_cooldown 100
@@ -177,7 +182,10 @@ execute store result score @s {ns}.travel_y run data get entity @s Pos[1] 100
 execute store result score @s {ns}.travel_z run data get entity @s Pos[2] 100
 
 # Use 1 durability
-function {ns}:utils/use_durability/main {{"amount":1,"max_damage":{max_damage},"item_model":"{ns}:home_travel_staff"}}
+data modify storage {ns}:temp amount set value 1
+data modify storage {ns}:temp max_damage set value {max_damage}
+data modify storage {ns}:temp item_model set value "{ns}:home_travel_staff"
+function {ns}:utils/use_durability/main with storage {ns}:temp
 
 # Feedback
 playsound minecraft:block.portal.trigger ambient @s ~ ~ ~ 0.5

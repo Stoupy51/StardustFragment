@@ -4,7 +4,7 @@ import os
 import shutil
 
 from stewbeet.core import Mem
-from stouputils import super_copy
+from stouputils import retry, super_copy
 
 
 def manual_assets_main() -> None:
@@ -19,11 +19,11 @@ def manual_assets_main() -> None:
 
 	# Copy from SimplEnergy to local assets folder
 	if os.path.exists(simplenergy_source):
-		shutil.copytree(simplenergy_source, simplenergy_dest, dirs_exist_ok=True)
+		retry(shutil.copytree)(simplenergy_source, simplenergy_dest, dirs_exist_ok=True)
 
 	# Copy from assets to manual cache
 	if os.path.exists(simplenergy_dest):
-		shutil.copytree(simplenergy_dest, f"{manual_cache}/items/simplenergy", dirs_exist_ok=True)
+		retry(shutil.copytree)(simplenergy_dest, f"{manual_cache}/items/simplenergy", dirs_exist_ok=True)
 
 	# Copy cables to the manual folder
 	super_copy(f"{ASSETS_FOLDER}/stardust_cable.png", f"{manual_cache}/items/{Mem.ctx.project_id}/")

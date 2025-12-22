@@ -11,7 +11,7 @@ execute if score #rotation stardust.data matches 1 run setblock ~ ~ ~ minecraft:
 execute if score #rotation stardust.data matches 2 run setblock ~ ~ ~ minecraft:furnace[facing=east]{"CustomName": {"translate": "stardust.nether_star_generator"}}
 execute if score #rotation stardust.data matches 3 run setblock ~ ~ ~ minecraft:furnace[facing=south]{"CustomName": {"translate": "stardust.nether_star_generator"}}
 execute if score #rotation stardust.data matches 4 run setblock ~ ~ ~ minecraft:furnace[facing=west]{"CustomName": {"translate": "stardust.nether_star_generator"}}
-execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/nether_star_generator/place_secondary
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/nether_star_generator/place_secondary
 tag @s remove stardust.placer
 
 # Increment count scores

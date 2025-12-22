@@ -9,7 +9,7 @@
 tag @s add stardust.placer
 setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:moss_carpet
-execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/elite_stardust_seed/place_secondary
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/elite_stardust_seed/place_secondary
 tag @s remove stardust.placer
 
 # Increment count scores

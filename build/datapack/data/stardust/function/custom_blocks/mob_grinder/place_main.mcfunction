@@ -8,7 +8,7 @@ tag @s add stardust.placer
 function stardust:custom_blocks/get_rotation
 setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:redstone_block
-execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/mob_grinder/place_secondary
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/mob_grinder/place_secondary
 tag @s remove stardust.placer
 
 # Increment count scores

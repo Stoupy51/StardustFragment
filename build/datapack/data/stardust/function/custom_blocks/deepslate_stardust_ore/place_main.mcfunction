@@ -35,7 +35,7 @@
 tag @s add stardust.placer
 setblock ~ ~ ~ air strict
 setblock ~ ~ ~ minecraft:polished_deepslate
-execute align xyz positioned ~.5 ~.5 ~.5 summon item_display at @s run function stardust:custom_blocks/deepslate_stardust_ore/place_secondary
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/deepslate_stardust_ore/place_secondary
 tag @s remove stardust.placer
 
 # Increment count scores

@@ -358,7 +358,7 @@ def main_additions() -> None:
 					{"text":f"Equivalent to {9**(i+1):,} cobblestones","color":"gray","italic":False},
 				],
 				WIKI_COMPONENT: [
-					{"text":f"{current.capitalize()} compressed cobblestone.","color":"yellow"},
+					{"text":f"Some {current.replace('_', ' ').title()} Cobblestone is nice to have.","color":"yellow"},
 					{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
 				],
 				RESULT_OF_CRAFTING: [

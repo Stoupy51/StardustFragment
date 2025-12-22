@@ -13,7 +13,7 @@ scoreboard players set #ingot_in_block simpledrawer.io 9
 scoreboard players set #nugget_in_ingot simpledrawer.io 9
 
 # Set the material data
-data modify storage simpledrawer:io material set value {material: "stardust.awakened_stardust", material_name:'Awakened Stardust'}
+data modify storage simpledrawer:io material set value {material: "stardust.awakened_stardust", material_name:"Awakened Stardust"}
 
 # Fill the NBT with your own items
 data modify storage simpledrawer:io material.block.item set from storage stardust:items all.awakened_stardust_block

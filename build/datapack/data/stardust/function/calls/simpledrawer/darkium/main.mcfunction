@@ -13,7 +13,7 @@ scoreboard players set #ingot_in_block simpledrawer.io 9
 scoreboard players set #nugget_in_ingot simpledrawer.io 9
 
 # Set the material data
-data modify storage simpledrawer:io material set value {material: "stardust.darkium", material_name:'Darkium'}
+data modify storage simpledrawer:io material set value {material: "stardust.darkium", material_name:"Darkium"}
 
 # Fill the NBT with your own items
 data modify storage simpledrawer:io material.block.item set from storage stardust:items all.darkium_block

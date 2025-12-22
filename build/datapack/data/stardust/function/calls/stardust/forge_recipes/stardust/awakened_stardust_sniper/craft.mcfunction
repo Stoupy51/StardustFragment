@@ -22,7 +22,7 @@ kill @n[type=item,nbt={Item:{"id": "minecraft:red_mushroom_block", "count": 64}}
 
 # Spawn result item with Motion [0.0,1.0,0.0]
 tag @e[type=item] add stardust.temp
-execute align xyz run loot spawn ~.5 ~.5 ~.5 loot stardust:i/awakened_stardust_sniper
+execute align xyz run loot spawn ~0.5 ~0.5 ~0.5 loot stardust:i/awakened_stardust_sniper
 execute as @e[type=item,tag=!stardust.temp] run data merge entity @s {Motion:[0.0d,1.0d,0.0d],Glowing:true}
 tag @e[type=item,tag=stardust.temp] remove stardust.temp
 

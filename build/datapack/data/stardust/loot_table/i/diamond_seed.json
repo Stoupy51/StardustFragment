@@ -22,6 +22,15 @@
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
 								],
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Tags": [
+										"stardust.new",
+										"stardust.diamond_seed"
+									],
+									"Invisible": true,
+									"Silent": true
+								},
 								"minecraft:item_model": "stardust:diamond_seed",
 								"minecraft:item_name": {
 									"translate": "stardust.diamond_seed"
@@ -33,15 +42,6 @@
 									"smithed": {
 										"ignore": {"functionality": true,"crafting": true}
 									}
-								},
-								"minecraft:entity_data": {
-									"id": "minecraft:item_frame",
-									"Tags": [
-										"stardust.new",
-										"stardust.diamond_seed"
-									],
-									"Invisible": true,
-									"Silent": true
 								}
 							}
 						}

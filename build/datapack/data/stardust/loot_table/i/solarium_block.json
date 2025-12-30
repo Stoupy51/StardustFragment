@@ -10,6 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:solarium_block","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
 								"minecraft:custom_data": {
 									"smithed": {
 										"dict": {"block": {"solarium": true}},
@@ -29,18 +40,7 @@
 										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
 										{"translate": "stardustfragment","italic": true,"color": "blue"}
 									]
-								],
-								"minecraft:container": [
-									{
-										"slot": 0,
-										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:solarium_block","from": "stardust"}}}}}
-									}
-								],
-								"minecraft:tooltip_display": {
-									"hidden_components": [
-										"minecraft:container"
-									]
-								}
+								]
 							}
 						}
 					]

@@ -3,8 +3,19 @@
 # Imports
 from typing import Any
 
-from stewbeet import JsonDict, Mem, TextComponent, Texture, item_id_to_name, item_id_to_text_component, super_merge_dict, text_component_to_str, write_advancement
-from stouputils.print import error
+import stouputils as stp
+from stewbeet import (
+	Item,
+	JsonDict,
+	Mem,
+	TextComponent,
+	Texture,
+	item_id_to_name,
+	item_id_to_text_component,
+	super_merge_dict,
+	text_component_to_str,
+	write_advancement,
+)
 
 from ..definitions.additions.energy import QUARRY_STATS, quarry_display
 from ..definitions.additions.equipments import ARTIFACTS, SNIPER_BULLETS, artifact_display
@@ -16,7 +27,7 @@ from .common import ROMAN_NUMERALS, STARFRAG_LIST
 IMPOSSIBLE_CRITERIA: JsonDict = {"requirement": {"trigger": "minecraft:impossible", "conditions": {}}}
 
 # Utility function to convert definition to icon
-def def_to_icon(item: JsonDict | str, enchanted: bool = False) -> JsonDict:
+def def_to_icon(item: str, enchanted: bool = False) -> JsonDict:
 	""" Convert a definition to an advancement icon.
 
 	Args:
@@ -25,21 +36,18 @@ def def_to_icon(item: JsonDict | str, enchanted: bool = False) -> JsonDict:
 	Returns:
 		JsonDict: Advancement icon, e.g. {"id": "minecraft:stone", "components": {...}}
 	"""
-	if isinstance(item, str):
-		if item.startswith("minecraft:"):
-			return {"id": item}
-		data = Mem.definitions.get(item, {})
-	else:
-		data = item
-	if not data:
-		error(f"Definition for item '{item}' not found during def_to_icon conversion.")
-	icon: dict[str, Any] = {"id": data["id"]}
+	if item.startswith("minecraft:"):
+		return {"id": item}
+	if item not in Mem.definitions:
+		stp.error(f"Definition for item '{item}' not found during def_to_icon conversion.")
+	obj = Item.from_id(item, strict=False)
+	icon: dict[str, Any] = {"id": obj.base_item}
 	components_to_copy: list[str] = ["item_model", "profile"]
 	for component in components_to_copy:
-		if data.get(component):
+		if obj.components.get(component):
 			if not icon.get("components"):
 				icon["components"] = {}
-			icon["components"][f"minecraft:{component}"] = data[component]
+			icon["components"][f"minecraft:{component}"] = obj.components[component]
 	if enchanted:
 		if not icon.get("components"):
 			icon["components"] = {}

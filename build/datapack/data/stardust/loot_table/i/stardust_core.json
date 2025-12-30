@@ -10,6 +10,17 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_core","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
 								"minecraft:item_model": "stardust:stardust_core",
 								"minecraft:item_name": {
 									"translate": "stardust_core"
@@ -28,17 +39,6 @@
 									"smithed": {
 										"ignore": {"functionality": true,"crafting": true}
 									}
-								},
-								"minecraft:container": [
-									{
-										"slot": 0,
-										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_core","from": "stardust"}}}}}
-									}
-								],
-								"minecraft:tooltip_display": {
-									"hidden_components": [
-										"minecraft:container"
-									]
 								}
 							}
 						}

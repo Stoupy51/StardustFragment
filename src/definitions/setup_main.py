@@ -2,6 +2,7 @@
 # Imports
 import stouputils as stp
 from stewbeet import (
+	CATEGORY,
 	Context,
 	Mem,
 	add_energy_lore_to_definitions,
@@ -43,7 +44,13 @@ def beet_default(ctx: Context) -> None:
 	Mem.definitions = stp.sort_dict_keys(Mem.definitions, order=reorder_list)
 
 	# Sort by category (material in first position)
-	Mem.definitions = dict(sorted(Mem.definitions.items(), key=lambda x: (x[1].get("category", "") != "materials", x[1].get("category", "z"))))
+	Mem.definitions = dict(sorted(
+		Mem.definitions.items(),
+		key=lambda x: (
+			(x[1].get(CATEGORY) or "") != "materials",
+			(x[1].get(CATEGORY) or "z")
+		)
+	))
 
 	# Add final miscellaneous additions
 	main_additions_non_playable()

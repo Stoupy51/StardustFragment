@@ -791,7 +791,7 @@
 	"stardust.requires_direct_sunlight": "\nRequires direct sunlight",
 	"stardust.requires_no_power_to_operate": "\nRequires no power to operate",
 	"stardust.resin_brick": "Resin Brick",
-	"stardust.resistance": "\n- Resistance",
+	"stardust.resistance_i": "\n- Resistance I",
 	"stardust.resistance_iv_80_damage_reduction": "\n➤ Resistance IV (80% damage reduction)",
 	"stardust.respawn_anchor": "Respawn Anchor",
 	"stardust.return_to_monke": "Return to monke",

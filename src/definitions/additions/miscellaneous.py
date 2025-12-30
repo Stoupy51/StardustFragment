@@ -5,16 +5,19 @@ from typing import cast
 
 from stewbeet import (
 	CATEGORY,
-	CUSTOM_BLOCK_ALTERNATIVE,
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
-	GROWING_SEED,
 	OVERRIDE_MODEL,
 	RESULT_OF_CRAFTING,
 	VANILLA_BLOCK,
 	WIKI_COMPONENT,
+	BlockAlternative,
+	CraftingShapelessRecipe,
+	GrowingSeed,
+	GrowingSeedLoot,
 	JsonDict,
 	Mem,
+	VanillaBlock,
 	ingr_repr,
 	rainbow_gradient_text,
 )
@@ -69,177 +72,200 @@ def main_additions() -> None:
 		],
 	})
 
+	# Miscellaneous
+	BlockAlternative(
+		id="diamond_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="diamond", seconds=1200, planted_on="stone", loots=[
+			GrowingSeedLoot(id="minecraft:diamond", rolls={"type":"minecraft:uniform","min":0,"max":2}, fortune={"extra":0,"probability":0.1})
+		]), # TODO: Add GROWING SEED to the manual (both this and the results)
+		wiki_buttons=[
+			{"text":"Magical seed that grows diamonds.","color":"yellow"},
+			{"text":"\nCan only be planted on stone blocks","color":"gray"},
+			{"text":"\nGrows fully after 20 minutes","color":"gray"},
+			{"text":"\nYields 0-2 diamonds when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("minecraft:diamond")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("minecraft:diamond")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("minecraft:diamond")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("minecraft:diamond")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="advanced_diamond_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="advanced_diamond", seconds=1200, planted_on="stone", loots=[
+			GrowingSeedLoot(id="minecraft:diamond", rolls={"type":"minecraft:uniform","min":0,"max":24}, fortune={"extra":0,"probability":0.1})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows diamonds.","color":"yellow"},
+			{"text":"\nCan only be planted on stone blocks","color":"gray"},
+			{"text":"\nGrows fully after 20 minutes","color":"gray"},
+			{"text":"\nYields 0-24 diamonds when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:diamond")] + [ingr_repr("diamond_seed")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="stardust_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="stardust", seconds=480, planted_on="diamond_block", loots=[
+			GrowingSeedLoot(id="stardust_fragment", rolls={"type":"minecraft:uniform","min":3,"max":9}, fortune={"extra":0,"probability":0.5})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows stardust fragments.","color":"yellow"},
+			{"text":"\nCan only be planted on diamond blocks","color":"gray"},
+			{"text":"\nGrows fully after 8 minutes","color":"gray"},
+			{"text":"\nYields 3-9 stardust fragments when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+50% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("stardust_fragment")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("stardust_fragment")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("stardust_fragment")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("stardust_fragment")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="advanced_stardust_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="advanced_stardust", seconds=960, planted_on="diamond_block", loots=[
+			GrowingSeedLoot(id="stardust_ingot", rolls={"type":"minecraft:uniform","min":1,"max":4}, fortune={"extra":0,"probability":0.3})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows stardust ingots.","color":"yellow"},
+			{"text":"\nCan only be planted on diamond blocks","color":"gray"},
+			{"text":"\nGrows fully after 16 minutes","color":"gray"},
+			{"text":"\nYields 1-4 stardust ingots when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+30% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[ingr_repr("stardust_fragment")] + [ingr_repr("stardust_seed")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="elite_stardust_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="elite_stardust", seconds=1920, planted_on="diamond_block", loots=[
+			GrowingSeedLoot(id="stardust_essence", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.2})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows stardust essences.","color":"yellow"},
+			{"text":"\nCan only be planted on diamond blocks","color":"gray"},
+			{"text":"\nGrows fully after 32 minutes","color":"gray"},
+			{"text":"\nYields 1-2 stardust essences when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+20% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[ingr_repr("stardust_ingot")] + [ingr_repr("advanced_stardust_seed")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="legendarium_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="legendarium", seconds=3840, planted_on="emerald_block", loots=[
+			GrowingSeedLoot(id="legendarium_fragment", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.1})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows legendarium.","color":"yellow"},
+			{"text":"\nCan only be planted on emerald blocks","color":"gray"},
+			{"text":"\nGrows fully after 64 minutes","color":"gray"},
+			{"text":"\nYields 1-2 legendarium fragments when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[ingr_repr("minecraft:emerald")] + 4*[ingr_repr("minecraft:feather")] + [ingr_repr("elite_stardust_seed")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on emerald block.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="solarium_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="solarium", seconds=3840, planted_on="magma_block", loots=[
+			GrowingSeedLoot(id="solarium_fragment", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.1})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows solarium.","color":"yellow"},
+			{"text":"\nCan only be planted on magma blocks","color":"gray"},
+			{"text":"\nGrows fully after 64 minutes","color":"gray"},
+			{"text":"\nYields 1-2 solarium fragments when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[ingr_repr("minecraft:magma_cream")] + 4*[ingr_repr("minecraft:blaze_powder")] + [ingr_repr("elite_stardust_seed")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on magma block.","italic":False,"color":"gray"},
+			]
+		},
+	)
+	BlockAlternative(
+		id="darkium_seed",
+		manual_category=MISC,
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		growing_seed=GrowingSeed(texture_basename="darkium", seconds=3840, planted_on="obsidian", loots=[
+			GrowingSeedLoot(id="darkium_fragment", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.1})
+		]),
+		wiki_buttons=[
+			{"text":"Magical seed that grows darkium.","color":"yellow"},
+			{"text":"\nCan only be planted on obsidian","color":"gray"},
+			{"text":"\nGrows fully after 64 minutes","color":"gray"},
+			{"text":"\nYields 1-2 darkium fragments when harvested","color":"gray"},
+			{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[ingr_repr("minecraft:ink_sac")] + 4*[ingr_repr("minecraft:wither_rose")] + [ingr_repr("elite_stardust_seed")]),
+		],
+		components={
+			"lore": [
+				{"text":"Can only be planted on obsidian.","italic":False,"color":"gray"},
+			]
+		},
+	)
 
 	# Give Additional data for every item
 	additions: dict[str, JsonDict] = {
-
-		# Miscellaneous
-		"diamond_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"diamond","seconds":1200,"planted_on":"stone","loots":[
-				{"id":"minecraft:diamond","rolls":{"type":"minecraft:uniform","min":0,"max":2},"fortune":{"extra":0,"probability":0.1}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows diamonds.","color":"yellow"},
-				{"text":"\nCan only be planted on stone blocks","color":"gray"},
-				{"text":"\nGrows fully after 20 minutes","color":"gray"},
-				{"text":"\nYields 0-2 diamonds when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("minecraft:diamond")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("minecraft:diamond")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("minecraft:diamond")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("minecraft:diamond")]},
-			]
-		},
-		"advanced_diamond_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"advanced_diamond","seconds":1200,"planted_on":"stone","loots":[
-				{"id":"minecraft:diamond","rolls":{"type":"minecraft:uniform","min":0,"max":24},"fortune":{"extra":0,"probability":0.1}}
-			]},	# TODO: Add GROWING SEED to the manual (both this and the results)
-			"lore": [
-				{"text":"Can only be planted on stone.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows diamonds.","color":"yellow"},
-				{"text":"\nCan only be planted on stone blocks","color":"gray"},
-				{"text":"\nGrows fully after 20 minutes","color":"gray"},
-				{"text":"\nYields 0-24 diamonds when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:diamond")] + [ingr_repr("diamond_seed")]},
-			]
-		},
-		"stardust_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"stardust","seconds":480,"planted_on":"diamond_block","loots":[
-				{"id":"stardust_fragment","rolls":{"type":"minecraft:uniform","min":3,"max":9},"fortune":{"extra":0,"probability":0.5}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows stardust fragments.","color":"yellow"},
-				{"text":"\nCan only be planted on diamond blocks","color":"gray"},
-				{"text":"\nGrows fully after 8 minutes","color":"gray"},
-				{"text":"\nYields 3-9 stardust fragments when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+50% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:wheat_seeds")] + [ingr_repr("stardust_fragment")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:pumpkin_seeds")] + [ingr_repr("stardust_fragment")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:melon_seeds")] + [ingr_repr("stardust_fragment")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:beetroot_seeds")] + [ingr_repr("stardust_fragment")]},
-			]
-		},
-		"advanced_stardust_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"advanced_stardust","seconds":960,"planted_on":"diamond_block","loots":[
-				{"id":"stardust_ingot","rolls":{"type":"minecraft:uniform","min":1,"max":4},"fortune":{"extra":0,"probability":0.3}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows stardust ingots.","color":"yellow"},
-				{"text":"\nCan only be planted on diamond blocks","color":"gray"},
-				{"text":"\nGrows fully after 16 minutes","color":"gray"},
-				{"text":"\nYields 1-4 stardust ingots when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+30% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("stardust_fragment")] + [ingr_repr("stardust_seed")]},
-			]
-		},
-		"elite_stardust_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"elite_stardust","seconds":1920,"planted_on":"diamond_block","loots":[
-				{"id":"stardust_essence","rolls":{"type":"minecraft:uniform","min":1,"max":2},"fortune":{"extra":0,"probability":0.2}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on diamond block.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows stardust essences.","color":"yellow"},
-				{"text":"\nCan only be planted on diamond blocks","color":"gray"},
-				{"text":"\nGrows fully after 32 minutes","color":"gray"},
-				{"text":"\nYields 1-2 stardust essences when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+20% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("stardust_ingot")] + [ingr_repr("advanced_stardust_seed")]},
-			]
-		},
-		"legendarium_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"legendarium","seconds":3840,"planted_on":"emerald_block","loots":[
-				{"id":"legendarium_fragment","rolls":{"type":"minecraft:uniform","min":1,"max":2},"fortune":{"extra":0,"probability":0.1}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on emerald block.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows legendarium.","color":"yellow"},
-				{"text":"\nCan only be planted on emerald blocks","color":"gray"},
-				{"text":"\nGrows fully after 64 minutes","color":"gray"},
-				{"text":"\nYields 1-2 legendarium fragments when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:emerald")] + 4*[ingr_repr("minecraft:feather")] + [ingr_repr("elite_stardust_seed")]},
-			]
-		},
-		"solarium_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"solarium","seconds":3840,"planted_on":"magma_block","loots":[
-				{"id":"solarium_fragment","rolls":{"type":"minecraft:uniform","min":1,"max":2},"fortune":{"extra":0,"probability":0.1}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on magma block.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows solarium.","color":"yellow"},
-				{"text":"\nCan only be planted on magma blocks","color":"gray"},
-				{"text":"\nGrows fully after 64 minutes","color":"gray"},
-				{"text":"\nYields 1-2 solarium fragments when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:magma_cream")] + 4*[ingr_repr("minecraft:blaze_powder")] + [ingr_repr("elite_stardust_seed")]},
-			]
-		},
-		"darkium_seed": {
-			"id": CUSTOM_BLOCK_ALTERNATIVE, CATEGORY: MISC,
-			VANILLA_BLOCK: {"id":"minecraft:moss_carpet", "apply_facing":False},
-			GROWING_SEED: {"texture_basename":"darkium","seconds":3840,"planted_on":"obsidian","loots":[
-				{"id":"darkium_fragment","rolls":{"type":"minecraft:uniform","min":1,"max":2},"fortune":{"extra":0,"probability":0.1}}
-			]},
-			"lore": [
-				{"text":"Can only be planted on obsidian.","italic":False,"color":"gray"},
-			],
-			WIKI_COMPONENT: [
-				{"text":"Magical seed that grows darkium.","color":"yellow"},
-				{"text":"\nCan only be planted on obsidian","color":"gray"},
-				{"text":"\nGrows fully after 64 minutes","color":"gray"},
-				{"text":"\nYields 1-2 darkium fragments when harvested","color":"gray"},
-				{"text":"\nFortune effect applies (+10% per level)","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:ink_sac")] + 4*[ingr_repr("minecraft:wither_rose")] + [ingr_repr("elite_stardust_seed")]},
-			]
-		},
 		**{
 			miner_display(i)[0]: {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MISC,

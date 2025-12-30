@@ -2,7 +2,6 @@
 # ruff: noqa: E501
 # Imports
 from stewbeet import (
-	AWAKENED_FORGE,
 	CATEGORY,
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
@@ -12,9 +11,13 @@ from stewbeet import (
 	SLOTS,
 	VANILLA_BLOCK,
 	WIKI_COMPONENT,
+	AwakenedForgeRecipe,
+	CraftingShapelessRecipe,
+	Item,
 	JsonDict,
 	Mem,
 	TextComponent,
+	WikiButton,
 	ingr_repr,
 	rainbow_gradient_text,
 	write_function,
@@ -71,7 +74,7 @@ def get_attribute_wiki(key: str, equipment_config: EquipmentsConfig | None) -> l
 	if equipment_config is None:
 		return []
 	given_attributes: dict[str, float] = equipment_config.attributes
-	attribute_modifiers: list[JsonDict] = Mem.definitions[key].get("attribute_modifiers", [])
+	attribute_modifiers: list[JsonDict] = Mem.definitions[key]["components"].get("attribute_modifiers", [])
 
 	# Prepare base wiki component
 	durability_increase: float = equipment_config.pickaxe_durability / VanillaEquipments.PICKAXE.value[equipment_config.equivalent_to]["durability"]
@@ -131,7 +134,7 @@ def main_additions() -> None:
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
+				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("compacted_stardust_shard", count=4),
 					ingr_repr("minecraft:bow", count=1),
 					ingr_repr("minecraft:blue_stained_glass", count=4),
@@ -153,7 +156,7 @@ def main_additions() -> None:
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
+				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("minecraft:redstone_block", count=64),
 					ingr_repr("awakened_stardust_frame", count=8),
 					ingr_repr("minecraft:red_glazed_terracotta", count=64),
@@ -176,7 +179,7 @@ def main_additions() -> None:
 				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
+				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("compacted_stardust_shard", count=64),
 					ingr_repr("minecraft:dragon_egg", count=2),
 					ingr_repr("minecraft:echo_shard", count=32),
@@ -200,7 +203,7 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
+				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("compacted_stardust_shard", count=4),
 					ingr_repr("minecraft:netherite_spear", count=1),
 					ingr_repr("minecraft:blue_stained_glass", count=4),
@@ -224,7 +227,7 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
+				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("minecraft:redstone_block", count=64),
 					ingr_repr("awakened_stardust_frame", count=8),
 					ingr_repr("minecraft:red_glazed_terracotta", count=64),
@@ -249,7 +252,7 @@ def main_additions() -> None:
 				*SNIPER_BULLETS_WIKI,
 			],
 			RESULT_OF_CRAFTING: [
-				{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
+				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
 					ingr_repr("compacted_stardust_shard", count=64),
 					ingr_repr("minecraft:dragon_egg", count=2),
 					ingr_repr("minecraft:echo_shard", count=32),
@@ -393,106 +396,101 @@ def main_additions() -> None:
 	for equipment_type in SLOTS.keys():
 		key: str = f"ancient_stardust_{equipment_type}"
 		if key in Mem.definitions:
-			additions[key] = {
-				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("minecraft:black_glazed_terracotta")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]},
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("minecraft:nether_wart_block")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]},
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("minecraft:blackstone")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]},
-				],
-				WIKI_COMPONENT: [
-					{"text":"Poorly crafted stardust equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["ancient_stardust!"])
-				]
-			}
+			obj = Item.from_id(key)
+			obj.recipes = [
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("minecraft:black_glazed_terracotta")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("minecraft:nether_wart_block")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("minecraft:blackstone")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]),
+			]
+			obj.wiki_buttons = [WikiButton([
+				{"text":"Poorly crafted stardust equipment.","color":"yellow"},
+				*get_attribute_wiki(key, ORES_CONFIGS["ancient_stardust!"])
+			])]
 
 	# Original stardust equipments
 	for equipment_type in SLOTS.keys():
 		key: str = f"original_stardust_{equipment_type}"
 		if key in Mem.definitions:
-			additions[key] = {
-				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":4*[ingr_repr("stardust_core")] + 4*[ingr_repr("compacted_stardust_shard")] + [ingr_repr(f"ancient_stardust_{equipment_type}")]},
-				],
-				WIKI_COMPONENT: [
-					{"text":"Original stardust equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["original_stardust!"])
-				]
-			}
+			obj = Item.from_id(key)
+			obj.recipes = [
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("stardust_core")] + 4*[ingr_repr("compacted_stardust_shard")] + [ingr_repr(f"ancient_stardust_{equipment_type}")]),
+			]
+			obj.wiki_buttons = [WikiButton([
+				{"text":"Original stardust equipment.","color":"yellow"},
+				*get_attribute_wiki(key, ORES_CONFIGS["original_stardust!"])
+			])]
 
 	# Legendarium equipments
 	for equipment_type in SLOTS.keys():
 		key: str = f"legendarium_{equipment_type}"
 		if key in Mem.definitions:
-			additions[key] = {
-				RESULT_OF_CRAFTING: [
-					{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,1,0],scale:2}", "result_count": 1, "ingredients": [
-						ingr_repr(f"original_stardust_{equipment_type}", count=1),
-						ingr_repr("legendarium_block", count=4),
-						ingr_repr("minecraft:wind_charge", count=64),
-						ingr_repr("minecraft:feather", count=96),
-						ingr_repr("ender_dragon_pearl", count=6),
-						ingr_repr("awakened_stardust_block", count=8),
-						ingr_repr("legendarium_ingot", count=12),
-						ingr_repr("sextuple_compressed_cobblestone", count=1)
-					]},
-				],
-				WIKI_COMPONENT: [
-					{"text":"Legendarium equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["legendarium_ingot"]),
-					{"text":"\n\nFull Set Bonus:","color":"gray"},
-					{"text":"\n- Jump Boost III","color":"blue"}
-				]
-			}
+			obj = Item.from_id(key)
+			obj.recipes = [
+				AwakenedForgeRecipe(particle=r"minecraft:dust{color:[0,1,0],scale:2}", result_count=1, ingredients=[
+					ingr_repr(f"original_stardust_{equipment_type}", count=1),
+					ingr_repr("legendarium_block", count=4),
+					ingr_repr("minecraft:wind_charge", count=64),
+					ingr_repr("minecraft:feather", count=96),
+					ingr_repr("ender_dragon_pearl", count=6),
+					ingr_repr("awakened_stardust_block", count=8),
+					ingr_repr("legendarium_ingot", count=12),
+					ingr_repr("sextuple_compressed_cobblestone", count=1)
+				]),
+			]
+			obj.wiki_buttons = [WikiButton([
+				{"text":"Legendarium equipment.","color":"yellow"},
+				*get_attribute_wiki(key, ORES_CONFIGS["legendarium_ingot"]),
+				{"text":"\n\nFull Set Bonus:","color":"gray"},
+				{"text":"\n- Jump Boost III","color":"blue"}
+			])]
 
 	# Solarium equipments
 	for equipment_type in SLOTS.keys():
 		key: str = f"solarium_{equipment_type}"
 		if key in Mem.definitions:
-			additions[key] = {
-				RESULT_OF_CRAFTING: [
-					{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[1,0.5,0],scale:2}", "result_count": 1, "ingredients": [
-						ingr_repr(f"original_stardust_{equipment_type}", count=1),
-						ingr_repr("solarium_block", count=4),
-						ingr_repr("minecraft:orange_candle", count=64),
-						ingr_repr("minecraft:blaze_powder", count=96),
-						ingr_repr("ender_dragon_pearl", count=6),
-						ingr_repr("awakened_stardust_block", count=8),
-						ingr_repr("solarium_ingot", count=12),
-						ingr_repr("sextuple_compressed_cobblestone", count=1)
-					]},
-				],
-				WIKI_COMPONENT: [
-					{"text":"Solarium equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["solarium_ingot"]),
-					{"text":"\n\nFull Set Bonus:","color":"gray"},
-					{"text":"\n- Fire Resistance","color":"blue"}
-				]
-			}
+			obj = Item.from_id(key)
+			obj.recipes = [
+				AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0.5,0],scale:2}", result_count=1, ingredients=[
+					ingr_repr(f"original_stardust_{equipment_type}", count=1),
+					ingr_repr("solarium_block", count=4),
+					ingr_repr("minecraft:orange_candle", count=64),
+					ingr_repr("minecraft:blaze_powder", count=96),
+					ingr_repr("ender_dragon_pearl", count=6),
+					ingr_repr("awakened_stardust_block", count=8),
+					ingr_repr("solarium_ingot", count=12),
+					ingr_repr("sextuple_compressed_cobblestone", count=1)
+				]),
+			]
+			obj.wiki_buttons = [WikiButton([
+				{"text":"Solarium equipment.","color":"yellow"},
+				*get_attribute_wiki(key, ORES_CONFIGS["solarium_ingot"]),
+				{"text":"\n\nFull Set Bonus:","color":"gray"},
+				{"text":"\n- Fire Resistance","color":"blue"}
+			])]
 
 	# Darkium equipments
 	for equipment_type in SLOTS.keys():
 		key: str = f"darkium_{equipment_type}"
 		if key in Mem.definitions:
-			additions[key] = {
-				RESULT_OF_CRAFTING: [
-					{"type": AWAKENED_FORGE, "particle": r"minecraft:dust{color:[0,0,0],scale:2}", "result_count": 1, "ingredients": [
-						ingr_repr(f"original_stardust_{equipment_type}", count=1),
-						ingr_repr("darkium_block", count=4),
-						ingr_repr("minecraft:respawn_anchor", count=64),
-						ingr_repr("minecraft:ink_sac", count=96),
-						ingr_repr("ender_dragon_pearl", count=6),
-						ingr_repr("awakened_stardust_block", count=8),
-						ingr_repr("darkium_ingot", count=12),
-						ingr_repr("sextuple_compressed_cobblestone", count=1),
-					]},
-				],
-				WIKI_COMPONENT: [
-					{"text":"Darkium equipment.","color":"yellow"},
-					*get_attribute_wiki(key, ORES_CONFIGS["darkium_ingot"]),
-					{"text":"\n\nFull Set Bonus:","color":"gray"},
-					{"text":"\n- Resistance","color":"blue"}
-				]
-			}
+			obj = Item.from_id(key)
+			obj.recipes = [
+				AwakenedForgeRecipe(particle=r"minecraft:dust{color:[0,0,0],scale:2}", result_count=1, ingredients=[
+					ingr_repr(f"original_stardust_{equipment_type}", count=1),
+					ingr_repr("darkium_block", count=4),
+					ingr_repr("minecraft:respawn_anchor", count=64),
+					ingr_repr("minecraft:ink_sac", count=96),
+					ingr_repr("ender_dragon_pearl", count=6),
+					ingr_repr("awakened_stardust_block", count=8),
+					ingr_repr("darkium_ingot", count=12),
+					ingr_repr("sextuple_compressed_cobblestone", count=1),
+				]),
+			]
+			obj.wiki_buttons = [WikiButton([
+				{"text":"Darkium equipment.","color":"yellow"},
+				*get_attribute_wiki(key, ORES_CONFIGS["darkium_ingot"]),
+				{"text":"\n\nFull Set Bonus:","color":"gray"},
+				{"text":"\n- Resistance I","color":"blue"}
+			])]
 
 	# Full armor effects
 	for armor_type, effect, level in [

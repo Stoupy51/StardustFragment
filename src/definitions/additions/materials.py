@@ -14,13 +14,13 @@ from stewbeet import (
 	BlastingRecipe,
 	Block,
 	CraftingShapelessRecipe,
+	Ingr,
 	Item,
 	JsonDict,
 	Mem,
 	PulverizingRecipe,
 	SmeltingRecipe,
 	VanillaBlock,
-	ingr_repr,
 	rainbow_gradient_text,
 )
 
@@ -43,11 +43,11 @@ def main_additions() -> None:
 			{"text":"\nUsed to craft ingots, tools, armor, and machines","color":"gray"},
 		],
 		recipes = [
-			SmeltingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=200, ingredient=ingr_repr("stardust_ore")),
-			BlastingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=100, ingredient=ingr_repr("stardust_ore")),
-			SmeltingRecipe(result_count=4, category="misc", experience=0.8, cookingtime=200, ingredient=ingr_repr("deepslate_stardust_ore")),
-			BlastingRecipe(result_count=4, category="misc", experience=0.8, cookingtime=100, ingredient=ingr_repr("deepslate_stardust_ore")),
-			PulverizingRecipe(result_count=8, ingredient=ingr_repr("stardust_ingot")),
+			SmeltingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=200, ingredient=Ingr("stardust_ore")),
+			BlastingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=100, ingredient=Ingr("stardust_ore")),
+			SmeltingRecipe(result_count=4, category="misc", experience=0.8, cookingtime=200, ingredient=Ingr("deepslate_stardust_ore")),
+			BlastingRecipe(result_count=4, category="misc", experience=0.8, cookingtime=100, ingredient=Ingr("deepslate_stardust_ore")),
+			PulverizingRecipe(result_count=8, ingredient=Ingr("stardust_ingot")),
 		]
 	)
 
@@ -60,13 +60,13 @@ def main_additions() -> None:
 			{"text":"\nUsed in tool, armor, and machine construction","color":"gray"},
 		],
 		recipes = [
-			SmeltingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=200, ingredient=ingr_repr("nether_stardust_ore")),
-			BlastingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=100, ingredient=ingr_repr("nether_stardust_ore")),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:iron_ingot")] + 8*[ingr_repr("stardust_fragment")]),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:copper_ingot")] + 8*[ingr_repr("stardust_fragment")]),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:gold_ingot")] + 8*[ingr_repr("stardust_fragment")]),
-			CraftingShapelessRecipe(result_count=9, category="misc", ingredients=[ingr_repr("stardust_block")]),
-			PulverizingRecipe(result_count=8, ingredient=ingr_repr("stardust_essence")),
+			SmeltingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=200, ingredient=Ingr("nether_stardust_ore")),
+			BlastingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=100, ingredient=Ingr("nether_stardust_ore")),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:iron_ingot")] + 8*[Ingr("stardust_fragment")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:copper_ingot")] + 8*[Ingr("stardust_fragment")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:gold_ingot")] + 8*[Ingr("stardust_fragment")]),
+			CraftingShapelessRecipe(result_count=9, category="misc", ingredients=[Ingr("stardust_block")]),
+			PulverizingRecipe(result_count=8, ingredient=Ingr("stardust_essence")),
 		]
 	)
 
@@ -79,8 +79,8 @@ def main_additions() -> None:
 			{"text":"\nCrafted from 8 Stardust Ingots and a Diamond Block","color":"gray"},
 		],
 		recipes = [
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:diamond_block")] + 8*[ingr_repr("stardust_ingot")]),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:gold_block")] + 8*[ingr_repr("stardust_ingot")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:diamond_block")] + 8*[Ingr("stardust_ingot")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:gold_block")] + 8*[Ingr("stardust_ingot")]),
 		]
 	)
 
@@ -93,11 +93,11 @@ def main_additions() -> None:
 			{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
 		],
 		recipes = [
-			SmeltingRecipe(result_count=1, category="misc", experience=0.8, cookingtime=200, ingredient=ingr_repr("ender_stardust_ore")),
-			BlastingRecipe(result_count=1, category="misc", experience=0.8, cookingtime=100, ingredient=ingr_repr("ender_stardust_ore")),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:blaze_powder")] + 8*[ingr_repr("stardust_ingot")]),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:wind_charge")] + 8*[ingr_repr("stardust_ingot")]),
-			PulverizingRecipe(result_count=8, ingredient=ingr_repr("stardust_core")),
+			SmeltingRecipe(result_count=1, category="misc", experience=0.8, cookingtime=200, ingredient=Ingr("ender_stardust_ore")),
+			BlastingRecipe(result_count=1, category="misc", experience=0.8, cookingtime=100, ingredient=Ingr("ender_stardust_ore")),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:blaze_powder")] + 8*[Ingr("stardust_ingot")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:wind_charge")] + 8*[Ingr("stardust_ingot")]),
+			PulverizingRecipe(result_count=8, ingredient=Ingr("stardust_core")),
 		]
 	)
 
@@ -111,8 +111,8 @@ def main_additions() -> None:
 			{"text":"\nUsed in top-tier crafting recipes","color":"gray"},
 		],
 		recipes = [
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:crafter")] + 8*[ingr_repr("stardust_essence")]),
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:observer")] + 8*[ingr_repr("stardust_essence")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:crafter")] + 8*[Ingr("stardust_essence")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:observer")] + 8*[Ingr("stardust_essence")]),
 		]
 	)
 
@@ -125,7 +125,7 @@ def main_additions() -> None:
 			{"text":"\nUsed in high-tier crafting recipes","color":"gray"},
 		],
 		recipes = [
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:amethyst_shard")] + 8*[ingr_repr("stardust_block")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:amethyst_shard")] + 8*[Ingr("stardust_block")]),
 		]
 	)
 
@@ -137,7 +137,7 @@ def main_additions() -> None:
 		{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 	]
 	obj.recipes = [
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("awakened_stardust_block")),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("awakened_stardust_block")),
 	]
 
 	obj = Block.from_id("awakened_stardust_block")
@@ -149,7 +149,7 @@ def main_additions() -> None:
 		{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("quadruple_compressed_cobblestone")] + 8*[ingr_repr("awakened_stardust")]),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("quadruple_compressed_cobblestone")] + 8*[Ingr("awakened_stardust")]),
 	]
 
 	Item(
@@ -166,8 +166,8 @@ def main_additions() -> None:
 			{"text":"\nCooldown is 0.5 seconds instead of 1 second","color":"gray"},
 		],
 		recipes = [
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("minecraft:ender_pearl")] + 8*[ingr_repr("minecraft:dragon_breath")]),
-			PulverizingRecipe(result_count=1, ingredient=ingr_repr("ender_dragon_pearl")),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:ender_pearl")] + 8*[Ingr("minecraft:dragon_breath")]),
+			PulverizingRecipe(result_count=1, ingredient=Ingr("ender_dragon_pearl")),
 		]
 	)
 
@@ -186,7 +186,7 @@ def main_additions() -> None:
 			{"text":"\nUsed in high-tier crafting","color":"gray"},
 		],
 		recipes = [
-			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("dragon_pearl")] + 8*[ingr_repr("minecraft:ender_pearl")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("dragon_pearl")] + 8*[Ingr("minecraft:ender_pearl")]),
 		]
 	)
 
@@ -199,7 +199,7 @@ def main_additions() -> None:
 		{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 	]
 	obj.recipes = [
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("legendarium_ingot")),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("legendarium_ingot")),
 	]
 
 	obj = Item.from_id("legendarium_ingot")
@@ -210,8 +210,8 @@ def main_additions() -> None:
 		{"text":"\nUsed for legendarium-tier equipment","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("stardust_ingot")] + 8*[ingr_repr("legendarium_fragment")]),
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("legendarium_block")),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_ingot")] + 8*[Ingr("legendarium_fragment")]),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("legendarium_block")),
 	]
 
 	obj = Block.from_id("legendarium_block")
@@ -222,7 +222,7 @@ def main_additions() -> None:
 		{"text":"\nCrafted from 8Legendarium Ingots","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("stardust_block")] + 8*[ingr_repr("legendarium_ingot")]),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_block")] + 8*[Ingr("legendarium_ingot")]),
 	]
 
 	obj = Item.from_id("solarium_fragment")
@@ -234,7 +234,7 @@ def main_additions() -> None:
 		{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 	]
 	obj.recipes = [
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("solarium_ingot")),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("solarium_ingot")),
 	]
 
 	obj = Item.from_id("solarium_ingot")
@@ -245,8 +245,8 @@ def main_additions() -> None:
 		{"text":"\nUsed for solarium-tier equipment","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("stardust_ingot")] + 8*[ingr_repr("solarium_fragment")]),
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("solarium_block")),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_ingot")] + 8*[Ingr("solarium_fragment")]),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("solarium_block")),
 	]
 
 	obj = Block.from_id("solarium_block")
@@ -257,7 +257,7 @@ def main_additions() -> None:
 		{"text":"\nCrafted from 8Solarium Ingots","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("stardust_block")] + 8*[ingr_repr("solarium_ingot")]),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_block")] + 8*[Ingr("solarium_ingot")]),
 	]
 
 	obj = Item.from_id("darkium_fragment")
@@ -269,7 +269,7 @@ def main_additions() -> None:
 		{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 	]
 	obj.recipes = [
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("darkium_ingot")),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("darkium_ingot")),
 	]
 
 	obj = Item.from_id("darkium_ingot")
@@ -280,8 +280,8 @@ def main_additions() -> None:
 		{"text":"\nUsed for darkium-tier equipment","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("stardust_ingot")] + 8*[ingr_repr("darkium_fragment")]),
-		PulverizingRecipe(result_count=8, ingredient=ingr_repr("darkium_block")),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_ingot")] + 8*[Ingr("darkium_fragment")]),
+		PulverizingRecipe(result_count=8, ingredient=Ingr("darkium_block")),
 	]
 
 	obj = Block.from_id("darkium_block")
@@ -292,7 +292,7 @@ def main_additions() -> None:
 		{"text":"\nCrafted from 8Darkium Ingots","color":"gray"},
 	]
 	obj.recipes = [
-		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[ingr_repr("stardust_block")] + 8*[ingr_repr("darkium_ingot")]),
+		CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_block")] + 8*[Ingr("darkium_ingot")]),
 	]
 
 
@@ -362,9 +362,9 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-					ingr_repr("minecraft:popped_chorus_fruit"),ingr_repr("stardust_core"),ingr_repr("minecraft:echo_shard"),
-					ingr_repr("legendarium_block"),ingr_repr("compacted_stardust_shard"),ingr_repr("solarium_block"),
-					ingr_repr("minecraft:resin_brick"),ingr_repr("darkium_block"),ingr_repr("minecraft:turtle_scute"),
+					Ingr("minecraft:popped_chorus_fruit"),Ingr("stardust_core"),Ingr("minecraft:echo_shard"),
+					Ingr("legendarium_block"),Ingr("compacted_stardust_shard"),Ingr("solarium_block"),
+					Ingr("minecraft:resin_brick"),Ingr("darkium_block"),Ingr("minecraft:turtle_scute"),
 				]},
 			]
 		},
@@ -377,7 +377,7 @@ def main_additions() -> None:
 				{"text":"\nEvery wolf lays an excrement item every 5-10 minutes","color":"gray"},
 			],
 			USED_FOR_CRAFTING: [
-				{"type":"simplenergy_pulverizing","result_count":{"type":"minecraft:uniform","min":4,"max":6},"result":ingr_repr("minecraft:bone_meal")},
+				{"type":"simplenergy_pulverizing","result_count":{"type":"minecraft:uniform","min":4,"max":6},"result":Ingr("minecraft:bone_meal")},
 			]
 		},
 		**{
@@ -392,10 +392,10 @@ def main_additions() -> None:
 					{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
 				],
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count": 1,"category":"misc","ingredients":9*[ingr_repr(f"{prev}_cobblestone") if prev else ingr_repr("minecraft:cobblestone")]},
+					{"type":"crafting_shapeless","result_count": 1,"category":"misc","ingredients":9*[Ingr(f"{prev}_cobblestone") if prev else Ingr("minecraft:cobblestone")]},
 				] + ([
-					{"type":"crafting_shapeless","result_count": 9,"category":"misc","ingredients":[ingr_repr(f"{next_t}_cobblestone")]},
-					{"type":"simplenergy_pulverizing","result_count": 9,"ingredient":ingr_repr(f"{next_t}_cobblestone")},
+					{"type":"crafting_shapeless","result_count": 9,"category":"misc","ingredients":[Ingr(f"{next_t}_cobblestone")]},
+					{"type":"simplenergy_pulverizing","result_count": 9,"ingredient":Ingr(f"{next_t}_cobblestone")},
 				] if next_t else [])
 			}
 			for i, (prev, current, next_t) in enumerate(zip([None, *COBBLESTONE_TIERS[:-1]], COBBLESTONE_TIERS, [*COBBLESTONE_TIERS[1:], None], strict=True))
@@ -408,8 +408,8 @@ def main_additions() -> None:
 				{"text":"\nUsed as a base for most advanced machines","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CMC","SSS"],"ingredients":{"B":ingr_repr("minecraft:blue_glazed_terracotta"),"C":ingr_repr("compacted_stardust_shard"),"M":ingr_repr("machine_block", "simplenergy"),"S":ingr_repr("stardust_block")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CMC","BBB"],"ingredients":{"B":ingr_repr("minecraft:blue_glazed_terracotta"),"C":ingr_repr("compacted_stardust_shard"),"M":ingr_repr("machine_block", "simplenergy"),"S":ingr_repr("stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CMC","SSS"],"ingredients":{"B":Ingr("minecraft:blue_glazed_terracotta"),"C":Ingr("compacted_stardust_shard"),"M":Ingr("machine_block", "simplenergy"),"S":Ingr("stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CMC","BBB"],"ingredients":{"B":Ingr("minecraft:blue_glazed_terracotta"),"C":Ingr("compacted_stardust_shard"),"M":Ingr("machine_block", "simplenergy"),"S":Ingr("stardust_block")}},
 			]
 		},
 		"awakened_stardust_frame": {
@@ -421,8 +421,8 @@ def main_additions() -> None:
 				{"text":"\nUsed for top-tier machines","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","ASA","BBB"],"ingredients":{"N":ingr_repr("minecraft:nether_wart_block"),"A":ingr_repr("awakened_stardust"),"S":ingr_repr("stardust_frame"),"B":ingr_repr("awakened_stardust_block")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","ASA","NNN"],"ingredients":{"N":ingr_repr("minecraft:nether_wart_block"),"A":ingr_repr("awakened_stardust"),"S":ingr_repr("stardust_frame"),"B":ingr_repr("awakened_stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","ASA","BBB"],"ingredients":{"N":Ingr("minecraft:nether_wart_block"),"A":Ingr("awakened_stardust"),"S":Ingr("stardust_frame"),"B":Ingr("awakened_stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","ASA","NNN"],"ingredients":{"N":Ingr("minecraft:nether_wart_block"),"A":Ingr("awakened_stardust"),"S":Ingr("stardust_frame"),"B":Ingr("awakened_stardust_block")}},
 			]
 		},
 		"ultimate_frame": {
@@ -435,8 +435,8 @@ def main_additions() -> None:
 				{"text":"\nUsed for final-tier machines","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD","UAU","PPP"],"ingredients":{"L":ingr_repr("legendarium_block"),"S":ingr_repr("solarium_block"),"D":ingr_repr("darkium_block"),"U":ingr_repr("ultimate_shard"),"A":ingr_repr("awakened_stardust_frame"),"P":ingr_repr("minecraft:stripped_pale_oak_wood")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["PPP","UAU","LSD"],"ingredients":{"L":ingr_repr("legendarium_block"),"S":ingr_repr("solarium_block"),"D":ingr_repr("darkium_block"),"U":ingr_repr("ultimate_shard"),"A":ingr_repr("awakened_stardust_frame"),"P":ingr_repr("minecraft:stripped_pale_oak_wood")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD","UAU","PPP"],"ingredients":{"L":Ingr("legendarium_block"),"S":Ingr("solarium_block"),"D":Ingr("darkium_block"),"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_frame"),"P":Ingr("minecraft:stripped_pale_oak_wood")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["PPP","UAU","LSD"],"ingredients":{"L":Ingr("legendarium_block"),"S":Ingr("solarium_block"),"D":Ingr("darkium_block"),"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_frame"),"P":Ingr("minecraft:stripped_pale_oak_wood")}},
 			]
 		},
 		"mirror": {
@@ -446,8 +446,8 @@ def main_additions() -> None:
 				{"text":"\nUsed for upgrading solar panels","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:black_stained_glass")] + [ingr_repr("minecraft:quartz_block")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[ingr_repr("minecraft:tinted_glass")] + [ingr_repr("minecraft:quartz_block")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[Ingr("minecraft:black_stained_glass")] + [Ingr("minecraft:quartz_block")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[Ingr("minecraft:tinted_glass")] + [Ingr("minecraft:quartz_block")]},
 			]
 		},
 		"stardust_photovoltaic_cell": {
@@ -457,7 +457,7 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","MMM"," I "],"ingredients":{"F":ingr_repr("stardust_fragment"),"M":ingr_repr("mirror"),"I":ingr_repr("stardust_ingot")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","MMM"," I "],"ingredients":{"F":Ingr("stardust_fragment"),"M":Ingr("mirror"),"I":Ingr("stardust_ingot")}},
 			]
 		},
 		"awakened_stardust_photovoltaic_cell": {
@@ -467,8 +467,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","SSS","FFF"],"ingredients":{"F":ingr_repr("awakened_stardust"),"S":ingr_repr("stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FSF","FSF","FSF"],"ingredients":{"F":ingr_repr("awakened_stardust"),"S":ingr_repr("stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","SSS","FFF"],"ingredients":{"F":Ingr("awakened_stardust"),"S":Ingr("stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FSF","FSF","FSF"],"ingredients":{"F":Ingr("awakened_stardust"),"S":Ingr("stardust_photovoltaic_cell")}},
 			]
 		},
 		"legendarium_photovoltaic_cell": {
@@ -478,8 +478,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("legendarium_ingot"),"A":ingr_repr("awakened_stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("legendarium_ingot"),"A":ingr_repr("awakened_stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":Ingr("legendarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":Ingr("legendarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
 			]
 		},
 		"solarium_photovoltaic_cell": {
@@ -489,8 +489,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("solarium_ingot"),"A":ingr_repr("awakened_stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("solarium_ingot"),"A":ingr_repr("awakened_stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":Ingr("solarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":Ingr("solarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
 			]
 		},
 		"darkium_photovoltaic_cell": {
@@ -500,8 +500,8 @@ def main_additions() -> None:
 				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":ingr_repr("darkium_ingot"),"A":ingr_repr("awakened_stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":ingr_repr("darkium_ingot"),"A":ingr_repr("awakened_stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":Ingr("darkium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":Ingr("darkium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
 			]
 		},
 		"ultimate_photovoltaic_cell": {
@@ -513,8 +513,8 @@ def main_additions() -> None:
 				{"text":"\nCrafted from ultimate materials","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD"," U "],"ingredients":{"L":ingr_repr("legendarium_photovoltaic_cell"),"S":ingr_repr("solarium_photovoltaic_cell"),"D":ingr_repr("darkium_photovoltaic_cell"),"U":ingr_repr("ultimate_shard")}},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[ingr_repr("legendarium_photovoltaic_cell"),ingr_repr("solarium_photovoltaic_cell"),ingr_repr("darkium_photovoltaic_cell"),ingr_repr("ultimate_shard")]},
+				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD"," U "],"ingredients":{"L":Ingr("legendarium_photovoltaic_cell"),"S":Ingr("solarium_photovoltaic_cell"),"D":Ingr("darkium_photovoltaic_cell"),"U":Ingr("ultimate_shard")}},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[Ingr("legendarium_photovoltaic_cell"),Ingr("solarium_photovoltaic_cell"),Ingr("darkium_photovoltaic_cell"),Ingr("ultimate_shard")]},
 			]
 		},
 		"empty_module": {
@@ -524,14 +524,14 @@ def main_additions() -> None:
 				{"text":"\nCan be filled with various materials","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[ingr_repr("minecraft:map")] + [ingr_repr("simplunium_ingot", "simplenergy")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[Ingr("minecraft:map")] + [Ingr("simplunium_ingot", "simplenergy")]},
 			]
 		},
 	}
 
 	# Compressed cobblestone uncraft to base cobblestone
 	additions["compressed_cobblestone"][USED_FOR_CRAFTING] = [
-		{"type":"crafting_shapeless","result_count":9,"category":"misc","result":ingr_repr("minecraft:cobblestone"),"ingredients":[ingr_repr("compressed_cobblestone")]},
+		{"type":"crafting_shapeless","result_count":9,"category":"misc","result":Ingr("minecraft:cobblestone"),"ingredients":[Ingr("compressed_cobblestone")]},
 	]
 
 	# Update the definitions with new data

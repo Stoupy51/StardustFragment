@@ -4,6 +4,7 @@ import json
 
 from stewbeet import (
 	Conventions,
+	Item,
 	JsonDict,
 	LootTable,
 	Mem,
@@ -29,8 +30,8 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Disc duration
-	PRISMATIC_DEVASTATION: int = Mem.definitions["stoupy_suno_prismatic_devastation"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
-	THE_ULTIMATE_ASCENSION: int = Mem.definitions["stoupy_suno_the_ultimate_ascension"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	PRISMATIC_DEVASTATION: int = Item.from_id("stoupy_suno_prismatic_devastation").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	THE_ULTIMATE_ASCENSION: int = Item.from_id("stoupy_suno_the_ultimate_ascension").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
 
 	# Load function
 	write_load_file(f"""

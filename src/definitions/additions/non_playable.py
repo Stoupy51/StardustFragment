@@ -1,7 +1,6 @@
 
 # ruff: noqa: E501
 # Imports
-
 import stouputils as stp
 from stewbeet import (
 	CATEGORY,

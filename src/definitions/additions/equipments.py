@@ -13,12 +13,12 @@ from stewbeet import (
 	WIKI_COMPONENT,
 	AwakenedForgeRecipe,
 	CraftingShapelessRecipe,
+	Ingr,
 	Item,
 	JsonDict,
 	Mem,
 	TextComponent,
 	WikiButton,
-	ingr_repr,
 	rainbow_gradient_text,
 	write_function,
 	write_versioned_function,
@@ -135,15 +135,15 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
-					ingr_repr("compacted_stardust_shard", count=4),
-					ingr_repr("minecraft:bow", count=1),
-					ingr_repr("minecraft:blue_stained_glass", count=4),
-					ingr_repr("minecraft:arrow", count=1),
-					ingr_repr("minecraft:string", count=96),
-					ingr_repr("minecraft:spectral_arrow", count=1),
-					ingr_repr("minecraft:lapis_block", count=4),
-					ingr_repr("minecraft:tipped_arrow", count=1),
-					ingr_repr("dragon_pearl", count=4),
+					Ingr("compacted_stardust_shard", count=4),
+					Ingr("minecraft:bow", count=1),
+					Ingr("minecraft:blue_stained_glass", count=4),
+					Ingr("minecraft:arrow", count=1),
+					Ingr("minecraft:string", count=96),
+					Ingr("minecraft:spectral_arrow", count=1),
+					Ingr("minecraft:lapis_block", count=4),
+					Ingr("minecraft:tipped_arrow", count=1),
+					Ingr("dragon_pearl", count=4),
 				]},
 			]
 		},
@@ -157,15 +157,15 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
-					ingr_repr("minecraft:redstone_block", count=64),
-					ingr_repr("awakened_stardust_frame", count=8),
-					ingr_repr("minecraft:red_glazed_terracotta", count=64),
-					ingr_repr("ender_dragon_pearl", count=8),
-					ingr_repr("stardust_bow", count=1),
-					ingr_repr("sextuple_compressed_cobblestone", count=8),
-					ingr_repr("minecraft:red_nether_bricks", count=64),
-					ingr_repr("awakened_stardust_block", count=8),
-					ingr_repr("minecraft:red_mushroom_block", count=64),
+					Ingr("minecraft:redstone_block", count=64),
+					Ingr("awakened_stardust_frame", count=8),
+					Ingr("minecraft:red_glazed_terracotta", count=64),
+					Ingr("ender_dragon_pearl", count=8),
+					Ingr("stardust_bow", count=1),
+					Ingr("sextuple_compressed_cobblestone", count=8),
+					Ingr("minecraft:red_nether_bricks", count=64),
+					Ingr("awakened_stardust_block", count=8),
+					Ingr("minecraft:red_mushroom_block", count=64),
 				]},
 			]
 		},
@@ -180,15 +180,15 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
-					ingr_repr("compacted_stardust_shard", count=64),
-					ingr_repr("minecraft:dragon_egg", count=2),
-					ingr_repr("minecraft:echo_shard", count=32),
-					ingr_repr("minecraft:emerald_block", count=96),
-					ingr_repr("awakened_stardust_bow", count=1),
-					ingr_repr("minecraft:amethyst_block", count=64),
-					ingr_repr("minecraft:heavy_core", count=1),
-					ingr_repr("awakened_stardust_block", count=16),
-					ingr_repr("septuple_compressed_cobblestone", count=1),
+					Ingr("compacted_stardust_shard", count=64),
+					Ingr("minecraft:dragon_egg", count=2),
+					Ingr("minecraft:echo_shard", count=32),
+					Ingr("minecraft:emerald_block", count=96),
+					Ingr("awakened_stardust_bow", count=1),
+					Ingr("minecraft:amethyst_block", count=64),
+					Ingr("minecraft:heavy_core", count=1),
+					Ingr("awakened_stardust_block", count=16),
+					Ingr("septuple_compressed_cobblestone", count=1),
 				]},
 			],
 		},
@@ -204,15 +204,15 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
-					ingr_repr("compacted_stardust_shard", count=4),
-					ingr_repr("minecraft:netherite_spear", count=1),
-					ingr_repr("minecraft:blue_stained_glass", count=4),
-					ingr_repr("minecraft:diamond_spear", count=1),
-					ingr_repr("minecraft:lapis_lazuli", count=96),
-					ingr_repr("minecraft:golden_spear", count=1),
-					ingr_repr("minecraft:raw_gold_block", count=4),
-					ingr_repr("minecraft:iron_spear", count=1),
-					ingr_repr("dragon_pearl", count=4),
+					Ingr("compacted_stardust_shard", count=4),
+					Ingr("minecraft:netherite_spear", count=1),
+					Ingr("minecraft:blue_stained_glass", count=4),
+					Ingr("minecraft:diamond_spear", count=1),
+					Ingr("minecraft:lapis_lazuli", count=96),
+					Ingr("minecraft:golden_spear", count=1),
+					Ingr("minecraft:raw_gold_block", count=4),
+					Ingr("minecraft:iron_spear", count=1),
+					Ingr("dragon_pearl", count=4),
 				]},
 			]
 		},
@@ -228,15 +228,15 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
-					ingr_repr("minecraft:redstone_block", count=64),
-					ingr_repr("awakened_stardust_frame", count=8),
-					ingr_repr("minecraft:red_glazed_terracotta", count=64),
-					ingr_repr("ender_dragon_pearl", count=8),
-					ingr_repr("stardust_sniper", count=1),
-					ingr_repr("sextuple_compressed_cobblestone", count=8),
-					ingr_repr("minecraft:red_nether_bricks", count=64),
-					ingr_repr("awakened_stardust_block", count=8),
-					ingr_repr("minecraft:red_mushroom_block", count=64),
+					Ingr("minecraft:redstone_block", count=64),
+					Ingr("awakened_stardust_frame", count=8),
+					Ingr("minecraft:red_glazed_terracotta", count=64),
+					Ingr("ender_dragon_pearl", count=8),
+					Ingr("stardust_sniper", count=1),
+					Ingr("sextuple_compressed_cobblestone", count=8),
+					Ingr("minecraft:red_nether_bricks", count=64),
+					Ingr("awakened_stardust_block", count=8),
+					Ingr("minecraft:red_mushroom_block", count=64),
 				]},
 			]
 		},
@@ -253,15 +253,15 @@ def main_additions() -> None:
 			],
 			RESULT_OF_CRAFTING: [
 				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
-					ingr_repr("compacted_stardust_shard", count=64),
-					ingr_repr("minecraft:dragon_egg", count=2),
-					ingr_repr("minecraft:echo_shard", count=32),
-					ingr_repr("minecraft:emerald_block", count=96),
-					ingr_repr("awakened_stardust_sniper", count=1),
-					ingr_repr("minecraft:amethyst_block", count=64),
-					ingr_repr("minecraft:heavy_core", count=1),
-					ingr_repr("awakened_stardust_block", count=16),
-					ingr_repr("septuple_compressed_cobblestone", count=1),
+					Ingr("compacted_stardust_shard", count=64),
+					Ingr("minecraft:dragon_egg", count=2),
+					Ingr("minecraft:echo_shard", count=32),
+					Ingr("minecraft:emerald_block", count=96),
+					Ingr("awakened_stardust_sniper", count=1),
+					Ingr("minecraft:amethyst_block", count=64),
+					Ingr("minecraft:heavy_core", count=1),
+					Ingr("awakened_stardust_block", count=16),
+					Ingr("septuple_compressed_cobblestone", count=1),
 				]},
 			],
 		},
@@ -282,7 +282,7 @@ def main_additions() -> None:
 					*([] if i > 0 else [{"text":"\n\nCan be obtained from Lucky Artifact Bags only","color":"gray"}]),
 				],
 				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[ingr_repr(artifact_display(artifact, i-1)[0], ns)]},
+					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[Ingr(artifact_display(artifact, i-1)[0], ns)]},
 				] if i > 0 else []
 			}
 			for artifact, lore, attribute, levels in ARTIFACTS
@@ -302,7 +302,7 @@ def main_additions() -> None:
 				{"text":"\nThis can be found in various structures","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[ingr_repr("minecraft:leather")] + [ingr_repr("ultimate_shard")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[Ingr("minecraft:leather")] + [Ingr("ultimate_shard")]},
 			]
 		},
 		"item_magnet": {
@@ -318,7 +318,7 @@ def main_additions() -> None:
 				{"text":"\nUseful for collecting dropped items","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["U U","A A","AAA"],"ingredients":{"U":ingr_repr("ultimate_shard"),"A":ingr_repr("awakened_stardust_block")}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["U U","A A","AAA"],"ingredients":{"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_block")}},
 			]
 		},
 		"home_travel_staff": {
@@ -331,7 +331,7 @@ def main_additions() -> None:
 				{"text":"\nHas 64 uses before breaking","color":"gray"},
 			],
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["D","S"],"ingredients":{"D":ingr_repr("dragon_pearl"),"S":ingr_repr("minecraft:stick")}},
+				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["D","S"],"ingredients":{"D":Ingr("dragon_pearl"),"S":Ingr("minecraft:stick")}},
 			]
 		},
 		"wormhole_potion": {
@@ -340,9 +340,9 @@ def main_additions() -> None:
 			"!max_damage": {},
 			RESULT_OF_CRAFTING: [
 				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
-					ingr_repr("minecraft:cod"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:tropical_fish"),
-					ingr_repr("minecraft:pufferfish"),ingr_repr("compacted_stardust_shard"),ingr_repr("minecraft:pufferfish"),
-					ingr_repr("minecraft:tropical_fish"),ingr_repr("minecraft:salmon"),ingr_repr("minecraft:cod"),
+					Ingr("minecraft:cod"),Ingr("minecraft:salmon"),Ingr("minecraft:tropical_fish"),
+					Ingr("minecraft:pufferfish"),Ingr("compacted_stardust_shard"),Ingr("minecraft:pufferfish"),
+					Ingr("minecraft:tropical_fish"),Ingr("minecraft:salmon"),Ingr("minecraft:cod"),
 				]},
 			]
 		},
@@ -356,7 +356,7 @@ def main_additions() -> None:
 				]}]
 			},
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[ingr_repr("stardust_fragment")] + [ingr_repr("minecraft:golden_apple")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[Ingr("stardust_fragment")] + [Ingr("minecraft:golden_apple")]},
 			]
 		},
 		"life_crystal": {
@@ -387,7 +387,7 @@ def main_additions() -> None:
 			],
 			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"all":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"name":"crystal","from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#all"},"east":{"uv":[0,0,16,16],"texture":"#all"},"south":{"uv":[0,0,16,16],"texture":"#all"},"west":{"uv":[0,0,16,16],"texture":"#all"},"up":{"uv":[0,0,16,16],"texture":"#all"},"down":{"uv":[0,0,16,16],"texture":"#all"}}}]},
 			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[ingr_repr("minecraft:glass")] + [ingr_repr("life_crystal")]},
+				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[Ingr("minecraft:glass")] + [Ingr("life_crystal")]},
 			]
 		},
 	}
@@ -398,9 +398,9 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
 			obj.recipes = [
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("minecraft:black_glazed_terracotta")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]),
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("minecraft:nether_wart_block")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]),
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("minecraft:blackstone")] + 4*[ingr_repr("stardust_block")] + [ingr_repr(f"minecraft:diamond_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:black_glazed_terracotta")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:nether_wart_block")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:blackstone")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
 			]
 			obj.wiki_buttons = [WikiButton([
 				{"text":"Poorly crafted stardust equipment.","color":"yellow"},
@@ -413,7 +413,7 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
 			obj.recipes = [
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[ingr_repr("stardust_core")] + 4*[ingr_repr("compacted_stardust_shard")] + [ingr_repr(f"ancient_stardust_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("stardust_core")] + 4*[Ingr("compacted_stardust_shard")] + [Ingr(f"ancient_stardust_{equipment_type}")]),
 			]
 			obj.wiki_buttons = [WikiButton([
 				{"text":"Original stardust equipment.","color":"yellow"},
@@ -427,14 +427,14 @@ def main_additions() -> None:
 			obj = Item.from_id(key)
 			obj.recipes = [
 				AwakenedForgeRecipe(particle=r"minecraft:dust{color:[0,1,0],scale:2}", result_count=1, ingredients=[
-					ingr_repr(f"original_stardust_{equipment_type}", count=1),
-					ingr_repr("legendarium_block", count=4),
-					ingr_repr("minecraft:wind_charge", count=64),
-					ingr_repr("minecraft:feather", count=96),
-					ingr_repr("ender_dragon_pearl", count=6),
-					ingr_repr("awakened_stardust_block", count=8),
-					ingr_repr("legendarium_ingot", count=12),
-					ingr_repr("sextuple_compressed_cobblestone", count=1)
+					Ingr(f"original_stardust_{equipment_type}", count=1),
+					Ingr("legendarium_block", count=4),
+					Ingr("minecraft:wind_charge", count=64),
+					Ingr("minecraft:feather", count=96),
+					Ingr("ender_dragon_pearl", count=6),
+					Ingr("awakened_stardust_block", count=8),
+					Ingr("legendarium_ingot", count=12),
+					Ingr("sextuple_compressed_cobblestone", count=1)
 				]),
 			]
 			obj.wiki_buttons = [WikiButton([
@@ -451,14 +451,14 @@ def main_additions() -> None:
 			obj = Item.from_id(key)
 			obj.recipes = [
 				AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0.5,0],scale:2}", result_count=1, ingredients=[
-					ingr_repr(f"original_stardust_{equipment_type}", count=1),
-					ingr_repr("solarium_block", count=4),
-					ingr_repr("minecraft:orange_candle", count=64),
-					ingr_repr("minecraft:blaze_powder", count=96),
-					ingr_repr("ender_dragon_pearl", count=6),
-					ingr_repr("awakened_stardust_block", count=8),
-					ingr_repr("solarium_ingot", count=12),
-					ingr_repr("sextuple_compressed_cobblestone", count=1)
+					Ingr(f"original_stardust_{equipment_type}", count=1),
+					Ingr("solarium_block", count=4),
+					Ingr("minecraft:orange_candle", count=64),
+					Ingr("minecraft:blaze_powder", count=96),
+					Ingr("ender_dragon_pearl", count=6),
+					Ingr("awakened_stardust_block", count=8),
+					Ingr("solarium_ingot", count=12),
+					Ingr("sextuple_compressed_cobblestone", count=1)
 				]),
 			]
 			obj.wiki_buttons = [WikiButton([
@@ -475,14 +475,14 @@ def main_additions() -> None:
 			obj = Item.from_id(key)
 			obj.recipes = [
 				AwakenedForgeRecipe(particle=r"minecraft:dust{color:[0,0,0],scale:2}", result_count=1, ingredients=[
-					ingr_repr(f"original_stardust_{equipment_type}", count=1),
-					ingr_repr("darkium_block", count=4),
-					ingr_repr("minecraft:respawn_anchor", count=64),
-					ingr_repr("minecraft:ink_sac", count=96),
-					ingr_repr("ender_dragon_pearl", count=6),
-					ingr_repr("awakened_stardust_block", count=8),
-					ingr_repr("darkium_ingot", count=12),
-					ingr_repr("sextuple_compressed_cobblestone", count=1),
+					Ingr(f"original_stardust_{equipment_type}", count=1),
+					Ingr("darkium_block", count=4),
+					Ingr("minecraft:respawn_anchor", count=64),
+					Ingr("minecraft:ink_sac", count=96),
+					Ingr("ender_dragon_pearl", count=6),
+					Ingr("awakened_stardust_block", count=8),
+					Ingr("darkium_ingot", count=12),
+					Ingr("sextuple_compressed_cobblestone", count=1),
 				]),
 			]
 			obj.wiki_buttons = [WikiButton([

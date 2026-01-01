@@ -5,6 +5,7 @@ import json
 from stewbeet import (
 	COMMON_SIGNAL,
 	Conventions,
+	Item,
 	JsonDict,
 	LootTable,
 	Mem,
@@ -28,8 +29,8 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Disc duration
-	COSMIC_THREAT_DURATION: int = Mem.definitions["stoupy_suno_cosmic_threat"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
-	STARFALL_MENACE_DURATION: int = Mem.definitions["stoupy_suno_starfall_menace"]["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	COSMIC_THREAT_DURATION: int = Item.from_id("stoupy_suno_cosmic_threat").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	STARFALL_MENACE_DURATION: int = Item.from_id("stoupy_suno_starfall_menace").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
 
 	# Load function
 	write_load_file(f"""

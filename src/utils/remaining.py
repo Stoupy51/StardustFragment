@@ -150,7 +150,7 @@ execute at @e[type=minecraft:wolf,{Conventions.AVOID_ENTITY_TAGS},predicate={ns}
 """)
 
 	# Travel Staff
-	max_damage: int = Mem.definitions["home_travel_staff"]["max_damage"]
+	max_damage: int = Item.from_id("home_travel_staff").components["max_damage"]
 	write_load_file(f"""
 # Travel Staff Logic
 scoreboard objectives add {ns}.travel_staff_cooldown dummy

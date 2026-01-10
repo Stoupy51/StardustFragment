@@ -1,24 +1,19 @@
 
-# ruff: noqa: E501
 # Imports
-from typing import cast
-
 from stewbeet import (
-	CATEGORY,
 	CUSTOM_BLOCK_VANILLA,
 	CUSTOM_ITEM_VANILLA,
-	OVERRIDE_MODEL,
-	RESULT_OF_CRAFTING,
-	VANILLA_BLOCK,
-	WIKI_COMPONENT,
+	Block,
 	BlockAlternative,
+	CraftingShapedRecipe,
 	CraftingShapelessRecipe,
 	GrowingSeed,
 	GrowingSeedLoot,
 	Ingr,
-	JsonDict,
-	Mem,
+	Item,
+	RecipeBase,
 	VanillaBlock,
+	WikiButton,
 	rainbow_gradient_text,
 )
 from stouputils import simple_cache
@@ -44,33 +39,87 @@ def main_additions() -> None:
 	MISC: str = "miscellaneous"
 
 	# Prepare some recipes
-	MINERS_CRAFTING_RECIPES = cast(dict[str, list[JsonDict]], {
+	MINERS_CRAFTING_RECIPES: dict[str, list[RecipeBase]] = {
 		"cobblestone_miner_lv1": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:coal"),"P":Ingr("minecraft:wooden_pickaxe"),"M":Ingr("minecraft:redstone_block"),"B":Ingr("compressed_cobblestone")}},
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:charcoal"),"P":Ingr("minecraft:wooden_pickaxe"),"M":Ingr("minecraft:redstone_block"),"B":Ingr("compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:coal"), "P": Ingr("minecraft:wooden_pickaxe"),
+					"M": Ingr("minecraft:redstone_block"), "B": Ingr("compressed_cobblestone")
+				}
+			),
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:charcoal"), "P": Ingr("minecraft:wooden_pickaxe"),
+					"M": Ingr("minecraft:redstone_block"), "B": Ingr("compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv2": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:flint"),"P":Ingr("minecraft:stone_pickaxe"),"M":Ingr("cobblestone_miner_lv1"),"B":Ingr("compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:flint"), "P": Ingr("minecraft:stone_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv1"), "B": Ingr("compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv3": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:copper_block"),"P":Ingr("minecraft:copper_pickaxe"),"M":Ingr("cobblestone_miner_lv2"),"B":Ingr("double_compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:copper_block"), "P": Ingr("minecraft:copper_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv2"), "B": Ingr("double_compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv4": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:iron_block"),"P":Ingr("minecraft:iron_pickaxe"),"M":Ingr("cobblestone_miner_lv3"),"B":Ingr("double_compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:iron_block"), "P": Ingr("minecraft:iron_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv3"), "B": Ingr("double_compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv5": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:gold_block"),"P":Ingr("minecraft:golden_pickaxe"),"M":Ingr("cobblestone_miner_lv4"),"B":Ingr("triple_compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:gold_block"), "P": Ingr("minecraft:golden_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv4"), "B": Ingr("triple_compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv6": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:diamond_block"),"P":Ingr("minecraft:diamond_pickaxe"),"M":Ingr("cobblestone_miner_lv5"),"B":Ingr("triple_compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:diamond_block"), "P": Ingr("minecraft:diamond_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv5"), "B": Ingr("triple_compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv7": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("minecraft:netherite_block"),"P":Ingr("minecraft:netherite_pickaxe"),"M":Ingr("cobblestone_miner_lv6"),"B":Ingr("quadruple_compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("minecraft:netherite_block"), "P": Ingr("minecraft:netherite_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv6"), "B": Ingr("quadruple_compressed_cobblestone")
+				}
+			),
 		],
 		"cobblestone_miner_lv8": [
-			{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["TTT","PMP","BBB"],"ingredients":{"T":Ingr("stardust_core"),"P":Ingr("original_stardust_pickaxe"),"M":Ingr("cobblestone_miner_lv7"),"B":Ingr("quadruple_compressed_cobblestone")}},
+			CraftingShapedRecipe(
+				result_count=1, category="misc", shape=["TTT","PMP","BBB"],
+				ingredients={
+					"T": Ingr("stardust_core"), "P": Ingr("original_stardust_pickaxe"),
+					"M": Ingr("cobblestone_miner_lv7"), "B": Ingr("quadruple_compressed_cobblestone")
+				}
+			),
 		],
-	})
+	}
 
 	# Miscellaneous
 	BlockAlternative(
@@ -264,154 +313,203 @@ def main_additions() -> None:
 		},
 	)
 
-	# Give Additional data for every item
-	additions: dict[str, JsonDict] = {
-		**{
-			miner_display(i)[0]: {
-				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MISC,
-				VANILLA_BLOCK: {"id":"minecraft:cobbled_deepslate", "apply_facing":False},
-				"item_name": {"text": miner_display(i)[1]},
+	# Create miners as Block instances
+	for i in range(8):
+		per_minute = miners_formula(i)
+		miner_id, miner_name, _ = miner_display(i)
+		Block(
+			id=miner_id,
+			base_item=CUSTOM_BLOCK_VANILLA,
+			manual_category=MISC,
+			vanilla_block=VanillaBlock(id="minecraft:cobbled_deepslate", apply_facing=False),
+			recipes=MINERS_CRAFTING_RECIPES[miner_id],
+			components={
+				"item_name": {"text": miner_name},
 				"rarity": "rare" if i < 5 else "epic",
 				"lore": [
 					{"text":"Only mines cobblestone directly below","color":"white","italic":False},
 					{"text":f"[x{per_minute:,} per minute]","color":"gray","italic":False},
 				],
-				WIKI_COMPONENT: [
-					{"text": miner_display(i)[1],"color":"yellow"},
-					{"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"},
-					{"text":f"\nProduction rate is {per_minute:,} cobblestone per minute","color":"gray"},
-					{"text":"\nNo energy required","color":"gray"},
-				],
-				RESULT_OF_CRAFTING: MINERS_CRAFTING_RECIPES[miner_display(i)[0]],
-			}
-			for i in range(8) for per_minute in [miners_formula(i)]
-		},
-		"stoupegg": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+			},
+			wiki_buttons=[
+				WikiButton({"text": miner_name,"color":"yellow"}),
+				WikiButton({"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"}),
+				WikiButton({"text":f"\nProduction rate is {per_minute:,} cobblestone per minute","color":"gray"}),
+				WikiButton({"text":"\nNo energy required","color":"gray"}),
+			],
+		)
+
+	# StoupEgg
+	Item(
+		id="stoupegg",
+		base_item=CUSTOM_ITEM_VANILLA,
+		manual_category=MISC,
+		recipes=[
+			CraftingShapelessRecipe(
+				result_count=1,
+				category="misc",
+				ingredients=[
+					Ingr("dog_excrement"),Ingr("dog_excrement"),Ingr("dog_excrement"),
+					Ingr("stardust_fragment"),Ingr("minecraft:wolf_armor"),Ingr("stardust_fragment"),
+					Ingr("dog_excrement"),Ingr("dog_excrement"),Ingr("dog_excrement"),
+				]
+			)
+		],
+		components={
 			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:stoupegg_consuming"}},
 			"item_name": {"text":"StoupEgg"},
 			"rarity": "epic",
 			"lore": [
 				{"text":"Summoner of the StoupArmy mini-boss","italic":False,"color":"white"},
 			],
-			WIKI_COMPONENT: [
-				{"text":"Mystical egg that summons the StoupArmy mini-boss.","color":"yellow"},
-				{"text":"\nConsume to summon Stoupy and 4 enhanced wolves","color":"gray"},
-				{"text":"\nSpawns at world surface","color":"gray"},
-				{"text":"\n\nStoupy Stats (based on vanilla Wolf):","color":"aqua"},
-				{"text":"\n➤ Health: ","color":"gray"}, {"text":"250 points","color":"red"},
-				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x2","color":"red"},
-				{"text":"\n➤ Scale: ","color":"gray"}, {"text":"x0.9","color":"green"},
-				{"text":"\n➤ Knockback Resistance: ","color":"gray"}, {"text":"10","color":"aqua"},
-				{"text":"\n➤ Step Height: ","color":"gray"}, {"text":"16 blocks","color":"green"},
-				{"text":"\n➤ Jump Boost V","color":"light_purple"},
-				{"text":"\n\nDrops valuable early-game resources","color":"yellow"},
-				{"text":"\nGlows when no players are within 15 blocks","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-					Ingr("dog_excrement"),Ingr("dog_excrement"),Ingr("dog_excrement"),
-					Ingr("stardust_fragment"),Ingr("minecraft:wolf_armor"),Ingr("stardust_fragment"),
-					Ingr("dog_excrement"),Ingr("dog_excrement"),Ingr("dog_excrement"),
-				]},
-			]
 		},
-		"starlight_infuser": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+		wiki_buttons=[
+			WikiButton({"text":"Mystical egg that summons the StoupArmy mini-boss.","color":"yellow"}),
+			WikiButton({"text":"\nConsume to summon Stoupy and 4 enhanced wolves","color":"gray"}),
+			WikiButton({"text":"\nSpawns at world surface","color":"gray"}),
+			WikiButton({"text":"\n\nStoupy Stats (based on vanilla Wolf):","color":"aqua"}),
+			WikiButton({"text":"\n➤ Health: ","color":"gray"}), WikiButton({"text":"250 points","color":"red"}),
+			WikiButton({"text":"\n➤ Damage: ","color":"gray"}), WikiButton({"text":"x2","color":"red"}),
+			WikiButton({"text":"\n➤ Scale: ","color":"gray"}), WikiButton({"text":"x0.9","color":"green"}),
+			WikiButton({"text":"\n➤ Knockback Resistance: ","color":"gray"}), WikiButton({"text":"10","color":"aqua"}),
+			WikiButton({"text":"\n➤ Step Height: ","color":"gray"}), WikiButton({"text":"16 blocks","color":"green"}),
+			WikiButton({"text":"\n➤ Jump Boost V","color":"light_purple"}),
+			WikiButton({"text":"\n\nDrops valuable early-game resources","color":"yellow"}),
+			WikiButton({"text":"\nGlows when no players are within 15 blocks","color":"gray"}),
+		],
+	)
+
+	# Starlight Infuser
+	Item(
+		id="starlight_infuser",
+		base_item=CUSTOM_ITEM_VANILLA,
+		manual_category=MISC,
+		recipes=[
+			CraftingShapelessRecipe(
+				result_count=1,
+				category="misc",
+				ingredients=4*[Ingr("minecraft:breeze_rod")] + 4*[Ingr("compacted_stardust_shard")] + [Ingr("minecraft:nether_star")]
+			)
+		],
+		components={
 			"consumable": {"animation": "bow", "has_consume_particles": False, "sound": {"sound_id": "stardust:starlight_infuser_consuming"}},
 			"rarity": "epic",
 			"lore": [
 				{"text":"Summoner of the Stardust Pillar boss","italic":False,"color":"white"},
 			],
-			WIKI_COMPONENT: [
-				{"text":"Mystical summoner of the Stardust Pillar boss.","color":"yellow"},
-				{"text":"\nConsume to summon the Stardust Pillar","color":"gray"},
-				{"text":"\nSpawns at world surface above your position","color":"gray"},
-				{"text":"\n\nCheck the Mobs category for full boss stats and behavior","color":"aqua"},
-				{"text":"\n\nDrops Stardust Dungeon Key + mid-game resources","color":"yellow"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[Ingr("minecraft:breeze_rod")] + 4*[Ingr("compacted_stardust_shard")] + [Ingr("minecraft:nether_star")]},
-			]
 		},
-		"stardust_dungeon_key": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MISC,
+		wiki_buttons=[
+			WikiButton({"text":"Mystical summoner of the Stardust Pillar boss.","color":"yellow"}),
+			WikiButton({"text":"\nConsume to summon the Stardust Pillar","color":"gray"}),
+			WikiButton({"text":"\nSpawns at world surface above your position","color":"gray"}),
+			WikiButton({"text":"\n\nCheck the Mobs category for full boss stats and behavior","color":"aqua"}),
+			WikiButton({"text":"\n\nDrops Stardust Dungeon Key + mid-game resources","color":"yellow"}),
+		],
+	)
+
+	# Stardust Dungeon Key
+	Item(
+		id="stardust_dungeon_key",
+		base_item=CUSTOM_ITEM_VANILLA,
+		manual_category=MISC,
+		components={
 			"rarity": "epic",
 			"lore": [
 				{"text":"One-time use key for the Stardust Dungeon","italic":False,"color":"gray"},
 			],
-			WIKI_COMPONENT: [
-				{"text":"Key that allows access to the Stardust Dungeon.","color":"yellow"},
-				{"text":"\nObtained by defeating the Stardust Pillar boss","color":"gray"},
-				{"text":"\nOnce used, the key will be consumed","color":"gray"},
-				{"text":"\nInside the dungeon, face challenging enemies and traps","color":"gray"},
-				{"text":"\nto earn valuable rewards","color":"gray"},
-			],
 		},
-		"ultimate_dragon_essence": {
-			"id": "minecraft:lingering_potion", CATEGORY: MISC,
-			"custom_name": rainbow_gradient_text("Ultimate Dragon Essence"),	# Lingering Potion bypass item_name
+		wiki_buttons=[
+			WikiButton({"text":"Key that allows access to the Stardust Dungeon.","color":"yellow"}),
+			WikiButton({"text":"\nObtained by defeating the Stardust Pillar boss","color":"gray"}),
+			WikiButton({"text":"\nOnce used, the key will be consumed","color":"gray"}),
+			WikiButton({"text":"\nInside the dungeon, face challenging enemies and traps","color":"gray"}),
+			WikiButton({"text":"\nto earn valuable rewards","color":"gray"}),
+		],
+	)
+
+	# Ultimate Dragon Essence
+	Item(
+		id="ultimate_dragon_essence",
+		base_item="minecraft:lingering_potion",
+		manual_category=MISC,
+		recipes=[
+			CraftingShapelessRecipe(
+				result_count=1,
+				category="misc",
+				ingredients=4*[Ingr("minecraft:dragon_egg")] + 4*[Ingr("ultimate_shard")] + [Ingr("minecraft:lingering_potion")]
+			)
+		],
+		components={
+			"custom_name": rainbow_gradient_text("Ultimate Dragon Essence"),  # Lingering Potion bypass item_name
 			"potion_contents": {
 				"custom_effects":[{"id":"minecraft:unluck","amplifier":4,"duration":100,"show_particles":True,"show_icon":False}]
 			},
-			#"tooltip_display": {"hidden_components":["potion_contents"]},
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[Ingr("minecraft:dragon_egg")] + 4*[Ingr("ultimate_shard")] + [Ingr("minecraft:lingering_potion")]},
-			],
 			"lore": [
 				{"text":"One-time use summoner of the Ultimate Dragon.","italic":False,"color":"gray"},
 				{"text":"Needs to be thrown in the Ultimate dimension.","italic":False,"color":"gray"},
 			],
-			WIKI_COMPONENT: [
-				{"text":"Powerful essence that summons the Ultimate Dragon.","color":"yellow"},
-				{"text":"\nThrow in the Ultimate Dimension to summon","color":"gray"},
-				{"text":"\nWARNING: Only works in Ultimate Dimension!","color":"red"},
-				{"text":"\n\nMain Boss Stats (based on Ender Dragon):","color":"aqua"},
-				{"text":"\n➤ Health: ","color":"gray"}, {"text":"1024 points","color":"red"},
-				{"text":"\n➤ Damage: ","color":"gray"}, {"text":"x4","color":"red"},
-				{"text":"\n➤ Resistance IV (80% damage reduction)","color":"light_purple"},
-				{"text":"\n➤ Always glowing","color":"aqua"},
-				{"text":"\n\n3 Slave Dragons (512 HP each, x4 damage)","color":"aqua"},
-				{"text":"\nEnd Crystals heal the main dragon","color":"gray"},
-				{"text":"\nDragons use various attacks (20% chance/sec)","color":"gray"},
-				{"text":"\nDragons limited to Y=150 max height","color":"gray"},
-				{"text":"\n\nThis is the final challenge!","color":"yellow"},
-				{"text":"\nDrops Ultimate Dragon Egg trophy on defeat","color":"gold"},
-			],
 		},
-		"ultimate_dragon_egg": {
-			"id": CUSTOM_ITEM_VANILLA,
+		wiki_buttons=[
+			WikiButton({"text":"Powerful essence that summons the Ultimate Dragon.","color":"yellow"}),
+			WikiButton({"text":"\nThrow in the Ultimate Dimension to summon","color":"gray"}),
+			WikiButton({"text":"\nWARNING: Only works in Ultimate Dimension!","color":"red"}),
+			WikiButton({"text":"\n\nMain Boss Stats (based on Ender Dragon):","color":"aqua"}),
+			WikiButton({"text":"\n➤ Health: ","color":"gray"}), WikiButton({"text":"1024 points","color":"red"}),
+			WikiButton({"text":"\n➤ Damage: ","color":"gray"}), WikiButton({"text":"x4","color":"red"}),
+			WikiButton({"text":"\n➤ Resistance IV (80% damage reduction)","color":"light_purple"}),
+			WikiButton({"text":"\n➤ Always glowing","color":"aqua"}),
+			WikiButton({"text":"\n\n3 Slave Dragons (512 HP each, x4 damage)","color":"aqua"}),
+			WikiButton({"text":"\nEnd Crystals heal the main dragon","color":"gray"}),
+			WikiButton({"text":"\nDragons use various attacks (20% chance/sec)","color":"gray"}),
+			WikiButton({"text":"\nDragons limited to Y=150 max height","color":"gray"}),
+			WikiButton({"text":"\n\nThis is the final challenge!","color":"yellow"}),
+			WikiButton({"text":"\nDrops Ultimate Dragon Egg trophy on defeat","color":"gold"}),
+		],
+	)
+
+	# Ultimate Dragon Egg
+	Item(
+		id="ultimate_dragon_egg",
+		base_item=CUSTOM_ITEM_VANILLA,
+		override_model={"parent": "minecraft:block/dragon_egg","display":{"head":{"translation": [0, 13, 0]}}},
+		components={
 			"item_name": rainbow_gradient_text("Ultimate Dragon Egg"),
-			OVERRIDE_MODEL: {"parent": "minecraft:block/dragon_egg","display":{"head":{"translation": [0, 13, 0]}}},
-			WIKI_COMPONENT: [
-				{"text":"Trophy item dropped by the Ultimate Dragon.","color":"yellow"},
-				{"text":"\nA symbol of your triumph over the ultimate challenge.","color":"gray"},
-				{"text":"\nNot placeable but equippable","color":"gray"},
-			],
 		},
-	}
+		wiki_buttons=[
+			WikiButton({"text":"Trophy item dropped by the Ultimate Dragon.","color":"yellow"}),
+			WikiButton({"text":"\nA symbol of your triumph over the ultimate challenge.","color":"gray"}),
+			WikiButton({"text":"\nNot placeable but equippable","color":"gray"}),
+		],
+	)
 
-	# Manual item and recipes
-	additions["manual"] = {
-		"id": "minecraft:written_book", "category": MISC, "item_name": "Stardust Manual",
-		RESULT_OF_CRAFTING: [
+	# Manual
+	Item(
+		id="manual",
+		base_item="minecraft:written_book",
+		manual_category=MISC,
+		recipes=[
 			# Put a book and a steel ingot in the crafting grid to get the manual
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[Ingr("minecraft:book"), Ingr("stardust_fragment")]},
-
+			CraftingShapelessRecipe(
+				result_count=1,
+				group="manual",
+				category=MISC,
+				ingredients=[Ingr("minecraft:book"), Ingr("stardust_fragment")]
+			),
 			# Put the manual in the crafting grid to get the manual back (update the manual)
-			{"type":"crafting_shapeless","result_count":1,"group":"manual","category":MISC,"ingredients":[Ingr("manual")]},
+			CraftingShapelessRecipe(
+				result_count=1,
+				group="manual",
+				category=MISC,
+				ingredients=[Ingr("manual")]
+			),
 		],
-		WIKI_COMPONENT: [
-			{"text":"Complete guide to Stardust Fragment technology.","color":"yellow"},
-			{"text":"\nContains all recipes and information","color":"gray"},
-			{"text":"\nYour comprehensive reference manual","color":"gray"},
+		components={
+			"item_name": "Stardust Manual",
+		},
+		wiki_buttons=[
+			WikiButton({"text":"Complete guide to Stardust Fragment technology.","color":"yellow"}),
+			WikiButton({"text":"\nContains all recipes and information","color":"gray"}),
+			WikiButton({"text":"\nYour comprehensive reference manual","color":"gray"}),
 		],
-	}
-
-	# Update the definitions with new data
-	for k, v in additions.items():
-		if k in Mem.definitions:
-			Mem.definitions[k].update(v)
-		else:
-			Mem.definitions[k] = v
+	)
 

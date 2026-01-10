@@ -1,7 +1,7 @@
 
 # ruff: noqa: E501
 # Imports
-from stewbeet import COMMON_SIGNAL_HIDDEN, JsonDict, LootTable, Mem, set_json_encoder, write_function, write_tag
+from stewbeet import COMMON_SIGNAL_HIDDEN, Block, JsonDict, LootTable, Mem, set_json_encoder, write_function, write_tag
 from stouputils.io import get_root_path, json_load
 
 from ..definitions.additions.materials import COBBLESTONE_TIERS
@@ -16,7 +16,7 @@ def setup_machines(gui: dict[str, str]) -> None:
 	# Solar panels
 	for solar_panel in [x for x in Mem.definitions if x.endswith("_solar_panel")]:
 		if_unless: str = "if" if solar_panel != "darkium_solar_panel" else "unless"
-		energy: JsonDict = Mem.definitions[solar_panel]["custom_data"]["energy"]
+		energy: JsonDict = Block.from_id(solar_panel).components["custom_data"]["energy"]
 		content: str = f"""# Produce Energy depending on the power of daylight sensor
 execute {if_unless} predicate simplenergy:check_daylight_power run scoreboard players add @s energy.storage {energy["generation"]}
 execute if score @s energy.storage > @s energy.max_storage run scoreboard players operation @s energy.storage = @s energy.max_storage
@@ -31,10 +31,10 @@ data modify entity @s transformation.translation[1] set value 0.002f
 
 	# Furnace Generators & Nether Star Generator
 	for gen in ["nether_star_generator", *[x for x in Mem.definitions if x.endswith("_furnace_generator")]]:
-		energy: JsonDict = Mem.definitions[gen]["custom_data"]["energy"]
+		energy: JsonDict = Block.from_id(gen).components["custom_data"]["energy"]
 		default_gui: str = gui[f"gui/{gen}.png"] if gen == "nether_star_generator" else gui["gui/advanced_furnace_generator.png"]
 		working_gui: str = gui[f"gui/{gen}_on.png"] if gen == "nether_star_generator" else gui["gui/advanced_furnace_generator_on.png"]
-		default_model: str = Mem.definitions[gen]["item_model"]
+		default_model: str = Block.from_id(gen).components["item_model"]
 		working_model: str = default_model + "_on"
 		gui_slot: int = 1 if gen == "nether_star_generator" else 0
 		input_slot: int = 0 if gen == "nether_star_generator" else 1
@@ -144,8 +144,8 @@ loot spawn ~ ~-1 ~ loot {ns}:cobblestone_miner/lv{lvl}
 		}), max_level=-1)
 
 	# Mob Grinder
-	energy: JsonDict = Mem.definitions["mob_grinder"]["custom_data"]["energy"]
-	default_model: str = Mem.definitions["mob_grinder"]["item_model"]
+	energy: JsonDict = Block.from_id("mob_grinder").components["custom_data"]["energy"]
+	default_model: str = Block.from_id("mob_grinder").components["item_model"]
 	working_model: str = default_model + "_on"
 	write_function(f"{ns}:custom_blocks/mob_grinder/second", f"""
 # If not enough energy, update model and stop
@@ -164,7 +164,7 @@ execute positioned ^ ^ ^3 run kill @e[type=#{ns}:mob_grinder,tag=!global.ignore,
 
 
 	# Growth Accelerator
-	energy: JsonDict = Mem.definitions["growth_accelerator"]["custom_data"]["energy"]
+	energy: JsonDict = Block.from_id("growth_accelerator").components["custom_data"]["energy"]
 	write_function(f"{ns}:custom_blocks/growth_accelerator/second_5", f"""
 # Consume 5 times kW energy
 execute unless score @s energy.storage matches {energy["usage"] * 5}.. run return 0

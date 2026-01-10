@@ -5,6 +5,7 @@ import json
 
 from beet import Predicate
 from beet.core.utils import TextComponent
+from stewbeet import Block
 from stewbeet.core import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encoder, write_function, write_load_file
 
 
@@ -63,9 +64,10 @@ team modify {ns}.blue color blue
 """, prepend=True)
 
 	# For each quarry lvl, call the general quarry second loop, and add data when placing
-	for item, data in Mem.definitions.items():
+	for item in Mem.definitions.keys():
+		obj = Block.from_id(item)
 		if item.startswith("quarry_lv") or item == "quarry_creative":
-			bps: int = data["custom_data"][ns]["quarry"]["block_per_second"]
+			bps: int = obj.components["custom_data"][ns]["quarry"]["block_per_second"]
 
 			# ItemIO compatibility
 			base: str = 'data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig'
@@ -166,7 +168,7 @@ scoreboard players operation @s {ns}.quarry_z2 = #config_z2 {ns}.data
 tellraw @p[tag={ns}.temp] [{{"text":"Quarry configuration updated.","color":"green"}}]
 playsound block.note_block.pling ambient @p[tag={ns}.temp]
 """)
-	advanced_lore: list[TextComponent] = [*Mem.definitions["quarry_configurator"]["lore"], "", *selected_area_lore]
+	advanced_lore: list[TextComponent] = [*Block.from_id("quarry_configurator").components["lore"], "", *selected_area_lore]
 	write_function(f"{ns}:quarry/configurator/update_custom_data", f"""
 # Copy item, update it, and send it back
 item replace entity @s contents from entity @p[tag={ns}.temp] weapon.mainhand

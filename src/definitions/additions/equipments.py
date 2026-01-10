@@ -2,23 +2,18 @@
 # ruff: noqa: E501
 # Imports
 from stewbeet import (
-	CATEGORY,
-	CUSTOM_BLOCK_VANILLA,
-	CUSTOM_ITEM_VANILLA,
-	NO_SILK_TOUCH_DROP,
-	OVERRIDE_MODEL,
-	RESULT_OF_CRAFTING,
 	SLOTS,
-	VANILLA_BLOCK,
-	WIKI_COMPONENT,
 	AwakenedForgeRecipe,
+	Block,
+	CraftingShapedRecipe,
 	CraftingShapelessRecipe,
 	Ingr,
 	Item,
 	JsonDict,
 	Mem,
+	NoSilkTouchDrop,
 	TextComponent,
-	WikiButton,
+	VanillaBlock,
 	rainbow_gradient_text,
 	write_function,
 	write_versioned_function,
@@ -74,7 +69,8 @@ def get_attribute_wiki(key: str, equipment_config: EquipmentsConfig | None) -> l
 	if equipment_config is None:
 		return []
 	given_attributes: dict[str, float] = equipment_config.attributes
-	attribute_modifiers: list[JsonDict] = Mem.definitions[key]["components"].get("attribute_modifiers", [])
+	item_obj = Item.from_id(key)
+	attribute_modifiers: list[JsonDict] = item_obj.components.get("attribute_modifiers", [])
 
 	# Prepare base wiki component
 	durability_increase: float = equipment_config.pickaxe_durability / VanillaEquipments.PICKAXE.value[equipment_config.equivalent_to]["durability"]
@@ -104,263 +100,317 @@ def main_additions() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Give Additional data for every item
-	additions: dict[str, JsonDict] = {
 
-		# Equipments
-		"ultimate_elytra": {
-			"id": "minecraft:elytra", CATEGORY: EQUIPMENT,
+	# Equipments
+	Item(
+		id="ultimate_elytra",
+		base_item="minecraft:elytra",
+		manual_category=EQUIPMENT,
+		components={
 			"item_name": rainbow_gradient_text("Ultimate Elytra"),
-			"max_damage": 3456,	# x8 the durability of regular elytra (432)
+			"max_damage": 3456,  # x8 the durability of regular elytra (432)
 			"attribute_modifiers": [
 				{"type":"armor","amount": 10,"operation":"add_value","slot":"chest","id":"stardust:armor.chest"},
 				{"type":"armor_toughness","amount": 4,"operation":"add_value","slot":"chest","id":"stardust:armor_toughness.chest"},
 				{"type":"knockback_resistance","amount": 0.1,"operation":"add_value","slot":"chest","id":"stardust:knockback_resistance.chest"}
 			],
-			WIKI_COMPONENT: [
-				{"text":"Elytra dropped by the Ultimate Boss.","color":"yellow"},
-				{"text":"\nHigher durability (x8) than regular elytra","color":"gray"},
-				{"text":"\n\nWhen on Chest:","color":"gray"},
-				{"text":"\n+10 Armor","color":"blue"},
-				{"text":"\n+4 Armor Toughness","color":"blue"},
-				{"text":"\n+1 Knockback Resistance","color":"blue"},
-			],
 		},
-		"stardust_bow": {
-			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
-			"max_damage": 768,	# x2 the durability of regular bow (384)
-			WIKI_COMPONENT: [
-				{"text":"Bow crafted from stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x2) and power (x2) than regular bows","color":"gray"},
-				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
-					Ingr("compacted_stardust_shard", count=4),
-					Ingr("minecraft:bow", count=1),
-					Ingr("minecraft:blue_stained_glass", count=4),
-					Ingr("minecraft:arrow", count=1),
-					Ingr("minecraft:string", count=96),
-					Ingr("minecraft:spectral_arrow", count=1),
-					Ingr("minecraft:lapis_block", count=4),
-					Ingr("minecraft:tipped_arrow", count=1),
-					Ingr("dragon_pearl", count=4),
-				]},
-			]
+		wiki_buttons=[
+			{"text":"Elytra dropped by the Ultimate Boss.","color":"yellow"},
+			{"text":"\nHigher durability (x8) than regular elytra","color":"gray"},
+			{"text":"\n\nWhen on Chest:","color":"gray"},
+			{"text":"\n+10 Armor","color":"blue"},
+			{"text":"\n+4 Armor Toughness","color":"blue"},
+			{"text":"\n+1 Knockback Resistance","color":"blue"},
+		],
+	)
+	Item(
+		id="stardust_bow",
+		base_item="minecraft:bow",
+		manual_category=EQUIPMENT,
+		components={
+			"max_damage": 768,  # x2 the durability of regular bow (384)
 		},
-		"awakened_stardust_bow": {
-			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
-			"max_damage": 1536,	# x4 the durability of regular bow (384)
-			WIKI_COMPONENT: [
-				{"text":"Bow crafted from awakened stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x4) and power (x3) than regular bows","color":"gray"},
-				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
-					Ingr("minecraft:redstone_block", count=64),
-					Ingr("awakened_stardust_frame", count=8),
-					Ingr("minecraft:red_glazed_terracotta", count=64),
-					Ingr("ender_dragon_pearl", count=8),
-					Ingr("stardust_bow", count=1),
-					Ingr("sextuple_compressed_cobblestone", count=8),
-					Ingr("minecraft:red_nether_bricks", count=64),
-					Ingr("awakened_stardust_block", count=8),
-					Ingr("minecraft:red_mushroom_block", count=64),
-				]},
-			]
+		wiki_buttons=[
+			{"text":"Bow crafted from stardust materials.","color":"yellow"},
+			{"text":"\nHigher durability (x2) and power (x2) than regular bows","color":"gray"},
+			{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
+		],
+		recipes=[
+			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[0,0,1],scale:2}", result_count=1, ingredients=[
+				Ingr("compacted_stardust_shard", count=4),
+				Ingr("minecraft:bow", count=1),
+				Ingr("minecraft:blue_stained_glass", count=4),
+				Ingr("minecraft:arrow", count=1),
+				Ingr("minecraft:string", count=96),
+				Ingr("minecraft:spectral_arrow", count=1),
+				Ingr("minecraft:lapis_block", count=4),
+				Ingr("minecraft:tipped_arrow", count=1),
+				Ingr("dragon_pearl", count=4),
+			]),
+		]
+	)
+	Item(
+		id="awakened_stardust_bow",
+		base_item="minecraft:bow",
+		manual_category=EQUIPMENT,
+		components={
+			"max_damage": 1536,  # x4 the durability of regular bow (384)
 		},
-		"ultimate_bow": {
-			"id": "minecraft:bow", CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"Bow crafted from awakened stardust materials.","color":"yellow"},
+			{"text":"\nHigher durability (x4) and power (x3) than regular bows","color":"gray"},
+			{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
+		],
+		recipes=[
+			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0,0],scale:2}", result_count=1, ingredients=[
+				Ingr("minecraft:redstone_block", count=64),
+				Ingr("awakened_stardust_frame", count=8),
+				Ingr("minecraft:red_glazed_terracotta", count=64),
+				Ingr("ender_dragon_pearl", count=8),
+				Ingr("stardust_bow", count=1),
+				Ingr("sextuple_compressed_cobblestone", count=8),
+				Ingr("minecraft:red_nether_bricks", count=64),
+				Ingr("awakened_stardust_block", count=8),
+				Ingr("minecraft:red_mushroom_block", count=64),
+			]),
+		]
+	)
+	Item(
+		id="ultimate_bow",
+		base_item="minecraft:bow",
+		manual_category=EQUIPMENT,
+		components={
 			"item_name": rainbow_gradient_text("Ultimate Bow"),
-			"max_damage": 3072,	# x8 the durability of regular bow (384)
-			WIKI_COMPONENT: [
-				{"text":"Bow crafted from ultimate stardust materials.","color":"yellow"},
-				{"text":"\nHigher durability (x8) and power (x4) than regular bows","color":"gray"},
-				{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
-					Ingr("compacted_stardust_shard", count=64),
-					Ingr("minecraft:dragon_egg", count=2),
-					Ingr("minecraft:echo_shard", count=32),
-					Ingr("minecraft:emerald_block", count=96),
-					Ingr("awakened_stardust_bow", count=1),
-					Ingr("minecraft:amethyst_block", count=64),
-					Ingr("minecraft:heavy_core", count=1),
-					Ingr("awakened_stardust_block", count=16),
-					Ingr("septuple_compressed_cobblestone", count=1),
-				]},
-			],
+			"max_damage": 3072,  # x8 the durability of regular bow (384)
 		},
-		"stardust_sniper": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"Bow crafted from ultimate stardust materials.","color":"yellow"},
+			{"text":"\nHigher durability (x8) and power (x4) than regular bows","color":"gray"},
+			{"text":"\nShooting while sneaking makes no gravity arrows","color":"gray"},
+		],
+		recipes=[
+			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0.69,0.69],scale:2}", result_count=1, ingredients=[
+				Ingr("compacted_stardust_shard", count=64),
+				Ingr("minecraft:dragon_egg", count=2),
+				Ingr("minecraft:echo_shard", count=32),
+				Ingr("minecraft:emerald_block", count=96),
+				Ingr("awakened_stardust_bow", count=1),
+				Ingr("minecraft:amethyst_block", count=64),
+				Ingr("minecraft:heavy_core", count=1),
+				Ingr("awakened_stardust_block", count=16),
+				Ingr("septuple_compressed_cobblestone", count=1),
+			]),
+		]
+	)
+	Item(
+		id="stardust_sniper",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		manual_category=EQUIPMENT,
+		components={
 			"max_damage": 672,
 			"custom_data": {ns: {"sniper":{"damage":6, "cooldown":20, "playsound": f"{ns}:stardust_sniper_shot"}}},
-			WIKI_COMPONENT: [
-				{"text":"Sniper crafted from stardust materials.","color":"yellow"},
-				{"text":"\nBase damage: 6","color":"gray"},
-				{"text":"\nCooldown: 1.00s","color":"gray"},
-				*SNIPER_BULLETS_WIKI,
-			],
-			RESULT_OF_CRAFTING: [
-				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[0,0,1],scale:2}", "result_count": 1, "ingredients": [
-					Ingr("compacted_stardust_shard", count=4),
-					Ingr("minecraft:netherite_spear", count=1),
-					Ingr("minecraft:blue_stained_glass", count=4),
-					Ingr("minecraft:diamond_spear", count=1),
-					Ingr("minecraft:lapis_lazuli", count=96),
-					Ingr("minecraft:golden_spear", count=1),
-					Ingr("minecraft:raw_gold_block", count=4),
-					Ingr("minecraft:iron_spear", count=1),
-					Ingr("dragon_pearl", count=4),
-				]},
-			]
 		},
-		"awakened_stardust_sniper": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"Sniper crafted from stardust materials.","color":"yellow"},
+			{"text":"\nBase damage: 6","color":"gray"},
+			{"text":"\nCooldown: 1.00s","color":"gray"},
+			*SNIPER_BULLETS_WIKI,
+		],
+		recipes=[
+			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[0,0,1],scale:2}", result_count=1, ingredients=[
+				Ingr("compacted_stardust_shard", count=4),
+				Ingr("minecraft:netherite_spear", count=1),
+				Ingr("minecraft:blue_stained_glass", count=4),
+				Ingr("minecraft:diamond_spear", count=1),
+				Ingr("minecraft:lapis_lazuli", count=96),
+				Ingr("minecraft:golden_spear", count=1),
+				Ingr("minecraft:raw_gold_block", count=4),
+				Ingr("minecraft:iron_spear", count=1),
+				Ingr("dragon_pearl", count=4),
+			]),
+		]
+	)
+	Item(
+		id="awakened_stardust_sniper",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		manual_category=EQUIPMENT,
+		components={
 			"max_damage": 1344,
 			"custom_data": {ns: {"sniper":{"damage":12, "cooldown":15, "playsound": f"{ns}:awakened_stardust_sniper_shot"}}},
-			WIKI_COMPONENT: [
-				{"text":"Sniper crafted from awakened stardust materials.","color":"yellow"},
-				{"text":"\nBase damage: 12","color":"gray"},
-				{"text":"\nCooldown: 0.75s","color":"gray"},
-				*SNIPER_BULLETS_WIKI,
-			],
-			RESULT_OF_CRAFTING: [
-				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0,0],scale:2}", "result_count": 1, "ingredients": [
-					Ingr("minecraft:redstone_block", count=64),
-					Ingr("awakened_stardust_frame", count=8),
-					Ingr("minecraft:red_glazed_terracotta", count=64),
-					Ingr("ender_dragon_pearl", count=8),
-					Ingr("stardust_sniper", count=1),
-					Ingr("sextuple_compressed_cobblestone", count=8),
-					Ingr("minecraft:red_nether_bricks", count=64),
-					Ingr("awakened_stardust_block", count=8),
-					Ingr("minecraft:red_mushroom_block", count=64),
-				]},
-			]
 		},
-		"ultimate_sniper": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"Sniper crafted from awakened stardust materials.","color":"yellow"},
+			{"text":"\nBase damage: 12","color":"gray"},
+			{"text":"\nCooldown: 0.75s","color":"gray"},
+			*SNIPER_BULLETS_WIKI,
+		],
+		recipes=[
+			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0,0],scale:2}", result_count=1, ingredients=[
+				Ingr("minecraft:redstone_block", count=64),
+				Ingr("awakened_stardust_frame", count=8),
+				Ingr("minecraft:red_glazed_terracotta", count=64),
+				Ingr("ender_dragon_pearl", count=8),
+				Ingr("stardust_sniper", count=1),
+				Ingr("sextuple_compressed_cobblestone", count=8),
+				Ingr("minecraft:red_nether_bricks", count=64),
+				Ingr("awakened_stardust_block", count=8),
+				Ingr("minecraft:red_mushroom_block", count=64),
+			]),
+		]
+	)
+	Item(
+		id="ultimate_sniper",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		manual_category=EQUIPMENT,
+		components={
 			"item_name": rainbow_gradient_text("Ultimate Sniper"),
 			"max_damage": 2688,
 			"custom_data": {ns: {"sniper":{"damage":18, "cooldown":10, "playsound": f"{ns}:ultimate_sniper_shot"}}},
-			WIKI_COMPONENT: [
-				{"text":"Sniper crafted from ultimate stardust materials.","color":"yellow"},
-				{"text":"\nBase damage: 18","color":"gray"},
-				{"text":"\nCooldown: 0.50s","color":"gray"},
-				*SNIPER_BULLETS_WIKI,
-			],
-			RESULT_OF_CRAFTING: [
-				{"type": AwakenedForgeRecipe.type, "particle": r"minecraft:dust{color:[1,0.69,0.69],scale:2}", "result_count": 1, "ingredients": [
-					Ingr("compacted_stardust_shard", count=64),
-					Ingr("minecraft:dragon_egg", count=2),
-					Ingr("minecraft:echo_shard", count=32),
-					Ingr("minecraft:emerald_block", count=96),
-					Ingr("awakened_stardust_sniper", count=1),
-					Ingr("minecraft:amethyst_block", count=64),
-					Ingr("minecraft:heavy_core", count=1),
-					Ingr("awakened_stardust_block", count=16),
-					Ingr("septuple_compressed_cobblestone", count=1),
-				]},
-			],
 		},
-		**{
-			artifact_display(artifact, i)[0]: {
-				"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-				"item_name": {"text":artifact_display(artifact, i)[1]},
-				"rarity": "epic" if i == 3 else "rare",
-				"lore": [
-					{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
-					{"text":f"[+{level}% {lore}]","color":"gray","italic":False},
-				],
-				"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
-				WIKI_COMPONENT: [
-					{"text":artifact_display(artifact, i)[1],"color":"yellow"},
+		wiki_buttons=[
+			{"text":"Sniper crafted from ultimate stardust materials.","color":"yellow"},
+			{"text":"\nBase damage: 18","color":"gray"},
+			{"text":"\nCooldown: 0.50s","color":"gray"},
+			*SNIPER_BULLETS_WIKI,
+		],
+		recipes=[
+			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0.69,0.69],scale:2}", result_count=1, ingredients=[
+				Ingr("compacted_stardust_shard", count=64),
+				Ingr("minecraft:dragon_egg", count=2),
+				Ingr("minecraft:echo_shard", count=32),
+				Ingr("minecraft:emerald_block", count=96),
+				Ingr("awakened_stardust_sniper", count=1),
+				Ingr("minecraft:amethyst_block", count=64),
+				Ingr("minecraft:heavy_core", count=1),
+				Ingr("awakened_stardust_block", count=16),
+				Ingr("septuple_compressed_cobblestone", count=1),
+			]),
+		]
+	)
+
+	# Artifacts
+	for artifact, lore, attribute, levels in ARTIFACTS:
+		for i, level in enumerate(levels):
+			artifact_id, artifact_name, _ = artifact_display(artifact, i)
+			Item(
+				id=artifact_id,
+				manual_category=EQUIPMENT,
+				components={
+					"item_name": {"text":artifact_name},
+					"rarity": "epic" if i == 3 else "rare",
+					"lore": [
+						{"text":f"Hold in any hand to get the {artifact} effect","color":"gray","italic":False},
+						{"text":f"[+{level}% {lore}]","color":"gray","italic":False},
+					],
+					"attribute_modifiers": [{"type":attribute,"amount":level/100,"operation":"add_multiplied_total" if artifact != "speed" else "add_multiplied_base","slot":"hand","id":f"stardust:base_{attribute}"}],
+				},
+				wiki_buttons=[
+					{"text":artifact_name,"color":"yellow"},
 					{"text":f"\nHold in any hand to get the {artifact} effect","color":"gray"},
 					{"text":f"\n[+{level}% {lore}]","color":"gray"},
 					*([] if i > 0 else [{"text":"\n\nCan be obtained from Lucky Artifact Bags only","color":"gray"}]),
 				],
-				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":2*[Ingr(artifact_display(artifact, i-1)[0], ns)]},
+				recipes=[
+					CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=2*[Ingr(artifact_display(artifact, i-1)[0], ns)]),
 				] if i > 0 else []
-			}
-			for artifact, lore, attribute, levels in ARTIFACTS
-			for i, level in enumerate(levels)
-		},
-		"lucky_artifact_bag": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+			)
+
+	Item(
+		id="lucky_artifact_bag",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		manual_category=EQUIPMENT,
+		components={
 			"max_stack_size": 42,
 			"!max_damage": {},
 			"lore": [
 				{"text":"Right-click to open and receive a random artifact.","italic":False,"color":"gray"},
 			],
-			WIKI_COMPONENT: [
-				{"text":"A mysterious bag containing a random artifact.","color":"yellow"},
-				{"text":"\nRight-click to open and receive a random artifact","color":"gray"},
-				{"text":"\nCan contain Health, Damage, or Speed Artifacts","color":"gray"},
-				{"text":"\nThis can be found in various structures","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[Ingr("minecraft:leather")] + [Ingr("ultimate_shard")]},
-			]
 		},
-		"item_magnet": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"A mysterious bag containing a random artifact.","color":"yellow"},
+			{"text":"\nRight-click to open and receive a random artifact","color":"gray"},
+			{"text":"\nCan contain Health, Damage, or Speed Artifacts","color":"gray"},
+			{"text":"\nThis can be found in various structures","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=8*[Ingr("minecraft:leather")] + [Ingr("ultimate_shard")]),
+		]
+	)
+	Item(
+		id="item_magnet",
+		manual_category=EQUIPMENT,
+		components={
 			"max_stack_size": 1,
 			"lore": [
 				{"text":"Hold in offhand to attract items","color":"gray","italic":False},
 				{"text":"within a 4 blocks radius","color":"gray","italic":False},
 			],
-			WIKI_COMPONENT: [
-				{"text":"Magnet that attracts nearby items.","color":"yellow"},
-				{"text":"\nHold in offhand to attract items within a 4 blocks radius","color":"gray"},
-				{"text":"\nUseful for collecting dropped items","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["U U","A A","AAA"],"ingredients":{"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_block")}},
-			]
 		},
-		"home_travel_staff": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"Magnet that attracts nearby items.","color":"yellow"},
+			{"text":"\nHold in offhand to attract items within a 4 blocks radius","color":"gray"},
+			{"text":"\nUseful for collecting dropped items","color":"gray"},
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="equipment", shape=["U U","A A","AAA"], ingredients={"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_block")}),
+		]
+	)
+	Item(
+		id="home_travel_staff",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		manual_category=EQUIPMENT,
+		components={
 			"max_stack_size": 1,
 			"max_damage": 64,
-			WIKI_COMPONENT: [
-				{"text":"Staff that teleports you to your spawn point.","color":"yellow"},
-				{"text":"\nRight-click to teleport to your bed or world spawn","color":"gray"},
-				{"text":"\nHas 64 uses before breaking","color":"gray"},
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"equipment","shape":["D","S"],"ingredients":{"D":Ingr("dragon_pearl"),"S":Ingr("minecraft:stick")}},
-			]
 		},
-		"wormhole_potion": {
-			"id": "minecraft:warped_fungus_on_a_stick", CATEGORY: EQUIPMENT,
+		wiki_buttons=[
+			{"text":"Staff that teleports you to your spawn point.","color":"yellow"},
+			{"text":"\nRight-click to teleport to your bed or world spawn","color":"gray"},
+			{"text":"\nHas 64 uses before breaking","color":"gray"},
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="equipment", shape=["D","S"], ingredients={"D":Ingr("dragon_pearl"),"S":Ingr("minecraft:stick")}),
+		]
+	)
+	Item(
+		id="wormhole_potion",
+		base_item="minecraft:warped_fungus_on_a_stick",
+		manual_category=EQUIPMENT,
+		components={
 			"max_stack_size": 16,
 			"!max_damage": {},
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":[
-					Ingr("minecraft:cod"),Ingr("minecraft:salmon"),Ingr("minecraft:tropical_fish"),
-					Ingr("minecraft:pufferfish"),Ingr("compacted_stardust_shard"),Ingr("minecraft:pufferfish"),
-					Ingr("minecraft:tropical_fish"),Ingr("minecraft:salmon"),Ingr("minecraft:cod"),
-				]},
-			]
 		},
-		"stardust_apple": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: EQUIPMENT,
-			"food": {"can_always_eat": True, "nutrition": 4, "saturation": 9.6},	# Golden apple default
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=[
+				Ingr("minecraft:cod"),Ingr("minecraft:salmon"),Ingr("minecraft:tropical_fish"),
+				Ingr("minecraft:pufferfish"),Ingr("compacted_stardust_shard"),Ingr("minecraft:pufferfish"),
+				Ingr("minecraft:tropical_fish"),Ingr("minecraft:salmon"),Ingr("minecraft:cod"),
+			]),
+		]
+	)
+	Item(
+		id="stardust_apple",
+		manual_category=EQUIPMENT,
+		components={
+			"food": {"can_always_eat": True, "nutrition": 4, "saturation": 9.6},  # Golden apple default
 			"consumable": {
 				"on_consume_effects": [{"type": "minecraft:apply_effects", "effects": [
-					{"amplifier": 2, "duration": 100, "id": "minecraft:regeneration", "show_icon": True},	# Regeneration III for 5 seconds
-					{"amplifier": 1, "duration": 2400, "id": "minecraft:absorption", "show_icon": True}		# Absorption II for 2 minutes
+					{"amplifier": 2, "duration": 100, "id": "minecraft:regeneration", "show_icon": True},  # Regeneration III for 5 seconds
+					{"amplifier": 1, "duration": 2400, "id": "minecraft:absorption", "show_icon": True}  # Absorption II for 2 minutes
 				]}]
 			},
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[Ingr("stardust_fragment")] + [Ingr("minecraft:golden_apple")]},
-			]
 		},
-		"life_crystal": {
-			"id": "minecraft:goat_horn", CATEGORY: EQUIPMENT,
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=8*[Ingr("stardust_fragment")] + [Ingr("minecraft:golden_apple")]),
+		]
+	)
+
+	Item(
+		id="life_crystal",
+		base_item="minecraft:goat_horn",
+		manual_category=EQUIPMENT,
+		components={
 			"instrument": f"{ns}:life_crystal",
 			"max_stack_size": 64,
 			"tooltip_display": {"hidden_components":["instrument"]},
@@ -369,28 +419,29 @@ def main_additions() -> None:
 				{"text":"your max health by 1 (0.5 heart)","italic":False,"color":"gray"},
 				{"text":"(Max 20 uses: +10 hearts)","italic":False,"color":"gray"},
 			],
-			WIKI_COMPONENT: [
-				{"text":"Crystal that increases your maximum health.","color":"yellow"},
-				{"text":"\nFound in underground caves in the overworld","color":"gray"},
-				{"text":"\nRight-click to permanently increase max health by 1 (0.5 heart)","color":"gray"},
-				{"text":"\nMaximum of 20 uses (+10 hearts)","color":"gray"},
-			],
 		},
-		"life_crystal_block": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: EQUIPMENT,
-			VANILLA_BLOCK: {"id":"minecraft:glass", "apply_facing":"entity"},
-			NO_SILK_TOUCH_DROP: {"id": "life_crystal", "count": 1},
-			WIKI_COMPONENT: [
-				{"text":"Decorative block made from life crystals.","color":"yellow"},
-				{"text":"\nFound in underground caves in the overworld","color":"gray"},
-				{"text":"\nCan be broken to retrieve a life crystal","color":"gray"},
-			],
-			OVERRIDE_MODEL: {"parent":"block/cube_all","textures":{"all":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"name":"crystal","from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#all"},"east":{"uv":[0,0,16,16],"texture":"#all"},"south":{"uv":[0,0,16,16],"texture":"#all"},"west":{"uv":[0,0,16,16],"texture":"#all"},"up":{"uv":[0,0,16,16],"texture":"#all"},"down":{"uv":[0,0,16,16],"texture":"#all"}}}]},
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"equipment","ingredients":8*[Ingr("minecraft:glass")] + [Ingr("life_crystal")]},
-			]
-		},
-	}
+		wiki_buttons=[
+			{"text":"Crystal that increases your maximum health.","color":"yellow"},
+			{"text":"\nFound in underground caves in the overworld","color":"gray"},
+			{"text":"\nRight-click to permanently increase max health by 1 (0.5 heart)","color":"gray"},
+			{"text":"\nMaximum of 20 uses (+10 hearts)","color":"gray"},
+		],
+	)
+	Block(
+		id="life_crystal_block",
+		manual_category=EQUIPMENT,
+		vanilla_block=VanillaBlock(id="minecraft:glass", apply_facing="entity"),
+		no_silk_touch_drop=NoSilkTouchDrop(id="life_crystal", count=1),
+		override_model={"parent":"block/cube_all","textures":{"all":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"name":"crystal","from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#all"},"east":{"uv":[0,0,16,16],"texture":"#all"},"south":{"uv":[0,0,16,16],"texture":"#all"},"west":{"uv":[0,0,16,16],"texture":"#all"},"up":{"uv":[0,0,16,16],"texture":"#all"},"down":{"uv":[0,0,16,16],"texture":"#all"}}}]},
+		wiki_buttons=[
+			{"text":"Decorative block made from life crystals.","color":"yellow"},
+			{"text":"\nFound in underground caves in the overworld","color":"gray"},
+			{"text":"\nCan be broken to retrieve a life crystal","color":"gray"},
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=8*[Ingr("minecraft:glass")] + [Ingr("life_crystal")]),
+		]
+	)
 
 	# Ancient Stardust Equipments
 	for equipment_type in SLOTS.keys():
@@ -402,10 +453,10 @@ def main_additions() -> None:
 				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:nether_wart_block")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
 				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:blackstone")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
 			]
-			obj.wiki_buttons = [WikiButton([
+			obj.wiki_buttons = [
 				{"text":"Poorly crafted stardust equipment.","color":"yellow"},
 				*get_attribute_wiki(key, ORES_CONFIGS["ancient_stardust!"])
-			])]
+			]
 
 	# Original stardust equipments
 	for equipment_type in SLOTS.keys():
@@ -415,10 +466,10 @@ def main_additions() -> None:
 			obj.recipes = [
 				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("stardust_core")] + 4*[Ingr("compacted_stardust_shard")] + [Ingr(f"ancient_stardust_{equipment_type}")]),
 			]
-			obj.wiki_buttons = [WikiButton([
+			obj.wiki_buttons = [
 				{"text":"Original stardust equipment.","color":"yellow"},
 				*get_attribute_wiki(key, ORES_CONFIGS["original_stardust!"])
-			])]
+			]
 
 	# Legendarium equipments
 	for equipment_type in SLOTS.keys():
@@ -437,12 +488,12 @@ def main_additions() -> None:
 					Ingr("sextuple_compressed_cobblestone", count=1)
 				]),
 			]
-			obj.wiki_buttons = [WikiButton([
+			obj.wiki_buttons = [
 				{"text":"Legendarium equipment.","color":"yellow"},
 				*get_attribute_wiki(key, ORES_CONFIGS["legendarium_ingot"]),
 				{"text":"\n\nFull Set Bonus:","color":"gray"},
 				{"text":"\n- Jump Boost III","color":"blue"}
-			])]
+			]
 
 	# Solarium equipments
 	for equipment_type in SLOTS.keys():
@@ -461,12 +512,12 @@ def main_additions() -> None:
 					Ingr("sextuple_compressed_cobblestone", count=1)
 				]),
 			]
-			obj.wiki_buttons = [WikiButton([
+			obj.wiki_buttons = [
 				{"text":"Solarium equipment.","color":"yellow"},
 				*get_attribute_wiki(key, ORES_CONFIGS["solarium_ingot"]),
 				{"text":"\n\nFull Set Bonus:","color":"gray"},
 				{"text":"\n- Fire Resistance","color":"blue"}
-			])]
+			]
 
 	# Darkium equipments
 	for equipment_type in SLOTS.keys():
@@ -485,12 +536,12 @@ def main_additions() -> None:
 					Ingr("sextuple_compressed_cobblestone", count=1),
 				]),
 			]
-			obj.wiki_buttons = [WikiButton([
+			obj.wiki_buttons = [
 				{"text":"Darkium equipment.","color":"yellow"},
 				*get_attribute_wiki(key, ORES_CONFIGS["darkium_ingot"]),
 				{"text":"\n\nFull Set Bonus:","color":"gray"},
 				{"text":"\n- Resistance I","color":"blue"}
-			])]
+			]
 
 	# Full armor effects
 	for armor_type, effect, level in [
@@ -509,11 +560,3 @@ execute if score #success {ns}.data matches 0 if entity @s[tag={ns}.{armor_type}
 # Apply {armor_type.title()} full armor effect
 effect give @a[tag={ns}.{armor_type}_full_armor] {effect} 6 {level-1} true
 """)
-
-	# Update the definitions with new data
-	for k, v in additions.items():
-		if k in Mem.definitions:
-			Mem.definitions[k].update(v)
-		else:
-			Mem.definitions[k] = v
-

@@ -58,6 +58,39 @@ advancement revoke @s only {ns}:technical/right_click
 scoreboard players set @s {ns}.right_click 0
 """, prepend=True)
 
+	# Death detection
+	write_load_file(f"\n# Death detection\nscoreboard objectives add {ns}.death deathCount\n", prepend=True)
+	write_advancement(f"{ns}:technical/on_respawn", {
+		"criteria": {
+			"requirement": {
+				"trigger": "minecraft:tick",
+				"conditions": {
+					"player": [
+						{
+							"condition": "minecraft:entity_scores",
+							"entity": "this",
+							"scores": {f"{ns}.death": {"min": 1}}
+						}
+					]
+				}
+			}
+		},
+		"rewards": {
+			"function": f"{ns}:advancements/on_respawn"
+		}
+	})
+	write_function(f"{ns}:advancements/on_respawn", f"""
+# Revoke advancement
+advancement revoke @s only {ns}:technical/on_respawn
+
+# Stop if not respawned
+execute store result score #health {ns}.data run data get entity @s Health 100.0
+execute if score #health {ns}.data matches ..0 run return fail
+
+# Reset death count
+scoreboard players set @s {ns}.death 0
+""", prepend=True)
+
 	# Global counter
 	write_tick_file(f"\n# Global counter for various features\nscoreboard players add #global_tick {ns}.data 1\n", prepend=True)
 	write_versioned_function("second", f"\n# Global counter for various features\nscoreboard players add #global_second {ns}.data 1\n", prepend=True)
@@ -131,8 +164,7 @@ execute if score @s {ns}.life_crystal matches 20 run return run tellraw @s {{"te
 # Update life crystal count & attribute
 scoreboard players add @s {ns}.life_crystal 1
 particle minecraft:heart ~ ~1 ~ .5 .5 .5 1 10 normal
-attribute @s minecraft:max_health modifier remove {ns}:life_crystal
-{'\n'.join([f'execute if score @s {ns}.life_crystal matches {i+1} run attribute @s minecraft:max_health modifier add {ns}:life_crystal {i+1} add_value' for i in range(20)])}
+function {ns}:utils/update_max_health
 
 # Clear one life crystal
 clear @s *[custom_data~{{{ns}:{{"life_crystal":true}}}}] 1
@@ -140,6 +172,17 @@ clear @s *[custom_data~{{{ns}:{{"life_crystal":true}}}}] 1
 # Grant life crystal advancement(s)
 advancement grant @s only {ns}:visible/stuff/life_crystal
 execute if score @s {ns}.life_crystal matches 20 run advancement grant @s only {ns}:visible/stuff/life_crystal_max
+""")
+	write_function(f"{ns}:utils/update_max_health", f"""
+# Update max health based on life crystals
+attribute @s minecraft:max_health modifier remove {ns}:life_crystal
+{'\n'.join([f'execute if score @s {ns}.life_crystal matches {i+1} run attribute @s minecraft:max_health modifier add {ns}:life_crystal {i+1} add_value' for i in range(20)])}
+say @s
+""")
+	# Update max_health on respawn
+	write_function(f"{ns}:advancements/on_respawn", f"""
+# Update max health on respawn
+function {ns}:utils/update_max_health
 """)
 
 	# Dog excrement production

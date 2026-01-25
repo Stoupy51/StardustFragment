@@ -1,53 +1,31 @@
 
 # Imports
-from stewbeet import (
-	CUSTOM_BLOCK_VANILLA,
-	CUSTOM_ITEM_VANILLA,
-	Context,
-	JsonDict,
-	Mem,
-	add_item_name_and_lore_if_missing,
-	add_private_custom_data_for_namespace,
-)
-from stouputils import json_dump, super_open
+from stewbeet import Context, ExternalItem, Mem, add_item_name_and_lore_if_missing, export_all_definitions_to_json
 
 
 # Make all the external item definitions
 def beet_default(ctx: Context) -> None:
-	if Mem.ctx is None: # type: ignore
-		Mem.ctx = ctx
 
-	# Replace temporarily the main definitions with the external definitions (for utility functions)
-	main_definitions: JsonDict = Mem.definitions
-	Mem.definitions = Mem.external_definitions
+	## Abstract item definitions (loot table is only required if the external item is a result of a recipe)
+	ExternalItem(id="simplenergy:simplunium_block", custom_data_predicate={"simplenergy": {"simplunium_block": True}}, loot_table="simplenergy:i/simplunium_block")
+	ExternalItem(id="simplenergy:simplunium_ingot", custom_data_predicate={"simplenergy": {"simplunium_ingot": True}}, loot_table="simplenergy:i/simplunium_ingot")
+	ExternalItem(id="simplenergy:machine_block", custom_data_predicate={"simplenergy": {"machine_block": True}}, loot_table="simplenergy:i/machine_block")
 
-	## Incomplete item definition
-	Mem.definitions.update({
-		"simplenergy:simplunium_block": {"id": CUSTOM_BLOCK_VANILLA},
-		"simplenergy:simplunium_ingot": {"id": CUSTOM_ITEM_VANILLA},
-		"simplenergy:machine_block": {"id": CUSTOM_BLOCK_VANILLA},
+	ExternalItem(id="simplenergy:furnace_generator", custom_data_predicate={"simplenergy": {"furnace_generator": True}}, loot_table="simplenergy:i/furnace_generator")
+	ExternalItem(id="simplenergy:redstone_generator", custom_data_predicate={"simplenergy": {"redstone_generator": True}}, loot_table="simplenergy:i/redstone_generator")
+	ExternalItem(id="simplenergy:solar_panel", custom_data_predicate={"simplenergy": {"solar_panel": True}}, loot_table="simplenergy:i/solar_panel")
 
-		"simplenergy:furnace_generator": {"id": CUSTOM_BLOCK_VANILLA},
-		"simplenergy:redstone_generator": {"id": CUSTOM_BLOCK_VANILLA},
-		"simplenergy:solar_panel": {"id": CUSTOM_BLOCK_VANILLA},
-
-		"simplenergy:elite_battery": {"id": CUSTOM_BLOCK_VANILLA},
-		"simplenergy:elite_cable": {"id": CUSTOM_ITEM_VANILLA},
-	})
+	ExternalItem(id="simplenergy:elite_battery", custom_data_predicate={"simplenergy": {"elite_battery": True}}, loot_table="simplenergy:i/elite_battery")
+	ExternalItem(id="simplenergy:elite_cable", custom_data_predicate={"simplenergy": {"elite_cable": True}}, loot_table="simplenergy:i/elite_cable")
 
 	# External items config
-	add_item_name_and_lore_if_missing(is_external = True)
-	add_private_custom_data_for_namespace(is_external = True)
+	add_item_name_and_lore_if_missing(is_external=True)
 
 	# Fix SimplEnergy lore
-	for data in Mem.definitions.values():
-		data["lore"] = [{"text": "SimplEnergy", "italic": True, "color": "blue"}]
+	for item in Mem.external_definitions.keys():
+		obj = ExternalItem.from_id(item)
+		obj.components["lore"] = [{"text": "SimplEnergy", "italic": True, "color": "blue"}]
 
-	# Debug external definitions
-	with super_open("./external_definitions.json", "w") as f:
-		json_dump(Mem.definitions, f)
-
-	# Restore the main definitions
-	Mem.external_definitions = Mem.definitions
-	Mem.definitions = main_definitions
+	# Debug purposes: export all definitions to a single json file
+	export_all_definitions_to_json(f"{Mem.ctx.directory}/external_definitions.json", is_external=True)
 

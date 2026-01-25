@@ -1,50 +1,98 @@
 {
 	"simplenergy:simplunium_block": {
-		"id": "minecraft:furnace",
-		"item_name": {"text": "Simplunium Block"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"simplunium_block": true}}
+		"id": "simplenergy:simplunium_block",
+		"custom_data_predicate": {
+			"simplenergy": {"simplunium_block": true}
+		},
+		"components": {
+			"item_name": {"text": "Simplunium Block"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/simplunium_block",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:simplunium_ingot": {
-		"id": "minecraft:command_block",
-		"item_name": {"text": "Simplunium Ingot"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"simplunium_ingot": true}}
+		"id": "simplenergy:simplunium_ingot",
+		"custom_data_predicate": {
+			"simplenergy": {"simplunium_ingot": true}
+		},
+		"components": {
+			"item_name": {"text": "Simplunium Ingot"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/simplunium_ingot",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:machine_block": {
-		"id": "minecraft:furnace",
-		"item_name": {"text": "Machine Block"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"machine_block": true}}
+		"id": "simplenergy:machine_block",
+		"custom_data_predicate": {
+			"simplenergy": {"machine_block": true}
+		},
+		"components": {
+			"item_name": {"text": "Machine Block"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/machine_block",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:furnace_generator": {
-		"id": "minecraft:furnace",
-		"item_name": {"text": "Furnace Generator"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"furnace_generator": true}}
+		"id": "simplenergy:furnace_generator",
+		"custom_data_predicate": {
+			"simplenergy": {"furnace_generator": true}
+		},
+		"components": {
+			"item_name": {"text": "Furnace Generator"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/furnace_generator",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:redstone_generator": {
-		"id": "minecraft:furnace",
-		"item_name": {"text": "Redstone Generator"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"redstone_generator": true}}
+		"id": "simplenergy:redstone_generator",
+		"custom_data_predicate": {
+			"simplenergy": {"redstone_generator": true}
+		},
+		"components": {
+			"item_name": {"text": "Redstone Generator"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/redstone_generator",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:solar_panel": {
-		"id": "minecraft:furnace",
-		"item_name": {"text": "Solar Panel"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"solar_panel": true}}
+		"id": "simplenergy:solar_panel",
+		"custom_data_predicate": {
+			"simplenergy": {"solar_panel": true}
+		},
+		"components": {
+			"item_name": {"text": "Solar Panel"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/solar_panel",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:elite_battery": {
-		"id": "minecraft:furnace",
-		"item_name": {"text": "Elite Battery"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"elite_battery": true}}
+		"id": "simplenergy:elite_battery",
+		"custom_data_predicate": {
+			"simplenergy": {"elite_battery": true}
+		},
+		"components": {
+			"item_name": {"text": "Elite Battery"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/elite_battery",
+		"base_item": "minecraft:command_block"
 	},
 	"simplenergy:elite_cable": {
-		"id": "minecraft:command_block",
-		"item_name": {"text": "Elite Cable"},
-		"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}],
-		"custom_data": {"simplenergy": {"elite_cable": true}}
+		"id": "simplenergy:elite_cable",
+		"custom_data_predicate": {
+			"simplenergy": {"elite_cable": true}
+		},
+		"components": {
+			"item_name": {"text": "Elite Cable"},
+			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
+		},
+		"loot_table": "simplenergy:i/elite_cable",
+		"base_item": "minecraft:command_block"
 	}
 }

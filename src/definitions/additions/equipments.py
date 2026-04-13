@@ -430,7 +430,7 @@ def main_additions() -> None:
 	Block(
 		id="life_crystal_block",
 		manual_category=EQUIPMENT,
-		vanilla_block=VanillaBlock(id="minecraft:glass", visual_facing_source="player"),
+		vanilla_block=VanillaBlock(id="minecraft:glass", visual_facing="player"),
 		no_silk_touch_drop=NoSilkTouchDrop(id="life_crystal", count=1),
 		override_model={"parent":"block/cube_all","textures":{"all":"minecraft:block/glass","down":f"{ns}:item/life_crystal_block","particle":"minecraft:block/glass"},"elements":[{"name":"crystal","from":[2,2,8],"to":[14,14,8],"faces":{"north":{"uv":[0,0,16,16],"texture":"#down"},"south":{"uv":[16,0,0,16],"texture":"#down"}}},{"name":"glass","from":[0,0,0],"to":[16,16,16],"faces":{"north":{"uv":[0,0,16,16],"texture":"#all"},"east":{"uv":[0,0,16,16],"texture":"#all"},"south":{"uv":[0,0,16,16],"texture":"#all"},"west":{"uv":[0,0,16,16],"texture":"#all"},"up":{"uv":[0,0,16,16],"texture":"#all"},"down":{"uv":[0,0,16,16],"texture":"#all"}}}]},
 		wiki_buttons=[

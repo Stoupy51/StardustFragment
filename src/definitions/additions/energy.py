@@ -626,7 +626,7 @@ def main_additions() -> None:
 	Block(
 		id="mob_grinder",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:redstone_block", visual_facing_source="player"),
+		vanilla_block=VanillaBlock(id="minecraft:redstone_block", visual_facing="player"),
 		components={
 			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
 		},

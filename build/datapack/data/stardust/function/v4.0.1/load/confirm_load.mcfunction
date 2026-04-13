@@ -113,7 +113,7 @@ scoreboard objectives add stardust.forge_timer dummy
 # Register the manual to the universal manual
 execute unless data storage stewbeet:main universal_manual run data modify storage stewbeet:main universal_manual set value []
 data remove storage stewbeet:main universal_manual[{"name":"StardustFragment"}]
-data modify storage stewbeet:main universal_manual append value {"name":"StardustFragment","loot_table":"stardust:i/manual","hover":[{"text": ""}, {"translate": "stardustfragment_manual_2"}, {"text": "ဠ\\n\\n\\n\\n\\n\\n", "font": "stardust:manual", "color": "white"}, [{"text": "", "font": "minecraft:default", "color": "black"}, {"translate": "stardust.the_following_manual_will_guide_you_through_everything_about_sta", "color": "#505050"}]]}
+data modify storage stewbeet:main universal_manual append value {"name":"StardustFragment","loot_table":"stardust:i/manual","hover":[{"text": ""}, [{"translate":"stardustfragment_manual"}, "\n"], {"text": "ဠ\\n\\n\\n\\n\\n\\n", "font": "stardust:manual", "color": "white"}, [{"text": "", "font": "minecraft:default", "color": "black"}, {"translate": "stardust.the_following_manual_will_guide_you_through_everything_about_sta", "color": "#505050"}]]}
 
 # Confirm load
 tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardustfragment_v4_0_1","color":"green"}

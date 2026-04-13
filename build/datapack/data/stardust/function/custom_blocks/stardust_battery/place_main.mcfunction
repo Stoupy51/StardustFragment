@@ -1,0 +1,17 @@
+
+#> stardust:custom_blocks/stardust_battery/place_main
+#
+# @within	stardust:custom_blocks/place
+#
+
+tag @s add stardust.placer
+setblock ~ ~ ~ air strict
+setblock ~ ~ ~ minecraft:warped_hyphae
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/stardust_battery/place_secondary
+tag @s remove stardust.placer
+
+# Increment count scores
+scoreboard players add #total_custom_blocks stardust.data 1
+scoreboard players add #total_vanilla_warped_hyphae stardust.data 1
+scoreboard players add #total_stardust_battery stardust.data 1
+

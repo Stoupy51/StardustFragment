@@ -1,0 +1,12 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "stardust:item/stardust_guardian",
+		"tints": [
+			{
+				"type": "minecraft:dye",
+				"default": [1.0,1.0,1.0]
+			}
+		]
+	}
+}

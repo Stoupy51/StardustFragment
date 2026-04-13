@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"awakened_stardust": {"awakened_stardust": true}},
+										"id": "stardust:awakened_stardust",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"awakened_stardust": true
+									}
+								},
+								"minecraft:item_model": "stardust:awakened_stardust",
+								"minecraft:item_name": {
+									"translate": "stardust.awakened_stardust"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

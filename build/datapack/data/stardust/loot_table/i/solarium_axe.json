@@ -1,0 +1,73 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_axe",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"tools": {"solarium": true,"axe": true}},
+										"id": "stardust:solarium_axe",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"solarium_axe": true
+									}
+								},
+								"minecraft:max_damage": 7805,
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "attack_damage",
+										"amount": 24,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_damage"
+									},
+									{
+										"type": "attack_speed",
+										"amount": -3.0,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "minecraft:base_attack_speed"
+									},
+									{
+										"type": "mining_efficiency",
+										"amount": 30,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:mining_efficiency.mainhand"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "mainhand",
+										"id": "stardust:burning_time.mainhand"
+									}
+								],
+								"minecraft:item_model": "stardust:solarium_axe",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_axe"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

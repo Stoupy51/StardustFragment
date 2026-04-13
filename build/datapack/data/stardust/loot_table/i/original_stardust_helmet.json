@@ -1,0 +1,63 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:diamond_helmet",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"original_stardust": true,"helmet": true}},
+										"id": "stardust:original_stardust_helmet",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"original_stardust_helmet": true
+									}
+								},
+								"minecraft:max_damage": 1089,
+								"minecraft:equippable": {
+									"slot": "head",
+									"asset_id": "stardust:original_stardust"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 6.0,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor.head"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 3.3,
+										"operation": "add_value",
+										"slot": "head",
+										"id": "stardust:armor_toughness.head"
+									}
+								],
+								"minecraft:item_model": "stardust:original_stardust_helmet",
+								"minecraft:item_name": {
+									"translate": "stardust.original_stardust_helmet"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

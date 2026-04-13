@@ -1,0 +1,12 @@
+
+#> stardust:custom_blocks/_groups/minecraft_lapis_block
+#
+# @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
+#
+# @within	stardust:custom_blocks/destroy
+#
+
+execute if score #total_stardust_block stardust.data matches 1.. if entity @s[tag=stardust.stardust_block] run function stardust:custom_blocks/stardust_block/destroy
+execute if score #total_stardust_frame stardust.data matches 1.. if entity @s[tag=stardust.stardust_frame] run function stardust:custom_blocks/stardust_frame/destroy
+execute if score #total_stardust_portal stardust.data matches 1.. if entity @s[tag=stardust.stardust_portal] run function stardust:custom_blocks/stardust_portal/destroy
+

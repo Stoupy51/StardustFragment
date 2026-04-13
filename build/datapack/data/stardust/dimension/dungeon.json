@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:the_nether",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "stardust:bloodbath",
+			"lakes": false,
+			"features": false,
+			"layers": [],
+			"structure_overrides": []
+		}
+	}
+}

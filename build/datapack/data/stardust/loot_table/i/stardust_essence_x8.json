@@ -1,0 +1,19 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:loot_table",
+					"value": "stardust:i/stardust_essence",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": 8
+						}
+					]
+				}
+			]
+		}
+	]
+}

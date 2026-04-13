@@ -1,0 +1,46 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"stardust": {
+										"stoupy_suno_prismatic_devastation": true
+									},
+									"smithed": {
+										"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_suno_prismatic_devastation"},"description": {"translate": "stardust.stoupy_suno_prismatic_devastation"}}},
+										"id": "stardust:stoupy_suno_prismatic_devastation",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": {
+									"translate": "stardust.music_disc",
+									"italic": false
+								},
+								"minecraft:jukebox_playable": "stardust:stoupy_suno_prismatic_devastation",
+								"minecraft:max_stack_size": 1,
+								"minecraft:rarity": "rare",
+								"minecraft:item_model": "stardust:stoupy_suno_prismatic_devastation",
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

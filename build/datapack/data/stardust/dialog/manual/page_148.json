@@ -1,0 +1,77 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_apple",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust_apple",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_apple",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_147"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (147)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_149"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (149)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_147"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (147)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_149"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (149)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$耡$耡$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "Stardust Fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}}, "$"]"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				"  \n\"",
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "$膕","hover_event": {"action": "show_item","id": "minecraft:golden_apple","components": {}}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				"\"\"",
+				{"text": "$$脱","hover_event": {"action": "show_item","id": "command_block","components": {"food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},"item_model": "stardust:stardust_apple","item_name": {"translate": "stardust_apple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"id": "stardust:stardust_apple","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:golden_apple","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"food": {"can_always_eat": true,"nutrition": 4,"saturation": 9.6},"consumable": {"on_consume_effects": [{"type": "minecraft:apply_effects","effects": [{"amplifier": 2,"duration": 100,"id": "minecraft:regeneration","show_icon": true},{"amplifier": 1,"duration": 2400,"id": "minecraft:absorption","show_icon": true}]}]},"item_model": "stardust:stardust_apple","item_name": {"translate": "stardust_apple"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"id": "stardust:stardust_apple","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$耡$耡$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "Stardust Fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}}, "$"]"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				"  \n\n",
+				{"text": "2\n0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$膕"},{"text": "$耡"},"\"\"",{"text": "$$脱"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.golden_apple","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

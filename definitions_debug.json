@@ -19,8 +19,9 @@
 			"item_model": "stardust:stardust_fragment",
 			"item_name": {"text": "Stardust Fragment"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_ingot": {
 		"id": "stardust_ingot",
@@ -44,8 +45,9 @@
 			"item_model": "stardust:stardust_ingot",
 			"item_name": {"text": "Stardust Ingot"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_ingot": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_ingot": true},"smithed": {"id": "stardust:stardust_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_essence": {
 		"id": "stardust_essence",
@@ -67,8 +69,9 @@
 			"item_model": "stardust:stardust_essence",
 			"item_name": {"text": "Stardust Essence"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_essence": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_essence": true},"smithed": {"id": "stardust:stardust_essence","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_core": {
 		"id": "stardust_core",
@@ -89,12 +92,14 @@
 			"item_model": "stardust:stardust_core",
 			"item_name": {"text": "Stardust Core"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_core": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"stardust_core": true},"smithed": {"id": "stardust:stardust_core","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:diamond_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"compacted_stardust_shard": {
@@ -113,8 +118,9 @@
 			"item_model": "stardust:compacted_stardust_shard",
 			"item_name": {"text": "Compacted Stardust Shard"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"compacted_stardust_shard": true},"smithed": {"id": "stardust:compacted_stardust_shard","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_block": {
 		"id": "stardust_block",
@@ -134,12 +140,14 @@
 			"item_model": "stardust:stardust_block",
 			"item_name": {"text": "Stardust Block"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"stardust_block": true},"smithed": {"id": "stardust:stardust_block","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:lapis_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"stardust_ore": {
@@ -147,8 +155,9 @@
 		"manual_category": "materials",
 		"vanilla_block": {
 			"id": "minecraft:polished_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"no_silk_touch_drop": {
 			"id": "stardust_fragment",
@@ -169,7 +178,7 @@
 		],
 		"custom_data": {
 			"stardust": {"stardust_ore": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:stardust_ore","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"deepslate_stardust_ore": {
@@ -177,8 +186,9 @@
 		"manual_category": "materials",
 		"vanilla_block": {
 			"id": "minecraft:polished_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"no_silk_touch_drop": {
 			"id": "stardust_fragment",
@@ -198,7 +208,7 @@
 		],
 		"custom_data": {
 			"stardust": {"deepslate_stardust_ore": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:deepslate_stardust_ore","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"nether_stardust_ore": {
@@ -206,8 +216,9 @@
 		"manual_category": "materials",
 		"vanilla_block": {
 			"id": "minecraft:polished_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"no_silk_touch_drop": {
 			"id": "stardust_ingot",
@@ -227,7 +238,7 @@
 		],
 		"custom_data": {
 			"stardust": {"nether_stardust_ore": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:nether_stardust_ore","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"ender_stardust_ore": {
@@ -235,8 +246,9 @@
 		"manual_category": "materials",
 		"vanilla_block": {
 			"id": "minecraft:polished_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"no_silk_touch_drop": {
 			"id": "stardust_essence",
@@ -256,7 +268,7 @@
 		],
 		"custom_data": {
 			"stardust": {"ender_stardust_ore": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:ender_stardust_ore","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"awakened_stardust": {
@@ -272,11 +284,12 @@
 			{"text": "\nRequired for advanced equipment and machines","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
+			"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"id": "stardust:awakened_stardust","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
 			"item_model": "stardust:awakened_stardust",
 			"item_name": {"text": "Awakened Stardust"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"awakened_stardust_block": {
 		"id": "awakened_stardust_block",
@@ -293,15 +306,17 @@
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_block","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
-			"custom_data": {"smithed": {"dict": {"block": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust_block": true}},
+			"custom_data": {"smithed": {"dict": {"block": {"awakened_stardust": true}},"id": "stardust:awakened_stardust_block","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust_block": true}},
 			"item_model": "stardust:awakened_stardust_block",
 			"item_name": {"text": "Awakened Stardust Block"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:redstone_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"awakened_stardust_ore": {
@@ -317,15 +332,17 @@
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_ore","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
-			"custom_data": {"smithed": {"dict": {"block": {"awakened_stardust": true},"ore": {"awakened_stardust": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust_ore": true}},
+			"custom_data": {"smithed": {"dict": {"block": {"awakened_stardust": true},"ore": {"awakened_stardust": true}},"id": "stardust:awakened_stardust_ore","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust_ore": true}},
 			"item_model": "stardust:awakened_stardust_ore",
 			"item_name": {"text": "Awakened Stardust Ore"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:polished_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"no_silk_touch_drop": {
 			"id": "awakened_stardust",
@@ -346,11 +363,12 @@
 			{"text": "\nUsed for legendarium-tier equipment","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"fragment": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_fragment": true}},
+			"custom_data": {"smithed": {"dict": {"fragment": {"legendarium": true}},"id": "stardust:legendarium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_fragment": true}},
 			"item_model": "stardust:legendarium_fragment",
 			"item_name": {"text": "Legendarium Fragment"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_ingot": {
 		"id": "legendarium_ingot",
@@ -366,11 +384,12 @@
 			{"text": "\nUsed for legendarium-tier equipment","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_ingot": true}},
+			"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"id": "stardust:legendarium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_ingot": true}},
 			"item_model": "stardust:legendarium_ingot",
 			"item_name": {"text": "Legendarium Ingot"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_block": {
 		"id": "legendarium_block",
@@ -386,15 +405,17 @@
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:legendarium_block","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
-			"custom_data": {"smithed": {"dict": {"block": {"legendarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_block": true}},
+			"custom_data": {"smithed": {"dict": {"block": {"legendarium": true}},"id": "stardust:legendarium_block","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_block": true}},
 			"item_model": "stardust:legendarium_block",
 			"item_name": {"text": "Legendarium Block"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:emerald_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"solarium_fragment": {
@@ -411,11 +432,12 @@
 			{"text": "\nUsed for solarium-tier equipment","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},
+			"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"id": "stardust:solarium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},
 			"item_model": "stardust:solarium_fragment",
 			"item_name": {"text": "Solarium Fragment"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_ingot": {
 		"id": "solarium_ingot",
@@ -431,11 +453,12 @@
 			{"text": "\nUsed for solarium-tier equipment","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},
+			"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"id": "stardust:solarium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},
 			"item_model": "stardust:solarium_ingot",
 			"item_name": {"text": "Solarium Ingot"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_block": {
 		"id": "solarium_block",
@@ -451,15 +474,17 @@
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:solarium_block","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
-			"custom_data": {"smithed": {"dict": {"block": {"solarium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_block": true}},
+			"custom_data": {"smithed": {"dict": {"block": {"solarium": true}},"id": "stardust:solarium_block","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_block": true}},
 			"item_model": "stardust:solarium_block",
 			"item_name": {"text": "Solarium Block"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:waxed_copper_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"darkium_fragment": {
@@ -476,11 +501,12 @@
 			{"text": "\nUsed for darkium-tier equipment","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"fragment": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_fragment": true}},
+			"custom_data": {"smithed": {"dict": {"fragment": {"darkium": true}},"id": "stardust:darkium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_fragment": true}},
 			"item_model": "stardust:darkium_fragment",
 			"item_name": {"text": "Darkium Fragment"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_ingot": {
 		"id": "darkium_ingot",
@@ -496,11 +522,12 @@
 			{"text": "\nUsed for darkium-tier equipment","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},
+			"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"id": "stardust:darkium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},
 			"item_model": "stardust:darkium_ingot",
 			"item_name": {"text": "Darkium Ingot"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_block": {
 		"id": "darkium_block",
@@ -516,15 +543,17 @@
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_block","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
-			"custom_data": {"smithed": {"dict": {"block": {"darkium": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_block": true}},
+			"custom_data": {"smithed": {"dict": {"block": {"darkium": true}},"id": "stardust:darkium_block","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_block": true}},
 			"item_model": "stardust:darkium_block",
 			"item_name": {"text": "Darkium Block"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:netherite_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"dragon_pearl": {
@@ -545,8 +574,9 @@
 			"use_cooldown": {"seconds": 0.5},
 			"item_model": "stardust:dragon_pearl",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"dragon_pearl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"dragon_pearl": true},"smithed": {"id": "stardust:dragon_pearl","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"ender_dragon_pearl": {
 		"id": "ender_dragon_pearl",
@@ -566,8 +596,9 @@
 			"use_cooldown": {"seconds": 0.25},
 			"item_model": "stardust:ender_dragon_pearl",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"ender_dragon_pearl": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"ender_dragon_pearl": true},"smithed": {"id": "stardust:ender_dragon_pearl","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"ultimate_shard": {
 		"id": "minecraft:command_block",
@@ -601,7 +632,7 @@
 		],
 		"custom_data": {
 			"stardust": {"ultimate_shard": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:ultimate_shard","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"dog_excrement": {
@@ -626,15 +657,14 @@
 		],
 		"custom_data": {
 			"stardust": {"dog_excrement": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:dog_excrement","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false
+			"id": "minecraft:cobbled_deepslate"
 		},
 		"lore": [
 			{"text": "Equivalent to 9 cobblestones","color": "gray","italic": false},
@@ -658,15 +688,14 @@
 		},
 		"custom_data": {
 			"stardust": {"compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"double_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false
+			"id": "minecraft:cobbled_deepslate"
 		},
 		"lore": [
 			{"text": "Equivalent to 81 cobblestones","color": "gray","italic": false},
@@ -687,15 +716,14 @@
 		},
 		"custom_data": {
 			"stardust": {"double_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:double_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"triple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false
+			"id": "minecraft:cobbled_deepslate"
 		},
 		"lore": [
 			{"text": "Equivalent to 729 cobblestones","color": "gray","italic": false},
@@ -716,15 +744,14 @@
 		},
 		"custom_data": {
 			"stardust": {"triple_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:triple_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"quadruple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false
+			"id": "minecraft:cobbled_deepslate"
 		},
 		"lore": [
 			{"text": "Equivalent to 6,561 cobblestones","color": "gray","italic": false},
@@ -745,15 +772,14 @@
 		},
 		"custom_data": {
 			"stardust": {"quadruple_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:quadruple_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"quintuple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:obsidian",
-			"apply_facing": false
+			"id": "minecraft:obsidian"
 		},
 		"lore": [
 			{"text": "Equivalent to 59,049 cobblestones","color": "gray","italic": false},
@@ -774,15 +800,14 @@
 		},
 		"custom_data": {
 			"stardust": {"quintuple_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:quintuple_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"sextuple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:obsidian",
-			"apply_facing": false
+			"id": "minecraft:obsidian"
 		},
 		"lore": [
 			{"text": "Equivalent to 531,441 cobblestones","color": "gray","italic": false},
@@ -803,15 +828,14 @@
 		},
 		"custom_data": {
 			"stardust": {"sextuple_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:sextuple_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"septuple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:obsidian",
-			"apply_facing": false
+			"id": "minecraft:obsidian"
 		},
 		"lore": [
 			{"text": "Equivalent to 4,782,969 cobblestones","color": "gray","italic": false},
@@ -832,15 +856,14 @@
 		},
 		"custom_data": {
 			"stardust": {"septuple_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:septuple_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"octuple_compressed_cobblestone": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:obsidian",
-			"apply_facing": false
+			"id": "minecraft:obsidian"
 		},
 		"lore": [
 			{"text": "Equivalent to 43,046,721 cobblestones","color": "gray","italic": false},
@@ -859,15 +882,14 @@
 		},
 		"custom_data": {
 			"stardust": {"octuple_compressed_cobblestone": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:octuple_compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"stardust_frame": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:lapis_block",
-			"apply_facing": false
+			"id": "minecraft:lapis_block"
 		},
 		"wiki_buttons": [
 			{"text": "Enhanced machine block with stardust.","color": "yellow"},
@@ -886,15 +908,14 @@
 		],
 		"custom_data": {
 			"stardust": {"stardust_frame": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:stardust_frame","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"awakened_stardust_frame": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:redstone_block",
-			"apply_facing": false
+			"id": "minecraft:redstone_block"
 		},
 		"wiki_buttons": [
 			{"text": "Awakened frame made with stardust.","color": "yellow"},
@@ -914,15 +935,14 @@
 		],
 		"custom_data": {
 			"stardust": {"awakened_stardust_frame": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:awakened_stardust_frame","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"ultimate_frame": {
 		"id": "minecraft:furnace",
 		"manual_category": "materials",
 		"vanilla_block": {
-			"id": "minecraft:crying_obsidian",
-			"apply_facing": false
+			"id": "minecraft:crying_obsidian"
 		},
 		"item_name": [
 			{"text": "U","color": "#ff0000","italic": false},
@@ -955,7 +975,7 @@
 		],
 		"custom_data": {
 			"stardust": {"ultimate_frame": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:ultimate_frame","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"mirror": {
@@ -978,7 +998,7 @@
 		],
 		"custom_data": {
 			"stardust": {"mirror": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:mirror","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"stardust_photovoltaic_cell": {
@@ -1000,7 +1020,7 @@
 		],
 		"custom_data": {
 			"stardust": {"stardust_photovoltaic_cell": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:stardust_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"awakened_stardust_photovoltaic_cell": {
@@ -1023,7 +1043,7 @@
 		],
 		"custom_data": {
 			"stardust": {"awakened_stardust_photovoltaic_cell": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:awakened_stardust_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"legendarium_photovoltaic_cell": {
@@ -1046,7 +1066,7 @@
 		],
 		"custom_data": {
 			"stardust": {"legendarium_photovoltaic_cell": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:legendarium_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"solarium_photovoltaic_cell": {
@@ -1069,7 +1089,7 @@
 		],
 		"custom_data": {
 			"stardust": {"solarium_photovoltaic_cell": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:solarium_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"darkium_photovoltaic_cell": {
@@ -1092,7 +1112,7 @@
 		],
 		"custom_data": {
 			"stardust": {"darkium_photovoltaic_cell": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:darkium_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"ultimate_photovoltaic_cell": {
@@ -1141,7 +1161,7 @@
 		],
 		"custom_data": {
 			"stardust": {"ultimate_photovoltaic_cell": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:ultimate_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"empty_module": {
@@ -1163,7 +1183,7 @@
 		],
 		"custom_data": {
 			"stardust": {"empty_module": true},
-			"smithed": {"ignore": {"functionality": true,"crafting": true}}
+			"smithed": {"id": "stardust:empty_module","origin": "stardust","ignore": {"functionality": true,"crafting": true}}
 		}
 	},
 	"stardust_cable": {
@@ -1178,15 +1198,17 @@
 			[{"text": "High-capacity energy transmission cable.","color": "yellow"},{"text": "\nTransfers up to 480 kW","color": "gray"},{"text": "\nConnects generators to machines and batteries","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"transfer": 480},"stardust": {"stardust_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"transfer": 480},"stardust": {"stardust_cable": true},"smithed": {"id": "stardust:stardust_cable","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y4NDVlMzBlNmVjOGI0N2RmZWUxMzI5NmQzYjQ3NzY5YzVjMGE5Nzc3YzNkNTk2ZWJiNDA3ZmY3OTcwNDE1ZCJ9fX0="}]},
 			"lore": [{"text": "[Transfer Speed: 480 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_name": {"text": "Stardust Cable"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y4NDVlMzBlNmVjOGI0N2RmZWUxMzI5NmQzYjQ3NzY5YzVjMGE5Nzc3YzNkNTk2ZWJiNDA3ZmY3OTcwNDE1ZCJ9fX0='}]}}",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"awakened_stardust_cable": {
@@ -1201,15 +1223,17 @@
 			[{"text": "Enhanced energy transmission cable.","color": "yellow"},{"text": "\nTransfers up to 960 kW","color": "gray"},{"text": "\nUpgraded version of stardust cable","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"transfer": 960},"stardust": {"awakened_stardust_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"transfer": 960},"stardust": {"awakened_stardust_cable": true},"smithed": {"id": "stardust:awakened_stardust_cable","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5ZmE4MTE1Y2MyY2FhNDE2MzA4N2Y1MzU5YTIzZjNmYzAxZjIxZTliMWRjOTE0ZDJkMzBkYTk4ZTZjMDUxYiJ9fX0="}]},
 			"lore": [{"text": "[Transfer Speed: 960 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_name": {"text": "Awakened Stardust Cable"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWQ5ZmE4MTE1Y2MyY2FhNDE2MzA4N2Y1MzU5YTIzZjNmYzAxZjIxZTliMWRjOTE0ZDJkMzBkYTk4ZTZjMDUxYiJ9fX0='}]}}",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"ultimate_cable": {
@@ -1223,15 +1247,17 @@
 			[{"text": "Ultimate energy transmission cable.","color": "yellow"},{"text": "\nTransfers up to 1920 kW","color": "gray"},{"text": "\nUpgraded version of awakened stardust cable","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"transfer": 1920},"stardust": {"ultimate_cable": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"transfer": 1920},"stardust": {"ultimate_cable": true},"smithed": {"id": "stardust:ultimate_cable","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff6d00"},{"text": "t","color": "#ffda00"},{"text": "i","color": "#b6ff00"},{"text": "m","color": "#48ff00"},{"text": "a","color": "#00ff24"},{"text": "t","color": "#00ff91"},{"text": "e","color": "#00ffff"},{"text": " ","color": "#0091ff"},{"text": "C","color": "#0024ff"},{"text": "a","color": "#4800ff"},{"text": "b","color": "#b600ff"},{"text": "l","color": "#ff00da"},{"text": "e","color": "#ff006d"}],
 			"profile": {"id": [-709098200,1001541428,-2043264882,-430220135],"properties": [{"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ4NGE3OGU4YTY5YjZhYWUwNmQ3ZTI2OWM3NWJjZjkxM2U4ZWY3ZDU1Y2Q3ZjY2MjZiZTZjOWIwZjQ2OGQ5MyJ9fX0="}]},
 			"lore": [{"text": "[Transfer Speed: 1920 kW]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:player_head{profile:{'id': [-709098200, 1001541428, -2043264882, -430220135], 'properties': [{'name': 'textures', 'value': 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ4NGE3OGU4YTY5YjZhYWUwNmQ3ZTI2OWM3NWJjZjkxM2U4ZWY3ZDU1Y2Q3ZjY2MjZiZTZjOWIwZjQ2OGQ5MyJ9fX0='}]}}",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"stardust_battery": {
@@ -1246,17 +1272,19 @@
 			{"text": "\nStores up to 200 MJ of energy","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"storage": 0,"max_storage": 200000},"stardust": {"stardust_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"storage": 0,"max_storage": 200000},"stardust": {"stardust_battery": true},"smithed": {"id": "stardust:stardust_battery","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_battery","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Storage: 200 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:stardust_battery",
 			"item_name": {"text": "Stardust Battery"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:warped_hyphae",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"awakened_stardust_battery": {
@@ -1272,17 +1300,19 @@
 			{"text": "\nStores up to 500 MJ of energy","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"storage": 0,"max_storage": 500000},"stardust": {"awakened_stardust_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"storage": 0,"max_storage": 500000},"stardust": {"awakened_stardust_battery": true},"smithed": {"id": "stardust:awakened_stardust_battery","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_battery","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Storage: 500 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:awakened_stardust_battery",
 			"item_name": {"text": "Awakened Stardust Battery"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:crimson_hyphae",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"ultimate_battery": {
@@ -1298,17 +1328,19 @@
 			{"text": "\nStores up to 10 GJ of energy","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"storage": 0,"max_storage": 10000000},"stardust": {"ultimate_battery": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"storage": 0,"max_storage": 10000000},"stardust": {"ultimate_battery": true},"smithed": {"id": "stardust:ultimate_battery","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5f00"},{"text": "t","color": "#ffbf00"},{"text": "i","color": "#dfff00"},{"text": "m","color": "#7fff00"},{"text": "a","color": "#1fff00"},{"text": "t","color": "#00ff3f"},{"text": "e","color": "#00ff9f"},{"text": " ","color": "#00ffff"},{"text": "B","color": "#009fff"},{"text": "a","color": "#003fff"},{"text": "t","color": "#1f00ff"},{"text": "t","color": "#7f00ff"},{"text": "e","color": "#df00ff"},{"text": "r","color": "#ff00bf"},{"text": "y","color": "#ff005f"}],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_battery","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Storage: 10 GJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:ultimate_battery"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:crying_obsidian",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"stardust_solar_panel": {
@@ -1324,17 +1356,19 @@
 			{"text": "\nRequires direct sunlight","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 8,"max_storage": 1200},"stardust": {"stardust_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 8,"max_storage": 1200},"stardust": {"stardust_solar_panel": true},"smithed": {"id": "stardust:stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 8 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1200 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:stardust_solar_panel",
 			"item_name": {"text": "Stardust Solar Panel"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:daylight_detector",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"awakened_stardust_solar_panel": {
@@ -1350,17 +1384,19 @@
 			{"text": "\nGenerates 16 kW during daylight","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 16,"max_storage": 2400},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 16,"max_storage": 2400},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"id": "stardust:awakened_stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 16 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 2400 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:awakened_stardust_solar_panel",
 			"item_name": {"text": "Awakened Stardust Solar Panel"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:daylight_detector",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"legendarium_solar_panel": {
@@ -1376,17 +1412,19 @@
 			{"text": "\nGenerates 32 kW during daylight","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"legendarium_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"legendarium_solar_panel": true},"smithed": {"id": "stardust:legendarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:legendarium_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 32 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 4800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:legendarium_solar_panel",
 			"item_name": {"text": "Legendarium Solar Panel"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:daylight_detector",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"solarium_solar_panel": {
@@ -1402,17 +1440,19 @@
 			{"text": "\nGenerates 32 kW during daylight","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"solarium_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"solarium_solar_panel": true},"smithed": {"id": "stardust:solarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:solarium_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 32 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 4800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:solarium_solar_panel",
 			"item_name": {"text": "Solarium Solar Panel"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:daylight_detector",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"darkium_solar_panel": {
@@ -1428,17 +1468,19 @@
 			{"text": "\nGenerates 32 kW during nighttime instead of daylight","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"darkium_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"darkium_solar_panel": true},"smithed": {"id": "stardust:darkium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 32 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 4800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:darkium_solar_panel",
 			"item_name": {"text": "Darkium Solar Panel"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:daylight_detector",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"ultimate_solar_panel": {
@@ -1458,17 +1500,19 @@
 			{"text": "\nGenerates 128 kW during daylight only","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 128,"max_storage": 20000},"stardust": {"ultimate_solar_panel": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 128,"max_storage": 20000},"stardust": {"ultimate_solar_panel": true},"smithed": {"id": "stardust:ultimate_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff4c00"},{"text": "t","color": "#ff9900"},{"text": "i","color": "#ffe500"},{"text": "m","color": "#ccff00"},{"text": "a","color": "#7fff00"},{"text": "t","color": "#32ff00"},{"text": "e","color": "#00ff19"},{"text": " ","color": "#00ff65"},{"text": "S","color": "#00ffb2"},{"text": "o","color": "#00ffff"},{"text": "l","color": "#00b2ff"},{"text": "a","color": "#0065ff"},{"text": "r","color": "#0019ff"},{"text": " ","color": "#3200ff"},{"text": "P","color": "#7f00ff"},{"text": "a","color": "#cb00ff"},{"text": "n","color": "#ff00e5"},{"text": "e","color": "#ff0098"},{"text": "l","color": "#ff004c"}],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 128 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 20 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:ultimate_solar_panel"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:daylight_detector",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"quarry_configurator": {
@@ -1495,8 +1539,9 @@
 			"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:quarry_configurator",
 			"item_name": {"text": "Quarry Configurator"},
-			"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"quarry_configurator": true},"smithed": {"id": "stardust:quarry_configurator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"fortune_module": {
 		"id": "fortune_module",
@@ -1516,8 +1561,9 @@
 			"lore": [{"text": "Increases fortune level of the quarry","italic": false,"color": "gray"},{"text": "by 1 (max 5)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:fortune_module",
 			"item_name": {"text": "Fortune Module"},
-			"custom_data": {"stardust": {"fortune_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"fortune_module": true},"smithed": {"id": "stardust:fortune_module","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"silk_touch_module": {
 		"id": "silk_touch_module",
@@ -1536,8 +1582,9 @@
 			"lore": [{"text": "Enables silk touch enchantment for the quarry","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:silk_touch_module",
 			"item_name": {"text": "Silk Touch Module"},
-			"custom_data": {"stardust": {"silk_touch_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"silk_touch_module": true},"smithed": {"id": "stardust:silk_touch_module","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"force_load_module": {
 		"id": "force_load_module",
@@ -1557,8 +1604,9 @@
 			"lore": [{"text": "Force loads the chunk where the quarry is placed","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:force_load_module",
 			"item_name": {"text": "Force Load Module"},
-			"custom_data": {"stardust": {"force_load_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"force_load_module": true},"smithed": {"id": "stardust:force_load_module","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"quarry_lv1": {
 		"id": "quarry_lv1",
@@ -1575,17 +1623,19 @@
 			{"text": "\nEnergy buffer: 20 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 125,"max_storage": 20000},"stardust": {"quarry": {"block_per_second": 1},"quarry_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 125,"max_storage": 20000},"stardust": {"quarry": {"block_per_second": 1},"quarry_lv1": true},"smithed": {"id": "stardust:quarry_lv1","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Quarry Lv.1","italic": false},
 			"lore": [{"text": "[Speed: 1 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 125 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 20 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_lv1","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:quarry_lv1"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:barrel",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"quarry_lv2": {
@@ -1603,17 +1653,19 @@
 			{"text": "\nEnergy buffer: 60 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 250,"max_storage": 60000},"stardust": {"quarry": {"block_per_second": 3},"quarry_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 250,"max_storage": 60000},"stardust": {"quarry": {"block_per_second": 3},"quarry_lv2": true},"smithed": {"id": "stardust:quarry_lv2","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Quarry Lv.2","italic": false},
 			"lore": [{"text": "[Speed: 3 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 250 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 60 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_lv2","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:quarry_lv2"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:barrel",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"quarry_lv3": {
@@ -1631,17 +1683,19 @@
 			{"text": "\nEnergy buffer: 100 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 375,"max_storage": 100000},"stardust": {"quarry": {"block_per_second": 5},"quarry_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 375,"max_storage": 100000},"stardust": {"quarry": {"block_per_second": 5},"quarry_lv3": true},"smithed": {"id": "stardust:quarry_lv3","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Quarry Lv.3","italic": false},
 			"lore": [{"text": "[Speed: 5 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 375 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 100 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_lv3","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:quarry_lv3"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:barrel",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"quarry_lv4": {
@@ -1659,17 +1713,19 @@
 			{"text": "\nEnergy buffer: 140 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 500,"max_storage": 140000},"stardust": {"quarry": {"block_per_second": 8},"quarry_lv4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 500,"max_storage": 140000},"stardust": {"quarry": {"block_per_second": 8},"quarry_lv4": true},"smithed": {"id": "stardust:quarry_lv4","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Quarry Lv.4","italic": false},
 			"lore": [{"text": "[Speed: 8 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 140 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_lv4","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:quarry_lv4"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:barrel",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"quarry_lv5": {
@@ -1688,17 +1744,19 @@
 			{"text": "\nEnergy buffer: 180 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 625,"max_storage": 180000},"stardust": {"quarry": {"block_per_second": 16},"quarry_lv5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 625,"max_storage": 180000},"stardust": {"quarry": {"block_per_second": 16},"quarry_lv5": true},"smithed": {"id": "stardust:quarry_lv5","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Quarry Lv.5","italic": false},
 			"lore": [{"text": "[Speed: 16 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 625 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 180 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_lv5","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:quarry_lv5"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:barrel",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"quarry_creative": {
@@ -1713,7 +1771,7 @@
 			{"text": "\nFor creative/testing purposes only","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry": {"block_per_second": 1000},"quarry_creative": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry": {"block_per_second": 1000},"quarry_creative": true},"smithed": {"id": "stardust:quarry_creative","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"lore": [{"text": "[Speed: 1000 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 0 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"enchantment_glint_override": true,
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_creative","from": "stardust"}}}}}}],
@@ -1721,10 +1779,12 @@
 			"item_model": "stardust:quarry_creative",
 			"item_name": {"text": "Quarry Creative"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:barrel",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cavern_portal": {
@@ -1743,17 +1803,19 @@
 			{"text": "\nEnergy buffer: 800 kJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"id": "stardust:cavern_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Cavern Portal","italic": false,"color": "dark_gray"},
 			"lore": [{"text": "This portal allows access to a world full of caverns!","italic": false,"color": "white"},{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cavern_portal","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cavern_portal"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"celestial_portal": {
@@ -1773,17 +1835,19 @@
 			{"text": "\nEnergy buffer: 800 kJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"celestial_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"celestial_portal": true},"smithed": {"id": "stardust:celestial_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Celestial Portal","italic": false,"color": "gray"},
 			"lore": [{"text": "This portal allows access to a dimension filled with floating islands","italic": false,"color": "white"},{"text": "[Power Usage: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 800 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:celestial_portal","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:celestial_portal"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:iron_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"stardust_portal": {
@@ -1805,17 +1869,19 @@
 			{"text": "\nEnergy buffer: 6 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 100,"max_storage": 6000},"stardust": {"stardust_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 100,"max_storage": 6000},"stardust": {"stardust_portal": true},"smithed": {"id": "stardust:stardust_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Stardust Portal","italic": false,"color": "blue"},
 			"lore": [{"text": "This portal allows access to the Stardust dimension with lots of powerful mobs!","italic": false,"color": "white"},{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 6000 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_portal","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:stardust_portal"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:lapis_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"stardust_dungeon_portal": {
@@ -1835,17 +1901,19 @@
 			{"text": "\nEnergy buffer: 12 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 200,"max_storage": 12000},"stardust": {"stardust_dungeon_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 200,"max_storage": 12000},"stardust": {"stardust_dungeon_portal": true},"smithed": {"id": "stardust:stardust_dungeon_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Stardust Dungeon Portal","italic": false,"color": "red"},
 			"lore": [{"text": "This portal allows access to the dimension of the Stardust Dungeon!","italic": false,"color": "white"},{"text": "[Power Usage: 200 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 12 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_dungeon_portal","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:stardust_dungeon_portal"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:red_nether_bricks",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"ultimate_portal": {
@@ -1868,17 +1936,19 @@
 			{"text": "\nEnergy buffer: 24 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 500,"max_storage": 24000},"stardust": {"ultimate_portal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 500,"max_storage": 24000},"stardust": {"ultimate_portal": true},"smithed": {"id": "stardust:ultimate_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff6600"},{"text": "t","color": "#ffcc00"},{"text": "i","color": "#ccff00"},{"text": "m","color": "#65ff00"},{"text": "a","color": "#00ff00"},{"text": "t","color": "#00ff65"},{"text": "e","color": "#00ffcb"},{"text": " ","color": "#00cbff"},{"text": "P","color": "#0065ff"},{"text": "o","color": "#0000ff"},{"text": "r","color": "#6600ff"},{"text": "t","color": "#cb00ff"},{"text": "a","color": "#ff00cb"},{"text": "l","color": "#ff0066"}],
 			"lore": [{"text": "This portal allows access to the dimension of the Ultimate Boss!","italic": false,"color": "white"},{"text": "[Power Usage: 500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 24 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_portal","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:ultimate_portal"
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:crying_obsidian",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"growth_accelerator": {
@@ -1900,17 +1970,19 @@
 			{"text": "\nEnergy buffer: 12 MJ","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 100,"max_storage": 12000},"stardust": {"growth_accelerator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 100,"max_storage": 12000},"stardust": {"growth_accelerator": true},"smithed": {"id": "stardust:growth_accelerator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"lore": [{"text": "Only growth seeds in a radius","italic": false,"color": "white"},{"text": "of 10 blocks every minute","italic": false,"color": "white"},{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 12 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:growth_accelerator","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:growth_accelerator",
 			"item_name": {"text": "Growth Accelerator"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:diamond_block",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"mob_grinder": {
@@ -1927,17 +1999,19 @@
 			{"text": "\n\nConsumes 100 kW of power","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"usage": 100,"max_storage": 15000},"stardust": {"mob_grinder": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"usage": 100,"max_storage": 15000},"stardust": {"mob_grinder": true},"smithed": {"id": "stardust:mob_grinder","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:mob_grinder","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Power Usage: 100 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 15 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:mob_grinder",
 			"item_name": {"text": "Mob Grinder"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:redstone_block",
-			"apply_facing": "entity",
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "player"
 		}
 	},
 	"nether_star_generator": {
@@ -1954,17 +2028,19 @@
 			{"text": "\nOne nether star provides 15 minutes of fuel","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 1500,"max_storage": 30000},"stardust": {"nether_star_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 1500,"max_storage": 30000},"stardust": {"nether_star_generator": true},"smithed": {"id": "stardust:nether_star_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:nether_star_generator","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 1500 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 30 MJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:nether_star_generator",
 			"item_name": {"text": "Nether Star Generator"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:furnace",
-			"apply_facing": true,
-			"contents": false
+			"contents": false,
+			"block_facing": "player",
+			"visual_facing_source": "player"
 		}
 	},
 	"advanced_furnace_generator": {
@@ -1982,17 +2058,19 @@
 			{"text": "\nMore efficient than basic furnace generator","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 20,"max_storage": 1600},"stardust": {"advanced_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 20,"max_storage": 1600},"stardust": {"advanced_furnace_generator": true},"smithed": {"id": "stardust:advanced_furnace_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:advanced_furnace_generator","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 20 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:advanced_furnace_generator",
 			"item_name": {"text": "Advanced Furnace Generator"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:furnace",
-			"apply_facing": true,
-			"contents": false
+			"contents": false,
+			"block_facing": "player",
+			"visual_facing_source": "player"
 		}
 	},
 	"stardust_furnace_generator": {
@@ -2010,17 +2088,19 @@
 			{"text": "\nHigher efficiency than advanced generator","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 40,"max_storage": 1600},"stardust": {"stardust_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 40,"max_storage": 1600},"stardust": {"stardust_furnace_generator": true},"smithed": {"id": "stardust:stardust_furnace_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_furnace_generator","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 40 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:stardust_furnace_generator",
 			"item_name": {"text": "Stardust Furnace Generator"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:furnace",
-			"apply_facing": true,
-			"contents": false
+			"contents": false,
+			"block_facing": "player",
+			"visual_facing_source": "player"
 		}
 	},
 	"awakened_stardust_furnace_generator": {
@@ -2038,17 +2118,19 @@
 			{"text": "\nMaximum efficiency furnace generator","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 80,"max_storage": 1600},"stardust": {"awakened_stardust_furnace_generator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 80,"max_storage": 1600},"stardust": {"awakened_stardust_furnace_generator": true},"smithed": {"id": "stardust:awakened_stardust_furnace_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_furnace_generator","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 80 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1600 kJ]","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:awakened_stardust_furnace_generator",
 			"item_name": {"text": "Awakened Stardust Furnace Generator"}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:furnace",
-			"apply_facing": true,
-			"contents": false
+			"contents": false,
+			"block_facing": "player",
+			"visual_facing_source": "player"
 		}
 	},
 	"ancient_stardust_helmet": {
@@ -2070,14 +2152,15 @@
 			{"text": "(3.0 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_helmet": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"helmet": true}},"id": "stardust:ancient_stardust_helmet","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_helmet": true}},
 			"max_damage": 544,
 			"equippable": {"slot": "head","asset_id": "stardust:ancient_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 4.0,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 3.0,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"}],
 			"item_model": "stardust:ancient_stardust_helmet",
 			"item_name": {"text": "Ancient Stardust Helmet"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ancient_stardust_chestplate": {
 		"id": "ancient_stardust_chestplate",
@@ -2098,14 +2181,15 @@
 			{"text": "(3.0 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_chestplate": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"chestplate": true}},"id": "stardust:ancient_stardust_chestplate","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_chestplate": true}},
 			"max_damage": 791,
 			"equippable": {"slot": "chest","asset_id": "stardust:ancient_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 3.0,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"}],
 			"item_model": "stardust:ancient_stardust_chestplate",
 			"item_name": {"text": "Ancient Stardust Chestplate"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ancient_stardust_leggings": {
 		"id": "ancient_stardust_leggings",
@@ -2126,14 +2210,15 @@
 			{"text": "(3.0 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_leggings": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"leggings": true}},"id": "stardust:ancient_stardust_leggings","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_leggings": true}},
 			"max_damage": 742,
 			"equippable": {"slot": "legs","asset_id": "stardust:ancient_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 7.0,"operation": "add_value","slot": "legs","id": "stardust:armor.legs"},{"type": "armor_toughness","amount": 3.0,"operation": "add_value","slot": "legs","id": "stardust:armor_toughness.legs"}],
 			"item_model": "stardust:ancient_stardust_leggings",
 			"item_name": {"text": "Ancient Stardust Leggings"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ancient_stardust_boots": {
 		"id": "ancient_stardust_boots",
@@ -2154,14 +2239,15 @@
 			{"text": "(3.0 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_boots": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true,"boots": true}},"id": "stardust:ancient_stardust_boots","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_boots": true}},
 			"max_damage": 643,
 			"equippable": {"slot": "feet","asset_id": "stardust:ancient_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 4.0,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 3.0,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"}],
 			"item_model": "stardust:ancient_stardust_boots",
 			"item_name": {"text": "Ancient Stardust Boots"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ancient_stardust_sword": {
 		"id": "ancient_stardust_sword",
@@ -2180,13 +2266,14 @@
 			{"text": "(8.0 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true,"sword": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_sword": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true,"sword": true}},"id": "stardust:ancient_stardust_sword","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_sword": true}},
 			"max_damage": 2341,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 			"item_model": "stardust:ancient_stardust_sword",
 			"item_name": {"text": "Ancient Stardust Sword"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ancient_stardust_pickaxe": {
 		"id": "ancient_stardust_pickaxe",
@@ -2206,13 +2293,14 @@
 			{"text": "\n- Mining Efficiency has been increased by 15.0","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_pickaxe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true,"pickaxe": true}},"id": "stardust:ancient_stardust_pickaxe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_pickaxe": true}},
 			"max_damage": 2341,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 6,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 15,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],
 			"item_model": "stardust:ancient_stardust_pickaxe",
 			"item_name": {"text": "Ancient Stardust Pickaxe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ancient_stardust_axe": {
 		"id": "ancient_stardust_axe",
@@ -2232,13 +2320,14 @@
 			{"text": "\n- Mining Efficiency has been increased by 15.0","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_axe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true,"axe": true}},"id": "stardust:ancient_stardust_axe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"ancient_stardust_axe": true}},
 			"max_damage": 2341,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 10,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 15,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],
 			"item_model": "stardust:ancient_stardust_axe",
 			"item_name": {"text": "Ancient Stardust Axe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_helmet": {
 		"id": "original_stardust_helmet",
@@ -2257,14 +2346,15 @@
 			{"text": "(3.3 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_helmet": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"helmet": true}},"id": "stardust:original_stardust_helmet","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_helmet": true}},
 			"max_damage": 1089,
 			"equippable": {"slot": "head","asset_id": "stardust:original_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 6.0,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 3.3,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"}],
 			"item_model": "stardust:original_stardust_helmet",
 			"item_name": {"text": "Original Stardust Helmet"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_chestplate": {
 		"id": "original_stardust_chestplate",
@@ -2283,14 +2373,15 @@
 			{"text": "(3.3 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_chestplate": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"chestplate": true}},"id": "stardust:original_stardust_chestplate","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_chestplate": true}},
 			"max_damage": 1584,
 			"equippable": {"slot": "chest","asset_id": "stardust:original_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 11.0,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 3.3,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"}],
 			"item_model": "stardust:original_stardust_chestplate",
 			"item_name": {"text": "Original Stardust Chestplate"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_leggings": {
 		"id": "original_stardust_leggings",
@@ -2309,14 +2400,15 @@
 			{"text": "(3.3 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_leggings": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"leggings": true}},"id": "stardust:original_stardust_leggings","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_leggings": true}},
 			"max_damage": 1485,
 			"equippable": {"slot": "legs","asset_id": "stardust:original_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "legs","id": "stardust:armor.legs"},{"type": "armor_toughness","amount": 3.3,"operation": "add_value","slot": "legs","id": "stardust:armor_toughness.legs"}],
 			"item_model": "stardust:original_stardust_leggings",
 			"item_name": {"text": "Original Stardust Leggings"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_boots": {
 		"id": "original_stardust_boots",
@@ -2335,14 +2427,15 @@
 			{"text": "(3.3 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_boots": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true,"boots": true}},"id": "stardust:original_stardust_boots","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_boots": true}},
 			"max_damage": 1287,
 			"equippable": {"slot": "feet","asset_id": "stardust:original_stardust"},
 			"attribute_modifiers": [{"type": "armor","amount": 6.0,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 3.3,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"}],
 			"item_model": "stardust:original_stardust_boots",
 			"item_name": {"text": "Original Stardust Boots"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_sword": {
 		"id": "original_stardust_sword",
@@ -2359,13 +2452,14 @@
 			{"text": "(14.0 points)","color": "white"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true,"sword": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_sword": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true,"sword": true}},"id": "stardust:original_stardust_sword","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_sword": true}},
 			"max_damage": 4683,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 14,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"}],
 			"item_model": "stardust:original_stardust_sword",
 			"item_name": {"text": "Original Stardust Sword"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_pickaxe": {
 		"id": "original_stardust_pickaxe",
@@ -2383,13 +2477,14 @@
 			{"text": "\n- Mining Efficiency has been increased by 20.0","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_pickaxe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true,"pickaxe": true}},"id": "stardust:original_stardust_pickaxe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_pickaxe": true}},
 			"max_damage": 4683,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 12,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 20,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],
 			"item_model": "stardust:original_stardust_pickaxe",
 			"item_name": {"text": "Original Stardust Pickaxe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"original_stardust_axe": {
 		"id": "original_stardust_axe",
@@ -2407,13 +2502,14 @@
 			{"text": "\n- Mining Efficiency has been increased by 20.0","color": "gray"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_axe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true,"axe": true}},"id": "stardust:original_stardust_axe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"original_stardust_axe": true}},
 			"max_damage": 4683,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 16,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 20,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"}],
 			"item_model": "stardust:original_stardust_axe",
 			"item_name": {"text": "Original Stardust Axe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_helmet": {
 		"id": "legendarium_helmet",
@@ -2434,14 +2530,15 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_helmet": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"helmet": true}},"id": "stardust:legendarium_helmet","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_helmet": true}},
 			"max_damage": 1407,
 			"equippable": {"slot": "head","asset_id": "stardust:legendarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "head","id": "stardust:movement_speed.head"}],
 			"item_model": "stardust:legendarium_helmet",
 			"item_name": {"text": "Legendarium Helmet"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_chestplate": {
 		"id": "legendarium_chestplate",
@@ -2462,14 +2559,15 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_chestplate": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"chestplate": true}},"id": "stardust:legendarium_chestplate","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_chestplate": true}},
 			"max_damage": 2047,
 			"equippable": {"slot": "chest","asset_id": "stardust:legendarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 13.5,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "stardust:knockback_resistance.chest"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "chest","id": "stardust:movement_speed.chest"}],
 			"item_model": "stardust:legendarium_chestplate",
 			"item_name": {"text": "Legendarium Chestplate"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_leggings": {
 		"id": "legendarium_leggings",
@@ -2490,14 +2588,15 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_leggings": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"leggings": true}},"id": "stardust:legendarium_leggings","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_leggings": true}},
 			"max_damage": 1919,
 			"equippable": {"slot": "legs","asset_id": "stardust:legendarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 11.5,"operation": "add_value","slot": "legs","id": "stardust:armor.legs"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "legs","id": "stardust:armor_toughness.legs"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "legs","id": "stardust:knockback_resistance.legs"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "legs","id": "stardust:movement_speed.legs"}],
 			"item_model": "stardust:legendarium_leggings",
 			"item_name": {"text": "Legendarium Leggings"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_boots": {
 		"id": "legendarium_boots",
@@ -2518,14 +2617,15 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_boots": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"legendarium": true,"boots": true}},"id": "stardust:legendarium_boots","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_boots": true}},
 			"max_damage": 1663,
 			"equippable": {"slot": "feet","asset_id": "stardust:legendarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 8.5,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 4.6,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "stardust:knockback_resistance.feet"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "feet","id": "stardust:movement_speed.feet"}],
 			"item_model": "stardust:legendarium_boots",
 			"item_name": {"text": "Legendarium Boots"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_sword": {
 		"id": "legendarium_sword",
@@ -2544,13 +2644,14 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"legendarium": true,"sword": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_sword": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"legendarium": true,"sword": true}},"id": "stardust:legendarium_sword","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_sword": true}},
 			"max_damage": 7024,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 20,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "mainhand","id": "stardust:movement_speed.mainhand"}],
 			"item_model": "stardust:legendarium_sword",
 			"item_name": {"text": "Legendarium Sword"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_pickaxe": {
 		"id": "legendarium_pickaxe",
@@ -2570,13 +2671,14 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"legendarium": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_pickaxe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"legendarium": true,"pickaxe": true}},"id": "stardust:legendarium_pickaxe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_pickaxe": true}},
 			"max_damage": 7024,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 18,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 30,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "mainhand","id": "stardust:movement_speed.mainhand"}],
 			"item_model": "stardust:legendarium_pickaxe",
 			"item_name": {"text": "Legendarium Pickaxe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"legendarium_axe": {
 		"id": "legendarium_axe",
@@ -2596,13 +2698,14 @@
 			{"text": "\n- Jump Boost III","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"legendarium": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_axe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"legendarium": true,"axe": true}},"id": "stardust:legendarium_axe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_axe": true}},
 			"max_damage": 7024,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 22,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 30,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"},{"type": "movement_speed","amount": 0.005,"operation": "add_value","slot": "mainhand","id": "stardust:movement_speed.mainhand"}],
 			"item_model": "stardust:legendarium_axe",
 			"item_name": {"text": "Legendarium Axe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_helmet": {
 		"id": "solarium_helmet",
@@ -2623,14 +2726,15 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_helmet": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"helmet": true}},"id": "stardust:solarium_helmet","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_helmet": true}},
 			"max_damage": 1564,
 			"equippable": {"slot": "head","asset_id": "stardust:solarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "head","id": "stardust:burning_time.head"}],
 			"item_model": "stardust:solarium_helmet",
 			"item_name": {"text": "Solarium Helmet"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_chestplate": {
 		"id": "solarium_chestplate",
@@ -2651,14 +2755,15 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_chestplate": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"chestplate": true}},"id": "stardust:solarium_chestplate","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_chestplate": true}},
 			"max_damage": 2275,
 			"equippable": {"slot": "chest","asset_id": "stardust:solarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 14.0,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "stardust:knockback_resistance.chest"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "chest","id": "stardust:burning_time.chest"}],
 			"item_model": "stardust:solarium_chestplate",
 			"item_name": {"text": "Solarium Chestplate"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_leggings": {
 		"id": "solarium_leggings",
@@ -2679,14 +2784,15 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_leggings": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"leggings": true}},"id": "stardust:solarium_leggings","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_leggings": true}},
 			"max_damage": 2132,
 			"equippable": {"slot": "legs","asset_id": "stardust:solarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 12.0,"operation": "add_value","slot": "legs","id": "stardust:armor.legs"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "legs","id": "stardust:armor_toughness.legs"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "legs","id": "stardust:knockback_resistance.legs"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "legs","id": "stardust:burning_time.legs"}],
 			"item_model": "stardust:solarium_leggings",
 			"item_name": {"text": "Solarium Leggings"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_boots": {
 		"id": "solarium_boots",
@@ -2707,14 +2813,15 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_boots": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"solarium": true,"boots": true}},"id": "stardust:solarium_boots","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_boots": true}},
 			"max_damage": 1848,
 			"equippable": {"slot": "feet","asset_id": "stardust:solarium"},
 			"attribute_modifiers": [{"type": "armor","amount": 9.0,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 4.8,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "stardust:knockback_resistance.feet"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "feet","id": "stardust:burning_time.feet"}],
 			"item_model": "stardust:solarium_boots",
 			"item_name": {"text": "Solarium Boots"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_sword": {
 		"id": "solarium_sword",
@@ -2733,13 +2840,14 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"sword": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_sword": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"sword": true}},"id": "stardust:solarium_sword","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_sword": true}},
 			"max_damage": 7805,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 22,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "stardust:burning_time.mainhand"}],
 			"item_model": "stardust:solarium_sword",
 			"item_name": {"text": "Solarium Sword"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_pickaxe": {
 		"id": "solarium_pickaxe",
@@ -2759,13 +2867,14 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_pickaxe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"pickaxe": true}},"id": "stardust:solarium_pickaxe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_pickaxe": true}},
 			"max_damage": 7805,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 20,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 30,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "stardust:burning_time.mainhand"}],
 			"item_model": "stardust:solarium_pickaxe",
 			"item_name": {"text": "Solarium Pickaxe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"solarium_axe": {
 		"id": "solarium_axe",
@@ -2785,13 +2894,14 @@
 			{"text": "\n- Fire Resistance","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_axe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"solarium": true,"axe": true}},"id": "stardust:solarium_axe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_axe": true}},
 			"max_damage": 7805,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 24,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 30,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"},{"type": "burning_time","amount": -0.25,"operation": "add_value","slot": "mainhand","id": "stardust:burning_time.mainhand"}],
 			"item_model": "stardust:solarium_axe",
 			"item_name": {"text": "Solarium Axe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_helmet": {
 		"id": "darkium_helmet",
@@ -2812,14 +2922,15 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"helmet": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_helmet": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"helmet": true}},"id": "stardust:darkium_helmet","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_helmet": true}},
 			"max_damage": 1720,
 			"equippable": {"slot": "head","asset_id": "stardust:darkium"},
 			"attribute_modifiers": [{"type": "armor","amount": 9.5,"operation": "add_value","slot": "head","id": "stardust:armor.head"},{"type": "armor_toughness","amount": 5.0,"operation": "add_value","slot": "head","id": "stardust:armor_toughness.head"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "head","id": "stardust:knockback_resistance.head"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "head","id": "stardust:movement_speed.head"}],
 			"item_model": "stardust:darkium_helmet",
 			"item_name": {"text": "Darkium Helmet"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_chestplate": {
 		"id": "darkium_chestplate",
@@ -2840,14 +2951,15 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"chestplate": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_chestplate": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"chestplate": true}},"id": "stardust:darkium_chestplate","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_chestplate": true}},
 			"max_damage": 2502,
 			"equippable": {"slot": "chest","asset_id": "stardust:darkium"},
 			"attribute_modifiers": [{"type": "armor","amount": 14.5,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 5.0,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "stardust:knockback_resistance.chest"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "chest","id": "stardust:movement_speed.chest"}],
 			"item_model": "stardust:darkium_chestplate",
 			"item_name": {"text": "Darkium Chestplate"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_leggings": {
 		"id": "darkium_leggings",
@@ -2868,14 +2980,15 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"leggings": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_leggings": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"leggings": true}},"id": "stardust:darkium_leggings","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_leggings": true}},
 			"max_damage": 2345,
 			"equippable": {"slot": "legs","asset_id": "stardust:darkium"},
 			"attribute_modifiers": [{"type": "armor","amount": 12.5,"operation": "add_value","slot": "legs","id": "stardust:armor.legs"},{"type": "armor_toughness","amount": 5.0,"operation": "add_value","slot": "legs","id": "stardust:armor_toughness.legs"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "legs","id": "stardust:knockback_resistance.legs"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "legs","id": "stardust:movement_speed.legs"}],
 			"item_model": "stardust:darkium_leggings",
 			"item_name": {"text": "Darkium Leggings"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_boots": {
 		"id": "darkium_boots",
@@ -2896,14 +3009,15 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"boots": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_boots": true}},
+			"custom_data": {"smithed": {"dict": {"armor": {"darkium": true,"boots": true}},"id": "stardust:darkium_boots","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_boots": true}},
 			"max_damage": 2033,
 			"equippable": {"slot": "feet","asset_id": "stardust:darkium"},
 			"attribute_modifiers": [{"type": "armor","amount": 9.5,"operation": "add_value","slot": "feet","id": "stardust:armor.feet"},{"type": "armor_toughness","amount": 5.0,"operation": "add_value","slot": "feet","id": "stardust:armor_toughness.feet"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "feet","id": "stardust:knockback_resistance.feet"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "feet","id": "stardust:movement_speed.feet"}],
 			"item_model": "stardust:darkium_boots",
 			"item_name": {"text": "Darkium Boots"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_sword": {
 		"id": "darkium_sword",
@@ -2922,13 +3036,14 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"darkium": true,"sword": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_sword": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"darkium": true,"sword": true}},"id": "stardust:darkium_sword","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_sword": true}},
 			"max_damage": 8585,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 24,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.4,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "mainhand","id": "stardust:movement_speed.mainhand"}],
 			"item_model": "stardust:darkium_sword",
 			"item_name": {"text": "Darkium Sword"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_pickaxe": {
 		"id": "darkium_pickaxe",
@@ -2948,13 +3063,14 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"darkium": true,"pickaxe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_pickaxe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"darkium": true,"pickaxe": true}},"id": "stardust:darkium_pickaxe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_pickaxe": true}},
 			"max_damage": 8585,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 22,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -2.8,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 30,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "mainhand","id": "stardust:movement_speed.mainhand"}],
 			"item_model": "stardust:darkium_pickaxe",
 			"item_name": {"text": "Darkium Pickaxe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"darkium_axe": {
 		"id": "darkium_axe",
@@ -2974,13 +3090,14 @@
 			{"text": "\n- Resistance I","color": "blue"}
 		],
 		"components": {
-			"custom_data": {"smithed": {"dict": {"tools": {"darkium": true,"axe": true}},"ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_axe": true}},
+			"custom_data": {"smithed": {"dict": {"tools": {"darkium": true,"axe": true}},"id": "stardust:darkium_axe","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_axe": true}},
 			"max_damage": 8585,
 			"attribute_modifiers": [{"type": "attack_damage","amount": 26,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_damage"},{"type": "attack_speed","amount": -3.0,"operation": "add_value","slot": "mainhand","id": "minecraft:base_attack_speed"},{"type": "mining_efficiency","amount": 30,"operation": "add_value","slot": "mainhand","id": "stardust:mining_efficiency.mainhand"},{"type": "movement_speed","amount": -0.005,"operation": "add_value","slot": "mainhand","id": "stardust:movement_speed.mainhand"}],
 			"item_model": "stardust:darkium_axe",
 			"item_name": {"text": "Darkium Axe"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ultimate_elytra": {
 		"id": "ultimate_elytra",
@@ -3001,8 +3118,9 @@
 			"attribute_modifiers": [{"type": "armor","amount": 10,"operation": "add_value","slot": "chest","id": "stardust:armor.chest"},{"type": "armor_toughness","amount": 4,"operation": "add_value","slot": "chest","id": "stardust:armor_toughness.chest"},{"type": "knockback_resistance","amount": 0.1,"operation": "add_value","slot": "chest","id": "stardust:knockback_resistance.chest"}],
 			"item_model": "stardust:ultimate_elytra",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"ultimate_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"ultimate_elytra": true},"smithed": {"id": "stardust:ultimate_elytra","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_bow": {
 		"id": "stardust_bow",
@@ -3021,8 +3139,9 @@
 			"item_model": "stardust:stardust_bow",
 			"item_name": {"text": "Stardust Bow"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_bow": true},"smithed": {"id": "stardust:stardust_bow","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"awakened_stardust_bow": {
 		"id": "awakened_stardust_bow",
@@ -3041,8 +3160,9 @@
 			"item_model": "stardust:awakened_stardust_bow",
 			"item_name": {"text": "Awakened Stardust Bow"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"awakened_stardust_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"awakened_stardust_bow": true},"smithed": {"id": "stardust:awakened_stardust_bow","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"ultimate_bow": {
 		"id": "ultimate_bow",
@@ -3061,8 +3181,9 @@
 			"max_damage": 3072,
 			"item_model": "stardust:ultimate_bow",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"ultimate_bow": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"ultimate_bow": true},"smithed": {"id": "stardust:ultimate_bow","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_sniper": {
 		"id": "stardust_sniper",
@@ -3086,11 +3207,12 @@
 		],
 		"components": {
 			"max_damage": 672,
-			"custom_data": {"stardust": {"sniper": {"damage": 6,"cooldown": 20,"playsound": "stardust:stardust_sniper_shot"},"stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"sniper": {"damage": 6,"cooldown": 20,"playsound": "stardust:stardust_sniper_shot"},"stardust_sniper": true},"smithed": {"id": "stardust:stardust_sniper","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_model": "stardust:stardust_sniper",
 			"item_name": {"text": "Stardust Sniper"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"awakened_stardust_sniper": {
 		"id": "awakened_stardust_sniper",
@@ -3114,11 +3236,12 @@
 		],
 		"components": {
 			"max_damage": 1344,
-			"custom_data": {"stardust": {"sniper": {"damage": 12,"cooldown": 15,"playsound": "stardust:awakened_stardust_sniper_shot"},"awakened_stardust_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"sniper": {"damage": 12,"cooldown": 15,"playsound": "stardust:awakened_stardust_sniper_shot"},"awakened_stardust_sniper": true},"smithed": {"id": "stardust:awakened_stardust_sniper","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_model": "stardust:awakened_stardust_sniper",
 			"item_name": {"text": "Awakened Stardust Sniper"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ultimate_sniper": {
 		"id": "ultimate_sniper",
@@ -3143,10 +3266,11 @@
 		"components": {
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff6600"},{"text": "t","color": "#ffcc00"},{"text": "i","color": "#ccff00"},{"text": "m","color": "#65ff00"},{"text": "a","color": "#00ff00"},{"text": "t","color": "#00ff65"},{"text": "e","color": "#00ffcb"},{"text": " ","color": "#00cbff"},{"text": "S","color": "#0065ff"},{"text": "n","color": "#0000ff"},{"text": "i","color": "#6600ff"},{"text": "p","color": "#cb00ff"},{"text": "e","color": "#ff00cb"},{"text": "r","color": "#ff0066"}],
 			"max_damage": 2688,
-			"custom_data": {"stardust": {"sniper": {"damage": 18,"cooldown": 10,"playsound": "stardust:ultimate_sniper_shot"},"ultimate_sniper": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"sniper": {"damage": 18,"cooldown": 10,"playsound": "stardust:ultimate_sniper_shot"},"ultimate_sniper": true},"smithed": {"id": "stardust:ultimate_sniper","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_model": "stardust:ultimate_sniper",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"health_artifact_lv1": {
 		"id": "health_artifact_lv1",
@@ -3165,8 +3289,9 @@
 			"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},{"text": "[+10% Health Points]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "max_health","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
 			"item_model": "stardust:health_artifact_lv1",
-			"custom_data": {"stardust": {"health_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"health_artifact_lv1": true},"smithed": {"id": "stardust:health_artifact_lv1","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"health_artifact_lv2": {
 		"id": "health_artifact_lv2",
@@ -3186,8 +3311,9 @@
 			"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},{"text": "[+20% Health Points]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "max_health","amount": 0.2,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
 			"item_model": "stardust:health_artifact_lv2",
-			"custom_data": {"stardust": {"health_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"health_artifact_lv2": true},"smithed": {"id": "stardust:health_artifact_lv2","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"health_artifact_lv3": {
 		"id": "health_artifact_lv3",
@@ -3207,8 +3333,9 @@
 			"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},{"text": "[+30% Health Points]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "max_health","amount": 0.3,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
 			"item_model": "stardust:health_artifact_lv3",
-			"custom_data": {"stardust": {"health_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"health_artifact_lv3": true},"smithed": {"id": "stardust:health_artifact_lv3","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"health_artifact_lvmax": {
 		"id": "health_artifact_lvmax",
@@ -3228,8 +3355,9 @@
 			"lore": [{"text": "Hold in any hand to get the health effect","color": "gray","italic": false},{"text": "[+50% Health Points]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "max_health","amount": 0.5,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_max_health"}],
 			"item_model": "stardust:health_artifact_lvmax",
-			"custom_data": {"stardust": {"health_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"health_artifact_lvmax": true},"smithed": {"id": "stardust:health_artifact_lvmax","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"damage_artifact_lv1": {
 		"id": "damage_artifact_lv1",
@@ -3248,8 +3376,9 @@
 			"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},{"text": "[+10% Damage]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "attack_damage","amount": 0.1,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
 			"item_model": "stardust:damage_artifact_lv1",
-			"custom_data": {"stardust": {"damage_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"damage_artifact_lv1": true},"smithed": {"id": "stardust:damage_artifact_lv1","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"damage_artifact_lv2": {
 		"id": "damage_artifact_lv2",
@@ -3269,8 +3398,9 @@
 			"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},{"text": "[+20% Damage]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "attack_damage","amount": 0.2,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
 			"item_model": "stardust:damage_artifact_lv2",
-			"custom_data": {"stardust": {"damage_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"damage_artifact_lv2": true},"smithed": {"id": "stardust:damage_artifact_lv2","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"damage_artifact_lv3": {
 		"id": "damage_artifact_lv3",
@@ -3290,8 +3420,9 @@
 			"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},{"text": "[+30% Damage]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "attack_damage","amount": 0.3,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
 			"item_model": "stardust:damage_artifact_lv3",
-			"custom_data": {"stardust": {"damage_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"damage_artifact_lv3": true},"smithed": {"id": "stardust:damage_artifact_lv3","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"damage_artifact_lvmax": {
 		"id": "damage_artifact_lvmax",
@@ -3311,8 +3442,9 @@
 			"lore": [{"text": "Hold in any hand to get the damage effect","color": "gray","italic": false},{"text": "[+50% Damage]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "attack_damage","amount": 0.5,"operation": "add_multiplied_total","slot": "hand","id": "stardust:base_attack_damage"}],
 			"item_model": "stardust:damage_artifact_lvmax",
-			"custom_data": {"stardust": {"damage_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"damage_artifact_lvmax": true},"smithed": {"id": "stardust:damage_artifact_lvmax","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"speed_artifact_lv1": {
 		"id": "speed_artifact_lv1",
@@ -3331,8 +3463,9 @@
 			"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},{"text": "[+10% Base Speed]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "movement_speed","amount": 0.1,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
 			"item_model": "stardust:speed_artifact_lv1",
-			"custom_data": {"stardust": {"speed_artifact_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"speed_artifact_lv1": true},"smithed": {"id": "stardust:speed_artifact_lv1","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"speed_artifact_lv2": {
 		"id": "speed_artifact_lv2",
@@ -3352,8 +3485,9 @@
 			"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},{"text": "[+15% Base Speed]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "movement_speed","amount": 0.15,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
 			"item_model": "stardust:speed_artifact_lv2",
-			"custom_data": {"stardust": {"speed_artifact_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"speed_artifact_lv2": true},"smithed": {"id": "stardust:speed_artifact_lv2","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"speed_artifact_lv3": {
 		"id": "speed_artifact_lv3",
@@ -3373,8 +3507,9 @@
 			"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},{"text": "[+20% Base Speed]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "movement_speed","amount": 0.2,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
 			"item_model": "stardust:speed_artifact_lv3",
-			"custom_data": {"stardust": {"speed_artifact_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"speed_artifact_lv3": true},"smithed": {"id": "stardust:speed_artifact_lv3","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"speed_artifact_lvmax": {
 		"id": "speed_artifact_lvmax",
@@ -3394,8 +3529,9 @@
 			"lore": [{"text": "Hold in any hand to get the speed effect","color": "gray","italic": false},{"text": "[+25% Base Speed]","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"attribute_modifiers": [{"type": "movement_speed","amount": 0.25,"operation": "add_multiplied_base","slot": "hand","id": "stardust:base_movement_speed"}],
 			"item_model": "stardust:speed_artifact_lvmax",
-			"custom_data": {"stardust": {"speed_artifact_lvmax": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"speed_artifact_lvmax": true},"smithed": {"id": "stardust:speed_artifact_lvmax","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"lucky_artifact_bag": {
 		"id": "lucky_artifact_bag",
@@ -3416,8 +3552,9 @@
 			"lore": [{"text": "Right-click to open and receive a random artifact.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:lucky_artifact_bag",
 			"item_name": {"text": "Lucky Artifact Bag"},
-			"custom_data": {"stardust": {"lucky_artifact_bag": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"lucky_artifact_bag": true},"smithed": {"id": "stardust:lucky_artifact_bag","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"item_magnet": {
 		"id": "item_magnet",
@@ -3436,8 +3573,9 @@
 			"lore": [{"text": "Hold in offhand to attract items","color": "gray","italic": false},{"text": "within a 4 blocks radius","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:item_magnet",
 			"item_name": {"text": "Item Magnet"},
-			"custom_data": {"stardust": {"item_magnet": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"item_magnet": true},"smithed": {"id": "stardust:item_magnet","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"home_travel_staff": {
 		"id": "home_travel_staff",
@@ -3457,8 +3595,9 @@
 			"item_model": "stardust:home_travel_staff",
 			"item_name": {"text": "Home Travel Staff"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"home_travel_staff": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"home_travel_staff": true},"smithed": {"id": "stardust:home_travel_staff","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"wormhole_potion": {
 		"id": "wormhole_potion",
@@ -3473,8 +3612,9 @@
 			"item_model": "stardust:wormhole_potion",
 			"item_name": {"text": "Wormhole Potion"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"wormhole_potion": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"wormhole_potion": true},"smithed": {"id": "stardust:wormhole_potion","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_apple": {
 		"id": "stardust_apple",
@@ -3489,8 +3629,9 @@
 			"item_model": "stardust:stardust_apple",
 			"item_name": {"text": "Stardust Apple"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_apple": true},"smithed": {"id": "stardust:stardust_apple","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"life_crystal": {
 		"id": "life_crystal",
@@ -3510,8 +3651,9 @@
 			"lore": [{"text": "Right-click to permanently increase","italic": false,"color": "gray"},{"text": "your max health by 1 (0.5 heart)","italic": false,"color": "gray"},{"text": "(Max 20 uses: +10 hearts)","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:life_crystal",
 			"item_name": {"text": "Life Crystal"},
-			"custom_data": {"stardust": {"life_crystal": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"life_crystal": true},"smithed": {"id": "stardust:life_crystal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"life_crystal_block": {
 		"id": "life_crystal_block",
@@ -3531,12 +3673,14 @@
 			"item_model": "stardust:life_crystal_block",
 			"item_name": {"text": "Life Crystal Block"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"life_crystal_block": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"life_crystal_block": true},"smithed": {"id": "stardust:life_crystal_block","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:glass",
-			"apply_facing": "entity",
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "player"
 		},
 		"no_silk_touch_drop": {
 			"id": "life_crystal",
@@ -3565,12 +3709,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.diamond_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:diamond_seed",
 			"item_name": {"text": "Diamond Seed"},
-			"custom_data": {"stardust": {"diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"diamond_seed": true},"smithed": {"id": "stardust:diamond_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "diamond",
@@ -3598,12 +3744,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.advanced_diamond_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:advanced_diamond_seed",
 			"item_name": {"text": "Advanced Diamond Seed"},
-			"custom_data": {"stardust": {"advanced_diamond_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"advanced_diamond_seed": true},"smithed": {"id": "stardust:advanced_diamond_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "advanced_diamond",
@@ -3634,12 +3782,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.stardust_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:stardust_seed",
 			"item_name": {"text": "Stardust Seed"},
-			"custom_data": {"stardust": {"stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"stardust_seed": true},"smithed": {"id": "stardust:stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "stardust",
@@ -3667,12 +3817,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.advanced_stardust_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:advanced_stardust_seed",
 			"item_name": {"text": "Advanced Stardust Seed"},
-			"custom_data": {"stardust": {"advanced_stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"advanced_stardust_seed": true},"smithed": {"id": "stardust:advanced_stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "advanced_stardust",
@@ -3700,12 +3852,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.elite_stardust_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:elite_stardust_seed",
 			"item_name": {"text": "Elite Stardust Seed"},
-			"custom_data": {"stardust": {"elite_stardust_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"elite_stardust_seed": true},"smithed": {"id": "stardust:elite_stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "elite_stardust",
@@ -3733,12 +3887,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.legendarium_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:legendarium_seed",
 			"item_name": {"text": "Legendarium Seed"},
-			"custom_data": {"stardust": {"legendarium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"legendarium_seed": true},"smithed": {"id": "stardust:legendarium_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "legendarium",
@@ -3766,12 +3922,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.solarium_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:solarium_seed",
 			"item_name": {"text": "Solarium Seed"},
-			"custom_data": {"stardust": {"solarium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"solarium_seed": true},"smithed": {"id": "stardust:solarium_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "solarium",
@@ -3799,12 +3957,14 @@
 			"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.darkium_seed"],"Invisible": true,"Silent": true},
 			"item_model": "stardust:darkium_seed",
 			"item_name": {"text": "Darkium Seed"},
-			"custom_data": {"stardust": {"darkium_seed": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"darkium_seed": true},"smithed": {"id": "stardust:darkium_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:moss_carpet",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		},
 		"growing_seed": {
 			"texture_basename": "darkium",
@@ -3834,12 +3994,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv1","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv1",
-			"custom_data": {"stardust": {"cobblestone_miner_lv1": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv1": true},"smithed": {"id": "stardust:cobblestone_miner_lv1","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv2": {
@@ -3862,12 +4024,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv2","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv2",
-			"custom_data": {"stardust": {"cobblestone_miner_lv2": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv2": true},"smithed": {"id": "stardust:cobblestone_miner_lv2","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv3": {
@@ -3890,12 +4054,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv3","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv3",
-			"custom_data": {"stardust": {"cobblestone_miner_lv3": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv3": true},"smithed": {"id": "stardust:cobblestone_miner_lv3","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv4": {
@@ -3918,12 +4084,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv4","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv4",
-			"custom_data": {"stardust": {"cobblestone_miner_lv4": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv4": true},"smithed": {"id": "stardust:cobblestone_miner_lv4","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv5": {
@@ -3946,12 +4114,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv5","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv5",
-			"custom_data": {"stardust": {"cobblestone_miner_lv5": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv5": true},"smithed": {"id": "stardust:cobblestone_miner_lv5","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv6": {
@@ -3974,12 +4144,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv6","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv6",
-			"custom_data": {"stardust": {"cobblestone_miner_lv6": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv6": true},"smithed": {"id": "stardust:cobblestone_miner_lv6","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv7": {
@@ -4002,12 +4174,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv7","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv7",
-			"custom_data": {"stardust": {"cobblestone_miner_lv7": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv7": true},"smithed": {"id": "stardust:cobblestone_miner_lv7","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"cobblestone_miner_lv8": {
@@ -4030,12 +4204,14 @@
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cobblestone_miner_lv8","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"item_model": "stardust:cobblestone_miner_lv8",
-			"custom_data": {"stardust": {"cobblestone_miner_lv8": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
+			"custom_data": {"stardust": {"cobblestone_miner_lv8": true},"smithed": {"id": "stardust:cobblestone_miner_lv8","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
+		"skip_gives": false,
 		"vanilla_block": {
 			"id": "minecraft:cobbled_deepslate",
-			"apply_facing": false,
-			"contents": false
+			"contents": false,
+			"block_facing": false,
+			"visual_facing_source": "none"
 		}
 	},
 	"stoupegg": {
@@ -4070,8 +4246,9 @@
 			"rarity": "epic",
 			"lore": [{"text": "Summoner of the StoupArmy mini-boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:stoupegg",
-			"custom_data": {"stardust": {"stoupegg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stoupegg": true},"smithed": {"id": "stardust:stoupegg","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"starlight_infuser": {
 		"id": "starlight_infuser",
@@ -4093,8 +4270,9 @@
 			"lore": [{"text": "Summoner of the Stardust Pillar boss","italic": false,"color": "white"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:starlight_infuser",
 			"item_name": {"text": "Starlight Infuser"},
-			"custom_data": {"stardust": {"starlight_infuser": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"starlight_infuser": true},"smithed": {"id": "stardust:starlight_infuser","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_dungeon_key": {
 		"id": "stardust_dungeon_key",
@@ -4113,8 +4291,9 @@
 			"lore": [{"text": "One-time use key for the Stardust Dungeon","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:stardust_dungeon_key",
 			"item_name": {"text": "Stardust Dungeon Key"},
-			"custom_data": {"stardust": {"stardust_dungeon_key": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_dungeon_key": true},"smithed": {"id": "stardust:stardust_dungeon_key","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"ultimate_dragon_essence": {
 		"id": "ultimate_dragon_essence",
@@ -4147,8 +4326,9 @@
 			"lore": [{"text": "One-time use summoner of the Ultimate Dragon.","italic": false,"color": "gray"},{"text": "Needs to be thrown in the Ultimate dimension.","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
 			"item_model": "stardust:ultimate_dragon_essence",
 			"item_name": {"text": "Ultimate Dragon Essence"},
-			"custom_data": {"stardust": {"ultimate_dragon_essence": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"ultimate_dragon_essence": true},"smithed": {"id": "stardust:ultimate_dragon_essence","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"manual": {
 		"id": "manual",
@@ -4167,8 +4347,9 @@
 			"item_name": "Stardust Manual",
 			"item_model": "stardust:manual",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"manual": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"manual": true},"smithed": {"id": "stardust:manual","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stoupy_suno_cosmic_threat": {
 		"id": "stoupy_suno_cosmic_threat",
@@ -4176,14 +4357,15 @@
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_cosmic_threat": true},"smithed": {"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_suno_cosmic_threat"},"description": {"text": "Stoupy & Suno - Cosmic Threat"}}},"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_suno_cosmic_threat": true},"smithed": {"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_suno_cosmic_threat"},"description": {"text": "Stoupy & Suno - Cosmic Threat"}}},"id": "stardust:stoupy_suno_cosmic_threat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "stardust:stoupy_suno_cosmic_threat",
 			"max_stack_size": 1,
 			"rarity": "rare",
 			"item_model": "stardust:stoupy_suno_cosmic_threat",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"stoupy_suno_prismatic_devastation": {
 		"id": "stoupy_suno_prismatic_devastation",
@@ -4191,14 +4373,15 @@
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_prismatic_devastation": true},"smithed": {"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_suno_prismatic_devastation"},"description": {"text": "Stoupy & Suno - Prismatic Devastation"}}},"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_suno_prismatic_devastation": true},"smithed": {"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_suno_prismatic_devastation"},"description": {"text": "Stoupy & Suno - Prismatic Devastation"}}},"id": "stardust:stoupy_suno_prismatic_devastation","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "stardust:stoupy_suno_prismatic_devastation",
 			"max_stack_size": 1,
 			"rarity": "rare",
 			"item_model": "stardust:stoupy_suno_prismatic_devastation",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"stoupy_suno_starfall_menace": {
 		"id": "stoupy_suno_starfall_menace",
@@ -4206,14 +4389,15 @@
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"text": "Stoupy & Suno - Starfall Menace"}}},"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"text": "Stoupy & Suno - Starfall Menace"}}},"id": "stardust:stoupy_suno_starfall_menace","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "stardust:stoupy_suno_starfall_menace",
 			"max_stack_size": 1,
 			"rarity": "rare",
 			"item_model": "stardust:stoupy_suno_starfall_menace",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"stoupy_suno_the_ultimate_ascension": {
 		"id": "stoupy_suno_the_ultimate_ascension",
@@ -4221,14 +4405,15 @@
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 364,"sound_event": {"sound_id": "stardust:stoupy_suno_the_ultimate_ascension"},"description": {"text": "Stoupy & Suno - The Ultimate Ascension"}}},"ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 364,"sound_event": {"sound_id": "stardust:stoupy_suno_the_ultimate_ascension"},"description": {"text": "Stoupy & Suno - The Ultimate Ascension"}}},"id": "stardust:stoupy_suno_the_ultimate_ascension","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
 			"jukebox_playable": "stardust:stoupy_suno_the_ultimate_ascension",
 			"max_stack_size": 1,
 			"rarity": "rare",
 			"item_model": "stardust:stoupy_suno_the_ultimate_ascension",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		}
+		},
+		"skip_gives": false
 	},
 	"ultimate_dragon_egg": {
 		"id": "ultimate_dragon_egg",
@@ -4243,8 +4428,9 @@
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],
 			"item_model": "stardust:ultimate_dragon_egg",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"id": "stardust:ultimate_dragon_egg","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_soldier": {
 		"id": "stardust_soldier",
@@ -4258,8 +4444,9 @@
 			"item_model": "stardust:stardust_soldier",
 			"item_name": {"text": "Stardust Soldier"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_soldier": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_soldier": true},"smithed": {"id": "stardust:stardust_soldier","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_evoker": {
 		"id": "stardust_evoker",
@@ -4273,8 +4460,9 @@
 			"item_model": "stardust:stardust_evoker",
 			"item_name": {"text": "Stardust Evoker"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_evoker": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_evoker": true},"smithed": {"id": "stardust:stardust_evoker","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_bat": {
 		"id": "stardust_bat",
@@ -4288,8 +4476,9 @@
 			"item_model": "stardust:stardust_bat",
 			"item_name": {"text": "Stardust Bat"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_bat": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_bat": true},"smithed": {"id": "stardust:stardust_bat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_pillar": {
 		"id": "stardust_pillar",
@@ -4303,8 +4492,9 @@
 			"item_model": "stardust:stardust_pillar",
 			"item_name": {"text": "Stardust Pillar"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"id": "stardust:stardust_pillar","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"stardust_guardian": {
 		"id": "stardust_guardian",
@@ -4318,8 +4508,9 @@
 			"item_model": "stardust:stardust_guardian",
 			"item_name": {"text": "Stardust Guardian"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"stardust_guardian": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"stardust_guardian": true},"smithed": {"id": "stardust:stardust_guardian","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"quarry_placeholder_configurator": {
 		"id": "quarry_placeholder_configurator",
@@ -4329,8 +4520,9 @@
 			"item_model": "stardust:quarry_placeholder_configurator",
 			"item_name": {"text": "Quarry Placeholder Configurator"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"quarry_placeholder_configurator": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"quarry_placeholder_configurator": true},"smithed": {"id": "stardust:quarry_placeholder_configurator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"quarry_placeholder_module": {
 		"id": "quarry_placeholder_module",
@@ -4340,8 +4532,9 @@
 			"item_model": "stardust:quarry_placeholder_module",
 			"item_name": {"text": "Quarry Placeholder Module"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"quarry_placeholder_module": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"quarry_placeholder_module": true},"smithed": {"id": "stardust:quarry_placeholder_module","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"quarry_placeholder_force_load": {
 		"id": "quarry_placeholder_force_load",
@@ -4351,8 +4544,9 @@
 			"item_model": "stardust:quarry_placeholder_force_load",
 			"item_name": {"text": "Quarry Placeholder Force Load"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"quarry_placeholder_force_load": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"quarry_placeholder_force_load": true},"smithed": {"id": "stardust:quarry_placeholder_force_load","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"quarry_information": {
 		"id": "quarry_information",
@@ -4362,8 +4556,9 @@
 			"item_model": "stardust:quarry_information",
 			"item_name": {"text": "Quarry Information"},
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"quarry_information": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"quarry_information": true},"smithed": {"id": "stardust:quarry_information","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"ultimate_poop": {
 		"id": "ultimate_poop",
@@ -4373,7 +4568,8 @@
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff7500"},{"text": "t","color": "#ffeb00"},{"text": "i","color": "#9cff00"},{"text": "m","color": "#27ff00"},{"text": "a","color": "#00ff4e"},{"text": "t","color": "#00ffc4"},{"text": "e","color": "#00c4ff"},{"text": " ","color": "#004eff"},{"text": "P","color": "#2700ff"},{"text": "o","color": "#9c00ff"},{"text": "o","color": "#ff00eb"},{"text": "p","color": "#ff0075"}],
 			"item_model": "stardust:ultimate_poop",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"ultimate_poop": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}}
-		}
+			"custom_data": {"stardust": {"ultimate_poop": true},"smithed": {"id": "stardust:ultimate_poop","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	}
 }

@@ -1,0 +1,6 @@
+{
+	"layers": {
+		"humanoid": [{"texture": "stardust:darkium_layer_1"}],
+		"humanoid_leggings": [{"texture": "stardust:darkium_layer_2"}]
+	}
+}

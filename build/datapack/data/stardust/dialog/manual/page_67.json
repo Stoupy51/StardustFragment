@@ -1,0 +1,86 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/darkium_solar_panel",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.darkium_solar_panel",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/darkium_solar_panel",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_66"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (66)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_68"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (68)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_66"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (66)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_68"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (68)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$聵$聵$聵","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:darkium_photovoltaic_cell","item_name": {"translate": "stardust.darkium_photovoltaic_cell"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"darkium_photovoltaic_cell": true},"smithed": {"id": "stardust:darkium_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_54"}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:darkium_photovoltaic_cell","item_name": {"translate": "Darkium Photovoltaic Cell"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"custom_data": {"stardust": {"darkium_photovoltaic_cell": true},"smithed": {"id": "stardust:darkium_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_54"}}, "$"]"translate": "stardust.darkium_photovoltaic_cell"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"darkium_photovoltaic_cell": true},"smithed": {"id": "stardust:darkium_photovoltaic_cell","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_54"}},
+				"  \n\"",
+				{"text": "$聉","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"id": "stardust:darkium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},"item_model": "stardust:darkium_ingot","item_name": {"translate": "stardust.darkium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_32"}},
+				{"text": "$肉","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 16,"max_storage": 2400},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"id": "stardust:awakened_stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_solar_panel","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "stardust.energy_generation_16_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_2400_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:awakened_stardust_solar_panel","item_name": {"translate": "stardust.awakened_stardust_solar_panel"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_64"}},
+				{"text": "$聉","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"id": "stardust:darkium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},"item_model": "stardust:darkium_ingot","item_name": {"translate": "stardust.darkium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_32"}},
+				"\"\"",
+				{"text": "$$肏","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"darkium_solar_panel": true},"smithed": {"id": "stardust:darkium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_solar_panel","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "stardust.energy_generation_32_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_4800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:darkium_solar_panel","item_name": {"translate": "stardust.darkium_solar_panel"}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"id": "stardust:darkium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},"item_model": "stardust:darkium_ingot","item_name": {"translate": "stardust.darkium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_32"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 16,"max_storage": 2400},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"id": "stardust:awakened_stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_solar_panel","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "stardust.energy_generation_16_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_2400_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:awakened_stardust_solar_panel","item_name": {"translate": "stardust.awakened_stardust_solar_panel"}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_64"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"id": "stardust:darkium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},"item_model": "stardust:darkium_ingot","item_name": {"translate": "stardust.darkium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_32"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"darkium_solar_panel": true},"smithed": {"id": "stardust:darkium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_solar_panel","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"lore": [{"translate": "stardust.energy_generation_32_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_4800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:darkium_solar_panel","item_name": {"translate": "stardust.darkium_solar_panel"}}}},
+				"#$\n\"",
+				{"text": "$蚆$蚆$蚆","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "stardust.simplunium_block"},"lore": [{"translate": "stardust.simplenergy","italic": true,"color": "blue"}]}}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": {"translate": "Simplunium Block"},"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]}}}, "$"]"translate": "stardust.simplunium_block"},"lore": [{"translate": "stardust.simplenergy","italic": true,"color": "blue"}]}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.advanced_solar_panel_with_darkium_material","color": "yellow"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.double_the_power_of_awakened_solar_panels","color": "gray"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.generates_32_kw_during_nighttime_instead_of_daylight","color": "gray"}}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聵"},{"text": "$聵"},{"text": "$聵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聉"},{"text": "$肉"},{"text": "$聉"},"\"\"",{"text": "$$肏"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$蚆"},{"text": "$蚆"},{"text": "$蚆"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.darkium_photovoltaic_cell","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.darkium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.awakened_stardust_solar_panel","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.simplunium_block","color": "gray"}]}},
+				{"text": "豠\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$職"},{"text": "$職"},{"text": "$職"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$肏"},{"text": "$聑"},"\"\"",{"text": "$$肑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耿"},{"text": "$耧"},{"text": "$聅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.ultimate_photovoltaic_cell","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.darkium_solar_panel","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.legendarium_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_core","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.solarium_block","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_68"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.advanced_solar_panel_with_darkium_material","color": "yellow"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.double_the_power_of_awakened_solar_panels","color": "gray"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.generates_32_kw_during_nighttime_instead_of_daylight","color": "gray"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聵"},{"text": "$聵"},{"text": "$聵"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聉"},{"text": "$肉"},{"text": "$聉"},"\"\"",{"text": "$$肏"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$蚆"},{"text": "$蚆"},{"text": "$蚆"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.darkium_photovoltaic_cell","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.darkium_ingot","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.awakened_stardust_solar_panel","color": "gray"},{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.simplunium_block","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$職"},{"text": "$職"},{"text": "$職"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聑"},{"text": "$肏"},{"text": "$聑"},"\"\"",{"text": "$$肑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耿"},{"text": "$耧"},{"text": "$聅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x3 ","color": "gray"},{"translate": "stardust.ultimate_photovoltaic_cell","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.darkium_solar_panel","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.legendarium_block","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_core","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.solarium_block","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_68"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

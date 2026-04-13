@@ -1,0 +1,55 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:diamond_chestplate",
+			"components": {
+				"minecraft:item_model": "stardust:ancient_stardust_chestplate"
+			}
+		},
+		"title": {
+			"translate": "stardust.i_think_it_was_like_it",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.upgrade_a_diamond_equipment_into_ancient_stardust",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"has_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"ancient_stardust": true}}}}
+						}
+					}
+				]
+			}
+		},
+		"has_tools": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"tools": {"ancient_stardust": true}}}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_armor",
+			"has_tools"
+		]
+	],
+	"parent": "stardust:visible/stuff/stardust_block"
+}

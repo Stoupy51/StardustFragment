@@ -1,0 +1,58 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_bat",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust_bat",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_bat",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (177)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (179)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (177)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (179)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"ა\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_bat","item_name": {"translate": "stardust_bat"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_bat": true},"smithed": {"id": "stardust:stardust_bat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_178"}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust_bat","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension"}],{"translate": "stardust.can_be_summoned_by_the_stardust_pillar","color": "gray"},{"translate": "stardust.10_chance_to_summon_lightning_per_second","color": "gray"},{"translate": "stardust.stats_compared_to_a_vanilla_bat","color": "aqua"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health"}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage"}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed"}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot"}],[{"text":"\n➤ 1-2 ","color": "white"}, {"translate": "stardust.netherite_scraps_50_chance"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_45_chance"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_5_chance"}]]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

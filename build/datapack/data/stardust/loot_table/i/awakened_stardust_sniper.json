@@ -1,0 +1,43 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:warped_fungus_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:max_damage": 1344,
+								"minecraft:custom_data": {
+									"stardust": {
+										"sniper": {"damage": 12,"cooldown": 15,"playsound": "stardust:awakened_stardust_sniper_shot"},
+										"awakened_stardust_sniper": true
+									},
+									"smithed": {
+										"id": "stardust:awakened_stardust_sniper",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_model": "stardust:awakened_stardust_sniper",
+								"minecraft:item_name": {
+									"translate": "stardust.awakened_stardust_sniper"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

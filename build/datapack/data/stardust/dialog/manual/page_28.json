@@ -1,0 +1,76 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/solarium_fragment",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.solarium_fragment",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/solarium_fragment",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_27"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (27)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (29)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_27"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (27)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (29)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$9\n\n\n\"",
+				{"text": "$聃","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"id": "stardust:solarium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},"item_model": "stardust:solarium_ingot","item_name": {"translate": "stardust.solarium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"}},
+				"\"\"\"\"#U$",
+				{"text": "$$薈","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"id": "stardust:solarium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},"item_model": "stardust:solarium_fragment","item_name": {"translate": "stardust.solarium_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"id": "stardust:solarium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},"item_model": "stardust:solarium_ingot","item_name": {"translate": "stardust.solarium_ingot"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"}},
+				"\"\"\"\"#U$",
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"id": "stardust:solarium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},"item_model": "stardust:solarium_fragment","item_name": {"translate": "stardust.solarium_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}}},
+				"#$\n\n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.solarium_material_fragment_with_fire_power","color": "yellow"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.extremely_rare_and_valuable"}]}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.obtained_through_solarium_seeds"}]}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.used_for_solarium_tier_equipment"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$聃"},"\"\"\"\"#U$",{"text": "$$薈"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "stardust.simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.solarium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"}},
+				{"text": "薏\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聁"},{"text": "$聁"},{"text": "$聁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聁"},{"text": "$耣"},{"text": "$聁"},"\"\"",{"text": "$$聃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聁"},{"text": "$聁"},{"text": "$聁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_ingot","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.solarium_fragment","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.solarium_material_fragment_with_fire_power","color": "yellow"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.extremely_rare_and_valuable"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.obtained_through_solarium_seeds"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.used_for_solarium_tier_equipment"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"I\n","\n\n","\"",{"text": "$聃"},"\"\"\"\"#U$",{"text": "$$薈"},"\n","\"",{"text": "U$"},"\"\"\"\"#U$",{"text": "U$"},"\n","\n"],[{"text":"\n","color": "yellow"}, {"translate": "stardust.simplenergy_pulverizing"}],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.solarium_ingot","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聁"},{"text": "$聁"},{"text": "$聁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聁"},{"text": "$耣"},{"text": "$聁"},"\"\"",{"text": "$$聃"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聁"},{"text": "$聁"},{"text": "$聁"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_ingot","color": "gray"},{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.solarium_fragment","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_29"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

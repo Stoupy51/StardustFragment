@@ -1,0 +1,55 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:diamond_chestplate",
+			"components": {
+				"minecraft:item_model": "stardust:original_stardust_chestplate"
+			}
+		},
+		"title": {
+			"translate": "stardust.yup_thats_it",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.use_the_power_of_a_stardust_core_to_craft_an_original_stardust_e",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"has_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"original_stardust": true}}}}
+						}
+					}
+				]
+			}
+		},
+		"has_tools": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"tools": {"original_stardust": true}}}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_armor",
+			"has_tools"
+		]
+	],
+	"parent": "stardust:visible/stuff/stardust_core"
+}

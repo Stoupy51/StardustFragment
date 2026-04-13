@@ -1,0 +1,12 @@
+{
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"nbt": "{Item:{components:{\"minecraft:custom_data\":{}}}}",
+		"stepping_on": {
+			"block": {
+				"blocks": "minecraft:glass"
+			}
+		}
+	}
+}

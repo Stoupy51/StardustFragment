@@ -1,0 +1,33 @@
+{
+	"temperature": 1,
+	"downfall": 0.5,
+	"has_precipitation": false,
+	"effects": {
+		"water_color": 16711680
+	},
+	"spawners": {
+		"monster": [
+			{
+				"type": "minecraft:zombified_piglin",
+				"maxCount": 4,
+				"minCount": 4,
+				"weight": 15
+			},
+			{
+				"type": "minecraft:magma_cube",
+				"maxCount": 4,
+				"minCount": 4,
+				"weight": 2
+			},
+			{
+				"type": "minecraft:piglin",
+				"maxCount": 4,
+				"minCount": 4,
+				"weight": 15
+			}
+		]
+	},
+	"spawn_costs": {},
+	"carvers": [],
+	"features": []
+}

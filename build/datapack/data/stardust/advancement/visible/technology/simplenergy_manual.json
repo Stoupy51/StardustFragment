@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:book",
+			"components": {
+				"minecraft:item_model": "simplenergy:manual"
+			}
+		},
+		"title": {
+			"translate": "stardust.tecnologa",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.following_advancements_are_related_to_technology",
+			"color": "green"
+		},
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/root"
+}

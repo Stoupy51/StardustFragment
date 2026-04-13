@@ -1,0 +1,88 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_seed",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust_seed",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/stardust_seed",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_152"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (152)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_154"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (154)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_152"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (152)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_154"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (154)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$膘$膘$膘","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}}, "$"],
+				"  \n\"",
+				{"text": "$膘","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "$膘","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}},
+				"\"\"",
+				{"text": "$$脻","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_diamond_block","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.stardust_seed"],"Invisible": true,"Silent": true},"item_model": "stardust:stardust_seed","item_name": {"translate": "stardust_seed"},"custom_data": {"stardust": {"stardust_seed": true},"smithed": {"id": "stardust:stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_diamond_block","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.stardust_seed"],"Invisible": true,"Silent": true},"item_model": "stardust:stardust_seed","item_name": {"translate": "stardust_seed"},"custom_data": {"stardust": {"stardust_seed": true},"smithed": {"id": "stardust:stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$膘$膘$膘","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "minecraft:wheat_seeds","components": {}}}, "$"],
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_stardust_fragments","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_diamond_blocks","color": "gray"},[{"text":"\n","color": "gray"}, {"translate": "stardust.grows_fully_after_8_minutes"}],{"translate": "stardust.yields_3_9_stardust_fragments_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_50_per_level","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$膘"},{"text": "$膘"},{"text": "$膘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$膘"},{"text": "$耡"},{"text": "$膘"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$膘"},{"text": "$膘"},{"text": "$膘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.wheat_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$釬"},{"text": "$釬"},{"text": "$釬"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$釬"},{"text": "$耡"},{"text": "$釬"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$釬"},{"text": "$釬"},{"text": "$釬"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.pumpkin_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$釯"},{"text": "$釯"},{"text": "$釯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$釯"},{"text": "$耡"},{"text": "$釯"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$釯"},{"text": "$釯"},{"text": "$釯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.melon_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$釲"},{"text": "$釲"},{"text": "$釲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$釲"},{"text": "$耡"},{"text": "$釲"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$釲"},{"text": "$釲"},{"text": "$釲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.beetroot_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "鈖\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$脻"},{"text": "$耡"},"\"\"",{"text": "$$脽"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_seed","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_154"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_stardust_fragments","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_diamond_blocks","color": "gray"},[{"text":"\n","color": "gray"}, {"translate": "stardust.grows_fully_after_8_minutes"}],{"translate": "stardust.yields_3_9_stardust_fragments_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_50_per_level","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$膘"},{"text": "$膘"},{"text": "$膘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$膘"},{"text": "$耡"},{"text": "$膘"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$膘"},{"text": "$膘"},{"text": "$膘"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.wheat_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$釬"},{"text": "$釬"},{"text": "$釬"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$釬"},{"text": "$耡"},{"text": "$釬"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$釬"},{"text": "$釬"},{"text": "$釬"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.pumpkin_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$釯"},{"text": "$釯"},{"text": "$釯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$釯"},{"text": "$耡"},{"text": "$釯"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$釯"},{"text": "$釯"},{"text": "$釯"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.melon_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$釲"},{"text": "$釲"},{"text": "$釲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$釲"},{"text": "$耡"},{"text": "$釲"},"\"\"",{"text": "$$脻"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$釲"},{"text": "$釲"},{"text": "$釲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.beetroot_seeds","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$脻"},{"text": "$耡"},"\"\"",{"text": "$$脽"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耡"},{"text": "$耡"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_seed","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_154"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

@@ -1,0 +1,89 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/cavern_portal",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.cavern_portal",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/cavern_portal",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_78"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (78)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_80"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (80)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_78"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (78)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_80"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (80)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$聕$聕$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "Equivalent to 9 cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_model": "stardust:compressed_cobblestone","item_name": {"text": "Compressed Cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}}, "$"]"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\"",
+				{"text": "$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"\"\"",
+				{"text": "$$肧","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"id": "stardust:cavern_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.cavern_portal","italic": false,"color": "dark_gray"},"lore": [{"translate": "stardust.this_portal_allows_access_to_a_world_full_of_caverns","italic": false,"color": "white"},{"translate": "stardust.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cavern_portal","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "stardust:cavern_portal"}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "furnace","components": {"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"id": "stardust:cavern_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.cavern_portal","italic": false,"color": "dark_gray"},"lore": [{"translate": "stardust.this_portal_allows_access_to_a_world_full_of_caverns","italic": false,"color": "white"},{"translate": "stardust.power_usage_20_kw","italic": false,"color": "gray"},{"translate": "stardust.energy_buffer_800_kj","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:cavern_portal","from": "stardust"}}}}}}],"tooltip_display": {"hidden_components": ["minecraft:container"]},"item_model": "stardust:cavern_portal"}}},
+				"#$\n\"",
+				{"text": "$聕$聕$聕","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\"",
+				[{"translate":"stardust.uuu","hover_event": {"action": "show_item","id": "furnace","components": {"lore": [{"translate": "Equivalent to 9 cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],"item_model": "stardust:compressed_cobblestone","item_name": {"text": "Compressed Cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}}, "$"]"translate": "stardust.equivalent_to_9_cobblestones","color": "gray","italic": false},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"item_model": "stardust:compressed_cobblestone","item_name": {"translate": "stardust.compressed_cobblestone"},"custom_data": {"stardust": {"compressed_cobblestone": true},"smithed": {"id": "stardust:compressed_cobblestone","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_38"}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.a_world_full_of_underground_caverns_and_caves","color": "gray"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.mobs_all_vanilla_mobs_scaled_to_0_75x_size","color": "white"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.loot_ores_minerals_gems_coal_copper_iron_gold_lapis_redstone_eme","color": "white"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n\n","color": "gray"}, {"translate": "stardust.consumes_20_kw_of_power"}]}},
+				{"text": "1\n","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.energy_buffer_800_kj_2"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.portal_to_the_cavern_dimension","color": "yellow"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.a_world_full_of_underground_caverns_and_caves","color": "gray"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.mobs_all_vanilla_mobs_scaled_to_0_75x_size","color": "white"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.loot_ores_minerals_gems_coal_copper_iron_gold_lapis_redstone_eme","color": "white"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n\n","color": "gray"}, {"translate": "stardust.consumes_20_kw_of_power"}]}},
+				{"text": "0\n","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.energy_buffer_800_kj_2"}]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$耡"},{"text": "$聕"},"\"\"",{"text": "$$肧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$聕"},{"text": "$聕"},{"text": "$聕"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x8 ","color": "gray"},{"translate": "stardust.compressed_cobblestone","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

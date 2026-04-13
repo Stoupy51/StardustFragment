@@ -1,0 +1,111 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:furnace",
+			"components": {
+				"minecraft:item_model": "stardust:ultimate_battery"
+			}
+		},
+		"title": {
+			"translate": "stardust_energy_iii",
+			"color": "aqua"
+		},
+		"description": [
+			{
+				"translate": "stardust.obtain_an",
+				"color": "green"
+			},
+			[
+				{
+					"text": "U",
+					"color": "#ff0000",
+					"italic": false
+				},
+				{
+					"text": "l",
+					"color": "#ff5f00"
+				},
+				{
+					"text": "t",
+					"color": "#ffbf00"
+				},
+				{
+					"text": "i",
+					"color": "#dfff00"
+				},
+				{
+					"text": "m",
+					"color": "#7fff00"
+				},
+				{
+					"text": "a",
+					"color": "#1fff00"
+				},
+				{
+					"text": "t",
+					"color": "#00ff3f"
+				},
+				{
+					"text": "e",
+					"color": "#00ff9f"
+				},
+				{
+					"text": " ",
+					"color": "#00ffff"
+				},
+				{
+					"text": "B",
+					"color": "#009fff"
+				},
+				{
+					"text": "a",
+					"color": "#003fff"
+				},
+				{
+					"text": "t",
+					"color": "#1f00ff"
+				},
+				{
+					"text": "t",
+					"color": "#7f00ff"
+				},
+				{
+					"text": "e",
+					"color": "#df00ff"
+				},
+				{
+					"text": "r",
+					"color": "#ff00bf"
+				},
+				{
+					"text": "y",
+					"color": "#ff005f"
+				}
+			]
+		],
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"ultimate_battery": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/technology/awakened_stardust_battery"
+}

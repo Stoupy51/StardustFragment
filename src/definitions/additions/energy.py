@@ -120,8 +120,7 @@ def main_additions() -> None:
 		id="stardust_cable",
 		manual_category=ENERGY,
 		vanilla_block=VanillaBlock(
-			id="minecraft:player_head{profile:" + str(stardust_cable_profile) + "}",
-			apply_facing=False
+			id="minecraft:player_head{profile:" + str(stardust_cable_profile) + "}"
 		),
 		components={
 			"custom_data": {"energy": {"transfer":480}},
@@ -141,8 +140,7 @@ def main_additions() -> None:
 		id="awakened_stardust_cable",
 		manual_category=ENERGY,
 		vanilla_block=VanillaBlock(
-			id="minecraft:player_head{profile:" + str(awakened_stardust_cable_profile) + "}",
-			apply_facing=False
+			id="minecraft:player_head{profile:" + str(awakened_stardust_cable_profile) + "}"
 		),
 		components={
 			"custom_data": {"energy": {"transfer":960}},
@@ -162,8 +160,7 @@ def main_additions() -> None:
 		id="ultimate_cable",
 		manual_category=ENERGY,
 		vanilla_block=VanillaBlock(
-			id="minecraft:player_head{profile:" + str(ultimate_cable_profile) + "}",
-			apply_facing=False
+			id="minecraft:player_head{profile:" + str(ultimate_cable_profile) + "}"
 		),
 		components={
 			"custom_data": {"energy": {"transfer":1920}},
@@ -188,7 +185,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_battery",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:warped_hyphae", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:warped_hyphae"),
 		components={
 			"custom_data": {"energy": {"storage":0, "max_storage":200000}},
 		},
@@ -203,7 +200,7 @@ def main_additions() -> None:
 	Block(
 		id="awakened_stardust_battery",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:crimson_hyphae", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:crimson_hyphae"),
 		components={
 			"custom_data": {"energy": {"storage":0, "max_storage":500000}},
 		},
@@ -219,7 +216,7 @@ def main_additions() -> None:
 	Block(
 		id="ultimate_battery",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:crying_obsidian", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:crying_obsidian"),
 		components={
 			"custom_data": {"energy": {"storage":0, "max_storage":10000000}},
 			"item_name": rainbow_gradient_text("Ultimate Battery"),
@@ -238,7 +235,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_solar_panel",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/stardust_solar_panel_side", "top": f"{ns}:item/stardust_solar_panel_top"}},
 		components={
 			"custom_data": {"energy": {"generation":8, "max_storage":1200}},
@@ -255,7 +252,7 @@ def main_additions() -> None:
 	Block(
 		id="awakened_stardust_solar_panel",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/awakened_stardust_solar_panel_side", "top": f"{ns}:item/awakened_stardust_solar_panel_top"}},
 		components={
 			"custom_data": {"energy": {"generation":16, "max_storage":2400}},
@@ -272,7 +269,7 @@ def main_additions() -> None:
 	Block(
 		id="legendarium_solar_panel",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/legendarium_solar_panel_side", "top": f"{ns}:item/legendarium_solar_panel_top"}},
 		components={
 			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
@@ -289,7 +286,7 @@ def main_additions() -> None:
 	Block(
 		id="solarium_solar_panel",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/solarium_solar_panel_side", "top": f"{ns}:item/solarium_solar_panel_top"}},
 		components={
 			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
@@ -306,7 +303,7 @@ def main_additions() -> None:
 	Block(
 		id="darkium_solar_panel",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/darkium_solar_panel_side", "top": f"{ns}:item/darkium_solar_panel_top"}},
 		components={
 			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
@@ -323,7 +320,7 @@ def main_additions() -> None:
 	Block(
 		id="ultimate_solar_panel",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:daylight_detector", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/ultimate_solar_panel_side", "top": f"{ns}:item/ultimate_solar_panel_top"}},
 		components={
 			"custom_data": {"energy": {"generation":128, "max_storage":20000}},
@@ -441,7 +438,7 @@ def main_additions() -> None:
 		Block(
 			id=quarry_id,
 			manual_category=ENERGY,
-			vanilla_block=VanillaBlock(id="minecraft:barrel", apply_facing=False),
+			vanilla_block=VanillaBlock(id="minecraft:barrel"),
 			components={
 				"custom_data": {"energy": {"usage":usage, "max_storage":storage}, ns: {"quarry": {"block_per_second":block_per_second}}},
 				"item_name": {"text":quarry_name,"italic":False},
@@ -461,7 +458,7 @@ def main_additions() -> None:
 	Block(
 		id="quarry_creative",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:barrel", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:barrel"),
 		components={
 			"custom_data": {"energy": {"usage":0, "max_storage":1}, ns: {"quarry": {"block_per_second":1000}}},
 			"lore": [
@@ -481,7 +478,7 @@ def main_additions() -> None:
 	Block(
 		id="cavern_portal",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["cavern_portal"], apply_facing=False),
+		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["cavern_portal"]),
 		components={
 			"custom_data": {"energy": {"usage":20, "max_storage":800}},
 			"item_name": {"text":"Cavern Portal","italic":False,"color":"dark_gray"},
@@ -502,7 +499,7 @@ def main_additions() -> None:
 	Block(
 		id="celestial_portal",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["celestial_portal"], apply_facing=False),
+		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["celestial_portal"]),
 		components={
 			"custom_data": {"energy": {"usage":20, "max_storage":800}},
 			"item_name": {"text":"Celestial Portal","italic":False,"color":"gray"},
@@ -524,7 +521,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_portal",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["stardust_portal"], apply_facing=False),
+		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["stardust_portal"]),
 		components={
 			"custom_data": {"energy": {"usage":100, "max_storage":6000}},
 			"item_name": {"text":"Stardust Portal","italic":False,"color":"blue"},
@@ -548,7 +545,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_dungeon_portal",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["stardust_dungeon_portal"], apply_facing=False),
+		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["stardust_dungeon_portal"]),
 		components={
 			"custom_data": {"energy": {"usage":200, "max_storage":12000}},
 			"item_name": {"text":"Stardust Dungeon Portal","italic":False,"color":"red"},
@@ -570,7 +567,7 @@ def main_additions() -> None:
 	Block(
 		id="ultimate_portal",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["ultimate_portal"], apply_facing=False),
+		vanilla_block=VanillaBlock(id=PORTALS_BLOCK["ultimate_portal"]),
 		components={
 			"custom_data": {"energy": {"usage":500, "max_storage":24000}},
 			"item_name": rainbow_gradient_text("Ultimate Portal"),
@@ -603,7 +600,7 @@ def main_additions() -> None:
 	Block(
 		id="growth_accelerator",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:diamond_block", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:diamond_block"),
 		components={
 			"custom_data": {"energy": {"usage":100, "max_storage":12000}},
 			"lore": [
@@ -629,7 +626,7 @@ def main_additions() -> None:
 	Block(
 		id="mob_grinder",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:redstone_block", apply_facing="entity"),
+		vanilla_block=VanillaBlock(id="minecraft:redstone_block", visual_facing_source="player"),
 		components={
 			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
 		},
@@ -648,7 +645,7 @@ def main_additions() -> None:
 	Block(
 		id="nether_star_generator",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		components={
 			"custom_data": {"energy": {"generation":1500, "max_storage":30000}},
 		},
@@ -665,7 +662,7 @@ def main_additions() -> None:
 	Block(
 		id="advanced_furnace_generator",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		components={
 			"custom_data": {"energy": {"generation":20, "max_storage":1600}},
 		},
@@ -683,7 +680,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_furnace_generator",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		components={
 			"custom_data": {"energy": {"generation":40, "max_storage":1600}},
 		},
@@ -701,7 +698,7 @@ def main_additions() -> None:
 	Block(
 		id="awakened_stardust_furnace_generator",
 		manual_category=ENERGY,
-		vanilla_block=VanillaBlock(id="minecraft:furnace", apply_facing=True),
+		vanilla_block=VanillaBlock(id="minecraft:furnace", block_facing="player"),
 		components={
 			"custom_data": {"energy": {"generation":80, "max_storage":1600}},
 		},

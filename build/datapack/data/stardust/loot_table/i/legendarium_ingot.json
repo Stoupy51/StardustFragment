@@ -1,0 +1,42 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"ingot": {"legendarium": true}},
+										"id": "stardust:legendarium_ingot",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"legendarium_ingot": true
+									}
+								},
+								"minecraft:item_model": "stardust:legendarium_ingot",
+								"minecraft:item_name": {
+									"translate": "stardust.legendarium_ingot"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

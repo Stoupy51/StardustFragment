@@ -1,0 +1,18 @@
+
+#> stardust:custom_blocks/celestial_portal/place_main
+#
+# @within	stardust:custom_blocks/place
+#			stardust:custom_blocks/celestial_portal/create_teleporter [ positioned ~ ~-1 ~ ]
+#
+
+tag @s add stardust.placer
+setblock ~ ~ ~ air strict
+setblock ~ ~ ~ minecraft:iron_block
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/celestial_portal/place_secondary
+tag @s remove stardust.placer
+
+# Increment count scores
+scoreboard players add #total_custom_blocks stardust.data 1
+scoreboard players add #total_vanilla_iron_block stardust.data 1
+scoreboard players add #total_celestial_portal stardust.data 1
+

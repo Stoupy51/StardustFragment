@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/goat_horn",
+	"textures": {
+		"layer0": "stardust:item/life_crystal"
+	}
+}

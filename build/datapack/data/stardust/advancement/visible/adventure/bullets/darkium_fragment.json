@@ -1,0 +1,34 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:darkium_fragment"
+			}
+		},
+		"title": {
+			"translate": "stardust.darkium_bullets",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.shoot_a_darkium_fragment_bullet_using_a_sniper",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:impossible",
+			"conditions": {}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/bullets/solarium_fragment"
+}

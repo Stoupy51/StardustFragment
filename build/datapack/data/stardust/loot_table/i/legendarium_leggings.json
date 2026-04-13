@@ -1,0 +1,77 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_leggings",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"legendarium": true,"leggings": true}},
+										"id": "stardust:legendarium_leggings",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"legendarium_leggings": true
+									}
+								},
+								"minecraft:max_damage": 1919,
+								"minecraft:equippable": {
+									"slot": "legs",
+									"asset_id": "stardust:legendarium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 11.5,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:armor.legs"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 4.6,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:armor_toughness.legs"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:knockback_resistance.legs"
+									},
+									{
+										"type": "movement_speed",
+										"amount": 0.005,
+										"operation": "add_value",
+										"slot": "legs",
+										"id": "stardust:movement_speed.legs"
+									}
+								],
+								"minecraft:item_model": "stardust:legendarium_leggings",
+								"minecraft:item_name": {
+									"translate": "stardust.legendarium_leggings"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

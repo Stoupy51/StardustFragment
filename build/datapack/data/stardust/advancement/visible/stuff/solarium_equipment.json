@@ -1,0 +1,55 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:netherite_chestplate",
+			"components": {
+				"minecraft:item_model": "stardust:solarium_chestplate"
+			}
+		},
+		"title": {
+			"translate": "stardust.burning_your_soul",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.choose_the_solarium_path",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"has_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"solarium": true}}}}
+						}
+					}
+				]
+			}
+		},
+		"has_tools": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"tools": {"solarium": true}}}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_armor",
+			"has_tools"
+		]
+	],
+	"parent": "stardust:visible/stuff/solarium_block"
+}

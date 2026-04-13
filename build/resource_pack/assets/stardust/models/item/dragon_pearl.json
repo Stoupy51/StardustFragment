@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/ender_pearl",
+	"textures": {
+		"layer0": "stardust:item/dragon_pearl"
+	}
+}

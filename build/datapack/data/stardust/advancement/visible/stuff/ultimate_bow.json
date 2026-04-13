@@ -1,0 +1,41 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:bow",
+			"components": {
+				"minecraft:item_model": "stardust:ultimate_bow"
+			}
+		},
+		"title": {
+			"translate": "stardust.bowing_like_a_pro_iii"
+		},
+		"description": {
+			"translate": "stardust.awaken_the_magic_of_the_stars_using_the_ultimate_bow",
+			"color": "green"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"ultimate_bow": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/stuff/awakened_stardust_bow"
+}

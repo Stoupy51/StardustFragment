@@ -1,0 +1,66 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"generation": 32,
+										"max_storage": 4800
+									},
+									"stardust": {
+										"darkium_solar_panel": true
+									},
+									"smithed": {
+										"id": "stardust:darkium_solar_panel",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_solar_panel","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.energy_generation_32_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_4800_kj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								],
+								"minecraft:item_model": "stardust:darkium_solar_panel",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_solar_panel"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

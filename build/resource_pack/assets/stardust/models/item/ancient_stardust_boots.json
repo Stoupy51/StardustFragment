@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/diamond_boots",
+	"textures": {
+		"layer0": "stardust:item/ancient_stardust_boots"
+	}
+}

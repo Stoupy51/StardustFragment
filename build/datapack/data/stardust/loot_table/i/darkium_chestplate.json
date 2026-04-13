@@ -1,0 +1,77 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"darkium": true,"chestplate": true}},
+										"id": "stardust:darkium_chestplate",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"darkium_chestplate": true
+									}
+								},
+								"minecraft:max_damage": 2502,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "stardust:darkium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 14.5,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 5.0,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor_toughness.chest"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:knockback_resistance.chest"
+									},
+									{
+										"type": "movement_speed",
+										"amount": -0.005,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:movement_speed.chest"
+									}
+								],
+								"minecraft:item_model": "stardust:darkium_chestplate",
+								"minecraft:item_name": {
+									"translate": "stardust.darkium_chestplate"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

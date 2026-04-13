@@ -1,0 +1,82 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "quarry_configurator",
+	"pattern": [
+		"DD",
+		"QQ",
+		"QQ"
+	],
+	"key": {
+		"D": "minecraft:diamond",
+		"Q": "minecraft:quartz"
+	},
+	"result": {
+		"id": "minecraft:warped_fungus_on_a_stick",
+		"count": 1,
+		"components": {
+			"minecraft:lore": [
+				[
+					{
+						"keybind": "key.use",
+						"italic": false,
+						"color": "white"
+					},
+					[{
+						"text":" ",
+						"color": "gray"
+					}, {"translate": "stardust.to_set_1st_coordinates"}]
+				],
+				[
+					{
+						"keybind": "key.sneak",
+						"italic": false,
+						"color": "white"
+					},
+					{
+						"text": " + ",
+						"color": "gray"
+					},
+					{
+						"keybind": "key.use"
+					},
+					[{
+						"text":" ",
+						"color": "gray"
+					}, {"translate": "stardust.to_set_2nd_coordinates"}]
+				],
+				[
+					"",
+					{
+						"text": "I",
+						"color": "white",
+						"italic": false,
+						"font": "stardust:icons"
+					},
+					[{
+						"text":" ",
+						"italic": true,
+						"color": "blue"
+					}, {"translate": "stardustfragment"}]
+				]
+			],
+			"minecraft:item_model": "stardust:quarry_configurator",
+			"minecraft:item_name": {
+				"translate": "stardust.quarry_configurator"
+			},
+			"minecraft:custom_data": {
+				"stardust": {
+					"quarry_configurator": true
+				},
+				"smithed": {
+					"id": "stardust:quarry_configurator",
+					"origin": "stardust",
+					"ignore": {
+						"functionality": true,
+						"crafting": true
+					}
+				}
+			}
+		}
+	}
+}

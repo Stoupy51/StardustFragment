@@ -1,0 +1,34 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:item_frame"
+							],
+							"predicates": {
+								"minecraft:custom_data": {
+									"stardust": {
+										"elite_stardust_seed": true
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"rewards": {
+		"function": "stardust:custom_blocks/elite_stardust_seed/search"
+	}
+}

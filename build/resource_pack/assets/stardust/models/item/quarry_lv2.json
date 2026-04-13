@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"bottom": "stardust:item/quarry_lv2_bottom",
+		"side": "stardust:item/quarry_lv2_side",
+		"top": "stardust:item/quarry_lv2_top"
+	}
+}

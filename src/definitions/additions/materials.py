@@ -74,7 +74,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_block",
 		manual_category=MATERIALS,
-		vanilla_block = VanillaBlock(id="minecraft:lapis_block", apply_facing=False),
+		vanilla_block = VanillaBlock(id="minecraft:lapis_block"),
 		wiki_buttons = [
 			WikiButton({"text":"Compressed stardust for storage and crafting.","color":"yellow"}),
 			WikiButton({"text":"\nCrafted from 8 Stardust Ingots and a Diamond Block","color":"gray"}),
@@ -105,7 +105,7 @@ def main_additions() -> None:
 	Block(
 		id="stardust_core",
 		manual_category=MATERIALS,
-		vanilla_block = VanillaBlock(id="minecraft:diamond_block", apply_facing=False),
+		vanilla_block = VanillaBlock(id="minecraft:diamond_block"),
 		wiki_buttons = [
 			WikiButton({"text":"Central component of stardust technology.","color":"yellow"}),
 			WikiButton({"text":"\nCrafted from Stardust Essences","color":"gray"}),
@@ -142,7 +142,7 @@ def main_additions() -> None:
 	]
 
 	obj = Block.from_id("awakened_stardust_block")
-	obj.vanilla_block = VanillaBlock(id="minecraft:redstone_block", apply_facing=False)
+	obj.vanilla_block = VanillaBlock(id="minecraft:redstone_block")
 	obj.manual_category = MATERIALS
 	obj.wiki_buttons = [
 		WikiButton({"text":"Compressed awakened stardust block.","color":"yellow"}),
@@ -216,7 +216,7 @@ def main_additions() -> None:
 	]
 
 	obj = Block.from_id("legendarium_block")
-	obj.vanilla_block = VanillaBlock(id="minecraft:emerald_block", apply_facing=False)
+	obj.vanilla_block = VanillaBlock(id="minecraft:emerald_block")
 	obj.manual_category = MATERIALS
 	obj.wiki_buttons = [
 		WikiButton({"text":"Compressed legendarium storage block.","color":"yellow"}),
@@ -252,7 +252,7 @@ def main_additions() -> None:
 
 	obj = Block.from_id("solarium_block")
 	obj.manual_category = MATERIALS
-	obj.vanilla_block = VanillaBlock(id="minecraft:waxed_copper_block", apply_facing=False)
+	obj.vanilla_block = VanillaBlock(id="minecraft:waxed_copper_block")
 	obj.wiki_buttons = [
 		WikiButton({"text":"Compressed solarium storage block.","color":"yellow"}),
 		WikiButton({"text":"\nCrafted from 8Solarium Ingots","color":"gray"}),
@@ -286,7 +286,7 @@ def main_additions() -> None:
 	]
 
 	obj = Block.from_id("darkium_block")
-	obj.vanilla_block = VanillaBlock(id="minecraft:netherite_block", apply_facing=False)
+	obj.vanilla_block = VanillaBlock(id="minecraft:netherite_block")
 	obj.manual_category = MATERIALS
 	obj.wiki_buttons = [
 		WikiButton({"text":"Compressed darkium storage block.","color":"yellow"}),
@@ -384,7 +384,7 @@ def main_additions() -> None:
 		**{
 			f"{current}_cobblestone": {
 				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-				VANILLA_BLOCK: {"id":"minecraft:cobbled_deepslate" if i < 4 else "minecraft:obsidian", "apply_facing":False},
+				VANILLA_BLOCK: {"id":"minecraft:cobbled_deepslate" if i < 4 else "minecraft:obsidian"},
 				"lore": [
 					{"text":f"Equivalent to {9**(i+1):,} cobblestones","color":"gray","italic":False},
 				],
@@ -403,7 +403,7 @@ def main_additions() -> None:
 		},
 		"stardust_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:lapis_block", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:lapis_block"},
 			WIKI_COMPONENT: [
 				WikiButton({"text":"Enhanced machine block with stardust.","color":"yellow"}),
 				WikiButton({"text":"\nUsed as a base for most advanced machines","color":"gray"}),
@@ -415,7 +415,7 @@ def main_additions() -> None:
 		},
 		"awakened_stardust_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:redstone_block", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:redstone_block"},
 			WIKI_COMPONENT: [
 				WikiButton({"text":"Awakened frame made with stardust.","color":"yellow"}),
 				WikiButton({"text":"\nFurther upgraded version of the machine block","color":"gray"}),
@@ -428,7 +428,7 @@ def main_additions() -> None:
 		},
 		"ultimate_frame": {
 			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian", "apply_facing":False},
+			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian"},
 			"item_name": rainbow_gradient_text("Ultimate Frame"),
 			WIKI_COMPONENT: [
 				WikiButton({"text":"Ultimate frame made with advanced materials.","color":"yellow"}),

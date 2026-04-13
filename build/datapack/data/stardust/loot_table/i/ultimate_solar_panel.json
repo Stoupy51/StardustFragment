@@ -1,0 +1,146 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"generation": 128,
+										"max_storage": 20000
+									},
+									"stardust": {
+										"ultimate_solar_panel": true
+									},
+									"smithed": {
+										"id": "stardust:ultimate_solar_panel",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": [
+									{
+										"text": "U",
+										"color": "#ff0000",
+										"italic": false
+									},
+									{
+										"text": "l",
+										"color": "#ff4c00"
+									},
+									{
+										"text": "t",
+										"color": "#ff9900"
+									},
+									{
+										"text": "i",
+										"color": "#ffe500"
+									},
+									{
+										"text": "m",
+										"color": "#ccff00"
+									},
+									{
+										"text": "a",
+										"color": "#7fff00"
+									},
+									{
+										"text": "t",
+										"color": "#32ff00"
+									},
+									{
+										"text": "e",
+										"color": "#00ff19"
+									},
+									{
+										"text": " ",
+										"color": "#00ff65"
+									},
+									{
+										"text": "S",
+										"color": "#00ffb2"
+									},
+									{
+										"text": "o",
+										"color": "#00ffff"
+									},
+									{
+										"text": "l",
+										"color": "#00b2ff"
+									},
+									{
+										"text": "a",
+										"color": "#0065ff"
+									},
+									{
+										"text": "r",
+										"color": "#0019ff"
+									},
+									{
+										"text": " ",
+										"color": "#3200ff"
+									},
+									{
+										"text": "P",
+										"color": "#7f00ff"
+									},
+									{
+										"text": "a",
+										"color": "#cb00ff"
+									},
+									{
+										"text": "n",
+										"color": "#ff00e5"
+									},
+									{
+										"text": "e",
+										"color": "#ff0098"
+									},
+									{
+										"text": "l",
+										"color": "#ff004c"
+									}
+								],
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_solar_panel","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
+								"minecraft:lore": [
+									{
+										"translate": "stardust.energy_generation_128_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_20_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								],
+								"minecraft:item_model": "stardust:ultimate_solar_panel"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

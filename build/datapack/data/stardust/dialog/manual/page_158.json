@@ -1,0 +1,88 @@
+{
+	"type": "minecraft:notice",
+	"title": [
+		"",
+		{
+			"sprite": "stardust:item/dialog_sprite/darkium_seed",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		},
+		" ",
+		{
+			"translate": "stardust.darkium_seed",
+			"underlined": true
+		},
+		" ",
+		{
+			"sprite": "stardust:item/dialog_sprite/darkium_seed",
+			"shadow_color": [
+				0,
+				0,
+				0,
+				0
+			],
+			"atlas": "minecraft:items"
+		}
+	],
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_157"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (157)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_159"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (159)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_157"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (157)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_159"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (159)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				"\"$6\n\"",
+				{"text": "$鈲","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				{"text": "$鈳","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				{"text": "$鈲","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				"  \n\"",
+				{"text": "$鈳","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				{"text": "$脿","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_diamond_block","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.elite_stardust_seed"],"Invisible": true,"Silent": true},"item_model": "stardust:elite_stardust_seed","item_name": {"translate": "stardust.elite_stardust_seed"},"custom_data": {"stardust": {"elite_stardust_seed": true},"smithed": {"id": "stardust:elite_stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_155"}},
+				{"text": "$鈳","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				"\"\"",
+				{"text": "$$腅","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_obsidian","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.darkium_seed"],"Invisible": true,"Silent": true},"item_model": "stardust:darkium_seed","item_name": {"translate": "stardust.darkium_seed"},"custom_data": {"stardust": {"darkium_seed": true},"smithed": {"id": "stardust:darkium_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_diamond_block","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.elite_stardust_seed"],"Invisible": true,"Silent": true},"item_model": "stardust:elite_stardust_seed","item_name": {"translate": "stardust.elite_stardust_seed"},"custom_data": {"stardust": {"elite_stardust_seed": true},"smithed": {"id": "stardust:elite_stardust_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_155"}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				"\"\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "item_frame","components": {"lore": [{"translate": "stardust.can_only_be_planted_on_obsidian","italic": false,"color": "gray"},["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"entity_data": {"id": "minecraft:item_frame","Tags": ["stardust.new","stardust.darkium_seed"],"Invisible": true,"Silent": true},"item_model": "stardust:darkium_seed","item_name": {"translate": "stardust.darkium_seed"},"custom_data": {"stardust": {"darkium_seed": true},"smithed": {"id": "stardust:darkium_seed","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
+				"#$\n\"",
+				{"text": "$鈲","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				{"text": "$鈳","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				{"text": "$鈲","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				"  \n\"",
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:wither_rose","components": {}}},
+				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:ink_sac","components": {}}},
+				"  \n\n",
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_darkium","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_obsidian_2","color": "gray"},[{"text":"\n","color": "gray"}, {"translate": "stardust.grows_fully_after_64_minutes"}],{"translate": "stardust.yields_1_2_darkium_fragments_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_10_per_level","color": "gray"}]}},
+				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$鈲"},{"text": "$鈳"},{"text": "$鈲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$鈳"},{"text": "$脿"},{"text": "$鈳"},"\"\"",{"text": "$$腅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$鈲"},{"text": "$鈳"},{"text": "$鈲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.ink_sac","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.wither_rose","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.elite_stardust_seed","color": "gray"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.magical_seed_that_grows_darkium","color": "yellow"},{"translate": "stardust.can_only_be_planted_on_obsidian_2","color": "gray"},[{"text":"\n","color": "gray"}, {"translate": "stardust.grows_fully_after_64_minutes"}],{"translate": "stardust.yields_1_2_darkium_fragments_when_harvested","color": "gray"},{"translate": "stardust.fortune_effect_applies_10_per_level","color": "gray"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$鈲"},{"text": "$鈳"},{"text": "$鈲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$鈳"},{"text": "$脿"},{"text": "$鈳"},"\"\"",{"text": "$$腅"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$鈲"},{"text": "$鈳"},{"text": "$鈲"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.ink_sac","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.wither_rose","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.elite_stardust_seed","color": "gray"}]}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

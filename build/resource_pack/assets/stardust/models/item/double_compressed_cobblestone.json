@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "stardust:item/double_compressed_cobblestone"
+	}
+}

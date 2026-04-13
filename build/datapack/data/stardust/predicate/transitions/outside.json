@@ -1,0 +1,29 @@
+{
+	"condition": "minecraft:all_of",
+	"terms": [
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"nbt": "{Brain:{}}"
+			}
+		},
+		{
+			"condition": "minecraft:inverted",
+			"term": {
+				"condition": "minecraft:location_check",
+				"predicate": {"position": {"y": {"min": -32,"max": 500}}}
+			}
+		},
+		{
+			"condition": "minecraft:any_of",
+			"terms": [
+				{"condition": "minecraft:location_check","predicate": {"dimension": "minecraft:overworld","position": {"y": {"min": 500}}}},
+				{"condition": "minecraft:location_check","predicate": {"dimension": "stardust:celestial"}},
+				{"condition": "minecraft:location_check","predicate": {"dimension": "stardust:stardust"}},
+				{"condition": "minecraft:location_check","predicate": {"dimension": "stardust:dungeon"}},
+				{"condition": "minecraft:location_check","predicate": {"dimension": "stardust:ultimate"}}
+			]
+		}
+	]
+}

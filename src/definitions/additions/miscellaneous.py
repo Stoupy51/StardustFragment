@@ -125,7 +125,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="diamond_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="diamond", seconds=1200, planted_on="stone", loots=[
 			GrowingSeedLoot(id="minecraft:diamond", rolls={"type":"minecraft:uniform","min":0,"max":2}, fortune={"extra":0,"probability":0.1})
 		]), # TODO: Add GROWING SEED to the manual (both this and the results)
@@ -151,7 +151,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="advanced_diamond_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="advanced_diamond", seconds=1200, planted_on="stone", loots=[
 			GrowingSeedLoot(id="minecraft:diamond", rolls={"type":"minecraft:uniform","min":0,"max":24}, fortune={"extra":0,"probability":0.1})
 		]),
@@ -174,7 +174,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="stardust_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="stardust", seconds=480, planted_on="diamond_block", loots=[
 			GrowingSeedLoot(id="stardust_fragment", rolls={"type":"minecraft:uniform","min":3,"max":9}, fortune={"extra":0,"probability":0.5})
 		]),
@@ -200,7 +200,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="advanced_stardust_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="advanced_stardust", seconds=960, planted_on="diamond_block", loots=[
 			GrowingSeedLoot(id="stardust_ingot", rolls={"type":"minecraft:uniform","min":1,"max":4}, fortune={"extra":0,"probability":0.3})
 		]),
@@ -223,7 +223,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="elite_stardust_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="elite_stardust", seconds=1920, planted_on="diamond_block", loots=[
 			GrowingSeedLoot(id="stardust_essence", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.2})
 		]),
@@ -246,7 +246,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="legendarium_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="legendarium", seconds=3840, planted_on="emerald_block", loots=[
 			GrowingSeedLoot(id="legendarium_fragment", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.1})
 		]),
@@ -269,7 +269,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="solarium_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="solarium", seconds=3840, planted_on="magma_block", loots=[
 			GrowingSeedLoot(id="solarium_fragment", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.1})
 		]),
@@ -292,7 +292,7 @@ def main_additions() -> None:
 	BlockAlternative(
 		id="darkium_seed",
 		manual_category=MISC,
-		vanilla_block=VanillaBlock(id="minecraft:moss_carpet", apply_facing=False),
+		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="darkium", seconds=3840, planted_on="obsidian", loots=[
 			GrowingSeedLoot(id="darkium_fragment", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.1})
 		]),
@@ -321,7 +321,7 @@ def main_additions() -> None:
 			id=miner_id,
 			base_item=CUSTOM_BLOCK_VANILLA,
 			manual_category=MISC,
-			vanilla_block=VanillaBlock(id="minecraft:cobbled_deepslate", apply_facing=False),
+			vanilla_block=VanillaBlock(id="minecraft:cobbled_deepslate"),
 			recipes=MINERS_CRAFTING_RECIPES[miner_id],
 			components={
 				"item_name": {"text": miner_name},

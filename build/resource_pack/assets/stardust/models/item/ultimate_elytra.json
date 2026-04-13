@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/elytra",
+	"textures": {
+		"layer0": "stardust:item/ultimate_elytra"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "block/daylight_detector",
+	"textures": {
+		"side": "stardust:item/legendarium_solar_panel_side",
+		"top": "stardust:item/legendarium_solar_panel_top"
+	}
+}

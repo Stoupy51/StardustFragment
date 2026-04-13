@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:command_block",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "stardust:quarry_placeholder_module",
+								"minecraft:item_name": {
+									"translate": "stardust.quarry_placeholder_module"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"quarry_placeholder_module": true
+									},
+									"smithed": {
+										"id": "stardust:quarry_placeholder_module",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

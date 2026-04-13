@@ -1,0 +1,18 @@
+
+#> stardust:custom_blocks/cavern_portal/place_main
+#
+# @within	stardust:custom_blocks/place
+#			stardust:custom_blocks/cavern_portal/create_teleporter [ positioned ~ ~-1 ~ ]
+#
+
+tag @s add stardust.placer
+setblock ~ ~ ~ air strict
+setblock ~ ~ ~ minecraft:cobbled_deepslate
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/cavern_portal/place_secondary
+tag @s remove stardust.placer
+
+# Increment count scores
+scoreboard players add #total_custom_blocks stardust.data 1
+scoreboard players add #total_vanilla_cobbled_deepslate stardust.data 1
+scoreboard players add #total_cavern_portal stardust.data 1
+

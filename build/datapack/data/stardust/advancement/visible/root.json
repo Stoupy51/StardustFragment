@@ -1,0 +1,109 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:command_block",
+			"components": {
+				"minecraft:item_model": "stardust:stardust_fragment"
+			}
+		},
+		"title": [
+			{
+				"text": "S",
+				"color": "#198534",
+				"italic": false
+			},
+			{
+				"text": "t",
+				"color": "#19863a"
+			},
+			{
+				"text": "a",
+				"color": "#1a8841"
+			},
+			{
+				"text": "r",
+				"color": "#1b8948"
+			},
+			{
+				"text": "d",
+				"color": "#1b8b4e"
+			},
+			{
+				"text": "u",
+				"color": "#1c8c55"
+			},
+			{
+				"text": "s",
+				"color": "#1d8e5c"
+			},
+			{
+				"text": "t",
+				"color": "#1d8f62"
+			},
+			{
+				"text": " ",
+				"color": "#1e9169"
+			},
+			{
+				"text": "F",
+				"color": "#1f9270"
+			},
+			{
+				"text": "r",
+				"color": "#1f9476"
+			},
+			{
+				"text": "a",
+				"color": "#20957d"
+			},
+			{
+				"text": "g",
+				"color": "#219784"
+			},
+			{
+				"text": "m",
+				"color": "#21988a"
+			},
+			{
+				"text": "e",
+				"color": "#229a91"
+			},
+			{
+				"text": "n",
+				"color": "#239b98"
+			},
+			{
+				"text": "t",
+				"color": "#249d9f"
+			}
+		],
+		"description": {
+			"translate": "stardust.whats_this_little_blue_thing",
+			"color": "green"
+		},
+		"background": "stardust:block/gui/advancement_background",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	]
+}

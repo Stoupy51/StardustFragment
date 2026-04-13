@@ -1,0 +1,6 @@
+{
+	"required": false,
+	"values": [
+		"stardust:calls/mechanization/wrench_modify"
+	]
+}

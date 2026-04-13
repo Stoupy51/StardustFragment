@@ -1,0 +1,21 @@
+{
+	"criteria": {
+		"requirements": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"stardust": {
+								"stoupegg": true
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "stardust:advancements/consume_stoupegg"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name": "stardust:awakened_floating_island",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"projection": "rigid",
+				"location": "stardust:awakened_floating_island",
+				"processors": "minecraft:empty"
+			}
+		}
+	]
+}

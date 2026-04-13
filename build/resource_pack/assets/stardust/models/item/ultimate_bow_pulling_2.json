@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/bow",
+	"textures": {
+		"layer0": "stardust:item/ultimate_bow_pulling_2"
+	}
+}

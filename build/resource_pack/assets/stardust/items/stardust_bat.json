@@ -1,0 +1,12 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "stardust:item/stardust_bat",
+		"tints": [
+			{
+				"type": "minecraft:dye",
+				"default": [1.0,1.0,1.0]
+			}
+		]
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:bow",
+			"components": {
+				"minecraft:item_model": "stardust:stardust_bow"
+			}
+		},
+		"title": {
+			"translate": "stardust.bowing_like_a_pro_i",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.craft_a_stardust_bow",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"stardust": {"stardust_bow": true}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"parent": "stardust:visible/adventure/use_awakened_forge"
+}

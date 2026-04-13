@@ -1,0 +1,18 @@
+
+#> stardust:custom_blocks/stardust_portal/place_main
+#
+# @within	stardust:custom_blocks/place
+#			stardust:custom_blocks/stardust_portal/create_teleporter [ positioned ~ ~-1 ~ ]
+#
+
+tag @s add stardust.placer
+setblock ~ ~ ~ air strict
+setblock ~ ~ ~ minecraft:lapis_block
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/stardust_portal/place_secondary
+tag @s remove stardust.placer
+
+# Increment count scores
+scoreboard players add #total_custom_blocks stardust.data 1
+scoreboard players add #total_vanilla_lapis_block stardust.data 1
+scoreboard players add #total_stardust_portal stardust.data 1
+

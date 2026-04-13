@@ -1,0 +1,15 @@
+{
+	"name": "stardust:flying_saucer",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"projection": "rigid",
+				"location": "stardust:flying_saucer",
+				"processors": "minecraft:empty"
+			}
+		}
+	]
+}

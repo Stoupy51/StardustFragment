@@ -1,0 +1,77 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:netherite_chestplate",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"smithed": {
+										"dict": {"armor": {"solarium": true,"chestplate": true}},
+										"id": "stardust:solarium_chestplate",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									},
+									"stardust": {
+										"solarium_chestplate": true
+									}
+								},
+								"minecraft:max_damage": 2275,
+								"minecraft:equippable": {
+									"slot": "chest",
+									"asset_id": "stardust:solarium"
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "armor",
+										"amount": 14.0,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor.chest"
+									},
+									{
+										"type": "armor_toughness",
+										"amount": 4.8,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:armor_toughness.chest"
+									},
+									{
+										"type": "knockback_resistance",
+										"amount": 0.1,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:knockback_resistance.chest"
+									},
+									{
+										"type": "burning_time",
+										"amount": -0.25,
+										"operation": "add_value",
+										"slot": "chest",
+										"id": "stardust:burning_time.chest"
+									}
+								],
+								"minecraft:item_model": "stardust:solarium_chestplate",
+								"minecraft:item_name": {
+									"translate": "stardust.solarium_chestplate"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:netherite_chestplate",
+			"components": {
+				"minecraft:item_model": "stardust:darkium_chestplate"
+			}
+		},
+		"title": {
+			"translate": "stardust.be_aware_of_your_shadow",
+			"color": "aqua"
+		},
+		"description": {
+			"translate": "stardust.choose_the_darkium_path",
+			"color": "green"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"has_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"armor": {"darkium": true}}}}
+						}
+					}
+				]
+			}
+		},
+		"has_tools": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {"smithed": {"dict": {"tools": {"darkium": true}}}}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_armor",
+			"has_tools"
+		]
+	],
+	"parent": "stardust:visible/stuff/darkium_block"
+}

@@ -1,0 +1,73 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:furnace",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"energy": {
+										"usage": 250,
+										"max_storage": 60000
+									},
+									"stardust": {
+										"quarry": {"block_per_second": 3},
+										"quarry_lv2": true
+									},
+									"smithed": {
+										"id": "stardust:quarry_lv2",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								},
+								"minecraft:item_name": [{
+									"translate":"stardust.quarry_lv",
+									"italic": false
+								}, ".2"],
+								"minecraft:lore": [
+									{
+										"translate": "stardust.speed_3_block_s",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.power_usage_250_kw",
+										"italic": false,
+										"color": "gray"
+									},
+									{
+										"translate": "stardust.energy_buffer_60_mj",
+										"italic": false,
+										"color": "gray"
+									},
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								],
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_lv2","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
+								"minecraft:item_model": "stardust:quarry_lv2"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

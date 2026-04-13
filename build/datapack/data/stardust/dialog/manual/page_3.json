@@ -1,0 +1,31 @@
+{
+	"type": "minecraft:notice",
+	"title": {
+		"translate": "stardust.awakened_forge",
+		"underlined": true
+	},
+	"body": [
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "V   ","font": "stardust:manual","color": "white"},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (2)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_4"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (4)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (2)"]}},
+				" ",
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_4"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (4)"]}}
+			],
+			"width": 400
+		},
+		{
+			"type": "minecraft:plain_message",
+			"contents": [
+				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
+				[{"text": "","click_event": {"action": "open_url","url": "https://github.com/Stoupy51/StardustFragment/blob/main/assets/public/awakened_forge.jpg"},"hover_event": {"action": "show_text","value": {"translate": "stardust.click_to_view_the_full_image"}}},{"translate": "stardust.the_awakened_forge_is_a_powerful_crafting_station_that_allows_pl","font": "minecraft:default","color": "black"},{"translate": "stardust.end_game","font": "minecraft:default","color": "red","underlined": true},[{"text":" ","font": "minecraft:default","color": "black"}, {"translate": "stardust.items_in_stardust_fragment"}],"\n\n",{"text": "W#X","font": "stardust:manual"}],
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+			],
+			"width": 140
+		}
+	]
+}

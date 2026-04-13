@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/netherite_boots",
+	"textures": {
+		"layer0": "stardust:item/legendarium_boots"
+	}
+}

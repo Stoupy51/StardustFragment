@@ -1,0 +1,46 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:written_book",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "stardust:manual",
+								"minecraft:item_name": "Stardust Manual",
+								"minecraft:enchantment_glint_override": false,
+								"minecraft:max_stack_size": 16,
+								"minecraft:lore": [
+									[{
+										"translate":"stardust.by_stoupy",
+										"color": "gray",
+										"italic": false
+									}, "51"],
+									[
+										"",
+										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
+										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"manual": true
+									},
+									"smithed": {
+										"id": "stardust:manual",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

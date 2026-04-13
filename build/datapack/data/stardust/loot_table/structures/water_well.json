@@ -1,0 +1,55 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": {
+				"type": "minecraft:uniform",
+				"min": 8,
+				"max": 24
+			},
+			"bonus_rolls": 0,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 70,
+					"name": "minecraft:stick"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:copper_ingot"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 70,
+					"name": "minecraft:string"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 20,
+					"name": "minecraft:iron_ingot"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 10,
+					"value": "stardust:i/lucky_artifact_bag"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 10,
+					"value": "stardust:i/stardust_fragment"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 10,
+					"value": "stardust:random_seed"
+				},
+				{
+					"type": "minecraft:loot_table",
+					"weight": 5,
+					"value": "stardust:i/stardust_apple"
+				}
+			]
+		}
+	]
+}

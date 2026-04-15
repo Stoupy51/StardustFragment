@@ -3,7 +3,7 @@
 #
 # @executed	as @e[tag=stardust.second] & at @s
 #
-# @within	stardust:v4.0.2/second [ as @e[tag=stardust.second] & at @s ]
+# @within	stardust:v4.0.3/second [ as @e[tag=stardust.second] & at @s ]
 #
 
 execute if entity @s[tag=stardust.stardust_solar_panel] run function stardust:custom_blocks/stardust_solar_panel/second

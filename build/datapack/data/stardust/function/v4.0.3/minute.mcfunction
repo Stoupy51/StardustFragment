@@ -1,7 +1,7 @@
 
-#> stardust:v4.0.2/minute
+#> stardust:v4.0.3/minute
 #
-# @within	stardust:v4.0.2/tick
+# @within	stardust:v4.0.3/tick
 #
 
 # Reset timer

@@ -4330,6 +4330,24 @@
 		},
 		"skip_gives": false
 	},
+	"ultimate_dragon_egg": {
+		"id": "ultimate_dragon_egg",
+		"base_item": "minecraft:command_block",
+		"manual_category": "miscellaneous",
+		"recipes": [],
+		"wiki_buttons": [
+			{"text": "Trophy item dropped by the Ultimate Dragon.","color": "yellow"},
+			{"text": "\nA symbol of your triumph over the ultimate challenge.","color": "gray"},
+			{"text": "\nNot placeable but equippable","color": "gray"}
+		],
+		"components": {
+			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],
+			"item_model": "stardust:ultimate_dragon_egg",
+			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
+			"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"id": "stardust:ultimate_dragon_egg","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
+	},
 	"manual": {
 		"id": "manual",
 		"base_item": "minecraft:written_book",
@@ -4412,23 +4430,6 @@
 			"rarity": "rare",
 			"item_model": "stardust:stoupy_suno_the_ultimate_ascension",
 			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]]
-		},
-		"skip_gives": false
-	},
-	"ultimate_dragon_egg": {
-		"id": "ultimate_dragon_egg",
-		"base_item": "minecraft:command_block",
-		"recipes": [],
-		"wiki_buttons": [
-			{"text": "Trophy item dropped by the Ultimate Dragon.","color": "yellow"},
-			{"text": "\nA symbol of your triumph over the ultimate challenge.","color": "gray"},
-			{"text": "\nNot placeable but equippable","color": "gray"}
-		],
-		"components": {
-			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],
-			"item_model": "stardust:ultimate_dragon_egg",
-			"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
-			"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"id": "stardust:ultimate_dragon_egg","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
 	},

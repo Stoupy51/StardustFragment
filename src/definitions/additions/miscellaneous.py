@@ -471,6 +471,7 @@ def main_additions() -> None:
 	Item(
 		id="ultimate_dragon_egg",
 		base_item=CUSTOM_ITEM_VANILLA,
+		manual_category=MISC,
 		override_model={"parent": "minecraft:block/dragon_egg","display":{"head":{"translation": [0, 13, 0]}}},
 		components={
 			"item_name": rainbow_gradient_text("Ultimate Dragon Egg"),

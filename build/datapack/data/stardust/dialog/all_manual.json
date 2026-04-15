@@ -188,7 +188,8 @@
 		"stardust:manual/page_177",
 		"stardust:manual/page_178",
 		"stardust:manual/page_179",
-		"stardust:manual/page_180"
+		"stardust:manual/page_180",
+		"stardust:manual/page_181"
 	],
 	"exit_action": {
 		"label": {"translate": "gui.back"},

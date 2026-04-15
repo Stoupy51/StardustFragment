@@ -1,7 +1,7 @@
 
-#> stardust:v4.0.2/load/confirm_load
+#> stardust:v4.0.3/load/confirm_load
 #
-# @within	stardust:v4.0.2/load/valid_dependencies
+# @within	stardust:v4.0.3/load/valid_dependencies
 #
 
 # Bow shooting detection
@@ -116,7 +116,7 @@ data remove storage stewbeet:main universal_manual[{"name":"StardustFragment"}]
 data modify storage stewbeet:main universal_manual append value {"name":"StardustFragment","loot_table":"stardust:i/manual","hover":[{"text": ""}, [{"translate":"stardustfragment_manual"}, "\n"], {"text": "ဠ\\n\\n\\n\\n\\n\\n", "font": "stardust:manual", "color": "white"}, [{"text": "", "font": "minecraft:default", "color": "black"}, {"translate": "stardust.the_following_manual_will_guide_you_through_everything_about_sta", "color": "#505050"}]]}
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardustfragment_v4_0_2","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardustfragment_v4_0_3","color":"green"}
 scoreboard players set #stardust.loaded load.status 1
-function stardust:v4.0.2/load/set_items_storage
+function stardust:v4.0.3/load/set_items_storage
 

@@ -3,7 +3,7 @@
 	"title": [
 		"",
 		{
-			"sprite": "stardust:item/dialog_sprite/manual",
+			"sprite": "stardust:item/ultimate_dragon_egg",
 			"shadow_color": [
 				0,
 				0,
@@ -14,12 +14,12 @@
 		},
 		" ",
 		{
-			"translate": "stardust_manual",
+			"translate": "stardust.ultimate_dragon_egg",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/dialog_sprite/manual",
+			"sprite": "stardust:item/ultimate_dragon_egg",
 			"shadow_color": [
 				0,
 				0,
@@ -47,27 +47,14 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"\"$5\n\"",
-				{"text": "$膥","hover_event": {"action": "show_item","id": "minecraft:book","components": {}}},
-				{"text": "$耡","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
-				"  \n\"",
-				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:book","components": {}}},
-				{"text": "U$","hover_event": {"action": "show_item","id": "command_block","components": {"item_model": "stardust:stardust_fragment","item_name": {"translate": "stardust_fragment"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_fragment": true},"smithed": {"id": "stardust:stardust_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_12"}},
-				"U$",
-				{"text": "$$腟","hover_event": {"action": "show_item","id": "written_book","components": {"item_name": "Stardust Manual","item_model": "stardust:manual","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"manual": true},"smithed": {"id": "stardust:manual","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\"U$U$U$",
-				{"text": "U$","hover_event": {"action": "show_item","id": "written_book","components": {"item_name": "Stardust Manual","item_model": "stardust:manual","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"manual": true},"smithed": {"id": "stardust:manual","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}}},
-				"#$\n\n\n",
-				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.complete_guide_to_stardust_fragment_technology","color": "yellow"}}},
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.contains_all_recipes_and_information"}]}},
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.your_comprehensive_reference_manual"}]}},
-				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$膥"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$腟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.book","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
-				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$腟"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$腟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_manual","color": "gray"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.complete_guide_to_stardust_fragment_technology","color": "yellow"}}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.contains_all_recipes_and_information"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.your_comprehensive_reference_manual"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$膥"},{"text": "$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$腟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.book","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_fragment","color": "gray"}]}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$腟"},"\n","\"",{"text": "U$"},"U$U$",{"text": "$$腟"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x1 ","color": "gray"},{"translate": "stardust_manual","color": "gray"}]}},
+				"჉\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],"item_model": "stardust:ultimate_dragon_egg","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"id": "stardust:ultimate_dragon_egg","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_171"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.trophy_item_dropped_by_the_ultimate_dragon","color": "yellow"}}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.a_symbol_of_your_triumph_over_the_ultimate_challenge"}]}},
+				{"text": "1\n","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.not_placeable_but_equippable"}]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.trophy_item_dropped_by_the_ultimate_dragon","color": "yellow"}}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.a_symbol_of_your_triumph_over_the_ultimate_challenge"}]}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.not_placeable_but_equippable"}]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

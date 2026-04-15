@@ -1,7 +1,7 @@
 
-#> stardust:v4.0.2/load/check_dependencies
+#> stardust:v4.0.3/load/check_dependencies
 #
-# @within	stardust:v4.0.2/load/secondary
+# @within	stardust:v4.0.3/load/secondary
 #
 
 ## Check if StardustFragment is loadable (dependencies)

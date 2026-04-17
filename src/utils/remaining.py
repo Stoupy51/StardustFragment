@@ -177,7 +177,6 @@ execute if score @s {ns}.life_crystal matches 20 run advancement grant @s only {
 # Update max health based on life crystals
 attribute @s minecraft:max_health modifier remove {ns}:life_crystal
 {'\n'.join([f'execute if score @s {ns}.life_crystal matches {i+1} run attribute @s minecraft:max_health modifier add {ns}:life_crystal {i+1} add_value' for i in range(20)])}
-say @s
 """)
 	# Update max_health on respawn
 	write_function(f"{ns}:advancements/on_respawn", f"""

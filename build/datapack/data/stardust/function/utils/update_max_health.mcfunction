@@ -29,5 +29,4 @@ execute if score @s stardust.life_crystal matches 17 run attribute @s minecraft:
 execute if score @s stardust.life_crystal matches 18 run attribute @s minecraft:max_health modifier add stardust:life_crystal 18 add_value
 execute if score @s stardust.life_crystal matches 19 run attribute @s minecraft:max_health modifier add stardust:life_crystal 19 add_value
 execute if score @s stardust.life_crystal matches 20 run attribute @s minecraft:max_health modifier add stardust:life_crystal 20 add_value
-say @s
 

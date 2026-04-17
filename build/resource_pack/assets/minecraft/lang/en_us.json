@@ -541,7 +541,7 @@
 	"stardust.iron_spear": "Iron Spear",
 	"stardust.is_that_stardust_diamond": "Is that Stardust Diamond?",
 	"stardust.item_magnet": "Item Magnet",
-	"stardust.itemio_v1_4_1": "[ItemIO (v1.4.1+)]",
+	"stardust.itemio_v1_7_0": "[ItemIO (v1.7.0+)]",
 	"stardust.items_in_stardust_fragment": "items in Stardust Fragment.",
 	"stardust.jump_boost_iii": "Jump Boost III",
 	"stardust.jump_boost_v": "Jump Boost V",
@@ -807,8 +807,8 @@
 	"stardust.skyblock_isnt_it": "Skyblock, isn't it?",
 	"stardust.smartoregeneration_v1_7_2": "[SmartOreGeneration (v1.7.2+)]",
 	"stardust.smelting": "Smelting",
-	"stardust.smithed_crafter_v0_7_1": "[Smithed Crafter (v0.7.1+)]",
-	"stardust.smithed_custom_block_v0_7_1": "[Smithed Custom Block (v0.7.1+)]",
+	"stardust.smithed_crafter_v0_10_0": "[Smithed Crafter (v0.10.0+)]",
+	"stardust.smithed_custom_block_v0_10_0": "[Smithed Custom Block (v0.10.0+)]",
 	"stardust.sniper_crafted_from_awakened_stardust_materials": "Sniper crafted from awakened stardust materials.",
 	"stardust.sniper_crafted_from_stardust_materials": "Sniper crafted from stardust materials.",
 	"stardust.sniper_crafted_from_ultimate_stardust_materials": "Sniper crafted from ultimate stardust materials.",
@@ -1171,6 +1171,6 @@
 	"stardust_technology": "Stardust Technology",
 	"stardustfragment": "StardustFragment",
 	"stardustfragment_error_libraries_are_missingplease_download_the_": "StardustFragment Error: Libraries are missing\nplease download the right StardustFragment datapack\nor download each of these libraries one by one:",
-	"stardustfragment_error_this_version_is_made_for_minecraft_1_21_1": "StardustFragment Error: This version is made for Minecraft 1.21.11+.",
+	"stardustfragment_error_this_version_is_made_for_minecraft_26_1": "StardustFragment Error: This version is made for Minecraft 26.1+.",
 	"stardustfragment_manual": "StardustFragment Manual"
 }

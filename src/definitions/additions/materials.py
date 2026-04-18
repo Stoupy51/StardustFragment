@@ -2,23 +2,16 @@
 # ruff: noqa: E501
 # Imports
 from stewbeet import (
-	CATEGORY,
-	CUSTOM_BLOCK_VANILLA,
-	CUSTOM_ITEM_VANILLA,
-	NO_SILK_TOUCH_DROP,
-	RESULT_OF_CRAFTING,
-	USED_FOR_CRAFTING,
-	VANILLA_BLOCK,
 	VANILLA_BLOCK_FOR_ORES,
-	WIKI_COMPONENT,
 	BlastingRecipe,
 	Block,
+	CraftingShapedRecipe,
 	CraftingShapelessRecipe,
 	Ingr,
 	Item,
-	JsonDict,
-	Mem,
+	NoSilkTouchDrop,
 	PulverizingRecipe,
+	RecipeBase,
 	SmeltingRecipe,
 	VanillaBlock,
 	WikiButton,
@@ -335,286 +328,312 @@ def main_additions() -> None:
 	]
 
 
-	# Give Additional data for every item
-	additions: dict[str, JsonDict] = {
+	# Ores
+	Block(
+		id="stardust_ore",
+		vanilla_block=VANILLA_BLOCK_FOR_ORES,
+		manual_category=MATERIALS,
+		no_silk_touch_drop=NoSilkTouchDrop(id="stardust_fragment", count={"min": 1, "max": 4}),
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Primary ore for the datapack.","color":"yellow"},
+				{"text":"\nFound in the Overworld between Y=0 and Y=50","color":"gray"},
+				{"text":"\nDeepslate variant generates below Y=0","color":"gray"},
+				{"text":"\nDrops between 1 and 4 stardust fragments when mined","color":"gray"},
+			]),
+		],
+	)
 
-		# Ores
-		"stardust_ore": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: {"id": "stardust_fragment", "count": {"min": 1, "max": 4}},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Primary ore for the datapack.","color":"yellow"},
-					{"text":"\nFound in the Overworld between Y=0 and Y=50","color":"gray"},
-					{"text":"\nDeepslate variant generates below Y=0","color":"gray"},
-					{"text":"\nDrops between 1 and 4 stardust fragments when mined","color":"gray"},
-				]),
-			],
-		},
-		"deepslate_stardust_ore": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: {"id": "stardust_fragment", "count": {"min": 2, "max": 6}},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Deepslate variant of stardust ore.","color":"yellow"},
-					{"text":"\nFound in deepslate layers below Y=0","color":"gray"},
-					{"text":"\nDrops between 2 and 6 stardust fragments when mined","color":"gray"},
-				]),
-			],
-		},
-		"nether_stardust_ore": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: {"id": "stardust_ingot", "count": {"min": 1, "max": 3}},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Nether variant of stardust ore.","color":"yellow"},
-					{"text":"\nFound throughout the Nether dimension","color":"gray"},
-					{"text":"\nDrops between 1 and 3 stardust ingots when mined","color":"gray"},
-				]),
-			],
-		},
-		"ender_stardust_ore": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: {"id": "stardust_essence", "count": {"min": 1, "max": 2}},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"End dimension stardust ore.","color":"yellow"},
-					{"text":"\nFound in the End dimension","color":"gray"},
-					{"text":"\nDrops between 1 and 2 stardust essences when mined","color":"gray"},
-				]),
-			],
-		},
-		"awakened_stardust_ore": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: VANILLA_BLOCK_FOR_ORES,
-			NO_SILK_TOUCH_DROP: {"id": "awakened_stardust", "count": {"min": 2, "max": 8}},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Variant of the nether stardust ore.","color":"yellow"},
-					{"text":"\nFound throughout the Nether dimension","color":"gray"},
-					{"text":"\nDrops between 2 and 8 awakened stardust when mined","color":"gray"},
-				]),
-			],
-		},
+	Block(
+		id="deepslate_stardust_ore",
+		vanilla_block=VANILLA_BLOCK_FOR_ORES,
+		manual_category=MATERIALS,
+		no_silk_touch_drop=NoSilkTouchDrop(id="stardust_fragment", count={"min": 2, "max": 6}),
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Deepslate variant of stardust ore.","color":"yellow"},
+				{"text":"\nFound in deepslate layers below Y=0","color":"gray"},
+				{"text":"\nDrops between 2 and 6 stardust fragments when mined","color":"gray"},
+			]),
+		],
+	)
 
-		# Other Materials
-		"ultimate_shard": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			"item_name": rainbow_gradient_text("Ultimate Shard"),
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"The ultimate refined material.","color":"yellow"},
-					{"text":"\nMain component for ultimate crafting","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[
-					Ingr("minecraft:popped_chorus_fruit"),Ingr("stardust_core"),Ingr("minecraft:echo_shard"),
-					Ingr("legendarium_block"),Ingr("compacted_stardust_shard"),Ingr("solarium_block"),
-					Ingr("minecraft:resin_brick"),Ingr("darkium_block"),Ingr("minecraft:turtle_scute"),
-				]},
+	Block(
+		id="nether_stardust_ore",
+		vanilla_block=VANILLA_BLOCK_FOR_ORES,
+		manual_category=MATERIALS,
+		no_silk_touch_drop=NoSilkTouchDrop(id="stardust_ingot", count={"min": 1, "max": 3}),
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Nether variant of stardust ore.","color":"yellow"},
+				{"text":"\nFound throughout the Nether dimension","color":"gray"},
+				{"text":"\nDrops between 1 and 3 stardust ingots when mined","color":"gray"},
+			]),
+		],
+	)
+
+	Block(
+		id="ender_stardust_ore",
+		vanilla_block=VANILLA_BLOCK_FOR_ORES,
+		manual_category=MATERIALS,
+		no_silk_touch_drop=NoSilkTouchDrop(id="stardust_essence", count={"min": 1, "max": 2}),
+		wiki_buttons=[
+			WikiButton([
+				{"text":"End dimension stardust ore.","color":"yellow"},
+				{"text":"\nFound in the End dimension","color":"gray"},
+				{"text":"\nDrops between 1 and 2 stardust essences when mined","color":"gray"},
+			]),
+		],
+	)
+
+	obj = Block.from_id("awakened_stardust_ore")
+	obj.no_silk_touch_drop = NoSilkTouchDrop(id="awakened_stardust", count={"min": 2, "max": 8})
+	obj.manual_category = MATERIALS
+	obj.wiki_buttons = [
+		WikiButton([
+			{"text":"Variant of the nether stardust ore.","color":"yellow"},
+			{"text":"\nFound throughout the Nether dimension","color":"gray"},
+			{"text":"\nDrops between 2 and 8 awakened stardust when mined","color":"gray"},
+		]),
+	]
+
+	# Other Materials
+	Item(
+		id="ultimate_shard",
+		manual_category=MATERIALS,
+		components={"item_name": rainbow_gradient_text("Ultimate Shard")},
+		wiki_buttons=[
+			WikiButton([
+				{"text":"The ultimate refined material.","color":"yellow"},
+				{"text":"\nMain component for ultimate crafting","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[
+				Ingr("minecraft:popped_chorus_fruit"),Ingr("stardust_core"),Ingr("minecraft:echo_shard"),
+				Ingr("legendarium_block"),Ingr("compacted_stardust_shard"),Ingr("solarium_block"),
+				Ingr("minecraft:resin_brick"),Ingr("darkium_block"),Ingr("minecraft:turtle_scute"),
+			]),
+		],
+	)
+
+	Item(
+		id="dog_excrement",
+		manual_category=MATERIALS,
+		components={"item_name": {"text":"Dog Excrement","italic":False,"color":"#693100"}},
+		wiki_buttons=[
+			WikiButton([
+				{"text":"A smelly piece of dog excrement.","color":"#693100"},
+				{"text":"\nUsed for comedic purposes and boss summoning","color":"gray"},
+				{"text":"\nEvery wolf lays an excrement item every 5-10 minutes","color":"gray"},
+			]),
+		],
+		recipes=[
+			PulverizingRecipe(result_count={"type":"minecraft:uniform","min":4,"max":6}, result=Ingr("minecraft:bone_meal"), ingredient=Ingr("dog_excrement")),  # type: ignore[arg-type]
+		],
+	)
+
+	# Compressed cobblestone tiers
+	for i, (prev, current, next_t) in enumerate(zip([None, *COBBLESTONE_TIERS[:-1]], COBBLESTONE_TIERS, [*COBBLESTONE_TIERS[1:], None], strict=True)):
+		cobble_recipes: list[RecipeBase] = [
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=9*[Ingr(f"{prev}_cobblestone") if prev else Ingr("minecraft:cobblestone")]),
+		]
+		if next_t:
+			cobble_recipes += [
+				CraftingShapelessRecipe(result_count=9, category="misc", ingredients=[Ingr(f"{next_t}_cobblestone")]),
+				PulverizingRecipe(result_count=9, ingredient=Ingr(f"{next_t}_cobblestone")),
 			]
-		},
-		"dog_excrement": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			"item_name": {"text":"Dog Excrement","italic":False,"color":"#693100"},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"A smelly piece of dog excrement.","color":"#693100"},
-					{"text":"\nUsed for comedic purposes and boss summoning","color":"gray"},
-					{"text":"\nEvery wolf lays an excrement item every 5-10 minutes","color":"gray"},
-				]),
-			],
-			USED_FOR_CRAFTING: [
-				{"type":"simplenergy_pulverizing","result_count":{"type":"minecraft:uniform","min":4,"max":6},"result":Ingr("minecraft:bone_meal")},
-			]
-		},
-		**{
-			f"{current}_cobblestone": {
-				"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-				VANILLA_BLOCK: {"id":"minecraft:cobbled_deepslate" if i < 4 else "minecraft:obsidian"},
+		Block(
+			id=f"{current}_cobblestone",
+			vanilla_block=VanillaBlock(id="minecraft:cobbled_deepslate" if i < 4 else "minecraft:obsidian"),
+			manual_category=MATERIALS,
+			components={
 				"lore": [
 					{"text":f"Equivalent to {9**(i+1):,} cobblestones","color":"gray","italic":False},
 				],
-				WIKI_COMPONENT: [
-					WikiButton([
-						{"text":f"Some {current.replace('_', ' ').title()} Cobblestone is nice to have.","color":"yellow"},
-						{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
-					]),
-				],
-				RESULT_OF_CRAFTING: [
-					{"type":"crafting_shapeless","result_count": 1,"category":"misc","ingredients":9*[Ingr(f"{prev}_cobblestone") if prev else Ingr("minecraft:cobblestone")]},
-				] + ([
-					{"type":"crafting_shapeless","result_count": 9,"category":"misc","ingredients":[Ingr(f"{next_t}_cobblestone")]},
-					{"type":"simplenergy_pulverizing","result_count": 9,"ingredient":Ingr(f"{next_t}_cobblestone")},
-				] if next_t else [])
-			}
-			for i, (prev, current, next_t) in enumerate(zip([None, *COBBLESTONE_TIERS[:-1]], COBBLESTONE_TIERS, [*COBBLESTONE_TIERS[1:], None], strict=True))
-		},
-		"stardust_frame": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:lapis_block"},
-			WIKI_COMPONENT: [
+			},
+			wiki_buttons=[
 				WikiButton([
-					{"text":"Enhanced machine block with stardust.","color":"yellow"},
-					{"text":"\nUsed as a base for most advanced machines","color":"gray"},
+					{"text":f"Some {current.replace('_', ' ').title()} Cobblestone is nice to have.","color":"yellow"},
+					{"text":f"\nEquals to {9**(i+1):,} cobblestones","color":"gray"},
 				]),
 			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","CMC","SSS"],"ingredients":{"B":Ingr("minecraft:blue_glazed_terracotta"),"C":Ingr("compacted_stardust_shard"),"M":Ingr("machine_block", "simplenergy"),"S":Ingr("stardust_block")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["SSS","CMC","BBB"],"ingredients":{"B":Ingr("minecraft:blue_glazed_terracotta"),"C":Ingr("compacted_stardust_shard"),"M":Ingr("machine_block", "simplenergy"),"S":Ingr("stardust_block")}},
-			]
-		},
-		"awakened_stardust_frame": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:redstone_block"},
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Awakened frame made with stardust.","color":"yellow"},
-					{"text":"\nFurther upgraded version of the machine block","color":"gray"},
-					{"text":"\nUsed for top-tier machines","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["NNN","ASA","BBB"],"ingredients":{"N":Ingr("minecraft:nether_wart_block"),"A":Ingr("awakened_stardust"),"S":Ingr("stardust_frame"),"B":Ingr("awakened_stardust_block")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["BBB","ASA","NNN"],"ingredients":{"N":Ingr("minecraft:nether_wart_block"),"A":Ingr("awakened_stardust"),"S":Ingr("stardust_frame"),"B":Ingr("awakened_stardust_block")}},
-			]
-		},
-		"ultimate_frame": {
-			"id": CUSTOM_BLOCK_VANILLA, CATEGORY: MATERIALS,
-			VANILLA_BLOCK: {"id":"minecraft:crying_obsidian"},
-			"item_name": rainbow_gradient_text("Ultimate Frame"),
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Ultimate frame made with advanced materials.","color":"yellow"},
-					{"text":"\nFinal upgraded version of the machine block","color":"gray"},
-					{"text":"\nUsed for final-tier machines","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD","UAU","PPP"],"ingredients":{"L":Ingr("legendarium_block"),"S":Ingr("solarium_block"),"D":Ingr("darkium_block"),"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_frame"),"P":Ingr("minecraft:stripped_pale_oak_wood")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["PPP","UAU","LSD"],"ingredients":{"L":Ingr("legendarium_block"),"S":Ingr("solarium_block"),"D":Ingr("darkium_block"),"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_frame"),"P":Ingr("minecraft:stripped_pale_oak_wood")}},
-			]
-		},
-		"mirror": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Reflective surface for advanced optics.","color":"yellow"},
-					{"text":"\nUsed for upgrading solar panels","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[Ingr("minecraft:black_stained_glass")] + [Ingr("minecraft:quartz_block")]},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":4*[Ingr("minecraft:tinted_glass")] + [Ingr("minecraft:quartz_block")]},
-			]
-		},
-		"stardust_photovoltaic_cell": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Photovoltaic cell made from stardust.","color":"yellow"},
-					{"text":"\nUsed to convert sunlight into energy","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","MMM"," I "],"ingredients":{"F":Ingr("stardust_fragment"),"M":Ingr("mirror"),"I":Ingr("stardust_ingot")}},
-			]
-		},
-		"awakened_stardust_photovoltaic_cell": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Awakened photovoltaic cell made from stardust.","color":"yellow"},
-					{"text":"\nUsed to convert sunlight into energy more efficiently","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FFF","SSS","FFF"],"ingredients":{"F":Ingr("awakened_stardust"),"S":Ingr("stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["FSF","FSF","FSF"],"ingredients":{"F":Ingr("awakened_stardust"),"S":Ingr("stardust_photovoltaic_cell")}},
-			]
-		},
-		"legendarium_photovoltaic_cell": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Legendarium photovoltaic cell made from legendary energy.","color":"yellow"},
-					{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":Ingr("legendarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":Ingr("legendarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
-			]
-		},
-		"solarium_photovoltaic_cell": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Solarium photovoltaic cell made from solar energy.","color":"yellow"},
-					{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":Ingr("solarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":Ingr("solarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
-			]
-		},
-		"darkium_photovoltaic_cell": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Darkium photovoltaic cell made from dark energy.","color":"yellow"},
-					{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["III","AAA","III"],"ingredients":{"I":Ingr("darkium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["IAI","IAI","IAI"],"ingredients":{"I":Ingr("darkium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}},
-			]
-		},
-		"ultimate_photovoltaic_cell": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			"item_name": rainbow_gradient_text("Ultimate Photovoltaic Cell"),
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Ultimate photovoltaic cell made from stardust.","color":"yellow"},
-					{"text":"\nUsed to convert sunlight into energy with ultimate efficiency","color":"gray"},
-					{"text":"\nCrafted from ultimate materials","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shaped","result_count":1,"category":"misc","shape":["LSD"," U "],"ingredients":{"L":Ingr("legendarium_photovoltaic_cell"),"S":Ingr("solarium_photovoltaic_cell"),"D":Ingr("darkium_photovoltaic_cell"),"U":Ingr("ultimate_shard")}},
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":[Ingr("legendarium_photovoltaic_cell"),Ingr("solarium_photovoltaic_cell"),Ingr("darkium_photovoltaic_cell"),Ingr("ultimate_shard")]},
-			]
-		},
-		"empty_module": {
-			"id": CUSTOM_ITEM_VANILLA, CATEGORY: MATERIALS,
-			WIKI_COMPONENT: [
-				WikiButton([
-					{"text":"Empty module for quarry's upgrade.","color":"yellow"},
-					{"text":"\nCan be filled with various materials","color":"gray"},
-				]),
-			],
-			RESULT_OF_CRAFTING: [
-				{"type":"crafting_shapeless","result_count":1,"category":"misc","ingredients":8*[Ingr("minecraft:map")] + [Ingr("simplunium_ingot", "simplenergy")]},
-			]
-		},
-	}
+			recipes=cobble_recipes,
+		)
 
 	# Compressed cobblestone uncraft to base cobblestone
-	additions["compressed_cobblestone"][USED_FOR_CRAFTING] = [
-		{"type":"crafting_shapeless","result_count":9,"category":"misc","result":Ingr("minecraft:cobblestone"),"ingredients":[Ingr("compressed_cobblestone")]},
-	]
+	Block.from_id("compressed_cobblestone").recipes.append(
+		CraftingShapelessRecipe(result_count=9, category="misc", result=Ingr("minecraft:cobblestone"), ingredients=[Ingr("compressed_cobblestone")])
+	)
 
-	# Update the definitions with new data
-	for k, v in additions.items():
-		if k in Mem.definitions:
-			Mem.definitions[k].update(v)
-		else:
-			Mem.definitions[k] = v
+	Block(
+		id="stardust_frame",
+		vanilla_block=VanillaBlock(id="minecraft:lapis_block"),
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Enhanced machine block with stardust.","color":"yellow"},
+				{"text":"\nUsed as a base for most advanced machines","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["BBB","CMC","SSS"], ingredients={"B":Ingr("minecraft:blue_glazed_terracotta"),"C":Ingr("compacted_stardust_shard"),"M":Ingr("machine_block", "simplenergy"),"S":Ingr("stardust_block")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["SSS","CMC","BBB"], ingredients={"B":Ingr("minecraft:blue_glazed_terracotta"),"C":Ingr("compacted_stardust_shard"),"M":Ingr("machine_block", "simplenergy"),"S":Ingr("stardust_block")}),
+		],
+	)
+
+	Block(
+		id="awakened_stardust_frame",
+		vanilla_block=VanillaBlock(id="minecraft:redstone_block"),
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Awakened frame made with stardust.","color":"yellow"},
+				{"text":"\nFurther upgraded version of the machine block","color":"gray"},
+				{"text":"\nUsed for top-tier machines","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["NNN","ASA","BBB"], ingredients={"N":Ingr("minecraft:nether_wart_block"),"A":Ingr("awakened_stardust"),"S":Ingr("stardust_frame"),"B":Ingr("awakened_stardust_block")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["BBB","ASA","NNN"], ingredients={"N":Ingr("minecraft:nether_wart_block"),"A":Ingr("awakened_stardust"),"S":Ingr("stardust_frame"),"B":Ingr("awakened_stardust_block")}),
+		],
+	)
+
+	Block(
+		id="ultimate_frame",
+		vanilla_block=VanillaBlock(id="minecraft:crying_obsidian"),
+		manual_category=MATERIALS,
+		components={"item_name": rainbow_gradient_text("Ultimate Frame")},
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Ultimate frame made with advanced materials.","color":"yellow"},
+				{"text":"\nFinal upgraded version of the machine block","color":"gray"},
+				{"text":"\nUsed for final-tier machines","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["LSD","UAU","PPP"], ingredients={"L":Ingr("legendarium_block"),"S":Ingr("solarium_block"),"D":Ingr("darkium_block"),"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_frame"),"P":Ingr("minecraft:stripped_pale_oak_wood")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["PPP","UAU","LSD"], ingredients={"L":Ingr("legendarium_block"),"S":Ingr("solarium_block"),"D":Ingr("darkium_block"),"U":Ingr("ultimate_shard"),"A":Ingr("awakened_stardust_frame"),"P":Ingr("minecraft:stripped_pale_oak_wood")}),
+		],
+	)
+
+	Item(
+		id="mirror",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Reflective surface for advanced optics.","color":"yellow"},
+				{"text":"\nUsed for upgrading solar panels","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[Ingr("minecraft:black_stained_glass")] + [Ingr("minecraft:quartz_block")]),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[Ingr("minecraft:tinted_glass")] + [Ingr("minecraft:quartz_block")]),
+		],
+	)
+
+	Item(
+		id="stardust_photovoltaic_cell",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Photovoltaic cell made from stardust.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["FFF","MMM"," I "], ingredients={"F":Ingr("stardust_fragment"),"M":Ingr("mirror"),"I":Ingr("stardust_ingot")}),
+		],
+	)
+
+	Item(
+		id="awakened_stardust_photovoltaic_cell",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Awakened photovoltaic cell made from stardust.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy more efficiently","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["FFF","SSS","FFF"], ingredients={"F":Ingr("awakened_stardust"),"S":Ingr("stardust_photovoltaic_cell")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["FSF","FSF","FSF"], ingredients={"F":Ingr("awakened_stardust"),"S":Ingr("stardust_photovoltaic_cell")}),
+		],
+	)
+
+	Item(
+		id="legendarium_photovoltaic_cell",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Legendarium photovoltaic cell made from legendary energy.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["III","AAA","III"], ingredients={"I":Ingr("legendarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["IAI","IAI","IAI"], ingredients={"I":Ingr("legendarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}),
+		],
+	)
+
+	Item(
+		id="solarium_photovoltaic_cell",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Solarium photovoltaic cell made from solar energy.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["III","AAA","III"], ingredients={"I":Ingr("solarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["IAI","IAI","IAI"], ingredients={"I":Ingr("solarium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}),
+		],
+	)
+
+	Item(
+		id="darkium_photovoltaic_cell",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Darkium photovoltaic cell made from dark energy.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy even more efficiently","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["III","AAA","III"], ingredients={"I":Ingr("darkium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}),
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["IAI","IAI","IAI"], ingredients={"I":Ingr("darkium_ingot"),"A":Ingr("awakened_stardust_photovoltaic_cell")}),
+		],
+	)
+
+	Item(
+		id="ultimate_photovoltaic_cell",
+		manual_category=MATERIALS,
+		components={"item_name": rainbow_gradient_text("Ultimate Photovoltaic Cell")},
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Ultimate photovoltaic cell made from stardust.","color":"yellow"},
+				{"text":"\nUsed to convert sunlight into energy with ultimate efficiency","color":"gray"},
+				{"text":"\nCrafted from ultimate materials","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["LSD"," U "], ingredients={"L":Ingr("legendarium_photovoltaic_cell"),"S":Ingr("solarium_photovoltaic_cell"),"D":Ingr("darkium_photovoltaic_cell"),"U":Ingr("ultimate_shard")}),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("legendarium_photovoltaic_cell"),Ingr("solarium_photovoltaic_cell"),Ingr("darkium_photovoltaic_cell"),Ingr("ultimate_shard")]),
+		],
+	)
+
+	Item(
+		id="empty_module",
+		manual_category=MATERIALS,
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Empty module for quarry's upgrade.","color":"yellow"},
+				{"text":"\nCan be filled with various materials","color":"gray"},
+			]),
+		],
+		recipes=[
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[Ingr("minecraft:map")] + [Ingr("simplunium_ingot", "simplenergy")]),
+		],
+	)
 

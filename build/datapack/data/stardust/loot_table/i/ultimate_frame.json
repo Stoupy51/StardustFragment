@@ -69,6 +69,17 @@
 										"color": "#ff006d"
 									}
 								],
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_frame","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
 								"minecraft:item_model": "stardust:ultimate_frame",
 								"minecraft:lore": [
 									[

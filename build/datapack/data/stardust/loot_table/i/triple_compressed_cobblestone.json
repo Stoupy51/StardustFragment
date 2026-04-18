@@ -22,6 +22,17 @@
 										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
 									]
 								],
+								"minecraft:container": [
+									{
+										"slot": 0,
+										"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:triple_compressed_cobblestone","from": "stardust"}}}}}
+									}
+								],
+								"minecraft:tooltip_display": {
+									"hidden_components": [
+										"minecraft:container"
+									]
+								},
 								"minecraft:item_model": "stardust:triple_compressed_cobblestone",
 								"minecraft:item_name": {
 									"translate": "stardust.triple_compressed_cobblestone"

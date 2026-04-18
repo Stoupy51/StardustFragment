@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from stewbeet import write_versioned_function
 from stewbeet.core import JsonDict, Mem, write_function, write_load_file
@@ -143,7 +142,7 @@ function {ns}:dimensions/teleport_to with storage {ns}:temp macro
 # If respawn point is invalid (e.g. in the void), teleport to world spawn instead
 execute at @s if loaded ~ ~ ~ unless block ~ ~ ~ #minecraft:beds unless block ~ ~-1 ~ minecraft:respawn_anchor run function {ns}:dimensions/teleport_to with storage {ns}:main world_spawn
 """)
-	write_function(f"{ns}:dimensions/teleport_to", "$execute in $(dimension) run tp @s $(x) $(y).6 $(z) $(yaw) $(pitch)")
+	write_function(f"{ns}:dimensions/teleport_to", "$execute in $(dimension) positioned $(x) $(y) $(z) run tp @s ~ ~0.6 ~ $(yaw) $(pitch)")
 	write_function(f"{ns}:dimensions/portals/handle_player", f"""
 # If player's teleportation is < global_second, set it to global_second + 5
 execute unless score @s {ns}.teleportation >= #global_second {ns}.data run function {ns}:dimensions/portals/init_teleportation

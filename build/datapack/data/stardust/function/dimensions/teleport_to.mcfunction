@@ -15,5 +15,5 @@
 #			pitch (float)
 #
 
-$execute in $(dimension) run tp @s $(x) $(y).6 $(z) $(yaw) $(pitch)
+$execute in $(dimension) positioned $(x) $(y) $(z) run tp @s ~ ~0.6 ~ $(yaw) $(pitch)
 

@@ -49,12 +49,7 @@
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"჉\n",
 				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "command_block","components": {"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],"item_model": "stardust:ultimate_dragon_egg","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"ultimate_dragon_egg": true},"smithed": {"id": "stardust:ultimate_dragon_egg","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_171"}},
-				{"text": "1##","hover_event": {"action": "show_text","value": {"translate": "stardust.trophy_item_dropped_by_the_ultimate_dragon","color": "yellow"}}},
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.a_symbol_of_your_triumph_over_the_ultimate_challenge"}]}},
-				{"text": "1\n","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.not_placeable_but_equippable"}]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": {"translate": "stardust.trophy_item_dropped_by_the_ultimate_dragon","color": "yellow"}}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.a_symbol_of_your_triumph_over_the_ultimate_challenge"}]}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"text":"\n","color": "gray"}, {"translate": "stardust.not_placeable_but_equippable"}]}},
+				{"text": "1\n0","hover_event": {"action": "show_text","value": [{"translate": "stardust.trophy_item_dropped_by_the_ultimate_dragon","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.a_symbol_of_your_triumph_over_the_ultimate_challenge"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.not_placeable_but_equippable"}]]}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

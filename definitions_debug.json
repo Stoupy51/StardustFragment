@@ -11,9 +11,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"group": "stardust_fragment","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "The fundamental building block of stardust technology.","color": "yellow"},
-			{"text": "\nMined from Stardust Ore found in the overworld","color": "gray"},
-			{"text": "\nUsed to craft ingots, tools, armor, and machines","color": "gray"}
+			[{"text": "The fundamental building block of stardust technology.","color": "yellow"},{"text": "\nMined from Stardust Ore found in the overworld","color": "gray"},{"text": "\nUsed to craft ingots, tools, armor, and machines","color": "gray"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_fragment",
@@ -37,9 +35,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"group": "stardust_ingot","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Refined stardust material for advanced crafting.","color": "yellow"},
-			{"text": "\nCrafted from Stardust Fragments","color": "gray"},
-			{"text": "\nUsed in tool, armor, and machine construction","color": "gray"}
+			[{"text": "Refined stardust material for advanced crafting.","color": "yellow"},{"text": "\nCrafted from Stardust Fragments","color": "gray"},{"text": "\nUsed in tool, armor, and machine construction","color": "gray"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_ingot",
@@ -61,9 +57,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"group": "stardust_essence","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Concentrated stardust energy.","color": "yellow"},
-			{"text": "\nCrafted from Stardust Ingots","color": "gray"},
-			{"text": "\nUsed in high-tier crafting recipes","color": "gray"}
+			[{"text": "Concentrated stardust energy.","color": "yellow"},{"text": "\nCrafted from Stardust Ingots","color": "gray"},{"text": "\nUsed in high-tier crafting recipes","color": "gray"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_essence",
@@ -82,9 +76,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_core","ingredients": [{"item": "minecraft:observer"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Central component of stardust technology.","color": "yellow"},
-			{"text": "\nCrafted from Stardust Essences","color": "gray"},
-			{"text": "\nUsed in top-tier crafting recipes","color": "gray"}
+			[{"text": "Central component of stardust technology.","color": "yellow"},{"text": "\nCrafted from Stardust Essences","color": "gray"},{"text": "\nUsed in top-tier crafting recipes","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_core","from": "stardust"}}}}}}],
@@ -110,9 +102,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "compacted_stardust_shard","ingredients": [{"item": "minecraft:amethyst_shard"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Component of stardust technology.","color": "yellow"},
-			{"text": "\nFilled with stardust energy","color": "gray"},
-			{"text": "\nUsed in high-tier crafting recipes","color": "gray"}
+			[{"text": "Component of stardust technology.","color": "yellow"},{"text": "\nFilled with stardust energy","color": "gray"},{"text": "\nUsed in high-tier crafting recipes","color": "gray"}]
 		],
 		"components": {
 			"item_model": "stardust:compacted_stardust_shard",
@@ -131,8 +121,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_block","ingredients": [{"item": "minecraft:gold_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Compressed stardust for storage and crafting.","color": "yellow"},
-			{"text": "\nCrafted from 8 Stardust Ingots and a Diamond Block","color": "gray"}
+			[{"text": "Compressed stardust for storage and crafting.","color": "yellow"},{"text": "\nCrafted from 8 Stardust Ingots and a Diamond Block","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_block","from": "stardust"}}}}}}],
@@ -164,10 +153,7 @@
 			"count": {"min": 1,"max": 4}
 		},
 		"wiki_buttons": [
-			{"text": "Primary ore for the datapack.","color": "yellow"},
-			{"text": "\nFound in the Overworld between Y=0 and Y=50","color": "gray"},
-			{"text": "\nDeepslate variant generates below Y=0","color": "gray"},
-			{"text": "\nDrops between 1 and 4 stardust fragments when mined","color": "gray"}
+			[{"text": "Primary ore for the datapack.","color": "yellow"},{"text": "\nFound in the Overworld between Y=0 and Y=50","color": "gray"},{"text": "\nDeepslate variant generates below Y=0","color": "gray"},{"text": "\nDrops between 1 and 4 stardust fragments when mined","color": "gray"}]
 		],
 		"item_model": "stardust:stardust_ore",
 		"item_name": {
@@ -195,9 +181,7 @@
 			"count": {"min": 2,"max": 6}
 		},
 		"wiki_buttons": [
-			{"text": "Deepslate variant of stardust ore.","color": "yellow"},
-			{"text": "\nFound in deepslate layers below Y=0","color": "gray"},
-			{"text": "\nDrops between 2 and 6 stardust fragments when mined","color": "gray"}
+			[{"text": "Deepslate variant of stardust ore.","color": "yellow"},{"text": "\nFound in deepslate layers below Y=0","color": "gray"},{"text": "\nDrops between 2 and 6 stardust fragments when mined","color": "gray"}]
 		],
 		"item_model": "stardust:deepslate_stardust_ore",
 		"item_name": {
@@ -225,9 +209,7 @@
 			"count": {"min": 1,"max": 3}
 		},
 		"wiki_buttons": [
-			{"text": "Nether variant of stardust ore.","color": "yellow"},
-			{"text": "\nFound throughout the Nether dimension","color": "gray"},
-			{"text": "\nDrops between 1 and 3 stardust ingots when mined","color": "gray"}
+			[{"text": "Nether variant of stardust ore.","color": "yellow"},{"text": "\nFound throughout the Nether dimension","color": "gray"},{"text": "\nDrops between 1 and 3 stardust ingots when mined","color": "gray"}]
 		],
 		"item_model": "stardust:nether_stardust_ore",
 		"item_name": {
@@ -255,9 +237,7 @@
 			"count": {"min": 1,"max": 2}
 		},
 		"wiki_buttons": [
-			{"text": "End dimension stardust ore.","color": "yellow"},
-			{"text": "\nFound in the End dimension","color": "gray"},
-			{"text": "\nDrops between 1 and 2 stardust essences when mined","color": "gray"}
+			[{"text": "End dimension stardust ore.","color": "yellow"},{"text": "\nFound in the End dimension","color": "gray"},{"text": "\nDrops between 1 and 2 stardust essences when mined","color": "gray"}]
 		],
 		"item_model": "stardust:ender_stardust_ore",
 		"item_name": {
@@ -279,9 +259,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},
-			{"text": "\nObtained through mining or some special mobs","color": "gray"},
-			{"text": "\nRequired for advanced equipment and machines","color": "gray"}
+			[{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained through mining or some special mobs","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"id": "stardust:awakened_stardust","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
@@ -299,9 +277,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Compressed awakened stardust block.","color": "yellow"},
-			{"text": "\nCrafted from 8 Awakened Stardust","color": "gray"},
-			{"text": "\nRequired for advanced equipment and machines","color": "gray"}
+			[{"text": "Compressed awakened stardust block.","color": "yellow"},{"text": "\nCrafted from 8 Awakened Stardust","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_block","from": "stardust"}}}}}}],
@@ -325,9 +301,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			{"text": "Variant of the nether stardust ore.","color": "yellow"},
-			{"text": "\nFound throughout the Nether dimension","color": "gray"},
-			{"text": "\nDrops between 2 and 8 awakened stardust when mined","color": "gray"}
+			[{"text": "Variant of the nether stardust ore.","color": "yellow"},{"text": "\nFound throughout the Nether dimension","color": "gray"},{"text": "\nDrops between 2 and 8 awakened stardust when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_ore","from": "stardust"}}}}}}],
@@ -357,10 +331,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Legendary material fragment with wind power.","color": "yellow"},
-			{"text": "\nExtremely rare and valuable","color": "gray"},
-			{"text": "\nObtained through legendarium seeds","color": "gray"},
-			{"text": "\nUsed for legendarium-tier equipment","color": "gray"}
+			[{"text": "Legendary material fragment with wind power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through legendarium seeds","color": "gray"},{"text": "\nUsed for legendarium-tier equipment","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"fragment": {"legendarium": true}},"id": "stardust:legendarium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_fragment": true}},
@@ -379,9 +350,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Refined legendary material with wind power.","color": "yellow"},
-			{"text": "\nExtremely rare and valuable","color": "gray"},
-			{"text": "\nUsed for legendarium-tier equipment","color": "gray"}
+			[{"text": "Refined legendary material with wind power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for legendarium-tier equipment","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"ingot": {"legendarium": true}},"id": "stardust:legendarium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"legendarium_ingot": true}},
@@ -399,8 +368,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Compressed legendarium storage block.","color": "yellow"},
-			{"text": "\nCrafted from 8Legendarium Ingots","color": "gray"}
+			[{"text": "Compressed legendarium storage block.","color": "yellow"},{"text": "\nCrafted from 8Legendarium Ingots","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:legendarium_block","from": "stardust"}}}}}}],
@@ -426,10 +394,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Solarium material fragment with fire power.","color": "yellow"},
-			{"text": "\nExtremely rare and valuable","color": "gray"},
-			{"text": "\nObtained through solarium seeds","color": "gray"},
-			{"text": "\nUsed for solarium-tier equipment","color": "gray"}
+			[{"text": "Solarium material fragment with fire power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through solarium seeds","color": "gray"},{"text": "\nUsed for solarium-tier equipment","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"fragment": {"solarium": true}},"id": "stardust:solarium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_fragment": true}},
@@ -448,9 +413,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Refined solarium material with fire power.","color": "yellow"},
-			{"text": "\nExtremely rare and valuable","color": "gray"},
-			{"text": "\nUsed for solarium-tier equipment","color": "gray"}
+			[{"text": "Refined solarium material with fire power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for solarium-tier equipment","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"ingot": {"solarium": true}},"id": "stardust:solarium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"solarium_ingot": true}},
@@ -468,8 +431,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Compressed solarium storage block.","color": "yellow"},
-			{"text": "\nCrafted from 8Solarium Ingots","color": "gray"}
+			[{"text": "Compressed solarium storage block.","color": "yellow"},{"text": "\nCrafted from 8Solarium Ingots","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:solarium_block","from": "stardust"}}}}}}],
@@ -495,10 +457,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Darkium material fragment with darkness power.","color": "yellow"},
-			{"text": "\nExtremely rare and valuable","color": "gray"},
-			{"text": "\nObtained through darkium seeds","color": "gray"},
-			{"text": "\nUsed for darkium-tier equipment","color": "gray"}
+			[{"text": "Darkium material fragment with darkness power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nObtained through darkium seeds","color": "gray"},{"text": "\nUsed for darkium-tier equipment","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"fragment": {"darkium": true}},"id": "stardust:darkium_fragment","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_fragment": true}},
@@ -517,9 +476,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Refined darkium material with darkness power.","color": "yellow"},
-			{"text": "\nExtremely rare and valuable","color": "gray"},
-			{"text": "\nUsed for darkium-tier equipment","color": "gray"}
+			[{"text": "Refined darkium material with darkness power.","color": "yellow"},{"text": "\nExtremely rare and valuable","color": "gray"},{"text": "\nUsed for darkium-tier equipment","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"ingot": {"darkium": true}},"id": "stardust:darkium_ingot","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"darkium_ingot": true}},
@@ -537,8 +494,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Compressed darkium storage block.","color": "yellow"},
-			{"text": "\nCrafted from 8Darkium Ingots","color": "gray"}
+			[{"text": "Compressed darkium storage block.","color": "yellow"},{"text": "\nCrafted from 8Darkium Ingots","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_block","from": "stardust"}}}}}}],
@@ -565,9 +521,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 1,"group": "dragon_pearl","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Upgraded ender pearl variant","color": "yellow"},
-			{"text": "\nThrows x1.5 farther than regular ender pearls","color": "gray"},
-			{"text": "\nCooldown is 0.5 seconds instead of 1 second","color": "gray"}
+			[{"text": "Upgraded ender pearl variant","color": "yellow"},{"text": "\nThrows x1.5 farther than regular ender pearls","color": "gray"},{"text": "\nCooldown is 0.5 seconds instead of 1 second","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Dragon Pearl","italic": false,"color": "dark_purple"},
@@ -586,10 +540,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "ender_dragon_pearl","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"dragon_pearl": true}}}},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"},{"item": "minecraft:ender_pearl"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Upgraded dragon pearl variant","color": "yellow"},
-			{"text": "\nThrows x2 farther than regular ender pearls","color": "gray"},
-			{"text": "\nCooldown is 0.25 seconds instead of 1 second","color": "gray"},
-			{"text": "\nUsed in high-tier crafting","color": "gray"}
+			[{"text": "Upgraded dragon pearl variant","color": "yellow"},{"text": "\nThrows x2 farther than regular ender pearls","color": "gray"},{"text": "\nCooldown is 0.25 seconds instead of 1 second","color": "gray"},{"text": "\nUsed in high-tier crafting","color": "gray"}]
 		],
 		"components": {
 			"item_name": [{"text": "Ender ","italic": false,"color": "dark_aqua"},{"text": "Dragon Pearl","italic": false,"color": "dark_purple"}],
@@ -620,8 +571,7 @@
 			{"text": "d","color": "#ff006d"}
 		],
 		"wiki_buttons": [
-			{"text": "The ultimate refined material.","color": "yellow"},
-			{"text": "\nMain component for ultimate crafting","color": "gray"}
+			[{"text": "The ultimate refined material.","color": "yellow"},{"text": "\nMain component for ultimate crafting","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:popped_chorus_fruit"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},{"item": "minecraft:echo_shard"},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}},{"item": "minecraft:resin_brick"},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}}},{"item": "minecraft:turtle_scute"}]}
@@ -644,9 +594,7 @@
 			"color": "#693100"
 		},
 		"wiki_buttons": [
-			{"text": "A smelly piece of dog excrement.","color": "#693100"},
-			{"text": "\nUsed for comedic purposes and boss summoning","color": "gray"},
-			{"text": "\nEvery wolf lays an excrement item every 5-10 minutes","color": "gray"}
+			[{"text": "A smelly piece of dog excrement.","color": "#693100"},{"text": "\nUsed for comedic purposes and boss summoning","color": "gray"},{"text": "\nEvery wolf lays an excrement item every 5-10 minutes","color": "gray"}]
 		],
 		"used_for_crafting": [
 			{"type": "simplenergy_pulverizing","result_count": {"type": "minecraft:uniform","min": 4,"max": 6},"result": {"item": "minecraft:bone_meal"}}
@@ -671,8 +619,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 9 cobblestones","color": "gray"}
+			[{"text": "Some Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 9 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"},{"item": "minecraft:cobblestone"}]},
@@ -702,8 +649,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Double Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 81 cobblestones","color": "gray"}
+			[{"text": "Some Double Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 81 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}]},
@@ -730,8 +676,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Triple Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 729 cobblestones","color": "gray"}
+			[{"text": "Some Triple Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 729 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}]},
@@ -758,8 +703,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Quadruple Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 6,561 cobblestones","color": "gray"}
+			[{"text": "Some Quadruple Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 6,561 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}]},
@@ -786,8 +730,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Quintuple Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 59,049 cobblestones","color": "gray"}
+			[{"text": "Some Quintuple Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 59,049 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}]},
@@ -814,8 +757,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Sextuple Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 531,441 cobblestones","color": "gray"}
+			[{"text": "Some Sextuple Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 531,441 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}}]},
@@ -842,8 +784,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Septuple Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 4,782,969 cobblestones","color": "gray"}
+			[{"text": "Some Septuple Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 4,782,969 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}}]},
@@ -870,8 +811,7 @@
 			["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]
 		],
 		"wiki_buttons": [
-			{"text": "Some Octuple Compressed Cobblestone is nice to have.","color": "yellow"},
-			{"text": "\nEquals to 43,046,721 cobblestones","color": "gray"}
+			[{"text": "Some Octuple Compressed Cobblestone is nice to have.","color": "yellow"},{"text": "\nEquals to 43,046,721 cobblestones","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}}]}
@@ -892,8 +832,7 @@
 			"id": "minecraft:lapis_block"
 		},
 		"wiki_buttons": [
-			{"text": "Enhanced machine block with stardust.","color": "yellow"},
-			{"text": "\nUsed as a base for most advanced machines","color": "gray"}
+			[{"text": "Enhanced machine block with stardust.","color": "yellow"},{"text": "\nUsed as a base for most advanced machines","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["BBB","CMC","SSS"],"ingredients": {"B": {"item": "minecraft:blue_glazed_terracotta"},"C": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}}},
@@ -918,9 +857,7 @@
 			"id": "minecraft:redstone_block"
 		},
 		"wiki_buttons": [
-			{"text": "Awakened frame made with stardust.","color": "yellow"},
-			{"text": "\nFurther upgraded version of the machine block","color": "gray"},
-			{"text": "\nUsed for top-tier machines","color": "gray"}
+			[{"text": "Awakened frame made with stardust.","color": "yellow"},{"text": "\nFurther upgraded version of the machine block","color": "gray"},{"text": "\nUsed for top-tier machines","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["NNN","ASA","BBB"],"ingredients": {"N": {"item": "minecraft:nether_wart_block"},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}},
@@ -961,9 +898,7 @@
 			{"text": "e","color": "#ff006d"}
 		],
 		"wiki_buttons": [
-			{"text": "Ultimate frame made with advanced materials.","color": "yellow"},
-			{"text": "\nFinal upgraded version of the machine block","color": "gray"},
-			{"text": "\nUsed for final-tier machines","color": "gray"}
+			[{"text": "Ultimate frame made with advanced materials.","color": "yellow"},{"text": "\nFinal upgraded version of the machine block","color": "gray"},{"text": "\nUsed for final-tier machines","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["LSD","UAU","PPP"],"ingredients": {"L": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}}},"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}},"P": {"item": "minecraft:stripped_pale_oak_wood"}}},
@@ -982,8 +917,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Reflective surface for advanced optics.","color": "yellow"},
-			{"text": "\nUsed for upgrading solar panels","color": "gray"}
+			[{"text": "Reflective surface for advanced optics.","color": "yellow"},{"text": "\nUsed for upgrading solar panels","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:black_stained_glass"},{"item": "minecraft:black_stained_glass"},{"item": "minecraft:black_stained_glass"},{"item": "minecraft:black_stained_glass"},{"item": "minecraft:quartz_block"}]},
@@ -1005,8 +939,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Photovoltaic cell made from stardust.","color": "yellow"},
-			{"text": "\nUsed to convert sunlight into energy","color": "gray"}
+			[{"text": "Photovoltaic cell made from stardust.","color": "yellow"},{"text": "\nUsed to convert sunlight into energy","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["FFF","MMM"," I "],"ingredients": {"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},"M": {"components": {"minecraft:custom_data": {"stardust": {"mirror": true}}}},"I": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}}}}
@@ -1027,8 +960,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Awakened photovoltaic cell made from stardust.","color": "yellow"},
-			{"text": "\nUsed to convert sunlight into energy more efficiently","color": "gray"}
+			[{"text": "Awakened photovoltaic cell made from stardust.","color": "yellow"},{"text": "\nUsed to convert sunlight into energy more efficiently","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["FFF","SSS","FFF"],"ingredients": {"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_photovoltaic_cell": true}}}}}},
@@ -1050,8 +982,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Legendarium photovoltaic cell made from legendary energy.","color": "yellow"},
-			{"text": "\nUsed to convert sunlight into energy even more efficiently","color": "gray"}
+			[{"text": "Legendarium photovoltaic cell made from legendary energy.","color": "yellow"},{"text": "\nUsed to convert sunlight into energy even more efficiently","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","AAA","III"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}}}},
@@ -1073,8 +1004,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Solarium photovoltaic cell made from solar energy.","color": "yellow"},
-			{"text": "\nUsed to convert sunlight into energy even more efficiently","color": "gray"}
+			[{"text": "Solarium photovoltaic cell made from solar energy.","color": "yellow"},{"text": "\nUsed to convert sunlight into energy even more efficiently","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","AAA","III"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}}}},
@@ -1096,8 +1026,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Darkium photovoltaic cell made from dark energy.","color": "yellow"},
-			{"text": "\nUsed to convert sunlight into energy even more efficiently","color": "gray"}
+			[{"text": "Darkium photovoltaic cell made from dark energy.","color": "yellow"},{"text": "\nUsed to convert sunlight into energy even more efficiently","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["III","AAA","III"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}}}},
@@ -1147,9 +1076,7 @@
 			{"text": "l","color": "#ff003a"}
 		],
 		"wiki_buttons": [
-			{"text": "Ultimate photovoltaic cell made from stardust.","color": "yellow"},
-			{"text": "\nUsed to convert sunlight into energy with ultimate efficiency","color": "gray"},
-			{"text": "\nCrafted from ultimate materials","color": "gray"}
+			[{"text": "Ultimate photovoltaic cell made from stardust.","color": "yellow"},{"text": "\nUsed to convert sunlight into energy with ultimate efficiency","color": "gray"},{"text": "\nCrafted from ultimate materials","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","shape": ["LSD"," U "],"ingredients": {"L": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_photovoltaic_cell": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"solarium_photovoltaic_cell": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"darkium_photovoltaic_cell": true}}}},"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}}}},
@@ -1168,8 +1095,7 @@
 		"id": "minecraft:command_block",
 		"manual_category": "materials",
 		"wiki_buttons": [
-			{"text": "Empty module for quarry's upgrade.","color": "yellow"},
-			{"text": "\nCan be filled with various materials","color": "gray"}
+			[{"text": "Empty module for quarry's upgrade.","color": "yellow"},{"text": "\nCan be filled with various materials","color": "gray"}]
 		],
 		"result_of_crafting": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}]}
@@ -1268,8 +1194,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "stardust_battery","shape": ["EEE","CBC","SSS"],"ingredients": {"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"C": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"B": {"components": {"minecraft:custom_data": {"simplenergy": {"elite_battery": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Large-capacity energy storage device.","color": "yellow"},
-			{"text": "\nStores up to 200 MJ of energy","color": "gray"}
+			[{"text": "Large-capacity energy storage device.","color": "yellow"},{"text": "\nStores up to 200 MJ of energy","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"storage": 0,"max_storage": 200000},"stardust": {"stardust_battery": true},"smithed": {"id": "stardust:stardust_battery","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1296,8 +1221,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "awakened_stardust_battery","shape": ["AAA","SBS","RRR"],"ingredients": {"R": {"item": "minecraft:redstone_block"},"S": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"stardust_battery": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Enhanced energy storage with awakened stardust.","color": "yellow"},
-			{"text": "\nStores up to 500 MJ of energy","color": "gray"}
+			[{"text": "Enhanced energy storage with awakened stardust.","color": "yellow"},{"text": "\nStores up to 500 MJ of energy","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"storage": 0,"max_storage": 500000},"stardust": {"awakened_stardust_battery": true},"smithed": {"id": "stardust:awakened_stardust_battery","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1324,8 +1248,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "ultimate_battery","shape": ["CCC","FBF","SSS"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_frame": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_battery": true}}}},"C": {"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Ultimate energy storage device.","color": "yellow"},
-			{"text": "\nStores up to 10 GJ of energy","color": "gray"}
+			[{"text": "Ultimate energy storage device.","color": "yellow"},{"text": "\nStores up to 10 GJ of energy","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"storage": 0,"max_storage": 10000000},"stardust": {"ultimate_battery": true},"smithed": {"id": "stardust:ultimate_battery","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1351,9 +1274,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "stardust_solar_panel","shape": ["CCC","EPE","BBB"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"stardust": {"stardust_photovoltaic_cell": true}}}},"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"P": {"components": {"minecraft:custom_data": {"simplenergy": {"solar_panel": true}}}},"B": {"item": "minecraft:lapis_block"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Stardust-enhanced solar energy collector.","color": "yellow"},
-			{"text": "\nGenerates 8 kW during daylight","color": "gray"},
-			{"text": "\nRequires direct sunlight","color": "gray"}
+			[{"text": "Stardust-enhanced solar energy collector.","color": "yellow"},{"text": "\nGenerates 8 kW during daylight","color": "gray"},{"text": "\nRequires direct sunlight","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 8,"max_storage": 1200},"stardust": {"stardust_solar_panel": true},"smithed": {"id": "stardust:stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1379,9 +1300,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "awakened_stardust_solar_panel","shape": ["CCC","APA","BBB"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"stardust_solar_panel": true}}}},"B": {"item": "minecraft:iron_block"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Advanced solar panel with awakened stardust.","color": "yellow"},
-			{"text": "\nDouble the power of basic solar panels","color": "gray"},
-			{"text": "\nGenerates 16 kW during daylight","color": "gray"}
+			[{"text": "Advanced solar panel with awakened stardust.","color": "yellow"},{"text": "\nDouble the power of basic solar panels","color": "gray"},{"text": "\nGenerates 16 kW during daylight","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 16,"max_storage": 2400},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"id": "stardust:awakened_stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1407,9 +1326,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "legendarium_solar_panel","shape": ["CCC","EPE","BBB"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_photovoltaic_cell": true}}}},"E": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_solar_panel": true}}}},"B": {"item": "minecraft:calcite"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Advanced solar panel with legendarium material.","color": "yellow"},
-			{"text": "\nDouble the power of awakened solar panels","color": "gray"},
-			{"text": "\nGenerates 32 kW during daylight","color": "gray"}
+			[{"text": "Advanced solar panel with legendarium material.","color": "yellow"},{"text": "\nDouble the power of awakened solar panels","color": "gray"},{"text": "\nGenerates 32 kW during daylight","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"legendarium_solar_panel": true},"smithed": {"id": "stardust:legendarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1435,9 +1352,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "solarium_solar_panel","shape": ["CCC","EPE","BBB"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"stardust": {"solarium_photovoltaic_cell": true}}}},"E": {"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_solar_panel": true}}}},"B": {"item": "minecraft:calcite"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Advanced solar panel with solarium material.","color": "yellow"},
-			{"text": "\nDouble the power of awakened solar panels","color": "gray"},
-			{"text": "\nGenerates 32 kW during daylight","color": "gray"}
+			[{"text": "Advanced solar panel with solarium material.","color": "yellow"},{"text": "\nDouble the power of awakened solar panels","color": "gray"},{"text": "\nGenerates 32 kW during daylight","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"solarium_solar_panel": true},"smithed": {"id": "stardust:solarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1463,9 +1378,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "darkium_solar_panel","shape": ["CCC","EPE","BBB"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"stardust": {"darkium_photovoltaic_cell": true}}}},"E": {"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_solar_panel": true}}}},"B": {"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_block": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Advanced solar panel with darkium material.","color": "yellow"},
-			{"text": "\nDouble the power of awakened solar panels","color": "gray"},
-			{"text": "\nGenerates 32 kW during nighttime instead of daylight","color": "gray"}
+			[{"text": "Advanced solar panel with darkium material.","color": "yellow"},{"text": "\nDouble the power of awakened solar panels","color": "gray"},{"text": "\nGenerates 32 kW during nighttime instead of daylight","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"darkium_solar_panel": true},"smithed": {"id": "stardust:darkium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1496,8 +1409,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "ultimate_solar_panel","shape": ["CCC","SPS","XYZ"],"ingredients": {"C": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_photovoltaic_cell": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"darkium_solar_panel": true}}}},"X": {"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}},"Y": {"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},"Z": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Ultimate solar panel combining all three elements.","color": "yellow"},
-			{"text": "\nGenerates 128 kW during daylight only","color": "gray"}
+			[{"text": "Ultimate solar panel combining all three elements.","color": "yellow"},{"text": "\nGenerates 128 kW during daylight only","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 128,"max_storage": 20000},"stardust": {"ultimate_solar_panel": true},"smithed": {"id": "stardust:ultimate_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1523,17 +1435,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "quarry_configurator","shape": ["DD","QQ","QQ"],"ingredients": {"D": {"item": "minecraft:diamond"},"Q": {"item": "minecraft:quartz"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Configurator for setting up quarries.\n","color": "yellow"},
-			{"keybind": "key.use","color": "white"},
-			{"text": " to set the first corner of the quarry area\n","color": "gray"},
-			{"keybind": "key.sneak","color": "white"},
-			{"text": " + ","color": "gray"},
-			{"keybind": "key.use","color": "white"},
-			{"text": " to set the opposite corner of the quarry area","color": "gray"},
-			{"text": "\nFinally, just ","color": "gray"},
-			{"keybind": "key.use","color": "white"},
-			{"text": " the quarry you want to apply the region configuration","color": "gray"},
-			{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}
+			[{"text": "Configurator for setting up quarries.\n","color": "yellow"},{"keybind": "key.use","color": "white"},{"text": " to set the first corner of the quarry area\n","color": "gray"},{"keybind": "key.sneak","color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " to set the opposite corner of the quarry area","color": "gray"},{"text": "\nFinally, just ","color": "gray"},{"keybind": "key.use","color": "white"},{"text": " the quarry you want to apply the region configuration","color": "gray"},{"text": "\nOr put the configurator inside the quarry on the dedicated slot","color": "gray"}]
 		],
 		"components": {
 			"lore": [[{"keybind": "key.use","italic": false,"color": "white"},{"text": " to set 1st coordinates","color": "gray"}],[{"keybind": "key.sneak","italic": false,"color": "white"},{"text": " + ","color": "gray"},{"keybind": "key.use"},{"text": " to set 2nd coordinates","color": "gray"}],["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},{"text": " StardustFragment","italic": true,"color": "blue"}]],
@@ -1552,9 +1454,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "fortune_module","shape": ["DED","EME","DED"],"ingredients": {"E": {"item": "minecraft:emerald"},"D": {"item": "minecraft:diamond"},"M": {"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Module that increases the fortune level of compatible machines.","color": "yellow"},
-			{"text": "\nEach module increases fortune by 1, up to a maximum of 5","color": "gray"},
-			{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}
+			[{"text": "Module that increases the fortune level of compatible machines.","color": "yellow"},{"text": "\nEach module increases fortune by 1, up to a maximum of 5","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}]
 		],
 		"components": {
 			"max_stack_size": 5,
@@ -1574,8 +1474,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "silk_touch_module","ingredients": [{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"item": "minecraft:deepslate_iron_ore"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Module that enables silk touch enchantment for compatible machines.","color": "yellow"},
-			{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}
+			[{"text": "Module that enables silk touch enchantment for compatible machines.","color": "yellow"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}]
 		],
 		"components": {
 			"max_stack_size": 1,
@@ -1594,10 +1493,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "force_load_module","ingredients": [{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Module that force loads the chunk for compatible machines.","color": "yellow"},
-			{"text": "\nPrevents the chunk from unloading when no players are nearby","color": "gray"},
-			{"text": "\nMachine continues to operate even in unloaded chunks","color": "gray"},
-			{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}
+			[{"text": "Module that force loads the chunk for compatible machines.","color": "yellow"},{"text": "\nPrevents the chunk from unloading when no players are nearby","color": "gray"},{"text": "\nMachine continues to operate even in unloaded chunks","color": "gray"},{"text": "\nPut the module in the dedicated slot of the quarry","color": "gray"}]
 		],
 		"components": {
 			"max_stack_size": 1,
@@ -1616,11 +1512,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "quarry_lv1","ingredients": [{"item": "minecraft:barrel"},{"item": "minecraft:crafter"},{"item": "minecraft:barrel"},{"item": "minecraft:observer"},{"item": "minecraft:amethyst_shard"},{"item": "minecraft:observer"},{"item": "minecraft:diamond_pickaxe"},{"item": "minecraft:diamond_axe"},{"item": "minecraft:diamond_shovel"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Level 1 quarry for automated mining.","color": "yellow"},
-			{"text": "\nMines 1 blocks per second","color": "gray"},
-			{"text": "\nOnly mines blocks in a configured area","color": "gray"},
-			{"text": "\n\nConsumes 125 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 20 MJ","color": "gray"}
+			[{"text": "Level 1 quarry for automated mining.","color": "yellow"},{"text": "\nMines 1 blocks per second","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"},{"text": "\n\nConsumes 125 kW of power","color": "gray"},{"text": "\nEnergy buffer: 20 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 125,"max_storage": 20000},"stardust": {"quarry": {"block_per_second": 1},"quarry_lv1": true},"smithed": {"id": "stardust:quarry_lv1","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1646,11 +1538,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "quarry_lv2","shape": ["WWW","EQE","BBB"],"ingredients": {"W": {"item": "minecraft:warped_fungus"},"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv1": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Level 2 quarry for automated mining.","color": "yellow"},
-			{"text": "\nMines 3 blocks per second","color": "gray"},
-			{"text": "\nOnly mines blocks in a configured area","color": "gray"},
-			{"text": "\n\nConsumes 250 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 60 MJ","color": "gray"}
+			[{"text": "Level 2 quarry for automated mining.","color": "yellow"},{"text": "\nMines 3 blocks per second","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"},{"text": "\n\nConsumes 250 kW of power","color": "gray"},{"text": "\nEnergy buffer: 60 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 250,"max_storage": 60000},"stardust": {"quarry": {"block_per_second": 3},"quarry_lv2": true},"smithed": {"id": "stardust:quarry_lv2","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1676,11 +1564,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "quarry_lv3","shape": ["DDD","SQS","BRB"],"ingredients": {"D": {"components": {"minecraft:custom_data": {"stardust": {"dragon_pearl": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv2": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}},"R": {"item": "minecraft:respawn_anchor"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Level 3 quarry for automated mining.","color": "yellow"},
-			{"text": "\nMines 5 blocks per second","color": "gray"},
-			{"text": "\nOnly mines blocks in a configured area","color": "gray"},
-			{"text": "\n\nConsumes 375 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 100 MJ","color": "gray"}
+			[{"text": "Level 3 quarry for automated mining.","color": "yellow"},{"text": "\nMines 5 blocks per second","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"},{"text": "\n\nConsumes 375 kW of power","color": "gray"},{"text": "\nEnergy buffer: 100 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 375,"max_storage": 100000},"stardust": {"quarry": {"block_per_second": 5},"quarry_lv3": true},"smithed": {"id": "stardust:quarry_lv3","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1706,11 +1590,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "quarry_lv4","shape": ["EEE","NQN","BBB"],"ingredients": {"E": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"N": {"item": "minecraft:netherite_ingot"},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv3": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Level 4 quarry for automated mining.","color": "yellow"},
-			{"text": "\nMines 8 blocks per second","color": "gray"},
-			{"text": "\nOnly mines blocks in a configured area","color": "gray"},
-			{"text": "\n\nConsumes 500 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 140 MJ","color": "gray"}
+			[{"text": "Level 4 quarry for automated mining.","color": "yellow"},{"text": "\nMines 8 blocks per second","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"},{"text": "\n\nConsumes 500 kW of power","color": "gray"},{"text": "\nEnergy buffer: 140 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 500,"max_storage": 140000},"stardust": {"quarry": {"block_per_second": 8},"quarry_lv4": true},"smithed": {"id": "stardust:quarry_lv4","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1737,11 +1617,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "quarry_lv5","shape": ["BBB","UQU","NNN"],"ingredients": {"N": {"item": "minecraft:netherite_block"},"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"Q": {"components": {"minecraft:custom_data": {"stardust": {"quarry_lv4": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Level 5 quarry for automated mining.","color": "yellow"},
-			{"text": "\nMines 16 blocks per second","color": "gray"},
-			{"text": "\nOnly mines blocks in a configured area","color": "gray"},
-			{"text": "\n\nConsumes 625 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 180 MJ","color": "gray"}
+			[{"text": "Level 5 quarry for automated mining.","color": "yellow"},{"text": "\nMines 16 blocks per second","color": "gray"},{"text": "\nOnly mines blocks in a configured area","color": "gray"},{"text": "\n\nConsumes 625 kW of power","color": "gray"},{"text": "\nEnergy buffer: 180 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 625,"max_storage": 180000},"stardust": {"quarry": {"block_per_second": 16},"quarry_lv5": true},"smithed": {"id": "stardust:quarry_lv5","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1765,10 +1641,7 @@
 		"manual_category": "energy",
 		"recipes": [],
 		"wiki_buttons": [
-			{"text": "Creative quarry with unlimited power.","color": "yellow"},
-			{"text": "\nRequires no power to operate","color": "gray"},
-			{"text": "\nEquivalent to a Level 1000 quarry","color": "gray"},
-			{"text": "\nFor creative/testing purposes only","color": "gray"}
+			[{"text": "Creative quarry with unlimited power.","color": "yellow"},{"text": "\nRequires no power to operate","color": "gray"},{"text": "\nEquivalent to a Level 1000 quarry","color": "gray"},{"text": "\nFor creative/testing purposes only","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry": {"block_per_second": 1000},"quarry_creative": true},"smithed": {"id": "stardust:quarry_creative","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1795,12 +1668,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "cavern_portal","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Portal to the Cavern dimension.","color": "yellow"},
-			{"text": "\nA world full of underground caverns and caves","color": "gray"},
-			{"text": "\n\nMobs: All vanilla mobs (scaled to 0.75x size)","color": "white"},
-			{"text": "\nLoot: Ores, minerals, gems (Coal, Copper, Iron, Gold, Lapis, Redstone, Emerald, Diamond)","color": "white"},
-			{"text": "\n\nConsumes 20 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 800 kJ","color": "gray"}
+			[{"text": "Portal to the Cavern dimension.","color": "yellow"},{"text": "\nA world full of underground caverns and caves","color": "gray"},{"text": "\n\nMobs: All vanilla mobs (scaled to 0.75x size)","color": "white"},{"text": "\nLoot: Ores, minerals, gems (Coal, Copper, Iron, Gold, Lapis, Redstone, Emerald, Diamond)","color": "white"},{"text": "\n\nConsumes 20 kW of power","color": "gray"},{"text": "\nEnergy buffer: 800 kJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"cavern_portal": true},"smithed": {"id": "stardust:cavern_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1826,13 +1694,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "celestial_portal","ingredients": [{"item": "minecraft:iron_block"},{"item": "minecraft:phantom_membrane"},{"item": "minecraft:iron_block"},{"item": "minecraft:phantom_membrane"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"item": "minecraft:phantom_membrane"},{"item": "minecraft:iron_block"},{"item": "minecraft:phantom_membrane"},{"item": "minecraft:iron_block"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Portal to the Celestial dimension.","color": "yellow"},
-			{"text": "\nA dimension filled with floating islands in the sky","color": "gray"},
-			{"text": "\n\nMobs: All vanilla mobs (1.5x health, 1.5x damage, 1.1x speed)","color": "white"},
-			{"text": "\nLoot: Iron Ingots, Stardust Fragments, Simplunium Ingots","color": "white"},
-			{"text": "\nTransitions: Fall down to return to Overworld, go up to Stardust dimension","color": "aqua"},
-			{"text": "\n\nConsumes 20 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 800 kJ","color": "gray"}
+			[{"text": "Portal to the Celestial dimension.","color": "yellow"},{"text": "\nA dimension filled with floating islands in the sky","color": "gray"},{"text": "\n\nMobs: All vanilla mobs (1.5x health, 1.5x damage, 1.1x speed)","color": "white"},{"text": "\nLoot: Iron Ingots, Stardust Fragments, Simplunium Ingots","color": "white"},{"text": "\nTransitions: Fall down to return to Overworld, go up to Stardust dimension","color": "aqua"},{"text": "\n\nConsumes 20 kW of power","color": "gray"},{"text": "\nEnergy buffer: 800 kJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 20,"max_storage": 800},"stardust": {"celestial_portal": true},"smithed": {"id": "stardust:celestial_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1858,15 +1720,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_portal","ingredients": [{"item": "minecraft:blue_concrete"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:blue_concrete"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"celestial_portal": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:blue_concrete"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:blue_concrete"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Portal to the Stardust dimension.","color": "yellow"},
-			{"text": "\nA dangerous dimension with powerful Stardust-corrupted mobs","color": "gray"},
-			{"text": "\n\nMobs: Stardust Soldier, Stardust Evoker, Stardust Bat","color": "white"},
-			{"text": "\n  - Stardust Soldier/Evoker: 2x health, 3x damage, 1.25x speed","color": "gray"},
-			{"text": "\n  - Stardust Bat: Summons lightning at nearby players (10% chance/second)","color": "gray"},
-			{"text": "\nLoot: Stardust Ingots, Stardust Essence, Netherite Scraps","color": "white"},
-			{"text": "\nTransitions: Fall down to Celestial dimension, go up for Ultimate dimension","color": "aqua"},
-			{"text": "\n\nConsumes 100 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 6 MJ","color": "gray"}
+			[{"text": "Portal to the Stardust dimension.","color": "yellow"},{"text": "\nA dangerous dimension with powerful Stardust-corrupted mobs","color": "gray"},{"text": "\n\nMobs: Stardust Soldier, Stardust Evoker, Stardust Bat","color": "white"},{"text": "\n  - Stardust Soldier/Evoker: 2x health, 3x damage, 1.25x speed","color": "gray"},{"text": "\n  - Stardust Bat: Summons lightning at nearby players (10% chance/second)","color": "gray"},{"text": "\nLoot: Stardust Ingots, Stardust Essence, Netherite Scraps","color": "white"},{"text": "\nTransitions: Fall down to Celestial dimension, go up for Ultimate dimension","color": "aqua"},{"text": "\n\nConsumes 100 kW of power","color": "gray"},{"text": "\nEnergy buffer: 6 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 100,"max_storage": 6000},"stardust": {"stardust_portal": true},"smithed": {"id": "stardust:stardust_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1892,13 +1746,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_dungeon_portal","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_portal": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Portal to the Stardust Dungeon.","color": "yellow"},
-			{"text": "\nA pre-built dungeon dimension with extreme challenges","color": "gray"},
-			{"text": "\n\nMobs: All vanilla mobs (3x health, 4x damage, 1.35x speed)","color": "white"},
-			{"text": "\nLoot: Awakened Stardust, Stardust Essence","color": "white"},
-			{"text": "\nWarning: Extremely dangerous! Prepare well before entering","color": "red"},
-			{"text": "\n\nConsumes 200 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 12 MJ","color": "gray"}
+			[{"text": "Portal to the Stardust Dungeon.","color": "yellow"},{"text": "\nA pre-built dungeon dimension with extreme challenges","color": "gray"},{"text": "\n\nMobs: All vanilla mobs (3x health, 4x damage, 1.35x speed)","color": "white"},{"text": "\nLoot: Awakened Stardust, Stardust Essence","color": "white"},{"text": "\nWarning: Extremely dangerous! Prepare well before entering","color": "red"},{"text": "\n\nConsumes 200 kW of power","color": "gray"},{"text": "\nEnergy buffer: 12 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 200,"max_storage": 12000},"stardust": {"stardust_dungeon_portal": true},"smithed": {"id": "stardust:stardust_dungeon_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1924,16 +1772,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "ultimate_portal","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_frame": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_dungeon_portal": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_frame": true}}}},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Portal to the Ultimate dimension.","color": "yellow"},
-			{"text": "\nThe ultimate challenge - home of the Ultimate Dragon boss","color": "gray"},
-			{"text": "\n\nBoss: Ultimate Dragon (1024 HP)","color": "white"},
-			{"text": "\n  - Spawned by consuming Ultimate Dragon Essence","color": "gray"},
-			{"text": "\n  - Multiple powerful attacks and mechanics","color": "gray"},
-			{"text": "\n  - Summons Ultimate Slaves (512 HP each)","color": "gray"},
-			{"text": "\nTransitions: Fall down to return to Stardust dimension","color": "aqua"},
-			{"text": "\nWarning: This is the hardest content in the datapack!","color": "red"},
-			{"text": "\n\nConsumes 500 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 24 MJ","color": "gray"}
+			[{"text": "Portal to the Ultimate dimension.","color": "yellow"},{"text": "\nThe ultimate challenge - home of the Ultimate Dragon boss","color": "gray"},{"text": "\n\nBoss: Ultimate Dragon (1024 HP)","color": "white"},{"text": "\n  - Spawned by consuming Ultimate Dragon Essence","color": "gray"},{"text": "\n  - Multiple powerful attacks and mechanics","color": "gray"},{"text": "\n  - Summons Ultimate Slaves (512 HP each)","color": "gray"},{"text": "\nTransitions: Fall down to return to Stardust dimension","color": "aqua"},{"text": "\nWarning: This is the hardest content in the datapack!","color": "red"},{"text": "\n\nConsumes 500 kW of power","color": "gray"},{"text": "\nEnergy buffer: 24 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 500,"max_storage": 24000},"stardust": {"ultimate_portal": true},"smithed": {"id": "stardust:ultimate_portal","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1960,14 +1799,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "growth_accelerator","shape": ["FFF","DSD","EEE"],"ingredients": {"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"diamond_seed": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Accelerates crop and plant growth.","color": "yellow"},
-			{"text": "\nAccelerates growth in 10-block radius","color": "gray"},
-			{"text": "\nOperates once per minute when powered","color": "gray"},
-			{"text": "\n\nEffects:","color": "aqua"},
-			{"text": "\n➤ Vanilla crops: +1 growth stage","color": "white"},
-			{"text": "\n➤ Custom growing seeds: +10 minutes of growth time","color": "white"},
-			{"text": "\n\nConsumes 100 kW of power","color": "gray"},
-			{"text": "\nEnergy buffer: 12 MJ","color": "gray"}
+			[{"text": "Accelerates crop and plant growth.","color": "yellow"},{"text": "\nAccelerates growth in 10-block radius","color": "gray"},{"text": "\nOperates once per minute when powered","color": "gray"},{"text": "\n\nEffects:","color": "aqua"},{"text": "\n➤ Vanilla crops: +1 growth stage","color": "white"},{"text": "\n➤ Custom growing seeds: +10 minutes of growth time","color": "white"},{"text": "\n\nConsumes 100 kW of power","color": "gray"},{"text": "\nEnergy buffer: 12 MJ","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 100,"max_storage": 12000},"stardust": {"growth_accelerator": true},"smithed": {"id": "stardust:growth_accelerator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -1994,9 +1826,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "mob_grinder","shape": ["FFF","DSD","AAA"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"S": {"item": "minecraft:wither_skeleton_skull"},"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Automated mob killing machine.","color": "yellow"},
-			{"text": "\nKills mobs in a large area in front of it","color": "gray"},
-			{"text": "\n\nConsumes 100 kW of power","color": "gray"}
+			[{"text": "Automated mob killing machine.","color": "yellow"},{"text": "\nKills mobs in a large area in front of it","color": "gray"},{"text": "\n\nConsumes 100 kW of power","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"usage": 100,"max_storage": 15000},"stardust": {"mob_grinder": true},"smithed": {"id": "stardust:mob_grinder","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -2023,9 +1853,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "nether_star_generator","shape": ["BBB","NRN","MMM"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"N": {"item": "minecraft:nether_star"},"R": {"components": {"minecraft:custom_data": {"simplenergy": {"redstone_generator": true}}}},"B": {"item": "minecraft:iron_block"}}}
 		],
 		"wiki_buttons": [
-			{"text": "High-power generator using nether stars.","color": "yellow"},
-			{"text": "\nGenerates 1500 kW when supplied with nether stars","color": "gray"},
-			{"text": "\nOne nether star provides 15 minutes of fuel","color": "gray"}
+			[{"text": "High-power generator using nether stars.","color": "yellow"},{"text": "\nGenerates 1500 kW when supplied with nether stars","color": "gray"},{"text": "\nOne nether star provides 15 minutes of fuel","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 1500,"max_storage": 30000},"stardust": {"nether_star_generator": true},"smithed": {"id": "stardust:nether_star_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -2052,10 +1880,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "advanced_furnace_generator","shape": ["BBB","GFG","MMM"],"ingredients": {"M": {"components": {"minecraft:custom_data": {"simplenergy": {"machine_block": true}}}},"G": {"item": "minecraft:glass"},"F": {"components": {"minecraft:custom_data": {"simplenergy": {"furnace_generator": true}}}},"B": {"item": "minecraft:iron_block"}}}
 		],
 		"wiki_buttons": [
-			{"text": "Enhanced furnace generator.","color": "yellow"},
-			{"text": "\nGenerates 20 kW when supplied with fuel","color": "gray"},
-			{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},
-			{"text": "\nMore efficient than basic furnace generator","color": "gray"}
+			[{"text": "Enhanced furnace generator.","color": "yellow"},{"text": "\nGenerates 20 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nMore efficient than basic furnace generator","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 20,"max_storage": 1600},"stardust": {"advanced_furnace_generator": true},"smithed": {"id": "stardust:advanced_furnace_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -2082,10 +1907,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "stardust_furnace_generator","shape": ["BBB","CFC","SSS"],"ingredients": {"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_frame": true}}}},"C": {"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"advanced_furnace_generator": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Stardust-enhanced furnace generator.","color": "yellow"},
-			{"text": "\nGenerates 40 kW when supplied with fuel","color": "gray"},
-			{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},
-			{"text": "\nHigher efficiency than advanced generator","color": "gray"}
+			[{"text": "Stardust-enhanced furnace generator.","color": "yellow"},{"text": "\nGenerates 40 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nHigher efficiency than advanced generator","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 40,"max_storage": 1600},"stardust": {"stardust_furnace_generator": true},"smithed": {"id": "stardust:stardust_furnace_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -2112,10 +1934,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "awakened_stardust_furnace_generator","shape": ["BBB","DFD","AAA"],"ingredients": {"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}},"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_furnace_generator": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Top-tier furnace generator with awakened stardust.","color": "yellow"},
-			{"text": "\nGenerates 80 kW when supplied with fuel","color": "gray"},
-			{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},
-			{"text": "\nMaximum efficiency furnace generator","color": "gray"}
+			[{"text": "Top-tier furnace generator with awakened stardust.","color": "yellow"},{"text": "\nGenerates 80 kW when supplied with fuel","color": "gray"},{"text": "\nEnergy buffer: 1600 kJ","color": "gray"},{"text": "\nMaximum efficiency furnace generator","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"energy": {"generation": 80,"max_storage": 1600},"stardust": {"awakened_stardust_furnace_generator": true},"smithed": {"id": "stardust:awakened_stardust_furnace_generator","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -3982,10 +3801,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv1","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:charcoal"},"P": {"item": "minecraft:wooden_pickaxe"},"M": {"item": "minecraft:redstone_block"},"B": {"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.1","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 9 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.1","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 9 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.1"},
@@ -4012,10 +3828,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv2","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:flint"},"P": {"item": "minecraft:stone_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv1": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.2","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 36 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.2","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 36 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.2"},
@@ -4042,10 +3855,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv3","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:copper_block"},"P": {"item": "minecraft:copper_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv2": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.3","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 144 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.3","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 144 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.3"},
@@ -4072,10 +3882,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv4","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:iron_block"},"P": {"item": "minecraft:iron_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv3": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"double_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.4","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 576 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.4","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 576 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.4"},
@@ -4102,10 +3909,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv5","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:gold_block"},"P": {"item": "minecraft:golden_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv4": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.5","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 2,304 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.5","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 2,304 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.5"},
@@ -4132,10 +3936,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv6","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:diamond_block"},"P": {"item": "minecraft:diamond_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv5": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"triple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.6","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 9,216 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.6","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 9,216 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.6"},
@@ -4162,10 +3963,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv7","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"item": "minecraft:netherite_block"},"P": {"item": "minecraft:netherite_pickaxe"},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv6": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.7","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 36,864 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.7","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 36,864 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.7"},
@@ -4192,10 +3990,7 @@
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "cobblestone_miner_lv8","shape": ["TTT","PMP","BBB"],"ingredients": {"T": {"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},"P": {"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}}},"M": {"components": {"minecraft:custom_data": {"stardust": {"cobblestone_miner_lv7": true}}}},"B": {"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}}}}
 		],
 		"wiki_buttons": [
-			{"text": "Cobblestone Miner Lv.8","color": "yellow"},
-			{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},
-			{"text": "\nProduction rate is 147,456 cobblestone per minute","color": "gray"},
-			{"text": "\nNo energy required","color": "gray"}
+			[{"text": "Cobblestone Miner Lv.8","color": "yellow"},{"text": "\nEvery minute, it will break the cobblestone directly below it","color": "gray"},{"text": "\nProduction rate is 147,456 cobblestone per minute","color": "gray"},{"text": "\nNo energy required","color": "gray"}]
 		],
 		"components": {
 			"item_name": {"text": "Cobblestone Miner Lv.8"},
@@ -4222,23 +4017,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stoupegg","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"item": "minecraft:wolf_armor"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Mystical egg that summons the StoupArmy mini-boss.","color": "yellow"},
-			{"text": "\nConsume to summon Stoupy and 4 enhanced wolves","color": "gray"},
-			{"text": "\nSpawns at world surface","color": "gray"},
-			{"text": "\n\nStoupy Stats (based on vanilla Wolf):","color": "aqua"},
-			{"text": "\n➤ Health: ","color": "gray"},
-			{"text": "250 points","color": "red"},
-			{"text": "\n➤ Damage: ","color": "gray"},
-			{"text": "x2","color": "red"},
-			{"text": "\n➤ Scale: ","color": "gray"},
-			{"text": "x0.9","color": "green"},
-			{"text": "\n➤ Knockback Resistance: ","color": "gray"},
-			{"text": "10","color": "aqua"},
-			{"text": "\n➤ Step Height: ","color": "gray"},
-			{"text": "16 blocks","color": "green"},
-			{"text": "\n➤ Jump Boost V","color": "light_purple"},
-			{"text": "\n\nDrops valuable early-game resources","color": "yellow"},
-			{"text": "\nGlows when no players are within 15 blocks","color": "gray"}
+			[{"text": "Mystical egg that summons the StoupArmy mini-boss.","color": "yellow"},{"text": "\nConsume to summon Stoupy and 4 enhanced wolves","color": "gray"},{"text": "\nSpawns at world surface","color": "gray"},{"text": "\n\nStoupy Stats (based on vanilla Wolf):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "250 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x0.9","color": "green"},{"text": "\n➤ Knockback Resistance: ","color": "gray"},{"text": "10","color": "aqua"},{"text": "\n➤ Step Height: ","color": "gray"},{"text": "16 blocks","color": "green"},{"text": "\n➤ Jump Boost V","color": "light_purple"},{"text": "\n\nDrops valuable early-game resources","color": "yellow"},{"text": "\nGlows when no players are within 15 blocks","color": "gray"}]
 		],
 		"components": {
 			"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:stoupegg_consuming"}},
@@ -4258,11 +4037,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "starlight_infuser","ingredients": [{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:nether_star"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Mystical summoner of the Stardust Pillar boss.","color": "yellow"},
-			{"text": "\nConsume to summon the Stardust Pillar","color": "gray"},
-			{"text": "\nSpawns at world surface above your position","color": "gray"},
-			{"text": "\n\nCheck the Mobs category for full boss stats and behavior","color": "aqua"},
-			{"text": "\n\nDrops Stardust Dungeon Key + mid-game resources","color": "yellow"}
+			[{"text": "Mystical summoner of the Stardust Pillar boss.","color": "yellow"},{"text": "\nConsume to summon the Stardust Pillar","color": "gray"},{"text": "\nSpawns at world surface above your position","color": "gray"},{"text": "\n\nCheck the Mobs category for full boss stats and behavior","color": "aqua"},{"text": "\n\nDrops Stardust Dungeon Key + mid-game resources","color": "yellow"}]
 		],
 		"components": {
 			"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:starlight_infuser_consuming"}},
@@ -4280,11 +4055,7 @@
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"wiki_buttons": [
-			{"text": "Key that allows access to the Stardust Dungeon.","color": "yellow"},
-			{"text": "\nObtained by defeating the Stardust Pillar boss","color": "gray"},
-			{"text": "\nOnce used, the key will be consumed","color": "gray"},
-			{"text": "\nInside the dungeon, face challenging enemies and traps","color": "gray"},
-			{"text": "\nto earn valuable rewards","color": "gray"}
+			[{"text": "Key that allows access to the Stardust Dungeon.","color": "yellow"},{"text": "\nObtained by defeating the Stardust Pillar boss","color": "gray"},{"text": "\nOnce used, the key will be consumed","color": "gray"},{"text": "\nInside the dungeon, face challenging enemies and traps","color": "gray"},{"text": "\nto earn valuable rewards","color": "gray"}]
 		],
 		"components": {
 			"rarity": "epic",
@@ -4303,22 +4074,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "ultimate_dragon_essence","ingredients": [{"item": "minecraft:dragon_egg"},{"item": "minecraft:dragon_egg"},{"item": "minecraft:dragon_egg"},{"item": "minecraft:dragon_egg"},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"item": "minecraft:lingering_potion"}]}
 		],
 		"wiki_buttons": [
-			{"text": "Powerful essence that summons the Ultimate Dragon.","color": "yellow"},
-			{"text": "\nThrow in the Ultimate Dimension to summon","color": "gray"},
-			{"text": "\nWARNING: Only works in Ultimate Dimension!","color": "red"},
-			{"text": "\n\nMain Boss Stats (based on Ender Dragon):","color": "aqua"},
-			{"text": "\n➤ Health: ","color": "gray"},
-			{"text": "1024 points","color": "red"},
-			{"text": "\n➤ Damage: ","color": "gray"},
-			{"text": "x4","color": "red"},
-			{"text": "\n➤ Resistance IV (80% damage reduction)","color": "light_purple"},
-			{"text": "\n➤ Always glowing","color": "aqua"},
-			{"text": "\n\n3 Slave Dragons (512 HP each, x4 damage)","color": "aqua"},
-			{"text": "\nEnd Crystals heal the main dragon","color": "gray"},
-			{"text": "\nDragons use various attacks (20% chance/sec)","color": "gray"},
-			{"text": "\nDragons limited to Y=150 max height","color": "gray"},
-			{"text": "\n\nThis is the final challenge!","color": "yellow"},
-			{"text": "\nDrops Ultimate Dragon Egg trophy on defeat","color": "gold"}
+			[{"text": "Powerful essence that summons the Ultimate Dragon.","color": "yellow"},{"text": "\nThrow in the Ultimate Dimension to summon","color": "gray"},{"text": "\nWARNING: Only works in Ultimate Dimension!","color": "red"},{"text": "\n\nMain Boss Stats (based on Ender Dragon):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "1024 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x4","color": "red"},{"text": "\n➤ Resistance IV (80% damage reduction)","color": "light_purple"},{"text": "\n➤ Always glowing","color": "aqua"},{"text": "\n\n3 Slave Dragons (512 HP each, x4 damage)","color": "aqua"},{"text": "\nEnd Crystals heal the main dragon","color": "gray"},{"text": "\nDragons use various attacks (20% chance/sec)","color": "gray"},{"text": "\nDragons limited to Y=150 max height","color": "gray"},{"text": "\n\nThis is the final challenge!","color": "yellow"},{"text": "\nDrops Ultimate Dragon Egg trophy on defeat","color": "gold"}]
 		],
 		"components": {
 			"custom_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff4200"},{"text": "t","color": "#ff8500"},{"text": "i","color": "#ffc700"},{"text": "m","color": "#f3ff00"},{"text": "a","color": "#b1ff00"},{"text": "t","color": "#6eff00"},{"text": "e","color": "#2cff00"},{"text": " ","color": "#00ff16"},{"text": "D","color": "#00ff58"},{"text": "r","color": "#00ff9b"},{"text": "a","color": "#00ffdd"},{"text": "g","color": "#00ddff"},{"text": "o","color": "#009bff"},{"text": "n","color": "#0058ff"},{"text": " ","color": "#0016ff"},{"text": "E","color": "#2c00ff"},{"text": "s","color": "#6e00ff"},{"text": "s","color": "#b100ff"},{"text": "e","color": "#f300ff"},{"text": "n","color": "#ff00c7"},{"text": "c","color": "#ff0085"},{"text": "e","color": "#ff0042"}],
@@ -4336,9 +4092,7 @@
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"wiki_buttons": [
-			{"text": "Trophy item dropped by the Ultimate Dragon.","color": "yellow"},
-			{"text": "\nA symbol of your triumph over the ultimate challenge.","color": "gray"},
-			{"text": "\nNot placeable but equippable","color": "gray"}
+			[{"text": "Trophy item dropped by the Ultimate Dragon.","color": "yellow"},{"text": "\nA symbol of your triumph over the ultimate challenge.","color": "gray"},{"text": "\nNot placeable but equippable","color": "gray"}]
 		],
 		"components": {
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff5000"},{"text": "t","color": "#ffa100"},{"text": "i","color": "#fff100"},{"text": "m","color": "#bbff00"},{"text": "a","color": "#6bff00"},{"text": "t","color": "#1aff00"},{"text": "e","color": "#00ff35"},{"text": " ","color": "#00ff86"},{"text": "D","color": "#00ffd6"},{"text": "r","color": "#00d6ff"},{"text": "a","color": "#0086ff"},{"text": "g","color": "#0035ff"},{"text": "o","color": "#1a00ff"},{"text": "n","color": "#6b00ff"},{"text": " ","color": "#bb00ff"},{"text": "E","color": "#ff00f1"},{"text": "g","color": "#ff00a1"},{"text": "g","color": "#ff0050"}],
@@ -4357,9 +4111,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "miscellaneous","group": "manual","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"manual": true}}}}]}
 		],
 		"wiki_buttons": [
-			{"text": "Complete guide to Stardust Fragment technology.","color": "yellow"},
-			{"text": "\nContains all recipes and information","color": "gray"},
-			{"text": "\nYour comprehensive reference manual","color": "gray"}
+			[{"text": "Complete guide to Stardust Fragment technology.","color": "yellow"},{"text": "\nContains all recipes and information","color": "gray"},{"text": "\nYour comprehensive reference manual","color": "gray"}]
 		],
 		"components": {
 			"item_name": "Stardust Manual",

@@ -126,11 +126,13 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"transfer":480}},
 			"profile": stardust_cable_profile,
 		},
-		wiki_buttons=[WikiButton([
-			{"text":"High-capacity energy transmission cable.","color":"yellow"},
-			{"text":"\nTransfers up to 480 kW","color":"gray"},
-			{"text":"\nConnects generators to machines and batteries","color":"gray"},
-		])],
+		wiki_buttons=[
+			WikiButton([
+				{"text":"High-capacity energy transmission cable.","color":"yellow"},
+				{"text":"\nTransfers up to 480 kW","color":"gray"},
+				{"text":"\nConnects generators to machines and batteries","color":"gray"},
+			]),
+		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["SGS","GCG","SGS"], ingredients={"S":Ingr("stardust_block"),"G":Ingr("minecraft:gold_block"),"C":Ingr("elite_cable", "simplenergy")}),
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["GSG","SCS","GSG"], ingredients={"S":Ingr("stardust_block"),"G":Ingr("minecraft:gold_block"),"C":Ingr("elite_cable", "simplenergy")}),
@@ -146,11 +148,13 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"transfer":960}},
 			"profile": awakened_stardust_cable_profile,
 		},
-		wiki_buttons=[WikiButton([
-			{"text":"Enhanced energy transmission cable.","color":"yellow"},
-			{"text":"\nTransfers up to 960 kW","color":"gray"},
-			{"text":"\nUpgraded version of stardust cable","color":"gray"},
-		])],
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Enhanced energy transmission cable.","color":"yellow"},
+				{"text":"\nTransfers up to 960 kW","color":"gray"},
+				{"text":"\nUpgraded version of stardust cable","color":"gray"},
+			]),
+		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["BRB","RCR","BRB"], ingredients={"B":Ingr("awakened_stardust_block"),"R":Ingr("minecraft:redstone_block"),"C":Ingr("stardust_cable")}),
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["RBR","BCB","RBR"], ingredients={"B":Ingr("awakened_stardust_block"),"R":Ingr("minecraft:redstone_block"),"C":Ingr("stardust_cable")}),
@@ -167,11 +171,13 @@ def main_additions() -> None:
 			"item_name": rainbow_gradient_text("Ultimate Cable"),
 			"profile": ultimate_cable_profile,
 		},
-		wiki_buttons=[WikiButton([
-			{"text":"Ultimate energy transmission cable.","color":"yellow"},
-			{"text":"\nTransfers up to 1920 kW","color":"gray"},
-			{"text":"\nUpgraded version of awakened stardust cable","color":"gray"},
-		])],
+		wiki_buttons=[
+			WikiButton([
+				{"text":"Ultimate energy transmission cable.","color":"yellow"},
+				{"text":"\nTransfers up to 1920 kW","color":"gray"},
+				{"text":"\nUpgraded version of awakened stardust cable","color":"gray"},
+			]),
+		],
 		recipes=[
 			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[
 				Ingr("compacted_stardust_shard"),Ingr("legendarium_ingot"),Ingr("compacted_stardust_shard"),
@@ -190,8 +196,10 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"storage":0, "max_storage":200000}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Large-capacity energy storage device.","color":"yellow"}),
-			WikiButton({"text":"\nStores up to 200 MJ of energy","color":"gray"}),
+			WikiButton([
+				{"text":"Large-capacity energy storage device.","color":"yellow"},
+				{"text":"\nStores up to 200 MJ of energy","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["EEE","CBC","SSS"], ingredients={"E":Ingr("stardust_essence"),"C":Ingr("compacted_stardust_shard"),"B":Ingr("elite_battery", "simplenergy"),"S":Ingr("stardust_block")}),
@@ -205,8 +213,10 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"storage":0, "max_storage":500000}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Enhanced energy storage with awakened stardust.","color":"yellow"}),
-			WikiButton({"text":"\nStores up to 500 MJ of energy","color":"gray"}),
+			WikiButton([
+				{"text":"Enhanced energy storage with awakened stardust.","color":"yellow"},
+				{"text":"\nStores up to 500 MJ of energy","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["RRR","SBS","AAA"], ingredients={"R":Ingr("minecraft:redstone_block"),"S":Ingr("awakened_stardust"),"B":Ingr("stardust_battery"),"A":Ingr("awakened_stardust_block")}),
@@ -222,8 +232,10 @@ def main_additions() -> None:
 			"item_name": rainbow_gradient_text("Ultimate Battery"),
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Ultimate energy storage device.","color":"yellow"}),
-			WikiButton({"text":"\nStores up to 10 GJ of energy","color":"gray"}),
+			WikiButton([
+				{"text":"Ultimate energy storage device.","color":"yellow"},
+				{"text":"\nStores up to 10 GJ of energy","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["SSS","FBF","CCC"], ingredients={"S":Ingr("ultimate_shard"),"F":Ingr("ultimate_frame"),"B":Ingr("awakened_stardust_battery"),"C":Ingr("stardust_core")}),
@@ -241,9 +253,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":8, "max_storage":1200}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Stardust-enhanced solar energy collector.","color":"yellow"}),
-			WikiButton({"text":"\nGenerates 8 kW during daylight","color":"gray"}),
-			WikiButton({"text":"\nRequires direct sunlight","color":"gray"}),
+			WikiButton([
+				{"text":"Stardust-enhanced solar energy collector.","color":"yellow"},
+				{"text":"\nGenerates 8 kW during daylight","color":"gray"},
+				{"text":"\nRequires direct sunlight","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["CCC","EPE","BBB"], ingredients={"C":Ingr("stardust_photovoltaic_cell"),"E":Ingr("stardust_essence"),"P":Ingr("solar_panel", "simplenergy"),"B":Ingr("minecraft:lapis_block")}),
@@ -258,9 +272,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":16, "max_storage":2400}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Advanced solar panel with awakened stardust.","color":"yellow"}),
-			WikiButton({"text":"\nDouble the power of basic solar panels","color":"gray"}),
-			WikiButton({"text":"\nGenerates 16 kW during daylight","color":"gray"}),
+			WikiButton([
+				{"text":"Advanced solar panel with awakened stardust.","color":"yellow"},
+				{"text":"\nDouble the power of basic solar panels","color":"gray"},
+				{"text":"\nGenerates 16 kW during daylight","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["CCC","APA","BBB"], ingredients={"C":Ingr("awakened_stardust_photovoltaic_cell"),"A":Ingr("awakened_stardust_block"),"P":Ingr("stardust_solar_panel"),"B":Ingr("minecraft:iron_block")}),
@@ -275,9 +291,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Advanced solar panel with legendarium material.","color":"yellow"}),
-			WikiButton({"text":"\nDouble the power of awakened solar panels","color":"gray"}),
-			WikiButton({"text":"\nGenerates 32 kW during daylight","color":"gray"}),
+			WikiButton([
+				{"text":"Advanced solar panel with legendarium material.","color":"yellow"},
+				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
+				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["CCC","EPE","BBB"], ingredients={"C":Ingr("legendarium_photovoltaic_cell"),"E":Ingr("legendarium_ingot"),"P":Ingr("awakened_stardust_solar_panel"),"B":Ingr("minecraft:calcite")}),
@@ -292,9 +310,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Advanced solar panel with solarium material.","color":"yellow"}),
-			WikiButton({"text":"\nDouble the power of awakened solar panels","color":"gray"}),
-			WikiButton({"text":"\nGenerates 32 kW during daylight","color":"gray"}),
+			WikiButton([
+				{"text":"Advanced solar panel with solarium material.","color":"yellow"},
+				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
+				{"text":"\nGenerates 32 kW during daylight","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["CCC","EPE","BBB"], ingredients={"C":Ingr("solarium_photovoltaic_cell"),"E":Ingr("solarium_ingot"),"P":Ingr("awakened_stardust_solar_panel"),"B":Ingr("minecraft:calcite")}),
@@ -309,9 +329,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Advanced solar panel with darkium material.","color":"yellow"}),
-			WikiButton({"text":"\nDouble the power of awakened solar panels","color":"gray"}),
-			WikiButton({"text":"\nGenerates 32 kW during nighttime instead of daylight","color":"gray"}),
+			WikiButton([
+				{"text":"Advanced solar panel with darkium material.","color":"yellow"},
+				{"text":"\nDouble the power of awakened solar panels","color":"gray"},
+				{"text":"\nGenerates 32 kW during nighttime instead of daylight","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["CCC","EPE","BBB"], ingredients={"C":Ingr("darkium_photovoltaic_cell"),"E":Ingr("darkium_ingot"),"P":Ingr("awakened_stardust_solar_panel"),"B":Ingr("simplunium_block", "simplenergy")}),
@@ -327,8 +349,10 @@ def main_additions() -> None:
 			"item_name": rainbow_gradient_text("Ultimate Solar Panel"),
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Ultimate solar panel combining all three elements.","color":"yellow"}),
-			WikiButton({"text":"\nGenerates 128 kW during daylight only","color":"gray"}),
+			WikiButton([
+				{"text":"Ultimate solar panel combining all three elements.","color":"yellow"},
+				{"text":"\nGenerates 128 kW during daylight only","color":"gray"},
+			]),
 		],
 		recipes=unique_list([
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["CCC","SPS","XYZ"], ingredients={
@@ -360,17 +384,19 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Configurator for setting up quarries.\n","color":"yellow"}),
-			WikiButton({"keybind":"key.use","color":"white"}),
-			WikiButton({"text":" to set the first corner of the quarry area\n","color":"gray"}),
-			WikiButton({"keybind":"key.sneak","color":"white"}),
-			WikiButton({"text":" + ","color":"gray"}),
-			WikiButton({"keybind":"key.use","color":"white"}),
-			WikiButton({"text":" to set the opposite corner of the quarry area","color":"gray"}),
-			WikiButton({"text":"\nFinally, just ","color":"gray"}),
-			WikiButton({"keybind":"key.use","color":"white"}),
-			WikiButton({"text":" the quarry you want to apply the region configuration","color":"gray"}),
-			WikiButton({"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"}),
+			WikiButton([
+				{"text":"Configurator for setting up quarries.\n","color":"yellow"},
+				{"keybind":"key.use","color":"white"},
+				{"text":" to set the first corner of the quarry area\n","color":"gray"},
+				{"keybind":"key.sneak","color":"white"},
+				{"text":" + ","color":"gray"},
+				{"keybind":"key.use","color":"white"},
+				{"text":" to set the opposite corner of the quarry area","color":"gray"},
+				{"text":"\nFinally, just ","color":"gray"},
+				{"keybind":"key.use","color":"white"},
+				{"text":" the quarry you want to apply the region configuration","color":"gray"},
+				{"text":"\nOr put the configurator inside the quarry on the dedicated slot","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["DD","QQ","QQ"], ingredients={"D":Ingr("minecraft:diamond"),"Q":Ingr("minecraft:quartz")}),
@@ -387,9 +413,11 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Module that increases the fortune level of compatible machines.","color":"yellow"}),
-			WikiButton({"text":"\nEach module increases fortune by 1, up to a maximum of 5","color":"gray"}),
-			WikiButton({"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"}),
+			WikiButton([
+				{"text":"Module that increases the fortune level of compatible machines.","color":"yellow"},
+				{"text":"\nEach module increases fortune by 1, up to a maximum of 5","color":"gray"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["EDE","DMD","EDE"], ingredients={"E":Ingr("minecraft:emerald"),"D":Ingr("minecraft:diamond"),"M":Ingr("empty_module")}),
@@ -406,8 +434,10 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Module that enables silk touch enchantment for compatible machines.","color":"yellow"}),
-			WikiButton({"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"}),
+			WikiButton([
+				{"text":"Module that enables silk touch enchantment for compatible machines.","color":"yellow"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=8*[Ingr("minecraft:iron_ore")] + [Ingr("empty_module")]),
@@ -424,10 +454,12 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Module that force loads the chunk for compatible machines.","color":"yellow"}),
-			WikiButton({"text":"\nPrevents the chunk from unloading when no players are nearby","color":"gray"}),
-			WikiButton({"text":"\nMachine continues to operate even in unloaded chunks","color":"gray"}),
-			WikiButton({"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"}),
+			WikiButton([
+				{"text":"Module that force loads the chunk for compatible machines.","color":"yellow"},
+				{"text":"\nPrevents the chunk from unloading when no players are nearby","color":"gray"},
+				{"text":"\nMachine continues to operate even in unloaded chunks","color":"gray"},
+				{"text":"\nPut the module in the dedicated slot of the quarry","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=4*[Ingr("minecraft:respawn_anchor")] + 4*[Ingr("minecraft:glowstone")] + [Ingr("empty_module")]),
@@ -447,11 +479,13 @@ def main_additions() -> None:
 				],
 			},
 			wiki_buttons=[
-				WikiButton({"text":f"Level {i+1} quarry for automated mining.","color":"yellow"}),
-				WikiButton({"text":f"\nMines {block_per_second} blocks per second","color":"gray"}),
-				WikiButton({"text":"\nOnly mines blocks in a configured area","color":"gray"}),
-				WikiButton({"text":f"\n\nConsumes {usage} kW of power","color":"gray"}),
-				WikiButton({"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"}),
+				WikiButton([
+					{"text":f"Level {i+1} quarry for automated mining.","color":"yellow"},
+					{"text":f"\nMines {block_per_second} blocks per second","color":"gray"},
+					{"text":"\nOnly mines blocks in a configured area","color":"gray"},
+					{"text":f"\n\nConsumes {usage} kW of power","color":"gray"},
+					{"text":f"\nEnergy buffer: {storage//1000} MJ","color":"gray"},
+				]),
 			],
 			recipes=QUARRY_CRAFTING_RECIPES[quarry_id]
 		)
@@ -467,10 +501,12 @@ def main_additions() -> None:
 			"enchantment_glint_override": True,
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Creative quarry with unlimited power.","color":"yellow"}),
-			WikiButton({"text":"\nRequires no power to operate","color":"gray"}),
-			WikiButton({"text":"\nEquivalent to a Level 1000 quarry","color":"gray"}),
-			WikiButton({"text":"\nFor creative/testing purposes only","color":"gray"}),
+			WikiButton([
+				{"text":"Creative quarry with unlimited power.","color":"yellow"},
+				{"text":"\nRequires no power to operate","color":"gray"},
+				{"text":"\nEquivalent to a Level 1000 quarry","color":"gray"},
+				{"text":"\nFor creative/testing purposes only","color":"gray"},
+			]),
 		],
 	)
 
@@ -487,12 +523,14 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Portal to the Cavern dimension.","color":"yellow"}),
-			WikiButton({"text":"\nA world full of underground caverns and caves","color":"gray"}),
-			WikiButton({"text":"\n\nMobs: All vanilla mobs (scaled to 0.75x size)","color":"white"}),
-			WikiButton({"text":"\nLoot: Ores, minerals, gems (Coal, Copper, Iron, Gold, Lapis, Redstone, Emerald, Diamond)","color":"white"}),
-			WikiButton({"text":"\n\nConsumes 20 kW of power","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 800 kJ","color":"gray"}),
+			WikiButton([
+				{"text":"Portal to the Cavern dimension.","color":"yellow"},
+				{"text":"\nA world full of underground caverns and caves","color":"gray"},
+				{"text":"\n\nMobs: All vanilla mobs (scaled to 0.75x size)","color":"white"},
+				{"text":"\nLoot: Ores, minerals, gems (Coal, Copper, Iron, Gold, Lapis, Redstone, Emerald, Diamond)","color":"white"},
+				{"text":"\n\nConsumes 20 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 800 kJ","color":"gray"},
+			]),
 		],
 		recipes=PORTAL_CRAFTING_RECIPES["cavern_portal"],
 	)
@@ -508,13 +546,15 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Portal to the Celestial dimension.","color":"yellow"}),
-			WikiButton({"text":"\nA dimension filled with floating islands in the sky","color":"gray"}),
-			WikiButton({"text":"\n\nMobs: All vanilla mobs (1.5x health, 1.5x damage, 1.1x speed)","color":"white"}),
-			WikiButton({"text":"\nLoot: Iron Ingots, Stardust Fragments, Simplunium Ingots","color":"white"}),
-			WikiButton({"text":"\nTransitions: Fall down to return to Overworld, go up to Stardust dimension","color":"aqua"}),
-			WikiButton({"text":"\n\nConsumes 20 kW of power","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 800 kJ","color":"gray"}),
+			WikiButton([
+				{"text":"Portal to the Celestial dimension.","color":"yellow"},
+				{"text":"\nA dimension filled with floating islands in the sky","color":"gray"},
+				{"text":"\n\nMobs: All vanilla mobs (1.5x health, 1.5x damage, 1.1x speed)","color":"white"},
+				{"text":"\nLoot: Iron Ingots, Stardust Fragments, Simplunium Ingots","color":"white"},
+				{"text":"\nTransitions: Fall down to return to Overworld, go up to Stardust dimension","color":"aqua"},
+				{"text":"\n\nConsumes 20 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 800 kJ","color":"gray"},
+			]),
 		],
 		recipes=PORTAL_CRAFTING_RECIPES["celestial_portal"],
 	)
@@ -530,15 +570,17 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Portal to the Stardust dimension.","color":"yellow"}),
-			WikiButton({"text":"\nA dangerous dimension with powerful Stardust-corrupted mobs","color":"gray"}),
-			WikiButton({"text":"\n\nMobs: Stardust Soldier, Stardust Evoker, Stardust Bat","color":"white"}),
-			WikiButton({"text":"\n  - Stardust Soldier/Evoker: 2x health, 3x damage, 1.25x speed","color":"gray"}),
-			WikiButton({"text":"\n  - Stardust Bat: Summons lightning at nearby players (10% chance/second)","color":"gray"}),
-			WikiButton({"text":"\nLoot: Stardust Ingots, Stardust Essence, Netherite Scraps","color":"white"}),
-			WikiButton({"text":"\nTransitions: Fall down to Celestial dimension, go up for Ultimate dimension","color":"aqua"}),
-			WikiButton({"text":"\n\nConsumes 100 kW of power","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 6 MJ","color":"gray"}),
+			WikiButton([
+				{"text":"Portal to the Stardust dimension.","color":"yellow"},
+				{"text":"\nA dangerous dimension with powerful Stardust-corrupted mobs","color":"gray"},
+				{"text":"\n\nMobs: Stardust Soldier, Stardust Evoker, Stardust Bat","color":"white"},
+				{"text":"\n  - Stardust Soldier/Evoker: 2x health, 3x damage, 1.25x speed","color":"gray"},
+				{"text":"\n  - Stardust Bat: Summons lightning at nearby players (10% chance/second)","color":"gray"},
+				{"text":"\nLoot: Stardust Ingots, Stardust Essence, Netherite Scraps","color":"white"},
+				{"text":"\nTransitions: Fall down to Celestial dimension, go up for Ultimate dimension","color":"aqua"},
+				{"text":"\n\nConsumes 100 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 6 MJ","color":"gray"},
+			]),
 		],
 		recipes=PORTAL_CRAFTING_RECIPES["stardust_portal"],
 	)
@@ -554,13 +596,15 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Portal to the Stardust Dungeon.","color":"yellow"}),
-			WikiButton({"text":"\nA pre-built dungeon dimension with extreme challenges","color":"gray"}),
-			WikiButton({"text":"\n\nMobs: All vanilla mobs (3x health, 4x damage, 1.35x speed)","color":"white"}),
-			WikiButton({"text":"\nLoot: Awakened Stardust, Stardust Essence","color":"white"}),
-			WikiButton({"text":"\nWarning: Extremely dangerous! Prepare well before entering","color":"red"}),
-			WikiButton({"text":"\n\nConsumes 200 kW of power","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 12 MJ","color":"gray"}),
+			WikiButton([
+				{"text":"Portal to the Stardust Dungeon.","color":"yellow"},
+				{"text":"\nA pre-built dungeon dimension with extreme challenges","color":"gray"},
+				{"text":"\n\nMobs: All vanilla mobs (3x health, 4x damage, 1.35x speed)","color":"white"},
+				{"text":"\nLoot: Awakened Stardust, Stardust Essence","color":"white"},
+				{"text":"\nWarning: Extremely dangerous! Prepare well before entering","color":"red"},
+				{"text":"\n\nConsumes 200 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 12 MJ","color":"gray"},
+			]),
 		],
 		recipes=PORTAL_CRAFTING_RECIPES["stardust_dungeon_portal"],
 	)
@@ -576,16 +620,18 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Portal to the Ultimate dimension.","color":"yellow"}),
-			WikiButton({"text":"\nThe ultimate challenge - home of the Ultimate Dragon boss","color":"gray"}),
-			WikiButton({"text":"\n\nBoss: Ultimate Dragon (1024 HP)","color":"white"}),
-			WikiButton({"text":"\n  - Spawned by consuming Ultimate Dragon Essence","color":"gray"}),
-			WikiButton({"text":"\n  - Multiple powerful attacks and mechanics","color":"gray"}),
-			WikiButton({"text":"\n  - Summons Ultimate Slaves (512 HP each)","color":"gray"}),
-			WikiButton({"text":"\nTransitions: Fall down to return to Stardust dimension","color":"aqua"}),
-			WikiButton({"text":"\nWarning: This is the hardest content in the datapack!","color":"red"}),
-			WikiButton({"text":"\n\nConsumes 500 kW of power","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 24 MJ","color":"gray"}),
+			WikiButton([
+				{"text":"Portal to the Ultimate dimension.","color":"yellow"},
+				{"text":"\nThe ultimate challenge - home of the Ultimate Dragon boss","color":"gray"},
+				{"text":"\n\nBoss: Ultimate Dragon (1024 HP)","color":"white"},
+				{"text":"\n  - Spawned by consuming Ultimate Dragon Essence","color":"gray"},
+				{"text":"\n  - Multiple powerful attacks and mechanics","color":"gray"},
+				{"text":"\n  - Summons Ultimate Slaves (512 HP each)","color":"gray"},
+				{"text":"\nTransitions: Fall down to return to Stardust dimension","color":"aqua"},
+				{"text":"\nWarning: This is the hardest content in the datapack!","color":"red"},
+				{"text":"\n\nConsumes 500 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 24 MJ","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[
@@ -609,14 +655,16 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Accelerates crop and plant growth.","color":"yellow"}),
-			WikiButton({"text":"\nAccelerates growth in 10-block radius","color":"gray"}),
-			WikiButton({"text":"\nOperates once per minute when powered","color":"gray"}),
-			WikiButton({"text":"\n\nEffects:","color":"aqua"}),
-			WikiButton({"text":"\n➤ Vanilla crops: +1 growth stage","color":"white"}),
-			WikiButton({"text":"\n➤ Custom growing seeds: +10 minutes of growth time","color":"white"}),
-			WikiButton({"text":"\n\nConsumes 100 kW of power","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 12 MJ","color":"gray"}),
+			WikiButton([
+				{"text":"Accelerates crop and plant growth.","color":"yellow"},
+				{"text":"\nAccelerates growth in 10-block radius","color":"gray"},
+				{"text":"\nOperates once per minute when powered","color":"gray"},
+				{"text":"\n\nEffects:","color":"aqua"},
+				{"text":"\n➤ Vanilla crops: +1 growth stage","color":"white"},
+				{"text":"\n➤ Custom growing seeds: +10 minutes of growth time","color":"white"},
+				{"text":"\n\nConsumes 100 kW of power","color":"gray"},
+				{"text":"\nEnergy buffer: 12 MJ","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["EEE","DSD","FFF"], ingredients={"E":Ingr("stardust_essence"),"D":Ingr("dog_excrement"),"S":Ingr("diamond_seed"),"F":Ingr("stardust_frame")}),
@@ -631,9 +679,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"usage":100, "max_storage":15000}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Automated mob killing machine.","color":"yellow"}),
-			WikiButton({"text":"\nKills mobs in a large area in front of it","color":"gray"}),
-			WikiButton({"text":"\n\nConsumes 100 kW of power","color":"gray"}),
+			WikiButton([
+				{"text":"Automated mob killing machine.","color":"yellow"},
+				{"text":"\nKills mobs in a large area in front of it","color":"gray"},
+				{"text":"\n\nConsumes 100 kW of power","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["AAA","DSD","FFF"], ingredients={"A":Ingr("awakened_stardust_block"),"D":Ingr("ender_dragon_pearl"),"S":Ingr("minecraft:wither_skeleton_skull"),"F":Ingr("awakened_stardust_frame")}),
@@ -650,9 +700,11 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":1500, "max_storage":30000}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"High-power generator using nether stars.","color":"yellow"}),
-			WikiButton({"text":"\nGenerates 1500 kW when supplied with nether stars","color":"gray"}),
-			WikiButton({"text":"\nOne nether star provides 15 minutes of fuel","color":"gray"}),
+			WikiButton([
+				{"text":"High-power generator using nether stars.","color":"yellow"},
+				{"text":"\nGenerates 1500 kW when supplied with nether stars","color":"gray"},
+				{"text":"\nOne nether star provides 15 minutes of fuel","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["MMM","NRN","BBB"], ingredients={"M":Ingr("machine_block", "simplenergy"),"N":Ingr("minecraft:nether_star"),"R":Ingr("redstone_generator", "simplenergy"),"B":Ingr("minecraft:iron_block")}),
@@ -667,10 +719,12 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":20, "max_storage":1600}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Enhanced furnace generator.","color":"yellow"}),
-			WikiButton({"text":"\nGenerates 20 kW when supplied with fuel","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 1600 kJ","color":"gray"}),
-			WikiButton({"text":"\nMore efficient than basic furnace generator","color":"gray"}),
+			WikiButton([
+				{"text":"Enhanced furnace generator.","color":"yellow"},
+				{"text":"\nGenerates 20 kW when supplied with fuel","color":"gray"},
+				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
+				{"text":"\nMore efficient than basic furnace generator","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["MMM","GFG","BBB"], ingredients={"M":Ingr("machine_block", "simplenergy"),"G":Ingr("minecraft:glass"),"F":Ingr("furnace_generator", "simplenergy"),"B":Ingr("minecraft:iron_block")}),
@@ -685,10 +739,12 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":40, "max_storage":1600}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Stardust-enhanced furnace generator.","color":"yellow"}),
-			WikiButton({"text":"\nGenerates 40 kW when supplied with fuel","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 1600 kJ","color":"gray"}),
-			WikiButton({"text":"\nHigher efficiency than advanced generator","color":"gray"}),
+			WikiButton([
+				{"text":"Stardust-enhanced furnace generator.","color":"yellow"},
+				{"text":"\nGenerates 40 kW when supplied with fuel","color":"gray"},
+				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
+				{"text":"\nHigher efficiency than advanced generator","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["SSS","CFC","BBB"], ingredients={"S":Ingr("stardust_frame"),"C":Ingr("compacted_stardust_shard"),"F":Ingr("advanced_furnace_generator"),"B":Ingr("stardust_block")}),
@@ -703,10 +759,12 @@ def main_additions() -> None:
 			"custom_data": {"energy": {"generation":80, "max_storage":1600}},
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Top-tier furnace generator with awakened stardust.","color":"yellow"}),
-			WikiButton({"text":"\nGenerates 80 kW when supplied with fuel","color":"gray"}),
-			WikiButton({"text":"\nEnergy buffer: 1600 kJ","color":"gray"}),
-			WikiButton({"text":"\nMaximum efficiency furnace generator","color":"gray"}),
+			WikiButton([
+				{"text":"Top-tier furnace generator with awakened stardust.","color":"yellow"},
+				{"text":"\nGenerates 80 kW when supplied with fuel","color":"gray"},
+				{"text":"\nEnergy buffer: 1600 kJ","color":"gray"},
+				{"text":"\nMaximum efficiency furnace generator","color":"gray"},
+			]),
 		],
 		recipes=[
 			CraftingShapedRecipe(result_count=1, category="misc", shape=["AAA","DFD","BBB"], ingredients={"A":Ingr("awakened_stardust_frame"),"D":Ingr("ender_dragon_pearl"),"F":Ingr("stardust_furnace_generator"),"B":Ingr("awakened_stardust_block")}),

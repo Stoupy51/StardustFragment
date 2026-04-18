@@ -332,10 +332,12 @@ def main_additions() -> None:
 				],
 			},
 			wiki_buttons=[
-				WikiButton({"text": miner_name,"color":"yellow"}),
-				WikiButton({"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"}),
-				WikiButton({"text":f"\nProduction rate is {per_minute:,} cobblestone per minute","color":"gray"}),
-				WikiButton({"text":"\nNo energy required","color":"gray"}),
+				WikiButton([
+					{"text": miner_name,"color":"yellow"},
+					{"text":"\nEvery minute, it will break the cobblestone directly below it","color":"gray"},
+					{"text":f"\nProduction rate is {per_minute:,} cobblestone per minute","color":"gray"},
+					{"text":"\nNo energy required","color":"gray"},
+				]),
 			],
 		)
 
@@ -364,18 +366,25 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Mystical egg that summons the StoupArmy mini-boss.","color":"yellow"}),
-			WikiButton({"text":"\nConsume to summon Stoupy and 4 enhanced wolves","color":"gray"}),
-			WikiButton({"text":"\nSpawns at world surface","color":"gray"}),
-			WikiButton({"text":"\n\nStoupy Stats (based on vanilla Wolf):","color":"aqua"}),
-			WikiButton({"text":"\n➤ Health: ","color":"gray"}), WikiButton({"text":"250 points","color":"red"}),
-			WikiButton({"text":"\n➤ Damage: ","color":"gray"}), WikiButton({"text":"x2","color":"red"}),
-			WikiButton({"text":"\n➤ Scale: ","color":"gray"}), WikiButton({"text":"x0.9","color":"green"}),
-			WikiButton({"text":"\n➤ Knockback Resistance: ","color":"gray"}), WikiButton({"text":"10","color":"aqua"}),
-			WikiButton({"text":"\n➤ Step Height: ","color":"gray"}), WikiButton({"text":"16 blocks","color":"green"}),
-			WikiButton({"text":"\n➤ Jump Boost V","color":"light_purple"}),
-			WikiButton({"text":"\n\nDrops valuable early-game resources","color":"yellow"}),
-			WikiButton({"text":"\nGlows when no players are within 15 blocks","color":"gray"}),
+			WikiButton([
+				{"text":"Mystical egg that summons the StoupArmy mini-boss.","color":"yellow"},
+				{"text":"\nConsume to summon Stoupy and 4 enhanced wolves","color":"gray"},
+				{"text":"\nSpawns at world surface","color":"gray"},
+				{"text":"\n\nStoupy Stats (based on vanilla Wolf):","color":"aqua"},
+				{"text":"\n➤ Health: ","color":"gray"},
+				{"text":"250 points","color":"red"},
+				{"text":"\n➤ Damage: ","color":"gray"},
+				{"text":"x2","color":"red"},
+				{"text":"\n➤ Scale: ","color":"gray"},
+				{"text":"x0.9","color":"green"},
+				{"text":"\n➤ Knockback Resistance: ","color":"gray"},
+				{"text":"10","color":"aqua"},
+				{"text":"\n➤ Step Height: ","color":"gray"},
+				{"text":"16 blocks","color":"green"},
+				{"text":"\n➤ Jump Boost V","color":"light_purple"},
+				{"text":"\n\nDrops valuable early-game resources","color":"yellow"},
+				{"text":"\nGlows when no players are within 15 blocks","color":"gray"},
+			]),
 		],
 	)
 
@@ -399,11 +408,13 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Mystical summoner of the Stardust Pillar boss.","color":"yellow"}),
-			WikiButton({"text":"\nConsume to summon the Stardust Pillar","color":"gray"}),
-			WikiButton({"text":"\nSpawns at world surface above your position","color":"gray"}),
-			WikiButton({"text":"\n\nCheck the Mobs category for full boss stats and behavior","color":"aqua"}),
-			WikiButton({"text":"\n\nDrops Stardust Dungeon Key + mid-game resources","color":"yellow"}),
+			WikiButton([
+				{"text":"Mystical summoner of the Stardust Pillar boss.","color":"yellow"},
+				{"text":"\nConsume to summon the Stardust Pillar","color":"gray"},
+				{"text":"\nSpawns at world surface above your position","color":"gray"},
+				{"text":"\n\nCheck the Mobs category for full boss stats and behavior","color":"aqua"},
+				{"text":"\n\nDrops Stardust Dungeon Key + mid-game resources","color":"yellow"},
+			]),
 		],
 	)
 
@@ -419,11 +430,13 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Key that allows access to the Stardust Dungeon.","color":"yellow"}),
-			WikiButton({"text":"\nObtained by defeating the Stardust Pillar boss","color":"gray"}),
-			WikiButton({"text":"\nOnce used, the key will be consumed","color":"gray"}),
-			WikiButton({"text":"\nInside the dungeon, face challenging enemies and traps","color":"gray"}),
-			WikiButton({"text":"\nto earn valuable rewards","color":"gray"}),
+			WikiButton([
+				{"text":"Key that allows access to the Stardust Dungeon.","color":"yellow"},
+				{"text":"\nObtained by defeating the Stardust Pillar boss","color":"gray"},
+				{"text":"\nOnce used, the key will be consumed","color":"gray"},
+				{"text":"\nInside the dungeon, face challenging enemies and traps","color":"gray"},
+				{"text":"\nto earn valuable rewards","color":"gray"},
+			]),
 		],
 	)
 
@@ -450,20 +463,24 @@ def main_additions() -> None:
 			],
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Powerful essence that summons the Ultimate Dragon.","color":"yellow"}),
-			WikiButton({"text":"\nThrow in the Ultimate Dimension to summon","color":"gray"}),
-			WikiButton({"text":"\nWARNING: Only works in Ultimate Dimension!","color":"red"}),
-			WikiButton({"text":"\n\nMain Boss Stats (based on Ender Dragon):","color":"aqua"}),
-			WikiButton({"text":"\n➤ Health: ","color":"gray"}), WikiButton({"text":"1024 points","color":"red"}),
-			WikiButton({"text":"\n➤ Damage: ","color":"gray"}), WikiButton({"text":"x4","color":"red"}),
-			WikiButton({"text":"\n➤ Resistance IV (80% damage reduction)","color":"light_purple"}),
-			WikiButton({"text":"\n➤ Always glowing","color":"aqua"}),
-			WikiButton({"text":"\n\n3 Slave Dragons (512 HP each, x4 damage)","color":"aqua"}),
-			WikiButton({"text":"\nEnd Crystals heal the main dragon","color":"gray"}),
-			WikiButton({"text":"\nDragons use various attacks (20% chance/sec)","color":"gray"}),
-			WikiButton({"text":"\nDragons limited to Y=150 max height","color":"gray"}),
-			WikiButton({"text":"\n\nThis is the final challenge!","color":"yellow"}),
-			WikiButton({"text":"\nDrops Ultimate Dragon Egg trophy on defeat","color":"gold"}),
+			WikiButton([
+				{"text":"Powerful essence that summons the Ultimate Dragon.","color":"yellow"},
+				{"text":"\nThrow in the Ultimate Dimension to summon","color":"gray"},
+				{"text":"\nWARNING: Only works in Ultimate Dimension!","color":"red"},
+				{"text":"\n\nMain Boss Stats (based on Ender Dragon):","color":"aqua"},
+				{"text":"\n➤ Health: ","color":"gray"},
+				{"text":"1024 points","color":"red"},
+				{"text":"\n➤ Damage: ","color":"gray"},
+				{"text":"x4","color":"red"},
+				{"text":"\n➤ Resistance IV (80% damage reduction)","color":"light_purple"},
+				{"text":"\n➤ Always glowing","color":"aqua"},
+				{"text":"\n\n3 Slave Dragons (512 HP each, x4 damage)","color":"aqua"},
+				{"text":"\nEnd Crystals heal the main dragon","color":"gray"},
+				{"text":"\nDragons use various attacks (20% chance/sec)","color":"gray"},
+				{"text":"\nDragons limited to Y=150 max height","color":"gray"},
+				{"text":"\n\nThis is the final challenge!","color":"yellow"},
+				{"text":"\nDrops Ultimate Dragon Egg trophy on defeat","color":"gold"},
+			]),
 		],
 	)
 
@@ -477,9 +494,11 @@ def main_additions() -> None:
 			"item_name": rainbow_gradient_text("Ultimate Dragon Egg"),
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Trophy item dropped by the Ultimate Dragon.","color":"yellow"}),
-			WikiButton({"text":"\nA symbol of your triumph over the ultimate challenge.","color":"gray"}),
-			WikiButton({"text":"\nNot placeable but equippable","color":"gray"}),
+			WikiButton([
+				{"text":"Trophy item dropped by the Ultimate Dragon.","color":"yellow"},
+				{"text":"\nA symbol of your triumph over the ultimate challenge.","color":"gray"},
+				{"text":"\nNot placeable but equippable","color":"gray"},
+			]),
 		],
 	)
 
@@ -508,9 +527,11 @@ def main_additions() -> None:
 			"item_name": "Stardust Manual",
 		},
 		wiki_buttons=[
-			WikiButton({"text":"Complete guide to Stardust Fragment technology.","color":"yellow"}),
-			WikiButton({"text":"\nContains all recipes and information","color":"gray"}),
-			WikiButton({"text":"\nYour comprehensive reference manual","color":"gray"}),
+			WikiButton([
+				{"text":"Complete guide to Stardust Fragment technology.","color":"yellow"},
+				{"text":"\nContains all recipes and information","color":"gray"},
+				{"text":"\nYour comprehensive reference manual","color":"gray"},
+			]),
 		],
 	)
 

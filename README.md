@@ -12,57 +12,116 @@
 ![Stardust Fragment Image](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/assets/public/minia.png)
 
 
+## 🎬 Showcase
+
+<details>
+<summary>🎲 All items</summary>
+
+![All items](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/build/all_items.png)
+
+</details>
+
+<details>
+<summary>⚗️ Awakened Forge</summary>
+
+![Awakened Forge](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/assets/public/awakened_forge.jpg)
+
+</details>
+
+<details>
+<summary>🌌 Stardust Dimension</summary>
+
+![Stardust Dimension](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/assets/public/stardust_dimension.jpg)
+
+</details>
+
+<details>
+<summary>🏰 Stardust Dungeon</summary>
+
+![Stardust Dungeon](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/assets/public/stardust_dungeon.jpg)
+
+</details>
+
+<details>
+<summary>✨ Ultimate Dimension</summary>
+
+![Ultimate Dimension](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/assets/public/ultimate_dimension.jpg)
+
+</details>
+
+<br>
+
 # 📖 What is Stardust Fragment
-### Admin tips:
-- /function stardust:_give		`Give you all items of the datapack`
-- /function stardust:uninstall	`Before removing the datapack`
-- /function stardust:stats		`Shows you some statistics`
 
-Stardust Fragment is a very advanced Adventure & Technology data pack created to add a very special experience to the game.
+Stardust Fragment is a very advanced Adventure & Technology data pack adding a rich progression experience to the game.<br>
+It features a deep tiered material system, 35+ energy devices powered by SimplEnergy, 5 custom dimensions to explore, unique bosses, and hundreds of items to craft and discover.<br>
+🔗 [Direct link for server resource packs](https://raw.githubusercontent.com/Stoupy51/StardustFragment/refs/heads/main/build/StardustFragment_resource_pack_with_libs.zip) (See sha1 in [here](https://github.com/Stoupy51/StardustFragment/blob/main/build/sha1_hashes.json))
 
-### Small list of features added by Stardust Fragment:
-- 190+ new items
-- 35+ energy devices including 12 unique ones
-- 5 new custom dimensions
-- 1 mini-boss, 2 boss, a end-game boss
-- A crafting manual (100+ pages)
-- 9 new structures
-- 100+ custom advancements to help you progress
-- Many other features
+### 👑 Admin tips:
+- 🎮 `/function stardust:_give_all` Give you all items of the datapack
+- 📊 `/function stardust:_stats_custom_blocks` Shows you some statistics
+- 🗑️ `/loot give @s loot stardust:i/<item_name>` To give a specific item
 
 
-# 📚 Librairies/Modules used, conventions, guideline, tips followed
-- [Smithed Custom Block Placement](https://wiki.smithed.dev/libraries/custom-block/)
-- [Smithed Custom Damage](https://wiki.smithed.dev/libraries/damage/)
-- [Smithed Crafter](https://wiki.smithed.dev/libraries/crafter/)
-- [DatapackEnergy](https://github.com/ICY105/DatapackEnergy)
-- [Stoupy's Durability Multiplier](https://github.com/Stoupy51/DurabilityMultiplier)
-- [Stoupy's Furnace NBT Recipes](https://github.com/Stoupy51/FurnaceNbtRecipes)
-- [Lantern Load](https://github.com/LanternMC/load)
-- [Smithed Conventions](https://wiki.smithed.dev/conventions)
-- [Minecraft Datapacks Conventions](https://mc-datapacks.github.io/en/conventions/index.html)
-- [Minecraft Datapacks Style Guideline](https://mc-datapacks.github.io/en/style_guideline/index.html)
-- [Minecraft Datapacks Tips](https://mc-datapacks.github.io/en/tips/index.html)
+### ✨ Features:
+- 🌌 190+ new items across 6 material tiers: Stardust, Awakened, Legendarium, Solarium, Darkium, Ultimate
+- ⚡ 35+ energy devices: solar panels, batteries, cables, quarries (8 levels), furnace generators, growth accelerator, mob grinder, and more
+- 🌍 5 custom dimensions to explore (Cavern, Celestial, Stardust, , Dungeon, Celestial, Ultimate)
+- 👹 5 custom mob types including a mini-boss, 2 bosses, and an end-game boss
+- 🛡️ Complete armor & tool sets per material tier, including a unique Ultimate Elytra
+- 🌱 8 custom crops with 3 growth stages each, plus 8 compression tiers for cobblestone
+- 🎵 4 original music discs
+- 🏆 100+ custom advancements to guide your progression
+- 📚 100+ page interactive in-game crafting manual
+
+<br>
+
+### 💬 Join our Community
+Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
+- 🤝 Get help and support
+- 🎨 Share your creations
+- 📢 Stay updated on new releases
+- 💭 Chat with other players
+- 💡 Suggest new features
+
+<br>
+
+## 📚 Libraries/Modules used, conventions, guideline, tips followed
+- 🍲 [StewBeet](https://github.com/Stoupy51/StewBeet) (datapack/resource pack framework)
+- ⚡ [SimplEnergy](https://github.com/Stoupy51/SimplEnergy) (energy system — requires v2.0.15+)
+- ⚡ [DatapackEnergy](https://github.com/ICY105/DatapackEnergy) (energy library)
+- 🛠️ [Smithed Custom Block Placement](https://wiki.smithed.dev/libraries/custom-block/)
+- 🛠️ [Smithed Crafter](https://wiki.smithed.dev/libraries/crafter/)
+- 🔦 [Lantern Load](https://github.com/LanternMC/load)
+- 🛠️ [Smithed Conventions](https://wiki.smithed.dev/conventions)
+- 📋 [Minecraft Datapacks Conventions](https://mc-datapacks.github.io/en/conventions/index.html)
+- 📝 [Minecraft Datapacks Style Guideline](https://mc-datapacks.github.io/en/style_guideline/index.html)
+- 💡 [Minecraft Datapacks Tips](https://mc-datapacks.github.io/en/tips/index.html)
+
+<br>
+
+## 🔧 Misc
+
+| 🔌 | Compatibilities 	|
+|----|-------------------|
+| ✅ | Multiplayer      |
+| ✅ | Vanilla          |
+| ✅ | Fabric           |
+| ✅ | Forge            |
+| ✅ | Spigot           |
+| ✅ | Paper            |
+| ❓ | Realms            |
+
+Requires SimplEnergy [v2.0.15+] : https://github.com/Stoupy51/SimplEnergy
 
 
-# 📚 Misc
+### 🏆 Credits
+- 📚 [Used libraries authors](https://github.com/Stoupy51/StardustFragment#-librariesmodules-used-conventions-guideline-tips-followed)
+- 🎨 Resource Pack: Resnox, PiggyPig, fabien5525
+- 🎮 Mob models: VieuxGreluchon
+- ⚙️ Base Quarry System: AirDox_
 
-|   	| Compatibilities 	|
-|---	|-----------------	|
-| ✅ 	| Multiplayer     	|
-| ✅ 	| Vanilla         	|
-| ✅ 	| Fabric          	|
-| ✅ 	| Forge           	|
-| ✅ 	| Spigot          	|
-| ✅ 	| Paper           	|
-| ❓ 	| Realms          	|
+## ⭐ Star History
 
-Requires at least SimplEnergy [v1.9.0] : https://github.com/Stoupy51/SimplEnergy
+[![Star History Chart](https://api.star-history.com/chart?repos=Stoupy51/StardustFragment&type=date&legend=top-left)](https://www.star-history.com/?repos=Stoupy51%2FStardustFragment&type=date&legend=top-left)
 
-[Join our Energy Datapacks Discord Server here: https://discord.gg/a2yX6GD4J7]
-
-Credits :
-- [Used libraries authors](https://github.com/Stoupy51/StardustFragment#-librairiesmodules-used-conventions-guideline-tips-followed)
-- Resource Pack: Resnox, fabien5525
-- Mob models: VieuxGreluchon
-- Base Quarry System: AirDox_

@@ -1,7 +1,7 @@
 
 #> stardust:mobs/remove_bossbars
 #
-# @within	stardust:v4.0.6/minute
+# @within	stardust:v4.0.7/minute
 #
 
 execute unless entity @e[tag=stardust.stoupy] run bossbar set stardust:stoup_army players

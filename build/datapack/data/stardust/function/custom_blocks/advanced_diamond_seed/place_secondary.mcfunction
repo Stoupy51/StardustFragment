@@ -22,7 +22,7 @@ data merge entity @s {"CustomName": {"translate": "stardust.advanced_diamond_see
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:advanced_diamond_seed"]
 data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
-data modify entity @s brightness set value {block:15,sky:15}
+function stardust:custom_blocks/compute_brightness
 
 # Update seed model
 scoreboard players add @s stardust.growth_time 0

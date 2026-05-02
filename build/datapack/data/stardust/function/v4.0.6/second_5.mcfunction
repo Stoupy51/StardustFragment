@@ -22,6 +22,9 @@ execute if score #total_custom_blocks stardust.data matches 1.. as @e[type=item_
 # 5 seconds growing seed break detection (below block check)
 execute if score #total_growing_seeds stardust.data matches 1.. as @e[type=#stardust:custom_blocks,tag=stardust.growing_seed] at @s run function stardust:custom_blocks/destroy_growing_seeds
 
+# 5 seconds dynamic brightness update (random sample of item_display custom blocks)
+execute if score #total_custom_blocks stardust.data matches 1.. as @e[type=item_display,tag=stardust.custom_block,sort=random,limit=50] at @s run function stardust:custom_blocks/compute_brightness
+
 # Energy Balancing system (balance every device having at least 20 kJ)
 execute as @e[tag=stardust.can_balance,scores={energy.storage=20..}] at @s[tag=!stardust.balanced] run function stardust:balancing/main
 tag @e[tag=stardust.balanced] remove stardust.balanced

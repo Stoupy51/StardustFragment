@@ -78,7 +78,7 @@ tag @s add itemio.container.hopper
 {base} set value []
 """
 			for i in range(9):
-				itemio_content += f'{base} append value {{"Slot":{i},"mode":"both","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}}}\n'
+				itemio_content += f'{base} append value {{"Slot":{i}b,"mode":"both","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}}}\n'
 			itemio_content += "function #itemio:calls/container/init\n"
 			write_function(f"{ns}:custom_blocks/{item}/destroy", f"""
 # ItemIO compatibility

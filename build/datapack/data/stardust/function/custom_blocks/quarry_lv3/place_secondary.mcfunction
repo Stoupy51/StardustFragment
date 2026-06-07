@@ -36,15 +36,15 @@ function energy:v1/api/init_machine
 tag @s add itemio.container
 tag @s add itemio.container.hopper
 data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":4,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":8,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":0b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":1b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":2b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":3b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":4b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":5b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":6b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":7b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {"Slot":8b,"mode":"both","allowed_side":{"north":true,"south":true,"east":true,"west":true,"top":true,"bottom":true}}
 function #itemio:calls/container/init
 
 # Set quarry speed, and default coordinates

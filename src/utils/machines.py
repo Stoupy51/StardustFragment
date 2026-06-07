@@ -88,7 +88,7 @@ execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper
-data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{{"Slot":{input_slot},"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}]
+data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value [{{"Slot":{input_slot}b,"mode":"input","allowed_side":{{"north":true,"south":true,"east":true,"west":true,"top":true}}}}]
 function #itemio:calls/container/init
 """)
 

@@ -94,9 +94,12 @@ meta:
         # The name can be whatever you want, it's just used in messages
         load_dependencies:
             simplenergy:
-                version: [2, 0, 15]
+                version: [2, 0, 21]
                 name: "SimplEnergy"
                 url: "https://modrinth.com/datapack/simplenergy"
+                # Uncomment below to embed SimplEnergy in Stardust Fragment
+                #source: "modrinth"
+                #modrinth_slug: "simplenergy"
         # Configuration for in-game manual
         manual:
             # Enables grid display in the manual for debugging

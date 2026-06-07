@@ -6,8 +6,7 @@
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run schedule function stardust:v4.0.7/load/valid_dependencies 1t replace
-execute unless entity @p run return 0
+execute unless entity @p run return run schedule function stardust:v4.0.7/load/valid_dependencies 1t replace
 execute store result score #game_version stardust.data run data get entity @p DataVersion
 
 # Check if the game version is supported
@@ -21,8 +20,9 @@ execute if score #dependency_error stardust.data matches 1 unless score #smithed
 execute if score #dependency_error stardust.data matches 1 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 10.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_10_0"}]
 execute if score #dependency_error stardust.data matches 1 unless score #smithed.crafter.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_10_0"}]
 execute if score #dependency_error stardust.data matches 1 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 10.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_10_0"}]
-execute if score #dependency_error stardust.data matches 1 unless score #itemio.major load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_7_0"}]
-execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 unless score #itemio.minor load.status matches 7.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_7_0"}]
+execute if score #dependency_error stardust.data matches 1 unless score #itemio.major load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_7_1"}]
+execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 unless score #itemio.minor load.status matches 7.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_7_1"}]
+execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 if score #itemio.minor load.status matches 7 unless score #itemio.patch load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_7_1"}]
 execute if score #dependency_error stardust.data matches 1 unless score #common_signals.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}, {"translate":"stardust.common_signals_v0_2_1"}]
 execute if score #dependency_error stardust.data matches 1 if score #common_signals.major load.status matches 0 unless score #common_signals.minor load.status matches 2.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}, {"translate":"stardust.common_signals_v0_2_1"}]
 execute if score #dependency_error stardust.data matches 1 if score #common_signals.major load.status matches 0 if score #common_signals.minor load.status matches 2 unless score #common_signals.patch load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/Stoupy51/CommonSignals"}}, {"translate":"stardust.common_signals_v0_2_1"}]

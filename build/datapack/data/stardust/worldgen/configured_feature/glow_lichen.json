@@ -1,6 +1,7 @@
 {
 	"type": "minecraft:multiface_growth",
 	"config": {
+		"block": "minecraft:glow_lichen",
 		"search_range": 30,
 		"chance_of_spreading": 1,
 		"can_place_on_floor": true,

@@ -3449,6 +3449,7 @@
 			{"text": "Magical seed that grows diamonds.","color": "yellow"},
 			{"text": "\nCan only be planted on stone blocks","color": "gray"},
 			{"text": "\nGrows fully after 20 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 0-2 diamonds when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+10% per level)","color": "gray"}
 		],
@@ -3484,6 +3485,7 @@
 			{"text": "Magical seed that grows diamonds.","color": "yellow"},
 			{"text": "\nCan only be planted on stone blocks","color": "gray"},
 			{"text": "\nGrows fully after 20 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 0-24 diamonds when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+10% per level)","color": "gray"}
 		],
@@ -3522,6 +3524,7 @@
 			{"text": "Magical seed that grows stardust fragments.","color": "yellow"},
 			{"text": "\nCan only be planted on diamond blocks","color": "gray"},
 			{"text": "\nGrows fully after 8 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+50% per level)","color": "gray"}
 		],
@@ -3557,6 +3560,7 @@
 			{"text": "Magical seed that grows stardust ingots.","color": "yellow"},
 			{"text": "\nCan only be planted on diamond blocks","color": "gray"},
 			{"text": "\nGrows fully after 16 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+30% per level)","color": "gray"}
 		],
@@ -3592,6 +3596,7 @@
 			{"text": "Magical seed that grows stardust essences.","color": "yellow"},
 			{"text": "\nCan only be planted on diamond blocks","color": "gray"},
 			{"text": "\nGrows fully after 32 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+20% per level)","color": "gray"}
 		],
@@ -3627,6 +3632,7 @@
 			{"text": "Magical seed that grows legendarium.","color": "yellow"},
 			{"text": "\nCan only be planted on emerald blocks","color": "gray"},
 			{"text": "\nGrows fully after 64 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 1-2 legendarium fragments when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+10% per level)","color": "gray"}
 		],
@@ -3662,6 +3668,7 @@
 			{"text": "Magical seed that grows solarium.","color": "yellow"},
 			{"text": "\nCan only be planted on magma blocks","color": "gray"},
 			{"text": "\nGrows fully after 64 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 1-2 solarium fragments when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+10% per level)","color": "gray"}
 		],
@@ -3697,6 +3704,7 @@
 			{"text": "Magical seed that grows darkium.","color": "yellow"},
 			{"text": "\nCan only be planted on obsidian","color": "gray"},
 			{"text": "\nGrows fully after 64 minutes","color": "gray"},
+			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
 			{"text": "\nYields 1-2 darkium fragments when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+10% per level)","color": "gray"}
 		],

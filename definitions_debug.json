@@ -201,7 +201,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Nether variant of stardust ore.","color": "yellow"},{"text": "\nFound throughout the Nether dimension","color": "gray"},{"text": "\nDrops between 1 and 3 stardust ingots when mined","color": "gray"}]
+			[{"text": "Nether variant of stardust ore.","color": "yellow"},{"text": "\nFound in the Nether between Y=25 and Y=120","color": "gray"},{"text": "\nDrops between 1 and 3 stardust ingots when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:nether_stardust_ore","from": "stardust"}}}}}}],
@@ -229,7 +229,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "End dimension stardust ore.","color": "yellow"},{"text": "\nFound in the End dimension","color": "gray"},{"text": "\nDrops between 1 and 2 stardust essences when mined","color": "gray"}]
+			[{"text": "End dimension stardust ore.","color": "yellow"},{"text": "\nFound in the End between Y=25 and Y=80","color": "gray"},{"text": "\nDrops between 1 and 2 stardust essences when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ender_stardust_ore","from": "stardust"}}}}}}],
@@ -259,7 +259,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}
 		],
 		"wiki_buttons": [
-			[{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained through mining or some special mobs","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}]
+			[{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained through mining or mobs in the Stardust Dungeon","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"id": "stardust:awakened_stardust","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
@@ -301,7 +301,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Variant of the nether stardust ore.","color": "yellow"},{"text": "\nFound throughout the Nether dimension","color": "gray"},{"text": "\nDrops between 2 and 8 awakened stardust when mined","color": "gray"}]
+			[{"text": "Variant of the nether stardust ore.","color": "yellow"},{"text": "\nFound in the Nether between Y=25 and Y=120","color": "gray"},{"text": "\nDrops between 2 and 8 awakened stardust when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_ore","from": "stardust"}}}}}}],

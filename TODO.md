@@ -20,8 +20,3 @@ Wifi Energy with 3 tiers (loses 95% of energy for tier 1, tier 2 loses 90% of en
 Quarry filter:
 - Find a way
 
-
-
-SimplEnergy:
-- Pulverizing a "nether_gold_ore" should give 2 gold dusts
-

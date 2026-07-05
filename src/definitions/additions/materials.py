@@ -140,7 +140,7 @@ def main_additions() -> None:
 	obj.wiki_buttons = [
 		WikiButton([
 			{"text":"Enhanced stardust with increased energy potential.","color":"yellow"},
-			{"text":"\nObtained through mining or some special mobs","color":"gray"},
+			{"text":"\nObtained through mining or mobs in the Stardust Dungeon","color":"gray"},
 			{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 		]),
 	]
@@ -366,7 +366,7 @@ def main_additions() -> None:
 		wiki_buttons=[
 			WikiButton([
 				{"text":"Nether variant of stardust ore.","color":"yellow"},
-				{"text":"\nFound throughout the Nether dimension","color":"gray"},
+				{"text":"\nFound in the Nether between Y=25 and Y=120","color":"gray"},
 				{"text":"\nDrops between 1 and 3 stardust ingots when mined","color":"gray"},
 			]),
 		],
@@ -380,7 +380,7 @@ def main_additions() -> None:
 		wiki_buttons=[
 			WikiButton([
 				{"text":"End dimension stardust ore.","color":"yellow"},
-				{"text":"\nFound in the End dimension","color":"gray"},
+				{"text":"\nFound in the End between Y=25 and Y=80","color":"gray"},
 				{"text":"\nDrops between 1 and 2 stardust essences when mined","color":"gray"},
 			]),
 		],
@@ -392,7 +392,7 @@ def main_additions() -> None:
 	obj.wiki_buttons = [
 		WikiButton([
 			{"text":"Variant of the nether stardust ore.","color":"yellow"},
-			{"text":"\nFound throughout the Nether dimension","color":"gray"},
+			{"text":"\nFound in the Nether between Y=25 and Y=120","color":"gray"},
 			{"text":"\nDrops between 2 and 8 awakened stardust when mined","color":"gray"},
 		]),
 	]

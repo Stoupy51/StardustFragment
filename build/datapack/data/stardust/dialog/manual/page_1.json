@@ -10,10 +10,10 @@
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
 				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (1)"]}},
-				{"text": "4","font": "stardust:manual","color": "white","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_first_page"}]}},
+				{"text": " ","font": "stardust:manual","color": "white"},
 				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (2)"]}},
 				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (1)"]}},
-				{"text": " ","font": "stardust:manual","color": "white","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_first_page"}]}},
+				{"text": " ","font": "stardust:manual","color": "white"},
 				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_2"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (2)"]}}
 			],
 			"width": 400
@@ -22,7 +22,7 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"耡\n\n\n\n\n\n",
+				"耦\n\n\n\n\n\n",
 				[{"text": "","font": "minecraft:default","color": "black"},{"translate": "stardust.the_following_manual_will_guide_you_through_everything_about_sta","color": "#505050"}],
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],

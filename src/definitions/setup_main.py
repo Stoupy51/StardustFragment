@@ -22,6 +22,7 @@ from .additions.materials import main_additions as main_additions_materials
 from .additions.miscellaneous import main_additions as main_additions_miscellaneous
 from .additions.non_playable import main_additions as main_additions_non_playable
 from .manual_assets import manual_assets_main
+from .manual_customization import manual_customization_main
 
 
 # Make all the item definitions
@@ -65,6 +66,9 @@ def beet_default(ctx: Context) -> None:
 
 	# Copy manual assets that can't be generated
 	manual_assets_main()
+
+	# Customize the in-game manual (cross-linked pages)
+	manual_customization_main()
 
 	# Debug purposes: export all definitions to a single json file
 	export_all_definitions_to_json(f"{Mem.ctx.directory}/definitions_debug.json")

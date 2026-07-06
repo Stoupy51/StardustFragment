@@ -47,7 +47,7 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"茘\n",
+				"茰\n",
 				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "command_block","components": {"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"translate": "stardust.stoupy_suno_starfall_menace"}}},"id": "stardust:stoupy_suno_starfall_menace","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_starfall_menace","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_starfall_menace","lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],

@@ -128,7 +128,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
 		growing_seed=GrowingSeed(texture_basename="diamond", seconds=1200, planted_on="stone", loots=[
 			GrowingSeedLoot(id="minecraft:diamond", rolls={"type":"minecraft:uniform","min":0,"max":2}, fortune={"extra":0,"probability":0.1})
-		]), # TODO: Add GROWING SEED to the manual (both this and the results)
+		]),
 		wiki_buttons=[
 			{"text":"Magical seed that grows diamonds.","color":"yellow"},
 			{"text":"\nCan only be planted on stone blocks","color":"gray"},

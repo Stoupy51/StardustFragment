@@ -1,8 +1,8 @@
 
 #> stardust:utils/get_world_spawn_from_marker
 #
-# @within	stardust:v4.0.10/load/confirm_load
-#			stardust:v4.0.10/minute
+# @within	stardust:v4.0.11/load/confirm_load
+#			stardust:v4.0.11/minute
 #
 
 # Store world spawn position

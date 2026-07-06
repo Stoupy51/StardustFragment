@@ -1,7 +1,7 @@
 
 #> stardust:mobs/ticking
 #
-# @within	stardust:v4.0.10/second
+# @within	stardust:v4.0.11/second
 #			stardust:mobs/fast_ticking
 #
 

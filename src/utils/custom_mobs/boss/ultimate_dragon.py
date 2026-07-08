@@ -584,8 +584,8 @@ bossbar set {ns}:ultimate_dragon players
 tellraw @a ["",{STARFRAG_TEXT},{{"text":" The "}},{BOSSBAR_TEXT},{{"text":" has been defeated! Congratulations!"}}]
 execute as @a at @s run playsound minecraft:ui.toast.challenge_complete ambient @s
 
-# Rebuild the dimension after 20s
-scoreboard players reset #ultimate_built {ns}.data
+# Rebuild the dimension after 20s (remove the marker block so the check rebuilds it)
+function {ns}:dimensions/mark_not_built/ultimate
 schedule function {ns}:dimensions/ensure_built 20s
 """)
 	write_function(f"{ns}:mobs/ultimate_dragon/unique_drop", """

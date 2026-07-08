@@ -70,6 +70,8 @@ team modify stardust.mob collisionRule always
 team modify stardust.mob friendlyFire false
 
 # Make sure dimensions are built
+scoreboard players set #dungeon_building stardust.data 0
+scoreboard players set #ultimate_building stardust.data 0
 function stardust:dimensions/ensure_built
 
 # Track teleportation through portals

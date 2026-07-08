@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 import os
 
@@ -29,25 +28,38 @@ def setup_dimensions() -> None:
 	dungeon_min_x, dungeon_min_z, dungeon_max_x, dungeon_max_z = get_bounds(dungeon_parts)
 	ultimate_min_x, ultimate_min_z, ultimate_max_x, ultimate_max_z = get_bounds(ultimate_parts)
 
-	# Call when loading
+	# Marker blocks proving each dimension is built (invisible barrier in the void, survival-proof)
+	dungeon_marker: str = f"{dungeon_min_x} 1 {dungeon_min_z}"
+	ultimate_marker: str = f"{ultimate_min_x} 1 {ultimate_min_z}"
+
+	# Call when loading (reset in-progress flags in case the server stopped mid-build)
 	write_load_file(f"""
 # Make sure dimensions are built
+scoreboard players set #dungeon_building {ns}.data 0
+scoreboard players set #ultimate_building {ns}.data 0
 function {ns}:dimensions/ensure_built
 """, prepend=True)
+
+	# Check every minute so a dimension that got reset for any reason regenerates on its own
+	write_versioned_function("minute", f"""
+# Make sure dimensions are still built
+function {ns}:dimensions/ensure_built
+""")
 	write_function(f"{ns}:dimensions/ensure_built", f"""
-# Make sure dimensions are built
-execute unless score #dungeon_built {ns}.data matches 1 in {ns}:dungeon run forceload add {dungeon_min_x} {dungeon_min_z} {dungeon_max_x} {dungeon_max_z}
-execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run forceload add {ultimate_min_x} {ultimate_min_z} {ultimate_max_x} {ultimate_max_z}
+# Forceload the marker chunk of each dimension (also restores forceloads wiped by a dimension reset)
+execute in {ns}:dungeon run forceload add {dungeon_min_x} {dungeon_min_z}
+execute in {ns}:ultimate run forceload add {ultimate_min_x} {ultimate_min_z}
 schedule function {ns}:dimensions/load 2s
 """)
 	write_function(f"{ns}:dimensions/load", f"""
-execute unless score #dungeon_built {ns}.data matches 1 in {ns}:dungeon run function {ns}:dimensions/structure/dungeon/start
-execute unless score #ultimate_built {ns}.data matches 1 in {ns}:ultimate run function {ns}:dimensions/structure/ultimate/start
+# Rebuild any dimension whose marker block is missing (unless a build is already in progress)
+execute in {ns}:dungeon if loaded {dungeon_marker} unless block {dungeon_marker} minecraft:barrier unless score #dungeon_building {ns}.data matches 1 run function {ns}:dimensions/rebuild/dungeon
+execute in {ns}:ultimate if loaded {ultimate_marker} unless block {ultimate_marker} minecraft:barrier unless score #ultimate_building {ns}.data matches 1 run function {ns}:dimensions/rebuild/ultimate
 """)
 	## Load dimension structures
-	for dimension, name, min_x, min_z, max_x, max_z, place_parts in [
-		("dungeon", "Stardust Dungeon", dungeon_min_x, dungeon_min_z, dungeon_max_x, dungeon_max_z, place_dungeon_parts),
-		("ultimate", "Ultimate Dimension", ultimate_min_x, ultimate_min_z, ultimate_max_x, ultimate_max_z, place_ultimate_parts),
+	for dimension, name, min_x, min_z, max_x, max_z, place_parts, marker in [
+		("dungeon", "Stardust Dungeon", dungeon_min_x, dungeon_min_z, dungeon_max_x, dungeon_max_z, place_dungeon_parts, dungeon_marker),
+		("ultimate", "Ultimate Dimension", ultimate_min_x, ultimate_min_z, ultimate_max_x, ultimate_max_z, place_ultimate_parts, ultimate_marker),
 	]:
 		if dimension == "dungeon":
 			place_dungeon_portal: str = f"""
@@ -58,6 +70,20 @@ execute in {ns}:dungeon positioned -9 66 3 run function {ns}:custom_blocks/stard
 		else:
 			place_dungeon_portal: str = ""
 
+		# Rebuild function (forceload the whole area, then start placing parts once chunks are loaded)
+		write_function(f"{ns}:dimensions/rebuild/{dimension}", f"""
+# Forceload the whole structure area and start placing parts
+scoreboard players set #{dimension}_building {ns}.data 1
+execute in {ns}:{dimension} run forceload add {min_x} {min_z} {max_x} {max_z}
+schedule function {ns}:dimensions/structure/{dimension}/start 2s
+""")
+
+		# Function for other systems to force a rebuild on the next check
+		write_function(f"{ns}:dimensions/mark_not_built/{dimension}", f"""
+# Remove the marker block so the next check rebuilds the dimension
+execute in {ns}:{dimension} run setblock {marker} minecraft:air
+""")
+
 		# Asynchronous structure placement
 		for i, (part, pos) in enumerate(place_parts):
 			is_final: bool = (i == len(place_parts) - 1)
@@ -67,8 +93,9 @@ execute in {ns}:dungeon positioned -9 66 3 run function {ns}:custom_blocks/stard
 # Load structure part {part}
 execute store result score #success {ns}.data in {ns}:{dimension} run place template {ns}:{part} {pos}
 
-# If failed, error message
+# If failed, error message and allow a retry on the next check
 execute if score #success {ns}.data matches 0 run tellraw @a {{"text":"[Stardust Fragment] The {name} couldn't be built. Something blocked the '/forceload' command in {ns}:{dimension}","color":"red"}}
+execute if score #success {ns}.data matches 0 run scoreboard players set #{dimension}_building {ns}.data 0
 
 # Schedule next part if successful
 execute if score #success {ns}.data matches 1 run schedule function {ns}:dimensions/structure/{dimension}/{next_part} 1t
@@ -77,9 +104,13 @@ execute if score #success {ns}.data matches 1 run schedule function {ns}:dimensi
 		# Place structure function
 		write_function(f"{ns}:dimensions/structure/{dimension}/final", f"""
 {place_dungeon_portal}
-# Mark dimension as built if successful
+# Place the marker block proving the dimension is built
+execute in {ns}:{dimension} run setblock {marker} minecraft:barrier
+
+# Remove the area forceload but keep the marker chunk loaded for the periodic check
 execute in {ns}:{dimension} run forceload remove {min_x} {min_z} {max_x} {max_z}
-scoreboard players set #{dimension}_built {ns}.data 1
+execute in {ns}:{dimension} run forceload add {min_x} {min_z}
+scoreboard players set #{dimension}_building {ns}.data 0
 """)
 
 	## Connect dimensions between them

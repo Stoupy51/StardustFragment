@@ -10,6 +10,9 @@ scoreboard players set #minute stardust.data 1
 # Get world spawn position and dimension every minute
 execute summon marker run function stardust:utils/get_world_spawn_from_marker
 
+# Make sure dimensions are still built
+function stardust:dimensions/ensure_built
+
 # Remove bossbars
 function stardust:mobs/remove_bossbars
 

@@ -3,7 +3,7 @@
 #
 # @executed	as @e[type=item_display,tag=stardust.custom_block,sort=random,limit=50] & at @s
 #
-# @within	stardust:v4.0.11/second_5 [ as @e[type=item_display,tag=stardust.custom_block,sort=random,limit=50] & at @s ]
+# @within	stardust:v4.0.12/second_5 [ as @e[type=item_display,tag=stardust.custom_block,sort=random,limit=50] & at @s ]
 #			stardust:custom_blocks/stardust_core/place_secondary
 #			stardust:custom_blocks/stardust_block/place_secondary
 #			stardust:custom_blocks/stardust_ore/place_secondary

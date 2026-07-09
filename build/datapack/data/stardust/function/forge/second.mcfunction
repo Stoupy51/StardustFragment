@@ -3,7 +3,7 @@
 #
 # @executed	at @s
 #
-# @within	stardust:v4.0.11/second [ at @s ]
+# @within	stardust:v4.0.12/second [ at @s ]
 #
 
 # Check for Awakened Forge structure

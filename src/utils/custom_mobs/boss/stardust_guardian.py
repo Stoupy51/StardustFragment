@@ -6,6 +6,7 @@ import math
 from stewbeet import (
 	COMMON_SIGNAL,
 	Conventions,
+	Item,
 	JsonDict,
 	LootTable,
 	Mem,
@@ -173,7 +174,7 @@ playsound minecraft:entity.wither.death hostile @a[distance=..50]
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/awakened_stardust_block",
+						"value": Item.from_id("awakened_stardust_block").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -192,7 +193,7 @@ playsound minecraft:entity.wither.death hostile @a[distance=..50]
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_core",
+						"value": Item.from_id("stardust_core").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",

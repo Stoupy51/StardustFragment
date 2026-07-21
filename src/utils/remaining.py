@@ -188,7 +188,7 @@ function {ns}:utils/update_max_health
 	Mem.ctx.data[ns].predicates["random/0.05"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance": 0.05}))
 	write_versioned_function("minute", f"""
 # Dog Excrement production (about 1 every 20 minutes per wolf)
-execute at @e[type=minecraft:wolf,{Conventions.AVOID_ENTITY_TAGS},predicate={ns}:random/0.05] run loot spawn ~ ~ ~ loot {ns}:i/dog_excrement
+execute at @e[type=minecraft:wolf,{Conventions.AVOID_ENTITY_TAGS},predicate={ns}:random/0.05] run loot spawn ~ ~ ~ loot {Item.from_id("dog_excrement").loot_table}
 """)
 
 	# Travel Staff

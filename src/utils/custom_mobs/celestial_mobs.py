@@ -1,7 +1,7 @@
 
 # Imports
 from beet import LootTable
-from stewbeet.core import Mem, set_json_encoder, write_function
+from stewbeet.core import ExternalItem, Item, Mem, set_json_encoder, write_function
 
 
 # Setup custom mobs for the Celestial dimension
@@ -38,7 +38,7 @@ tag @s add smithed.entity
 					},
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_fragment",
+						"value": Item.from_id("stardust_fragment").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -51,7 +51,7 @@ tag @s add smithed.entity
 					},
 					{
 						"type": "minecraft:loot_table",
-						"value": "simplenergy:i/simplunium_ingot",
+						"value": ExternalItem.from_id("simplenergy:simplunium_ingot").loot_table,
 						"conditions": [
 							{
 								"condition": "minecraft:random_chance",

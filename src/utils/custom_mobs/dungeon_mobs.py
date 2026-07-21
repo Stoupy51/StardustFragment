@@ -1,7 +1,7 @@
 
 # Imports
 from beet import LootTable
-from stewbeet.core import Mem, set_json_encoder, write_function
+from stewbeet.core import Item, Mem, set_json_encoder, write_function
 
 
 # Setup custom mobs for the Dungeon dimension
@@ -38,7 +38,7 @@ team join {ns}.mob @s
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/awakened_stardust",
+						"value": Item.from_id("awakened_stardust").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -51,7 +51,7 @@ team join {ns}.mob @s
 					},
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_essence",
+						"value": Item.from_id("stardust_essence").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",

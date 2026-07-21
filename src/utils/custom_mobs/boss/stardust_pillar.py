@@ -278,7 +278,7 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_dungeon_key",
+						"value": Item.from_id("stardust_dungeon_key").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -294,7 +294,7 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/compacted_stardust_shard",
+						"value": Item.from_id("compacted_stardust_shard").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -351,11 +351,11 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stoupy_suno_cosmic_threat"
+						"value": Item.from_id("stoupy_suno_cosmic_threat").loot_table
 					},
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stoupy_suno_starfall_menace"
+						"value": Item.from_id("stoupy_suno_starfall_menace").loot_table
 					}
 				]
 			}

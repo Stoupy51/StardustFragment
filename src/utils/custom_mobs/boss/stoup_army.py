@@ -5,6 +5,7 @@ import json
 from stewbeet import (
 	COMMON_SIGNAL,
 	Conventions,
+	Item,
 	JsonDict,
 	LootTable,
 	Mem,
@@ -204,7 +205,7 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/triple_compressed_cobblestone",
+						"value": Item.from_id("triple_compressed_cobblestone").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -228,7 +229,7 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_ingot",
+						"value": Item.from_id("stardust_ingot").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -290,7 +291,7 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_fragment",
+						"value": Item.from_id("stardust_fragment").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",

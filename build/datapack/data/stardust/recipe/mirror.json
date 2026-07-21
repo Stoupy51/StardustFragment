@@ -10,7 +10,7 @@
 		"minecraft:quartz_block"
 	],
 	"result": {
-		"id": "minecraft:command_block",
+		"id": "minecraft:recovery_compass",
 		"count": 1,
 		"components": {
 			"minecraft:item_model": "stardust:mirror",

@@ -131,7 +131,7 @@ tag @s add {ns}.ultimate_dragon_essence_landed
 
 # Start animation (ultimate dragon egg growing)
 tp @s ~ ~15 ~
-loot replace entity @s contents loot {ns}:i/ultimate_dragon_egg
+loot replace entity @s contents loot {Item.from_id("ultimate_dragon_egg").loot_table}
 data modify entity @s transformation.scale set value [15.0d,15.0d,15.0d]
 data modify entity @s transformation.translation[1] set value 0.0d
 data modify entity @s start_interpolation set value 0
@@ -382,7 +382,7 @@ tag @s add {ns}.ultimate_poop
 # Set item display properties
 data modify entity @s Glowing set value true
 data modify entity @s transformation.scale set value [1.5d,1.5d,1.5d]
-loot replace entity @s contents loot {ns}:i/ultimate_poop
+loot replace entity @s contents loot {Item.from_id("ultimate_poop").loot_table}
 """)
 
 	# Check if poops are destroyed
@@ -574,7 +574,7 @@ loot give @a[distance=..200] loot {ns}:entities/ultimate_dragon
 execute unless entity @e[tag=!{ns}.dying_model,tag={ns}.ultimate_dragon] as @a[distance=..200] if score @s {ns}.boss_music > #global_second {ns}.data run stopsound @s record
 
 # Summon ultimate dragon egg item
-loot spawn ~ ~ ~ loot {ns}:i/ultimate_dragon_egg
+loot spawn ~ ~ ~ loot {Item.from_id("ultimate_dragon_egg").loot_table}
 execute as @n[type=item,nbt={{Item:{{components:{{"minecraft:custom_data":{{{ns}:{{ultimate_dragon_egg:true}}}}}}}}}}] run function {ns}:mobs/ultimate_dragon/unique_drop
 
 # Remove bossbar (from all players)
@@ -621,7 +621,7 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 					"entries": [
 						{
 							"type": "minecraft:loot_table",
-							"value": f"{ns}:i/{item}",
+							"value": Item.from_id(item).loot_table,
 							**({
 								"functions": [
 									{
@@ -651,11 +651,11 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stoupy_suno_prismatic_devastation"
+						"value": Item.from_id("stoupy_suno_prismatic_devastation").loot_table
 					},
 					{
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stoupy_suno_the_ultimate_ascension"
+						"value": Item.from_id("stoupy_suno_the_ultimate_ascension").loot_table
 					}
 				]
 			}

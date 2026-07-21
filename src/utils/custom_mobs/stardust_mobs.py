@@ -1,7 +1,7 @@
 
 # Imports
 from beet import LootTable, Predicate
-from stewbeet.core import COMMON_SIGNAL, Conventions, Mem, set_json_encoder, write_function
+from stewbeet.core import COMMON_SIGNAL, Conventions, Item, Mem, set_json_encoder, write_function
 
 
 # Setup custom mobs for the Stardust dimension
@@ -92,7 +92,7 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 					{
 						"weight": 9,
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_ingot",
+						"value": Item.from_id("stardust_ingot").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -106,7 +106,7 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 					{
 						"weight": 1,
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_essence"
+						"value": Item.from_id("stardust_essence").loot_table
 					}
 				]
 			}
@@ -137,7 +137,7 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 					{
 						"weight": 9,
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_ingot",
+						"value": Item.from_id("stardust_ingot").loot_table,
 						"functions": [
 							{
 								"function": "minecraft:set_count",
@@ -151,7 +151,7 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 					{
 						"weight": 1,
 						"type": "minecraft:loot_table",
-						"value": f"{ns}:i/stardust_essence"
+						"value": Item.from_id("stardust_essence").loot_table
 					}
 				]
 			}

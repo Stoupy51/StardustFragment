@@ -1,7 +1,7 @@
 {
 	"stardust_fragment": {
 		"id": "stardust_fragment",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "smelting","result_count": 2,"category": "misc","group": "stardust_fragment","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ore": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -23,7 +23,7 @@
 	},
 	"stardust_ingot": {
 		"id": "stardust_ingot",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "smelting","result_count": 2,"category": "misc","group": "stardust_ingot","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"nether_stardust_ore": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -47,7 +47,7 @@
 	},
 	"stardust_essence": {
 		"id": "stardust_essence",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "smelting","result_count": 1,"category": "misc","group": "stardust_essence","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"ender_stardust_ore": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -96,7 +96,7 @@
 	},
 	"compacted_stardust_shard": {
 		"id": "compacted_stardust_shard",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "compacted_stardust_shard","ingredients": [{"item": "minecraft:amethyst_shard"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}}]}
@@ -253,7 +253,7 @@
 	},
 	"awakened_stardust": {
 		"id": "awakened_stardust",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}
@@ -325,7 +325,7 @@
 	},
 	"legendarium_fragment": {
 		"id": "legendarium_fragment",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}}}
@@ -343,7 +343,7 @@
 	},
 	"legendarium_ingot": {
 		"id": "legendarium_ingot",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_fragment": true}}}}]},
@@ -388,7 +388,7 @@
 	},
 	"solarium_fragment": {
 		"id": "solarium_fragment",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}}}
@@ -406,7 +406,7 @@
 	},
 	"solarium_ingot": {
 		"id": "solarium_ingot",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_fragment": true}}}}]},
@@ -451,7 +451,7 @@
 	},
 	"darkium_fragment": {
 		"id": "darkium_fragment",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}}}
@@ -469,7 +469,7 @@
 	},
 	"darkium_ingot": {
 		"id": "darkium_ingot",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"darkium_fragment": true}}}}]},
@@ -553,7 +553,7 @@
 	},
 	"ultimate_shard": {
 		"id": "ultimate_shard",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "ultimate_shard","ingredients": [{"item": "minecraft:popped_chorus_fruit"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_core": true}}}},{"item": "minecraft:echo_shard"},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}}},{"item": "minecraft:resin_brick"},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}}},{"item": "minecraft:turtle_scute"}]}
@@ -571,7 +571,7 @@
 	},
 	"dog_excrement": {
 		"id": "dog_excrement",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "simplenergy_pulverizing","result_count": {"type": "minecraft:uniform","min": 4,"max": 6},"group": "dog_excrement","result": {"item": "minecraft:bone_meal"},"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}}}
@@ -893,7 +893,7 @@
 	},
 	"mirror": {
 		"id": "mirror",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "mirror","ingredients": [{"item": "minecraft:black_stained_glass"},{"item": "minecraft:black_stained_glass"},{"item": "minecraft:black_stained_glass"},{"item": "minecraft:black_stained_glass"},{"item": "minecraft:quartz_block"}]},
@@ -912,7 +912,7 @@
 	},
 	"stardust_photovoltaic_cell": {
 		"id": "stardust_photovoltaic_cell",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "stardust_photovoltaic_cell","shape": ["FFF","MMM"," I "],"ingredients": {"F": {"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},"M": {"components": {"minecraft:custom_data": {"stardust": {"mirror": true}}}},"I": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}}}}
@@ -930,7 +930,7 @@
 	},
 	"awakened_stardust_photovoltaic_cell": {
 		"id": "awakened_stardust_photovoltaic_cell",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "awakened_stardust_photovoltaic_cell","shape": ["FFF","SSS","FFF"],"ingredients": {"F": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"stardust_photovoltaic_cell": true}}}}}},
@@ -949,7 +949,7 @@
 	},
 	"legendarium_photovoltaic_cell": {
 		"id": "legendarium_photovoltaic_cell",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "legendarium_photovoltaic_cell","shape": ["III","AAA","III"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}}}},
@@ -968,7 +968,7 @@
 	},
 	"solarium_photovoltaic_cell": {
 		"id": "solarium_photovoltaic_cell",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "solarium_photovoltaic_cell","shape": ["III","AAA","III"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}}}},
@@ -987,7 +987,7 @@
 	},
 	"darkium_photovoltaic_cell": {
 		"id": "darkium_photovoltaic_cell",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "darkium_photovoltaic_cell","shape": ["III","AAA","III"],"ingredients": {"I": {"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_photovoltaic_cell": true}}}}}},
@@ -1006,7 +1006,7 @@
 	},
 	"ultimate_photovoltaic_cell": {
 		"id": "ultimate_photovoltaic_cell",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "ultimate_photovoltaic_cell","shape": ["LSD"," U "],"ingredients": {"L": {"components": {"minecraft:custom_data": {"stardust": {"legendarium_photovoltaic_cell": true}}}},"S": {"components": {"minecraft:custom_data": {"stardust": {"solarium_photovoltaic_cell": true}}}},"D": {"components": {"minecraft:custom_data": {"stardust": {"darkium_photovoltaic_cell": true}}}},"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}}}},
@@ -1025,7 +1025,7 @@
 	},
 	"empty_module": {
 		"id": "empty_module",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "empty_module","ingredients": [{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"item": "minecraft:map"},{"components": {"minecraft:custom_data": {"simplenergy": {"simplunium_ingot": true}}}}]}
@@ -1376,7 +1376,7 @@
 	},
 	"fortune_module": {
 		"id": "fortune_module",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "energy",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "fortune_module","shape": ["EDE","DMD","EDE"],"ingredients": {"E": {"item": "minecraft:emerald"},"D": {"item": "minecraft:diamond"},"M": {"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}}},
@@ -1396,7 +1396,7 @@
 	},
 	"silk_touch_module": {
 		"id": "silk_touch_module",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "energy",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "silk_touch_module","ingredients": [{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"item": "minecraft:iron_ore"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]},
@@ -1416,7 +1416,7 @@
 	},
 	"force_load_module": {
 		"id": "force_load_module",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "energy",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "force_load_module","ingredients": [{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:respawn_anchor"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"item": "minecraft:glowstone"},{"components": {"minecraft:custom_data": {"stardust": {"empty_module": true}}}}]}
@@ -3022,7 +3022,7 @@
 	},
 	"health_artifact_lv1": {
 		"id": "health_artifact_lv1",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [],
 		"wiki_buttons": [
@@ -3043,7 +3043,7 @@
 	},
 	"health_artifact_lv2": {
 		"id": "health_artifact_lv2",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "health_artifact_lv2","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"health_artifact_lv1": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"health_artifact_lv1": true}}}}]}
@@ -3065,7 +3065,7 @@
 	},
 	"health_artifact_lv3": {
 		"id": "health_artifact_lv3",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "health_artifact_lv3","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"health_artifact_lv2": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"health_artifact_lv2": true}}}}]}
@@ -3087,7 +3087,7 @@
 	},
 	"health_artifact_lvmax": {
 		"id": "health_artifact_lvmax",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "health_artifact_lvmax","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"health_artifact_lv3": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"health_artifact_lv3": true}}}}]}
@@ -3109,7 +3109,7 @@
 	},
 	"damage_artifact_lv1": {
 		"id": "damage_artifact_lv1",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [],
 		"wiki_buttons": [
@@ -3130,7 +3130,7 @@
 	},
 	"damage_artifact_lv2": {
 		"id": "damage_artifact_lv2",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "damage_artifact_lv2","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"damage_artifact_lv1": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"damage_artifact_lv1": true}}}}]}
@@ -3152,7 +3152,7 @@
 	},
 	"damage_artifact_lv3": {
 		"id": "damage_artifact_lv3",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "damage_artifact_lv3","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"damage_artifact_lv2": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"damage_artifact_lv2": true}}}}]}
@@ -3174,7 +3174,7 @@
 	},
 	"damage_artifact_lvmax": {
 		"id": "damage_artifact_lvmax",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "damage_artifact_lvmax","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"damage_artifact_lv3": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"damage_artifact_lv3": true}}}}]}
@@ -3196,7 +3196,7 @@
 	},
 	"speed_artifact_lv1": {
 		"id": "speed_artifact_lv1",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [],
 		"wiki_buttons": [
@@ -3217,7 +3217,7 @@
 	},
 	"speed_artifact_lv2": {
 		"id": "speed_artifact_lv2",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "speed_artifact_lv2","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"speed_artifact_lv1": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"speed_artifact_lv1": true}}}}]}
@@ -3239,7 +3239,7 @@
 	},
 	"speed_artifact_lv3": {
 		"id": "speed_artifact_lv3",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "speed_artifact_lv3","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"speed_artifact_lv2": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"speed_artifact_lv2": true}}}}]}
@@ -3261,7 +3261,7 @@
 	},
 	"speed_artifact_lvmax": {
 		"id": "speed_artifact_lvmax",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "speed_artifact_lvmax","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"speed_artifact_lv3": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"speed_artifact_lv3": true}}}}]}
@@ -3306,7 +3306,7 @@
 	},
 	"item_magnet": {
 		"id": "item_magnet",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shaped","result_count": 1,"category": "equipment","group": "item_magnet","shape": ["U U","A A","AAA"],"ingredients": {"U": {"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},"A": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}}
@@ -3366,7 +3366,7 @@
 	},
 	"stardust_apple": {
 		"id": "stardust_apple",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "equipment",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","group": "stardust_apple","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"item": "minecraft:golden_apple"}]}
@@ -3948,7 +3948,7 @@
 	},
 	"stoupegg": {
 		"id": "stoupegg",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stoupegg","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"item": "minecraft:wolf_armor"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}}]}
@@ -3968,7 +3968,7 @@
 	},
 	"starlight_infuser": {
 		"id": "starlight_infuser",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "starlight_infuser","ingredients": [{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"item": "minecraft:breeze_rod"},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}}},{"item": "minecraft:nether_star"}]}
@@ -3988,7 +3988,7 @@
 	},
 	"stardust_dungeon_key": {
 		"id": "stardust_dungeon_key",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4025,7 +4025,7 @@
 	},
 	"ultimate_dragon_egg": {
 		"id": "ultimate_dragon_egg",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4060,7 +4060,7 @@
 	},
 	"stoupy_suno_cosmic_threat": {
 		"id": "stoupy_suno_cosmic_threat",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
@@ -4076,7 +4076,7 @@
 	},
 	"stoupy_suno_prismatic_devastation": {
 		"id": "stoupy_suno_prismatic_devastation",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
@@ -4092,7 +4092,7 @@
 	},
 	"stoupy_suno_starfall_menace": {
 		"id": "stoupy_suno_starfall_menace",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
@@ -4108,7 +4108,7 @@
 	},
 	"stoupy_suno_the_ultimate_ascension": {
 		"id": "stoupy_suno_the_ultimate_ascension",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
@@ -4124,7 +4124,7 @@
 	},
 	"stardust_soldier": {
 		"id": "stardust_soldier",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4140,7 +4140,7 @@
 	},
 	"stardust_evoker": {
 		"id": "stardust_evoker",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4156,7 +4156,7 @@
 	},
 	"stardust_bat": {
 		"id": "stardust_bat",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4172,7 +4172,7 @@
 	},
 	"stardust_pillar": {
 		"id": "stardust_pillar",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4188,7 +4188,7 @@
 	},
 	"stardust_guardian": {
 		"id": "stardust_guardian",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
@@ -4204,7 +4204,7 @@
 	},
 	"quarry_placeholder_configurator": {
 		"id": "quarry_placeholder_configurator",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
 			"item_model": "stardust:quarry_placeholder_configurator",
@@ -4216,7 +4216,7 @@
 	},
 	"quarry_placeholder_module": {
 		"id": "quarry_placeholder_module",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
 			"item_model": "stardust:quarry_placeholder_module",
@@ -4228,7 +4228,7 @@
 	},
 	"quarry_placeholder_force_load": {
 		"id": "quarry_placeholder_force_load",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
 			"item_model": "stardust:quarry_placeholder_force_load",
@@ -4240,7 +4240,7 @@
 	},
 	"quarry_information": {
 		"id": "quarry_information",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
 			"item_model": "stardust:quarry_information",
@@ -4252,7 +4252,7 @@
 	},
 	"ultimate_poop": {
 		"id": "ultimate_poop",
-		"base_item": "minecraft:command_block",
+		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff7500"},{"text": "t","color": "#ffeb00"},{"text": "i","color": "#9cff00"},{"text": "m","color": "#27ff00"},{"text": "a","color": "#00ff4e"},{"text": "t","color": "#00ffc4"},{"text": "e","color": "#00c4ff"},{"text": " ","color": "#004eff"},{"text": "P","color": "#2700ff"},{"text": "o","color": "#9c00ff"},{"text": "o","color": "#ff00eb"},{"text": "p","color": "#ff0075"}],

@@ -9,7 +9,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/simplunium_block",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:simplunium_ingot": {
 		"id": "simplenergy:simplunium_ingot",
@@ -21,7 +21,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/simplunium_ingot",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:machine_block": {
 		"id": "simplenergy:machine_block",
@@ -33,7 +33,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/machine_block",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:furnace_generator": {
 		"id": "simplenergy:furnace_generator",
@@ -45,7 +45,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/furnace_generator",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:redstone_generator": {
 		"id": "simplenergy:redstone_generator",
@@ -57,7 +57,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/redstone_generator",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:solar_panel": {
 		"id": "simplenergy:solar_panel",
@@ -69,7 +69,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/solar_panel",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:elite_battery": {
 		"id": "simplenergy:elite_battery",
@@ -81,7 +81,7 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/elite_battery",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	},
 	"simplenergy:elite_cable": {
 		"id": "simplenergy:elite_cable",
@@ -93,6 +93,6 @@
 			"lore": [{"text": "SimplEnergy","italic": true,"color": "blue"}]
 		},
 		"loot_table": "simplenergy:i/elite_cable",
-		"base_item": "minecraft:command_block"
+		"base_item": "minecraft:recovery_compass"
 	}
 }

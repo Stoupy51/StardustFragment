@@ -55,7 +55,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.key_that_allows_access_to_the_stardust_dungeon","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.obtained_by_defeating_the_stardust_pillar_boss"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.once_used_the_key_will_be_consumed"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.inside_the_dungeon_face_challenging_enemies_and_traps"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.to_earn_valuable_rewards"}]]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust_dungeon_portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_82"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

@@ -77,7 +77,7 @@
 				{"text": "U$","hover_event": {"action": "show_item","id": "minecraft:cod"}},
 				"  \n\n",
 				{"text": "2\n0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$腩"},{"text": "$腪"},{"text": "$腫"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$腬"},{"text": "$耣"},{"text": "$腬"},"\"\"",{"text": "$$胑"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$腫"},{"text": "$腪"},{"text": "$腩"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.cod","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.salmon","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.tropical_fish","color": "gray"},{"text": "\n- x2 ","color": "gray"},{"translate": "stardust.pufferfish","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","color": "gray"}]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

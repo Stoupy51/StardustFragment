@@ -53,7 +53,7 @@
 				{"text": "茏\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胊"},{"text": "$胊"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胋"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.speed_artifact_lv","color": "gray"}, ".1"]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_141"}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [[{"translate":"stardust.speed_artifact_lv","color": "yellow"}, ".1"],[{"text":"\n","color": "gray"}, {"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.10_base_speed"}],[{"text":"\n\n","color": "gray"}, {"translate": "stardust.can_be_obtained_from_lucky_artifact_bags_only"}]]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胊"},{"text": "$胊"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胋"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.speed_artifact_lv","color": "gray"}, ".1"]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_141"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

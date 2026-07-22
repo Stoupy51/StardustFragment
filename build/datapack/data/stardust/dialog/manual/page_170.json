@@ -84,7 +84,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$艓"},{"text": "$聢"},{"text": "$艓"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$聢"},{"text": "$艔"},{"text": "$聢"},"\"\"",{"text": "$$胧"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$艓"},{"text": "$聢"},{"text": "$艓"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.dragon_egg","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.ultimate_shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.lingering_potion","color": "gray"}]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.ultimate_portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_83"}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust.ultimate_dragon_egg","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_171"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

@@ -35,7 +35,7 @@
 				{"text": "!","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_pillar","item_name": {"translate": "stardust_pillar"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"id": "stardust:stardust_pillar","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
 				{"text": "!","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_guardian","item_name": {"translate": "stardust_guardian"},"lore": [["",{"text": "I","color": "white","italic": false,"font": "stardust:icons"},[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]]],"custom_data": {"stardust": {"stardust_guardian": true},"smithed": {"id": "stardust:stardust_guardian","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_181"}},
 				"#\n",
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

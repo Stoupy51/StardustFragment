@@ -60,7 +60,7 @@
 				{"text": "2\n","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胈"},{"text": "$胈"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胉"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.damage_artifact_lv","color": "gray"}, ".3"]]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust.damage_artifact_lv_max","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.50_damage"}]]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胈"},{"text": "$胈"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胉"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.damage_artifact_lv","color": "gray"}, ".3"]]}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

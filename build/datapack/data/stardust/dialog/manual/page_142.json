@@ -62,7 +62,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [[{"translate":"stardust.speed_artifact_lv","color": "yellow"}, ".3"],[{"text":"\n","color": "gray"}, {"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.20_base_speed"}]]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胋"},{"text": "$胋"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$背"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.speed_artifact_lv","color": "gray"}, ".2"]]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$背"},{"text": "$背"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胍"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.speed_artifact_lv","color": "gray"}, ".3"]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_143"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

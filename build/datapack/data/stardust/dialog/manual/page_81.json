@@ -89,7 +89,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_soldier","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"}},
 				{"text": "0\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_178"}},
 				{"text": "耴##","hover_event": {"action": "show_text","value": [{"translate": "stardust_bat","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

@@ -55,7 +55,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_evoker"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health"}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage"}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed"}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance"}]]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

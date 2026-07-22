@@ -62,7 +62,7 @@
 				{"text": "0##","hover_event": {"action": "show_text","value": [[{"translate":"stardust.damage_artifact_lv","color": "yellow"}, ".2"],[{"text":"\n","color": "gray"}, {"translate": "stardust.hold_in_any_hand_to_get_the_damage_effect"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.20_damage"}]]}},
 				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胆"},{"text": "$胆"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胇"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.damage_artifact_lv","color": "gray"}, ".1"]]}},
 				{"text": "0","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"E\n","\"",{"text": "$胇"},{"text": "$胇"},"\n","\"",{"text": "U$"},{"text": "U$"},"U$",{"text": "$$胈"},"\n\"","U$U$U$",{"text": "U$"},"\n","\n"],{"text": "\n- x2 ","color": "gray"},[{"translate":"stardust.damage_artifact_lv","color": "gray"}, ".2"]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_138"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

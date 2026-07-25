@@ -2,7 +2,7 @@
 # Project identifier used for namespacing functions and tags. Should align with the namespace in the source folder.
 id: "stardust"
 # Project name that will be used in messages, item lore, etc.
-name: "StardustFragment"
+name: "Stardust Fragment"
 # Author(s) name(s) displayed in pack.mcmeta, also used to add 'convention.debug' tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
 author: "Stoupy51"
 # Project version in semantic versioning format: major.minor.patch (e.g., 1.0.0 or 2.84.615).

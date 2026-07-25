@@ -1,9 +1,7 @@
 
 #> stardust:forge/verify_structure
 #
-# @executed	at @s
-#
-# @within	stardust:forge/second run return fail
+# @within	string in stardust:forge/second
 #
 
 ## Verify Awakened Forge multiblock structure

@@ -3,7 +3,7 @@
 #
 # @executed	in stardust:cavern
 #
-# @within	stardust:custom_blocks/cavern_portal/teleport_player if dimension minecraft:overworld in stardust:cavern run function stardust:custom_blocks/cavern_portal/create_teleporter [ in stardust:cavern ]
+# @within	stardust:custom_blocks/cavern_portal/teleport_player [ in stardust:cavern ]
 #
 
 # If area isn't loaded, stop here

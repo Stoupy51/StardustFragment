@@ -105,8 +105,8 @@
 									},
 									[
 										"",
-										{"text": "I","color": "white","italic": false,"font": "stardust:icons"},
-										[{"text":" ","italic": true,"color": "blue"}, {"translate": "stardustfragment"}]
+										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
 									]
 								],
 								"minecraft:container": [

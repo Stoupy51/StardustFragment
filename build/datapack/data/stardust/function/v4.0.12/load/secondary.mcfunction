@@ -4,7 +4,7 @@
 # @within	stardust:v4.0.12/load/main
 #
 
-# StardustFragment
+# Stardust Fragment
 scoreboard objectives add stardust.data dummy
 tag Stoupy51 add convention.debug
 

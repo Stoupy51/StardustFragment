@@ -1,9 +1,7 @@
 
 #> stardust:dimensions/is_expansion_installed
 #
-# @executed	as @e[tag=!...,predicate=stardust:transitions/outside] & at @s
-#
-# @within	stardust:dimensions/transitions/upward run return fail
+# @within	string in stardust:dimensions/transitions/upward
 #
 
 # Check if the expansion is installed

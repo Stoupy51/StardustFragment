@@ -14,8 +14,8 @@ scoreboard players set #mcload_error stardust.data 0
 execute unless score #game_version stardust.data matches 4903.. run scoreboard players set #mcload_error stardust.data 1
 
 # Decode errors
-execute if score #mcload_error stardust.data matches 1 run tellraw @a {"translate":"stardustfragment_error_this_version_is_made_for_minecraft_26_2","color":"red"}
-execute if score #dependency_error stardust.data matches 1 run tellraw @a {"translate":"stardustfragment_error_libraries_are_missingplease_download_the_","color":"red"}
+execute if score #mcload_error stardust.data matches 1 run tellraw @a {"translate":"stardust_fragment_error_this_version_is_made_for_minecraft_26_2","color":"red"}
+execute if score #dependency_error stardust.data matches 1 run tellraw @a {"translate":"stardust_fragment_error_libraries_are_missingplease_download_the","color":"red"}
 execute if score #dependency_error stardust.data matches 1 unless score #smithed.custom_block.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_10_0"}]
 execute if score #dependency_error stardust.data matches 1 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 10.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_10_0"}]
 execute if score #dependency_error stardust.data matches 1 unless score #smithed.crafter.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_10_0"}]
@@ -44,6 +44,6 @@ execute if score #dependency_error stardust.data matches 1 unless score #simplen
 execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 unless score #simplenergy.minor load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21"}]
 execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 21.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21"}]
 
-# Load StardustFragment
+# Load Stardust Fragment
 execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.0.12/load/confirm_load
 

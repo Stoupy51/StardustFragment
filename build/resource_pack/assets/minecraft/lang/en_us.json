@@ -590,7 +590,7 @@
 	"stardust.life_crystal": "Life Crystal",
 	"stardust.life_crystal_block": "Life Crystal Block",
 	"stardust.lingering_potion": "Lingering Potion",
-	"stardust.loaded_stardustfragment_v4_0_12": "[Loaded StardustFragment v4.0.12]",
+	"stardust.loaded_stardust_fragment_v4_0_12": "[Loaded Stardust Fragment v4.0.12]",
 	"stardust.loose_an_ultimate_dragon_essence_by_not_throwing_it_in_the_ultim": "Loose an Ultimate Dragon Essence by not throwing it in the Ultimate Dimension",
 	"stardust.loot": "Loot:",
 	"stardust.loot_awakened_stardust_stardust_essence": "Loot: Awakened Stardust, Stardust Essence",
@@ -1160,6 +1160,9 @@
 	"stardust_evolution": "Stardust Evolution",
 	"stardust_fragment": "Stardust Fragment",
 	"stardust_fragment_awakened_forge": "(Stardust Fragment) Awakened Forge",
+	"stardust_fragment_error_libraries_are_missingplease_download_the": "Stardust Fragment Error: Libraries are missing\nplease download the right Stardust Fragment datapack\nor download each of these libraries one by one:",
+	"stardust_fragment_error_this_version_is_made_for_minecraft_26_2": "Stardust Fragment Error: This version is made for Minecraft 26.2+.",
+	"stardust_fragment_manual": "Stardust Fragment Manual",
 	"stardust_fragment_no_other_players_are_currently_connected_to_te": "[Stardust Fragment] No other players are currently connected to teleport to.",
 	"stardust_fragment_quarry_region_size_cannot_be_larger_than_500_m": "[Stardust Fragment] Quarry region size cannot be larger than 500 million blocks.",
 	"stardust_fragment_teleportation_cancelled_because_you_moved": "[Stardust Fragment] Teleportation cancelled because you moved!",
@@ -1183,9 +1186,5 @@
 	"stardust_solar_panel": "Stardust Solar Panel",
 	"stardust_soldier": "Stardust Soldier",
 	"stardust_soldier_evoker_2x_health_3x_damage_1_25x_speed": "  - Stardust Soldier/Evoker: 2x health, 3x damage, 1.25x speed",
-	"stardust_technology": "Stardust Technology",
-	"stardustfragment": "StardustFragment",
-	"stardustfragment_error_libraries_are_missingplease_download_the_": "StardustFragment Error: Libraries are missing\nplease download the right StardustFragment datapack\nor download each of these libraries one by one:",
-	"stardustfragment_error_this_version_is_made_for_minecraft_26_2": "StardustFragment Error: This version is made for Minecraft 26.2+.",
-	"stardustfragment_manual": "StardustFragment Manual"
+	"stardust_technology": "Stardust Technology"
 }

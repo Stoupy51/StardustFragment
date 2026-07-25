@@ -3,7 +3,7 @@
 #
 # @executed	in stardust:ultimate
 #
-# @within	stardust:custom_blocks/ultimate_portal/teleport_player if dimension minecraft:overworld in stardust:ultimate run function stardust:custom_blocks/ultimate_portal/create_teleporter [ in stardust:ultimate ]
+# @within	stardust:custom_blocks/ultimate_portal/teleport_player [ in stardust:ultimate ]
 #
 
 execute if dimension minecraft:overworld in stardust:ultimate at @n[tag=stardust.ultimate_portal,distance=..100] run return run tp @s ~ ~1 ~

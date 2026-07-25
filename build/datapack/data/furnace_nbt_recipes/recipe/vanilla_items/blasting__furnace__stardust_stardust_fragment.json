@@ -13,16 +13,17 @@
 				[
 					"",
 					{
-						"text": "I",
+						"text": "ꀁ",
 						"color": "white",
 						"italic": false,
-						"font": "stardust:icons"
+						"font": "stardust:tooltip"
 					},
 					[{
-						"text":" ",
-						"italic": true,
-						"color": "blue"
-					}, {"translate": "stardustfragment"}]
+						"text":"뀁",
+						"italic": false,
+						"color": "white",
+						"font": "stardust:tooltip"
+					}, {"translate": "stardust_fragment"}]
 				]
 			],
 			"minecraft:custom_data": {

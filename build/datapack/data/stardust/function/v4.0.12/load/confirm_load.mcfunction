@@ -113,7 +113,7 @@ scoreboard objectives add stardust.open_manual minecraft.used:minecraft.written_
 scoreboard objectives add stardust.forge_timer dummy
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardustfragment_v4_0_12","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment_v4_0_12","color":"green"}
 scoreboard players set #stardust.loaded load.status 1
 function stardust:v4.0.12/load/set_items_storage
 

@@ -3,7 +3,7 @@
 #
 # @executed	in stardust:ultimate
 #
-# @within	stardust:custom_blocks/ultimate_portal/teleport_player if dimension minecraft:overworld in stardust:ultimate run function stardust:custom_blocks/ultimate_portal/create_teleporter [ in stardust:ultimate ]
+# @within	stardust:custom_blocks/ultimate_portal/teleport_player [ in stardust:ultimate ]
 #
 
 # No portal to place, just teleport player

@@ -3,7 +3,7 @@
 #
 # @executed	in stardust:celestial
 #
-# @within	stardust:custom_blocks/celestial_portal/teleport_player if dimension minecraft:overworld in stardust:celestial run function stardust:custom_blocks/celestial_portal/create_teleporter [ in stardust:celestial ]
+# @within	stardust:custom_blocks/celestial_portal/teleport_player [ in stardust:celestial ]
 #
 
 # Teleport the player

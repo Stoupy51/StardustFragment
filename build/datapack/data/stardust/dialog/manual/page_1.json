@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:notice",
 	"title": {
-		"translate": "stardustfragment_manual",
+		"translate": "stardust_fragment_manual",
 		"underlined": true
 	},
 	"body": [

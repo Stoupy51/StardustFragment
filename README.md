@@ -88,7 +88,7 @@ Join our active [Discord community](https://discord.gg/anxzu6rA9F) to:
 
 ## 📚 Libraries/Modules used, conventions, guideline, tips followed
 - 🍲 [StewBeet](https://github.com/Stoupy51/StewBeet) (datapack/resource pack framework)
-- ⚡ [SimplEnergy](https://github.com/Stoupy51/SimplEnergy) (energy system — requires v2.0.15+)
+- ⚡ [SimplEnergy](https://github.com/Stoupy51/SimplEnergy) (energy system: requires v2.0.15+)
 - ⚡ [DatapackEnergy](https://github.com/ICY105/DatapackEnergy) (energy library)
 - 🛠️ [Smithed Custom Block Placement](https://wiki.smithed.dev/libraries/custom-block/)
 - 🛠️ [Smithed Crafter](https://wiki.smithed.dev/libraries/crafter/)

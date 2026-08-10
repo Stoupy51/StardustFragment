@@ -1,9 +1,9 @@
 
 #> stardust:utils/wormhole_potion/teleport_to
 #
-# @within	string in stardust:utils/wormhole_potion/set_teleport_command
+# @within	string in stardust:utils/wormhole_potion/set_teleport_command {"name":"$(player_name)"}
 #
-# @args		name (unknown)
+# @args		name (string)
 #
 
 # Slow falling effect to avoid fall damage

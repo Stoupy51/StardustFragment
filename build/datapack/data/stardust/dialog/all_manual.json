@@ -2,11 +2,11 @@
 	"type": "minecraft:dialog_list",
 	"title": [
 		"",
-		{"sprite": "stardust:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"},
+		{"text": "肵","font": "stardust:renders","shadow_color": [0,0,0,0]},
 		" ",
 		{"translate": "stardust_fragment_manual","underlined": true},
 		" ",
-		{"sprite": "stardust:item/dialog_sprite/pack_icon","shadow_color": [0,0,0,0],"atlas": "minecraft:items"}
+		{"text": "肵","font": "stardust:renders","shadow_color": [0,0,0,0]}
 	],
 	"dialogs": [
 		"stardust:manual/page_1",

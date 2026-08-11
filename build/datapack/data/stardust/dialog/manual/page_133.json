@@ -3,14 +3,14 @@
 	"title": [
 		"",
 		{
-			"sprite": "stardust:item/dialog_sprite/health_artifact_lv2",
+			"text": "肋",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		},
 		" ",
 		[{
@@ -19,14 +19,14 @@
 		}, ".2"],
 		" ",
 		{
-			"sprite": "stardust:item/dialog_sprite/health_artifact_lv2",
+			"text": "肋",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		}
 	],
 	"body": [

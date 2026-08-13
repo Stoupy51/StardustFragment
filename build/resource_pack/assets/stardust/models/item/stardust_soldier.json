@@ -1612,7 +1612,7 @@
 			"color": 0,
 			"children": [
 				{"name": "jambes","origin": [0,0,0],"color": 0,"children": [0,1]},
-				{"name": "fémur","origin": [0,0,0],"color": 0,"children": [2,3,4,5,6,{"name": "pointe","origin": [0,0,0],"color": 0,"children": [7,8,9,10,11,12,13]}]},
+				{"name": "fÃ©mur","origin": [0,0,0],"color": 0,"children": [2,3,4,5,6,{"name": "pointe","origin": [0,0,0],"color": 0,"children": [7,8,9,10,11,12,13]}]},
 				{"name": "colonne vertebral","origin": [8,8,8],"color": 0,"children": [{"name": "BAS","origin": [8,8,8],"color": 0,"children": [14,15]},{"name": "HAUT","origin": [8,8,8],"color": 0,"children": [16,17]},{"name": "GAUCHE","origin": [8,8,8],"color": 0,"children": [18,19,20]},{"name": "DROITE","origin": [8,8,8],"color": 0,"children": [21,22,23]},{"name": "DERRIERE","origin": [8,8,8],"color": 0,"children": []}]},
 				{"name": "COEUR","origin": [0,0,0],"color": 0,"children": [24,25,26,27,28,{"name": "veines","origin": [0,0,0],"color": 0,"children": [29,30,31,32,33,34,35,36]}]},
 				{"name": "EPAULES","origin": [8,8,8],"color": 0,"children": [37,38]},

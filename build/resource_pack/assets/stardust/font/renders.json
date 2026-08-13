@@ -148,6 +148,6 @@
 		{"type": "bitmap","file": "stardust:font/renders/stardust_stardust_bat_256x256.png","ascent": 9,"height": 12,"chars": ["育"]},
 		{"type": "bitmap","file": "stardust:font/renders/stardust_stardust_pillar_256x256.png","ascent": 9,"height": 12,"chars": ["肳"]},
 		{"type": "bitmap","file": "stardust:font/renders/stardust_stardust_guardian_256x256.png","ascent": 9,"height": 12,"chars": ["肴"]},
-		{"type": "bitmap","file": "stardust:font/renders/ICON_64x64.png","ascent": 9,"height": 12,"chars": ["肵"]}
+		{"type": "bitmap","file": "stardust:font/renders/icon_64x64.png","ascent": 9,"height": 12,"chars": ["肵"]}
 	]
 }

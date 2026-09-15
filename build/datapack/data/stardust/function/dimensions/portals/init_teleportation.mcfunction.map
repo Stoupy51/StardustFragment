@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "init_teleportation.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/portals.py"
+	],
+	"names": [],
+	"mappings": "AA8J+D;;;;;;;;AAC/D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

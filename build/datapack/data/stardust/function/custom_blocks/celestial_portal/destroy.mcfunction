@@ -9,6 +9,7 @@
 # Datapack Energy
 function energy:v1/api/break_machine
 
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..1] run function stardust:custom_blocks/celestial_portal/replace_item
 

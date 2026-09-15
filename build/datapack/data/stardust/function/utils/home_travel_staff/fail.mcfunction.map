@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "fail.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAgQsD;;;;;;;;;AAAA"
+}

@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "display.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py",
+		"src/utils/custom_mobs/boss/stoup_army.py"
+	],
+	"names": [],
+	"mappings": "AAoF2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AC4C2C;AAC3C;AACA;AACA"
+}

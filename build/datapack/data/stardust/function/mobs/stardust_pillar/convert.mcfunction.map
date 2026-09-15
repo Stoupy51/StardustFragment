@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "convert.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_pillar.py"
+	],
+	"names": [],
+	"mappings": "AA2EsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

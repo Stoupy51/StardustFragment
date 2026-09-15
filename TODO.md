@@ -1,5 +1,6 @@
 
 Stardust Spawner machine :
+- To craft a Stardust Spawner, you need to break a Spawner to get a spawner shard (don't modify loot table, give it to player's that mine directly)
 - Takes a mob soul as input
 - Spawns a mob with the soul's properties
 - Animation: start scale 0 with NoAI, progress to scale 1 then enable AI

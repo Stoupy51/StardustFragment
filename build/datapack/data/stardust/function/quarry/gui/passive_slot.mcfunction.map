@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "passive_slot.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAoNiD;;;;;;;;;;;;;;;;;;;;;;;AACjD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

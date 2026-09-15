@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "spawn.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": "AAkN0C;;;;;;;;;;AAC1C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

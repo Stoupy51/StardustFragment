@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "compute_motion_towards.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAkGsD;;;;;;;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_mob.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stoup_army.py"
+	],
+	"names": [],
+	"mappings": "AAwKgD;;;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

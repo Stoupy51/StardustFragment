@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_destroy.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAoY0E;;;;;;;;AAC1E;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

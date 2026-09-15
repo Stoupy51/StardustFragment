@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "block_particles.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/snipers.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;AAoIuD"
+}

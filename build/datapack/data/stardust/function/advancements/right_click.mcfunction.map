@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "right_click.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py",
+		"src/utils/quarry.py",
+		"src/utils/snipers.py"
+	],
+	"names": [],
+	"mappings": "AAsDkD;;;;;;;;AAClD;AACA;AACA;AACA;ACiDkD;AAClD;AACA;AACA;AChFA;AACA;AACA;AF2KA;AACA;AACA;AAwDA;AACA;AA0NkD;AAClD;AACA;AACA"
+}

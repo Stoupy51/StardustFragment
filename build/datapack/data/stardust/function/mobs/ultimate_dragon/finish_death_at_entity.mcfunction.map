@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "finish_death_at_entity.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAmjBqE;;;;;;;;AACrE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

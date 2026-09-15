@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "used_lingering_potion.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAqE4D;;;;;;;;AAC5D;AACA;AACA;AACA;AACA;AACA;AACA"
+}

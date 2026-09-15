@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "progress_stop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAqiBsD;;;;;;;;AACtD;AACA;AACA"
+}

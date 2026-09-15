@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "try_boss_music.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAslB6D;;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "fast_ticking.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": "AA8L2C;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stardust.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/stardust_mobs.py"
+	],
+	"names": [],
+	"mappings": "AAY+C;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

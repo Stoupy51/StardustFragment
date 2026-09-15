@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "changed_dimension.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AA8LwD;;;;;;;;AACxD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

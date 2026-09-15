@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "multiply_motion.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAmW+C;;;;;;;;;;;AAC/C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

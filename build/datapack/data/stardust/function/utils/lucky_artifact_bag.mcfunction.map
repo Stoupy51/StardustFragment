@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "lucky_artifact_bag.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAoekD;;;;;;;;AAClD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

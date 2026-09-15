@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "nether_wart.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AAqOE;AAAA;AAAA;AAAA;AAAA"
+}

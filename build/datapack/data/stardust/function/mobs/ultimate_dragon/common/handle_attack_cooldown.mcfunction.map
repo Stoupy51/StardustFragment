@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "handle_attack_cooldown.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AA8V4E;;;;;;;;AAC5E;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

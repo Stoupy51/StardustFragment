@@ -1,0 +1,11 @@
+{
+	"version": 3,
+	"file": "second_5.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/definitions/additions/equipments.py",
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;AA8iBuC;AACvC;AACA;AACA;AAFA;AACA;AACA;AAFA;AACA;AACA;;;;;;;;;;;;;;AC1IA;AACA;AACA"
+}

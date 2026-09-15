@@ -16,6 +16,7 @@ execute if score #health stardust.data matches ..0 run return fail
 # Reset death count
 scoreboard players set @s stardust.death 0
 
+
 # Update max health on respawn
 function stardust:utils/update_max_health
 

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "damage.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/snipers.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;AAoB8C"
+}

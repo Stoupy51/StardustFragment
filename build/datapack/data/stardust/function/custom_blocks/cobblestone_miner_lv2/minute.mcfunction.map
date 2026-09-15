@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "minute.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": "AAiHuD;;;;;;;;AACvD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

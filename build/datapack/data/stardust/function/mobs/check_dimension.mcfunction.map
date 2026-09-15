@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_dimension.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": "AAgD8C;;;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

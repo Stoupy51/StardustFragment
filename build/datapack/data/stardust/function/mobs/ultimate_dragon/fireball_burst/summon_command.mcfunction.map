@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_command.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAic4E;;;;;;;;AAC5E;AACA;AACA;AACA;AACA"
+}

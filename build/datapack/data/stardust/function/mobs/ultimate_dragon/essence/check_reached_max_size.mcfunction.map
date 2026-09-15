@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "check_reached_max_size.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAgK6E;;;;;;;;AAC7E;AACA;AACA;AACA;AACA;AACA"
+}

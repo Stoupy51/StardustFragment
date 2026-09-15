@@ -13,6 +13,7 @@ execute if entity @s[tag=!stardust.has_item_magnet] if items entity @s weapon.of
 # Revoke advancement
 advancement revoke @s only stardust:technical/inventory_changed
 
+
 # Grant Legendarium full armor effect
 scoreboard players set #success stardust.data 0
 execute if items entity @s armor.head *[custom_data~{stardust:{"legendarium_helmet":true}}] if items entity @s armor.chest *[custom_data~{stardust:{"legendarium_chestplate":true}}] if items entity @s armor.legs *[custom_data~{stardust:{"legendarium_leggings":true}}] if items entity @s armor.feet *[custom_data~{stardust:{"legendarium_boots":true}}] run scoreboard players set #success stardust.data 1

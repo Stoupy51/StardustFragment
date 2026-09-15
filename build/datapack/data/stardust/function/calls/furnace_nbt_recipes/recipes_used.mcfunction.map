@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "recipes_used.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/materials.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA8BC;AAAA;AAAA;AAAA;AAmBA;AAAA;AAqCA;AAAA"
+}

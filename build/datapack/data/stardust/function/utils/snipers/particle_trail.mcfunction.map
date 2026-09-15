@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "particle_trail.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/snipers.py"
+	],
+	"names": [],
+	"mappings": "AAiJsD;;;;;;;;;AACtD;AACA;AACA;AACA;AACA"
+}

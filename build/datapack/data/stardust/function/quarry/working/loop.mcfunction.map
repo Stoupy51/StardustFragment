@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "loop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAmZ6C;;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

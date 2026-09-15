@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "show_dialog.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AA+S2D;;;;;;;;;;;AAC3D;AACA"
+}

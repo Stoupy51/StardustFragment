@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "is_bracken_installed.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AAsHyD;;;;;;;AACzD;AACA;AACA;AACA"
+}

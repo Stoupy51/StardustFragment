@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "smelting_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/materials.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA8BC;AAAA;AAmBA;AAqCA"
+}

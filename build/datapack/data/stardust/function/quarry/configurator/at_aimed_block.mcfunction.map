@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "at_aimed_block.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAoI4D;;;;;;;;AAC5D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

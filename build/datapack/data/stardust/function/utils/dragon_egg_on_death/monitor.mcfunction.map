@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "monitor.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAib2D;;;;;;;AAC3D;AACA;AACA;AACA;AACA;AACA"
+}

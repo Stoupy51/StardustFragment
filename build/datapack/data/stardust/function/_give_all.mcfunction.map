@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "_give_all.mcfunction",
+	"sourceRoot": "../../../../..",
+	"sources": [
+		"src/definitions/additions/materials.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AAiDC;AAAA"
+}

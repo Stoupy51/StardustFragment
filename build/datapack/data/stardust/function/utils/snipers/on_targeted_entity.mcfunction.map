@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_targeted_entity.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/snipers.py"
+	],
+	"names": [],
+	"mappings": "AAuI0D;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA"
+}

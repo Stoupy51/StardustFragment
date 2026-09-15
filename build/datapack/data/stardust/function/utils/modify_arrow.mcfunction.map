@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "modify_arrow.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AA0Z4C;;;;;;;;;;;;AAC5C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

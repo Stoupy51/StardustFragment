@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "cavern.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/cavern_mobs.py"
+	],
+	"names": [],
+	"mappings": "AAW6C;;;;;;;;AAC7C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "item_modifier.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AA+H4D;;;;;;;;;;;AAC5D;AACA"
+}

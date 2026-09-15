@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_new_ball.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAucyE;;;;;;;;AACzE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

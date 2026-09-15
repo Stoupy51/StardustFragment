@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "current_position.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAibyD;;;;;;;;AACzD;AACA;AACA"
+}

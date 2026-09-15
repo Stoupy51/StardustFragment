@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "get_dimension_from_piglin.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/portals.py"
+	],
+	"names": [],
+	"mappings": "AAqHyD;;;;;;;;AACzD;AACA;AACA;AACA"
+}

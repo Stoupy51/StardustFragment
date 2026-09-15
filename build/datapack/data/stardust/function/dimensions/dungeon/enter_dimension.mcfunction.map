@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "enter_dimension.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AA0M4D;;;;;;;;AAC5D;AACA;AACA;AACA;AACA;AACA;AACA"
+}

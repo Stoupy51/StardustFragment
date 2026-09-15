@@ -12,6 +12,7 @@ scoreboard players operation #storage stardust.data = @s energy.storage
 # Datapack Energy
 function energy:v1/api/break_machine
 
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:warped_hyphae"}},distance=..1] run function stardust:custom_blocks/stardust_battery/replace_item
 

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "set_coordinates.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAmJ6D;;;;;;;;AAC7D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

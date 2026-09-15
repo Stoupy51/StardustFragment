@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "remove_bossbars.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stoup_army.py",
+		"src/utils/custom_mobs/boss/stardust_pillar.py",
+		"src/utils/custom_mobs/boss/stardust_guardian.py",
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AAqC8C;ACKA;ACLA;ACUA"
+}

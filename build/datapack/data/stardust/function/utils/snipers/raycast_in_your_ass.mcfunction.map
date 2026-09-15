@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "raycast_in_your_ass.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/snipers.py"
+	],
+	"names": [],
+	"mappings": "AAqF2D;;;;;;;;;;;AAC3D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

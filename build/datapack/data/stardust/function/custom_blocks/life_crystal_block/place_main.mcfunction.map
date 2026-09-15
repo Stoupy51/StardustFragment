@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "place_main.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/equipments.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;AA6aC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

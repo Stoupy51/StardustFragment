@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "shulkers_loop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AA8UsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

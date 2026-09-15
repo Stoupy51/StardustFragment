@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "schedule_teleport.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA2OmE"
+}

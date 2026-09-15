@@ -97,6 +97,7 @@ scoreboard players add #total_deepslate_stardust_ore stardust.data 0
 scoreboard players add #total_stardust_ore stardust.data 0
 scoreboard players add #total_stardust_block stardust.data 0
 scoreboard players add #total_stardust_core stardust.data 0
+
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_stardust_core"}, ": "],{"score":{"name":"#total_stardust_core","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_stardust_block"}, ": "],{"score":{"name":"#total_stardust_block","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_stardust_ore"}, ": "],{"score":{"name":"#total_stardust_ore","objective":"stardust.data"},"color":"yellow"}]

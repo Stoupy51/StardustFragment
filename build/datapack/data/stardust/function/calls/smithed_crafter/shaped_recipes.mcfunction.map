@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "shaped_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/materials.py",
+		"src/definitions/additions/energy.py",
+		"src/definitions/additions/equipments.py",
+		"src/definitions/additions/miscellaneous.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AAodC;AAAA;AAgBA;AAAA;AAiBA;AAAA;AAiCA;AAcA;AAAA;AAeA;AAAA;AAeA;AAAA;AAeA;AAAA;AAeA;AC1eA;AAAA;AAsBA;AAAA;AAkDA;AAiBA;AAAA;AAkBA;AAAA;AAqBA;AAmBA;AAmBA;AAmBA;AAmBA;AAmBA;AAAA;AAAA;AAAA;AAAA;AAAA;AAiCA;AA8BA;AAAA;AAiEC;AAAA;AAAA;AAAA;AAAA;AAgLD;AAAA;AA4BA;AAAA;AAqBA;AAAA;AAmBA;AAAA;AAoBA;AAAA;AAoBA;AAAA;AC9ZA;AAmBA;AC/BC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

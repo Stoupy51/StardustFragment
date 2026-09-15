@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "craft.mcfunction",
+	"sourceRoot": "../../../../../../../../../..",
+	"sources": [
+		"src/definitions/additions/equipments.py"
+	],
+	"names": [],
+	"mappings": "AAkLC;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

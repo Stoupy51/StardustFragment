@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "teleport_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/portals.py"
+	],
+	"names": [],
+	"mappings": "AAqMiE;;;;;;AACjE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

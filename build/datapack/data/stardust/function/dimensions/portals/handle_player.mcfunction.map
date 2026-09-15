@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "handle_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/portals.py"
+	],
+	"names": [],
+	"mappings": "AAiJ0D;;;;;;;;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -7,6 +7,7 @@
 # Reset timer
 scoreboard players set #minute stardust.data 1
 
+
 # Get world spawn position and dimension every minute
 execute summon marker run function stardust:utils/get_world_spawn_from_marker
 

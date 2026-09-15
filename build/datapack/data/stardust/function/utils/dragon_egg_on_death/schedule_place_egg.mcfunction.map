@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "schedule_place_egg.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAwbsE;;;;;;;;AACtE;AACA;AACA;AACA"
+}

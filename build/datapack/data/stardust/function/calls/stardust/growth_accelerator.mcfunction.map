@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "growth_accelerator.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": "AAsO2D;;;;;;AAC3D;AACA;AACA;AACA;AACA"
+}

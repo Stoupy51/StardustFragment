@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "is_fully_grown.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/miscellaneous.py"
+	],
+	"names": [],
+	"mappings": "AA4HC;;;;;;;;AAAA;AAAA;AAAA;AAAA"
+}

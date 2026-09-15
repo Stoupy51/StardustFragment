@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "second.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py",
+		"src/utils/dimensions.py",
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;AA+FoC;AAAA;AAAA;;;;;;;;AC6CpC;AACA;AACA;AAoFA;AACA;AACA;AClMA;AACA;AACA;AACA;AACA;AACA"
+}

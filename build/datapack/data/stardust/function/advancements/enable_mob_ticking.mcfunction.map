@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "enable_mob_ticking.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": "AAiLyD;;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

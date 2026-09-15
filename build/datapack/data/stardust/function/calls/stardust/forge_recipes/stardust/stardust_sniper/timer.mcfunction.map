@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "timer.mcfunction",
+	"sourceRoot": "../../../../../../../../../..",
+	"sources": [
+		"src/definitions/additions/equipments.py"
+	],
+	"names": [],
+	"mappings": "AA6MC;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

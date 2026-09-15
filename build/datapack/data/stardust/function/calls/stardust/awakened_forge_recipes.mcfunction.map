@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "awakened_forge_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/equipments.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;AA8HC;AA0BA;AA0BA;AA2BA;AA4BA;AA4BA"
+}

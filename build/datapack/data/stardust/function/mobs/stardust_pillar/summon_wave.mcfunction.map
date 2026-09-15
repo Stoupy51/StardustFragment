@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_wave.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_pillar.py"
+	],
+	"names": [],
+	"mappings": "AA6LA;;;;;;;;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "kill_shulkers.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAsUsD;;;;;;;;AACtD;AACA;AACA;AACA;AACA;AACA;AACA"
+}

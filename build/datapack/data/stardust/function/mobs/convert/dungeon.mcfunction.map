@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "dungeon.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/dungeon_mobs.py"
+	],
+	"names": [],
+	"mappings": "AAW8C;;;;;;;;AAC9C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

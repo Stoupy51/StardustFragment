@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "launch_towards_player.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_pillar.py"
+	],
+	"names": [],
+	"mappings": "AA+NoE;;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "layer_y.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": "AA+LkE;;;;;;;;;AAClE;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

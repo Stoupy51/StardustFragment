@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "life_crystal_block.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_ore_generation.py"
+	],
+	"names": [],
+	"mappings": "AA8E6E;;;;;;AAC7E;AACA;AACA;AACA;AACA;AACA;AACA"
+}

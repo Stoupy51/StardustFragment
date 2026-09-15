@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "not_in_ultimate_dimension.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AA+IgF;;;;;;;;AAChF;AACA;AACA;AACA;AACA;AACA;AACA"
+}

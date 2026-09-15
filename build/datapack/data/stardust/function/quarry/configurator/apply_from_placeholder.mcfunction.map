@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "apply_from_placeholder.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAkQoE;;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

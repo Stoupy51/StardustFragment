@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "mob_second.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stoup_army.py",
+		"src/utils/custom_mobs/stardust_mobs.py",
+		"src/utils/custom_mobs/boss/stardust_pillar.py",
+		"src/utils/custom_mobs/boss/stardust_guardian.py",
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;AA2H8C;AC/CA;AC4CA;AClCA;AC2LA"
+}

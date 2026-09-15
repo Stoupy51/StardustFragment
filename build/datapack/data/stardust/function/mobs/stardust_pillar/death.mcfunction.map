@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_pillar.py"
+	],
+	"names": [],
+	"mappings": "AAiPoD;;;;;;;;AACpD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

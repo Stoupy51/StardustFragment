@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "place_egg_loop.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAickE;;;;;;;;;AAClE;AACA;AACA;AACA;AACA;AACA;AACA"
+}

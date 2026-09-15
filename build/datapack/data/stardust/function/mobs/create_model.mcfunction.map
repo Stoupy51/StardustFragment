@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "create_model.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": "AAyD2C;;;;;;;;;;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

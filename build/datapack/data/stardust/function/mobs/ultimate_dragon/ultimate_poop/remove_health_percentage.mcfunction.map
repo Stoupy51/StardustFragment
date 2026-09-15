@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_health_percentage.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/ultimate_dragon.py"
+	],
+	"names": [],
+	"mappings": "AAgaqF;;;;;;;;AACrF;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

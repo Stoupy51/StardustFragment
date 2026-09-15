@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ensure_built.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AA+CiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA"
+}

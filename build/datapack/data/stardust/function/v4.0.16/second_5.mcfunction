@@ -7,6 +7,7 @@
 # Reset timer
 scoreboard players set #second_5 stardust.data -10
 
+
 # Apply Legendarium full armor effect
 effect give @a[tag=stardust.legendarium_full_armor] minecraft:jump_boost 6 2 true
 

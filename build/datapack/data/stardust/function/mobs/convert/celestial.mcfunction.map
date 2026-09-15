@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "celestial.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/celestial_mobs.py"
+	],
+	"names": [],
+	"mappings": "AAWgD;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

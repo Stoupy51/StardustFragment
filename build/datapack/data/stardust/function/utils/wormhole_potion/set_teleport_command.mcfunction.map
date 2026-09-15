@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "set_teleport_command.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AA4SoE;;;;;;;;;;AACpE;AACA"
+}

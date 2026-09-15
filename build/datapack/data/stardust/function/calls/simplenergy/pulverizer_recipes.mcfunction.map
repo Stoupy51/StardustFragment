@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "pulverizer_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/materials.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA8BC;AAmBA;AAqCA;;;;;;;;AA8EA;AA+PA;AA0BC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

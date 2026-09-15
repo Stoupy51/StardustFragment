@@ -15,6 +15,7 @@ function stardust:quarry/stop_force_load
 # Datapack Energy
 function energy:v1/api/break_machine
 
+
 # Replace the item with the custom one
 execute as @n[type=item,nbt={Item:{id:"minecraft:barrel"}},distance=..1] run function stardust:custom_blocks/quarry_lv1/replace_item
 

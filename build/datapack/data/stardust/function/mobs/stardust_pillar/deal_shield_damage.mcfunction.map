@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "deal_shield_damage.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_pillar.py"
+	],
+	"names": [],
+	"mappings": "AAwNiE;;;;;;;;AACjE;AACA;AACA;AACA"
+}

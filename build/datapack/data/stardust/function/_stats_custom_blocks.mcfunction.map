@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "_stats_custom_blocks.mcfunction",
+	"sourceRoot": "../../../../..",
+	"sources": [
+		"src/definitions/additions/miscellaneous.py",
+		"src/definitions/additions/equipments.py",
+		"src/definitions/additions/energy.py",
+		"src/definitions/additions/materials.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAuUE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AA7BD;AAxBA;AAxBA;AAxBA;AAxBA;AA3BA;AAxBA;AA3BA;ACiTA;ACoUA;AApBA;AApBA;AAnBA;AArBA;AA5BA;AAnCA;AAxBA;AA1BA;AAxBA;AAvBA;AAtBA;AAtBC;AAAA;AAAA;AAAA;AAAA;AAhID;AAnBA;AAnBA;AAnBA;AAnBA;AAnBA;AArBA;AAlBA;AAjBA;AA5BA;AAtBA;AAtBA;AC+XA;AAjBA;AAhBA;AAvBC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;;;;AAvED;AAdA;AAdA;AAfA;AArQA;AAmCA;AAAA;AAnCA;AAqQA;AAeA;AAcA;AAcA;;;;;;AAuEC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAuBD;AAgBA;AAiBA;AD/XA;AAsBA;AAsBA;AA4BA;AAiBA;AAkBA;AAqBA;AAmBA;AAmBA;AAmBA;AAmBA;AAmBA;AAgIC;AAAA;AAAA;AAAA;AAAA;AAsBD;AAsBA;AAuBA;AAwBA;AA0BA;AAwBA;AAmCA;AA4BA;AAqBA;AAmBA;AAoBA;AAoBA;ADpUA;ADjTA;AA2BA;AAwBA;AA2BA;AAwBA;AAwBA;AAwBA;AAwBA;AA6BC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "part_11.mcfunction",
+	"sourceRoot": "../../../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AA2F4E;;;;;;AAC5E;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

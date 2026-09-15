@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "find_teleporter.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/portals.py"
+	],
+	"names": [],
+	"mappings": "AA0NiE;;;;;;;;AACjE;AACA;AACA;AACA;AACA"
+}

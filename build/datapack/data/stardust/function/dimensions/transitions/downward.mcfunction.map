@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "downward.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AAqKyD;;;;;;;;AACzD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

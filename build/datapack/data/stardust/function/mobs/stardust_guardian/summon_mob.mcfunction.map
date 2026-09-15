@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon_mob.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_guardian.py"
+	],
+	"names": [],
+	"mappings": "AAwI2D;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAC3D;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}

@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "destroy.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AAkFwD;;;;;;;;AACxD;AACA;AACA;AACA;AACA;AACA"
+}

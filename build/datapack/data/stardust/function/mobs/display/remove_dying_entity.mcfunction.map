@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "remove_dying_entity.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/technical.py"
+	],
+	"names": [],
+	"mappings": "AAsI0D;;;;;;;AAC1D;AACA;AACA;AACA;AACA;AACA;AACA"
+}

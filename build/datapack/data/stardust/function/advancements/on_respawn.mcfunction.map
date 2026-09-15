@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_respawn.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": "AAiFiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AA0FiD;AACjD;AACA;AACA"
+}

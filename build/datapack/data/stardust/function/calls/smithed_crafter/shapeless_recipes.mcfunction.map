@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "shapeless_recipes.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/definitions/additions/materials.py",
+		"src/definitions/additions/energy.py",
+		"src/definitions/additions/equipments.py",
+		"src/definitions/additions/miscellaneous.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AAiDC;AAAA;AAAA;AAAA;AAqCA;AAAA;AAmBA;AAAA;AAiBA;AApDA;AAAA;;;;;;;;AA8FA;AAqBA;AAuNA;AA6CC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AA0ED;AAAA;AAyFA;AAiBA;AC/cA;AAwQA;AAAA;AAoBA;AAuBC;AA4CD;AAuBA;AAwBA;AA0BA;AAwBA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AC3TE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAuBF;AAyDA;AAgBA;AAsCA;ACjTA;AAAA;AAAA;AAAA;AA2BA;AAwBA;AAAA;AAAA;AAAA;AA2BA;AAwBA;AAwBA;AAwBA;AAwBA;AAsDA;AA+CA;AAoDA;AA8DA;AAAA"
+}

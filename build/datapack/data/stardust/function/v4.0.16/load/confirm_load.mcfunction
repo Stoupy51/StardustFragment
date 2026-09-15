@@ -112,6 +112,7 @@ scoreboard objectives add stardust.open_manual minecraft.used:minecraft.written_
 # Awakened Forge timer
 scoreboard objectives add stardust.forge_timer dummy
 
+
 # Confirm load
 tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment_v4_0_16","color":"green"}
 scoreboard players set #stardust.loaded load.status 1

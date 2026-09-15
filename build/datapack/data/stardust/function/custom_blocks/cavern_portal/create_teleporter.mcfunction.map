@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "create_teleporter.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/portals.py"
+	],
+	"names": [],
+	"mappings": "AAiOE;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

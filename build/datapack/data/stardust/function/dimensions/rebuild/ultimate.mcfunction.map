@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ultimate.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AAyEyD;;;;;;;;AACzD;AACA;AACA;AACA;AACA"
+}

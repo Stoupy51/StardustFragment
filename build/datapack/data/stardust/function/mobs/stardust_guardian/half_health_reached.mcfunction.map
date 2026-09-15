@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "half_health_reached.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stardust_guardian.py"
+	],
+	"names": [],
+	"mappings": "AA8GoE;;;;;;;;AACpE;AACA;AACA;AACA;AACA;AACA"
+}

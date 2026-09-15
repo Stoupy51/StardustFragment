@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "death.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stoup_army.py"
+	],
+	"names": [],
+	"mappings": "AA4L2C;;;;;;;;AAC3C;AACA;AACA;AACA;AACA;AACA;AACA"
+}

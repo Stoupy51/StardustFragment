@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "stop_force_load.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/quarry.py"
+	],
+	"names": [],
+	"mappings": "AA2YgD;;;;;;;;;;;;;;AAChD;AACA;AACA;AACA;AACA;AACA"
+}

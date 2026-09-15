@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "consume_nether_star.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/machines.py"
+	],
+	"names": [],
+	"mappings": "AA8E+D;;;;;;;;AAC/D;AACA;AACA;AACA;AACA;AACA"
+}

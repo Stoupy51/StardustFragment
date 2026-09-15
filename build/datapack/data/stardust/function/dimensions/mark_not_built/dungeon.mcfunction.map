@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "dungeon.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/dimensions.py"
+	],
+	"names": [],
+	"mappings": "AAiFgE;;;;;;AAChE;AACA;AACA"
+}

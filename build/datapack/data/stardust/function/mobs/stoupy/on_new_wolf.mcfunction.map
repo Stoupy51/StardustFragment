@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "on_new_wolf.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/boss/stoup_army.py"
+	],
+	"names": [],
+	"mappings": "AA+KiD;;;;;;;;AACjD;AACA;AACA;AACA;AACA;AACA"
+}

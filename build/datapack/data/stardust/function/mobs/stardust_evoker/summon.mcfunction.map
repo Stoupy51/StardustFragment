@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "summon.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_mobs/stardust_mobs.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;AA6B6C"
+}

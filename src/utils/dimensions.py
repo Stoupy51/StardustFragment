@@ -123,18 +123,18 @@ return fail
 """)
 
 	# Predicate to check if entity is outside dimensions and needs teleportation
-	has_brain: JsonDict = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"nbt":"{Brain:{}}"}}
-	outside_range: JsonDict = {"condition":"minecraft:inverted","term":{"condition":"minecraft:location_check","predicate":{"position":{"y":{"min":-32,"max":500}}}}}
-	in_my_dimensions: JsonDict = {"condition":"minecraft:any_of","terms":[
-		{"condition":"minecraft:location_check","predicate":{"dimension":"minecraft:overworld","position":{"y":{"min":500}}}},
-		*[{"condition":"minecraft:location_check","predicate":{"dimension":f"stardust:{dim}"}} for dim in ["celestial", "stardust", "dungeon", "ultimate"]],
+	has_brain: JsonDict = {"type":"minecraft:entity_properties","entity":"this","predicate":{"nbt":"{Brain:{}}"}}
+	outside_range: JsonDict = {"type":"minecraft:inverted","term":{"type":"minecraft:location_check","predicate":{"position":{"y":{"min":-32,"max":500}}}}}
+	in_my_dimensions: JsonDict = {"type":"minecraft:any_of","terms":[
+		{"type":"minecraft:location_check","predicate":{"dimension":"minecraft:overworld","position":{"y":{"min":500}}}},
+		*[{"type":"minecraft:location_check","predicate":{"dimension":f"stardust:{dim}"}} for dim in ["celestial", "stardust", "dungeon", "ultimate"]],
 	]}
-	predicate: JsonDict = {"condition":"minecraft:all_of","terms":[has_brain, outside_range, in_my_dimensions]}
+	predicate: JsonDict = {"type":"minecraft:all_of","terms":[has_brain, outside_range, in_my_dimensions]}
 	Mem.ctx.data[ns].predicates["transitions/outside"] = set_json_encoder(Predicate(predicate), max_level=4)
 
 	# Predicates for transition up and down
-	Mem.ctx.data[ns].predicates["transitions/up"] = set_json_encoder(Predicate({"condition":"minecraft:location_check","predicate":{"position":{"y":{"min":500}}}}))
-	Mem.ctx.data[ns].predicates["transitions/down"] = set_json_encoder(Predicate({"condition":"minecraft:location_check","predicate":{"position":{"y":{"max":-32}}}}))
+	Mem.ctx.data[ns].predicates["transitions/up"] = set_json_encoder(Predicate({"type":"minecraft:location_check","predicate":{"position":{"y":{"min":500}}}}))
+	Mem.ctx.data[ns].predicates["transitions/down"] = set_json_encoder(Predicate({"type":"minecraft:location_check","predicate":{"position":{"y":{"max":-32}}}}))
 
 	# Every second, check for entities outside dimensions
 	write_versioned_function("second", f"""

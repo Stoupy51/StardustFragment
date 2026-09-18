@@ -53,13 +53,11 @@ bossbar set {ns}:ultimate_dragon max {DRAGON_MAX_HEALTH}
 			"requirements": {
 				"trigger": "minecraft:tick",
 				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:entity_scores",
-							"entity": "this",
-							"scores": {f"{ns}.lingering_potion": {"min": 1}}
-						}
-					]
+					"player": {
+						"type": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {f"{ns}.lingering_potion": {"min": 1}}
+					}
 				}
 			}
 		},
@@ -274,8 +272,8 @@ tag @s remove {ns}.new_mob
 	write_function(f"{ns}:mobs/loop/mob_second", f"execute if entity @s[tag={ns}.ultimate_dragon] run return run function {ns}:mobs/ultimate_dragon/second")
 
 	# Ultimate Dragon's looping behavior
-	Mem.ctx.data[ns].predicates["random/0.5"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance":0.5}))
-	Mem.ctx.data[ns].predicates["random/0.2"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance":0.2}))
+	Mem.ctx.data[ns].predicates["random/0.5"] = set_json_encoder(Predicate({"type":"minecraft:random_chance","chance":0.5}))
+	Mem.ctx.data[ns].predicates["random/0.2"] = set_json_encoder(Predicate({"type":"minecraft:random_chance","chance":0.2}))
 	write_function(f"{ns}:mobs/ultimate_dragon/second", f"""
 # Launch tick function
 scoreboard players set #ultimate_dragon_tick {ns}.data 20
@@ -623,9 +621,9 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 							"type": "minecraft:loot_table",
 							"value": Item.from_id(item).loot_table,
 							**({
-								"functions": [
+								"modifier": [
 									{
-										"function": "minecraft:set_count",
+										"type": "minecraft:set_count",
 										"count": {
 											"type": "minecraft:uniform",
 											"min": 12,

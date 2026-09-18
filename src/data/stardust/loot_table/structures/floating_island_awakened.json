@@ -13,10 +13,11 @@
 					"type": "minecraft:item",
 					"weight": 10,
 					"name": "minecraft:book",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:enchant_with_levels",
+							"type": "minecraft:enchant_with_levels",
 							"levels": {
+								"type": "minecraft:uniform",
 								"min": 25,
 								"max": 35
 							},
@@ -48,9 +49,9 @@
 					"type": "minecraft:loot_table",
 					"weight": 10,
 					"value": "stardust:random_seed",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,

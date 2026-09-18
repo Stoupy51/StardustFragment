@@ -13,9 +13,9 @@
 					"type": "minecraft:item",
 					"weight": 70,
 					"name": "minecraft:lapis_lazuli",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -39,10 +39,11 @@
 					"type": "minecraft:loot_table",
 					"weight": 100,
 					"value": "stardust:i/stardust_ingot",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 1,
 								"max": 8
 							},
@@ -59,9 +60,9 @@
 					"type": "minecraft:loot_table",
 					"weight": 10,
 					"value": "stardust:random_seed",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,

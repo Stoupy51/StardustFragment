@@ -157,7 +157,11 @@ scoreboard players add #remaining_displays {ns}.data 1
 		"criteria": {
 			"requirements": {
 				"trigger": "minecraft:player_hurt_entity",
-				"conditions": {"entity": {"nbt": f"""{{Tags:["{ns}.mob_entity"]}}"""}}
+				"conditions": {"entity": {
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {"nbt": f"""{{Tags:["{ns}.mob_entity"]}}"""}
+				}}
 			}
 		},
 		"rewards": {"function": f"{ns}:advancements/enable_mob_ticking"}

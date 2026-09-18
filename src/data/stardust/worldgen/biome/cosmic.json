@@ -5,34 +5,33 @@
 	"attributes": {
 		"minecraft:visual/fog_color": "#080833",
 		"minecraft:visual/fog_start_distance": 100000.0,
-		"minecraft:visual/fog_end_distance": 100001.0
+		"minecraft:visual/fog_end_distance": 100001.0,
+		"minecraft:gameplay/natural_mob_spawns": {
+			"spawns_by_category": {
+				"monster": [
+					{
+						"type": "minecraft:bat",
+						"count": 1,
+						"weight": 10
+					},
+					{
+						"type": "minecraft:skeleton",
+						"count": 4,
+						"weight": 200
+					},
+					{
+						"type": "minecraft:evoker",
+						"count": 4,
+						"weight": 100
+					}
+				]
+			},
+			"spawn_costs": {}
+		}
 	},
 	"effects": {
 		"water_color": 1389867
 	},
-	"spawners": {
-		"monster": [
-			{
-				"type": "minecraft:bat",
-				"weight": 10,
-				"minCount": 1,
-				"maxCount": 1
-			},
-			{
-				"type": "minecraft:skeleton",
-				"weight": 200,
-				"minCount": 4,
-				"maxCount": 4
-			},
-			{
-				"type": "minecraft:evoker",
-				"weight": 100,
-				"minCount": 4,
-				"maxCount": 4
-			}
-		]
-	},
-	"spawn_costs": {},
 	"carvers": [
 		"minecraft:cave",
 		"minecraft:cave_extra_underground"

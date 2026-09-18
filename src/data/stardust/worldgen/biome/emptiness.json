@@ -2,20 +2,23 @@
 	"temperature": 0.5,
 	"downfall": 0.5,
 	"has_precipitation": false,
+	"attributes": {
+		"minecraft:gameplay/natural_mob_spawns": {
+			"spawns_by_category": {
+				"monster": [
+					{
+						"type": "minecraft:end_crystal",
+						"count": 1,
+						"weight": 1
+					}
+				]
+			},
+			"spawn_costs": {}
+		}
+	},
 	"effects": {
 		"water_color": 0
 	},
-	"spawners": {
-		"monster": [
-			{
-				"type": "minecraft:end_crystal",
-				"maxCount": 1,
-				"minCount": 1,
-				"weight": 1
-			}
-		]
-	},
-	"spawn_costs": {},
 	"carvers": [],
 	"features": []
 }

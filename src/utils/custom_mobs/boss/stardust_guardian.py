@@ -175,10 +175,11 @@ playsound minecraft:entity.wither.death hostile @a[distance=..50]
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("awakened_stardust_block").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 24,
 									"max": 42
 								}
@@ -194,10 +195,11 @@ playsound minecraft:entity.wither.death hostile @a[distance=..50]
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_core").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 2,
 									"max": 8
 								}

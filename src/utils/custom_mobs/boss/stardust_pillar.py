@@ -279,9 +279,9 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_dungeon_key").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": 2
 							}
 						]
@@ -295,10 +295,11 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("compacted_stardust_shard").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 2,
 									"max": 4
 								}
@@ -314,10 +315,11 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 					{
 						"type": "minecraft:item",
 						"name": "minecraft:diamond_block",
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 12,
 									"max": 20
 								}
@@ -333,10 +335,11 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 					{
 						"type": "minecraft:item",
 						"name": "minecraft:gold_block",
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 12,
 									"max": 20
 								}

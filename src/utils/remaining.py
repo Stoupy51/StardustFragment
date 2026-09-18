@@ -14,7 +14,7 @@ def setup_remaining() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Get player head loot table
-	json_content: JsonDict = {"pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:player_head","functions":[{"function":"minecraft:fill_player_head","entity":"this"}]}]}]}
+	json_content: JsonDict = {"pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:player_head","modifier":[{"type":"minecraft:fill_player_head","entity":"this"}]}]}]}
 	Mem.ctx.data[ns].loot_tables["player_head"] = set_json_encoder(LootTable(json_content), max_level=-1)
 
 	# Boss Music
@@ -38,13 +38,11 @@ advancement revoke @s only {ns}:technical/inventory_changed
 			"requirement": {
 				"trigger": "minecraft:tick",
 				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:entity_scores",
-							"entity": "this",
-							"scores": {f"{ns}.right_click": {"min": 1}}
-						}
-					]
+					"player": {
+						"type": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {f"{ns}.right_click": {"min": 1}}
+					}
 				}
 			}
 		},
@@ -65,13 +63,11 @@ scoreboard players set @s {ns}.right_click 0
 			"requirement": {
 				"trigger": "minecraft:tick",
 				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:entity_scores",
-							"entity": "this",
-							"scores": {f"{ns}.death": {"min": 1}}
-						}
-					]
+					"player": {
+						"type": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {f"{ns}.death": {"min": 1}}
+					}
 				}
 			}
 		},
@@ -126,7 +122,7 @@ $execute if score #current_damage {ns}.data matches $(max_damage).. run playsoun
 $execute if score #current_damage {ns}.data matches $(max_damage).. run item replace entity @s $(slot) with minecraft:air
 """)
 	write_function(f"{ns}:utils/use_durability/item_modifier", r"""
-$item modify entity @s $(slot) {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
+$item modify entity @s $(slot) {"type": "minecraft:set_damage","damage": $(use_durability),"add": true}
 """)
 
 	## Life Crystal consuming
@@ -185,7 +181,7 @@ function {ns}:utils/update_max_health
 """)
 
 	# Dog excrement production
-	Mem.ctx.data[ns].predicates["random/0.05"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance": 0.05}))
+	Mem.ctx.data[ns].predicates["random/0.05"] = set_json_encoder(Predicate({"type":"minecraft:random_chance","chance": 0.05}))
 	write_versioned_function("minute", f"""
 # Dog Excrement production (about 1 every 20 minutes per wolf)
 execute at @e[type=minecraft:wolf,{Conventions.AVOID_ENTITY_TAGS},predicate={ns}:random/0.05] run loot spawn ~ ~ ~ loot {Item.from_id("dog_excrement").loot_table}
@@ -326,13 +322,11 @@ clear @s *[custom_data~{{{ns}:{{"wormhole_potion":true}}}}] 1
 			"requirement": {
 				"trigger": "minecraft:tick",
 				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:entity_scores",
-							"entity": "this",
-							"scores": {f"{ns}.ender_pearl": {"min": 1}}
-						}
-					]
+					"player": {
+						"type": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {f"{ns}.ender_pearl": {"min": 1}}
+					}
 				}
 			}
 		},
@@ -371,13 +365,11 @@ tag @s add {ns}.motion_applied
 			"requirement": {
 				"trigger": "minecraft:tick",
 				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:entity_scores",
-							"entity": "this",
-							"scores": {f"{ns}.bow_shoot": {"min": 1}}
-						}
-					]
+					"player": {
+						"type": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {f"{ns}.bow_shoot": {"min": 1}}
+					}
 				}
 			}
 		},
@@ -387,7 +379,7 @@ tag @s add {ns}.motion_applied
 	})
 
 	# Create predicate for sneaking
-	Mem.ctx.data[ns].predicates["player/sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
+	Mem.ctx.data[ns].predicates["player/sneaking"] = set_json_encoder(Predicate({"type":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
 
 	sb_data: str = f"""{{{ns}:{{"stardust_bow":true}}}}"""
 	asb_data: str = f"""{{{ns}:{{"awakened_stardust_bow":true}}}}"""

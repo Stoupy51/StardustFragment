@@ -75,7 +75,7 @@ tag @s remove {ns}.new_mob
 
 	# Stardust bat summon lightning effect on players nearby
 	write_function(f"{ns}:mobs/loop/mob_second", f"execute if entity @s[tag={ns}.stardust_bat] run return run function {ns}:mobs/stardust_bat/second")
-	Mem.ctx.data[ns].predicates["random/0.1"] = set_json_encoder(Predicate({"condition":"minecraft:random_chance","chance":0.1}))
+	Mem.ctx.data[ns].predicates["random/0.1"] = set_json_encoder(Predicate({"type":"minecraft:random_chance","chance":0.1}))
 	write_function(f"{ns}:mobs/stardust_bat/second", f"""
 # Every second, 10% chance to summon lightning at nearest player within 10 blocks
 execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creative,distance=..10] run summon minecraft:lightning_bolt
@@ -93,10 +93,11 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 						"weight": 9,
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_ingot").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 1,
 									"max": 8
 								}
@@ -123,9 +124,9 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 						"type": "minecraft:item",
 						"weight": 10,
 						"name": "minecraft:netherite_scrap",
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
 									"type": "minecraft:uniform",
 									"min": 1,
@@ -138,10 +139,11 @@ execute if predicate {ns}:random/0.1 at @r[gamemode=!spectator,gamemode=!creativ
 						"weight": 9,
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_ingot").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 1,
 									"max": 8
 								}

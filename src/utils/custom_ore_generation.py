@@ -19,7 +19,7 @@ def setup_custom_ore_generation():
 				minimum_height = -32,
 				veins_per_region = 2.5,
 				vein_size_logic = 0.0,	# Single block veins
-				provider=["#minecraft:overworld_carver_replaceables", "#minecraft:nether_carver_replaceables"],
+				provider=[*CustomOreGeneration.OVERWORLD_REPLACEABLES, *CustomOreGeneration.NETHER_REPLACEABLES],
 				placer_command=f"positioned ~ ~1 ~ if block ~ ~ ~ #minecraft:air unless block ~ ~-1 ~ lava run function {ns}:custom_blocks/life_crystal_block/place_main"
 			)
 		],
@@ -49,7 +49,7 @@ def setup_custom_ore_generation():
 				minimum_height = 25,
 				veins_per_region = 1,
 				vein_size_logic = 0.2,
-				provider="#minecraft:nether_carver_replaceables",
+				provider=list(CustomOreGeneration.NETHER_REPLACEABLES),
 			)
 		],
 		"awakened_stardust_ore": [
@@ -59,7 +59,7 @@ def setup_custom_ore_generation():
 				minimum_height = 25,
 				veins_per_region = 1,
 				vein_size_logic = 0.2,
-				provider="#minecraft:nether_carver_replaceables",
+				provider=list(CustomOreGeneration.NETHER_REPLACEABLES),
 			)
 		],
 		"ender_stardust_ore": [

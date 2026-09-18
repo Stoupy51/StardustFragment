@@ -206,9 +206,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("triple_compressed_cobblestone").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
 									"type": "minecraft:uniform",
 									"min": 12,
@@ -218,11 +218,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 						]
 					}
 				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					}
-				]
+				"condition": {
+					"type": "minecraft:killed_by_player"
+				}
 			},
 			{
 				"rolls": 1,
@@ -230,9 +228,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_ingot").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
 									"type": "minecraft:uniform",
 									"min": 1,
@@ -242,15 +240,18 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 						]
 					}
 				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					},
-					{
-						"condition": "minecraft:random_chance",
-						"chance": 0.5
-					}
-				]
+				"condition": {
+					"type": "minecraft:all_of",
+					"terms": [
+						{
+							"type": "minecraft:killed_by_player"
+						},
+						{
+							"type": "minecraft:random_chance",
+							"chance": 0.5
+						}
+					]
+				}
 			},
 			{
 				"rolls": 1,
@@ -258,9 +259,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 					{
 						"type": "minecraft:item",
 						"name": "minecraft:diamond_block",
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
 									"type": "minecraft:uniform",
 									"min": 1,
@@ -270,15 +271,18 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 						]
 					}
 				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					},
-					{
-						"condition": "minecraft:random_chance",
-						"chance": 0.25
-					}
-				]
+				"condition": {
+					"type": "minecraft:all_of",
+					"terms": [
+						{
+							"type": "minecraft:killed_by_player"
+						},
+						{
+							"type": "minecraft:random_chance",
+							"chance": 0.25
+						}
+					]
+				}
 			}
 		]
 	}), max_level=-1)
@@ -292,9 +296,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_fragment").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
 									"type": "minecraft:uniform",
 									"min": 0,
@@ -302,8 +306,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 								}
 							},
 							{
-								"function": "minecraft:enchanted_count_increase",
+								"type": "minecraft:enchanted_count_increase",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 0,
 									"max": 15
 								},
@@ -312,11 +317,9 @@ playsound minecraft:entity.wolf_angry.death hostile @a[distance=..50]
 						]
 					}
 				],
-				"conditions": [
-					{
-						"condition": "minecraft:killed_by_player"
-					}
-				]
+				"condition": {
+					"type": "minecraft:killed_by_player"
+				}
 			}
 		]
 	}), max_level=-1)

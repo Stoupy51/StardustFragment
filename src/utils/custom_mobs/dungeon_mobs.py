@@ -39,10 +39,11 @@ team join {ns}.mob @s
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("awakened_stardust").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 1,
 									"max": 2
 								},
@@ -52,10 +53,11 @@ team join {ns}.mob @s
 					{
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stardust_essence").loot_table,
-						"functions": [
+						"modifier": [
 							{
-								"function": "minecraft:set_count",
+								"type": "minecraft:set_count",
 								"count": {
+									"type": "minecraft:uniform",
 									"min": 1,
 									"max": 2
 								}

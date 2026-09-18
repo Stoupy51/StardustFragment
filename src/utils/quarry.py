@@ -109,7 +109,7 @@ tag @s add {ns}.quarry
 # If holding a quarry configurator, handle it
 execute if items entity @s weapon.* *[custom_data~{{{ns}:{{quarry_configurator:true}}}}] run function {ns}:quarry/configurator/right_click
 """)
-	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
+	Mem.ctx.data[ns].predicates["is_sneaking"] = set_json_encoder(Predicate({"type":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":True}}}))
 	write_function(f"{ns}:quarry/configurator/right_click", f"""
 # Retrieve current configuration
 execute store result score #config_x1 {ns}.data run data get entity @s SelectedItem.components."minecraft:custom_data".{ns}.quarry_x1
@@ -178,7 +178,7 @@ execute store result entity @s item.components."minecraft:custom_data".{ns}.quar
 execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_x2 int 1 run scoreboard players get #config_x2 {ns}.data
 execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_y2 int 1 run scoreboard players get #config_y2 {ns}.data
 execute store result entity @s item.components."minecraft:custom_data".{ns}.quarry_z2 int 1 run scoreboard players get #config_z2 {ns}.data
-item modify entity @s contents {{"function":"minecraft:set_lore","entity":"this","lore":{json.dumps(advanced_lore)},"mode":"replace_all"}}
+item modify entity @s contents {{"type":"minecraft:set_lore","entity":"this","lore":{json.dumps(advanced_lore)},"mode":"replace_all"}}
 item replace entity @p[tag={ns}.temp] weapon.mainhand from entity @s contents
 kill @s
 """)
@@ -254,7 +254,7 @@ execute if score @s {ns}.quarry_status matches 1 run data modify storage {ns}:te
 execute if score @s {ns}.quarry_status matches 2 run data modify storage {ns}:temp quarry_status set value {{"text":"Paused","color":"yellow"}}
 
 # Update info gui
-item modify block ~ ~ ~ container.{info_gui_slot} {{"function":"minecraft:set_lore","entity":"this","lore":{json.dumps(info_gui_lore)},"mode":"replace_all"}}
+item modify block ~ ~ ~ container.{info_gui_slot} {{"type":"minecraft:set_lore","entity":"this","lore":{json.dumps(info_gui_lore)},"mode":"replace_all"}}
 """)
 	write_function(f"{ns}:quarry/configurator/apply_from_placeholder", f"""
 # Retrieve configuration from placeholder
@@ -308,15 +308,15 @@ execute summon marker run function {ns}:quarry/display/summon_shulkers
 execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x1 {ns}.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #config_y1 {ns}.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #config_z1 {ns}.data
-execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{Name:"minecraft:red_shulker_box"}},Glowing:1b,Team:"{ns}.red"}}
-execute at @s run team join {ns}.red @e[tag={ns}.quarry_displaying,nbt={{block_state:{{Name:"minecraft:red_shulker_box"}}}},distance=..1]
+execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{id:"minecraft:red_shulker_box"}},Glowing:1b,Team:"{ns}.red"}}
+execute at @s run team join {ns}.red @e[tag={ns}.quarry_displaying,nbt={{block_state:{{id:"minecraft:red_shulker_box"}}}},distance=..1]
 
 # Second shulker (blue)
 execute store result entity @s Pos[0] double 1 run scoreboard players get #config_x2 {ns}.data
 execute store result entity @s Pos[1] double 1 run scoreboard players get #config_y2 {ns}.data
 execute store result entity @s Pos[2] double 1 run scoreboard players get #config_z2 {ns}.data
-execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{Name:"minecraft:blue_shulker_box"}},Glowing:1b,Team:"{ns}.blue"}}
-execute at @s run team join {ns}.blue @e[tag={ns}.quarry_displaying,nbt={{block_state:{{Name:"minecraft:blue_shulker_box"}}}},distance=..1]
+execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{id:"minecraft:blue_shulker_box"}},Glowing:1b,Team:"{ns}.blue"}}
+execute at @s run team join {ns}.blue @e[tag={ns}.quarry_displaying,nbt={{block_state:{{id:"minecraft:blue_shulker_box"}}}},distance=..1]
 
 # Schedule loop to kill them after some time
 schedule function {ns}:quarry/display/kill_shulkers 1t append
@@ -433,7 +433,7 @@ kill @s
 """)
 	write_function(f"{ns}:quarry/display/current_position", f"""
 # Summon shulker and schedule loop to kill them after some time
-execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{Name:"minecraft:white_shulker_box"}},Glowing:1b}}
+execute at @s run summon block_display ~ ~ ~ {{Tags:{tags},block_state:{{id:"minecraft:white_shulker_box"}},Glowing:1b}}
 """)
 	# Mine block function
 	write_function(f"{ns}:quarry/working/mine_block", f"""

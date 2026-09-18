@@ -131,9 +131,9 @@ loot spawn ~ ~-1 ~ loot {ns}:cobblestone_miner/lv{lvl}
 						{
 							"type": "minecraft:loot_table",
 							"value": f"{ns}:i/{tier}_cobblestone",
-							"functions": [
+							"modifier": [
 								{
-									"function": "minecraft:set_count",
+									"type": "minecraft:set_count",
 									"count": count
 								}
 							]

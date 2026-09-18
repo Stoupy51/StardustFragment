@@ -3,34 +3,33 @@
 	"downfall": 0.5,
 	"has_precipitation": false,
 	"attributes": {
-		"minecraft:visual/fog_color": "#330808"
+		"minecraft:visual/fog_color": "#330808",
+		"minecraft:gameplay/natural_mob_spawns": {
+			"spawns_by_category": {
+				"monster": [
+					{
+						"type": "minecraft:zombified_piglin",
+						"count": 4,
+						"weight": 15
+					},
+					{
+						"type": "minecraft:magma_cube",
+						"count": 4,
+						"weight": 2
+					},
+					{
+						"type": "minecraft:piglin",
+						"count": 4,
+						"weight": 15
+					}
+				]
+			},
+			"spawn_costs": {}
+		}
 	},
 	"effects": {
 		"water_color": 16711680
 	},
-	"spawners": {
-		"monster": [
-			{
-				"type": "minecraft:zombified_piglin",
-				"maxCount": 4,
-				"minCount": 4,
-				"weight": 15
-			},
-			{
-				"type": "minecraft:magma_cube",
-				"maxCount": 4,
-				"minCount": 4,
-				"weight": 2
-			},
-			{
-				"type": "minecraft:piglin",
-				"maxCount": 4,
-				"minCount": 4,
-				"weight": 15
-			}
-		]
-	},
-	"spawn_costs": {},
 	"carvers": [],
 	"features": []
 }

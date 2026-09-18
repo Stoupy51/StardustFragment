@@ -13,9 +13,9 @@
 					"type": "minecraft:item",
 					"weight": 20,
 					"name": "minecraft:redstone",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -29,9 +29,9 @@
 					"type": "minecraft:item",
 					"weight": 70,
 					"name": "minecraft:coal",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -45,9 +45,9 @@
 					"type": "minecraft:item",
 					"weight": 70,
 					"name": "minecraft:iron_ingot",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -61,9 +61,9 @@
 					"type": "minecraft:item",
 					"weight": 10,
 					"name": "minecraft:lapis_lazuli",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -77,9 +77,9 @@
 					"type": "minecraft:item",
 					"weight": 10,
 					"name": "minecraft:gold_ingot",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -93,9 +93,9 @@
 					"type": "minecraft:item",
 					"weight": 10,
 					"name": "minecraft:emerald",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -114,10 +114,11 @@
 					"type": "minecraft:loot_table",
 					"weight": 20,
 					"value": "stardust:i/stardust_fragment",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 1,
 								"max": 2
 							},
@@ -128,11 +129,12 @@
 				{
 					"type": "minecraft:loot_table",
 					"weight": 10,
-					"value": "simplenergy:i/simplunium_ingot",
-					"functions": [
+					"value": "#stardust:external/simplenergy/simplunium_ingot",
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 1,
 								"max": 2
 							},

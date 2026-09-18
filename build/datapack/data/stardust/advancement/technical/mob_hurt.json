@@ -4,7 +4,11 @@
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"entity": {
-					"nbt": "{Tags:[\"stardust.mob_entity\"]}"
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"nbt": "{Tags:[\"stardust.mob_entity\"]}"
+					}
 				}
 			}
 		}

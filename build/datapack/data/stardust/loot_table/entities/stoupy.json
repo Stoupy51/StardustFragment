@@ -8,9 +8,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/triple_compressed_cobblestone",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -20,11 +20,9 @@
 					]
 				}
 			],
-			"conditions": [
-				{
-					"condition": "minecraft:killed_by_player"
-				}
-			]
+			"condition": {
+				"type": "minecraft:killed_by_player"
+			}
 		},
 		{
 			"rolls": 1,
@@ -32,9 +30,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/stardust_ingot",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -44,15 +42,18 @@
 					]
 				}
 			],
-			"conditions": [
-				{
-					"condition": "minecraft:killed_by_player"
-				},
-				{
-					"condition": "minecraft:random_chance",
-					"chance": 0.5
-				}
-			]
+			"condition": {
+				"type": "minecraft:all_of",
+				"terms": [
+					{
+						"type": "minecraft:killed_by_player"
+					},
+					{
+						"type": "minecraft:random_chance",
+						"chance": 0.5
+					}
+				]
+			}
 		},
 		{
 			"rolls": 1,
@@ -60,9 +61,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:diamond_block",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 1,
@@ -72,15 +73,18 @@
 					]
 				}
 			],
-			"conditions": [
-				{
-					"condition": "minecraft:killed_by_player"
-				},
-				{
-					"condition": "minecraft:random_chance",
-					"chance": 0.25
-				}
-			]
+			"condition": {
+				"type": "minecraft:all_of",
+				"terms": [
+					{
+						"type": "minecraft:killed_by_player"
+					},
+					{
+						"type": "minecraft:random_chance",
+						"chance": 0.25
+					}
+				]
+			}
 		}
 	]
 }

@@ -9,5 +9,5 @@
 #			use_durability (unknown)
 #
 
-$item modify entity @s $(slot) {"function": "minecraft:set_damage","damage": $(use_durability),"add": true}
+$item modify entity @s $(slot) {"type": "minecraft:set_damage","damage": $(use_durability),"add": true}
 

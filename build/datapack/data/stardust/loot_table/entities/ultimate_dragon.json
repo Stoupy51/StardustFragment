@@ -8,9 +8,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/ultimate_shard",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -38,9 +38,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/legendarium_block",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -58,9 +58,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/solarium_block",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -78,9 +78,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/darkium_block",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -98,9 +98,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/ender_dragon_pearl",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -118,9 +118,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/stardust_core",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,
@@ -138,9 +138,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/compacted_stardust_shard",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:uniform",
 								"min": 12,

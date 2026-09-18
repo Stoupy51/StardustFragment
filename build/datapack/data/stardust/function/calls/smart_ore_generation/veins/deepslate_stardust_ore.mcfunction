@@ -8,32 +8,32 @@
 function #smart_ore_generation:v1/slots/random_position
 
 # Placing Deepslate Stardust Ore patch
-execute at @s if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~-0.2 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~-0.2 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~-0.2 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~0.0 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~0.0 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~0.0 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~0.2 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~0.2 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~-0.2 ~0.2 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~-0.2 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~-0.2 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~-0.2 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~0.0 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~0.0 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~0.0 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~0.2 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~0.2 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.0 ~0.2 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~-0.2 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~-0.2 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~-0.2 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~0.0 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~0.0 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~0.0 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~0.2 ~-0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~0.2 ~0.0 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
-execute at @s positioned ~0.2 ~0.2 ~0.2 if block ~ ~ ~ #minecraft:overworld_carver_replaceables unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~-0.2 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~-0.2 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~-0.2 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~0.0 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~0.0 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~0.0 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~0.2 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~0.2 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~-0.2 ~0.2 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~-0.2 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~-0.2 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~-0.2 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~0.0 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~0.0 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~0.0 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~0.2 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~0.2 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.0 ~0.2 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~-0.2 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~-0.2 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~-0.2 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~0.0 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~0.0 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~0.0 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~0.2 ~-0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~0.2 ~0.0 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
+execute at @s positioned ~0.2 ~0.2 ~0.2 if block ~ ~ ~ #stardust:smart_ore_generation/deepslate_stardust_ore_provider unless block ~ ~ ~ minecraft:stone run function stardust:custom_blocks/deepslate_stardust_ore/place_main
 

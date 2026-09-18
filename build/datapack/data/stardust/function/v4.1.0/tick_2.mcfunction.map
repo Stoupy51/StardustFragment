@@ -1,10 +1,10 @@
 {
 	"version": 3,
-	"file": "tick.mcfunction",
+	"file": "tick_2.mcfunction",
 	"sourceRoot": "../../../../../..",
 	"sources": [
 		"src/utils/remaining.py"
 	],
 	"names": [],
-	"mappings": ";;;;;;;;;;;;;;;AA8FiB;AAAA;AAAA;AAAA"
+	"mappings": ";;;;;;;;;;;;AAkdoC;AACpC;AACA;AACA"
 }

@@ -1,10 +1,10 @@
 {
 	"pack": {
-		"pack_format": 107,
-		"description": "Stardust Fragment [4.0.16] by Stoupy51",
+		"pack_format": 121,
+		"description": "Stardust Fragment [4.1.0] by Stoupy51",
 		"min_format": [
-			107,
-			1
+			121,
+			0
 		],
 		"max_format": [
 			9999,

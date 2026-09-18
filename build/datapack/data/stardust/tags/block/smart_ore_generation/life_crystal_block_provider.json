@@ -1,7 +1,31 @@
 {
 	"replace": false,
 	"values": [
-		"#minecraft:overworld_carver_replaceables",
-		"#minecraft:nether_carver_replaceables"
+		"#minecraft:base_stone_overworld",
+		"#minecraft:substrate_overworld",
+		"#minecraft:sand",
+		"#minecraft:terracotta",
+		"#minecraft:iron_ores",
+		"#minecraft:copper_ores",
+		"#minecraft:snow",
+		"minecraft:water",
+		"minecraft:gravel",
+		"minecraft:suspicious_gravel",
+		"minecraft:sandstone",
+		"minecraft:red_sandstone",
+		"minecraft:calcite",
+		"minecraft:packed_ice",
+		"minecraft:raw_iron_block",
+		"minecraft:raw_copper_block",
+		"minecraft:cinnabar",
+		"minecraft:sulfur",
+		"minecraft:potent_sulfur",
+		"#minecraft:base_stone_overworld",
+		"#minecraft:base_stone_nether",
+		"#minecraft:substrate_overworld",
+		"#minecraft:nylium",
+		"#minecraft:wart_blocks",
+		"minecraft:soul_sand",
+		"minecraft:soul_soil"
 	]
 }

@@ -13,7 +13,7 @@ scoreboard players set #min_height smart_ore_generation.data -32
 scoreboard players set #max_height smart_ore_generation.data 50
 execute if score #dimension smart_ore_generation.data matches 0.. run function stardust:calls/smart_ore_generation/veins/life_crystal_block
 execute if score #dimension smart_ore_generation.data matches 0.. run function stardust:calls/smart_ore_generation/veins/life_crystal_block
-execute if score #dimension smart_ore_generation.data matches 0.. if predicate {condition:"minecraft:random_chance",chance:0.50000} run function stardust:calls/smart_ore_generation/veins/life_crystal_block
+execute if score #dimension smart_ore_generation.data matches 0.. if predicate {"type": "minecraft:random_chance","chance": 0.5} run function stardust:calls/smart_ore_generation/veins/life_crystal_block
 
 # Generate Stardust Ore (x1)
 scoreboard players set #dimension smart_ore_generation.data -1

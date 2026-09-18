@@ -1,7 +1,7 @@
 
-#> stardust:v4.0.16/load/confirm_load
+#> stardust:v4.1.0/load/confirm_load
 #
-# @within	stardust:v4.0.16/load/valid_dependencies
+# @within	stardust:v4.1.0/load/valid_dependencies
 #
 
 # Bow shooting detection
@@ -114,7 +114,7 @@ scoreboard objectives add stardust.forge_timer dummy
 
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment_v4_0_16","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment_v4_1_0","color":"green"}
 scoreboard players set #stardust.loaded load.status 1
-function stardust:v4.0.16/load/set_items_storage
+function stardust:v4.1.0/load/set_items_storage
 

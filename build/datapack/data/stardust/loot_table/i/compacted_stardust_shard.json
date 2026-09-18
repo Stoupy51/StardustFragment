@@ -6,9 +6,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:recovery_compass",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:item_model": "stardust:compacted_stardust_shard",
 								"minecraft:item_name": {

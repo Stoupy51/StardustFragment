@@ -3,6 +3,7 @@
 	"pools": [
 		{
 			"rolls": {
+				"type": "minecraft:uniform",
 				"min": 1,
 				"max": 2
 			},
@@ -15,10 +16,11 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/stardust_fragment",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 1,
 								"max": 8
 							}
@@ -27,13 +29,11 @@
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "simplenergy:i/simplunium_ingot",
-					"conditions": [
-						{
-							"condition": "minecraft:random_chance",
-							"chance": 0.5
-						}
-					]
+					"value": "#stardust:external/simplenergy/simplunium_ingot",
+					"condition": {
+						"type": "minecraft:random_chance",
+						"chance": 0.5
+					}
 				}
 			]
 		}

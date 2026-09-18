@@ -7,9 +7,9 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/stardust_dungeon_key",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": 2
 						}
 					]
@@ -23,10 +23,11 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/compacted_stardust_shard",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 2,
 								"max": 4
 							}
@@ -42,10 +43,11 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:diamond_block",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 12,
 								"max": 20
 							}
@@ -61,10 +63,11 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:gold_block",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_count",
+							"type": "minecraft:set_count",
 							"count": {
+								"type": "minecraft:uniform",
 								"min": 12,
 								"max": 20
 							}

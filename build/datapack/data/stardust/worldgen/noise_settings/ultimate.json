@@ -20,19 +20,25 @@
 		"depth": 0,
 		"ridges": 0,
 		"final_density": {
-			"type": "minecraft:squeeze",
-			"input": {
-				"type": "minecraft:mul",
-				"left": 0.64,
-				"right": {
-					"type": "minecraft:interpolated",
-					"input": {
-						"type": "minecraft:blend_density",
-						"input": "minecraft:end/sloped_cheese"
-					},
-					"cell_size_xz": 8,
-					"cell_size_y": 4
+			"type": "minecraft:add",
+			"left": {
+				"type": "minecraft:squeeze",
+				"input": {
+					"type": "minecraft:mul",
+					"left": 0.64,
+					"right": {
+						"type": "minecraft:interpolated",
+						"input": {
+							"type": "minecraft:blend_density",
+							"input": "minecraft:end/sloped_cheese"
+						},
+						"cell_size_xz": 8,
+						"cell_size_y": 4
+					}
 				}
+			},
+			"right": {
+				"type": "minecraft:beardifier"
 			}
 		},
 		"chunk_surface_level": "minecraft:end/base_3d_noise"

@@ -19,57 +19,63 @@
 		"depth": 0,
 		"erosion": 0,
 		"final_density": {
-			"type": "minecraft:squeeze",
-			"input": {
-				"type": "minecraft:mul",
-				"left": 0.64,
-				"right": {
-					"type": "minecraft:interpolated",
-					"input": {
-						"type": "minecraft:blend_density",
+			"type": "minecraft:add",
+			"left": {
+				"type": "minecraft:squeeze",
+				"input": {
+					"type": "minecraft:mul",
+					"left": 0.64,
+					"right": {
+						"type": "minecraft:interpolated",
 						"input": {
-							"type": "minecraft:add",
-							"left": -0.234375,
-							"right": {
-								"type": "minecraft:mul",
-								"left": {
-									"type": "minecraft:gradient",
-									"from_value": 0,
-									"to_value": 1,
-									"axis": "y",
-									"from_coordinate": 4,
-									"to_coordinate": 32
-								},
+							"type": "minecraft:blend_density",
+							"input": {
+								"type": "minecraft:add",
+								"left": -0.234375,
 								"right": {
-									"type": "minecraft:add",
-									"left": 0.234375,
+									"type": "minecraft:mul",
+									"left": {
+										"type": "minecraft:gradient",
+										"from_value": 0,
+										"to_value": 1,
+										"axis": "y",
+										"from_coordinate": 4,
+										"to_coordinate": 32
+									},
 									"right": {
 										"type": "minecraft:add",
-										"left": -23.4375,
+										"left": 0.234375,
 										"right": {
-											"type": "minecraft:mul",
-											"left": {
-												"type": "minecraft:gradient",
-												"from_value": 1,
-												"to_value": 0,
-												"axis": "y",
-												"from_coordinate": 184,
-												"to_coordinate": 440
-											},
+											"type": "minecraft:add",
+											"left": -23.4375,
 											"right": {
-												"type": "minecraft:add",
-												"left": 23.15,
-												"right": "minecraft:end/base_3d_noise"
+												"type": "minecraft:mul",
+												"left": {
+													"type": "minecraft:gradient",
+													"from_value": 1,
+													"to_value": 0,
+													"axis": "y",
+													"from_coordinate": 184,
+													"to_coordinate": 440
+												},
+												"right": {
+													"type": "minecraft:add",
+													"left": 23.15,
+													"right": "minecraft:end/base_3d_noise"
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-					},
-					"cell_size_xz": 8,
-					"cell_size_y": 4
+						},
+						"cell_size_xz": 8,
+						"cell_size_y": 4
+					}
 				}
+			},
+			"right": {
+				"type": "minecraft:beardifier"
 			}
 		},
 		"ridges": 0,

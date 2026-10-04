@@ -3,7 +3,7 @@
 #
 # @executed	in stardust:dungeon
 #
-# @within	stardust:v4.1.0/second [ in stardust:dungeon ]
+# @within	stardust:v4.1.1/second [ in stardust:dungeon ]
 #
 
 # Kill unwanted entities in the dungeon

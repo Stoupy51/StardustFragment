@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "minute.mcfunction",
+	"sourceRoot": "../../../../../..",
+	"sources": [
+		"src/utils/portals.py",
+		"src/utils/dimensions.py",
+		"src/utils/custom_mobs/technical.py",
+		"src/utils/remaining.py"
+	],
+	"names": [],
+	"mappings": ";;;;;;;;;AAgGoC;AACpC;AACA;AACA;ACvDA;AACA;AACA;AClBA;AACA;AACA;AC2JA;AACA;AACA"
+}

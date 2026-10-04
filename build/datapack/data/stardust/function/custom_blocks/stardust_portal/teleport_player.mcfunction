@@ -1,7 +1,9 @@
 
 #> stardust:custom_blocks/stardust_portal/teleport_player
 #
-# @within	???
+# @executed	as @a[distance=..1] & at @s
+#
+# @within	stardust:dimensions/portals/handle_player
 #
 
 # Particles before teleport (x100)

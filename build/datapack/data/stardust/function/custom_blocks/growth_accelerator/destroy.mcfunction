@@ -1,9 +1,10 @@
 
 #> stardust:custom_blocks/growth_accelerator/destroy
 #
-# @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
+# @executed	at @s
 #
-# @within	stardust:custom_blocks/_groups/minecraft_diamond_block
+# @within	stardust:custom_blocks/no_block_below
+#			stardust:custom_blocks/_groups/minecraft_diamond_block
 #
 
 # Datapack Energy

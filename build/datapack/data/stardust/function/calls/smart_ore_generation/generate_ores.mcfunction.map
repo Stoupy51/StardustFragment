@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "generate_ores.mcfunction",
+	"sourceRoot": "../../../../../../..",
+	"sources": [
+		"src/utils/custom_ore_generation.py"
+	],
+	"names": [],
+	"mappings": "AAeG;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAaA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAQA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAUA;AAAA;AAAA;AAAA;AAAA;AAAA;AAUA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA"
+}

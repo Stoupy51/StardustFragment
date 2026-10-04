@@ -1,9 +1,8 @@
 
 #> stardust:mobs/ultimate_slave/convert
 #
-# @executed	positioned ~10 ~ ~
-#
-# @within	stardust:mobs/ultimate_slave/summon
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/ultimate_slave/summon
 #
 
 # Add tags & join team

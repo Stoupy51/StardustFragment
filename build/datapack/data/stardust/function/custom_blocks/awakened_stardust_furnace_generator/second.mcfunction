@@ -6,8 +6,7 @@
 # @within	stardust:custom_blocks/second
 #
 
-# Prevent the furnace from really cooking
-data modify block ~ ~ ~ cooking_total_time set value -200s
+# The gui item only sits in the input slot so the furnace lights its fuel, reset its progress so it never smelts
 data modify block ~ ~ ~ cooking_time_spent set value 0s
 
 # Stop if full energy

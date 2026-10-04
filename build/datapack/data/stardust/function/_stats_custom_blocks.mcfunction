@@ -1,7 +1,7 @@
 
 #> stardust:_stats_custom_blocks
 #
-# @within	???
+# @within	(public)
 #
 
 scoreboard players add #minute_entities stardust.data 0

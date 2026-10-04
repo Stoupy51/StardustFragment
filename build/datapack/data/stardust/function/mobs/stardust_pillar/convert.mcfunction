@@ -1,9 +1,8 @@
 
 #> stardust:mobs/stardust_pillar/convert
 #
-# @executed	positioned over world_surface positioned
-#
-# @within	stardust:mobs/stardust_pillar/summon
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/stardust_pillar/summon
 #
 
 # Make invisible, reset nbt, set custom name and tags

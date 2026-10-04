@@ -1,9 +1,8 @@
 
 #> stardust:mobs/ultimate_dragon/convert
 #
-# @executed	as @e[tag=stardust.ultimate_dragon_essence_landed] & at @s
-#
-# @within	stardust:mobs/ultimate_dragon/summon
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/ultimate_dragon/summon
 #
 
 # Add tags & join team

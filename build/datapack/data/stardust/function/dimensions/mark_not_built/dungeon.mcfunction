@@ -1,7 +1,7 @@
 
 #> stardust:dimensions/mark_not_built/dungeon
 #
-# @within	???
+# @within	(public)
 #
 
 # Remove the marker block so the next check rebuilds the dimension

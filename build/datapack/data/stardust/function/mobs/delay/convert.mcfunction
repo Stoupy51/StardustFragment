@@ -1,9 +1,8 @@
 
 #> stardust:mobs/delay/convert
 #
-# @executed	positioned ~ ~-2 ~
-#
-# @within	stardust:mobs/stardust_pillar/summon_mob {"entity":"stardust_bat"} [ positioned ~ ~-2 ~ ]
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/stardust_pillar/summon_mob {"entity":"stardust_bat"} [ positioned ~ ~-2 ~ ]
 #			stardust:mobs/stardust_pillar/summon_mob {"entity":"stardust_evoker"} [ positioned ~ ~-2 ~ ]
 #			stardust:mobs/stardust_pillar/summon_mob {"entity":"stardust_soldier"} [ positioned ~ ~-2 ~ ]
 #

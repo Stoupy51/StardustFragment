@@ -1,7 +1,7 @@
 
 #> stardust:mobs/stardust_soldier/summon
 #
-# @within	???
+# @within	(public)
 #
 
 execute summon minecraft:skeleton run function stardust:mobs/stardust_soldier/convert

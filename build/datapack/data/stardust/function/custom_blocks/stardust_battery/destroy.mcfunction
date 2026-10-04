@@ -1,9 +1,10 @@
 
 #> stardust:custom_blocks/stardust_battery/destroy
 #
-# @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
+# @executed	at @s
 #
-# @within	stardust:custom_blocks/_groups/minecraft_warped_hyphae
+# @within	stardust:custom_blocks/no_block_below
+#			stardust:custom_blocks/_groups/minecraft_warped_hyphae
 #
 
 # Keep energy when destroying the block

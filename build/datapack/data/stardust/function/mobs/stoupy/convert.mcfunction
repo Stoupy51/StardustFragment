@@ -1,9 +1,8 @@
 
 #> stardust:mobs/stoupy/convert
 #
-# @executed	positioned over world_surface run
-#
-# @within	stardust:mobs/stoupy/summon
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/stoupy/summon
 #
 
 # Modify wolf type

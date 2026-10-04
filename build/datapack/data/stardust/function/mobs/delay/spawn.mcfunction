@@ -1,8 +1,6 @@
 
 #> stardust:mobs/delay/spawn
 #
-# @executed	positioned ~ ~-2 ~
-#
 # @within	stardust:mobs/delay/convert
 #			stardust:mobs/stoupy/on_new_wolf
 #			stardust:mobs/stardust_guardian/summon_mob [ positioned ~ ~-2 ~ ]

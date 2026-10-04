@@ -1,8 +1,6 @@
 
 #> stardust:mobs/create_model
 #
-# @executed	positioned over world_surface run
-#
 # @within	stardust:mobs/stoupy/convert {"entity":"stoupy"}
 #			stardust:mobs/stardust_soldier/convert {"entity":"stardust_soldier"}
 #			stardust:mobs/stardust_evoker/convert {"entity":"stardust_evoker"}

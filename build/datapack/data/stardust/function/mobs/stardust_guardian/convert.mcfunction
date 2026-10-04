@@ -1,9 +1,8 @@
 
 #> stardust:mobs/stardust_guardian/convert
 #
-# @executed	positioned 68.0 169.69 -31
-#
-# @within	stardust:mobs/stardust_guardian/summon
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/stardust_guardian/summon
 #
 
 # Make invisible, reset nbt, set custom name and tags

@@ -1,9 +1,10 @@
 
 #> stardust:custom_blocks/double_compressed_cobblestone/destroy
 #
-# @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
+# @executed	at @s
 #
-# @within	stardust:custom_blocks/_groups/minecraft_cobbled_deepslate
+# @within	stardust:custom_blocks/no_block_below
+#			stardust:custom_blocks/_groups/minecraft_cobbled_deepslate
 #
 
 # Replace the item with the custom one

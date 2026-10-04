@@ -1,9 +1,8 @@
 
 #> stardust:mobs/stardust_evoker/convert
 #
-# @executed	at @s
-#
-# @within	stardust:mobs/convert/stardust
+# @within	stardust:mobs/delay/convert
+#			stardust:mobs/convert/stardust
 #			stardust:mobs/stardust_evoker/summon
 #
 

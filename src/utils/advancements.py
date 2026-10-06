@@ -40,6 +40,7 @@ def def_to_icon(item: str, enchanted: bool = False) -> JsonDict:
 		return {"id": item}
 	if item not in Mem.definitions:
 		stp.error(f"Definition for item '{item}' not found during def_to_icon conversion.")
+
 	obj = Item.from_id(item, strict=False)
 	icon: dict[str, Any] = {"id": obj.base_item}
 	components_to_copy: list[str] = ["item_model", "profile"]
@@ -48,6 +49,7 @@ def def_to_icon(item: str, enchanted: bool = False) -> JsonDict:
 			if not icon.get("components"):
 				icon["components"] = {}
 			icon["components"][f"minecraft:{component}"] = obj.components[component]
+
 	if enchanted:
 		if not icon.get("components"):
 			icon["components"] = {}

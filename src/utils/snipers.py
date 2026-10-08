@@ -102,13 +102,19 @@ data modify storage {ns}:temp raycast.with.on_targeted_block set value "function
 data modify storage {ns}:temp raycast.with.on_targeted_entity set value "function {ns}:utils/snipers/on_targeted_entity"
 
 # Launch raycast with callbacks (https://docs.mcbookshelf.dev/en/latest/modules/raycast.html#run-the-raycast)
+scoreboard players set #sniper_hit_block {ns}.data 0
 execute anchored eyes positioned ^ ^ ^0.5 run function #bs.raycast:run with storage {ns}:temp raycast
+
+# No block hit (sky, or only entities): the trail runs forward to the raycast's max distance, 0.25 block per step
+scoreboard players set #limit {ns}.data 512
+execute if score #sniper_hit_block {ns}.data matches 0 anchored eyes positioned ^ ^ ^0.5 run function {ns}:utils/snipers/particle_trail_forward
 """)
 
 	# On targeted block
 	write_function(f"{ns}:utils/snipers/on_targeted_block", f"""
 # Stop the raycast here
 scoreboard players set $raycast.piercing bs.lambda 0
+scoreboard players set #sniper_hit_block {ns}.data 1
 
 # Get current block (https://docs.mcbookshelf.dev/en/latest/modules/block.html#get)
 data modify storage {ns}:temp Pos set from entity @s Pos
@@ -142,11 +148,15 @@ particle block{{block_state:"redstone_wire"}} ~ ~1 ~ 0.35 0.5 0.35 0 100 force @
 """)
 
 	# Particle trail function
-	# TODO: Show particles even when no reaching a block
 	write_function(f"{ns}:utils/snipers/particle_trail", f"""
 # Particles and continue if player not reached
 scoreboard players remove #limit {ns}.data 1
 particle smoke ~ ~ ~ 0 0 0 0.01 1 force @a[distance=..128]
 execute if score #limit {ns}.data matches 1.. unless entity @s[distance=..1.5] positioned ^ ^ ^0.25 run function {ns}:utils/snipers/particle_trail
+""")
+	write_function(f"{ns}:utils/snipers/particle_trail_forward", f"""
+scoreboard players remove #limit {ns}.data 1
+particle smoke ~ ~ ~ 0 0 0 0.01 1 force @a[distance=..128]
+execute if score #limit {ns}.data matches 1.. positioned ^ ^ ^0.25 run function {ns}:utils/snipers/particle_trail_forward
 """)
 

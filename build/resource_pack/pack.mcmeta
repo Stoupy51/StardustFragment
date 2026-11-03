@@ -11,10 +11,5 @@
 			0
 		]
 	},
-	"id": "stardust",
-	"overlays": {
-		"entries": [
-			{"formats": [73,1000],"directory": "format_73_plus","min_format": 73,"max_format": 1000}
-		]
-	}
+	"id": "stardust"
 }

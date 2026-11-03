@@ -4200,62 +4200,62 @@
 		},
 		"skip_gives": false
 	},
-	"stoupy_suno_cosmic_threat": {
-		"id": "stoupy_suno_cosmic_threat",
+	"stoupy_cosmic_threat": {
+		"id": "stoupy_cosmic_threat",
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_cosmic_threat": true},"smithed": {"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_suno_cosmic_threat"},"description": {"text": "Stoupy & Suno - Cosmic Threat"}}},"id": "stardust:stoupy_suno_cosmic_threat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_cosmic_threat": true},"smithed": {"dict": {"record": {"stoupy_cosmic_threat": true,"item_name": "Stoupy - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_cosmic_threat"},"description": {"text": "Stoupy - Cosmic Threat"}}},"id": "stardust:stoupy_cosmic_threat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
-			"jukebox_playable": "stardust:stoupy_suno_cosmic_threat",
+			"jukebox_playable": "stardust:stoupy_cosmic_threat",
 			"max_stack_size": 1,
 			"rarity": "rare",
-			"item_model": "stardust:stoupy_suno_cosmic_threat",
+			"item_model": "stardust:stoupy_cosmic_threat",
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]]
 		},
 		"skip_gives": false
 	},
-	"stoupy_suno_prismatic_devastation": {
-		"id": "stoupy_suno_prismatic_devastation",
+	"stoupy_prismatic_devastation": {
+		"id": "stoupy_prismatic_devastation",
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_prismatic_devastation": true},"smithed": {"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_suno_prismatic_devastation"},"description": {"text": "Stoupy & Suno - Prismatic Devastation"}}},"id": "stardust:stoupy_suno_prismatic_devastation","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_prismatic_devastation": true},"smithed": {"dict": {"record": {"stoupy_prismatic_devastation": true,"item_name": "Stoupy - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_prismatic_devastation"},"description": {"text": "Stoupy - Prismatic Devastation"}}},"id": "stardust:stoupy_prismatic_devastation","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
-			"jukebox_playable": "stardust:stoupy_suno_prismatic_devastation",
+			"jukebox_playable": "stardust:stoupy_prismatic_devastation",
 			"max_stack_size": 1,
 			"rarity": "rare",
-			"item_model": "stardust:stoupy_suno_prismatic_devastation",
+			"item_model": "stardust:stoupy_prismatic_devastation",
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]]
 		},
 		"skip_gives": false
 	},
-	"stoupy_suno_starfall_menace": {
-		"id": "stoupy_suno_starfall_menace",
+	"stoupy_starfall_menace": {
+		"id": "stoupy_starfall_menace",
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"text": "Stoupy & Suno - Starfall Menace"}}},"id": "stardust:stoupy_suno_starfall_menace","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_starfall_menace": true,"item_name": "Stoupy - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_starfall_menace"},"description": {"text": "Stoupy - Starfall Menace"}}},"id": "stardust:stoupy_starfall_menace","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
-			"jukebox_playable": "stardust:stoupy_suno_starfall_menace",
+			"jukebox_playable": "stardust:stoupy_starfall_menace",
 			"max_stack_size": 1,
 			"rarity": "rare",
-			"item_model": "stardust:stoupy_suno_starfall_menace",
+			"item_model": "stardust:stoupy_starfall_menace",
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]]
 		},
 		"skip_gives": false
 	},
-	"stoupy_suno_the_ultimate_ascension": {
-		"id": "stoupy_suno_the_ultimate_ascension",
+	"stoupy_the_ultimate_ascension": {
+		"id": "stoupy_the_ultimate_ascension",
 		"base_item": "minecraft:recovery_compass",
 		"recipes": [],
 		"components": {
-			"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 364,"sound_event": {"sound_id": "stardust:stoupy_suno_the_ultimate_ascension"},"description": {"text": "Stoupy & Suno - The Ultimate Ascension"}}},"id": "stardust:stoupy_suno_the_ultimate_ascension","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"stardust": {"stoupy_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_the_ultimate_ascension": true,"item_name": "Stoupy - The Ultimate Ascension"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 364,"sound_event": {"sound_id": "stardust:stoupy_the_ultimate_ascension"},"description": {"text": "Stoupy - The Ultimate Ascension"}}},"id": "stardust:stoupy_the_ultimate_ascension","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": {"text": "Music Disc","italic": false},
-			"jukebox_playable": "stardust:stoupy_suno_the_ultimate_ascension",
+			"jukebox_playable": "stardust:stoupy_the_ultimate_ascension",
 			"max_stack_size": 1,
 			"rarity": "rare",
-			"item_model": "stardust:stoupy_suno_the_ultimate_ascension",
+			"item_model": "stardust:stoupy_the_ultimate_ascension",
 			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]]
 		},
 		"skip_gives": false

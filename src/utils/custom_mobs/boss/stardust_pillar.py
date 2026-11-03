@@ -29,8 +29,8 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Disc duration
-	COSMIC_THREAT_DURATION: int = Item.from_id("stoupy_suno_cosmic_threat").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
-	STARFALL_MENACE_DURATION: int = Item.from_id("stoupy_suno_starfall_menace").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	COSMIC_THREAT_DURATION: int = Item.from_id("stoupy_cosmic_threat").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	STARFALL_MENACE_DURATION: int = Item.from_id("stoupy_starfall_menace").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
 
 	# Load function
 	write_load_file(f"""
@@ -258,11 +258,11 @@ playsound minecraft:entity.wither.death hostile @a[distance=..96]
 	write_function(f"{ns}:mobs/stardust_pillar/try_boss_music", f"""
 ## Choose music based on health
 # Cosmic Threat if shield active
-execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run playsound {ns}:stoupy_suno_cosmic_threat record @s ~ ~ ~ 0.2
+execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run playsound {ns}:stoupy_cosmic_threat record @s ~ ~ ~ 0.2
 execute if score #health {ns}.data matches {PILLAR_MAX_HEALTH // 2 + 1}.. run scoreboard players set @s {ns}.boss_music {COSMIC_THREAT_DURATION}
 
 # Starfall Menace if shield down
-execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} run playsound {ns}:stoupy_suno_starfall_menace record @s ~ ~ ~ 0.2
+execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} run playsound {ns}:stoupy_starfall_menace record @s ~ ~ ~ 0.2
 execute if score #health {ns}.data matches ..{PILLAR_MAX_HEALTH // 2} run scoreboard players set @s {ns}.boss_music {STARFALL_MENACE_DURATION}
 
 # Add global seconds to boss music timer
@@ -354,11 +354,11 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": Item.from_id("stoupy_suno_cosmic_threat").loot_table
+						"value": Item.from_id("stoupy_cosmic_threat").loot_table
 					},
 					{
 						"type": "minecraft:loot_table",
-						"value": Item.from_id("stoupy_suno_starfall_menace").loot_table
+						"value": Item.from_id("stoupy_starfall_menace").loot_table
 					}
 				],
 				"condition": {

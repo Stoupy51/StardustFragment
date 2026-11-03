@@ -82,11 +82,11 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "stardust:i/stoupy_suno_cosmic_threat"
+					"value": "stardust:i/stoupy_cosmic_threat"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "stardust:i/stoupy_suno_starfall_menace"
+					"value": "stardust:i/stoupy_starfall_menace"
 				}
 			],
 			"condition": {

@@ -112,24 +112,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.one_time_use_summoner_of_the_ultimate_dragon",
+										"translate": "stardust.one_time_use_summoner_of_the_ultimate_dragon","fallback": "One-time use summoner of the Ultimate Dragon.",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.needs_to_be_thrown_in_the_ultimate_dimension",
+										"translate": "stardust.needs_to_be_thrown_in_the_ultimate_dimension","fallback": "Needs to be thrown in the Ultimate dimension.",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:ultimate_dragon_essence",
 								"minecraft:item_name": {
-									"translate": "stardust.ultimate_dragon_essence"
+									"translate": "stardust.ultimate_dragon_essence","fallback": "Ultimate Dragon Essence"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

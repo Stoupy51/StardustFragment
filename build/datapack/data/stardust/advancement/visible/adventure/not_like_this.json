@@ -8,10 +8,12 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.not_like_this"
+			"translate": "stardust.not_like_this",
+			"fallback": "Not Like This..."
 		},
 		"description": {
 			"translate": "stardust.loose_an_ultimate_dragon_essence_by_not_throwing_it_in_the_ultim",
+			"fallback": "Loose an Ultimate Dragon Essence by not throwing it in the Ultimate Dimension",
 			"color": "green"
 		},
 		"frame": "challenge",

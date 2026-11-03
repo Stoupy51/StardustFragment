@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.darkness_and_shadow",
+			"fallback": "Darkness and Shadow",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.admire_this_darkium_seed",
+			"fallback": "Admire this Darkium Seed",
 			"color": "green"
 		},
 		"frame": "task",

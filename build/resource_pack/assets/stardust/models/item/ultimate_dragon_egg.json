@@ -4,12 +4,6 @@
 		"all": "stardust:item/ultimate_dragon_egg"
 	},
 	"display": {
-		"head": {
-			"translation": [
-				0,
-				13,
-				0
-			]
-		}
+		"head": {"translation": [0,13,0]}
 	}
 }

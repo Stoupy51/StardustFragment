@@ -5,10 +5,12 @@
 		},
 		"title": {
 			"translate": "stardust.gold_bullets",
+			"fallback": "Gold Bullets",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.shoot_a_gold_nugget_bullet_using_a_sniper",
+			"fallback": "Shoot a Gold Nugget Bullet using a Sniper",
 			"color": "green"
 		},
 		"frame": "task",

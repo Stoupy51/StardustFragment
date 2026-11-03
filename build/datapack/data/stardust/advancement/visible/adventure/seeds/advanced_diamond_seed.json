@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.more_diamonds",
+			"fallback": "More diamonds!",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.admire_this_advanced_diamond_seed",
+			"fallback": "Admire this Advanced Diamond Seed",
 			"color": "green"
 		},
 		"frame": "task",

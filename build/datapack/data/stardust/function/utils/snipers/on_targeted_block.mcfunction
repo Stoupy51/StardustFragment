@@ -6,6 +6,7 @@
 
 # Stop the raycast here
 scoreboard players set $raycast.piercing bs.lambda 0
+scoreboard players set #sniper_hit_block stardust.data 1
 
 # Get current block (https://docs.mcbookshelf.dev/en/latest/modules/block.html#get)
 data modify storage stardust:temp Pos set from entity @s Pos

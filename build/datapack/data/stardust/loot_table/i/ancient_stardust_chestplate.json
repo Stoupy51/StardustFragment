@@ -44,13 +44,13 @@
 								],
 								"minecraft:item_model": "stardust:ancient_stardust_chestplate",
 								"minecraft:item_name": {
-									"translate": "stardust.ancient_stardust_chestplate"
+									"translate": "stardust.ancient_stardust_chestplate","fallback": "Ancient Stardust Chestplate"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

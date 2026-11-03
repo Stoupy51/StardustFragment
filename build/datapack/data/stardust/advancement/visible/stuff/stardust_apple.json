@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.cosmic_apple",
+			"fallback": "Cosmic Apple",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_apple"
+				"translate": "stardust_apple",
+				"fallback": "Stardust Apple"
 			}
 		],
 		"frame": "task",

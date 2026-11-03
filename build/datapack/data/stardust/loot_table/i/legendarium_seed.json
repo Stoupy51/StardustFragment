@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "stardust.can_only_be_planted_on_emerald_block",
+										"translate": "stardust.can_only_be_planted_on_emerald_block","fallback": "Can only be planted on emerald block.",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:entity_data": {
@@ -33,7 +33,7 @@
 								},
 								"minecraft:item_model": "stardust:legendarium_seed",
 								"minecraft:item_name": {
-									"translate": "stardust.legendarium_seed"
+									"translate": "stardust.legendarium_seed","fallback": "Legendarium Seed"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

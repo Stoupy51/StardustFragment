@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.feeling_the_breeze_iii",
+			"fallback": "Feeling the Breeze III",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.legendarium_block"
+				"translate": "stardust.legendarium_block",
+				"fallback": "Legendarium Block"
 			}
 		],
 		"frame": "task",

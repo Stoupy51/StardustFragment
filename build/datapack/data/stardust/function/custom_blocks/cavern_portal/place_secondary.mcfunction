@@ -16,11 +16,10 @@ tag @s add stardust.cavern_portal
 tag @s add stardust.vanilla.minecraft_cobbled_deepslate
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.cavern_portal","italic": false,"color": "dark_gray"}}
+data merge entity @s {"CustomName": {"translate": "stardust.cavern_portal","fallback": "Cavern Portal","italic": false,"color": "dark_gray"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:cavern_portal"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 # Energy part

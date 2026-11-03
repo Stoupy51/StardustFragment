@@ -36,18 +36,18 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.transfer_speed_960_kw",
+										"translate": "stardust.transfer_speed_960_kw","fallback": "[Transfer Speed: 960 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_name": {
-									"translate": "stardust.awakened_stardust_cable"
+									"translate": "stardust.awakened_stardust_cable","fallback": "Awakened Stardust Cable"
 								}
 							}
 						}

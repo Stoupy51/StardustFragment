@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.trick_shot_i",
+			"fallback": "Trick Shot I",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.craft_a_stardust_sniper",
+			"fallback": "Craft a Stardust Sniper",
 			"color": "green"
 		},
 		"frame": "task",

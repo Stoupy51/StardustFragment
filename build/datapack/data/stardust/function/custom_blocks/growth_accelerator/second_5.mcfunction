@@ -12,7 +12,7 @@ scoreboard players remove @s energy.storage 500
 
 # Timer to 1 minute, stop function if not yet reached
 scoreboard players add @s stardust.data 5
-execute if score @s stardust.data matches ..59 run return run title @a[distance=..5] actionbar [{"score":{"objective":"stardust.data","name":"@s"},"color":"aqua"},{"text":"/","color":"yellow"},"60",{"translate":"stardust.s_before_activation","color":"yellow"}]
+execute if score @s stardust.data matches ..59 run return run title @a[distance=..5] actionbar [{"score":{"objective":"stardust.data","name":"@s"},"color":"aqua"},{"text":"/","color":"yellow"},"60",{"translate":"stardust.s_before_activation","fallback":"s before activation","color":"yellow"}]
 scoreboard players reset @s stardust.data
 
 # Audio-visual effects when reaching 1 minute

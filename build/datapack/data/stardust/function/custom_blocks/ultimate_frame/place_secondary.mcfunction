@@ -20,6 +20,5 @@ data merge entity @s {"CustomName": [{"text": "U","color": "#ff0000","italic": f
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:ultimate_frame"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 

@@ -15,14 +15,14 @@
 										"stoupy_suno_starfall_menace": true
 									},
 									"smithed": {
-										"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"translate": "stardust.stoupy_suno_starfall_menace"}}},
+										"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"translate": "stardust.stoupy_suno_starfall_menace","fallback": "Stoupy & Suno - Starfall Menace"}}},
 										"id": "stardust:stoupy_suno_starfall_menace",
 										"origin": "stardust",
 										"ignore": {"functionality": true,"crafting": true}
 									}
 								},
 								"minecraft:item_name": {
-									"translate": "stardust.music_disc",
+									"translate": "stardust.music_disc","fallback": "Music Disc",
 									"italic": false
 								},
 								"minecraft:jukebox_playable": "stardust:stoupy_suno_starfall_menace",
@@ -33,7 +33,7 @@
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

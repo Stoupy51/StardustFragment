@@ -25,30 +25,30 @@
 									}
 								},
 								"minecraft:item_name": {
-									"translate": "stardust_portal",
+									"translate": "stardust_portal","fallback": "Stardust Portal",
 									"italic": false,
 									"color": "blue"
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.this_portal_allows_access_to_the_stardust_dimension_with_lots_of",
+										"translate": "stardust.this_portal_allows_access_to_the_stardust_dimension_with_lots_of","fallback": "This portal allows access to the Stardust dimension with lots of powerful mobs!",
 										"italic": false,
 										"color": "white"
 									},
 									{
-										"translate": "stardust.power_usage_100_kw",
+										"translate": "stardust.power_usage_100_kw","fallback": "[Power Usage: 100 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_6000_kj",
+										"translate": "stardust.energy_buffer_6000_kj","fallback": "[Energy Buffer: 6000 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:container": [

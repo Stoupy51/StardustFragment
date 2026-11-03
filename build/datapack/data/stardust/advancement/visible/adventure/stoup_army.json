@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.fighting_a_mini_boss",
+			"fallback": "Fighting a mini-boss",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.fight_against_your_first_stoup_army",
+			"fallback": "Fight against your first Stoup Army",
 			"color": "green"
 		},
 		"frame": "task",

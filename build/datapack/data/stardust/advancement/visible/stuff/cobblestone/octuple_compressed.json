@@ -7,15 +7,18 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.43046721"
+			"translate": "stardust.43046721",
+			"fallback": "43,046,721"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.octuple_compressed_cobblestone"
+				"translate": "stardust.octuple_compressed_cobblestone",
+				"fallback": "Octuple Compressed Cobblestone"
 			}
 		],
 		"frame": "challenge",

@@ -8,16 +8,19 @@
 		},
 		"title": {
 			"translate": "stardust.increasing_max_health_ii",
+			"fallback": "Increasing Max Health II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			[
 				{
-					"translate": "stardust.health_artifact_lv"
+					"translate": "stardust.health_artifact_lv",
+					"fallback": "Health Artifact Lv"
 				},
 				".2"
 			]

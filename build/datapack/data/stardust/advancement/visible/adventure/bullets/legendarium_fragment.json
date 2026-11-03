@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.legendarium_bullets",
+			"fallback": "Legendarium Bullets",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.shoot_a_legendarium_fragment_bullet_using_a_sniper",
+			"fallback": "Shoot a Legendarium Fragment Bullet using a Sniper",
 			"color": "green"
 		},
 		"frame": "task",

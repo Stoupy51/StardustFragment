@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust_energy_i",
+			"fallback": "Stardust Energy I",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_battery"
+				"translate": "stardust_battery",
+				"fallback": "Stardust Battery"
 			}
 		],
 		"frame": "task",

@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.solarium_bullets",
+			"fallback": "Solarium Bullets",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.shoot_a_solarium_fragment_bullet_using_a_sniper",
+			"fallback": "Shoot a Solarium Fragment Bullet using a Sniper",
 			"color": "green"
 		},
 		"frame": "task",

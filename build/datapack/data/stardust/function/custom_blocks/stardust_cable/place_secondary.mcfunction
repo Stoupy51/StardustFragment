@@ -16,10 +16,9 @@ tag @s add stardust.stardust_cable
 tag @s add stardust.vanilla.minecraft_player_head
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust_cable"}}
+data merge entity @s {"CustomName": {"translate": "stardust_cable","fallback": "Stardust Cable"}}
 
 # Modify item display entity to match the custom block
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 tag @s add energy.cable

@@ -25,7 +25,7 @@
 					[{
 						"text":" ",
 						"color": "gray"
-					}, {"translate": "stardust.to_set_1st_coordinates"}]
+					}, {"translate": "stardust.to_set_1st_coordinates","fallback": "to set 1st coordinates"}]
 				],
 				[
 					{
@@ -43,7 +43,7 @@
 					[{
 						"text":" ",
 						"color": "gray"
-					}, {"translate": "stardust.to_set_2nd_coordinates"}]
+					}, {"translate": "stardust.to_set_2nd_coordinates","fallback": "to set 2nd coordinates"}]
 				],
 				[
 					"",
@@ -58,12 +58,12 @@
 						"italic": false,
 						"color": "white",
 						"font": "stardust:tooltip"
-					}, {"translate": "stardust_fragment"}]
+					}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 				]
 			],
 			"minecraft:item_model": "stardust:quarry_configurator",
 			"minecraft:item_name": {
-				"translate": "stardust.quarry_configurator"
+				"translate": "stardust.quarry_configurator","fallback": "Quarry Configurator"
 			},
 			"minecraft:custom_data": {
 				"stardust": {

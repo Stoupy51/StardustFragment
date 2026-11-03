@@ -24,13 +24,13 @@
 								},
 								"minecraft:item_model": "stardust:stardust_sniper",
 								"minecraft:item_name": {
-									"translate": "stardust_sniper"
+									"translate": "stardust_sniper","fallback": "Stardust Sniper"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

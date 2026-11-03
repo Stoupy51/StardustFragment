@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.increasing_movement_speed_iv",
+			"fallback": "Increasing Movement Speed IV",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.speed_artifact_lv_max"
+				"translate": "stardust.speed_artifact_lv_max",
+				"fallback": "Speed Artifact Lv.Max"
 			}
 		],
 		"frame": "task",

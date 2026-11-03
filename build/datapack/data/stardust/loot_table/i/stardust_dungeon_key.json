@@ -13,19 +13,19 @@
 								"minecraft:rarity": "epic",
 								"minecraft:lore": [
 									{
-										"translate": "stardust.one_time_use_key_for_the_stardust_dungeon",
+										"translate": "stardust.one_time_use_key_for_the_stardust_dungeon","fallback": "One-time use key for the Stardust Dungeon",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:stardust_dungeon_key",
 								"minecraft:item_name": {
-									"translate": "stardust_dungeon_key"
+									"translate": "stardust_dungeon_key","fallback": "Stardust Dungeon Key"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

@@ -8,16 +8,19 @@
 		},
 		"title": {
 			"translate": "stardust.increasing_movement_speed_iii",
+			"fallback": "Increasing Movement Speed III",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			[
 				{
-					"translate": "stardust.speed_artifact_lv"
+					"translate": "stardust.speed_artifact_lv",
+					"fallback": "Speed Artifact Lv"
 				},
 				".3"
 			]

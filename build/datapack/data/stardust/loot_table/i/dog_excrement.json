@@ -11,7 +11,7 @@
 							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": {
-									"translate": "stardust.dog_excrement",
+									"translate": "stardust.dog_excrement","fallback": "Dog Excrement",
 									"italic": false,
 									"color": "#693100"
 								},
@@ -20,7 +20,7 @@
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

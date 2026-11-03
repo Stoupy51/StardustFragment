@@ -20,19 +20,19 @@
 								"minecraft:rarity": "epic",
 								"minecraft:lore": [
 									{
-										"translate": "stardust.summoner_of_the_stardust_pillar_boss",
+										"translate": "stardust.summoner_of_the_stardust_pillar_boss","fallback": "Summoner of the Stardust Pillar boss",
 										"italic": false,
 										"color": "white"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:starlight_infuser",
 								"minecraft:item_name": {
-									"translate": "stardust.starlight_infuser"
+									"translate": "stardust.starlight_infuser","fallback": "Starlight Infuser"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

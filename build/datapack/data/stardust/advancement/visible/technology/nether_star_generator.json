@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.nether_star_power",
+			"fallback": "Nether Star Power",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.nether_star_generator"
+				"translate": "stardust.nether_star_generator",
+				"fallback": "Nether Star Generator"
 			}
 		],
 		"frame": "task",

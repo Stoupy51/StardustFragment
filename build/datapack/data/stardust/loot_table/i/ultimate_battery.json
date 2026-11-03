@@ -104,14 +104,14 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_storage_10_gj",
+										"translate": "stardust.energy_storage_10_gj","fallback": "[Energy Storage: 10 GJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:ultimate_battery"

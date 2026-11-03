@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.power_usage_100_kw",
+										"translate": "stardust.power_usage_100_kw","fallback": "[Power Usage: 100 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_15_mj",
+										"translate": "stardust.energy_buffer_15_mj","fallback": "[Energy Buffer: 15 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:mob_grinder",
 								"minecraft:item_name": {
-									"translate": "stardust.mob_grinder"
+									"translate": "stardust.mob_grinder","fallback": "Mob Grinder"
 								}
 							}
 						}

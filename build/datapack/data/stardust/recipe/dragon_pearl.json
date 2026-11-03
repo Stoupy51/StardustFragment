@@ -18,7 +18,7 @@
 		"count": 1,
 		"components": {
 			"minecraft:item_name": {
-				"translate": "stardust.dragon_pearl",
+				"translate": "stardust.dragon_pearl","fallback": "Dragon Pearl",
 				"italic": false,
 				"color": "dark_purple"
 			},
@@ -40,7 +40,7 @@
 						"italic": false,
 						"color": "white",
 						"font": "stardust:tooltip"
-					}, {"translate": "stardust_fragment"}]
+					}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 				]
 			],
 			"minecraft:custom_data": {

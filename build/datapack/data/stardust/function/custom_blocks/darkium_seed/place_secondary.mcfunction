@@ -17,11 +17,10 @@ tag @s add stardust.vanilla.minecraft_moss_carpet
 tag @s add stardust.growing_seed
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.darkium_seed"}}
+data merge entity @s {"CustomName": {"translate": "stardust.darkium_seed","fallback": "Darkium Seed"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:darkium_seed"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 # Update seed model

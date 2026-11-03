@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.carbon_dioxide_iii",
+			"fallback": "Carbon Dioxide III",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.awakened_stardust_furnace_generator"
+				"translate": "stardust.awakened_stardust_furnace_generator",
+				"fallback": "Awakened Stardust Furnace Generator"
 			}
 		],
 		"frame": "task",

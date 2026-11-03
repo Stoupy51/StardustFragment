@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.automated_combat",
+			"fallback": "Automated Combat",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.mob_grinder"
+				"translate": "stardust.mob_grinder",
+				"fallback": "Mob Grinder"
 			}
 		],
 		"frame": "task",

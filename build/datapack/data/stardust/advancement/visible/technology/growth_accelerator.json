@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.speeding_up_nature",
+			"fallback": "Speeding up Nature",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.growth_accelerator"
+				"translate": "stardust.growth_accelerator",
+				"fallback": "Growth Accelerator"
 			}
 		],
 		"frame": "task",

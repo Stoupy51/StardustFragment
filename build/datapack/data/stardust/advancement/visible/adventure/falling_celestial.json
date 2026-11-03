@@ -4,10 +4,12 @@
 			"id": "minecraft:feather"
 		},
 		"title": {
-			"translate": "stardust.where_did_i_put_my_bucket"
+			"translate": "stardust.where_did_i_put_my_bucket",
+			"fallback": "Where did I put my bucket?"
 		},
 		"description": {
 			"translate": "stardust.fall_from_the_celestial_dimension",
+			"fallback": "Fall from the Celestial dimension",
 			"color": "green"
 		},
 		"frame": "challenge",

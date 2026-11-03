@@ -27,24 +27,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.speed_1000_block_s",
+										"translate": "stardust.speed_1000_block_s","fallback": "[Speed: 1000 block/s]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.power_usage_0_kw",
+										"translate": "stardust.power_usage_0_kw","fallback": "[Power Usage: 0 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_1_kj",
+										"translate": "stardust.energy_buffer_1_kj","fallback": "[Energy Buffer: 1 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:enchantment_glint_override": true,
@@ -61,7 +61,7 @@
 								},
 								"minecraft:item_model": "stardust:quarry_creative",
 								"minecraft:item_name": {
-									"translate": "stardust.quarry_creative"
+									"translate": "stardust.quarry_creative","fallback": "Quarry Creative"
 								}
 							}
 						}

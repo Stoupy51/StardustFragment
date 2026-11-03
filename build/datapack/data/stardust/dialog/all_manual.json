@@ -2,11 +2,11 @@
 	"type": "minecraft:dialog_list",
 	"title": [
 		"",
-		{"text": "肵","font": "stardust:renders","shadow_color": [0,0,0,0]},
+		{"text": "肶","font": "stardust:renders","shadow_color": [0,0,0,0]},
 		" ",
-		{"translate": "stardust_fragment_manual","underlined": true},
+		{"translate": "stardust_fragment_manual","fallback": "Stardust Fragment Manual","underlined": true},
 		" ",
-		{"text": "肵","font": "stardust:renders","shadow_color": [0,0,0,0]}
+		{"text": "肶","font": "stardust:renders","shadow_color": [0,0,0,0]}
 	],
 	"dialogs": [
 		"stardust:manual/page_1",

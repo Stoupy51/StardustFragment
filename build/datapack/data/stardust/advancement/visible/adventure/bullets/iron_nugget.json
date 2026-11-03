@@ -5,10 +5,12 @@
 		},
 		"title": {
 			"translate": "stardust.iron_bullets",
+			"fallback": "Iron Bullets",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.shoot_a_iron_nugget_bullet_using_a_sniper",
+			"fallback": "Shoot a Iron Nugget Bullet using a Sniper",
 			"color": "green"
 		},
 		"frame": "task",

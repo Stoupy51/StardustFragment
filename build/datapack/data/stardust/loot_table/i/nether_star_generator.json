@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_generation_1500_kw",
+										"translate": "stardust.energy_generation_1500_kw","fallback": "[Energy Generation: 1500 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_30_mj",
+										"translate": "stardust.energy_buffer_30_mj","fallback": "[Energy Buffer: 30 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:nether_star_generator",
 								"minecraft:item_name": {
-									"translate": "stardust.nether_star_generator"
+									"translate": "stardust.nether_star_generator","fallback": "Nether Star Generator"
 								}
 							}
 						}

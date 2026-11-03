@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.yup_thats_it",
+			"fallback": "Yup that's it!",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.use_the_power_of_a_stardust_core_to_craft_an_original_stardust_e",
+			"fallback": "Use the power of a Stardust Core to craft an Original Stardust equipment",
 			"color": "green"
 		},
 		"frame": "task",

@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.a_stardust_pillar",
+			"fallback": "A Stardust Pillar",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.summon_the_stardust_pillar",
+			"fallback": "Summon the Stardust Pillar",
 			"color": "green"
 		},
 		"frame": "task",

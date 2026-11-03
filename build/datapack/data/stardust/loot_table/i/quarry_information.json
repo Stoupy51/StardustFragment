@@ -12,13 +12,13 @@
 							"components": {
 								"minecraft:item_model": "stardust:quarry_information",
 								"minecraft:item_name": {
-									"translate": "stardust.quarry_information"
+									"translate": "stardust.quarry_information","fallback": "Quarry Information"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

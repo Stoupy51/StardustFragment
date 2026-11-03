@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.what_am_i_going_to_take_out",
+			"fallback": "What am I going to take out?",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.find_a_lucky_artifact_bag",
+			"fallback": "Find a Lucky Artifact Bag",
 			"color": "green"
 		},
 		"frame": "task",

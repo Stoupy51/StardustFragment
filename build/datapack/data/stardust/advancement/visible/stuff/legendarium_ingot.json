@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.feeling_the_breeze_ii",
+			"fallback": "Feeling the Breeze II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.legendarium_ingot"
+				"translate": "stardust.legendarium_ingot",
+				"fallback": "Legendarium Ingot"
 			}
 		],
 		"frame": "task",

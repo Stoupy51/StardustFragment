@@ -11,24 +11,24 @@
 							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": [{
-									"translate":"stardust.cobblestone_miner_lv"
+									"translate": "stardust.cobblestone_miner_lv","fallback": "Cobblestone Miner Lv"
 								}, ".1"],
 								"minecraft:rarity": "rare",
 								"minecraft:lore": [
 									{
-										"translate": "stardust.only_mines_cobblestone_directly_below",
+										"translate": "stardust.only_mines_cobblestone_directly_below","fallback": "Only mines cobblestone directly below",
 										"color": "white",
 										"italic": false
 									},
 									{
-										"translate": "stardust.x9_per_minute",
+										"translate": "stardust.x9_per_minute","fallback": "[x9 per minute]",
 										"color": "gray",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:container": [

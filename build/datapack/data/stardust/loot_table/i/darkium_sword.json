@@ -47,13 +47,13 @@
 								],
 								"minecraft:item_model": "stardust:darkium_sword",
 								"minecraft:item_name": {
-									"translate": "stardust.darkium_sword"
+									"translate": "stardust.darkium_sword","fallback": "Darkium Sword"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

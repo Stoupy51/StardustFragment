@@ -16,11 +16,10 @@ tag @s add stardust.mob_grinder
 tag @s add stardust.vanilla.minecraft_redstone_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.mob_grinder"}}
+data merge entity @s {"CustomName": {"translate": "stardust.mob_grinder","fallback": "Mob Grinder"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:mob_grinder"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 # Apply rotation

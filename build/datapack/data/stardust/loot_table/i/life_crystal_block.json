@@ -23,13 +23,13 @@
 								},
 								"minecraft:item_model": "stardust:life_crystal_block",
 								"minecraft:item_name": {
-									"translate": "stardust.life_crystal_block"
+									"translate": "stardust.life_crystal_block","fallback": "Life Crystal Block"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

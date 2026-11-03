@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.fire_and_light",
+			"fallback": "Fire and Light",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.admire_this_solarium_seed",
+			"fallback": "Admire this Solarium Seed",
 			"color": "green"
 		},
 		"frame": "task",

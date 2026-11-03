@@ -5,6 +5,6 @@
 		"sound_id": "stardust:stoupy_suno_cosmic_threat"
 	},
 	"description": {
-		"translate": "stardust.stoupy_suno_cosmic_threat"
+		"translate": "stardust.stoupy_suno_cosmic_threat","fallback": "Stoupy & Suno - Cosmic Threat"
 	}
 }

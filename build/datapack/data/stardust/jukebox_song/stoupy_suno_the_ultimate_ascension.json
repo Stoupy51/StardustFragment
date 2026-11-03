@@ -5,6 +5,6 @@
 		"sound_id": "stardust:stoupy_suno_the_ultimate_ascension"
 	},
 	"description": {
-		"translate": "stardust.stoupy_suno_the_ultimate_ascension"
+		"translate": "stardust.stoupy_suno_the_ultimate_ascension","fallback": "Stoupy & Suno - The Ultimate Ascension"
 	}
 }

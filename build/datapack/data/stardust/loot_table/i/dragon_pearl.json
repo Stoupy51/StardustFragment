@@ -11,7 +11,7 @@
 							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": {
-									"translate": "stardust.dragon_pearl",
+									"translate": "stardust.dragon_pearl","fallback": "Dragon Pearl",
 									"italic": false,
 									"color": "dark_purple"
 								},
@@ -23,7 +23,7 @@
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

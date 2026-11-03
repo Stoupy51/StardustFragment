@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.a_costly_stardust_material",
+			"fallback": "A costly Stardust Material",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.compacted_stardust_shard"
+				"translate": "stardust.compacted_stardust_shard",
+				"fallback": "Compacted Stardust Shard"
 			}
 		],
 		"frame": "task",

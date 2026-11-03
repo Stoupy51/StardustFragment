@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.faster_and_farther",
+			"fallback": "Faster and Farther",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
 				"translate": "stardust.dragon_pearl",
+				"fallback": "Dragon Pearl",
 				"italic": false,
 				"color": "dark_purple"
 			}

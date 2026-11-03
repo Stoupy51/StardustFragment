@@ -54,13 +54,13 @@
 								],
 								"minecraft:item_model": "stardust:solarium_pickaxe",
 								"minecraft:item_name": {
-									"translate": "stardust.solarium_pickaxe"
+									"translate": "stardust.solarium_pickaxe","fallback": "Solarium Pickaxe"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

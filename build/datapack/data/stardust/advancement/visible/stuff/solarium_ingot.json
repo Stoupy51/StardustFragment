@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.feeling_the_sun_ii",
+			"fallback": "Feeling the Sun II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.solarium_ingot"
+				"translate": "stardust.solarium_ingot",
+				"fallback": "Solarium Ingot"
 			}
 		],
 		"frame": "task",

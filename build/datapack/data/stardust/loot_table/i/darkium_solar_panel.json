@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_generation_32_kw",
+										"translate": "stardust.energy_generation_32_kw","fallback": "[Energy Generation: 32 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_4800_kj",
+										"translate": "stardust.energy_buffer_4800_kj","fallback": "[Energy Buffer: 4800 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:darkium_solar_panel",
 								"minecraft:item_name": {
-									"translate": "stardust.darkium_solar_panel"
+									"translate": "stardust.darkium_solar_panel","fallback": "Darkium Solar Panel"
 								}
 							}
 						}

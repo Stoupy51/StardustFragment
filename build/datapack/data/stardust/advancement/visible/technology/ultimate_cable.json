@@ -21,11 +21,13 @@
 		},
 		"title": {
 			"translate": "stardust.energy_transfer_iii",
+			"fallback": "Energy Transfer III",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			[

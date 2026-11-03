@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.bowing_like_a_pro_ii",
+			"fallback": "Bowing like a pro II",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.upgrade_your_stardust_bow_in_its_awakened_form",
+			"fallback": "Upgrade your Stardust Bow in its Awakened form",
 			"color": "green"
 		},
 		"frame": "task",

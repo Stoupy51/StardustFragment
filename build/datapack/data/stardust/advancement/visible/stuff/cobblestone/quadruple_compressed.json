@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.compressing_iv",
+			"fallback": "Compressing IV",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.quadruple_compressed_cobblestone"
+				"translate": "stardust.quadruple_compressed_cobblestone",
+				"fallback": "Quadruple Compressed Cobblestone"
 			}
 		],
 		"frame": "task",

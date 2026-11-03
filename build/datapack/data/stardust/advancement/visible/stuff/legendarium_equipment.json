@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.taking_a_breath",
+			"fallback": "Taking a breath",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.choose_the_legendarium_path",
+			"fallback": "Choose the Legendarium path",
 			"color": "green"
 		},
 		"frame": "task",

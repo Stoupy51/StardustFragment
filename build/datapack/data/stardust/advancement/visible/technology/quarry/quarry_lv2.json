@@ -8,16 +8,19 @@
 		},
 		"title": {
 			"translate": "stardust.mining_industry_ii",
+			"fallback": "Mining Industry II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			[
 				{
 					"translate": "stardust.quarry_lv",
+					"fallback": "Quarry Lv",
 					"italic": false
 				},
 				".2"

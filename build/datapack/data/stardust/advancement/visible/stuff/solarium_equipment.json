@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.burning_your_soul",
+			"fallback": "Burning your soul",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.choose_the_solarium_path",
+			"fallback": "Choose the Solarium path",
 			"color": "green"
 		},
 		"frame": "task",

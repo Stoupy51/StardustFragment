@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.feeling_the_shadow_i",
+			"fallback": "Feeling the Shadow I",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.darkium_fragment"
+				"translate": "stardust.darkium_fragment",
+				"fallback": "Darkium Fragment"
 			}
 		],
 		"frame": "task",

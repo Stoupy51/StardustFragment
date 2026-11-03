@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.be_aware_of_your_shadow",
+			"fallback": "Be aware of your shadow",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.choose_the_darkium_path",
+			"fallback": "Choose the Darkium path",
 			"color": "green"
 		},
 		"frame": "task",

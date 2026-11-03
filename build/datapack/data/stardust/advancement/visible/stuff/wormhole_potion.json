@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.where_are_you_my_friend",
+			"fallback": "Where are you my friend",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.use_a_wormhole_potion_for_the_first_time",
+			"fallback": "Use a Wormhole Potion for the first time",
 			"color": "green"
 		},
 		"frame": "task",

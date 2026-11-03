@@ -26,29 +26,29 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.only_growth_seeds_in_a_radius",
+										"translate": "stardust.only_growth_seeds_in_a_radius","fallback": "Only growth seeds in a radius",
 										"italic": false,
 										"color": "white"
 									},
 									{
-										"translate": "stardust.of_10_blocks_every_minute",
+										"translate": "stardust.of_10_blocks_every_minute","fallback": "of 10 blocks every minute",
 										"italic": false,
 										"color": "white"
 									},
 									{
-										"translate": "stardust.power_usage_100_kw",
+										"translate": "stardust.power_usage_100_kw","fallback": "[Power Usage: 100 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_12_mj",
+										"translate": "stardust.energy_buffer_12_mj","fallback": "[Energy Buffer: 12 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:container": [
@@ -64,7 +64,7 @@
 								},
 								"minecraft:item_model": "stardust:growth_accelerator",
 								"minecraft:item_name": {
-									"translate": "stardust.growth_accelerator"
+									"translate": "stardust.growth_accelerator","fallback": "Growth Accelerator"
 								}
 							}
 						}

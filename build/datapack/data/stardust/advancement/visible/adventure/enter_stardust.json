@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.everythins_blue",
+			"fallback": "Everythin's blue",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.travel_to_the_stardust_dimension",
+			"fallback": "Travel to the Stardust Dimension",
 			"color": "green"
 		},
 		"frame": "task",

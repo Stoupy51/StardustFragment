@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.control_of_the_mining_industry",
+			"fallback": "Control of the Mining Industry",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.quarry_configurator"
+				"translate": "stardust.quarry_configurator",
+				"fallback": "Quarry Configurator"
 			}
 		],
 		"frame": "task",

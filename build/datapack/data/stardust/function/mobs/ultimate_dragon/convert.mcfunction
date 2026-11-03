@@ -23,7 +23,7 @@ effect give @s minecraft:resistance infinite 3 true
 data modify entity @s Health set value 4096.0f
 
 # Set custom name and other properties
-data modify entity @s CustomName set value {"translate":"stardust.ultimate_dragon","color":"white"}
+data modify entity @s CustomName set value {"translate":"stardust.ultimate_dragon","fallback":"Ultimate Dragon","color":"white"}
 data modify entity @s PersistenceRequired set value true
 data modify entity @s Glowing set value true
 

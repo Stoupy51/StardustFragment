@@ -26,29 +26,29 @@
 									}
 								},
 								"minecraft:item_name": [{
-									"translate":"stardust.quarry_lv",
+									"translate": "stardust.quarry_lv","fallback": "Quarry Lv",
 									"italic": false
 								}, ".5"],
 								"minecraft:lore": [
 									{
-										"translate": "stardust.speed_16_block_s",
+										"translate": "stardust.speed_16_block_s","fallback": "[Speed: 16 block/s]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.power_usage_625_kw",
+										"translate": "stardust.power_usage_625_kw","fallback": "[Power Usage: 625 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_180_mj",
+										"translate": "stardust.energy_buffer_180_mj","fallback": "[Energy Buffer: 180 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:container": [

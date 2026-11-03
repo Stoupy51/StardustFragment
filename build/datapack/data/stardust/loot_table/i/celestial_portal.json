@@ -25,30 +25,30 @@
 									}
 								},
 								"minecraft:item_name": {
-									"translate": "stardust.celestial_portal",
+									"translate": "stardust.celestial_portal","fallback": "Celestial Portal",
 									"italic": false,
 									"color": "gray"
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.this_portal_allows_access_to_a_dimension_filled_with_floating_is",
+										"translate": "stardust.this_portal_allows_access_to_a_dimension_filled_with_floating_is","fallback": "This portal allows access to a dimension filled with floating islands",
 										"italic": false,
 										"color": "white"
 									},
 									{
-										"translate": "stardust.power_usage_20_kw",
+										"translate": "stardust.power_usage_20_kw","fallback": "[Power Usage: 20 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_800_kj",
+										"translate": "stardust.energy_buffer_800_kj","fallback": "[Energy Buffer: 800 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:container": [

@@ -16,10 +16,9 @@ tag @s add stardust.quadruple_compressed_cobblestone
 tag @s add stardust.vanilla.minecraft_cobbled_deepslate
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.quadruple_compressed_cobblestone"}}
+data merge entity @s {"CustomName": {"translate": "stardust.quadruple_compressed_cobblestone","fallback": "Quadruple Compressed Cobblestone"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:quadruple_compressed_cobblestone"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 

@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.feeling_the_shadow_ii",
+			"fallback": "Feeling the Shadow II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.darkium_ingot"
+				"translate": "stardust.darkium_ingot",
+				"fallback": "Darkium Ingot"
 			}
 		],
 		"frame": "task",

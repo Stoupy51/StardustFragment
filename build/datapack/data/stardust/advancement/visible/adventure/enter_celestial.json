@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.skyblock_isnt_it",
+			"fallback": "Skyblock, isn't it?",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.enter_the_celestial_dimension",
+			"fallback": "Enter the Celestial Dimension",
 			"color": "green"
 		},
 		"frame": "task",

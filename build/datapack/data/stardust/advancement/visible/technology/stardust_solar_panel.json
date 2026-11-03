@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.greater_photosensitivity_i",
+			"fallback": "Greater Photosensitivity I",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_solar_panel"
+				"translate": "stardust_solar_panel",
+				"fallback": "Stardust Solar Panel"
 			}
 		],
 		"frame": "task",

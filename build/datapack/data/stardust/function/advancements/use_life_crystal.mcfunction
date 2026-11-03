@@ -16,7 +16,7 @@ scoreboard players operation @s stardust.cooldown = #global_tick stardust.data
 scoreboard players add @s stardust.cooldown 20
 
 # Stop if already at max life crystals
-execute if score @s stardust.life_crystal matches 20 run return run tellraw @s {"translate":"stardust_fragment_you_have_already_reached_the_maximum_number_of","color":"red"}
+execute if score @s stardust.life_crystal matches 20 run return run tellraw @s {"translate":"stardust_fragment_you_have_already_reached_the_maximum_number_of","fallback":"[Stardust Fragment] You have already reached the maximum number of Life Crystals!","color":"red"}
 
 # Update life crystal count & attribute
 scoreboard players add @s stardust.life_crystal 1

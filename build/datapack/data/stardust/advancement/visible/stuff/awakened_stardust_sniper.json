@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.trick_shot_ii",
+			"fallback": "Trick Shot II",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.upgrade_your_stardust_sniper_in_its_awakened_form",
+			"fallback": "Upgrade your Stardust Sniper in its Awakened form",
 			"color": "green"
 		},
 		"frame": "task",

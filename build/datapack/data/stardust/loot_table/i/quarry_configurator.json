@@ -13,23 +13,23 @@
 								"minecraft:lore": [
 									[
 										{"keybind": "key.use","italic": false,"color": "white"},
-										[{"text":" ","color": "gray"}, {"translate": "stardust.to_set_1st_coordinates"}]
+										[{"text":" ","color": "gray"}, {"translate": "stardust.to_set_1st_coordinates","fallback": "to set 1st coordinates"}]
 									],
 									[
 										{"keybind": "key.sneak","italic": false,"color": "white"},
 										{"text": " + ","color": "gray"},
 										{"keybind": "key.use"},
-										[{"text":" ","color": "gray"}, {"translate": "stardust.to_set_2nd_coordinates"}]
+										[{"text":" ","color": "gray"}, {"translate": "stardust.to_set_2nd_coordinates","fallback": "to set 2nd coordinates"}]
 									],
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:quarry_configurator",
 								"minecraft:item_name": {
-									"translate": "stardust.quarry_configurator"
+									"translate": "stardust.quarry_configurator","fallback": "Quarry Configurator"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

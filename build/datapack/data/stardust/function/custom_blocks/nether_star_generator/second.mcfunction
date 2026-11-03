@@ -6,6 +6,8 @@
 # @within	stardust:custom_blocks/second
 #
 
+function stardust:custom_blocks/nether_star_generator/follow_host
+
 # The gui item only sits in the input slot so the furnace lights its fuel, reset its progress so it never smelts
 data modify block ~ ~ ~ cooking_time_spent set value 0s
 

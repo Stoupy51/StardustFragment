@@ -15,7 +15,7 @@
 		"components": {
 			"minecraft:item_model": "stardust:mirror",
 			"minecraft:item_name": {
-				"translate": "stardust.mirror"
+				"translate": "stardust.mirror","fallback": "Mirror"
 			},
 			"minecraft:lore": [
 				[
@@ -31,7 +31,7 @@
 						"italic": false,
 						"color": "white",
 						"font": "stardust:tooltip"
-					}, {"translate": "stardust_fragment"}]
+					}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 				]
 			],
 			"minecraft:custom_data": {

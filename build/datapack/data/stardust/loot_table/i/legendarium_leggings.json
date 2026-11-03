@@ -58,13 +58,13 @@
 								],
 								"minecraft:item_model": "stardust:legendarium_leggings",
 								"minecraft:item_name": {
-									"translate": "stardust.legendarium_leggings"
+									"translate": "stardust.legendarium_leggings","fallback": "Legendarium Leggings"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

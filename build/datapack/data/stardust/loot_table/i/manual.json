@@ -16,14 +16,14 @@
 								"minecraft:max_stack_size": 16,
 								"minecraft:lore": [
 									[{
-										"translate":"stardust.by_stoupy",
+										"translate": "stardust.by_stoupy","fallback": "by Stoupy",
 										"color": "gray",
 										"italic": false
 									}, "51"],
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

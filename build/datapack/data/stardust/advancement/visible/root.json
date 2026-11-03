@@ -79,6 +79,7 @@
 		],
 		"description": {
 			"translate": "stardust.whats_this_little_blue_thing",
+			"fallback": "What's this little blue thing?",
 			"color": "green"
 		},
 		"background": "stardust:block/gui/advancement_background",

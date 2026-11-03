@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.increasing_health",
+			"fallback": "Increasing Health",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.eat_your_first_life_crystal",
+			"fallback": "Eat your first Life Crystal",
 			"color": "green"
 		},
 		"frame": "task",

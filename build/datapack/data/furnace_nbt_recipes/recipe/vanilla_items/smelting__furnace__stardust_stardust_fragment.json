@@ -7,7 +7,7 @@
 		"components": {
 			"minecraft:item_model": "stardust:stardust_fragment",
 			"minecraft:item_name": {
-				"translate": "stardust_fragment"
+				"translate": "stardust_fragment","fallback": "Stardust Fragment"
 			},
 			"minecraft:lore": [
 				[
@@ -23,7 +23,7 @@
 						"italic": false,
 						"color": "white",
 						"font": "stardust:tooltip"
-					}, {"translate": "stardust_fragment"}]
+					}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 				]
 			],
 			"minecraft:custom_data": {

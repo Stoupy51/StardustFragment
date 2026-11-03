@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.even_more_stardust",
+			"fallback": "Even more stardust!",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.admire_this_elite_stardust_seed",
+			"fallback": "Admire this Elite Stardust Seed",
 			"color": "green"
 		},
 		"frame": "task",

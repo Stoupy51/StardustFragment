@@ -19,7 +19,7 @@
 		"components": {
 			"minecraft:lore": [
 				{
-					"translate": "stardust.equivalent_to_9_cobblestones",
+					"translate": "stardust.equivalent_to_9_cobblestones","fallback": "Equivalent to 9 cobblestones",
 					"color": "gray",
 					"italic": false
 				},
@@ -36,7 +36,7 @@
 						"italic": false,
 						"color": "white",
 						"font": "stardust:tooltip"
-					}, {"translate": "stardust_fragment"}]
+					}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 				]
 			],
 			"minecraft:container": [
@@ -65,7 +65,7 @@
 			},
 			"minecraft:item_model": "stardust:compressed_cobblestone",
 			"minecraft:item_name": {
-				"translate": "stardust.compressed_cobblestone"
+				"translate": "stardust.compressed_cobblestone","fallback": "Compressed Cobblestone"
 			},
 			"minecraft:custom_data": {
 				"stardust": {

@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_generation_16_kw",
+										"translate": "stardust.energy_generation_16_kw","fallback": "[Energy Generation: 16 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_2400_kj",
+										"translate": "stardust.energy_buffer_2400_kj","fallback": "[Energy Buffer: 2400 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:awakened_stardust_solar_panel",
 								"minecraft:item_name": {
-									"translate": "stardust.awakened_stardust_solar_panel"
+									"translate": "stardust.awakened_stardust_solar_panel","fallback": "Awakened Stardust Solar Panel"
 								}
 							}
 						}

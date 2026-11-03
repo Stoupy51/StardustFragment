@@ -21,15 +21,18 @@
 		},
 		"title": {
 			"translate": "stardust.energy_transfer_ii",
+			"fallback": "Energy Transfer II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.awakened_stardust_cable"
+				"translate": "stardust.awakened_stardust_cable",
+				"fallback": "Awakened Stardust Cable"
 			}
 		],
 		"frame": "task",

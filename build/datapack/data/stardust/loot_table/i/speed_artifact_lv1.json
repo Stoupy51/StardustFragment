@@ -11,24 +11,24 @@
 							"type": "minecraft:set_components",
 							"components": {
 								"minecraft:item_name": [{
-									"translate":"stardust.speed_artifact_lv"
+									"translate": "stardust.speed_artifact_lv","fallback": "Speed Artifact Lv"
 								}, ".1"],
 								"minecraft:rarity": "rare",
 								"minecraft:lore": [
 									{
-										"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect",
+										"translate": "stardust.hold_in_any_hand_to_get_the_speed_effect","fallback": "Hold in any hand to get the speed effect",
 										"color": "gray",
 										"italic": false
 									},
 									{
-										"translate": "stardust.10_base_speed",
+										"translate": "stardust.10_base_speed","fallback": "[+10% Base Speed]",
 										"color": "gray",
 										"italic": false
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:attribute_modifiers": [

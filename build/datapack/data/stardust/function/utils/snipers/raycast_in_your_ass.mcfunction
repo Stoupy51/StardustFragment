@@ -27,5 +27,10 @@ data modify storage stardust:temp raycast.with.on_targeted_block set value "func
 data modify storage stardust:temp raycast.with.on_targeted_entity set value "function stardust:utils/snipers/on_targeted_entity"
 
 # Launch raycast with callbacks (https://docs.mcbookshelf.dev/en/latest/modules/raycast.html#run-the-raycast)
+scoreboard players set #sniper_hit_block stardust.data 0
 execute anchored eyes positioned ^ ^ ^0.5 run function #bs.raycast:run with storage stardust:temp raycast
+
+# No block hit (sky, or only entities): the trail runs forward to the raycast's max distance, 0.25 block per step
+scoreboard players set #limit stardust.data 512
+execute if score #sniper_hit_block stardust.data matches 0 anchored eyes positioned ^ ^ ^0.5 run function stardust:utils/snipers/particle_trail_forward
 

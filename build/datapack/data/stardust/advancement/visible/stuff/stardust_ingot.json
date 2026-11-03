@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.i_feel_like_its_useful",
+			"fallback": "I feel like it's useful",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_ingot"
+				"translate": "stardust_ingot",
+				"fallback": "Stardust Ingot"
 			}
 		],
 		"frame": "task",

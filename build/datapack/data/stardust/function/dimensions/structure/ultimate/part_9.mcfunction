@@ -8,7 +8,7 @@
 execute store result score #success stardust.data in stardust:ultimate run place template stardust:ultimate_part_-73_48_-21 -73 48 -21
 
 # If failed, error message and allow a retry on the next check
-execute if score #success stardust.data matches 0 run tellraw @a {"translate":"stardust_fragment_the_ultimate_dimension_couldnt_be_built_someth","color":"red"}
+execute if score #success stardust.data matches 0 run tellraw @a {"translate":"stardust_fragment_the_ultimate_dimension_couldnt_be_built_someth","fallback":"[Stardust Fragment] The Ultimate Dimension couldn't be built. Something blocked the '/forceload' command in stardust:ultimate","color":"red"}
 execute if score #success stardust.data matches 0 run scoreboard players set #ultimate_building stardust.data 0
 
 # Schedule next part if successful

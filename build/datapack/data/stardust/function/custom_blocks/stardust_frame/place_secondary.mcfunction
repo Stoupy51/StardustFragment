@@ -16,10 +16,9 @@ tag @s add stardust.stardust_frame
 tag @s add stardust.vanilla.minecraft_lapis_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust_frame"}}
+data merge entity @s {"CustomName": {"translate": "stardust_frame","fallback": "Stardust Frame"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:stardust_frame"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 

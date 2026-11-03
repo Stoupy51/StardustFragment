@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.breeze_photosensitivity",
+			"fallback": "Breeze Photosensitivity",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.legendarium_solar_panel"
+				"translate": "stardust.legendarium_solar_panel",
+				"fallback": "Legendarium Solar Panel"
 			}
 		],
 		"frame": "task",

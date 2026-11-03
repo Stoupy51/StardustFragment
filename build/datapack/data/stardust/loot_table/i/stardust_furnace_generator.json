@@ -37,24 +37,24 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_generation_40_kw",
+										"translate": "stardust.energy_generation_40_kw","fallback": "[Energy Generation: 40 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_1600_kj",
+										"translate": "stardust.energy_buffer_1600_kj","fallback": "[Energy Buffer: 1600 kJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:stardust_furnace_generator",
 								"minecraft:item_name": {
-									"translate": "stardust_furnace_generator"
+									"translate": "stardust_furnace_generator","fallback": "Stardust Furnace Generator"
 								}
 							}
 						}

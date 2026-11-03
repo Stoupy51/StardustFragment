@@ -4,10 +4,12 @@
 			"id": "minecraft:feather"
 		},
 		"title": {
-			"translate": "stardust.i_did_it_wrong"
+			"translate": "stardust.i_did_it_wrong",
+			"fallback": "I did it wrong"
 		},
 		"description": {
 			"translate": "stardust.fall_from_the_stardust_dimension",
+			"fallback": "Fall from the Stardust dimension",
 			"color": "green"
 		},
 		"frame": "challenge",

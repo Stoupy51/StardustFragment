@@ -18,19 +18,19 @@
 									}
 								},
 								"minecraft:item_name": {
-									"translate": "stardust.stoupegg"
+									"translate": "stardust.stoupegg","fallback": "StoupEgg"
 								},
 								"minecraft:rarity": "epic",
 								"minecraft:lore": [
 									{
-										"translate": "stardust.summoner_of_the_stouparmy_mini_boss",
+										"translate": "stardust.summoner_of_the_stouparmy_mini_boss","fallback": "Summoner of the StoupArmy mini-boss",
 										"italic": false,
 										"color": "white"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:stoupegg",

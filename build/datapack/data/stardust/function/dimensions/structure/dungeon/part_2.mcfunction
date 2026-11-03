@@ -8,7 +8,7 @@
 execute store result score #success stardust.data in stardust:dungeon run place template stardust:dungeon_part_-5_44_-43 -5 44 -43
 
 # If failed, error message and allow a retry on the next check
-execute if score #success stardust.data matches 0 run tellraw @a {"translate":"stardust_fragment_the_stardust_dungeon_couldnt_be_built_somethin","color":"red"}
+execute if score #success stardust.data matches 0 run tellraw @a {"translate":"stardust_fragment_the_stardust_dungeon_couldnt_be_built_somethin","fallback":"[Stardust Fragment] The Stardust Dungeon couldn't be built. Something blocked the '/forceload' command in stardust:dungeon","color":"red"}
 execute if score #success stardust.data matches 0 run scoreboard players set #dungeon_building stardust.data 0
 
 # Schedule next part if successful

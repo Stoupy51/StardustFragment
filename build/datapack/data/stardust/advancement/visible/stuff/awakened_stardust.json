@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust_evolution",
+			"fallback": "Stardust Evolution",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.awakened_stardust"
+				"translate": "stardust.awakened_stardust",
+				"fallback": "Awakened Stardust"
 			}
 		],
 		"frame": "task",

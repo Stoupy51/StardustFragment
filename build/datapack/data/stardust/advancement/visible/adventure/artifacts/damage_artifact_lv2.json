@@ -8,16 +8,19 @@
 		},
 		"title": {
 			"translate": "stardust.increasing_attack_damage_ii",
+			"fallback": "Increasing Attack Damage II",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			[
 				{
-					"translate": "stardust.damage_artifact_lv"
+					"translate": "stardust.damage_artifact_lv",
+					"fallback": "Damage Artifact Lv"
 				},
 				".2"
 			]

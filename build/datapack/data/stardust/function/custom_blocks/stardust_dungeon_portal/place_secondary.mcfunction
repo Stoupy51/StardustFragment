@@ -16,11 +16,10 @@ tag @s add stardust.stardust_dungeon_portal
 tag @s add stardust.vanilla.minecraft_red_nether_bricks
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust_dungeon_portal","italic": false,"color": "red"}}
+data merge entity @s {"CustomName": {"translate": "stardust_dungeon_portal","fallback": "Stardust Dungeon Portal","italic": false,"color": "red"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:stardust_dungeon_portal"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 # Energy part

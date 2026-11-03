@@ -12,13 +12,13 @@
 							"components": {
 								"minecraft:item_model": "stardust:mirror",
 								"minecraft:item_name": {
-									"translate": "stardust.mirror"
+									"translate": "stardust.mirror","fallback": "Mirror"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

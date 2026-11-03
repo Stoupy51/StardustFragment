@@ -95,14 +95,14 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.transfer_speed_1920_kw",
+										"translate": "stardust.transfer_speed_1920_kw","fallback": "[Transfer Speed: 1920 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

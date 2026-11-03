@@ -32,7 +32,7 @@ item replace entity @s armor.feet with air
 data modify entity @s DeathLootTable set value "stardust:entities/stardust_bat"
 
 # Set custom name and other properties
-data modify entity @s CustomName set value {"translate":"stardust_bat","color":"aqua"}
+data modify entity @s CustomName set value {"translate":"stardust_bat","fallback":"Stardust Bat","color":"aqua"}
 data modify entity @s CanPickUpLoot set value false
 
 # Create visual model

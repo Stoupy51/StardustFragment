@@ -29,7 +29,7 @@ attribute @s minecraft:scale base set 5.0
 data modify entity @s Health set value 2048.0f
 
 # Set custom name and other properties
-data modify entity @s CustomName set value {"translate":"stardust_pillar","color":"aqua"}
+data modify entity @s CustomName set value {"translate":"stardust_pillar","fallback":"Stardust Pillar","color":"aqua"}
 data modify entity @s PersistenceRequired set value true
 data modify entity @s Silent set value true
 data modify entity @s NoAI set value true

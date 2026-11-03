@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.is_that_stardust_diamond",
+			"fallback": "Is that Stardust Diamond?",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_block"
+				"translate": "stardust_block",
+				"fallback": "Stardust Block"
 			}
 		],
 		"frame": "task",

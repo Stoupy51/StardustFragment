@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust_technology",
+			"fallback": "Stardust Technology",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_core"
+				"translate": "stardust_core",
+				"fallback": "Stardust Core"
 			}
 		],
 		"frame": "task",

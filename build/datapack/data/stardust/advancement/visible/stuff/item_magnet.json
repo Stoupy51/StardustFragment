@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.im_attractive",
+			"fallback": "I'm Attractive",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.item_magnet"
+				"translate": "stardust.item_magnet",
+				"fallback": "Item Magnet"
 			}
 		],
 		"frame": "task",

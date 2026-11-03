@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.darkium_bullets",
+			"fallback": "Darkium Bullets",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.shoot_a_darkium_fragment_bullet_using_a_sniper",
+			"fallback": "Shoot a Darkium Fragment Bullet using a Sniper",
 			"color": "green"
 		},
 		"frame": "task",

@@ -65,7 +65,7 @@ bossbar set stardust:stoup_army max 250
 # Scoreboards for custom mobs and team
 scoreboard objectives add stardust.hurt_time dummy
 scoreboard objectives add stardust.spawn_delay dummy
-team add stardust.mob {"translate":"stardust_mob","color":"aqua"}
+team add stardust.mob {"translate":"stardust_mob","fallback":"Stardust Mob","color":"aqua"}
 team modify stardust.mob collisionRule always
 team modify stardust.mob friendlyFire false
 
@@ -114,7 +114,7 @@ scoreboard objectives add stardust.forge_timer dummy
 
 
 # Confirm load
-tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment_v4_1_1","color":"green"}
+tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment_v4_1_1","fallback":"[Loaded Stardust Fragment v4.1.1]","color":"green"}
 scoreboard players set #stardust.loaded load.status 1
 function stardust:v4.1.1/load/set_items_storage
 

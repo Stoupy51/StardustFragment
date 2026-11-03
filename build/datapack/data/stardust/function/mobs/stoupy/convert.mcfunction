@@ -30,7 +30,7 @@ attribute @s minecraft:knockback_resistance base set 10.0
 effect give @s minecraft:regeneration 5 255 true
 
 # Set custom name and other properties
-data modify entity @s CustomName set value {"translate":"stardust.stoupy","color":"white"}
+data modify entity @s CustomName set value {"translate":"stardust.stoupy","fallback":"Stoupy","color":"white"}
 data modify entity @s PersistenceRequired set value true
 
 # Create visual model

@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.nature_and_wind",
+			"fallback": "Nature and Wind",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.admire_this_legendarium_seed",
+			"fallback": "Admire this Legendarium Seed",
 			"color": "green"
 		},
 		"frame": "task",

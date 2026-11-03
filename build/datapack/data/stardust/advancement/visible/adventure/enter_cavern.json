@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.return_to_monke",
+			"fallback": "Return to monke",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.travel_to_the_cavern_dimension",
+			"fallback": "Travel to the Cavern Dimension",
 			"color": "green"
 		},
 		"frame": "task",

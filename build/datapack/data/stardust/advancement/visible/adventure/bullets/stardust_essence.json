@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust_bullets",
+			"fallback": "Stardust Bullets",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.shoot_a_stardust_essence_bullet_using_a_sniper",
+			"fallback": "Shoot a Stardust Essence Bullet using a Sniper",
 			"color": "green"
 		},
 		"frame": "task",

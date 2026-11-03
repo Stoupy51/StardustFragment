@@ -23,13 +23,13 @@
 								},
 								"minecraft:item_model": "stardust:stardust_frame",
 								"minecraft:item_name": {
-									"translate": "stardust_frame"
+									"translate": "stardust_frame","fallback": "Stardust Frame"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

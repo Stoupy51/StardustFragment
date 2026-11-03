@@ -16,11 +16,10 @@ tag @s add stardust.stardust_battery
 tag @s add stardust.vanilla.minecraft_warped_hyphae
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust_battery"}}
+data merge entity @s {"CustomName": {"translate": "stardust_battery","fallback": "Stardust Battery"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:stardust_battery"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 # Energy part

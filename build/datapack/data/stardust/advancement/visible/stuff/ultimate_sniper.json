@@ -7,10 +7,12 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.trick_shot_iii"
+			"translate": "stardust.trick_shot_iii",
+			"fallback": "Trick Shot III"
 		},
 		"description": {
 			"translate": "stardust.a_whisper_before_the_storm_of_bullets_coming_from_the_ultimate_s",
+			"fallback": "A whisper before the storm of bullets coming from the Ultimate Sniper",
 			"color": "green"
 		},
 		"frame": "challenge",

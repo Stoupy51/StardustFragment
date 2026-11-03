@@ -8,16 +8,19 @@
 		},
 		"title": {
 			"translate": "stardust.rockraiser_iv",
+			"fallback": "Rockraiser IV",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			[
 				{
-					"translate": "stardust.cobblestone_miner_lv"
+					"translate": "stardust.cobblestone_miner_lv",
+					"fallback": "Cobblestone Miner Lv"
 				},
 				".4"
 			]

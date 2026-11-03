@@ -8,11 +8,13 @@
 		},
 		"title": {
 			"translate": "stardust_energy_iii",
+			"fallback": "Stardust Energy III",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			[

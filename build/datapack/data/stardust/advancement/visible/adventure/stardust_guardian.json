@@ -5,10 +5,12 @@
 		},
 		"title": {
 			"translate": "stardust.making_another_step",
+			"fallback": "Making another step",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.kill_the_stardust_guardian",
+			"fallback": "Kill the Stardust Guardian",
 			"color": "green"
 		},
 		"frame": "task",

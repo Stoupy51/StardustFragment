@@ -89,24 +89,24 @@
 								],
 								"minecraft:lore": [
 									{
-										"translate": "stardust.this_portal_allows_access_to_the_dimension_of_the_ultimate_boss",
+										"translate": "stardust.this_portal_allows_access_to_the_dimension_of_the_ultimate_boss","fallback": "This portal allows access to the dimension of the Ultimate Boss!",
 										"italic": false,
 										"color": "white"
 									},
 									{
-										"translate": "stardust.power_usage_500_kw",
+										"translate": "stardust.power_usage_500_kw","fallback": "[Power Usage: 500 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_24_mj",
+										"translate": "stardust.energy_buffer_24_mj","fallback": "[Energy Buffer: 24 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:container": [

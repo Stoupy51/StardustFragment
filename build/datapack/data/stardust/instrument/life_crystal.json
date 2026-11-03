@@ -1,6 +1,6 @@
 {
 	"description": {
-		"translate": "stardust.life_crystal"
+		"translate": "stardust.life_crystal","fallback": "Life Crystal"
 	},
 	"range": 16.0,
 	"sound_event": {

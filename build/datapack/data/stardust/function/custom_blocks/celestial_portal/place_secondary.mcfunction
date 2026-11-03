@@ -16,11 +16,10 @@ tag @s add stardust.celestial_portal
 tag @s add stardust.vanilla.minecraft_iron_block
 
 # Add a custom name
-data merge entity @s {"CustomName": {"translate": "stardust.celestial_portal","italic": false,"color": "gray"}}
+data merge entity @s {"CustomName": {"translate": "stardust.celestial_portal","fallback": "Celestial Portal","italic": false,"color": "gray"}}
 
 # Modify item display entity to match the custom block
 item replace entity @s contents with minecraft:furnace[item_model="stardust:celestial_portal"]
-data modify entity @s transformation.scale set value [1.002f,1.002f,1.002f]
 function stardust:custom_blocks/compute_brightness
 
 # Energy part

@@ -1,6 +1,7 @@
 {
 	"model": {
 		"type": "minecraft:condition",
+		"property": "minecraft:using_item",
 		"on_false": {
 			"type": "minecraft:model",
 			"model": "stardust:item/ultimate_bow"
@@ -17,7 +18,6 @@
 			},
 			"property": "minecraft:use_duration",
 			"scale": 0.05
-		},
-		"property": "minecraft:using_item"
+		}
 	}
 }

@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.bowing_like_a_pro_i",
+			"fallback": "Bowing like a pro I",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.craft_a_stardust_bow",
+			"fallback": "Craft a Stardust Bow",
 			"color": "green"
 		},
 		"frame": "task",

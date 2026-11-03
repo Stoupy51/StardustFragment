@@ -37,19 +37,19 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_storage_500_mj",
+										"translate": "stardust.energy_storage_500_mj","fallback": "[Energy Storage: 500 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:awakened_stardust_battery",
 								"minecraft:item_name": {
-									"translate": "stardust.awakened_stardust_battery"
+									"translate": "stardust.awakened_stardust_battery","fallback": "Awakened Stardust Battery"
 								}
 							}
 						}

@@ -4,10 +4,12 @@
 			"id": "minecraft:dragon_head"
 		},
 		"title": {
-			"translate": "stardust.numbers_dont_affraid_me"
+			"translate": "stardust.numbers_dont_affraid_me",
+			"fallback": "Numbers don't affraid me"
 		},
 		"description": {
 			"translate": "stardust.summon_two_ultimate_boss_at_the_same_time",
+			"fallback": "Summon two Ultimate Boss at the same time",
 			"color": "green"
 		},
 		"frame": "challenge",

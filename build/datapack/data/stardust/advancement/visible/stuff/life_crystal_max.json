@@ -9,10 +9,12 @@
 		},
 		"title": {
 			"translate": "stardust.two_health_bars",
+			"fallback": "Two Health Bars!",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.consume_your_20th_and_final_life_crystal",
+			"fallback": "Consume your 20th and final Life Crystal",
 			"color": "green"
 		},
 		"frame": "task",

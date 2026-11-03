@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.the_ultimate_dimension",
+			"fallback": "The Ultimate Dimension",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.travel_to_the_ultimate_dimension",
+			"fallback": "Travel to the Ultimate Dimension",
 			"color": "green"
 		},
 		"frame": "task",

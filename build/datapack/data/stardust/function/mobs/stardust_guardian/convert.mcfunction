@@ -30,7 +30,7 @@ attribute @s minecraft:knockback_resistance base set 10.0
 data modify entity @s Health set value 2048.0f
 
 # Set custom name and other properties
-data modify entity @s CustomName set value {"translate":"stardust_guardian","color":"red"}
+data modify entity @s CustomName set value {"translate":"stardust_guardian","fallback":"Stardust Guardian","color":"red"}
 data modify entity @s PersistenceRequired set value true
 data modify entity @s Silent set value true
 

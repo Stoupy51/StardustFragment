@@ -3,7 +3,7 @@
 	"title": [
 		"",
 		{
-			"text": "肱",
+			"text": "育",
 			"font": "stardust:renders",
 			"shadow_color": [
 				0,
@@ -14,12 +14,12 @@
 		},
 		" ",
 		{
-			"translate": "stardust_evoker",
+			"translate": "stardust_evoker","fallback": "Stardust Evoker",
 			"underlined": true
 		},
 		" ",
 		{
-			"text": "肱",
+			"text": "育",
 			"font": "stardust:renders",
 			"shadow_color": [
 				0,
@@ -34,12 +34,12 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "V   ","font": "stardust:manual","color": "white"},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (177)"]}},
-				{"text": "4","font": "stardust:manual","color": "white","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_first_page"}]}},
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (179)"]}},
-				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page"}," (177)"]}},
-				{"text": " ","font": "stardust:manual","color": "white","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_first_page"}]}},
-				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page"}," (179)"]}}
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page","fallback": "Go to previous page"}," (177)"]}},
+				{"text": "4","font": "stardust:manual","color": "white","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_first_page","fallback": "Go to first page"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page","fallback": "Go to next page"}," (179)"]}},
+				{"text": "\n   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_177"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_previous_page","fallback": "Go to previous page"}," (177)"]}},
+				{"text": " ","font": "stardust:manual","color": "white","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_1"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_first_page","fallback": "Go to first page"}]}},
+				{"text": "   ","click_event": {"action": "show_dialog","dialog": "stardust:manual/page_179"},"hover_event": {"action": "show_text","value": [{"translate": "stardust.go_to_next_page","fallback": "Go to next page"}," (179)"]}}
 			],
 			"width": 400
 		},
@@ -48,13 +48,13 @@
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
 				"茳\n",
-				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_evoker","item_name": {"translate": "stardust_evoker"},"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]]],"custom_data": {"stardust": {"stardust_evoker": true},"smithed": {"id": "stardust:stardust_evoker","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_178"}},
-				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_evoker"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health"}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage"}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed"}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance"}]]}},
-				{"text": "耫##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
-				{"text": "耳\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_evoker"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health"}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage"}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed"}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance"}]]}},
-				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
-				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_evoker","item_name": {"translate": "stardust_evoker","fallback": "Stardust Evoker"},"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]],"custom_data": {"stardust": {"stardust_evoker": true},"smithed": {"id": "stardust:stardust_evoker","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_178"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","fallback": "Stardust Evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension","fallback": "Found in the Stardust Dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar","fallback": "Can be summoned by the Stardust Pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_evoker","fallback": "Stats (compared to a vanilla Evoker):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed","fallback": "Speed: "}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance","fallback": "Stardust Ingots (90% chance)"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance","fallback": "Stardust Essence (10% chance)"}]]}},
+				{"text": "耫##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
+				{"text": "耳\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","fallback": "Stardust Evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension","fallback": "Found in the Stardust Dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar","fallback": "Can be summoned by the Stardust Pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_evoker","fallback": "Stats (compared to a vanilla Evoker):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed","fallback": "Speed: "}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance","fallback": "Stardust Ingots (90% chance)"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance","fallback": "Stardust Essence (10% chance)"}]]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_180"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140

@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.a_journey_to_the_end",
+			"fallback": "A journey to the end",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.summon_the_ultimate_boss",
+			"fallback": "Summon the Ultimate Boss",
 			"color": "green"
 		},
 		"frame": "task",

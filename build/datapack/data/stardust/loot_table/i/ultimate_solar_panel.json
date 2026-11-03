@@ -120,19 +120,19 @@
 								},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.energy_generation_128_kw",
+										"translate": "stardust.energy_generation_128_kw","fallback": "[Energy Generation: 128 kW]",
 										"italic": false,
 										"color": "gray"
 									},
 									{
-										"translate": "stardust.energy_buffer_20_mj",
+										"translate": "stardust.energy_buffer_20_mj","fallback": "[Energy Buffer: 20 MJ]",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:ultimate_solar_panel"

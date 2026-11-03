@@ -7,10 +7,12 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.bowing_like_a_pro_iii"
+			"translate": "stardust.bowing_like_a_pro_iii",
+			"fallback": "Bowing like a pro III"
 		},
 		"description": {
 			"translate": "stardust.awaken_the_magic_of_the_stars_using_the_ultimate_bow",
+			"fallback": "Awaken the magic of the stars using the Ultimate Bow",
 			"color": "green"
 		},
 		"frame": "challenge",

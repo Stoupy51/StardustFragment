@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.tecnologa",
+			"fallback": "Tecnología",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.following_advancements_are_related_to_technology",
+			"fallback": "Following advancements are related to technology",
 			"color": "green"
 		},
 		"frame": "goal",

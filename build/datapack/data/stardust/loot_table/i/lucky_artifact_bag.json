@@ -14,19 +14,19 @@
 								"!minecraft:max_damage": {},
 								"minecraft:lore": [
 									{
-										"translate": "stardust.right_click_to_open_and_receive_a_random_artifact",
+										"translate": "stardust.right_click_to_open_and_receive_a_random_artifact","fallback": "Right-click to open and receive a random artifact.",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:item_model": "stardust:lucky_artifact_bag",
 								"minecraft:item_name": {
-									"translate": "stardust.lucky_artifact_bag"
+									"translate": "stardust.lucky_artifact_bag","fallback": "Lucky Artifact Bag"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

@@ -7,16 +7,19 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.mining_industry_v"
+			"translate": "stardust.mining_industry_v",
+			"fallback": "Mining Industry V"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			[
 				{
 					"translate": "stardust.quarry_lv",
+					"fallback": "Quarry Lv",
 					"italic": false
 				},
 				".5"

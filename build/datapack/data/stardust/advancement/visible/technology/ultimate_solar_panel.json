@@ -8,11 +8,13 @@
 		},
 		"title": {
 			"translate": "stardust.ultimate_photosensitivity",
+			"fallback": "Ultimate Photosensitivity",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			[

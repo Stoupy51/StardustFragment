@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.feeling_the_power",
+			"fallback": "Feeling the Power",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust_essence"
+				"translate": "stardust_essence",
+				"fallback": "Stardust Essence"
 			}
 		],
 		"frame": "task",

@@ -22,13 +22,13 @@
 								},
 								"minecraft:item_model": "stardust:stardust_apple",
 								"minecraft:item_name": {
-									"translate": "stardust_apple"
+									"translate": "stardust_apple","fallback": "Stardust Apple"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

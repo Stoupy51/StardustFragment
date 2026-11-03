@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.stardend",
+			"fallback": "Stard'End",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.defeat_the_ultimate_boss",
+			"fallback": "Defeat the Ultimate Boss",
 			"color": "green"
 		},
 		"frame": "goal",

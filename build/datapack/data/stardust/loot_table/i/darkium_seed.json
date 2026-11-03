@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "stardust.can_only_be_planted_on_obsidian",
+										"translate": "stardust.can_only_be_planted_on_obsidian","fallback": "Can only be planted on obsidian.",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:entity_data": {
@@ -33,7 +33,7 @@
 								},
 								"minecraft:item_model": "stardust:darkium_seed",
 								"minecraft:item_name": {
-									"translate": "stardust.darkium_seed"
+									"translate": "stardust.darkium_seed","fallback": "Darkium Seed"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

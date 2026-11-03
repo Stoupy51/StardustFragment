@@ -34,13 +34,13 @@
 								},
 								"minecraft:item_model": "stardust:awakened_stardust_block",
 								"minecraft:item_name": {
-									"translate": "stardust.awakened_stardust_block"
+									"translate": "stardust.awakened_stardust_block","fallback": "Awakened Stardust Block"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								]
 							}

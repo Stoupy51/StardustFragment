@@ -22,7 +22,7 @@ attribute @s minecraft:attack_damage modifier add stardust:damage_scale 3 add_mu
 data modify entity @s Health set value 4096.0f
 
 # Set custom name and other properties
-data modify entity @s CustomName set value {"translate":"stardust.ultimate_slave","color":"white"}
+data modify entity @s CustomName set value {"translate":"stardust.ultimate_slave","fallback":"Ultimate Slave","color":"white"}
 data modify entity @s PersistenceRequired set value true
 
 # Create visual model

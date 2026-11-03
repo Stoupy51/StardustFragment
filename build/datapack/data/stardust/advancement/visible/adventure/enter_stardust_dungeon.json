@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.entering_the_dungeon",
+			"fallback": "Entering the dungeon",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.use_a_stardust_dungeon_key",
+			"fallback": "Use a Stardust Dungeon Key",
 			"color": "green"
 		},
 		"frame": "task",

@@ -12,13 +12,13 @@
 							"components": {
 								"minecraft:item_model": "stardust:stardust_guardian",
 								"minecraft:item_name": {
-									"translate": "stardust_guardian"
+									"translate": "stardust_guardian","fallback": "Stardust Guardian"
 								},
 								"minecraft:lore": [
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:custom_data": {

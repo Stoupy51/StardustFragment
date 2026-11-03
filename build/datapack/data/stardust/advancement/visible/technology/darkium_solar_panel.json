@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.anti_photosensitivity",
+			"fallback": "Anti-Photosensitivity",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.darkium_solar_panel"
+				"translate": "stardust.darkium_solar_panel",
+				"fallback": "Darkium Solar Panel"
 			}
 		],
 		"frame": "task",

@@ -8,10 +8,12 @@
 		},
 		"title": {
 			"translate": "stardust.a_dimension_a_dungeon",
+			"fallback": "A dimension, a dungeon",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.enter_the_stardust_dungeon_dimension",
+			"fallback": "Enter the Stardust Dungeon Dimension",
 			"color": "green"
 		},
 		"frame": "task",

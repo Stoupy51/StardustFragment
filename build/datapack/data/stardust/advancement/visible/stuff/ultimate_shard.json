@@ -8,11 +8,13 @@
 		},
 		"title": {
 			"translate": "stardust.a_burst_of_energy",
+			"fallback": "A Burst of Energy",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_an",
+				"fallback": "Obtain an ",
 				"color": "green"
 			},
 			[

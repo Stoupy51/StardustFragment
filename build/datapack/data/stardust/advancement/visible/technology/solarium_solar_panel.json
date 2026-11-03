@@ -8,15 +8,18 @@
 		},
 		"title": {
 			"translate": "stardust.burning_photosensitivity",
+			"fallback": "Burning Photosensitivity",
 			"color": "aqua"
 		},
 		"description": [
 			{
 				"translate": "stardust.obtain_a",
+				"fallback": "Obtain a ",
 				"color": "green"
 			},
 			{
-				"translate": "stardust.solarium_solar_panel"
+				"translate": "stardust.solarium_solar_panel",
+				"fallback": "Solarium Solar Panel"
 			}
 		],
 		"frame": "task",

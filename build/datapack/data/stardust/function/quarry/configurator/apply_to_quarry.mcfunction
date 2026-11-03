@@ -15,6 +15,6 @@ scoreboard players operation @s stardust.quarry_y2 = #config_y2 stardust.data
 scoreboard players operation @s stardust.quarry_z2 = #config_z2 stardust.data
 
 # Tellraw message
-tellraw @p[tag=stardust.temp] [{"translate":"stardust.quarry_configuration_updated","color":"green"}]
+tellraw @p[tag=stardust.temp] [{"translate":"stardust.quarry_configuration_updated","fallback":"Quarry configuration updated.","color":"green"}]
 playsound block.note_block.pling ambient @p[tag=stardust.temp]
 

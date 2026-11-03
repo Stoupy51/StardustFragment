@@ -8,10 +8,12 @@
 			}
 		},
 		"title": {
-			"translate": "stardust.star_fighter"
+			"translate": "stardust.star_fighter",
+			"fallback": "Star Fighter"
 		},
 		"description": {
 			"translate": "stardust.defeat_the_ultimate_bossby_taking_less_than_10_hearts_of_damage",
+			"fallback": "Defeat the Ultimate Boss\nby taking less than 10 hearts of damage",
 			"color": "green"
 		},
 		"frame": "challenge",

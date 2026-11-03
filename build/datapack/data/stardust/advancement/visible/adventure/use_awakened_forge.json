@@ -5,10 +5,12 @@
 		},
 		"title": {
 			"translate": "stardust.a_new_crafting_structure",
+			"fallback": "A new crafting structure",
 			"color": "aqua"
 		},
 		"description": {
 			"translate": "stardust.use_the_awakened_forge",
+			"fallback": "Use the Awakened Forge",
 			"color": "green"
 		},
 		"frame": "task",

@@ -30,7 +30,7 @@ $execute if data storage stardust:temp intruder unless data storage stardust:tem
 # Set item gui
 $scoreboard players set #slot stardust.data $(slot)
 $execute unless score #slot stardust.data matches 18..20 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",tooltip_display={"hide_tooltip":true},custom_data={"common_signals":{"temp":true}}]
-$execute if score #slot stardust.data matches 18 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}},item_name={"translate":"stardust.start","color":"green"}]
-$execute if score #slot stardust.data matches 19 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}},item_name={"translate":"stardust.pause_resume","color":"yellow"}]
-$execute if score #slot stardust.data matches 20 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}},item_name={"translate":"stardust.stop","color":"red"}]
+$execute if score #slot stardust.data matches 18 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}},item_name={"translate":"stardust.start","fallback":"Start","color":"green"}]
+$execute if score #slot stardust.data matches 19 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}},item_name={"translate":"stardust.pause_resume","fallback":"Pause / Resume","color":"yellow"}]
+$execute if score #slot stardust.data matches 20 run item replace block ~ ~ ~ container.$(slot) with minecraft:recovery_compass[item_model="minecraft:air",custom_data={"common_signals":{"temp":true}},item_name={"translate":"stardust.stop","fallback":"Stop","color":"red"}]
 

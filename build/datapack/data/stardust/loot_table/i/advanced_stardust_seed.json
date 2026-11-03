@@ -12,14 +12,14 @@
 							"components": {
 								"minecraft:lore": [
 									{
-										"translate": "stardust.can_only_be_planted_on_diamond_block",
+										"translate": "stardust.can_only_be_planted_on_diamond_block","fallback": "Can only be planted on diamond block.",
 										"italic": false,
 										"color": "gray"
 									},
 									[
 										"",
 										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
-										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment"}]
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
 									]
 								],
 								"minecraft:entity_data": {
@@ -33,7 +33,7 @@
 								},
 								"minecraft:item_model": "stardust:advanced_stardust_seed",
 								"minecraft:item_name": {
-									"translate": "stardust.advanced_stardust_seed"
+									"translate": "stardust.advanced_stardust_seed","fallback": "Advanced Stardust Seed"
 								},
 								"minecraft:custom_data": {
 									"stardust": {

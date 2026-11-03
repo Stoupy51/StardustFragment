@@ -3,7 +3,7 @@
 #
 # @executed	as @e[tag=stardust.second] & at @s
 #
-# @within	stardust:v4.1.1/second [ as @e[tag=stardust.second] & at @s ]
+# @within	stardust:v4.2.0/second [ as @e[tag=stardust.second] & at @s ]
 #
 
 execute if entity @s[tag=stardust.nether_star_generator] run function stardust:custom_blocks/nether_star_generator/second

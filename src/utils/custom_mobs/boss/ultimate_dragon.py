@@ -72,7 +72,7 @@ scoreboard players reset @s {ns}.lingering_potion
 
 # Run summon essence function
 execute as @e[type=minecraft:lingering_potion,tag=!{ns}.potion_checked] if data entity @s Item.components."minecraft:custom_data".{ns}.ultimate_dragon_essence run function {ns}:mobs/ultimate_dragon/essence/on_new_lingering_potion
-""")  # noqa: E501
+""")
 	write_function(f"{ns}:mobs/ultimate_dragon/essence/on_new_lingering_potion", f"""
 # Add checked tag
 tag @s add {ns}.potion_checked
@@ -655,7 +655,16 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stoupy_suno_the_ultimate_ascension").loot_table
 					}
-				]
+				],
+				"condition": {
+					"type": "minecraft:inverted",
+					"term": {
+						"type": "minecraft:location_check",
+						"predicate": {
+							"dimension": "stardust:ultimate"
+						}
+					}
+				}
 			}
 		]
 	}), max_level=-1)

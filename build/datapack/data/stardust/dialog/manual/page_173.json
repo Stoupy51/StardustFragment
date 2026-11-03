@@ -3,30 +3,30 @@
 	"title": [
 		"",
 		{
-			"sprite": "stardust:item/stoupy_suno_cosmic_threat",
+			"text": "肱",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		},
 		" ",
 		{
-			"translate": "stardust.stoupy_suno_cosmic_threat","fallback": "Stoupy & Suno - Cosmic Threat",
+			"translate": "stardust_soldier","fallback": "Stardust Soldier",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/stoupy_suno_cosmic_threat",
+			"text": "肱",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		}
 	],
 	"body": [
@@ -47,9 +47,15 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"茮\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"custom_data": {"stardust": {"stoupy_suno_cosmic_threat": true},"smithed": {"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_suno_cosmic_threat"},"description": {"translate": "stardust.stoupy_suno_cosmic_threat","fallback": "Stoupy & Suno - Cosmic Threat"}}},"id": "stardust:stoupy_suno_cosmic_threat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","fallback": "Music Disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_cosmic_threat","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_cosmic_threat","lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_173"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"茪\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_soldier","item_name": {"translate": "stardust_soldier","fallback": "Stardust Soldier"},"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]],"custom_data": {"stardust": {"stardust_soldier": true},"smithed": {"id": "stardust:stardust_soldier","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_173"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust_soldier","fallback": "Stardust Soldier","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension","fallback": "Found in the Stardust Dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar","fallback": "Can be summoned by the Stardust Pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_skeleton","fallback": "Stats (compared to a vanilla Skeleton):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed","fallback": "Speed: "}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance","fallback": "Stardust Ingots (90% chance)"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance","fallback": "Stardust Essence (10% chance)"}]]}},
+				{"text": "耩##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_176"}},
+				{"text": "耱\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_soldier","fallback": "Stardust Soldier","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension","fallback": "Found in the Stardust Dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar","fallback": "Can be summoned by the Stardust Pillar"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_skeleton","fallback": "Stats (compared to a vanilla Skeleton):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed","fallback": "Speed: "}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_90_chance","fallback": "Stardust Ingots (90% chance)"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_10_chance","fallback": "Stardust Essence (10% chance)"}]]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_176"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

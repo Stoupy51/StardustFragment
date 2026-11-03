@@ -3,30 +3,30 @@
 	"title": [
 		"",
 		{
-			"sprite": "stardust:item/stoupy_suno_the_ultimate_ascension",
+			"text": "肴",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		},
 		" ",
 		{
-			"translate": "stardust.stoupy_suno_the_ultimate_ascension","fallback": "Stoupy & Suno - The Ultimate Ascension",
+			"translate": "stardust_pillar","fallback": "Stardust Pillar",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/stoupy_suno_the_ultimate_ascension",
+			"text": "肴",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		}
 	],
 	"body": [
@@ -47,9 +47,22 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"茱\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 364,"sound_event": {"sound_id": "stardust:stoupy_suno_the_ultimate_ascension"},"description": {"translate": "stardust.stoupy_suno_the_ultimate_ascension","fallback": "Stoupy & Suno - The Ultimate Ascension"}}},"id": "stardust:stoupy_suno_the_ultimate_ascension","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","fallback": "Music Disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_the_ultimate_ascension","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_the_ultimate_ascension","lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_176"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"茭\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_pillar","item_name": {"translate": "stardust_pillar","fallback": "Stardust Pillar"},"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]],"custom_data": {"stardust": {"stardust_pillar": true},"smithed": {"id": "stardust:stardust_pillar","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_176"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.boss_mob_with_active_shield_resistance_v","fallback": "Boss mob with active shield (Resistance V)"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.summons_waves_of_5_mobs_every_5_seconds","fallback": "Summons waves of 5 mobs every 5 seconds"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.each_wave_summoned_reduces_shield_by_5_hp","fallback": "Each wave summoned reduces shield by 5 HP"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.max_mobs_20_5_per_player_within_96_blocks","fallback": "Max mobs: 20 + 5 per player (within 96 blocks)"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.loses_shield_and_charges_at_players_below_250_hp","fallback": "Loses shield and charges at players below 250 HP"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_vex","fallback": "Stats (compared to a vanilla Vex):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],[{"text":"500 ","color": "red"}, {"translate": "stardust.points","fallback": "points"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.scale","fallback": "Scale: "}],{"text": "x5","color": "green"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.noai","fallback": "NoAI: "}],{"translate": "stardust.true_until_shield_breaks","fallback": "true (until shield breaks)","color": "aqua"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 2 ","color": "white"}, {"translate": "stardust_dungeon_keys","fallback": "Stardust Dungeon Keys"}],[{"text":"\n➤ 2-4 ","color": "white"}, {"translate": "stardust.compacted_stardust_shards","fallback": "Compacted Stardust Shards"}],[{"text":"\n➤ 12-20 ","color": "white"}, {"translate": "stardust.diamond_blocks","fallback": "Diamond Blocks"}],[{"text":"\n➤ 12-20 ","color": "white"}, {"translate": "stardust.gold_blocks","fallback": "Gold Blocks"}]]}},
+				{"text": "2##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耢"},{"text": "$耣"},{"text": "$耢"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耣"},{"text": "$耤"},{"text": "$耣"},"\"\"",{"text": "$$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耢"},{"text": "$耣"},{"text": "$耢"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.breeze_rod","fallback": "Breeze Rod","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","fallback": "Compacted Stardust Shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.nether_star","fallback": "Nether Star","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_168"}},
+				{"text": "耦##","hover_event": {"action": "show_text","value": [{"translate": "stardust_dungeon_key","fallback": "Stardust Dungeon Key","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_169"}},
+				{"text": "耨##","hover_event": {"action": "show_text","value": [{"translate": "stardust_soldier","fallback": "Stardust Soldier","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_173"}},
+				{"text": "耪##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","fallback": "Stardust Evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_174"}},
+				{"text": "耬\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_bat","fallback": "Stardust Bat","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.boss_mob_with_active_shield_resistance_v","fallback": "Boss mob with active shield (Resistance V)"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.summons_waves_of_5_mobs_every_5_seconds","fallback": "Summons waves of 5 mobs every 5 seconds"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.each_wave_summoned_reduces_shield_by_5_hp","fallback": "Each wave summoned reduces shield by 5 HP"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.max_mobs_20_5_per_player_within_96_blocks","fallback": "Max mobs: 20 + 5 per player (within 96 blocks)"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.loses_shield_and_charges_at_players_below_250_hp","fallback": "Loses shield and charges at players below 250 HP"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_vex","fallback": "Stats (compared to a vanilla Vex):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],[{"text":"500 ","color": "red"}, {"translate": "stardust.points","fallback": "points"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.scale","fallback": "Scale: "}],{"text": "x5","color": "green"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.noai","fallback": "NoAI: "}],{"translate": "stardust.true_until_shield_breaks","fallback": "true (until shield breaks)","color": "aqua"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 2 ","color": "white"}, {"translate": "stardust_dungeon_keys","fallback": "Stardust Dungeon Keys"}],[{"text":"\n➤ 2-4 ","color": "white"}, {"translate": "stardust.compacted_stardust_shards","fallback": "Compacted Stardust Shards"}],[{"text":"\n➤ 12-20 ","color": "white"}, {"translate": "stardust.diamond_blocks","fallback": "Diamond Blocks"}],[{"text":"\n➤ 12-20 ","color": "white"}, {"translate": "stardust.gold_blocks","fallback": "Gold Blocks"}]]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"text": ""},[{"text": "","font": "stardust:manual","color": "white"},"\"F\n","\"",{"text": "$耢"},{"text": "$耣"},{"text": "$耢"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n","\"",{"text": "$耣"},{"text": "$耤"},{"text": "$耣"},"\"\"",{"text": "$$耡"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\"\"",{"text": "U$"},"\n","\"",{"text": "$耢"},{"text": "$耣"},{"text": "$耢"},"\n","\"",{"text": "U$"},{"text": "U$"},{"text": "U$"},"\n"],{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.breeze_rod","fallback": "Breeze Rod","color": "gray"},{"text": "\n- x4 ","color": "gray"},{"translate": "stardust.compacted_stardust_shard","fallback": "Compacted Stardust Shard","color": "gray"},{"text": "\n- x1 ","color": "gray"},{"translate": "stardust.nether_star","fallback": "Nether Star","color": "gray"}]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_168"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_dungeon_key","fallback": "Stardust Dungeon Key","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_169"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_soldier","fallback": "Stardust Soldier","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_173"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_evoker","fallback": "Stardust Evoker","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_174"}},
+				{"text": "0\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_bat","fallback": "Stardust Bat","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
+				{"text": "耯##","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

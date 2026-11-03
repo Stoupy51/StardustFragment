@@ -36,7 +36,7 @@ def beet_default(ctx: Context) -> None:
 	main_additions_energy()
 	main_additions_equipments()
 	main_additions_miscellaneous()
-	generate_custom_records("auto", category="miscellaneous")
+	generate_custom_records("auto")
 
 	# Reorder some definitions
 	reorder_list: list[str] = [

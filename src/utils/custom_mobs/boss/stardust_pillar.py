@@ -165,7 +165,7 @@ execute as @a[distance=..200] unless score @s {ns}.boss_music > #global_second {
 bossbar set {ns}:stardust_pillar visible true
 bossbar set {ns}:stardust_pillar players @a[distance=..200]
 execute store result bossbar {ns}:stardust_pillar value run scoreboard players get #health {ns}.data
-""")  # noqa: E501
+""")
 
 	# Remove shield function
 	write_function(f"{ns}:mobs/stardust_pillar/remove_shield", f"""
@@ -360,7 +360,16 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 						"type": "minecraft:loot_table",
 						"value": Item.from_id("stoupy_suno_starfall_menace").loot_table
 					}
-				]
+				],
+				"condition": {
+					"type": "minecraft:inverted",
+					"term": {
+						"type": "minecraft:location_check",
+						"predicate": {
+							"dimension": "stardust:stardust"
+						}
+					}
+				}
 			}
 		]
 	}), max_level=-1)

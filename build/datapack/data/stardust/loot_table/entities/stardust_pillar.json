@@ -88,7 +88,16 @@
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/stoupy_suno_starfall_menace"
 				}
-			]
+			],
+			"condition": {
+				"type": "minecraft:inverted",
+				"term": {
+					"type": "minecraft:location_check",
+					"predicate": {
+						"dimension": "stardust:stardust"
+					}
+				}
+			}
 		}
 	]
 }

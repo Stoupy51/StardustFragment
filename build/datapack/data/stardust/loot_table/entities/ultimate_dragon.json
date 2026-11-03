@@ -163,7 +163,16 @@
 					"type": "minecraft:loot_table",
 					"value": "stardust:i/stoupy_suno_the_ultimate_ascension"
 				}
-			]
+			],
+			"condition": {
+				"type": "minecraft:inverted",
+				"term": {
+					"type": "minecraft:location_check",
+					"predicate": {
+						"dimension": "stardust:ultimate"
+					}
+				}
+			}
 		}
 	]
 }

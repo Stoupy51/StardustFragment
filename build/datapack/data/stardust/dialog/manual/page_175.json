@@ -3,30 +3,30 @@
 	"title": [
 		"",
 		{
-			"sprite": "stardust:item/stoupy_suno_starfall_menace",
+			"text": "肳",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		},
 		" ",
 		{
-			"translate": "stardust.stoupy_suno_starfall_menace","fallback": "Stoupy & Suno - Starfall Menace",
+			"translate": "stardust_bat","fallback": "Stardust Bat",
 			"underlined": true
 		},
 		" ",
 		{
-			"sprite": "stardust:item/stoupy_suno_starfall_menace",
+			"text": "肳",
+			"font": "stardust:renders",
 			"shadow_color": [
 				0,
 				0,
 				0,
 				0
-			],
-			"atlas": "minecraft:items"
+			]
 		}
 	],
 	"body": [
@@ -47,9 +47,15 @@
 			"type": "minecraft:plain_message",
 			"contents": [
 				{"text": "","font": "stardust:manual","color": "white","shadow_color": [0,0,0,0]},
-				"茰\n",
-				{"text": "  \n  \n  \n  \n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"translate": "stardust.stoupy_suno_starfall_menace","fallback": "Stoupy & Suno - Starfall Menace"}}},"id": "stardust:stoupy_suno_starfall_menace","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},"item_name": {"translate": "stardust.music_disc","fallback": "Music Disc","italic": false},"jukebox_playable": "stardust:stoupy_suno_starfall_menace","max_stack_size": 1,"rarity": "rare","item_model": "stardust:stoupy_suno_starfall_menace","lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]]}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+				"茬\n",
+				{"text": "  \n  \n  \n  \n\n","hover_event": {"action": "show_item","id": "recovery_compass","components": {"item_model": "stardust:stardust_bat","item_name": {"translate": "stardust_bat","fallback": "Stardust Bat"},"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]]],"custom_data": {"stardust": {"stardust_bat": true},"smithed": {"id": "stardust:stardust_bat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}}},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_175"}},
+				{"text": "1##","hover_event": {"action": "show_text","value": [{"translate": "stardust_bat","fallback": "Stardust Bat","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension","fallback": "Found in the Stardust Dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar","fallback": "Can be summoned by the Stardust Pillar"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.10_chance_to_summon_lightning_per_second","fallback": "10% chance to summon lightning per second"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_bat","fallback": "Stats (compared to a vanilla Bat):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed","fallback": "Speed: "}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 1-2 ","color": "white"}, {"translate": "stardust.netherite_scraps_50_chance","fallback": "Netherite Scraps (50% chance)"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_45_chance","fallback": "Stardust Ingots (45% chance)"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_5_chance","fallback": "Stardust Essence (5% chance)"}]]}},
+				{"text": "耭##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_176"}},
+				{"text": "耵\n","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_bat","fallback": "Stardust Bat","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.found_in_the_stardust_dimension","fallback": "Found in the Stardust Dimension"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.can_be_summoned_by_the_stardust_pillar","fallback": "Can be summoned by the Stardust Pillar"}],[{"text":"\n","color": "gray"}, {"translate": "stardust.10_chance_to_summon_lightning_per_second","fallback": "10% chance to summon lightning per second"}],[{"text":"\n\n","color": "aqua"}, {"translate": "stardust.stats_compared_to_a_vanilla_bat","fallback": "Stats (compared to a vanilla Bat):"}],[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.health","fallback": "Health: "}],{"text": "x2","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.damage","fallback": "Damage: "}],{"text": "x3","color": "red"},[{"text":"\n➤ ","color": "gray"}, {"translate": "stardust.speed","fallback": "Speed: "}],{"text": "x1.25","color": "green"},[{"text":"\n\n","color": "gold"}, {"translate": "stardust.loot","fallback": "Loot:"}],[{"text":"\n➤ 1-2 ","color": "white"}, {"translate": "stardust.netherite_scraps_50_chance","fallback": "Netherite Scraps (50% chance)"}],[{"text":"\n➤ 1-8 ","color": "white"}, {"translate": "stardust_ingots_45_chance","fallback": "Stardust Ingots (45% chance)"}],[{"text":"\n➤ 1 ","color": "white"}, {"translate": "stardust_essence_5_chance","fallback": "Stardust Essence (5% chance)"}]]}},
+				{"text": "0##","hover_event": {"action": "show_text","value": [{"translate": "stardust_pillar","fallback": "Stardust Pillar","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_176"}},
+				{"text": "0","hover_event": {"action": "show_text","value": [{"translate": "stardust_portal","fallback": "Stardust Portal","color": "yellow"},[{"text":"\n","color": "gray"}, {"translate": "stardust.click_to_open_this_page","fallback": "Click to open this page"}]]},"click_event": {"action": "show_dialog","dialog": "stardust:manual/page_81"}},
+				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 			],
 			"width": 140
 		}

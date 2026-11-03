@@ -4203,7 +4203,6 @@
 	"stoupy_suno_cosmic_threat": {
 		"id": "stoupy_suno_cosmic_threat",
 		"base_item": "minecraft:recovery_compass",
-		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
 			"custom_data": {"stardust": {"stoupy_suno_cosmic_threat": true},"smithed": {"dict": {"record": {"stoupy_suno_cosmic_threat": true,"item_name": "Stoupy & Suno - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_suno_cosmic_threat"},"description": {"text": "Stoupy & Suno - Cosmic Threat"}}},"id": "stardust:stoupy_suno_cosmic_threat","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -4219,7 +4218,6 @@
 	"stoupy_suno_prismatic_devastation": {
 		"id": "stoupy_suno_prismatic_devastation",
 		"base_item": "minecraft:recovery_compass",
-		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
 			"custom_data": {"stardust": {"stoupy_suno_prismatic_devastation": true},"smithed": {"dict": {"record": {"stoupy_suno_prismatic_devastation": true,"item_name": "Stoupy & Suno - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_suno_prismatic_devastation"},"description": {"text": "Stoupy & Suno - Prismatic Devastation"}}},"id": "stardust:stoupy_suno_prismatic_devastation","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -4235,7 +4233,6 @@
 	"stoupy_suno_starfall_menace": {
 		"id": "stoupy_suno_starfall_menace",
 		"base_item": "minecraft:recovery_compass",
-		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
 			"custom_data": {"stardust": {"stoupy_suno_starfall_menace": true},"smithed": {"dict": {"record": {"stoupy_suno_starfall_menace": true,"item_name": "Stoupy & Suno - Starfall Menace"},"jukebox_song": {"comparator_output": 6,"length_in_seconds": 279,"sound_event": {"sound_id": "stardust:stoupy_suno_starfall_menace"},"description": {"text": "Stoupy & Suno - Starfall Menace"}}},"id": "stardust:stoupy_suno_starfall_menace","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
@@ -4251,7 +4248,6 @@
 	"stoupy_suno_the_ultimate_ascension": {
 		"id": "stoupy_suno_the_ultimate_ascension",
 		"base_item": "minecraft:recovery_compass",
-		"manual_category": "miscellaneous",
 		"recipes": [],
 		"components": {
 			"custom_data": {"stardust": {"stoupy_suno_the_ultimate_ascension": true},"smithed": {"dict": {"record": {"stoupy_suno_the_ultimate_ascension": true,"item_name": "Stoupy & Suno - The Ultimate Ascension"},"jukebox_song": {"comparator_output": 11,"length_in_seconds": 364,"sound_event": {"sound_id": "stardust:stoupy_suno_the_ultimate_ascension"},"description": {"text": "Stoupy & Suno - The Ultimate Ascension"}}},"id": "stardust:stoupy_suno_the_ultimate_ascension","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},

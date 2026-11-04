@@ -149,6 +149,7 @@ $item modify entity @s $(slot) {"type": "minecraft:set_damage","damage": $(use_d
 advancement revoke @s only {ns}:technical/use_life_crystal
 
 # Stop if runned a tick ago (to prevent double consuming)
+scoreboard players set #cooldown {ns}.data 0
 scoreboard players operation #cooldown {ns}.data = @s {ns}.cooldown
 execute if score #cooldown {ns}.data > #global_tick {ns}.data run return fail
 scoreboard players operation @s {ns}.cooldown = #global_tick {ns}.data
@@ -266,19 +267,19 @@ execute as @a[tag=!{ns}.temp] run function {ns}:utils/wormhole_potion/add_to_act
 tag @s remove {ns}.temp
 
 # Message if no other players connected
-execute unless data storage {ns}:temp dialog.actions[1] run playsound minecraft:entity.villager.no ambient @s
-execute unless data storage {ns}:temp dialog.actions[1] run return run tellraw @s {{"text":"[Stardust Fragment] No other players are currently connected to teleport to.","color":"red"}}
+execute unless data storage {ns}:temp dialog.actions[0] run playsound minecraft:entity.villager.no ambient @s
+execute unless data storage {ns}:temp dialog.actions[0] run return run tellraw @s {{"text":"[Stardust Fragment] No other players are currently connected to teleport to.","color":"red"}}
 
 # Show dialog
 function {ns}:utils/wormhole_potion/show_dialog with storage {ns}:temp dialog
 """)
 	write_function(f"{ns}:utils/wormhole_potion/add_to_actions", f"""
 # Get player username for macro
-tag @e[type=item] add {ns}.temp
+execute at @s run tag @e[type=item,distance=..3] add {ns}.temp
 execute at @s run loot spawn ~ ~ ~ loot {ns}:player_head
-data modify storage {ns}:temp player_name set from entity @e[type=item,tag=!{ns}.temp,limit=1] Item.components."minecraft:profile".name
-kill @e[type=item,tag=!{ns}.temp]
-tag @e[type=item,tag={ns}.temp] remove {ns}.temp
+data modify storage {ns}:temp player_name set from entity @n[type=item,tag=!{ns}.temp,distance=..3] Item.components."minecraft:profile".name
+execute at @s run kill @e[type=item,tag=!{ns}.temp,distance=..3]
+execute at @s run tag @e[type=item,tag={ns}.temp,distance=..3] remove {ns}.temp
 
 # Prepare action
 data modify storage {ns}:temp element set value {{"label":[],"action":{{}}}}
@@ -385,7 +386,7 @@ tag @s add {ns}.motion_applied
 	asb_data: str = f"""{{{ns}:{{"awakened_stardust_bow":true}}}}"""
 	ub_data: str = f"""{{{ns}:{{"ultimate_bow":true}}}}"""
 	def line_bow(data: str, scale: float) -> str:
-		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=arrow,tag=!{ns}.damage_multiplied,nbt={{weapon:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/modify_arrow {{scale:{scale}}}"""
+		return f"""execute if items entity @s weapon.mainhand *[custom_data~{data}] as @n[type=arrow,tag=!{ns}.damage_multiplied,nbt={{weapon:{{components:{{"minecraft:custom_data":{data}}}}}}}] run function {ns}:utils/modify_arrow {{hundredfold:{scale * 100}}}"""
 	write_function(f"{ns}:advancements/bow_shoot", f"""
 # Revoke advancement and reset score
 advancement revoke @s only {ns}:technical/bow_shoot
@@ -402,7 +403,7 @@ execute if predicate {ns}:player/sneaking run scoreboard players set #is_sneakin
 """, prepend=True)
 	write_function(f"{ns}:utils/modify_arrow", f"""
 # Multiply arrow damage
-$execute store result entity @s damage double $(scale) run data get entity @s damage 1.0
+$execute store result entity @s damage double 0.01 run data get entity @s damage $(hundredfold)
 
 # Set NoGravity if sneaking
 execute if score #is_sneaking {ns}.data matches 1 run data modify entity @s NoGravity set value 1b

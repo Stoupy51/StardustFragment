@@ -275,17 +275,19 @@ scoreboard players operation #rY {ns}.data -= @s {ns}.quarry_y2
 scoreboard players operation #rZ {ns}.data = @s {ns}.quarry_z1
 scoreboard players operation #rZ {ns}.data -= @s {ns}.quarry_z2
 
-# Avoid multiply by 0
-execute if score #rX {ns}.data matches 0 run scoreboard players set #rX {ns}.data 1
-execute if score #rY {ns}.data matches 0 run scoreboard players set #rY {ns}.data 1
-execute if score #rZ {ns}.data matches 0 run scoreboard players set #rZ {ns}.data 1
+# Each side counts both of its end blocks: |a - b| + 1
+scoreboard players set #-1 {ns}.data -1
+execute if score #rX {ns}.data matches ..-1 run scoreboard players operation #rX {ns}.data *= #-1 {ns}.data
+execute if score #rY {ns}.data matches ..-1 run scoreboard players operation #rY {ns}.data *= #-1 {ns}.data
+execute if score #rZ {ns}.data matches ..-1 run scoreboard players operation #rZ {ns}.data *= #-1 {ns}.data
+scoreboard players add #rX {ns}.data 1
+scoreboard players add #rY {ns}.data 1
+scoreboard players add #rZ {ns}.data 1
 
 # Calculating Size
-scoreboard players set #-1 {ns}.data -1
 scoreboard players operation @s {ns}.quarry_size = #rX {ns}.data
 scoreboard players operation @s {ns}.quarry_size *= #rY {ns}.data
 scoreboard players operation @s {ns}.quarry_size *= #rZ {ns}.data
-execute if score @s {ns}.quarry_size matches ..-1 run scoreboard players operation @s {ns}.quarry_size *= #-1 {ns}.data
 """)
 
 	## Display functions

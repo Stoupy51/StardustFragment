@@ -71,7 +71,7 @@ execute if score #bullet_damage {ns}.data matches 0 if entity @s[gamemode=creati
 execute if score #bullet_damage {ns}.data matches 0 run return run playsound minecraft:block.note_block.didgeridoo ambient @s
 
 # Use 1 durability
-data modify storage {ns}:temp input set value {{"amount":1,"max_damage":1,"item_model":""}}
+data modify storage {ns}:temp input set value {{"amount":1,"max_damage":1,"item_model":"","slot":"weapon.mainhand"}}
 data modify storage {ns}:temp input.max_damage set from storage {ns}:temp components."minecraft:max_damage"
 data modify storage {ns}:temp input.item_model set from storage {ns}:temp components."minecraft:item_model"
 function {ns}:utils/use_durability/main with storage {ns}:temp input

@@ -1,7 +1,16 @@
 
-# ruff: noqa: E501
 # Imports
-from stewbeet import COMMON_SIGNAL_HIDDEN, Block, JsonDict, LootTable, Mem, set_json_encoder, write_function, write_tag
+from stewbeet import (
+	COMMON_SIGNAL_HIDDEN,
+	Block,
+	JsonDict,
+	LootTable,
+	McFunction,
+	Mem,
+	set_json_encoder,
+	write_function,
+	write_tag,
+)
 from stouputils.io import get_root_path, json_load
 
 from ..definitions.additions.materials import COBBLESTONE_TIERS
@@ -40,14 +49,14 @@ data modify entity @s transformation.translation[1] set value 0.002f
 		input_slot: int = 0 if gen == "nether_star_generator" else 1
 
 		# If nether star generator, add logic to consume nether stars for fuel
-		nether_star_generator: str = ""
+		nether_star_generator: McFunction = ""
 		if gen == "nether_star_generator":
-			nether_star_generator = f"""
+			nether_star_generator: McFunction = f"""
 # Consume nether stars for fuel
-execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:nether_star"}}],lit_time_remaining:0s}} run function {ns}:custom_blocks/{gen}/consume_nether_star
+execute if data block ~ ~ ~ {{Items:[{{Slot:0b,id:"minecraft:nether_star"}}],lit_time_remaining:0}} run function {ns}:custom_blocks/{gen}/consume_nether_star
 """
 		# Write the second function for the generator
-		content: str = f"""
+		content: McFunction = f"""
 # The gui item only sits in the input slot so the furnace lights its fuel, reset its progress so it never smelts
 data modify block ~ ~ ~ cooking_time_spent set value 0s
 
@@ -152,7 +161,7 @@ execute unless score @s energy.storage matches {energy["usage"]}.. run return ru
 data modify entity @s item.components."minecraft:item_model" set value "{working_model}"
 
 # Consume energy ({energy["usage"]} per second)
-scoreboard players remove @s energy.storage {energy["usage"] // 20}
+scoreboard players remove @s energy.storage {energy["usage"]}
 
 # Kill mobs in front of the grinder
 execute positioned ^ ^ ^3 as @e[type=#{ns}:mob_grinder,tag=!global.ignore,tag=!global.ignore.kill,tag=!{ns}.stardust_pillar,distance=..4] at @s run loot spawn ~ ~ ~ kill @s
@@ -213,14 +222,14 @@ execute if score #count_x {ns}.data matches 1.. positioned ~-1 ~ ~ run function 
 	write_function(f"{ns}:custom_blocks/growth_accelerator/layer_z", f"""
 
 # Loop through all crops
-{"\n".join(f'execute if block ~ ~ ~ {block} run return run function {ns}:custom_blocks/growth_accelerator/blocks/{block}' for block, _ in all_crops)}
+{"\n".join(f'execute if block ~ ~ ~ {block} run function {ns}:custom_blocks/growth_accelerator/blocks/{block}' for block, _ in all_crops)}
 
 # Continue to next Z row
 scoreboard players remove #count_z {ns}.data 1
 execute if score #count_z {ns}.data matches 1.. positioned ~ ~ ~-1 run function {ns}:custom_blocks/growth_accelerator/layer_z
 """)
 	for block, max_age in all_crops:
-		content: str = ""
+		content = ""
 		if block == "cave_vines_plant":
 			content += "execute if block ~ ~ ~ cave_vines_plant[berries=false] run return run setblock ~ ~ ~ cave_vines_plant[berries=true] strict\n"
 		else:

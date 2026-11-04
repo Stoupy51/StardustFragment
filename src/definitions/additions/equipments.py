@@ -164,8 +164,8 @@ def main_additions() -> None:
 		],
 		recipes=[
 			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0,0],scale:2}", result_count=1, ingredients=[
-				Ingr("minecraft:redstone_block", count=64),
 				Ingr("awakened_stardust_frame", count=8),
+				Ingr("minecraft:redstone_block", count=64),
 				Ingr("minecraft:red_glazed_terracotta", count=64),
 				Ingr("ender_dragon_pearl", count=8),
 				Ingr("stardust_bow", count=1),
@@ -247,8 +247,8 @@ def main_additions() -> None:
 		],
 		recipes=[
 			AwakenedForgeRecipe(particle=r"minecraft:dust{color:[1,0,0],scale:2}", result_count=1, ingredients=[
-				Ingr("minecraft:redstone_block", count=64),
 				Ingr("awakened_stardust_frame", count=8),
+				Ingr("minecraft:redstone_block", count=64),
 				Ingr("minecraft:red_glazed_terracotta", count=64),
 				Ingr("ender_dragon_pearl", count=8),
 				Ingr("stardust_sniper", count=1),

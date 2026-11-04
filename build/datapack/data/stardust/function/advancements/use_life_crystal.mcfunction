@@ -10,6 +10,7 @@
 advancement revoke @s only stardust:technical/use_life_crystal
 
 # Stop if runned a tick ago (to prevent double consuming)
+scoreboard players set #cooldown stardust.data 0
 scoreboard players operation #cooldown stardust.data = @s stardust.cooldown
 execute if score #cooldown stardust.data > #global_tick stardust.data run return fail
 scoreboard players operation @s stardust.cooldown = #global_tick stardust.data

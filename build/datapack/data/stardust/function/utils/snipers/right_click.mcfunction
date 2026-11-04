@@ -44,7 +44,7 @@ execute if score #bullet_damage stardust.data matches 0 if entity @s[gamemode=cr
 execute if score #bullet_damage stardust.data matches 0 run return run playsound minecraft:block.note_block.didgeridoo ambient @s
 
 # Use 1 durability
-data modify storage stardust:temp input set value {"amount":1,"max_damage":1,"item_model":""}
+data modify storage stardust:temp input set value {"amount":1,"max_damage":1,"item_model":"","slot":"weapon.mainhand"}
 data modify storage stardust:temp input.max_damage set from storage stardust:temp components."minecraft:max_damage"
 data modify storage stardust:temp input.item_model set from storage stardust:temp components."minecraft:item_model"
 function stardust:utils/use_durability/main with storage stardust:temp input

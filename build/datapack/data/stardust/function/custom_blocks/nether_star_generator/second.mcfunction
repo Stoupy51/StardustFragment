@@ -15,7 +15,7 @@ data modify block ~ ~ ~ cooking_time_spent set value 0s
 execute if score @s energy.storage >= @s energy.max_storage run return run function stardust:custom_blocks/nether_star_generator/stop
 
 # Consume nether stars for fuel
-execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:nether_star"}],lit_time_remaining:0s} run function stardust:custom_blocks/nether_star_generator/consume_nether_star
+execute if data block ~ ~ ~ {Items:[{Slot:0b,id:"minecraft:nether_star"}],lit_time_remaining:0} run function stardust:custom_blocks/nether_star_generator/consume_nether_star
 
 # Update the gui to default
 execute store result score #burn_time stardust.data run data get block ~ ~ ~ lit_time_remaining

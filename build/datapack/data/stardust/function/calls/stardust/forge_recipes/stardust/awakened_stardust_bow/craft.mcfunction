@@ -11,7 +11,7 @@ particle smoke ~ ~ ~ 0.4 0.4 0.4 0.2 1000
 
 # Kill ingredients
 kill @s
-kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}}, "count": 8}},distance=..1]
+kill @n[type=item,nbt={Item:{"id": "minecraft:redstone_block", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:red_glazed_terracotta", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}, "count": 8}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"stardust_bow": true}}}, "count": 1}},distance=..1]

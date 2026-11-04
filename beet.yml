@@ -59,6 +59,7 @@ pipeline:
     - "stewbeet.plugins.finalyze.last_final"
     - "stewbeet.plugins.auto.lang_file"
     - "stewbeet.plugins.auto.headers"
+    # TODO: Add stewbeet.plugins.auto.scoreboard_constants and remove the unnecessary definitions (like scoreboard players set #-1 {ns}.data -1, in some files)
     - "stewbeet.plugins.check_unused_textures"
     - "stewbeet.plugins.archive"
     - "stewbeet.plugins.merge_smithed_weld"

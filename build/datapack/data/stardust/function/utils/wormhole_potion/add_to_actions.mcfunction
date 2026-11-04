@@ -7,11 +7,11 @@
 #
 
 # Get player username for macro
-tag @e[type=item] add stardust.temp
+execute at @s run tag @e[type=item,distance=..3] add stardust.temp
 execute at @s run loot spawn ~ ~ ~ loot stardust:player_head
-data modify storage stardust:temp player_name set from entity @e[type=item,tag=!stardust.temp,limit=1] Item.components."minecraft:profile".name
-kill @e[type=item,tag=!stardust.temp]
-tag @e[type=item,tag=stardust.temp] remove stardust.temp
+data modify storage stardust:temp player_name set from entity @n[type=item,tag=!stardust.temp,distance=..3] Item.components."minecraft:profile".name
+execute at @s run kill @e[type=item,tag=!stardust.temp,distance=..3]
+execute at @s run tag @e[type=item,tag=stardust.temp,distance=..3] remove stardust.temp
 
 # Prepare action
 data modify storage stardust:temp element set value {"label":[],"action":{}}

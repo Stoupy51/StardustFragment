@@ -8,8 +8,8 @@
 #
 # @args		amount (int)
 #			max_damage (int)
+#			slot (string)
 #			item_model (string)
-#			slot (unknown)
 #
 
 # Compute durability usage (6 digits precision)

@@ -66,6 +66,7 @@ execute in {ns}:ultimate if loaded {ultimate_marker} unless block {ultimate_mark
 # Place the stardust dungeon portal (unless it already exists from a previous build)
 scoreboard players set #infinite_energy {ns}.data 1
 execute in {ns}:dungeon positioned -9 66 3 unless block ~ ~ ~ minecraft:red_nether_bricks run function {ns}:custom_blocks/stardust_dungeon_portal/place_main
+scoreboard players reset #infinite_energy {ns}.data
 """
 		else:
 			place_dungeon_portal: str = ""

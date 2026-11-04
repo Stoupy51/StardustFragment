@@ -7,6 +7,7 @@
 # Place the stardust dungeon portal (unless it already exists from a previous build)
 scoreboard players set #infinite_energy stardust.data 1
 execute in stardust:dungeon positioned -9 66 3 unless block ~ ~ ~ minecraft:red_nether_bricks run function stardust:custom_blocks/stardust_dungeon_portal/place_main
+scoreboard players reset #infinite_energy stardust.data
 
 # Place the marker block proving the dimension is built
 execute in stardust:dungeon run setblock -19 1 -150 minecraft:barrier

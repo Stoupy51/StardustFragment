@@ -1,0 +1,7 @@
+{
+	"type": "minecraft:all_of",
+	"definitions": [
+		"stardust_test:loaded",
+		{"type": "minecraft:clock_time", "clock": "minecraft:overworld", "time": 18000}
+	]
+}

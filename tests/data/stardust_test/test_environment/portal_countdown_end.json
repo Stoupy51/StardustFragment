@@ -1,0 +1,6 @@
+{
+	"type": "minecraft:all_of",
+	"definitions": [
+		"stardust_test:loaded"
+	]
+}

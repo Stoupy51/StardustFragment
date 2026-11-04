@@ -121,6 +121,11 @@ Requires SimplEnergy [v2.0.15+] : https://github.com/Stoupy51/SimplEnergy
 - 🎮 Mob models: VieuxGreluchon
 - ⚙️ Base Quarry System: AirDox_
 
+## 🧪 Tests
+
+🔬 The [Ward](https://github.com/mcbookshelf/ward) tests in `tests/` run against the built pack, libraries included, next to the SimplEnergy zip it depends on (build it in the SimplEnergy repo first): `uvx "mcward[cli]" test -p build/StardustFragment_datapack_with_libs.zip -p ../SimplEnergy/build/SimplEnergy_datapack_with_libs.zip -p tests -v 26.3 "stardust_test:*"`<br>
+🔁 The first run starts a Ward server that stays up so the next runs take a second, and `uvx "mcward[cli]" stop --all` stops it.
+
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/chart?repos=Stoupy51/StardustFragment&type=date&legend=top-left)](https://www.star-history.com/?repos=Stoupy51%2FStardustFragment&type=date&legend=top-left)

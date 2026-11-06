@@ -18,6 +18,16 @@ from ..definitions.additions.miscellaneous import miners_formula
 from .quarry import quarry
 
 
+# Functions
+def furnace_tracking(speed: int = 1000) -> McFunction:
+	return f"""
+# FurnaceNbtRecipes tracks this furnace through this entity, instead of summoning a marker
+kill @e[type=marker,tag=furnace_nbt_recipes.furnace,distance=..0.75]
+tag @s add furnace_nbt_recipes.furnace
+scoreboard players set @s furnace_nbt_recipes.speed {speed}
+"""
+
+
 # Setup machines work and visuals
 def setup_machines(gui: dict[str, str]) -> None:
 	ns: str = Mem.ctx.project_id
@@ -83,7 +93,8 @@ data modify entity @s item.components."minecraft:item_model" set value "{default
 """)
 
 		if gen == "nether_star_generator":
-			for item, fuel in (("nether_star", 18000),):	# 15 minutes
+			# 15 minutes
+			for item, fuel in (("nether_star", 18000),):
 				write_function(f"{ns}:custom_blocks/{gen}/consume_{item}", f"""
 data modify block ~ ~ ~ lit_time_remaining set value {fuel}s
 execute store result score #count {ns}.data run data get block ~ ~ ~ Items[{{Slot:0b}}].count
@@ -92,7 +103,7 @@ execute if score #count {ns}.data matches 1.. store result block ~ ~ ~ Items[{{S
 execute if score #count {ns}.data matches 0 run data remove block ~ ~ ~ Items[{{Slot:0b}}]
 """)
 
-		write_function(f"{ns}:custom_blocks/{gen}/place_secondary", f"""
+		write_function(f"{ns}:custom_blocks/{gen}/place_secondary", f"""{furnace_tracking()}
 # ItemIO compatibility
 tag @s add itemio.container
 tag @s add itemio.container.hopper

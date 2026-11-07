@@ -2,4 +2,4 @@
 *__pycache__*
 .beet_cache
 .vscode
-
+*.mcfunction.map

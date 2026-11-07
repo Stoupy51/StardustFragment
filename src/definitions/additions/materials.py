@@ -34,11 +34,14 @@ def main_additions() -> None:
 		wiki_buttons = [
 			WikiButton([
 				{"text":"The fundamental building block of stardust technology.","color":"yellow"},
-				{"text":"\nMined from Stardust Ore found in the overworld","color":"gray"},
+				{"text":"\nCrafted from 1 Diamond and 8 Lapis Lazuli","color":"gray"},
+				{"text":"\nDropped by Stardust Ore found in the Cavern and Celestial dimensions","color":"gray"},
+				{"text":"\nAlso found in Deepslate Stardust Ore, deep in the Overworld","color":"gray"},
 				{"text":"\nUsed to craft ingots, tools, armor, and machines","color":"gray"},
 			]),
 		],
 		recipes = [
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("minecraft:diamond")] + 8*[Ingr("minecraft:lapis_lazuli")]),
 			SmeltingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=200, ingredient=Ingr("stardust_ore")),
 			BlastingRecipe(result_count=2, category="misc", experience=0.8, cookingtime=100, ingredient=Ingr("stardust_ore")),
 			SmeltingRecipe(result_count=4, category="misc", experience=0.8, cookingtime=200, ingredient=Ingr("deepslate_stardust_ore")),
@@ -337,8 +340,8 @@ def main_additions() -> None:
 		wiki_buttons=[
 			WikiButton([
 				{"text":"Primary ore for the datapack.","color":"yellow"},
-				{"text":"\nFound in the Overworld between Y=0 and Y=50","color":"gray"},
-				{"text":"\nDeepslate variant generates below Y=0","color":"gray"},
+				{"text":"\nFound in the Cavern and Celestial dimensions between Y=0 and Y=50","color":"gray"},
+				{"text":"\nDoes not generate in the Overworld","color":"gray"},
 				{"text":"\nDrops between 1 and 4 stardust fragments when mined","color":"gray"},
 			]),
 		],
@@ -352,7 +355,8 @@ def main_additions() -> None:
 		wiki_buttons=[
 			WikiButton([
 				{"text":"Deepslate variant of stardust ore.","color":"yellow"},
-				{"text":"\nFound in deepslate layers below Y=0","color":"gray"},
+				{"text":"\nFound in the Overworld between Y=-64 and Y=-24","color":"gray"},
+				{"text":"\nAlso found below Y=0 in the Cavern and Celestial dimensions","color":"gray"},
 				{"text":"\nDrops between 2 and 6 stardust fragments when mined","color":"gray"},
 			]),
 		],
@@ -366,7 +370,7 @@ def main_additions() -> None:
 		wiki_buttons=[
 			WikiButton([
 				{"text":"Nether variant of stardust ore.","color":"yellow"},
-				{"text":"\nFound in the Nether between Y=25 and Y=120","color":"gray"},
+				{"text":"\nDoes not generate naturally","color":"gray"},
 				{"text":"\nDrops between 1 and 3 stardust ingots when mined","color":"gray"},
 			]),
 		],
@@ -392,7 +396,7 @@ def main_additions() -> None:
 	obj.wiki_buttons = [
 		WikiButton([
 			{"text":"Variant of the nether stardust ore.","color":"yellow"},
-			{"text":"\nFound in the Nether between Y=25 and Y=120","color":"gray"},
+			{"text":"\nDoes not generate naturally","color":"gray"},
 			{"text":"\nDrops between 2 and 8 awakened stardust when mined","color":"gray"},
 		]),
 	]

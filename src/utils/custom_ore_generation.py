@@ -27,7 +27,7 @@ def setup_custom_ore_generation():
 		# Ores
 		"stardust_ore": [
 			CustomOreGeneration(
-				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],
+				dimensions = ["stardust:cavern", "stardust:celestial"],
 				maximum_height = 50,
 				minimum_height = 0,
 				veins_per_region = 1,
@@ -36,31 +36,18 @@ def setup_custom_ore_generation():
 		],
 		"deepslate_stardust_ore": [
 			CustomOreGeneration(
-				dimensions = ["minecraft:overworld", "stardust:cavern", "stardust:celestial"],
+				dimensions = ["minecraft:overworld"],
+				maximum_height = -24,
+				minimum_height = -64,
+				veins_per_region = 1,
+				vein_size_logic = 0.2,
+			),
+			CustomOreGeneration(
+				dimensions = ["stardust:cavern", "stardust:celestial"],
 				maximum_height = 0,
 				veins_per_region = 1,
 				vein_size_logic = 0.2,
-			)
-		],
-		"nether_stardust_ore": [
-			CustomOreGeneration(
-				dimensions = ["minecraft:the_nether"],
-				maximum_height = 120,
-				minimum_height = 25,
-				veins_per_region = 1,
-				vein_size_logic = 0.2,
-				provider=list(CustomOreGeneration.NETHER_REPLACEABLES),
-			)
-		],
-		"awakened_stardust_ore": [
-			CustomOreGeneration(
-				dimensions = ["minecraft:the_nether"],
-				maximum_height = 120,
-				minimum_height = 25,
-				veins_per_region = 1,
-				vein_size_logic = 0.2,
-				provider=list(CustomOreGeneration.NETHER_REPLACEABLES),
-			)
+			),
 		],
 		"ender_stardust_ore": [
 			CustomOreGeneration(
@@ -83,7 +70,7 @@ function {ns}:calls/smart_ore_generation/veins/retry/life_crystal_block
 
 # Placing Life Crystal Block patch
 execute at @s if block ~ ~ ~ #{ns}:smart_ore_generation/life_crystal_block_provider positioned ~ ~1 ~ if block ~ ~ ~ #minecraft:air unless block ~ ~-1 ~ lava run function {ns}:custom_blocks/life_crystal_block/place_main
-""", overwrite=True)  # noqa: E501
+""", overwrite=True)
 	write_function(f"{ns}:calls/smart_ore_generation/veins/retry/life_crystal_block", f"""
 # Find a random position in the region and decrease attempts
 scoreboard players remove #attempts {ns}.data 1

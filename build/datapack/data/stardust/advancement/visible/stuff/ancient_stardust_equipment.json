@@ -12,8 +12,8 @@
 			"color": "aqua"
 		},
 		"description": {
-			"translate": "stardust.upgrade_a_diamond_equipment_into_ancient_stardust",
-			"fallback": "Upgrade a Diamond equipment into Ancient Stardust",
+			"translate": "stardust.upgrade_a_netherite_equipment_into_ancient_stardust",
+			"fallback": "Upgrade a Netherite equipment into Ancient Stardust",
 			"color": "green"
 		},
 		"frame": "task",

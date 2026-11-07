@@ -4,6 +4,7 @@
 		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
+			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_fragment","ingredients": [{"item": "minecraft:diamond"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"},{"item": "minecraft:lapis_lazuli"}]},
 			{"type": "smelting","result_count": 2,"category": "misc","group": "stardust_fragment","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ore": true}}}},"experience": 0.8,"cookingtime": 200},
 			{"type": "blasting","result_count": 2,"category": "misc","group": "stardust_fragment","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ore": true}}}},"experience": 0.8,"cookingtime": 100},
 			{"type": "smelting","result_count": 4,"category": "misc","group": "stardust_fragment","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"deepslate_stardust_ore": true}}}},"experience": 0.8,"cookingtime": 200},
@@ -11,7 +12,7 @@
 			{"type": "simplenergy_pulverizing","result_count": 8,"group": "stardust_fragment","ingredient": {"components": {"minecraft:custom_data": {"stardust": {"stardust_ingot": true}}}}}
 		],
 		"wiki_buttons": [
-			[{"text": "The fundamental building block of stardust technology.","color": "yellow"},{"text": "\nMined from Stardust Ore found in the overworld","color": "gray"},{"text": "\nUsed to craft ingots, tools, armor, and machines","color": "gray"}]
+			[{"text": "The fundamental building block of stardust technology.","color": "yellow"},{"text": "\nCrafted from 1 Diamond and 8 Lapis Lazuli","color": "gray"},{"text": "\nDropped by Stardust Ore found in the Cavern and Celestial dimensions","color": "gray"},{"text": "\nAlso found in Deepslate Stardust Ore, deep in the Overworld","color": "gray"},{"text": "\nUsed to craft ingots, tools, armor, and machines","color": "gray"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_fragment",
@@ -149,7 +150,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Primary ore for the datapack.","color": "yellow"},{"text": "\nFound in the Overworld between Y=0 and Y=50","color": "gray"},{"text": "\nDeepslate variant generates below Y=0","color": "gray"},{"text": "\nDrops between 1 and 4 stardust fragments when mined","color": "gray"}]
+			[{"text": "Primary ore for the datapack.","color": "yellow"},{"text": "\nFound in the Cavern and Celestial dimensions between Y=0 and Y=50","color": "gray"},{"text": "\nDoes not generate in the Overworld","color": "gray"},{"text": "\nDrops between 1 and 4 stardust fragments when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_ore","from": "stardust"}}}}}}],
@@ -180,7 +181,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Deepslate variant of stardust ore.","color": "yellow"},{"text": "\nFound in deepslate layers below Y=0","color": "gray"},{"text": "\nDrops between 2 and 6 stardust fragments when mined","color": "gray"}]
+			[{"text": "Deepslate variant of stardust ore.","color": "yellow"},{"text": "\nFound in the Overworld between Y=-64 and Y=-24","color": "gray"},{"text": "\nAlso found below Y=0 in the Cavern and Celestial dimensions","color": "gray"},{"text": "\nDrops between 2 and 6 stardust fragments when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:deepslate_stardust_ore","from": "stardust"}}}}}}],
@@ -211,7 +212,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Nether variant of stardust ore.","color": "yellow"},{"text": "\nFound in the Nether between Y=25 and Y=120","color": "gray"},{"text": "\nDrops between 1 and 3 stardust ingots when mined","color": "gray"}]
+			[{"text": "Nether variant of stardust ore.","color": "yellow"},{"text": "\nDoes not generate naturally","color": "gray"},{"text": "\nDrops between 1 and 3 stardust ingots when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:nether_stardust_ore","from": "stardust"}}}}}}],
@@ -272,10 +273,11 @@
 		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
+			{"type": "simplenergy_pulverizing","result_count": 6,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"impure_stardust_essence": true}}}}},
 			{"type": "simplenergy_pulverizing","result_count": 8,"ingredient": {"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}}
 		],
 		"wiki_buttons": [
-			[{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained through mining or mobs in the Stardust Dungeon","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}]
+			[{"text": "Enhanced stardust with increased energy potential.","color": "yellow"},{"text": "\nObtained by pulverizing Impure Stardust Essence, or from mobs in the Stardust Dungeon","color": "gray"},{"text": "\nRequired for advanced equipment and machines","color": "gray"}]
 		],
 		"components": {
 			"custom_data": {"smithed": {"dict": {"awakened_stardust": {"awakened_stardust": true}},"id": "stardust:awakened_stardust","origin": "stardust","ignore": {"functionality": true,"crafting": true}},"stardust": {"awakened_stardust": true}},
@@ -319,7 +321,7 @@
 		"manual_category": "materials",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Variant of the nether stardust ore.","color": "yellow"},{"text": "\nFound in the Nether between Y=25 and Y=120","color": "gray"},{"text": "\nDrops between 2 and 8 awakened stardust when mined","color": "gray"}]
+			[{"text": "Variant of the nether stardust ore.","color": "yellow"},{"text": "\nDoes not generate naturally","color": "gray"},{"text": "\nDrops between 2 and 8 awakened stardust when mined","color": "gray"}]
 		],
 		"components": {
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_ore","from": "stardust"}}}}}}],
@@ -538,6 +540,24 @@
 			"uvlock": false,
 			"margin": 1.002
 		}
+	},
+	"impure_stardust_essence": {
+		"id": "impure_stardust_essence",
+		"base_item": "minecraft:recovery_compass",
+		"manual_category": "materials",
+		"recipes": [
+			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "impure_stardust_essence","shape": ["RRR","RER","RRR"],"ingredients": {"R": {"item": "minecraft:redstone_block"},"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}}}}
+		],
+		"wiki_buttons": [
+			[{"text": "Stardust Essence tainted by redstone.","color": "yellow"},{"text": "\nCrafted from a Stardust Essence surrounded by 8 Redstone Blocks","color": "gray"},{"text": "\nPulverize it to get 6 Awakened Stardust","color": "gray"}]
+		],
+		"components": {
+			"item_model": "stardust:impure_stardust_essence",
+			"item_name": {"text": "Impure Stardust Essence"},
+			"lore": [["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
+			"custom_data": {"stardust": {"impure_stardust_essence": true},"smithed": {"id": "stardust:impure_stardust_essence","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
+		},
+		"skip_gives": false
 	},
 	"dragon_pearl": {
 		"id": "dragon_pearl",
@@ -1647,33 +1667,6 @@
 			"margin": 1.002
 		}
 	},
-	"quarry_creative": {
-		"id": "quarry_creative",
-		"base_item": "minecraft:furnace",
-		"manual_category": "energy",
-		"recipes": [],
-		"wiki_buttons": [
-			[{"text": "Creative quarry with unlimited power.","color": "yellow"},{"text": "\nRequires no power to operate","color": "gray"},{"text": "\nEquivalent to a Level 1000 quarry","color": "gray"},{"text": "\nFor creative/testing purposes only","color": "gray"}]
-		],
-		"components": {
-			"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry": {"block_per_second": 1000},"quarry_creative": true},"smithed": {"id": "stardust:quarry_creative","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
-			"lore": [{"text": "[Speed: 1000 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 0 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
-			"enchantment_glint_override": true,
-			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_creative","from": "stardust"}}}}}}],
-			"tooltip_display": {"hidden_components": ["minecraft:container"]},
-			"item_model": "stardust:quarry_creative",
-			"item_name": {"text": "Quarry Creative"}
-		},
-		"skip_gives": false,
-		"vanilla_block": {
-			"id": "minecraft:barrel",
-			"contents": false,
-			"block_facing": false,
-			"visual_facing": "none",
-			"uvlock": false,
-			"margin": 1.002
-		}
-	},
 	"cavern_portal": {
 		"id": "cavern_portal",
 		"base_item": "minecraft:furnace",
@@ -1763,7 +1756,7 @@
 		"base_item": "minecraft:furnace",
 		"manual_category": "energy",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_dungeon_portal","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_portal": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_ore": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stardust_dungeon_portal","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"impure_stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"impure_stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_portal": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"impure_stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"impure_stardust_essence": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}}]}
 		],
 		"wiki_buttons": [
 			[{"text": "Portal to the Stardust Dungeon.","color": "yellow"},{"text": "\nA pre-built dungeon dimension with extreme challenges","color": "gray"},{"text": "\n\nMobs: All vanilla mobs (3x health, 4x damage, 1.35x speed)","color": "white"},{"text": "\nLoot: Awakened Stardust, Stardust Essence","color": "white"},{"text": "\nWarning: Extremely dangerous! Prepare well before entering","color": "red"},{"text": "\n\nConsumes 200 kW of power","color": "gray"},{"text": "\nEnergy buffer: 12 MJ","color": "gray"}]
@@ -1993,9 +1986,9 @@
 		"base_item": "minecraft:diamond_helmet",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_helmet"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_helmet"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_helmet"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_helmet"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_helmet"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_helmet"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2022,9 +2015,9 @@
 		"base_item": "minecraft:diamond_chestplate",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_chestplate"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_chestplate"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_chestplate"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_chestplate"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_chestplate"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_chestplate"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2051,9 +2044,9 @@
 		"base_item": "minecraft:diamond_leggings",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_leggings"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_leggings"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_leggings"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_leggings"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_leggings"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_leggings"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2080,9 +2073,9 @@
 		"base_item": "minecraft:diamond_boots",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_boots"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_boots"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_boots"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_boots"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_boots"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_boots"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2109,9 +2102,9 @@
 		"base_item": "minecraft:diamond_sword",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_sword"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_sword"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_sword"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_sword"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_sword"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_sword"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2135,9 +2128,9 @@
 		"base_item": "minecraft:diamond_pickaxe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_pickaxe"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_pickaxe"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_pickaxe"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_pickaxe"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_pickaxe"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_pickaxe"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2162,9 +2155,9 @@
 		"base_item": "minecraft:diamond_axe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_axe"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_axe"}]},
-			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:diamond_axe"}]}
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"item": "minecraft:black_glazed_terracotta"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_axe"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"item": "minecraft:nether_wart_block"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_axe"}]},
+			{"type": "crafting_shapeless","result_count": 1,"category": "equipment","ingredients": [{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"item": "minecraft:blackstone"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_block": true}}}},{"item": "minecraft:netherite_axe"}]}
 		],
 		"wiki_buttons": [
 			{"text": "Poorly crafted stardust equipment.","color": "yellow"},
@@ -2371,7 +2364,7 @@
 		"base_item": "minecraft:netherite_helmet",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_helmet": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_helmet": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2400,7 +2393,7 @@
 		"base_item": "minecraft:netherite_chestplate",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_chestplate": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_chestplate": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2429,7 +2422,7 @@
 		"base_item": "minecraft:netherite_leggings",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_leggings": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_leggings": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2458,7 +2451,7 @@
 		"base_item": "minecraft:netherite_boots",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_boots": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_boots": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2487,7 +2480,7 @@
 		"base_item": "minecraft:netherite_sword",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_sword": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_sword": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2513,7 +2506,7 @@
 		"base_item": "minecraft:netherite_pickaxe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2540,7 +2533,7 @@
 		"base_item": "minecraft:netherite_axe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_axe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_axe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_block": true}}},"count": 4},{"item": "minecraft:wind_charge","count": 64},{"item": "minecraft:feather","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"legendarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,1,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Legendarium equipment.","color": "yellow"},
@@ -2567,7 +2560,7 @@
 		"base_item": "minecraft:netherite_helmet",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_helmet": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_helmet": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2596,7 +2589,7 @@
 		"base_item": "minecraft:netherite_chestplate",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_chestplate": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_chestplate": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2625,7 +2618,7 @@
 		"base_item": "minecraft:netherite_leggings",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_leggings": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_leggings": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2654,7 +2647,7 @@
 		"base_item": "minecraft:netherite_boots",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_boots": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_boots": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2683,7 +2676,7 @@
 		"base_item": "minecraft:netherite_sword",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_sword": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_sword": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2709,7 +2702,7 @@
 		"base_item": "minecraft:netherite_pickaxe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2736,7 +2729,7 @@
 		"base_item": "minecraft:netherite_axe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_axe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_axe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"solarium_block": true}}},"count": 4},{"item": "minecraft:orange_candle","count": 64},{"item": "minecraft:blaze_powder","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.5,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Solarium equipment.","color": "yellow"},
@@ -2763,7 +2756,7 @@
 		"base_item": "minecraft:netherite_helmet",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_helmet": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_helmet": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -2792,7 +2785,7 @@
 		"base_item": "minecraft:netherite_chestplate",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_chestplate": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_chestplate": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -2821,7 +2814,7 @@
 		"base_item": "minecraft:netherite_leggings",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_leggings": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_leggings": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -2850,7 +2843,7 @@
 		"base_item": "minecraft:netherite_boots",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_boots": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_boots": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -2879,7 +2872,7 @@
 		"base_item": "minecraft:netherite_sword",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_sword": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_sword": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -2905,7 +2898,7 @@
 		"base_item": "minecraft:netherite_pickaxe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_pickaxe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -2932,7 +2925,7 @@
 		"base_item": "minecraft:netherite_axe",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_axe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"original_stardust_axe": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"darkium_block": true}}},"count": 4},{"item": "minecraft:respawn_anchor","count": 64},{"item": "minecraft:ink_sac","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 6},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"darkium_ingot": true}}},"count": 12},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[0,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Darkium equipment.","color": "yellow"},
@@ -3003,7 +2996,7 @@
 		"base_item": "minecraft:bow",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"group": "awakened_stardust_bow","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}},"count": 8},{"item": "minecraft:redstone_block","count": 64},{"item": "minecraft:red_glazed_terracotta","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"stardust_bow": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 8},{"item": "minecraft:red_nether_bricks","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"item": "minecraft:red_mushroom_block","count": 64}],"particle": "minecraft:dust{color:[1,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"group": "awakened_stardust_bow","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}},"count": 8},{"item": "minecraft:redstone_block","count": 64},{"item": "minecraft:red_glazed_terracotta","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"stardust_bow": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 8},{"item": "minecraft:red_nether_bricks","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"item": "minecraft:red_mushroom_block","count": 64}],"particle": "minecraft:dust{color:[1,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Bow crafted from awakened stardust materials.","color": "yellow"},
@@ -3024,7 +3017,7 @@
 		"base_item": "minecraft:bow",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"group": "ultimate_bow","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}},"count": 64},{"item": "minecraft:dragon_egg","count": 2},{"item": "minecraft:echo_shard","count": 32},{"item": "minecraft:emerald_block","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_bow": true}}},"count": 1},{"item": "minecraft:amethyst_block","count": 64},{"item": "minecraft:heavy_core","count": 1},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 16},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.69,0.69],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"group": "ultimate_bow","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}},"count": 64},{"item": "minecraft:dragon_egg","count": 2},{"item": "minecraft:echo_shard","count": 32},{"item": "minecraft:emerald_block","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_bow": true}}},"count": 1},{"item": "minecraft:amethyst_block","count": 64},{"item": "minecraft:heavy_core","count": 1},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 16},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.69,0.69],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Bow crafted from ultimate stardust materials.","color": "yellow"},
@@ -3074,7 +3067,7 @@
 		"base_item": "minecraft:warped_fungus_on_a_stick",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"group": "awakened_stardust_sniper","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}},"count": 8},{"item": "minecraft:redstone_block","count": 64},{"item": "minecraft:red_glazed_terracotta","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"stardust_sniper": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}},"count": 8},{"item": "minecraft:red_nether_bricks","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"item": "minecraft:red_mushroom_block","count": 64}],"particle": "minecraft:dust{color:[1,0,0],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"group": "awakened_stardust_sniper","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_frame": true}}},"count": 8},{"item": "minecraft:redstone_block","count": 64},{"item": "minecraft:red_glazed_terracotta","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}},"count": 8},{"components": {"minecraft:custom_data": {"stardust": {"stardust_sniper": true}}},"count": 1},{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}},"count": 8},{"item": "minecraft:red_nether_bricks","count": 64},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 8},{"item": "minecraft:red_mushroom_block","count": 64}],"particle": "minecraft:dust{color:[1,0,0],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Sniper crafted from awakened stardust materials.","color": "yellow"},
@@ -3103,7 +3096,7 @@
 		"base_item": "minecraft:warped_fungus_on_a_stick",
 		"manual_category": "equipment",
 		"recipes": [
-			{"type": "stardust_awakened_forge","result_count": 1,"group": "ultimate_sniper","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}},"count": 64},{"item": "minecraft:dragon_egg","count": 2},{"item": "minecraft:echo_shard","count": 32},{"item": "minecraft:emerald_block","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_sniper": true}}},"count": 1},{"item": "minecraft:amethyst_block","count": 64},{"item": "minecraft:heavy_core","count": 1},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 16},{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.69,0.69],scale:2}"}
+			{"type": "stardust_awakened_forge","result_count": 1,"group": "ultimate_sniper","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"compacted_stardust_shard": true}}},"count": 64},{"item": "minecraft:dragon_egg","count": 2},{"item": "minecraft:echo_shard","count": 32},{"item": "minecraft:emerald_block","count": 96},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_sniper": true}}},"count": 1},{"item": "minecraft:amethyst_block","count": 64},{"item": "minecraft:heavy_core","count": 1},{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}},"count": 16},{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}},"count": 1}],"particle": "minecraft:dust{color:[1,0.69,0.69],scale:2}"}
 		],
 		"wiki_buttons": [
 			{"text": "Sniper crafted from ultimate stardust materials.","color": "yellow"},
@@ -3637,9 +3630,9 @@
 		"wiki_buttons": [
 			{"text": "Magical seed that grows stardust fragments.","color": "yellow"},
 			{"text": "\nCan only be planted on diamond blocks","color": "gray"},
-			{"text": "\nGrows fully after 8 minutes","color": "gray"},
+			{"text": "\nGrows fully after 10 minutes","color": "gray"},
 			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
-			{"text": "\nYields 3-9 stardust fragments when harvested","color": "gray"},
+			{"text": "\nYields 1-4 stardust fragments when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+50% per level)","color": "gray"}
 		],
 		"components": {
@@ -3660,9 +3653,9 @@
 		},
 		"growing_seed": {
 			"texture_basename": "stardust",
-			"seconds": 480,
+			"seconds": 600,
 			"planted_on": "diamond_block",
-			"loots": [{"id": "stardust_fragment","rolls": {"type": "minecraft:uniform","min": 3,"max": 9},"fortune": {"extra": 0,"probability": 0.5}}]
+			"loots": [{"id": "stardust_fragment","rolls": {"type": "minecraft:uniform","min": 1,"max": 4},"fortune": {"extra": 0,"probability": 0.5}}]
 		}
 	},
 	"advanced_stardust_seed": {
@@ -3675,9 +3668,9 @@
 		"wiki_buttons": [
 			{"text": "Magical seed that grows stardust ingots.","color": "yellow"},
 			{"text": "\nCan only be planted on diamond blocks","color": "gray"},
-			{"text": "\nGrows fully after 16 minutes","color": "gray"},
+			{"text": "\nGrows fully after 20 minutes","color": "gray"},
 			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
-			{"text": "\nYields 1-4 stardust ingots when harvested","color": "gray"},
+			{"text": "\nYields 1-2 stardust ingots when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+30% per level)","color": "gray"}
 		],
 		"components": {
@@ -3698,9 +3691,9 @@
 		},
 		"growing_seed": {
 			"texture_basename": "advanced_stardust",
-			"seconds": 960,
+			"seconds": 1200,
 			"planted_on": "diamond_block",
-			"loots": [{"id": "stardust_ingot","rolls": {"type": "minecraft:uniform","min": 1,"max": 4},"fortune": {"extra": 0,"probability": 0.3}}]
+			"loots": [{"id": "stardust_ingot","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.3}}]
 		}
 	},
 	"elite_stardust_seed": {
@@ -3713,9 +3706,9 @@
 		"wiki_buttons": [
 			{"text": "Magical seed that grows stardust essences.","color": "yellow"},
 			{"text": "\nCan only be planted on diamond blocks","color": "gray"},
-			{"text": "\nGrows fully after 32 minutes","color": "gray"},
+			{"text": "\nGrows fully after 45 minutes","color": "gray"},
 			{"text": "\nThe seed is fully grown when it starts glowing","color": "gray"},
-			{"text": "\nYields 1-2 stardust essences when harvested","color": "gray"},
+			{"text": "\nYields 0-1 stardust essence when harvested","color": "gray"},
 			{"text": "\nFortune effect applies (+20% per level)","color": "gray"}
 		],
 		"components": {
@@ -3736,9 +3729,9 @@
 		},
 		"growing_seed": {
 			"texture_basename": "elite_stardust",
-			"seconds": 1920,
+			"seconds": 2700,
 			"planted_on": "diamond_block",
-			"loots": [{"id": "stardust_essence","rolls": {"type": "minecraft:uniform","min": 1,"max": 2},"fortune": {"extra": 0,"probability": 0.2}}]
+			"loots": [{"id": "stardust_essence","rolls": {"type": "minecraft:uniform","min": 0,"max": 1},"fortune": {"extra": 0,"probability": 0.2}}]
 		}
 	},
 	"legendarium_seed": {
@@ -4096,7 +4089,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "stoupegg","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"item": "minecraft:wolf_armor"},{"components": {"minecraft:custom_data": {"stardust": {"stardust_fragment": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"dog_excrement": true}}}}]}
 		],
 		"wiki_buttons": [
-			[{"text": "Mystical egg that summons the StoupArmy mini-boss.","color": "yellow"},{"text": "\nConsume to summon Stoupy and 4 enhanced wolves","color": "gray"},{"text": "\nSpawns at world surface","color": "gray"},{"text": "\n\nStoupy Stats (based on vanilla Wolf):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "250 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x0.9","color": "green"},{"text": "\n➤ Knockback Resistance: ","color": "gray"},{"text": "10","color": "aqua"},{"text": "\n➤ Step Height: ","color": "gray"},{"text": "16 blocks","color": "green"},{"text": "\n➤ Jump Boost V","color": "light_purple"},{"text": "\n\nDrops valuable early-game resources","color": "yellow"},{"text": "\nGlows when no players are within 15 blocks","color": "gray"}]
+			[{"text": "Mystical egg that summons the StoupArmy mini-boss.","color": "yellow"},{"text": "\nConsume to summon Stoupy and 4 enhanced wolves","color": "gray"},{"text": "\nSpawns at world surface","color": "gray"},{"text": "\n\nStoupy Stats (based on vanilla Wolf):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "250 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x2 (4 -> 8)","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x0.9","color": "green"},{"text": "\n➤ Knockback Resistance: ","color": "gray"},{"text": "10","color": "aqua"},{"text": "\n➤ Step Height: ","color": "gray"},{"text": "16 blocks","color": "green"},{"text": "\n➤ Jump Boost V","color": "light_purple"},{"text": "\n\nDrops valuable early-game resources","color": "yellow"},{"text": "\nGlows when no players are within 15 blocks","color": "gray"}]
 		],
 		"components": {
 			"consumable": {"animation": "bow","has_consume_particles": false,"sound": {"sound_id": "stardust:stoupegg_consuming"}},
@@ -4153,7 +4146,7 @@
 			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "ultimate_dragon_essence","ingredients": [{"item": "minecraft:dragon_egg"},{"item": "minecraft:dragon_egg"},{"item": "minecraft:dragon_egg"},{"item": "minecraft:dragon_egg"},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"components": {"minecraft:custom_data": {"stardust": {"ultimate_shard": true}}}},{"item": "minecraft:lingering_potion"}]}
 		],
 		"wiki_buttons": [
-			[{"text": "Powerful essence that summons the Ultimate Dragon.","color": "yellow"},{"text": "\nThrow in the Ultimate Dimension to summon","color": "gray"},{"text": "\nWARNING: Only works in Ultimate Dimension!","color": "red"},{"text": "\n\nMain Boss Stats (based on Ender Dragon):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "1024 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x4","color": "red"},{"text": "\n➤ Resistance IV (80% damage reduction)","color": "light_purple"},{"text": "\n➤ Always glowing","color": "aqua"},{"text": "\n\n3 Slave Dragons (512 HP each, x4 damage)","color": "aqua"},{"text": "\nEnd Crystals heal the main dragon","color": "gray"},{"text": "\nDragons use various attacks (20% chance/sec)","color": "gray"},{"text": "\nDragons limited to Y=150 max height","color": "gray"},{"text": "\n\nThis is the final challenge!","color": "yellow"},{"text": "\nDrops Ultimate Dragon Egg trophy on defeat","color": "gold"}]
+			[{"text": "Powerful essence that summons the Ultimate Dragon.","color": "yellow"},{"text": "\nThrow in the Ultimate Dimension to summon","color": "gray"},{"text": "\nWARNING: Only works in Ultimate Dimension!","color": "red"},{"text": "\n\nMain Boss Stats (based on Ender Dragon):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "1024 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x4 (10 -> 40)","color": "red"},{"text": "\n➤ Resistance IV (80% damage reduction)","color": "light_purple"},{"text": "\n➤ Always glowing","color": "aqua"},{"text": "\n\n3 Slave Dragons (512 HP each, x4 damage: 10 -> 40)","color": "aqua"},{"text": "\nEnd Crystals heal the main dragon","color": "gray"},{"text": "\nDragons use various attacks (20% chance/sec)","color": "gray"},{"text": "\nDragons limited to Y=150 max height","color": "gray"},{"text": "\n\nThis is the final challenge!","color": "yellow"},{"text": "\nDrops Ultimate Dragon Egg trophy on defeat","color": "gold"}]
 		],
 		"components": {
 			"custom_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff4200"},{"text": "t","color": "#ff8500"},{"text": "i","color": "#ffc700"},{"text": "m","color": "#f3ff00"},{"text": "a","color": "#b1ff00"},{"text": "t","color": "#6eff00"},{"text": "e","color": "#2cff00"},{"text": " ","color": "#00ff16"},{"text": "D","color": "#00ff58"},{"text": "r","color": "#00ff9b"},{"text": "a","color": "#00ffdd"},{"text": "g","color": "#00ddff"},{"text": "o","color": "#009bff"},{"text": "n","color": "#0058ff"},{"text": " ","color": "#0016ff"},{"text": "E","color": "#2c00ff"},{"text": "s","color": "#6e00ff"},{"text": "s","color": "#b100ff"},{"text": "e","color": "#f300ff"},{"text": "n","color": "#ff00c7"},{"text": "c","color": "#ff0085"},{"text": "e","color": "#ff0042"}],
@@ -4199,6 +4192,29 @@
 			"custom_data": {"stardust": {"manual": true},"smithed": {"id": "stardust:manual","origin": "stardust","ignore": {"functionality": true,"crafting": true}}}
 		},
 		"skip_gives": false
+	},
+	"quarry_creative": {
+		"id": "quarry_creative",
+		"base_item": "minecraft:furnace",
+		"recipes": [],
+		"components": {
+			"custom_data": {"energy": {"usage": 0,"max_storage": 1},"stardust": {"quarry": {"block_per_second": 1000},"quarry_creative": true},"smithed": {"id": "stardust:quarry_creative","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"lore": [{"text": "[Speed: 1000 block/s]","italic": false,"color": "gray"},{"text": "[Power Usage: 0 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
+			"enchantment_glint_override": true,
+			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:quarry_creative","from": "stardust"}}}}}}],
+			"tooltip_display": {"hidden_components": ["minecraft:container"]},
+			"item_model": "stardust:quarry_creative",
+			"item_name": {"text": "Quarry Creative"}
+		},
+		"skip_gives": false,
+		"vanilla_block": {
+			"id": "minecraft:barrel",
+			"contents": false,
+			"block_facing": false,
+			"visual_facing": "none",
+			"uvlock": false,
+			"margin": 1.002
+		}
 	},
 	"stoupy_cosmic_threat": {
 		"id": "stoupy_cosmic_threat",
@@ -4266,7 +4282,7 @@
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Stardust Soldier","color": "yellow"},{"text": "\nFound in the Stardust Dimension","color": "gray"},{"text": "\nCan be summoned by the Stardust Pillar","color": "gray"},{"text": "\n\nStats (compared to a vanilla Skeleton):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3","color": "red"},{"text": "\n➤ Speed: ","color": "gray"},{"text": "x1.25","color": "green"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 1-8 Stardust Ingots (90% chance)","color": "white"},{"text": "\n➤ 1 Stardust Essence (10% chance)","color": "white"}]
+			[{"text": "Stardust Soldier","color": "yellow"},{"text": "\nFound in the Stardust Dimension","color": "gray"},{"text": "\nCan be summoned by the Stardust Pillar","color": "gray"},{"text": "\n\nStats (compared to a vanilla Skeleton):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3 (2 -> 6)","color": "red"},{"text": "\n➤ Speed: ","color": "gray"},{"text": "x1.25","color": "green"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 1-8 Stardust Ingots (90% chance)","color": "white"},{"text": "\n➤ 1 Stardust Essence (10% chance)","color": "white"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_soldier",
@@ -4282,7 +4298,7 @@
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Stardust Evoker","color": "yellow"},{"text": "\nFound in the Stardust Dimension","color": "gray"},{"text": "\nCan be summoned by the Stardust Pillar","color": "gray"},{"text": "\n\nStats (compared to a vanilla Evoker):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3","color": "red"},{"text": "\n➤ Speed: ","color": "gray"},{"text": "x1.25","color": "green"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 1-8 Stardust Ingots (90% chance)","color": "white"},{"text": "\n➤ 1 Stardust Essence (10% chance)","color": "white"}]
+			[{"text": "Stardust Evoker","color": "yellow"},{"text": "\nFound in the Stardust Dimension","color": "gray"},{"text": "\nCan be summoned by the Stardust Pillar","color": "gray"},{"text": "\n\nStats (compared to a vanilla Evoker):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Speed: ","color": "gray"},{"text": "x1.25","color": "green"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 1-8 Stardust Ingots (90% chance)","color": "white"},{"text": "\n➤ 1 Stardust Essence (10% chance)","color": "white"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_evoker",
@@ -4298,7 +4314,7 @@
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Stardust Bat","color": "yellow"},{"text": "\nFound in the Stardust Dimension","color": "gray"},{"text": "\nCan be summoned by the Stardust Pillar","color": "gray"},{"text": "\\n10% chance to summon lightning per second","color": "gray"},{"text": "\n\nStats (compared to a vanilla Bat):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3","color": "red"},{"text": "\n➤ Speed: ","color": "gray"},{"text": "x1.25","color": "green"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 1-2 Netherite Scraps (50% chance)","color": "white"},{"text": "\n➤ 1-8 Stardust Ingots (45% chance)","color": "white"},{"text": "\n➤ 1 Stardust Essence (5% chance)","color": "white"}]
+			[{"text": "Stardust Bat","color": "yellow"},{"text": "\nFound in the Stardust Dimension","color": "gray"},{"text": "\nCan be summoned by the Stardust Pillar","color": "gray"},{"text": "\\n10% chance to summon lightning per second","color": "gray"},{"text": "\n\nStats (compared to a vanilla Bat):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "x2","color": "red"},{"text": "\n➤ Speed: ","color": "gray"},{"text": "x1.25","color": "green"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 1-2 Netherite Scraps (50% chance)","color": "white"},{"text": "\n➤ 1-8 Stardust Ingots (45% chance)","color": "white"},{"text": "\n➤ 1 Stardust Essence (5% chance)","color": "white"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_bat",
@@ -4314,7 +4330,7 @@
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Stardust Pillar","color": "yellow"},{"text": "\nBoss mob with active shield (Resistance V)","color": "gray"},{"text": "\nSummons waves of 5 mobs every 5 seconds","color": "gray"},{"text": "\nEach wave summoned reduces shield by 5 HP","color": "gray"},{"text": "\nMax mobs: 20 + 5 per player (within 96 blocks)","color": "gray"},{"text": "\nLoses shield and charges at players below 250 HP","color": "gray"},{"text": "\n\nStats (compared to a vanilla Vex):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "500 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x5","color": "green"},{"text": "\n➤ NoAI: ","color": "gray"},{"text": "true (until shield breaks)","color": "aqua"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 2 Stardust Dungeon Keys","color": "white"},{"text": "\n➤ 2-4 Compacted Stardust Shards","color": "white"},{"text": "\n➤ 12-20 Diamond Blocks","color": "white"},{"text": "\n➤ 12-20 Gold Blocks","color": "white"}]
+			[{"text": "Stardust Pillar","color": "yellow"},{"text": "\nBoss mob with active shield (Resistance V)","color": "gray"},{"text": "\nSummons waves of 5 mobs every 5 seconds","color": "gray"},{"text": "\nEach wave summoned reduces shield by 5 HP","color": "gray"},{"text": "\nMax mobs: 20 + 5 per player (within 96 blocks)","color": "gray"},{"text": "\nLoses shield and charges at players below 250 HP","color": "gray"},{"text": "\n\nStats (compared to a vanilla Vex):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "500 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3 (4 -> 12)","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x5","color": "green"},{"text": "\n➤ NoAI: ","color": "gray"},{"text": "true (until shield breaks)","color": "aqua"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 2 Stardust Dungeon Keys","color": "white"},{"text": "\n➤ 2-4 Compacted Stardust Shards","color": "white"},{"text": "\n➤ 12-20 Diamond Blocks","color": "white"},{"text": "\n➤ 12-20 Gold Blocks","color": "white"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_pillar",
@@ -4330,7 +4346,7 @@
 		"manual_category": "mobs",
 		"recipes": [],
 		"wiki_buttons": [
-			[{"text": "Stardust Guardian","color": "yellow"},{"text": "\nBoss that summons waves at half health (512 HP)","color": "gray"},{"text": "\nSummons 25 mobs in a circle around each player","color": "gray"},{"text": "\nGlows when no players are within 15 blocks","color": "gray"},{"text": "\nSummoned mobs: Skeleton, Magma Cube, Piglin Brute","color": "gray"},{"text": "\n\nStats (compared to a vanilla Skeleton):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "1024 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x1.5","color": "green"},{"text": "\n➤ Knockback Resistance: ","color": "gray"},{"text": "10","color": "aqua"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 24-42 Awakened Stardust Blocks","color": "white"},{"text": "\n➤ 2-8 Stardust Cores","color": "white"},{"text": "\n➤ 16-24 Random Seeds","color": "white"}]
+			[{"text": "Stardust Guardian","color": "yellow"},{"text": "\nBoss that summons waves at half health (512 HP)","color": "gray"},{"text": "\nSummons 25 mobs in a circle around each player","color": "gray"},{"text": "\nGlows when no players are within 15 blocks","color": "gray"},{"text": "\nSummoned mobs: Skeleton, Magma Cube, Piglin Brute","color": "gray"},{"text": "\n\nStats (compared to a vanilla Skeleton):","color": "aqua"},{"text": "\n➤ Health: ","color": "gray"},{"text": "1024 points","color": "red"},{"text": "\n➤ Damage: ","color": "gray"},{"text": "x3 (2 -> 6)","color": "red"},{"text": "\n➤ Scale: ","color": "gray"},{"text": "x1.5","color": "green"},{"text": "\n➤ Knockback Resistance: ","color": "gray"},{"text": "10","color": "aqua"},{"text": "\n\nLoot:","color": "gold"},{"text": "\n➤ 24-42 Awakened Stardust Blocks","color": "white"},{"text": "\n➤ 2-8 Stardust Cores","color": "white"},{"text": "\n➤ 16-24 Random Seeds","color": "white"}]
 		],
 		"components": {
 			"item_model": "stardust:stardust_guardian",

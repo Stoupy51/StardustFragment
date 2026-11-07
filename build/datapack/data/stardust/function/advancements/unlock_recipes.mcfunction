@@ -10,6 +10,21 @@
 advancement revoke @s only stardust:unlock_recipes
 
 ## For each ingredient in inventory, unlock the recipes
+# minecraft:diamond
+scoreboard players set #success stardust.data 0
+execute store success score #success stardust.data if items entity @s container.* minecraft:diamond
+execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed
+execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_2
+execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_3
+execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_4
+execute if score #success stardust.data matches 1 run recipe give @s stardust:quarry_configurator
+execute if score #success stardust.data matches 1 run recipe give @s stardust:stardust_fragment
+
+# minecraft:lapis_lazuli
+scoreboard players set #success stardust.data 0
+execute store success score #success stardust.data if items entity @s container.* minecraft:lapis_lazuli
+execute if score #success stardust.data matches 1 run recipe give @s stardust:stardust_fragment
+
 # minecraft:ender_pearl
 scoreboard players set #success stardust.data 0
 execute store success score #success stardust.data if items entity @s container.* minecraft:ender_pearl
@@ -40,15 +55,6 @@ execute if score #success stardust.data matches 1 run recipe give @s stardust:mi
 scoreboard players set #success stardust.data 0
 execute store success score #success stardust.data if items entity @s container.* minecraft:tinted_glass
 execute if score #success stardust.data matches 1 run recipe give @s stardust:mirror_2
-
-# minecraft:diamond
-scoreboard players set #success stardust.data 0
-execute store success score #success stardust.data if items entity @s container.* minecraft:diamond
-execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed
-execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_2
-execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_3
-execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_4
-execute if score #success stardust.data matches 1 run recipe give @s stardust:quarry_configurator
 
 # minecraft:quartz
 scoreboard players set #success stardust.data 0
@@ -111,6 +117,7 @@ execute store success score #success stardust.data if items entity @s container.
 execute if score #success stardust.data matches 1 run recipe give @s stardust:diamond_seed_4
 
 ## Add result items
+execute if items entity @s container.* *[custom_data~{"stardust": {"stardust_fragment":true} }] run recipe give @s stardust:stardust_fragment
 execute if items entity @s container.* *[custom_data~{"stardust": {"dragon_pearl":true} }] run recipe give @s stardust:dragon_pearl
 execute if items entity @s container.* *[custom_data~{"stardust": {"compressed_cobblestone":true} }] run recipe give @s stardust:compressed_cobblestone
 execute if items entity @s container.* *[custom_data~{"stardust": {"mirror":true} }] run recipe give @s stardust:mirror

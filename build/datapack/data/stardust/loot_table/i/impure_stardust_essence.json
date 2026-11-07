@@ -1,0 +1,41 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:recovery_compass",
+					"modifier": [
+						{
+							"type": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "stardust:impure_stardust_essence",
+								"minecraft:item_name": {
+									"translate": "stardust.impure_stardust_essence","fallback": "Impure Stardust Essence"
+								},
+								"minecraft:lore": [
+									[
+										"",
+										{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},
+										[{"text":"뀁","italic": false,"color": "white","font": "stardust:tooltip"}, {"translate": "stardust_fragment","fallback": "Stardust Fragment"}]
+									]
+								],
+								"minecraft:custom_data": {
+									"stardust": {
+										"impure_stardust_essence": true
+									},
+									"smithed": {
+										"id": "stardust:impure_stardust_essence",
+										"origin": "stardust",
+										"ignore": {"functionality": true,"crafting": true}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

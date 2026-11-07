@@ -29,6 +29,7 @@ scoreboard players add #total_vanilla_crying_obsidian stardust.data 0
 scoreboard players add #total_vanilla_crimson_hyphae stardust.data 0
 scoreboard players add #total_vanilla_cobbled_deepslate stardust.data 0
 scoreboard players add #total_vanilla_barrel stardust.data 0
+scoreboard players add #total_quarry_creative stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv8 stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv7 stardust.data 0
 scoreboard players add #total_cobblestone_miner_lv6 stardust.data 0
@@ -57,7 +58,6 @@ scoreboard players add #total_stardust_dungeon_portal stardust.data 0
 scoreboard players add #total_stardust_portal stardust.data 0
 scoreboard players add #total_celestial_portal stardust.data 0
 scoreboard players add #total_cavern_portal stardust.data 0
-scoreboard players add #total_quarry_creative stardust.data 0
 scoreboard players add #total_quarry_lv5 stardust.data 0
 scoreboard players add #total_quarry_lv4 stardust.data 0
 scoreboard players add #total_quarry_lv3 stardust.data 0
@@ -137,7 +137,6 @@ tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_quarry_l
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_quarry_lv3","fallback":"Total 'Quarry Lv3'"}, ": "],{"score":{"name":"#total_quarry_lv3","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_quarry_lv4","fallback":"Total 'Quarry Lv4'"}, ": "],{"score":{"name":"#total_quarry_lv4","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_quarry_lv5","fallback":"Total 'Quarry Lv5'"}, ": "],{"score":{"name":"#total_quarry_lv5","objective":"stardust.data"},"color":"yellow"}]
-tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_quarry_creative","fallback":"Total 'Quarry Creative'"}, ": "],{"score":{"name":"#total_quarry_creative","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_cavern_portal","fallback":"Total 'Cavern Portal'"}, ": "],{"score":{"name":"#total_cavern_portal","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_celestial_portal","fallback":"Total 'Celestial Portal'"}, ": "],{"score":{"name":"#total_celestial_portal","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_stardust_portal","fallback":"Total 'Stardust Portal'"}, ": "],{"score":{"name":"#total_stardust_portal","objective":"stardust.data"},"color":"yellow"}]
@@ -166,6 +165,7 @@ tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_cobblest
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_cobblestone_miner_lv6","fallback":"Total 'Cobblestone Miner Lv6'"}, ": "],{"score":{"name":"#total_cobblestone_miner_lv6","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_cobblestone_miner_lv7","fallback":"Total 'Cobblestone Miner Lv7'"}, ": "],{"score":{"name":"#total_cobblestone_miner_lv7","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_cobblestone_miner_lv8","fallback":"Total 'Cobblestone Miner Lv8'"}, ": "],{"score":{"name":"#total_cobblestone_miner_lv8","objective":"stardust.data"},"color":"yellow"}]
+tellraw @s [[{"text":"- ","color":"gold"}, {"translate":"stardust.total_quarry_creative","fallback":"Total 'Quarry Creative'"}, ": "],{"score":{"name":"#total_quarry_creative","objective":"stardust.data"},"color":"yellow"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_barrel","fallback":"Vanilla 'minecraft:barrel'"}, ": "],{"score":{"name":"#total_vanilla_barrel","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_cobbled_deepslate","fallback":"Vanilla 'minecraft:cobbled_deepslate'"}, ": "],{"score":{"name":"#total_vanilla_cobbled_deepslate","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_crimson_hyphae","fallback":"Vanilla 'minecraft:crimson_hyphae'"}, ": "],{"score":{"name":"#total_vanilla_crimson_hyphae","objective":"stardust.data"},"color":"white"}]

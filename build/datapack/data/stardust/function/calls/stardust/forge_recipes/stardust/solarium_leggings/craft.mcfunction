@@ -18,7 +18,7 @@ kill @n[type=item,nbt={Item:{"id": "minecraft:blaze_powder", "count": 32}},dista
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}, "count": 6}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}, "count": 8}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"solarium_ingot": true}}}, "count": 12}},distance=..1]
-kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}, "count": 1}},distance=..1]
+kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}, "count": 1}},distance=..1]
 
 # Spawn result item with Motion [0.0,1.0,0.0]
 tag @e[type=item] add stardust.temp

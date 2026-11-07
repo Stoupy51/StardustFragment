@@ -15,7 +15,7 @@ kill @n[type=item,nbt={Item:{"id": "minecraft:redstone_block", "count": 64}},dis
 kill @n[type=item,nbt={Item:{"id": "minecraft:red_glazed_terracotta", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"ender_dragon_pearl": true}}}, "count": 8}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"stardust_sniper": true}}}, "count": 1}},distance=..1]
-kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"sextuple_compressed_cobblestone": true}}}, "count": 8}},distance=..1]
+kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"quadruple_compressed_cobblestone": true}}}, "count": 8}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:red_nether_bricks", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}, "count": 8}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:red_mushroom_block", "count": 64}},distance=..1]

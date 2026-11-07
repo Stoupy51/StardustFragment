@@ -41,7 +41,6 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:quarry_l
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:quarry_lv3"} run function stardust:custom_blocks/quarry_lv3/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:quarry_lv4"} run function stardust:custom_blocks/quarry_lv4/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:quarry_lv5"} run function stardust:custom_blocks/quarry_lv5/place_main
-execute if data storage smithed.custom_block:main blockApi{id:"stardust:quarry_creative"} run function stardust:custom_blocks/quarry_creative/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cavern_portal"} run function stardust:custom_blocks/cavern_portal/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:celestial_portal"} run function stardust:custom_blocks/celestial_portal/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:stardust_portal"} run function stardust:custom_blocks/stardust_portal/place_main
@@ -62,5 +61,6 @@ execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblest
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv6"} run function stardust:custom_blocks/cobblestone_miner_lv6/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv7"} run function stardust:custom_blocks/cobblestone_miner_lv7/place_main
 execute if data storage smithed.custom_block:main blockApi{id:"stardust:cobblestone_miner_lv8"} run function stardust:custom_blocks/cobblestone_miner_lv8/place_main
+execute if data storage smithed.custom_block:main blockApi{id:"stardust:quarry_creative"} run function stardust:custom_blocks/quarry_creative/place_main
 tag @s remove stardust.placer
 

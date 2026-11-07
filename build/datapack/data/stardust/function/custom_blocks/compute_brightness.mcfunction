@@ -43,7 +43,6 @@
 #			stardust:custom_blocks/quarry_lv3/place_secondary
 #			stardust:custom_blocks/quarry_lv4/place_secondary
 #			stardust:custom_blocks/quarry_lv5/place_secondary
-#			stardust:custom_blocks/quarry_creative/place_secondary
 #			stardust:custom_blocks/cavern_portal/place_secondary
 #			stardust:custom_blocks/celestial_portal/place_secondary
 #			stardust:custom_blocks/stardust_portal/place_secondary
@@ -72,6 +71,7 @@
 #			stardust:custom_blocks/cobblestone_miner_lv6/place_secondary
 #			stardust:custom_blocks/cobblestone_miner_lv7/place_secondary
 #			stardust:custom_blocks/cobblestone_miner_lv8/place_secondary
+#			stardust:custom_blocks/quarry_creative/place_secondary
 #
 
 # Reset light score

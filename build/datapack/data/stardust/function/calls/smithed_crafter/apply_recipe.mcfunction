@@ -1,7 +1,8 @@
 
 #> stardust:calls/smithed_crafter/apply_recipe
 #
-# @within	stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot"}
+# @within	stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_fragment"}
+#			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot"}
 #			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_ingot_x9"}
 #			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_essence"}
 #			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_core"}
@@ -84,6 +85,7 @@
 #			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/starlight_infuser"}
 #			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/ultimate_dragon_essence"}
 #			stardust:calls/smithed_crafter/shapeless_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/manual"}
+#			stardust:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/impure_stardust_essence"}
 #			stardust:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/stardust_frame"}
 #			stardust:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/awakened_stardust_frame"}
 #			stardust:calls/smithed_crafter/shaped_recipes {"command":"loot replace block ~ ~ ~ container.16 loot stardust:i/ultimate_frame"}

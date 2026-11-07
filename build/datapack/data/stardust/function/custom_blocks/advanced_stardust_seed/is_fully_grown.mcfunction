@@ -7,6 +7,6 @@
 #
 
 # If fully grown, drop the loot table and kill the current entity (item)
-execute if score #growth_time stardust.data matches 960.. as @p[gamemode=!spectator] run loot spawn ~ ~ ~ fish stardust:seeds/advanced_stardust_seed ~ ~ ~ mainhand
-execute if score #growth_time stardust.data matches 960.. run kill @s
+execute if score #growth_time stardust.data matches 1200.. as @p[gamemode=!spectator] run loot spawn ~ ~ ~ fish stardust:seeds/advanced_stardust_seed ~ ~ ~ mainhand
+execute if score #growth_time stardust.data matches 1200.. run kill @s
 

@@ -19,7 +19,7 @@ kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust"
 kill @n[type=item,nbt={Item:{"id": "minecraft:amethyst_block", "count": 64}},distance=..1]
 kill @n[type=item,nbt={Item:{"id": "minecraft:heavy_core", "count": 1}},distance=..1]
 kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"awakened_stardust_block": true}}}, "count": 16}},distance=..1]
-kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"septuple_compressed_cobblestone": true}}}, "count": 1}},distance=..1]
+kill @n[type=item,nbt={Item:{"components": {"minecraft:custom_data": {"stardust": {"quintuple_compressed_cobblestone": true}}}, "count": 1}},distance=..1]
 
 # Spawn result item with Motion [0.0,1.0,0.0]
 tag @e[type=item] add stardust.temp

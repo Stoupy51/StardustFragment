@@ -491,7 +491,6 @@ def main_additions() -> None:
 		)
 	Block(
 		id="quarry_creative",
-		manual_category=ENERGY,
 		vanilla_block=VanillaBlock(id="minecraft:barrel"),
 		components={
 			"custom_data": {"energy": {"usage":0, "max_storage":1}, ns: {"quarry": {"block_per_second":1000}}},
@@ -500,14 +499,6 @@ def main_additions() -> None:
 			],
 			"enchantment_glint_override": True,
 		},
-		wiki_buttons=[
-			WikiButton([
-				{"text":"Creative quarry with unlimited power.","color":"yellow"},
-				{"text":"\nRequires no power to operate","color":"gray"},
-				{"text":"\nEquivalent to a Level 1000 quarry","color":"gray"},
-				{"text":"\nFor creative/testing purposes only","color":"gray"},
-			]),
-		],
 	)
 
 	# Portals

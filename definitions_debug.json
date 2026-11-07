@@ -546,10 +546,10 @@
 		"base_item": "minecraft:recovery_compass",
 		"manual_category": "materials",
 		"recipes": [
-			{"type": "crafting_shaped","result_count": 1,"category": "misc","group": "impure_stardust_essence","shape": ["RRR","RER","RRR"],"ingredients": {"R": {"item": "minecraft:redstone_block"},"E": {"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}}}}
+			{"type": "crafting_shapeless","result_count": 1,"category": "misc","group": "impure_stardust_essence","ingredients": [{"components": {"minecraft:custom_data": {"stardust": {"stardust_essence": true}}}},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"},{"item": "minecraft:redstone_block"}]}
 		],
 		"wiki_buttons": [
-			[{"text": "Stardust Essence tainted by redstone.","color": "yellow"},{"text": "\nCrafted from a Stardust Essence surrounded by 8 Redstone Blocks","color": "gray"},{"text": "\nPulverize it to get 6 Awakened Stardust","color": "gray"}]
+			[{"text": "Stardust Essence tainted by redstone.","color": "yellow"},{"text": "\nCrafted from a Stardust Essence and 8 Redstone Blocks","color": "gray"},{"text": "\nPulverize it to get 6 Awakened Stardust","color": "gray"}]
 		],
 		"components": {
 			"item_model": "stardust:impure_stardust_essence",

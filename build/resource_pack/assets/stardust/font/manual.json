@@ -259,7 +259,7 @@
 		{"type": "bitmap","file": "stardust:font/high_res/crafter.png","ascent": 7,"height": 16,"chars": ["脡"]},
 		{"type": "bitmap","file": "stardust:font/wiki_icons/stardust_stardust_core_crafting_shapeless.png","ascent": 8,"height": 16,"chars": ["脢"]},
 		{"type": "bitmap","file": "stardust:font/high_res/redstone_block.png","ascent": 7,"height": 16,"chars": ["脣"]},
-		{"type": "bitmap","file": "stardust:font/wiki_icons/stardust_impure_stardust_essence_crafting_shaped.png","ascent": 8,"height": 16,"chars": ["脤"]},
+		{"type": "bitmap","file": "stardust:font/wiki_icons/stardust_impure_stardust_essence_crafting_shapeless.png","ascent": 8,"height": 16,"chars": ["脤"]},
 		{"type": "bitmap","file": "stardust:font/high_res/elite_battery.png","ascent": 7,"height": 16,"chars": ["脥"]},
 		{"type": "bitmap","file": "stardust:font/wiki_icons/stardust_stardust_battery_crafting_shaped.png","ascent": 8,"height": 16,"chars": ["脦"]},
 		{"type": "bitmap","file": "stardust:font/high_res/solar_panel.png","ascent": 7,"height": 16,"chars": ["脧"]},

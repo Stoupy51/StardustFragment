@@ -430,7 +430,6 @@ scoreboard players set @s {ns}.attack_cooldown 24
 """)
 	write_function(f"{ns}:mobs/ultimate_dragon/fireball_burst/tick", f"""
 # Every 3 ticks, launch a fireball
-scoreboard players set #3 {ns}.data 3
 scoreboard players operation #temp {ns}.data = #global_tick {ns}.data
 scoreboard players operation #temp {ns}.data %= #3 {ns}.data
 execute if score #temp {ns}.data matches 0 run function {ns}:mobs/ultimate_dragon/fireball_burst/launch
@@ -470,7 +469,6 @@ scoreboard players set @s {ns}.attack_cooldown 100
 """)
 	write_function(f"{ns}:mobs/ultimate_dragon/homing_arrows/tick", f"""
 # Every 16 ticks, launch all 5 arrows at once
-scoreboard players set #16 {ns}.data 16
 scoreboard players operation #temp {ns}.data = #global_tick {ns}.data
 scoreboard players operation #temp {ns}.data %= #16 {ns}.data
 execute if score #temp {ns}.data matches 0 run function {ns}:mobs/ultimate_dragon/homing_arrows/launch

@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 import json
 
@@ -106,7 +105,6 @@ $function #bs.move:set_motion {scale:$(scale)}
 	# Use durability
 	write_function(f"{ns}:utils/use_durability/main", f"""
 # Compute durability usage (6 digits precision)
-scoreboard players set #1000000 {ns}.data 1000000
 $scoreboard players set #temp_durability {ns}.data -$(amount)
 scoreboard players operation #temp_durability {ns}.data *= #1000000 {ns}.data
 $scoreboard players set #temp_divider {ns}.data $(max_damage)
@@ -251,7 +249,10 @@ execute unless score @s {ns}.travel_z = #new_z {ns}.data run return run function
 advancement grant @s only {ns}:visible/stuff/home_travel_staff
 function {ns}:dimensions/teleport_home
 """)
-	write_function(f"{ns}:utils/home_travel_staff/fail", """tellraw @s {"text":"[Stardust Fragment] Teleportation cancelled because you moved!","color":"red"}\nplaysound entity.villager.no ambient @s""")
+	write_function(f"{ns}:utils/home_travel_staff/fail", """
+tellraw @s {"text":"[Stardust Fragment] Teleportation cancelled because you moved!","color":"red"}
+playsound entity.villager.no ambient @s
+""")
 
 	# Wormhole Potion
 	title: str = json.dumps(item_id_to_text_component("wormhole_potion"))

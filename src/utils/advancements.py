@@ -67,8 +67,7 @@ def default_description(item: str) -> TextComponent:
 	obtain: str = "a " if (name[0].lower() not in "aeiou") else "an "
 	if isinstance(text, str):
 		return {"text": f"Obtain {obtain}{name}", "color": "green"}
-	else:
-		return [{"text": f"Obtain {obtain}", "color": "green"}, text]
+	return [{"text": f"Obtain {obtain}", "color": "green"}, text]
 
 def sort_dict(d: JsonDict, order: list[str]) -> JsonDict:
 	return dict(sorted(d.items(), key=lambda x: order.index(x[0]) if x[0] in order else len(order)))

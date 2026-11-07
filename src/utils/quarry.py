@@ -1,12 +1,20 @@
 
-# ruff: noqa: E501
 # Imports
 import json
 
 from beet import Predicate
 from beet.core.utils import TextComponent
 from stewbeet import Block
-from stewbeet.core import COMMON_SIGNAL, COMMON_SIGNAL_HIDDEN, CUSTOM_ITEM_VANILLA, Conventions, Mem, set_json_encoder, write_function, write_load_file
+from stewbeet.core import (
+	COMMON_SIGNAL,
+	COMMON_SIGNAL_HIDDEN,
+	CUSTOM_ITEM_VANILLA,
+	Conventions,
+	Mem,
+	set_json_encoder,
+	write_function,
+	write_load_file,
+)
 
 
 # Setup quarry work and visuals
@@ -64,7 +72,7 @@ team modify {ns}.blue color blue
 """, prepend=True)
 
 	# For each quarry lvl, call the general quarry second loop, and add data when placing
-	for item in Mem.definitions.keys():
+	for item in Mem.definitions:
 		obj = Block.from_id(item)
 		if item.startswith("quarry_lv") or item == "quarry_creative":
 			bps: int = obj.components["custom_data"][ns]["quarry"]["block_per_second"]
@@ -276,7 +284,6 @@ scoreboard players operation #rZ {ns}.data = @s {ns}.quarry_z1
 scoreboard players operation #rZ {ns}.data -= @s {ns}.quarry_z2
 
 # Each side counts both of its end blocks: |a - b| + 1
-scoreboard players set #-1 {ns}.data -1
 execute if score #rX {ns}.data matches ..-1 run scoreboard players operation #rX {ns}.data *= #-1 {ns}.data
 execute if score #rY {ns}.data matches ..-1 run scoreboard players operation #rY {ns}.data *= #-1 {ns}.data
 execute if score #rZ {ns}.data matches ..-1 run scoreboard players operation #rZ {ns}.data *= #-1 {ns}.data
@@ -553,6 +560,4 @@ execute if score @s {ns}.quarry_y1 = @s {ns}.quarry_y2 if score @s {ns}.quarry_c
 scoreboard players set #blocks_to_break {ns}.data 0
 scoreboard players set @s {ns}.quarry_status 0
 """)
-
-	return
 

@@ -6,6 +6,7 @@ import os
 import subprocess
 from multiprocessing import Pool
 
+
 def convert_file(args):
 	src, dst = args
 	previous_size = os.path.getsize(src)

@@ -118,3 +118,15 @@ tellraw @a[tag=convention.debug] {"translate":"stardust.loaded_stardust_fragment
 scoreboard players set #stardust.loaded load.status 1
 function stardust:v4.2.0/load/set_items_storage
 
+
+# Set scoreboard constants for stardust.data
+scoreboard players set #-1 stardust.data -1
+scoreboard players set #3 stardust.data 3
+scoreboard players set #10 stardust.data 10
+scoreboard players set #16 stardust.data 16
+scoreboard players set #1000 stardust.data 1000
+scoreboard players set #10000 stardust.data 10000
+scoreboard players set #1000000 stardust.data 1000000
+scoreboard players set #10000000 stardust.data 10000000
+scoreboard players set #1000000000 stardust.data 1000000000
+

@@ -13,7 +13,6 @@
 #
 
 # Compute durability usage (6 digits precision)
-scoreboard players set #1000000 stardust.data 1000000
 $scoreboard players set #temp_durability stardust.data -$(amount)
 scoreboard players operation #temp_durability stardust.data *= #1000000 stardust.data
 $scoreboard players set #temp_divider stardust.data $(max_damage)

@@ -15,7 +15,6 @@ scoreboard players operation #rZ stardust.data = @s stardust.quarry_z1
 scoreboard players operation #rZ stardust.data -= @s stardust.quarry_z2
 
 # Each side counts both of its end blocks: |a - b| + 1
-scoreboard players set #-1 stardust.data -1
 execute if score #rX stardust.data matches ..-1 run scoreboard players operation #rX stardust.data *= #-1 stardust.data
 execute if score #rY stardust.data matches ..-1 run scoreboard players operation #rY stardust.data *= #-1 stardust.data
 execute if score #rZ stardust.data matches ..-1 run scoreboard players operation #rZ stardust.data *= #-1 stardust.data

@@ -86,9 +86,9 @@ def main_additions() -> None:
 		],
 		"stardust_dungeon_portal": [
 			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[
-				Ingr("awakened_stardust_block"),Ingr("awakened_stardust_ore"),Ingr("awakened_stardust_block"),
-				Ingr("awakened_stardust_ore"),Ingr("stardust_portal"),Ingr("awakened_stardust_ore"),
-				Ingr("awakened_stardust_block"),Ingr("awakened_stardust_ore"),Ingr("awakened_stardust_block"),
+				Ingr("awakened_stardust_block"),Ingr("impure_stardust_essence"),Ingr("awakened_stardust_block"),
+				Ingr("impure_stardust_essence"),Ingr("stardust_portal"),Ingr("impure_stardust_essence"),
+				Ingr("awakened_stardust_block"),Ingr("impure_stardust_essence"),Ingr("awakened_stardust_block"),
 			]),
 		],
 	}

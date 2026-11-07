@@ -138,16 +138,32 @@ def main_additions() -> None:
 		]
 	)
 
+	Item(
+		id="impure_stardust_essence",
+		manual_category=MATERIALS,
+		wiki_buttons = [
+			WikiButton([
+				{"text":"Stardust Essence tainted by redstone.","color":"yellow"},
+				{"text":"\nCrafted from a Stardust Essence surrounded by 8 Redstone Blocks","color":"gray"},
+				{"text":"\nPulverize it to get 6 Awakened Stardust","color":"gray"},
+			]),
+		],
+		recipes = [
+			CraftingShapedRecipe(result_count=1, category="misc", shape=["RRR","RER","RRR"], ingredients={"R":Ingr("minecraft:redstone_block"),"E":Ingr("stardust_essence")}),
+		]
+	)
+
 	obj = Item.from_id("awakened_stardust")
 	obj.manual_category = MATERIALS
 	obj.wiki_buttons = [
 		WikiButton([
 			{"text":"Enhanced stardust with increased energy potential.","color":"yellow"},
-			{"text":"\nObtained through mining or mobs in the Stardust Dungeon","color":"gray"},
+			{"text":"\nObtained by pulverizing Impure Stardust Essence, or from mobs in the Stardust Dungeon","color":"gray"},
 			{"text":"\nRequired for advanced equipment and machines","color":"gray"},
 		]),
 	]
 	obj.recipes = [
+		PulverizingRecipe(result_count=6, ingredient=Ingr("impure_stardust_essence")),
 		PulverizingRecipe(result_count=8, ingredient=Ingr("awakened_stardust_block")),
 	]
 

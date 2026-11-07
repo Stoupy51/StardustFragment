@@ -1,7 +1,7 @@
 
-#> stardust:v4.2.0/load/set_items_storage
+#> stardust:v4.3.0/load/set_items_storage
 #
-# @within	stardust:v4.2.0/load/confirm_load
+# @within	stardust:v4.3.0/load/confirm_load
 #
 
 # Items storage

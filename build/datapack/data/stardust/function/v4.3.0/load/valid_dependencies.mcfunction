@@ -1,12 +1,12 @@
 
-#> stardust:v4.2.0/load/valid_dependencies
+#> stardust:v4.3.0/load/valid_dependencies
 #
-# @within	stardust:v4.2.0/load/secondary
-#			stardust:v4.2.0/load/valid_dependencies 1t replace [ scheduled ]
+# @within	stardust:v4.3.0/load/secondary
+#			stardust:v4.3.0/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run return run schedule function stardust:v4.2.0/load/valid_dependencies 1t replace
+execute unless entity @p run return run schedule function stardust:v4.3.0/load/valid_dependencies 1t replace
 execute store result score #game_version stardust.data run data get entity @p DataVersion
 
 # Check if the game version is supported
@@ -49,5 +49,5 @@ execute if score #dependency_error stardust.data matches 1 if score #simplenergy
 execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 21.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21","fallback":"[SimplEnergy (v2.0.21+)]"}]
 
 # Load Stardust Fragment
-execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.2.0/load/confirm_load
+execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.3.0/load/confirm_load
 

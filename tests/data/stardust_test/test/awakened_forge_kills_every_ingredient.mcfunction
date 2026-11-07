@@ -13,7 +13,7 @@ execute positioned ~4.5 ~2 ~4.5 run summon minecraft:item ~ ~ ~ {Item:{id:"minec
 execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"ender_dragon_pearl",count:6}
 execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"awakened_stardust_block",count:8}
 execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"legendarium_ingot",count:12}
-execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"sextuple_compressed_cobblestone",count:1}
+execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"quadruple_compressed_cobblestone",count:1}
 # Summoned items stay frozen until their chunk ticks entities, and the forge ignores them until then
 execute positioned ~4.5 ~2 ~4.5 run await entity @e[type=item,distance=..0.5,nbt={OnGround:1b}]
 

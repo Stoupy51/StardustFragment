@@ -177,15 +177,15 @@ def main_additions() -> None:
 		id="stardust_seed",
 		manual_category=MISC,
 		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
-		growing_seed=GrowingSeed(texture_basename="stardust", seconds=480, planted_on="diamond_block", loots=[
-			GrowingSeedLoot(id="stardust_fragment", rolls={"type":"minecraft:uniform","min":3,"max":9}, fortune={"extra":0,"probability":0.5})
+		growing_seed=GrowingSeed(texture_basename="stardust", seconds=600, planted_on="diamond_block", loots=[
+			GrowingSeedLoot(id="stardust_fragment", rolls={"type":"minecraft:uniform","min":1,"max":4}, fortune={"extra":0,"probability":0.5})
 		]),
 		wiki_buttons=[
 			{"text":"Magical seed that grows stardust fragments.","color":"yellow"},
 			{"text":"\nCan only be planted on diamond blocks","color":"gray"},
-			{"text":"\nGrows fully after 8 minutes","color":"gray"},
+			{"text":"\nGrows fully after 10 minutes","color":"gray"},
 			{"text":"\nThe seed is fully grown when it starts glowing","color":"gray"},
-			{"text":"\nYields 3-9 stardust fragments when harvested","color":"gray"},
+			{"text":"\nYields 1-4 stardust fragments when harvested","color":"gray"},
 			{"text":"\nFortune effect applies (+50% per level)","color":"gray"},
 		],
 		recipes=[
@@ -204,15 +204,15 @@ def main_additions() -> None:
 		id="advanced_stardust_seed",
 		manual_category=MISC,
 		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
-		growing_seed=GrowingSeed(texture_basename="advanced_stardust", seconds=960, planted_on="diamond_block", loots=[
-			GrowingSeedLoot(id="stardust_ingot", rolls={"type":"minecraft:uniform","min":1,"max":4}, fortune={"extra":0,"probability":0.3})
+		growing_seed=GrowingSeed(texture_basename="advanced_stardust", seconds=1200, planted_on="diamond_block", loots=[
+			GrowingSeedLoot(id="stardust_ingot", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.3})
 		]),
 		wiki_buttons=[
 			{"text":"Magical seed that grows stardust ingots.","color":"yellow"},
 			{"text":"\nCan only be planted on diamond blocks","color":"gray"},
-			{"text":"\nGrows fully after 16 minutes","color":"gray"},
+			{"text":"\nGrows fully after 20 minutes","color":"gray"},
 			{"text":"\nThe seed is fully grown when it starts glowing","color":"gray"},
-			{"text":"\nYields 1-4 stardust ingots when harvested","color":"gray"},
+			{"text":"\nYields 1-2 stardust ingots when harvested","color":"gray"},
 			{"text":"\nFortune effect applies (+30% per level)","color":"gray"},
 		],
 		recipes=[
@@ -228,15 +228,15 @@ def main_additions() -> None:
 		id="elite_stardust_seed",
 		manual_category=MISC,
 		vanilla_block=VanillaBlock(id="minecraft:moss_carpet"),
-		growing_seed=GrowingSeed(texture_basename="elite_stardust", seconds=1920, planted_on="diamond_block", loots=[
-			GrowingSeedLoot(id="stardust_essence", rolls={"type":"minecraft:uniform","min":1,"max":2}, fortune={"extra":0,"probability":0.2})
+		growing_seed=GrowingSeed(texture_basename="elite_stardust", seconds=2700, planted_on="diamond_block", loots=[
+			GrowingSeedLoot(id="stardust_essence", rolls={"type":"minecraft:uniform","min":0,"max":1}, fortune={"extra":0,"probability":0.2})
 		]),
 		wiki_buttons=[
 			{"text":"Magical seed that grows stardust essences.","color":"yellow"},
 			{"text":"\nCan only be planted on diamond blocks","color":"gray"},
-			{"text":"\nGrows fully after 32 minutes","color":"gray"},
+			{"text":"\nGrows fully after 45 minutes","color":"gray"},
 			{"text":"\nThe seed is fully grown when it starts glowing","color":"gray"},
-			{"text":"\nYields 1-2 stardust essences when harvested","color":"gray"},
+			{"text":"\nYields 0-1 stardust essence when harvested","color":"gray"},
 			{"text":"\nFortune effect applies (+20% per level)","color":"gray"},
 		],
 		recipes=[

@@ -15,7 +15,7 @@ item replace block ~2 ~ ~2 container.2 with minecraft:blackstone
 loot replace block ~2 ~ ~2 container.3 loot stardust:i/stardust_block
 item replace block ~2 ~ ~2 container.4 with minecraft:blackstone
 loot replace block ~2 ~ ~2 container.11 loot stardust:i/stardust_block
-item replace block ~2 ~ ~2 container.12 with minecraft:diamond_sword
+item replace block ~2 ~ ~2 container.12 with minecraft:netherite_sword
 loot replace block ~2 ~ ~2 container.13 loot stardust:i/stardust_block
 item replace block ~2 ~ ~2 container.20 with minecraft:blackstone
 loot replace block ~2 ~ ~2 container.21 loot stardust:i/stardust_block

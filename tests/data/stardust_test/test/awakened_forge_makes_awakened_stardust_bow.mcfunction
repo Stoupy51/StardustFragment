@@ -11,7 +11,7 @@ execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"awake
 execute positioned ~4.5 ~2 ~4.5 run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:red_glazed_terracotta",count:64},PickupDelay:32767s}
 execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"ender_dragon_pearl",count:8}
 execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"stardust_bow",count:1}
-execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"sextuple_compressed_cobblestone",count:8}
+execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"quadruple_compressed_cobblestone",count:8}
 execute positioned ~4.5 ~2 ~4.5 run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:red_nether_bricks",count:64},PickupDelay:32767s}
 execute positioned ~4.5 ~2 ~4.5 run function stardust_test:forge/drop {id:"awakened_stardust_block",count:8}
 execute positioned ~4.5 ~2 ~4.5 run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:red_mushroom_block",count:64},PickupDelay:32767s}

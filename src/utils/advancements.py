@@ -186,7 +186,7 @@ def add_visible_advancements() -> None:
 				"parent": f"{ns}:visible/{parent}"
 			}
 			for material, title, desc, parent in [
-				("ancient_stardust", "I think it was like it", "Upgrade a Diamond equipment into Ancient Stardust", "stuff/stardust_block"),
+				("ancient_stardust", "I think it was like it", "Upgrade a Netherite equipment into Ancient Stardust", "stuff/stardust_block"),
 				("original_stardust", "Yup that's it!", "Use the power of a Stardust Core to craft an Original Stardust equipment", "stuff/stardust_core"),
 				("legendarium", "Taking a breath", "Choose the Legendarium path", "stuff/legendarium_block"),
 				("solarium", "Burning your soul", "Choose the Solarium path", "stuff/solarium_block"),

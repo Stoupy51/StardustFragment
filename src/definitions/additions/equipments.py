@@ -169,7 +169,7 @@ def main_additions() -> None:
 				Ingr("minecraft:red_glazed_terracotta", count=64),
 				Ingr("ender_dragon_pearl", count=8),
 				Ingr("stardust_bow", count=1),
-				Ingr("sextuple_compressed_cobblestone", count=8),
+				Ingr("quadruple_compressed_cobblestone", count=8),
 				Ingr("minecraft:red_nether_bricks", count=64),
 				Ingr("awakened_stardust_block", count=8),
 				Ingr("minecraft:red_mushroom_block", count=64),
@@ -199,7 +199,7 @@ def main_additions() -> None:
 				Ingr("minecraft:amethyst_block", count=64),
 				Ingr("minecraft:heavy_core", count=1),
 				Ingr("awakened_stardust_block", count=16),
-				Ingr("septuple_compressed_cobblestone", count=1),
+				Ingr("quintuple_compressed_cobblestone", count=1),
 			]),
 		]
 	)
@@ -252,7 +252,7 @@ def main_additions() -> None:
 				Ingr("minecraft:red_glazed_terracotta", count=64),
 				Ingr("ender_dragon_pearl", count=8),
 				Ingr("stardust_sniper", count=1),
-				Ingr("sextuple_compressed_cobblestone", count=8),
+				Ingr("quadruple_compressed_cobblestone", count=8),
 				Ingr("minecraft:red_nether_bricks", count=64),
 				Ingr("awakened_stardust_block", count=8),
 				Ingr("minecraft:red_mushroom_block", count=64),
@@ -284,7 +284,7 @@ def main_additions() -> None:
 				Ingr("minecraft:amethyst_block", count=64),
 				Ingr("minecraft:heavy_core", count=1),
 				Ingr("awakened_stardust_block", count=16),
-				Ingr("septuple_compressed_cobblestone", count=1),
+				Ingr("quintuple_compressed_cobblestone", count=1),
 			]),
 		]
 	)
@@ -449,9 +449,9 @@ def main_additions() -> None:
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
 			obj.recipes = [
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:black_glazed_terracotta")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:nether_wart_block")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
-				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:blackstone")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:diamond_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:black_glazed_terracotta")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:netherite_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:nether_wart_block")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:netherite_{equipment_type}")]),
+				CraftingShapelessRecipe(result_count=1, category="equipment", ingredients=4*[Ingr("minecraft:blackstone")] + 4*[Ingr("stardust_block")] + [Ingr(f"minecraft:netherite_{equipment_type}")]),
 			]
 			obj.wiki_buttons = [
 				{"text":"Poorly crafted stardust equipment.","color":"yellow"},
@@ -485,7 +485,7 @@ def main_additions() -> None:
 					Ingr("ender_dragon_pearl", count=6),
 					Ingr("awakened_stardust_block", count=8),
 					Ingr("legendarium_ingot", count=12),
-					Ingr("sextuple_compressed_cobblestone", count=1)
+					Ingr("quadruple_compressed_cobblestone", count=1)
 				]),
 			]
 			obj.wiki_buttons = [
@@ -509,7 +509,7 @@ def main_additions() -> None:
 					Ingr("ender_dragon_pearl", count=6),
 					Ingr("awakened_stardust_block", count=8),
 					Ingr("solarium_ingot", count=12),
-					Ingr("sextuple_compressed_cobblestone", count=1)
+					Ingr("quadruple_compressed_cobblestone", count=1)
 				]),
 			]
 			obj.wiki_buttons = [
@@ -533,7 +533,7 @@ def main_additions() -> None:
 					Ingr("ender_dragon_pearl", count=6),
 					Ingr("awakened_stardust_block", count=8),
 					Ingr("darkium_ingot", count=12),
-					Ingr("sextuple_compressed_cobblestone", count=1),
+					Ingr("quadruple_compressed_cobblestone", count=1),
 				]),
 			]
 			obj.wiki_buttons = [

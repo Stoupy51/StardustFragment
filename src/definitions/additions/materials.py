@@ -1,5 +1,5 @@
 
-# ruff: noqa: E501
+
 # Imports
 from stewbeet import (
 	VANILLA_BLOCK_FOR_ORES,
@@ -144,12 +144,12 @@ def main_additions() -> None:
 		wiki_buttons = [
 			WikiButton([
 				{"text":"Stardust Essence tainted by redstone.","color":"yellow"},
-				{"text":"\nCrafted from a Stardust Essence surrounded by 8 Redstone Blocks","color":"gray"},
+				{"text":"\nCrafted from a Stardust Essence and 8 Redstone Blocks","color":"gray"},
 				{"text":"\nPulverize it to get 6 Awakened Stardust","color":"gray"},
 			]),
 		],
 		recipes = [
-			CraftingShapedRecipe(result_count=1, category="misc", shape=["RRR","RER","RRR"], ingredients={"R":Ingr("minecraft:redstone_block"),"E":Ingr("stardust_essence")}),
+			CraftingShapelessRecipe(result_count=1, category="misc", ingredients=[Ingr("stardust_essence")] + 8*[Ingr("minecraft:redstone_block")]),
 		]
 	)
 

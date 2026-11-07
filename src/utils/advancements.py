@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from typing import Any
 
@@ -18,7 +17,11 @@ from stewbeet import (
 )
 
 from ..definitions.additions.energy import QUARRY_STATS, quarry_display
-from ..definitions.additions.equipments import ARTIFACTS, SNIPER_BULLETS, artifact_display
+from ..definitions.additions.equipments import (
+	ARTIFACTS,
+	SNIPER_BULLETS,
+	artifact_display,
+)
 from ..definitions.additions.materials import COBBLESTONE_TIERS
 from ..definitions.additions.miscellaneous import miner_display
 from .common import ROMAN_NUMERALS, STARFRAG_LIST
@@ -307,5 +310,4 @@ def add_visible_advancements() -> None:
 		# Set the advancement
 		write_advancement(f"{ns}:visible/{full_path}", advancement, max_level=7)
 
-	return
 

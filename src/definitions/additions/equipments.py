@@ -1,5 +1,4 @@
 
-# ruff: noqa: E501
 # Imports
 from stewbeet import (
 	SLOTS,
@@ -444,7 +443,7 @@ def main_additions() -> None:
 	)
 
 	# Ancient Stardust Equipments
-	for equipment_type in SLOTS.keys():
+	for equipment_type in SLOTS:
 		key: str = f"ancient_stardust_{equipment_type}"
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
@@ -459,7 +458,7 @@ def main_additions() -> None:
 			]
 
 	# Original stardust equipments
-	for equipment_type in SLOTS.keys():
+	for equipment_type in SLOTS:
 		key: str = f"original_stardust_{equipment_type}"
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
@@ -472,7 +471,7 @@ def main_additions() -> None:
 			]
 
 	# Legendarium equipments
-	for equipment_type in SLOTS.keys():
+	for equipment_type in SLOTS:
 		key: str = f"legendarium_{equipment_type}"
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
@@ -496,7 +495,7 @@ def main_additions() -> None:
 			]
 
 	# Solarium equipments
-	for equipment_type in SLOTS.keys():
+	for equipment_type in SLOTS:
 		key: str = f"solarium_{equipment_type}"
 		if key in Mem.definitions:
 			obj = Item.from_id(key)
@@ -520,7 +519,7 @@ def main_additions() -> None:
 			]
 
 	# Darkium equipments
-	for equipment_type in SLOTS.keys():
+	for equipment_type in SLOTS:
 		key: str = f"darkium_{equipment_type}"
 		if key in Mem.definitions:
 			obj = Item.from_id(key)

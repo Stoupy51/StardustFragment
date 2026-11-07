@@ -2,6 +2,10 @@
 # Imports
 from stewbeet import Manual, Phase, get_manual
 
+# Constants
+MAIN_RECIPE_TYPES: dict[str, str] = {"stardust_fragment": "crafting", "awakened_stardust": "simplenergy_pulverizing"}
+""" Recipe type shown as the main recipe of an item page, instead of the ore the item drops from. """
+
 
 def manual_customization_main() -> None:
 	""" Customize the in-game manual using the public ingame_manual v2 API.
@@ -32,6 +36,11 @@ def manual_customization_main() -> None:
 			if infuser_recipe_button is not None:
 				pillar.extra_buttons.append(infuser_recipe_button)
 			infuser.extra_buttons.append(m.recipes.link_button("stardust_pillar"))
+
+		for item_id, main_recipe_type in MAIN_RECIPE_TYPES.items():
+			page = m.get_page_for_item(item_id)
+			if page is not None:
+				page.main_craft = next(craft for craft in page.crafts if craft["type"].startswith(main_recipe_type))
 
 		# Related pages, linked on both sides
 		pairs: list[tuple[str, str]] = [

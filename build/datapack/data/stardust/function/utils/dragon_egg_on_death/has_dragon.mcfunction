@@ -3,7 +3,7 @@
 #
 # @executed	in minecraft:the_end
 #
-# @within	stardust:v4.3.0/second_5 [ in minecraft:the_end ]
+# @within	stardust:v4.4.0/second_5 [ in minecraft:the_end ]
 #
 
 # We know there is a dragon, set the flag

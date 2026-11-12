@@ -1,12 +1,12 @@
 
-#> stardust:v4.3.0/load/valid_dependencies
+#> stardust:v4.4.0/load/valid_dependencies
 #
-# @within	stardust:v4.3.0/load/secondary
-#			stardust:v4.3.0/load/valid_dependencies 1t replace [ scheduled ]
+# @within	stardust:v4.4.0/load/secondary
+#			stardust:v4.4.0/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run return run schedule function stardust:v4.3.0/load/valid_dependencies 1t replace
+execute unless entity @p run return run schedule function stardust:v4.4.0/load/valid_dependencies 1t replace
 execute store result score #game_version stardust.data run data get entity @p DataVersion
 
 # Check if the game version is supported
@@ -16,10 +16,10 @@ execute unless score #game_version stardust.data matches 5023.. run scoreboard p
 # Decode errors
 execute if score #mcload_error stardust.data matches 1 run tellraw @a {"translate":"stardust_fragment_error_this_version_is_made_for_minecraft_26_3","fallback":"Stardust Fragment Error: This version is made for Minecraft 26.3+.","color":"red"}
 execute if score #dependency_error stardust.data matches 1 run tellraw @a {"translate":"stardust_fragment_error_libraries_are_missingplease_download_the","fallback":"Stardust Fragment Error: Libraries are missing\nplease download the right Stardust Fragment datapack\nor download each of these libraries one by one:","color":"red"}
-execute if score #dependency_error stardust.data matches 1 unless score #smithed.custom_block.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_12_0","fallback":"[Smithed Custom Block (v0.12.0+)]"}]
-execute if score #dependency_error stardust.data matches 1 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 12.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_12_0","fallback":"[Smithed Custom Block (v0.12.0+)]"}]
-execute if score #dependency_error stardust.data matches 1 unless score #smithed.crafter.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_12_0","fallback":"[Smithed Crafter (v0.12.0+)]"}]
-execute if score #dependency_error stardust.data matches 1 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 12.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_12_0","fallback":"[Smithed Crafter (v0.12.0+)]"}]
+execute if score #dependency_error stardust.data matches 1 unless score #smithed.custom_block.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_13_0","fallback":"[Smithed Custom Block (v0.13.0+)]"}]
+execute if score #dependency_error stardust.data matches 1 if score #smithed.custom_block.major load.status matches 0 unless score #smithed.custom_block.minor load.status matches 13.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/custom-block/"}}, {"translate":"stardust.smithed_custom_block_v0_13_0","fallback":"[Smithed Custom Block (v0.13.0+)]"}]
+execute if score #dependency_error stardust.data matches 1 unless score #smithed.crafter.major load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_13_0","fallback":"[Smithed Crafter (v0.13.0+)]"}]
+execute if score #dependency_error stardust.data matches 1 if score #smithed.crafter.major load.status matches 0 unless score #smithed.crafter.minor load.status matches 13.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://wiki.smithed.dev/libraries/crafter/"}}, {"translate":"stardust.smithed_crafter_v0_13_0","fallback":"[Smithed Crafter (v0.13.0+)]"}]
 execute if score #dependency_error stardust.data matches 1 unless score #itemio.major load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_8_1","fallback":"[ItemIO (v1.8.1+)]"}]
 execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 unless score #itemio.minor load.status matches 8.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_8_1","fallback":"[ItemIO (v1.8.1+)]"}]
 execute if score #dependency_error stardust.data matches 1 if score #itemio.major load.status matches 1 if score #itemio.minor load.status matches 8 unless score #itemio.patch load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/edayot/ItemIO"}}, {"translate":"stardust.itemio_v1_8_1","fallback":"[ItemIO (v1.8.1+)]"}]
@@ -49,5 +49,5 @@ execute if score #dependency_error stardust.data matches 1 if score #simplenergy
 execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 21.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21","fallback":"[SimplEnergy (v2.0.21+)]"}]
 
 # Load Stardust Fragment
-execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.3.0/load/confirm_load
+execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.4.0/load/confirm_load
 

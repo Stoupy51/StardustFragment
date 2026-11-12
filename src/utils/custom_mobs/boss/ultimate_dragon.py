@@ -30,8 +30,7 @@ def main() -> None:
 	ns: str = Mem.ctx.project_id
 
 	# Disc duration
-	PRISMATIC_DEVASTATION: int = Item.from_id("stoupy_prismatic_devastation").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
-	THE_ULTIMATE_ASCENSION: int = Item.from_id("stoupy_the_ultimate_ascension").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
+	EVERY_END_DURATION: int = Item.from_id("dimrain47_every_end").components["custom_data"]["smithed"]["dict"]["jukebox_song"]["length_in_seconds"]
 
 	# Load function
 	write_load_file(f"""
@@ -594,13 +593,13 @@ data modify entity @s Glowing set value true
 	# Try boss music function
 	write_function(f"{ns}:mobs/ultimate_dragon/try_boss_music", f"""
 ## Choose music based on health
-# Prismatic Devastation more than half health
-execute if score #health {ns}.data matches {DRAGON_MAX_HEALTH // 2 + 1}.. run playsound {ns}:stoupy_prismatic_devastation record @s ~ ~ ~ 0.2
-execute if score #health {ns}.data matches {DRAGON_MAX_HEALTH // 2 + 1}.. run scoreboard players set @s {ns}.boss_music {PRISMATIC_DEVASTATION}
+# Every end more than half health
+playsound {ns}:dimrain47_every_end record @s ~ ~ ~ 0.2
+scoreboard players set @s {ns}.boss_music {EVERY_END_DURATION}
 
 # The Ultimate Ascension at half health or less
-execute if score #health {ns}.data matches ..{DRAGON_MAX_HEALTH // 2} run playsound {ns}:stoupy_the_ultimate_ascension record @s ~ ~ ~ 0.2
-execute if score #health {ns}.data matches ..{DRAGON_MAX_HEALTH // 2} run scoreboard players set @s {ns}.boss_music {THE_ULTIMATE_ASCENSION}
+# execute if score #health {ns}.data matches ..{DRAGON_MAX_HEALTH // 2} run playsound {ns}:stoupy_the_ultimate_ascension record @s ~ ~ ~ 0.2
+# execute if score #health {ns}.data matches ..{DRAGON_MAX_HEALTH // 2} run scoreboard players set @s {ns}.boss_music THE_ULTIMATE_ASCENSION
 
 # Add global seconds to boss music timer
 scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
@@ -647,12 +646,12 @@ scoreboard players operation @s {ns}.boss_music += #global_second {ns}.data
 				"entries": [
 					{
 						"type": "minecraft:loot_table",
-						"value": Item.from_id("stoupy_prismatic_devastation").loot_table
+						"value": Item.from_id("dimrain47_every_end").loot_table
 					},
-					{
-						"type": "minecraft:loot_table",
-						"value": Item.from_id("stoupy_the_ultimate_ascension").loot_table
-					}
+					# {
+					# 	"type": "minecraft:loot_table",
+					# 	"value": Item.from_id("stoupy_the_ultimate_ascension").loot_table
+					# }
 				],
 				"condition": {
 					"type": "minecraft:inverted",

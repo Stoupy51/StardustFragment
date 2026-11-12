@@ -12,11 +12,11 @@
 							"components": {
 								"minecraft:custom_data": {
 									"stardust": {
-										"stoupy_cosmic_threat": true
+										"f_777_space_battle": true
 									},
 									"smithed": {
-										"dict": {"record": {"stoupy_cosmic_threat": true,"item_name": "Stoupy - Cosmic Threat"},"jukebox_song": {"comparator_output": 8,"length_in_seconds": 169,"sound_event": {"sound_id": "stardust:stoupy_cosmic_threat"},"description": {"translate": "stardust.stoupy_cosmic_threat","fallback": "Stoupy - Cosmic Threat"}}},
-										"id": "stardust:stoupy_cosmic_threat",
+										"dict": {"record": {"f_777_space_battle": true,"item_name": "F-777 - Space Battle"},"jukebox_song": {"comparator_output": 2,"length_in_seconds": 323,"sound_event": {"sound_id": "stardust:f_777_space_battle"},"description": {"translate": "stardust.f_777_space_battle","fallback": "F-777 - Space Battle"}}},
+										"id": "stardust:f_777_space_battle",
 										"origin": "stardust",
 										"ignore": {"functionality": true,"crafting": true}
 									}
@@ -25,10 +25,10 @@
 									"translate": "stardust.music_disc","fallback": "Music Disc",
 									"italic": false
 								},
-								"minecraft:jukebox_playable": "stardust:stoupy_cosmic_threat",
+								"minecraft:jukebox_playable": "stardust:f_777_space_battle",
 								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "rare",
-								"minecraft:item_model": "stardust:stoupy_cosmic_threat",
+								"minecraft:item_model": "stardust:f_777_space_battle",
 								"minecraft:lore": [
 									[
 										"",

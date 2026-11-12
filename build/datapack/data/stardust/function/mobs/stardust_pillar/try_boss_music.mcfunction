@@ -7,13 +7,13 @@
 #
 
 ## Choose music based on health
-# Cosmic Threat if shield active
-execute if score #health stardust.data matches 251.. run playsound stardust:stoupy_cosmic_threat record @s ~ ~ ~ 0.2
-execute if score #health stardust.data matches 251.. run scoreboard players set @s stardust.boss_music 169
+# Space Battle, if shield active
+execute if score #health stardust.data matches 251.. run playsound stardust:f_777_space_battle record @s ~ ~ ~ 0.2
+execute if score #health stardust.data matches 251.. run scoreboard players set @s stardust.boss_music 323
 
-# Starfall Menace if shield down
-execute if score #health stardust.data matches ..250 run playsound stardust:stoupy_starfall_menace record @s ~ ~ ~ 0.2
-execute if score #health stardust.data matches ..250 run scoreboard players set @s stardust.boss_music 279
+# Gravity, if shield down
+execute if score #health stardust.data matches ..250 run playsound stardust:shut_eye_gravity record @s ~ ~ ~ 0.2
+execute if score #health stardust.data matches ..250 run scoreboard players set @s stardust.boss_music 255
 
 # Add global seconds to boss music timer
 scoreboard players operation @s stardust.boss_music += #global_second stardust.data

@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "stardust:item/stoupy_cosmic_threat"
+		"layer0": "stardust:item/shut_eye_gravity"
 	}
 }

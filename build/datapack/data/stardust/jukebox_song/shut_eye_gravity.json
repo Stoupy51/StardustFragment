@@ -1,0 +1,10 @@
+{
+	"comparator_output": 14,
+	"length_in_seconds": 255,
+	"sound_event": {
+		"sound_id": "stardust:shut_eye_gravity"
+	},
+	"description": {
+		"translate": "stardust.shut_eye_gravity","fallback": "Shut Eye - Gravity"
+	}
+}

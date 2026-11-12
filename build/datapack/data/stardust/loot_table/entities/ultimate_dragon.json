@@ -157,11 +157,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "stardust:i/stoupy_prismatic_devastation"
-				},
-				{
-					"type": "minecraft:loot_table",
-					"value": "stardust:i/stoupy_the_ultimate_ascension"
+					"value": "stardust:i/dimrain47_every_end"
 				}
 			],
 			"condition": {

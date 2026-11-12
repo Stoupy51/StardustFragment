@@ -1,0 +1,10 @@
+{
+	"comparator_output": 2,
+	"length_in_seconds": 323,
+	"sound_event": {
+		"sound_id": "stardust:f_777_space_battle"
+	},
+	"description": {
+		"translate": "stardust.f_777_space_battle","fallback": "F-777 - Space Battle"
+	}
+}

@@ -82,11 +82,11 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "stardust:i/stoupy_cosmic_threat"
+					"value": "stardust:i/f_777_space_battle"
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "stardust:i/stoupy_starfall_menace"
+					"value": "stardust:i/shut_eye_gravity"
 				}
 			],
 			"condition": {

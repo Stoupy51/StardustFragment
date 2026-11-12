@@ -1,19 +1,15 @@
 {
-	"stoupy_cosmic_threat": {
-		"subtitle": "Stoupy Cosmic Threat",
-		"sounds": [{"name": "stardust:stoupy_cosmic_threat","stream": true}]
+	"dimrain47_every_end": {
+		"subtitle": "Dimrain47 Every End",
+		"sounds": [{"name": "stardust:dimrain47_every_end","stream": true}]
 	},
-	"stoupy_prismatic_devastation": {
-		"subtitle": "Stoupy Prismatic Devastation",
-		"sounds": [{"name": "stardust:stoupy_prismatic_devastation","stream": true}]
+	"f_777_space_battle": {
+		"subtitle": "F 777 Space Battle",
+		"sounds": [{"name": "stardust:f_777_space_battle","stream": true}]
 	},
-	"stoupy_starfall_menace": {
-		"subtitle": "Stoupy Starfall Menace",
-		"sounds": [{"name": "stardust:stoupy_starfall_menace","stream": true}]
-	},
-	"stoupy_the_ultimate_ascension": {
-		"subtitle": "Stoupy The Ultimate Ascension",
-		"sounds": [{"name": "stardust:stoupy_the_ultimate_ascension","stream": true}]
+	"shut_eye_gravity": {
+		"subtitle": "Shut Eye Gravity",
+		"sounds": [{"name": "stardust:shut_eye_gravity","stream": true}]
 	},
 	"awakened_forge_crafting": {
 		"subtitle": "Awakened Forge Crafting",

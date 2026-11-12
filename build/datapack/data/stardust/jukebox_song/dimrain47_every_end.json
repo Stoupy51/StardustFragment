@@ -1,0 +1,10 @@
+{
+	"comparator_output": 14,
+	"length_in_seconds": 447,
+	"sound_event": {
+		"sound_id": "stardust:dimrain47_every_end"
+	},
+	"description": {
+		"translate": "stardust.dimrain47_every_end","fallback": "Dimrain47 - Every End..."
+	}
+}

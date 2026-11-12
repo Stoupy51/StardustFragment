@@ -12,11 +12,11 @@
 							"components": {
 								"minecraft:custom_data": {
 									"stardust": {
-										"stoupy_prismatic_devastation": true
+										"dimrain47_every_end": true
 									},
 									"smithed": {
-										"dict": {"record": {"stoupy_prismatic_devastation": true,"item_name": "Stoupy - Prismatic Devastation"},"jukebox_song": {"comparator_output": 0,"length_in_seconds": 481,"sound_event": {"sound_id": "stardust:stoupy_prismatic_devastation"},"description": {"translate": "stardust.stoupy_prismatic_devastation","fallback": "Stoupy - Prismatic Devastation"}}},
-										"id": "stardust:stoupy_prismatic_devastation",
+										"dict": {"record": {"dimrain47_every_end": true,"item_name": "Dimrain47 - Every End..."},"jukebox_song": {"comparator_output": 14,"length_in_seconds": 447,"sound_event": {"sound_id": "stardust:dimrain47_every_end"},"description": {"translate": "stardust.dimrain47_every_end","fallback": "Dimrain47 - Every End..."}}},
+										"id": "stardust:dimrain47_every_end",
 										"origin": "stardust",
 										"ignore": {"functionality": true,"crafting": true}
 									}
@@ -25,10 +25,10 @@
 									"translate": "stardust.music_disc","fallback": "Music Disc",
 									"italic": false
 								},
-								"minecraft:jukebox_playable": "stardust:stoupy_prismatic_devastation",
+								"minecraft:jukebox_playable": "stardust:dimrain47_every_end",
 								"minecraft:max_stack_size": 1,
 								"minecraft:rarity": "rare",
-								"minecraft:item_model": "stardust:stoupy_prismatic_devastation",
+								"minecraft:item_model": "stardust:dimrain47_every_end",
 								"minecraft:lore": [
 									[
 										"",

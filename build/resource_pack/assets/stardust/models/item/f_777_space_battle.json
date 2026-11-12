@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "stardust:item/f_777_space_battle"
+	}
+}

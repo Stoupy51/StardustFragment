@@ -294,7 +294,7 @@ def main_additions() -> None:
 
 	obj = Block.from_id("solarium_block")
 	obj.manual_category = MATERIALS
-	obj.vanilla_block = VanillaBlock(id="minecraft:waxed_copper_block")
+	obj.vanilla_block = VanillaBlock(id="minecraft:gold_block")
 	obj.wiki_buttons = [
 		WikiButton([
 			{"text":"Compressed solarium storage block.","color":"yellow"},

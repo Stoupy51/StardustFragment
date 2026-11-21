@@ -10,6 +10,7 @@
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_emerald_block\"]}","location": {"block": {"blocks": "minecraft:emerald_block"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_furnace\"]}","location": {"block": {"blocks": "minecraft:furnace"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_glass\"]}","location": {"block": {"blocks": "minecraft:glass"}}}},
+		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_gold_block\"]}","location": {"block": {"blocks": "minecraft:gold_block"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_iron_block\"]}","location": {"block": {"blocks": "minecraft:iron_block"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_lapis_block\"]}","location": {"block": {"blocks": "minecraft:lapis_block"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_moss_carpet\"]}","location": {"block": {"blocks": "minecraft:moss_carpet"}}}},
@@ -19,7 +20,6 @@
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_polished_deepslate\"]}","location": {"block": {"blocks": "minecraft:polished_deepslate"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_red_nether_bricks\"]}","location": {"block": {"blocks": "minecraft:red_nether_bricks"}}}},
 		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_redstone_block\"]}","location": {"block": {"blocks": "minecraft:redstone_block"}}}},
-		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_warped_hyphae\"]}","location": {"block": {"blocks": "minecraft:warped_hyphae"}}}},
-		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_waxed_copper_block\"]}","location": {"block": {"blocks": "minecraft:waxed_copper_block"}}}}
+		{"type": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{Tags:[\"stardust.vanilla.minecraft_warped_hyphae\"]}","location": {"block": {"blocks": "minecraft:warped_hyphae"}}}}
 	]
 }

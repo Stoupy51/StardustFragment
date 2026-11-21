@@ -9,6 +9,7 @@
 		"minecraft:emerald_block",
 		"minecraft:furnace",
 		"minecraft:glass",
+		"minecraft:gold_block",
 		"minecraft:iron_block",
 		"minecraft:lapis_block",
 		"minecraft:moss_carpet",
@@ -18,7 +19,6 @@
 		"minecraft:polished_deepslate",
 		"minecraft:red_nether_bricks",
 		"minecraft:redstone_block",
-		"minecraft:warped_hyphae",
-		"minecraft:waxed_copper_block"
+		"minecraft:warped_hyphae"
 	]
 }

@@ -1,9 +1,161 @@
 {
 	"criteria": {
-		"requirement": {
-			"trigger": "minecraft:inventory_changed"
+		"0": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:amethyst_shard",
+							"minecraft:barrel",
+							"minecraft:beetroot_seeds",
+							"minecraft:black_stained_glass",
+							"minecraft:cobblestone",
+							"minecraft:crafter",
+							"minecraft:diamond",
+							"minecraft:diamond_axe",
+							"minecraft:diamond_pickaxe",
+							"minecraft:diamond_shovel",
+							"minecraft:dragon_breath",
+							"minecraft:ender_pearl",
+							"minecraft:lapis_lazuli",
+							"minecraft:melon_seeds",
+							"minecraft:observer",
+							"minecraft:pumpkin_seeds",
+							"minecraft:quartz",
+							"minecraft:quartz_block",
+							"minecraft:tinted_glass",
+							"minecraft:wheat_seeds"
+						]
+					}
+				]
+			}
+		},
+		"1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"stardust_fragment": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"2": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"dragon_pearl": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"3": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"compressed_cobblestone": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"4": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"mirror": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"5": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"quarry_configurator": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"6": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"quarry_lv1": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"7": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"predicates": {
+							"minecraft:custom_data": {
+								"stardust": {
+									"diamond_seed": true
+								}
+							}
+						}
+					}
+				]
+			}
 		}
 	},
+	"requirements": [
+		[
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7"
+		]
+	],
 	"rewards": {
 		"function": "stardust:advancements/unlock_recipes"
 	}

@@ -1,5 +1,5 @@
 
-#> stardust:custom_blocks/_groups/minecraft_waxed_copper_block
+#> stardust:custom_blocks/_groups/minecraft_gold_block
 #
 # @executed	as @e[type=item_display,tag=stardust.custom_block,predicate=!stardust:advanced_check_vanilla_blocks] & at @s
 #

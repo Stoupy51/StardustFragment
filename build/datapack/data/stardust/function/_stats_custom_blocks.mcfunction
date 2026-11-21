@@ -9,7 +9,6 @@ scoreboard players add #second_5_entities stardust.data 0
 scoreboard players add #second_entities stardust.data 0
 scoreboard players add #total_growing_seeds stardust.data 0
 scoreboard players add #total_custom_blocks stardust.data 0
-scoreboard players add #total_vanilla_waxed_copper_block stardust.data 0
 scoreboard players add #total_vanilla_warped_hyphae stardust.data 0
 scoreboard players add #total_vanilla_redstone_block stardust.data 0
 scoreboard players add #total_vanilla_red_nether_bricks stardust.data 0
@@ -20,6 +19,7 @@ scoreboard players add #total_vanilla_netherite_block stardust.data 0
 scoreboard players add #total_vanilla_moss_carpet stardust.data 0
 scoreboard players add #total_vanilla_lapis_block stardust.data 0
 scoreboard players add #total_vanilla_iron_block stardust.data 0
+scoreboard players add #total_vanilla_gold_block stardust.data 0
 scoreboard players add #total_vanilla_glass stardust.data 0
 scoreboard players add #total_vanilla_furnace stardust.data 0
 scoreboard players add #total_vanilla_emerald_block stardust.data 0
@@ -175,6 +175,7 @@ tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecr
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_emerald_block","fallback":"Vanilla 'minecraft:emerald_block'"}, ": "],{"score":{"name":"#total_vanilla_emerald_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_furnace","fallback":"Vanilla 'minecraft:furnace'"}, ": "],{"score":{"name":"#total_vanilla_furnace","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_glass","fallback":"Vanilla 'minecraft:glass'"}, ": "],{"score":{"name":"#total_vanilla_glass","objective":"stardust.data"},"color":"white"}]
+tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_gold_block","fallback":"Vanilla 'minecraft:gold_block'"}, ": "],{"score":{"name":"#total_vanilla_gold_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_iron_block","fallback":"Vanilla 'minecraft:iron_block'"}, ": "],{"score":{"name":"#total_vanilla_iron_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_lapis_block","fallback":"Vanilla 'minecraft:lapis_block'"}, ": "],{"score":{"name":"#total_vanilla_lapis_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_moss_carpet","fallback":"Vanilla 'minecraft:moss_carpet'"}, ": "],{"score":{"name":"#total_vanilla_moss_carpet","objective":"stardust.data"},"color":"white"}]
@@ -185,7 +186,6 @@ tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecr
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_red_nether_bricks","fallback":"Vanilla 'minecraft:red_nether_bricks'"}, ": "],{"score":{"name":"#total_vanilla_red_nether_bricks","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_redstone_block","fallback":"Vanilla 'minecraft:redstone_block'"}, ": "],{"score":{"name":"#total_vanilla_redstone_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_warped_hyphae","fallback":"Vanilla 'minecraft:warped_hyphae'"}, ": "],{"score":{"name":"#total_vanilla_warped_hyphae","objective":"stardust.data"},"color":"white"}]
-tellraw @s [[{"text":"- ","color":"gray"}, {"translate":"stardust.vanilla_minecraft_waxed_copper_block","fallback":"Vanilla 'minecraft:waxed_copper_block'"}, ": "],{"score":{"name":"#total_vanilla_waxed_copper_block","objective":"stardust.data"},"color":"white"}]
 tellraw @s [[{"text":"- ","color":"dark_aqua"}, {"translate":"stardust.total_custom_blocks","fallback":"Total custom blocks: "}],{"score":{"name":"#total_custom_blocks","objective":"stardust.data"},"color":"aqua"}]
 tellraw @s [[{"text":"- ","color":"dark_aqua"}, {"translate":"stardust.total_growing_seeds","fallback":"Total growing seeds: "}],{"score":{"name":"#total_growing_seeds","objective":"stardust.data"},"color":"aqua"}]
 tellraw @s [[{"text":"- ","color":"green"}, {"translate":"stardust.second_tag_function","fallback":"'second' tag function: "}],{"score":{"name":"#second_entities","objective":"stardust.data"},"color":"dark_green"}]

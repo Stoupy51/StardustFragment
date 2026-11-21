@@ -1,9 +1,9 @@
 
 #> stardust:custom_blocks/solarium_block/replace_item
 #
-# @executed	as @n[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..1]
+# @executed	as @n[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..1]
 #
-# @within	stardust:custom_blocks/solarium_block/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..1] ]
+# @within	stardust:custom_blocks/solarium_block/destroy [ as @n[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..1] ]
 #
 
 # Replace the item with the custom one

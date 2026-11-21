@@ -13,7 +13,7 @@ tag @s add smithed.entity
 tag @s add smithed.block
 tag @s add stardust.custom_block
 tag @s add stardust.solarium_block
-tag @s add stardust.vanilla.minecraft_waxed_copper_block
+tag @s add stardust.vanilla.minecraft_gold_block
 
 # Add a custom name
 data merge entity @s {"CustomName": {"translate": "stardust.solarium_block","fallback": "Solarium Block"}}

@@ -4,15 +4,15 @@
 # @executed	at @s
 #
 # @within	stardust:custom_blocks/no_block_below
-#			stardust:custom_blocks/_groups/minecraft_waxed_copper_block
+#			stardust:custom_blocks/_groups/minecraft_gold_block
 #
 
 # Replace the item with the custom one
-execute as @n[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..1] run function stardust:custom_blocks/solarium_block/replace_item
+execute as @n[type=item,nbt={Item:{id:"minecraft:gold_block"}},distance=..1] run function stardust:custom_blocks/solarium_block/replace_item
 
 # Decrease count scores
 scoreboard players remove #total_custom_blocks stardust.data 1
-scoreboard players remove #total_vanilla_waxed_copper_block stardust.data 1
+scoreboard players remove #total_vanilla_gold_block stardust.data 1
 scoreboard players remove #total_solarium_block stardust.data 1
 
 # Kill the custom block entity

@@ -6,12 +6,12 @@
 
 tag @s add stardust.placer
 setblock ~ ~ ~ air strict
-setblock ~ ~ ~ minecraft:waxed_copper_block
+setblock ~ ~ ~ minecraft:gold_block
 execute align xyz positioned ~0.5 ~0.5 ~0.5 summon item_display at @s run function stardust:custom_blocks/solarium_block/place_secondary
 tag @s remove stardust.placer
 
 # Increment count scores
 scoreboard players add #total_custom_blocks stardust.data 1
-scoreboard players add #total_vanilla_waxed_copper_block stardust.data 1
+scoreboard players add #total_vanilla_gold_block stardust.data 1
 scoreboard players add #total_solarium_block stardust.data 1
 

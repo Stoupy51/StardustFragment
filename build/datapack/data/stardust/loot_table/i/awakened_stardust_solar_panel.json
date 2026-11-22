@@ -13,7 +13,8 @@
 								"minecraft:custom_data": {
 									"energy": {
 										"generation": 16,
-										"max_storage": 2400
+										"max_storage": 2400,
+										"blocked_faces": ["top"]
 									},
 									"stardust": {
 										"awakened_stardust_solar_panel": true

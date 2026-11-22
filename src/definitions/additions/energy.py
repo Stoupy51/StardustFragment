@@ -250,7 +250,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/stardust_solar_panel_side", "top": f"{ns}:item/stardust_solar_panel_top"}},
 		components={
-			"custom_data": {"energy": {"generation":8, "max_storage":1200}},
+			"custom_data": {"energy": {"generation":8, "max_storage":1200, "blocked_faces": ["top"]}},
 		},
 		wiki_buttons=[
 			WikiButton([
@@ -269,7 +269,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/awakened_stardust_solar_panel_side", "top": f"{ns}:item/awakened_stardust_solar_panel_top"}},
 		components={
-			"custom_data": {"energy": {"generation":16, "max_storage":2400}},
+			"custom_data": {"energy": {"generation":16, "max_storage":2400, "blocked_faces": ["top"]}},
 		},
 		wiki_buttons=[
 			WikiButton([
@@ -288,7 +288,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/legendarium_solar_panel_side", "top": f"{ns}:item/legendarium_solar_panel_top"}},
 		components={
-			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
+			"custom_data": {"energy": {"generation":32, "max_storage":4800, "blocked_faces": ["top"]}},
 		},
 		wiki_buttons=[
 			WikiButton([
@@ -307,7 +307,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/solarium_solar_panel_side", "top": f"{ns}:item/solarium_solar_panel_top"}},
 		components={
-			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
+			"custom_data": {"energy": {"generation":32, "max_storage":4800, "blocked_faces": ["top"]}},
 		},
 		wiki_buttons=[
 			WikiButton([
@@ -326,7 +326,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/darkium_solar_panel_side", "top": f"{ns}:item/darkium_solar_panel_top"}},
 		components={
-			"custom_data": {"energy": {"generation":32, "max_storage":4800}},
+			"custom_data": {"energy": {"generation":32, "max_storage":4800, "blocked_faces": ["top"]}},
 		},
 		wiki_buttons=[
 			WikiButton([
@@ -345,7 +345,7 @@ def main_additions() -> None:
 		vanilla_block=VanillaBlock(id="minecraft:daylight_detector"),
 		override_model={"parent":"block/daylight_detector", "textures": {"side": f"{ns}:item/ultimate_solar_panel_side", "top": f"{ns}:item/ultimate_solar_panel_top"}},
 		components={
-			"custom_data": {"energy": {"generation":128, "max_storage":20000}},
+			"custom_data": {"energy": {"generation":128, "max_storage":20000, "blocked_faces": ["top"]}},
 			"item_name": rainbow_gradient_text("Ultimate Solar Panel"),
 		},
 		wiki_buttons=[

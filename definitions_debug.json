@@ -1287,7 +1287,7 @@
 			[{"text": "Stardust-enhanced solar energy collector.","color": "yellow"},{"text": "\nGenerates 8 kW during daylight","color": "gray"},{"text": "\nRequires direct sunlight","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 8,"max_storage": 1200},"stardust": {"stardust_solar_panel": true},"smithed": {"id": "stardust:stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 8,"max_storage": 1200,"blocked_faces": ["top"]},"stardust": {"stardust_solar_panel": true},"smithed": {"id": "stardust:stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:stardust_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 8 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 1200 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
@@ -1315,7 +1315,7 @@
 			[{"text": "Advanced solar panel with awakened stardust.","color": "yellow"},{"text": "\nDouble the power of basic solar panels","color": "gray"},{"text": "\nGenerates 16 kW during daylight","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 16,"max_storage": 2400},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"id": "stardust:awakened_stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 16,"max_storage": 2400,"blocked_faces": ["top"]},"stardust": {"awakened_stardust_solar_panel": true},"smithed": {"id": "stardust:awakened_stardust_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:awakened_stardust_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 16 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 2400 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
@@ -1343,7 +1343,7 @@
 			[{"text": "Advanced solar panel with legendarium material.","color": "yellow"},{"text": "\nDouble the power of awakened solar panels","color": "gray"},{"text": "\nGenerates 32 kW during daylight","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"legendarium_solar_panel": true},"smithed": {"id": "stardust:legendarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 32,"max_storage": 4800,"blocked_faces": ["top"]},"stardust": {"legendarium_solar_panel": true},"smithed": {"id": "stardust:legendarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:legendarium_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 32 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 4800 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
@@ -1371,7 +1371,7 @@
 			[{"text": "Advanced solar panel with solarium material.","color": "yellow"},{"text": "\nDouble the power of awakened solar panels","color": "gray"},{"text": "\nGenerates 32 kW during daylight","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"solarium_solar_panel": true},"smithed": {"id": "stardust:solarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 32,"max_storage": 4800,"blocked_faces": ["top"]},"stardust": {"solarium_solar_panel": true},"smithed": {"id": "stardust:solarium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:solarium_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 32 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 4800 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
@@ -1399,7 +1399,7 @@
 			[{"text": "Advanced solar panel with darkium material.","color": "yellow"},{"text": "\nDouble the power of awakened solar panels","color": "gray"},{"text": "\nGenerates 32 kW during nighttime instead of daylight","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 32,"max_storage": 4800},"stardust": {"darkium_solar_panel": true},"smithed": {"id": "stardust:darkium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 32,"max_storage": 4800,"blocked_faces": ["top"]},"stardust": {"darkium_solar_panel": true},"smithed": {"id": "stardust:darkium_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:darkium_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},
 			"lore": [{"text": "[Energy Generation: 32 kW]","italic": false,"color": "gray"},{"text": "[Energy Buffer: 4800 kJ]","italic": false,"color": "gray"},["",{"text": "ꀁ","color": "white","italic": false,"font": "stardust:tooltip"},{"text": "뀁Stardust Fragment","italic": false,"color": "white","font": "stardust:tooltip"}]],
@@ -1432,7 +1432,7 @@
 			[{"text": "Ultimate solar panel combining all three elements.","color": "yellow"},{"text": "\nGenerates 128 kW during daylight only","color": "gray"}]
 		],
 		"components": {
-			"custom_data": {"energy": {"generation": 128,"max_storage": 20000},"stardust": {"ultimate_solar_panel": true},"smithed": {"id": "stardust:ultimate_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
+			"custom_data": {"energy": {"generation": 128,"max_storage": 20000,"blocked_faces": ["top"]},"stardust": {"ultimate_solar_panel": true},"smithed": {"id": "stardust:ultimate_solar_panel","origin": "stardust","ignore": {"functionality": true,"crafting": true}}},
 			"item_name": [{"text": "U","color": "#ff0000","italic": false},{"text": "l","color": "#ff4c00"},{"text": "t","color": "#ff9900"},{"text": "i","color": "#ffe500"},{"text": "m","color": "#ccff00"},{"text": "a","color": "#7fff00"},{"text": "t","color": "#32ff00"},{"text": "e","color": "#00ff19"},{"text": " ","color": "#00ff65"},{"text": "S","color": "#00ffb2"},{"text": "o","color": "#00ffff"},{"text": "l","color": "#00b2ff"},{"text": "a","color": "#0065ff"},{"text": "r","color": "#0019ff"},{"text": " ","color": "#3200ff"},{"text": "P","color": "#7f00ff"},{"text": "a","color": "#cb00ff"},{"text": "n","color": "#ff00e5"},{"text": "e","color": "#ff0098"},{"text": "l","color": "#ff004c"}],
 			"container": [{"slot": 0,"item": {"id": "minecraft:stone","count": 1,"components": {"minecraft:custom_data": {"smithed": {"block": {"id": "stardust:ultimate_solar_panel","from": "stardust"}}}}}}],
 			"tooltip_display": {"hidden_components": ["minecraft:container"]},

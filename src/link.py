@@ -5,7 +5,6 @@ from stewbeet.contrib.simplenergy import (
 	GuiTranslation,
 	Mem,
 	energy_cables_models,
-	insert_lib_calls,
 	keep_energy_for_batteries,
 	setup_energy_balancing,
 	setup_gui_in_resource_packs,
@@ -24,9 +23,6 @@ from .utils.snipers import setup_snipers
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def beet_default(ctx: Context) -> None:
-
-	# Add commands to place and destroy functions for energy items
-	insert_lib_calls()
 
 	# Add advancements to the datapack
 	add_visible_advancements()

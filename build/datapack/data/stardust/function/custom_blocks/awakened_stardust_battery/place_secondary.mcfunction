@@ -26,7 +26,9 @@ function stardust:custom_blocks/compute_brightness
 tag @s add stardust.battery_switcher
 tag @s add energy.receive
 tag @s add energy.send
+data remove storage stardust:temp energy
 data modify storage stardust:temp energy set from entity @p[tag=stardust.placer] SelectedItem.components."minecraft:custom_data".energy
+execute unless data storage stardust:temp energy run data modify storage stardust:temp energy set from entity @p[tag=stardust.placer] equipment.offhand.components."minecraft:custom_data".energy
 execute store result score @s energy.max_storage run data get storage stardust:temp energy.max_storage
 execute store result score @s energy.storage run data get storage stardust:temp energy.storage
 scoreboard players operation @s energy.transfer_rate = @s energy.max_storage

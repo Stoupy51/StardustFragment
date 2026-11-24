@@ -15,7 +15,7 @@ scoreboard players set #energy stardust.data 0
 execute store result score #energy stardust.data run data get storage energy:temp list[0].components."minecraft:custom_data".energy.storage
 scoreboard players operation #part_1 stardust.data = #energy stardust.data
 scoreboard players operation #part_2 stardust.data = #energy stardust.data
-data modify storage stardust:temp macro set value {part_1:0, part_2:0, scale:""}
+data modify storage stardust:temp macro set value {part_1:0, part_2:0, pad:"", scale:""}
 
 ## kJ, MJ, GJ, TJ cases
 execute if score #energy stardust.data matches ..999 run data modify storage stardust:temp macro.scale set value " kJ]"
@@ -38,6 +38,9 @@ execute if score #energy stardust.data matches 1000000000.. run data modify stor
 execute if score #energy stardust.data matches 1000000000.. run scoreboard players operation #part_1 stardust.data /= #1000000000 stardust.data
 execute if score #energy stardust.data matches 1000000000.. run scoreboard players operation #part_2 stardust.data %= #1000000000 stardust.data
 execute if score #energy stardust.data matches 1000000000.. run scoreboard players operation #part_2 stardust.data /= #10000000 stardust.data
+
+# Two decimals, so 12050 kJ reads 12.05 MJ
+execute if score #energy stardust.data matches 1000.. if score #part_2 stardust.data matches ..9 run data modify storage stardust:temp macro.pad set value "0"
 
 # Apply the new lore to the item
 execute store result storage stardust:temp macro.part_1 int 1 run scoreboard players get #part_1 stardust.data

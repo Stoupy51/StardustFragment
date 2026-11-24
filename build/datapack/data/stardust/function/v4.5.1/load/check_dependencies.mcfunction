@@ -1,7 +1,7 @@
 
-#> stardust:v4.5.0/load/check_dependencies
+#> stardust:v4.5.1/load/check_dependencies
 #
-# @within	stardust:v4.5.0/load/secondary
+# @within	stardust:v4.5.1/load/secondary
 #
 
 ## Check if Stardust Fragment is loadable (dependencies)

@@ -1,5 +1,5 @@
 
-#> stardust:v4.5.1/load/enumerate
+#> stardust:v4.5.2/load/enumerate
 #
 # @within	#stardust:enumerate
 #
@@ -11,5 +11,5 @@ execute unless score #stardust.major load.status matches 4.. run scoreboard play
 execute if score #stardust.major load.status matches 4 unless score #stardust.minor load.status matches 5.. run scoreboard players set #stardust.minor load.status 5
 
 # If current patch is too low, set it to the current patch (only if major and minor are correct)
-execute if score #stardust.major load.status matches 4 if score #stardust.minor load.status matches 5 unless score #stardust.patch load.status matches 1.. run scoreboard players set #stardust.patch load.status 1
+execute if score #stardust.major load.status matches 4 if score #stardust.minor load.status matches 5 unless score #stardust.patch load.status matches 2.. run scoreboard players set #stardust.patch load.status 2
 

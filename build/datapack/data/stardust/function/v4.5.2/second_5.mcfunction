@@ -1,7 +1,7 @@
 
-#> stardust:v4.5.1/second_5
+#> stardust:v4.5.2/second_5
 #
-# @within	stardust:v4.5.1/tick
+# @within	stardust:v4.5.2/tick
 #
 
 # Reset timer

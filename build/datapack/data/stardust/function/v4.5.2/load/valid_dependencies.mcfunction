@@ -1,12 +1,12 @@
 
-#> stardust:v4.5.1/load/valid_dependencies
+#> stardust:v4.5.2/load/valid_dependencies
 #
-# @within	stardust:v4.5.1/load/secondary
-#			stardust:v4.5.1/load/valid_dependencies 1t replace [ scheduled ]
+# @within	stardust:v4.5.2/load/secondary
+#			stardust:v4.5.2/load/valid_dependencies 1t replace [ scheduled ]
 #
 
 # Waiting for a player to get the game version, but stop function if no player found
-execute unless entity @p run return run schedule function stardust:v4.5.1/load/valid_dependencies 1t replace
+execute unless entity @p run return run schedule function stardust:v4.5.2/load/valid_dependencies 1t replace
 execute store result score #game_version stardust.data run data get entity @p DataVersion
 
 # Check if the game version is supported
@@ -44,10 +44,9 @@ execute if score #dependency_error stardust.data matches 1 if score $bs.raycast.
 execute if score #dependency_error stardust.data matches 1 unless score $bs.view.major load.status matches 4.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}, {"translate":"stardust.bookshelf_view_v4_2_1","fallback":"[Bookshelf View (v4.2.1+)]"}]
 execute if score #dependency_error stardust.data matches 1 if score $bs.view.major load.status matches 4 unless score $bs.view.minor load.status matches 2.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}, {"translate":"stardust.bookshelf_view_v4_2_1","fallback":"[Bookshelf View (v4.2.1+)]"}]
 execute if score #dependency_error stardust.data matches 1 if score $bs.view.major load.status matches 4 if score $bs.view.minor load.status matches 2 unless score $bs.view.patch load.status matches 1.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://github.com/mcbookshelf/bookshelf/releases"}}, {"translate":"stardust.bookshelf_view_v4_2_1","fallback":"[Bookshelf View (v4.2.1+)]"}]
-execute if score #dependency_error stardust.data matches 1 unless score #simplenergy.major load.status matches 2.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21","fallback":"[SimplEnergy (v2.0.21+)]"}]
-execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 unless score #simplenergy.minor load.status matches 0.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21","fallback":"[SimplEnergy (v2.0.21+)]"}]
-execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 21.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_0_21","fallback":"[SimplEnergy (v2.0.21+)]"}]
+execute if score #dependency_error stardust.data matches 1 unless score #simplenergy.major load.status matches 2.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_4_0","fallback":"[SimplEnergy (v2.4.0+)]"}]
+execute if score #dependency_error stardust.data matches 1 if score #simplenergy.major load.status matches 2 unless score #simplenergy.minor load.status matches 4.. run tellraw @a [{"text":"- ","color":"gold","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/simplenergy"}}, {"translate":"stardust.simplenergy_v2_4_0","fallback":"[SimplEnergy (v2.4.0+)]"}]
 
 # Load Stardust Fragment
-execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.5.1/load/confirm_load
+execute if score #game_version stardust.data matches 1.. if score #mcload_error stardust.data matches 0 if score #dependency_error stardust.data matches 0 run function stardust:v4.5.2/load/confirm_load
 

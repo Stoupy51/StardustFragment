@@ -1,7 +1,7 @@
 
-#> stardust:v4.5.1/load/check_dependencies
+#> stardust:v4.5.2/load/check_dependencies
 #
-# @within	stardust:v4.5.1/load/secondary
+# @within	stardust:v4.5.2/load/secondary
 #
 
 ## Check if Stardust Fragment is loadable (dependencies)
@@ -35,6 +35,5 @@ execute if score #dependency_error stardust.data matches 0 unless score $bs.view
 execute if score #dependency_error stardust.data matches 0 if score $bs.view.major load.status matches 4 unless score $bs.view.minor load.status matches 2.. run scoreboard players set #dependency_error stardust.data 1
 execute if score #dependency_error stardust.data matches 0 if score $bs.view.major load.status matches 4 if score $bs.view.minor load.status matches 2 unless score $bs.view.patch load.status matches 1.. run scoreboard players set #dependency_error stardust.data 1
 execute if score #dependency_error stardust.data matches 0 unless score #simplenergy.major load.status matches 2.. run scoreboard players set #dependency_error stardust.data 1
-execute if score #dependency_error stardust.data matches 0 if score #simplenergy.major load.status matches 2 unless score #simplenergy.minor load.status matches 0.. run scoreboard players set #dependency_error stardust.data 1
-execute if score #dependency_error stardust.data matches 0 if score #simplenergy.major load.status matches 2 if score #simplenergy.minor load.status matches 0 unless score #simplenergy.patch load.status matches 21.. run scoreboard players set #dependency_error stardust.data 1
+execute if score #dependency_error stardust.data matches 0 if score #simplenergy.major load.status matches 2 unless score #simplenergy.minor load.status matches 4.. run scoreboard players set #dependency_error stardust.data 1
 
